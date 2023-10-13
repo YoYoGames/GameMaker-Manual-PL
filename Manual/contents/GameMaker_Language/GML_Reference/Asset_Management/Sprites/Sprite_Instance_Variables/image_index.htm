@@ -6,7 +6,7 @@
   <title>image_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the variable image_index" />
   <meta name="rh-index-keywords" content="image_index" />
@@ -15,42 +15,33 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>image_index</h1>
-  <p>A sprite is made up of one or more <i>sub-images</i> which can make the sprite appear animated as they switch from one to the other, or can they can be switched between in code to give different &quot;states&quot;, much like a button has in windows. If the sprite is animated, then you can get the current frame of the animation by checking the <span class="inline">image_index</span> variable, or if you want to change the state of a static sprite, you can select a new sub-image by setting this variable to the desired sub-image of the sprite.</p>
-  <h3>Usage Notes</h3>
-  <ul class="colour">
-    <li>For changes in this variable to be visible, the instance should have either <i>no</i> draw event (and so <span data-keyref="GameMaker Name">GameMaker</span> will default draw the sprite) or be drawn using one of the drawing functions like <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> or <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a> (by supplying the image_index into the appropriate argument).</li>
-    <li>Setting this variable directly to a frame will <em>not</em> trigger any Broadcast Messages that may be present on that frame.</li>
-    <li>While using skeletal animation sprites, you can still get and set the <span class="inline">image_index</span> values - see the function <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><span class="inline">skeleton_animation_get_duration()</span></a> for examples of how to do this.</li>
-    <li>A stretched frame will be returned as a fraction of one number. For example, if in the <a href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> you stretch <strong>frame 1</strong> to last 4 frames, instead of those 4 frames returning the values 1, 2, 3, 4, they will instead return 1.0, 1.25, 1.5, and 1.75.
-      <ul>
-        <li>This means that if you add 1 to <span class="inline">image_index</span>, it will skip frames the same way regardless of their stretched length.</li>
-      </ul>
-    </li>
-  </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Strona <span class="notranslate">sprite</span> składa się z jednego lub kilku <i>pod-obrazów</i>, które mogą sprawić, że strona <span class="notranslate">sprite</span> będzie animowana, gdy <span class="notranslate">switch</span> będą przechodzić z jednego do drugiego, lub można je przełączać w kodzie, aby uzyskać różne &quot;stany&quot;, podobnie jak przycisk w oknach. Jeśli <span class="notranslate">sprite</span> jest animowany, możesz uzyskać bieżącą klatkę animacji, sprawdzając zmienną <span class="inline">image_index</span>, lub jeśli chcesz zmienić stan statycznego <span class="notranslate">sprite</span>, możesz wybrać nowy podobraz, ustawiając tę zmienną na żądany podobraz <span class="notranslate">sprite</span>. Zwróć uwagę, że aby zmiany tej zmiennej były widoczne, instancja <i>nie</i> powinna mieć zdarzenia draw (a więc <span data-keyref="GameMaker Name">GameMaker</span> domyślnie narysuje <span class="notranslate">sprite</span>) lub powinna być narysowana za pomocą jednej z funkcji rysowania, takich jak <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> lub <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a> (podając image_index w odpowiednim argumencie).</p>
+  <p>Należy pamiętać, że ustawienie tej zmiennej bezpośrednio na ramkę <em>nie</em> spowoduje wyzwolenia żadnych komunikatów nadawczych, które mogą być w niej obecne.</p>
+  <p>Należy także pamiętać, że podczas używania animacji szkieletowej <span class="notranslate">sprites</span> można nadal uzyskiwać i ustawiać wartości <span class="inline">image_index</span> - zobacz funkcję <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><span class="inline">skeleton_animation_get_duration()</span></a> zawiera przykłady, jak to robić.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">image_index;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_Real"></span> (single precision floating point value)</p>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if (image_speed &gt; 0)<br />
     {<br />
         if (image_index &gt;= image_number - 1) instance_destroy();<br />
     }</p>
-  <p>The above code checks to see if the sprite is animating, and if it is then it checks to see if the current image_index is at the last frame and in that case destroys the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy strona <span class="notranslate">sprite</span> jest animowana, a jeśli tak, to sprawdza, czy bieżący image_index znajduje się w ostatniej klatce i w takim przypadku niszczy instancję.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Instance_Variables.htm">Sprite Instance Variables</a></div>
-        <div style="float:right">Next: <a href="image_number.htm">image_number</a></div>
+        <div style="float:left">Powrót: <a href="Sprite_Instance_Variables.htm">Zmienne instancji sprite'a</a></div>
+        <div style="float:right">Następny: <a href="image_number.htm"><span class="notranslate">image_number</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 image_index

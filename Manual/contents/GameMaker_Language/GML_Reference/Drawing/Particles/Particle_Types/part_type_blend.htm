@@ -6,7 +6,7 @@
   <title>part_type_blend</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for part_type_blend" />
   <meta name="rh-index-keywords" content="part_type_blend" />
@@ -15,47 +15,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>part_type_blend</h1>
-  <p>With this function you can make your particles be drawn with an additive blend mode (<span class="inline">true</span>) or not (<span class="inline">false</span>). Additive blending is a special blend mode that adds the luminosity values of each particle as they overlap, so that light colours will gradually get brighter (until they appear white) as they overlap, and dark colours become more and more transparent with black being almost invisible. This function can give some beautiful particle effects but may not always be necessary. For example, a smoke trail would have additive blending off to keep the effect gray, but a flame effect would probably have it on to make the particles more translucent and brighter.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można sprawić, że cząstki będą rysowane w trybie mieszania addytywnego (<span class="inline">true</span>) lub nie (<span class="inline">false</span>). Mieszanie addytywne to specjalny tryb mieszania, który dodaje wartości jasności każdej cząstki w miarę ich nakładania się, tak że jasne kolory będą się stopniowo rozjaśniać (aż będą wydawać się białe) w miarę ich nakładania się, a ciemne kolory będą coraz bardziej przezroczyste, a czarny będzie prawie niewidoczny. Ta funkcja pozwala uzyskać piękne efekty cząsteczek, ale nie zawsze jest potrzebna. Na przykład w przypadku smugi dymu mieszanie addytywne byłoby wyłączone, aby efekt był szary, ale w przypadku efektu płomieni prawdopodobnie zostałoby włączone, aby cząsteczki były bardziej przezroczyste i jaśniejsze.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">part_type_blend(ind, additive);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_ID_PartType">Particle Type ID</span></td>
-        <td>The index of the particle type to change.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_ID_PartType">Typ cząstki ID</span></td>
+        <td><span class="notranslate">The index of the particle type to change.</span></td>
       </tr>
       <tr>
-        <td>additive</td>
+        <td><span class="notranslate">additive</span></td>
         <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the particles should be blended additively (true) or normally (false).</td>
+        <td><span class="notranslate">Whether the particles should be blended additively (true) or normally (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">part_type_blend(part_Fire, true);</p>
-  <p>The above code will set all particles created of the particle type indexed in the variable &quot;part_Fire&quot; to have an additive blend mode.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod spowoduje, że wszystkie cząstki utworzone dla typu cząstki indeksowanego w zmiennej &quot;part_Fire&quot; będą miały addytywny tryb mieszania.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Types.htm">Particle Types</a></div>
-        <div style="float:right">Next: <a href="part_type_life.htm">part_type_life</a></div>
+        <div style="float:left">Powrót: <a href="Particle_Types.htm">Typy cząstek</a></div>
+        <div style="float:right">Następny: <a href="part_type_life.htm"><span class="notranslate">part_type_life</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 part_type_blend

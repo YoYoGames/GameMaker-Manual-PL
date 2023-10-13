@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>place_meeting</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>miejsce_spotkania</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion place_meeting" />
   <meta name="rh-index-keywords" content="place_meeting" />
@@ -15,76 +15,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>place_meeting</h1>
-  <p>With this function you can check a position for a collision with another instance or all instances of an object using the collision mask of the instance that runs the code for the check. When you use this you are effectively asking <span data-keyref="GameMaker Name">GameMaker</span> to move the instance to the new position, check for a collision, move back and tell you if a collision was found or not.</p>
-  <p>This will work for precise collisions, but only if both the instance and the object being checked for have precise collision masks selected. Otherwise, only bounding box collisions are applied.</p>
-  <div data-conref="../../../../assets/snippets/Collisions_function_accepted_arguments.hts"> </div>
-  <p>If you need to get the unique instance <b>id</b> of the object being collided with, you should use <a href="../../Asset_Management/Instances/instance_place.htm"><span class="inline">instance_place()</span></a>.</p>
-  <p><img alt="Place meeting example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/place_meeting.png" />Note that the given x/y coordinates will be floored to the nearest integer before the check is performed.</p>
-  <p>See: <a href="Collisions.htm">Collisions</a></p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>miejsce_spotkania</h1>
+  <p>Za pomocą tej funkcji możesz sprawdzić, czy pozycja nie koliduje z inną instancją lub wszystkimi instancjami obiektu <span class="notranslate">object</span>, używając maski kolizji instancji, która uruchamia kod sprawdzający. Używając tej funkcji, prosisz program <span data-keyref="GameMaker Name">GameMaker</span> o przesunięcie instancji do nowej pozycji, sprawdzenie kolizji, cofnięcie się i poinformowanie Cię, czy kolizja została znaleziona, czy nie. Działa to w przypadku precyzyjnych kolizji, ale tylko wtedy, gdy zarówno instancja, jak i sprawdzana strona <span class="notranslate">object</span> mają zaznaczone maski precyzyjnych kolizji, w przeciwnym razie stosowane są tylko kolizje typu bounding box. Ta funkcja akceptuje także specjalne słowa kluczowe <b>all</b> i <b>other</b>. Zwróć uwagę, że jeśli chcesz uzyskać unikalny <b>identyfikator</b> instancji <span class="notranslate">object</span>, z którą się zderzasz, powinieneś użyć <a href="../../Asset_Management/Instances/instance_place.htm"><span class="inline">instance_place()</span></a>.</p>
+  <p><img>Należy pamiętać, że podane współrzędne x/y zostaną spolszczone do najbliższej liczby całkowitej przed wykonaniem sprawdzenia.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">place_meeting(x, y, obj);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>x</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x position to check.</td>
+        <td><span class="notranslate">x</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x position to check.</span></td>
       </tr>
       <tr>
-        <td>y</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y position to check.</td>
+        <td><span class="notranslate">y</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y position to check.</span></td>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Collision_obj_type"><span data-keyref="Type_Asset_Object"><a href="The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span> or <span data-keyref="Type_ID_Instance"><a href="GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_Array"><a href="GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></span></td>
-        <td><span data-keyref="Collision_obj_description">An object, instance, tile map ID, keywords all/other, or array containing these items</span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td> <span data-keyref="Type_ID_Instance">Identyfikator</span>zasobu lub <span data-keyref="Type_ID_Instance">instancji</span><span data-keyref="Type_Asset_Object">obiektu</span> </td>
+        <td><span class="notranslate">The instance or object to check for.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example 1:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if keyboard_check(vk_left)<br />
     {<br />
-        if !place_meeting(x - 5, y, obj_wall)<br />
-        {<br />
-            x -= 5;<br />
-        }<br />
+        if !place_meeting(x - 5, y, obj_wall) x -=5;<br />
     }</p>
-  <p>The above code checks to see if there is <i>not</i> a collision to the left of the instance and moves the instance if there is none.</p>
-  <h4>Example 2:</h4>
-  <p class="code">var _tilemap = layer_tilemap_get_id(&quot;Tiles_1&quot;);<br />
-    <br />
-    if keyboard_check(vk_left)<br />
-    {<br />
-        if !place_meeting(x - 5, y, [obj_wall, obj_bush, _tilemap])<br />
-        {<br />
-            x -= 5;<br />
-        }<br />
-    }
-  </p>
-  <p>This is the same logic as the last example, however it uses an array to check for collisions against two types of objects (<span class="inline2">obj_wall</span>, <span class="inline2">obj_bush</span>) and the Tile Map for a Tile Layer called &quot;Tiles_1&quot;.</p>
-  <p>As you only need to get your tile map ID once, you can move the first line to the Create event.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy po lewej stronie instancji <i>nie</i> występuje kolizja, i przesuwa instancję, jeśli jej nie ma.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="position_empty.htm">position_empty</a></div>
+        <div style="float:left">Powrót: <a href="Collisions.htm">Kolizje</a></div>
+        <div style="float:right">Następny: <a href="position_empty.htm"><span class="notranslate">position_empty</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 place_meeting

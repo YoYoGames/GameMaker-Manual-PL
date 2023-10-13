@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>exit</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>wyjście</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the exit function" />
   <meta name="rh-index-keywords" content="exit" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>exit</h1>
-  <p>The <span class="inline">exit</span> statement has the following syntax:</p>
+  <h1>wyjście</h1>
+  <p>Polecenie <span class="inline">exit</span> ma następującą składnię:</p>
   <p class="code">exit;</p>
-  <p><span class="inline">exit</span> simply ends the execution of the current <a href="../Script_Functions.htm">script function</a>, <a href="../Method_Variables.htm">method</a>, or <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">event</a>. Note there is a slight difference in use here depending on the scope:</p>
+  <p><span class="inline">exit</span> po prostu kończy wykonywanie bieżącej <a href="../Script_Functions.htm">funkcji skryptu</a>, <a href="../Method_Variables.htm"><span class="notranslate">method</span></a>, lub <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a>. Należy pamiętać, że w zależności od zakresu występują tu pewne różnice w użyciu:</p>
   <ul class="colour">
-    <li>If you use <span class="inline">exit</span> in a script function or method it will simply exit the function and return to the code that called the function.</li>
-    <li>If you use <span class="inline">exit</span> in a code block within an object&#39;s event, it will exit <i>the entire event</i> even if there are various separate code blocks after <span class="inline">exit</span> has been called.</li>
-    <li>If you use <span class="inline">exit</span> in a parent event and call that event using <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> in a child object, only the parent event will exit and the child&#39;s event (which called <span class="inline">event_inherited()</span>) will continue.</li>
+    <li>Jeśli użyjesz <span class="inline">exit</span> w funkcji lub metodzie <span class="notranslate">script</span>, spowoduje to po prostu wyjście z funkcji i powrót do kodu, który wywołał tę funkcję.</li>
+    <li>Jeśli użyjesz <span class="inline">exit</span> w bloku kodu wewnątrz zdarzenia obiektu, spowoduje to wyjście z <i>całego zdarzenia</i>, nawet jeśli po wywołaniu <span class="inline">exit</span> będą istniały różne oddzielne bloki kodu.</li>
+    <li>Jeśli użyjesz <span class="inline">exit</span> w zdarzeniu nadrzędnym i wywołasz to zdarzenie za pomocą <a href="../../GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> w zdarzeniu dziecka <span class="notranslate">object</span>, zakończy się tylko zdarzenie rodzica, a zdarzenie dziecka (które wywołało <span class="inline">event_inherited()</span>) będzie kontynuowane.</li>
   </ul>
-  <p>When used in an event, <span class="inline">exit</span> is typically used to avoid an instance running any further code when a specific condition has been met (or not). The code below outlines an example of how it could be used, in this case within a Collision Event, although it can be used in any event.</p>
+  <p>W przypadku użycia w zdarzeniu, <span class="inline">exit</span> jest zwykle używany do unikania wykonywania przez instancję dalszego kodu, gdy określony warunek został spełniony (lub nie). Poniższy kod przedstawia przykład użycia tej funkcji, w tym przypadku w zdarzeniu Kolizja, choć można jej użyć w każdym zdarzeniu.</p>
   <p class="code">if (!visible)<br />
     {<br />
         exit;<br />
@@ -33,19 +33,19 @@
     other.coins -= 4;<br />
     coins += 4;
   </p>
-  <p>The above code checks if the current instance is not visible, in that case it exits the code block, otherwise it goes ahead and runs the rest of the code.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> It does not end the execution of the game. For that you need to use the function <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy bieżąca instancja nie jest widoczna, w takim przypadku kończy działanie bloku kodu, w przeciwnym razie przechodzi dalej i wykonuje resztę kodu.</p>
+  <p class="note"><b>UWAGA</b>: Nie kończy ona wykonywania gry. W tym celu należy użyć funkcji <span style="font-size:1px;"><a href="../../GML_Reference/General_Game_Control/game_end.htm"><span class="inline">game_end()</span></a></span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="with.htm">with</a></div>
+        <div style="float:left">Powrót: <a href="../Language_Features.htm">Cechy językowe</a></div>
+        <div style="float:right">Następny: <a href="with.htm"><span class="notranslate">with</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 exit

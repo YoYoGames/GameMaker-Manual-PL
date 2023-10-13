@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>in_sequence</title>
+  <title>w_sekwencji</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the variable in_sequence" />
   <meta name="rh-index-keywords" content="in_sequence" />
@@ -14,35 +14,35 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>in_sequence</h1>
-  <p>This is a <strong>built-in variable</strong> that is part of the <a href="../Instances/Instance_Variables/Instance_Variables.htm">instance variables</a> created for every object instance in your game. If the instance is being controlled by a sequence,
-    this variable will return <span class="inline">true</span>, otherwise it will return <span class="inline">false</span>. This is a <strong>read-only</strong> variable and cannot be changed.</p>
-  <p>Note that this variable will become <span class="inline">false</span> after the controlling Sequence has ended, even if its Sequence Element still exists, and will become <span class="inline">true</span> if that Sequence element is <a href="../Rooms/Sequence_Layers/layer_sequence_play.htm">played again</a>.</p>
-  <p>You can use this variable in your player (or CPU) controlled objects to make sure that they&#39;re only moved by code when they&#39;re not in a Sequence. This can prove useful for cutscenes, when you need to use the same instances in a Sequence (using
-    the <span class="inline"><a href="sequence_instance_override_object.htm">sequence_instance_override_object()</a></span> function) and you need to make sure that they can&#39;t be moved by their usual code while that cutscene is active.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>w_sekwencji</h1>
+  <p>Jest to <strong>wbudowana zmienna</strong>, która jest częścią <a href="../Instances/Instance_Variables/Instance_Variables.htm">zmiennych instancji</a> tworzonych dla każdej instancji <span class="notranslate">object</span> w grze. Jeśli instancja jest kontrolowana przez <span class="notranslate">sequence</span>,
+    ta zmienna zwróci <span class="inline">true</span>, w przeciwnym razie zwróci <span class="inline">false</span>. Jest to zmienna <strong>tylko do odczytu</strong> i nie można jej zmieniać.</p>
+  <p>Należy pamiętać, że ta zmienna stanie się <span class="inline">false</span> po zakończeniu kontrolowania <span class="notranslate">Sequence</span>, nawet jeśli jej element <span class="notranslate">Sequence</span> nadal istnieje, i stanie się <span class="inline">true</span>, jeśli ten element <span class="notranslate">Sequence</span> zostanie <a href="../Rooms/Sequence_Layers/layer_sequence_play.htm">odtworzony ponownie</a>.</p>
+  <p>Możesz użyć tej zmiennej w kontrolowanej przez gracza (lub CPU) witrynie <span class="notranslate">objects</span>, aby upewnić się, że są one poruszane przez kod tylko wtedy, gdy nie znajdują się w <span class="notranslate">Sequence</span>. Może się to przydać w cutscenkach, gdy musisz użyć tych samych instancji w <span class="notranslate">Sequence</span> (używając funkcji
+    <span class="inline"><a href="sequence_instance_override_object.htm">sequence_instance_override_object()</a></span> ) i trzeba się upewnić, że nie można ich poruszyć zwykłym kodem, gdy jest aktywna dana cutscenka.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">in_sequence</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if (!in_sequence)<br/> {
     <br/>     x += move_x;<br/>     y += move_y;<br/> }
   </p>
-  <p>The above code checks the <span class="inline">in_sequence</span> variable, and if it is <span class="inline">false</span> (meaning the instance is not being controlled by a sequence) then it adds <span class="inline">move_x</span> and <span class="inline">move_y</span> to the instance&#39;s
-    position, making sure that it only moves when it&#39;s not in a Sequence.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza zmienną <span class="inline">in_sequence</span> i jeśli jest to <span class="inline">false</span> (co oznacza, że instancja nie jest sterowana przez <span class="notranslate">sequence</span>), to dodaje <span class="inline">move_x</span> i <span class="inline">move_y</span> do pozycji instancji.
+    upewniając się, że porusza się ona tylko wtedy, gdy nie jest sterowana przez <span class="notranslate">Sequence</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_exists.htm">sequence_exists</a></div>
+        <div style="float:left">Powrót: <a href="Sequences.htm">Sekwencje</a></div>
+        <div style="float:right">Następny: <a href="sequence_exists.htm"><span class="notranslate">sequence_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 in_sequence

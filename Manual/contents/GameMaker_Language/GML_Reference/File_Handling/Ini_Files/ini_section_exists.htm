@@ -6,7 +6,7 @@
   <title>ini_section_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ini_section_exists" />
   <meta name="rh-index-keywords" content="ini_section_exists" />
@@ -16,45 +16,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ini_section_exists</h1>
-  <p>This function checks to see if a section exists in the currently open ini and will return <span class="inline">true</span> if it does or <span class="inline">false</span> otherwise. This is not a necessary check to prevent errors as, when a section does not exist, reading from a non-existent section will just return a default value, however it can be useful to see if an ini file has saved specific data.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja sprawdza, czy dana sekcja istnieje w aktualnie otwartym pliku ini i zwraca <span class="inline">true</span>, jeśli tak, lub <span class="inline">false</span> w przeciwnym wypadku. Nie jest to konieczne sprawdzanie, aby uniknąć błędów, ponieważ w przypadku braku sekcji odczyt z nieistniejącej sekcji zwróci wartość domyślną, jednak może być przydatne do sprawdzenia, czy w pliku ini zapisano określone dane.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">ini_section_exists(section);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>section</td><td><span data-keyref="Type_String"></span></td>
-        <td>The section in the open .ini file to check for.</td>
+        <td><span class="notranslate">section</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The section in the open .ini file to check for.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">ini_open(&quot;savedata.ini&quot;);<br />
     if !ini_section_exists(&quot;save1&quot;)<br />
     {<br />
         global.savegame = &quot;1&quot;;<br />
     }<br />
     ini_close();</p>
-  <p>This will set variable global.savegame to &quot;1&quot; if &quot;save1&quot; is NOT found. With a for loop, this could be used as a basic way of working out how many save games there are for a game (ie: creating a system for multiple simultaneous save games for one game).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>To ustawi zmienną global.savegame na &quot;1&quot;, jeśli &quot;save1&quot; NIE zostanie znaleziony. Przy użyciu for <span class="notranslate">loop</span> można to wykorzystać jako podstawowy sposób sprawdzania, ile jest save'ów w danej grze (np. tworzenie systemu dla wielu jednoczesnych save'ów w jednej grze).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Ini_Files.htm">Ini Files</a></div>
-        <div style="float:right">Next: <a href="ini_key_delete.htm">ini_key_delete</a></div>
+        <div style="float:left">Powrót: <a href="Ini_Files.htm">Pliki Ini</a></div>
+        <div style="float:right">Następny: <a href="ini_key_delete.htm"><span class="notranslate">ini_key_delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 ini_section_exists

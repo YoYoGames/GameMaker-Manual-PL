@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instance_deactivate_layer</title>
+  <title>dezaktywuj_warstwę</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function instance_deactivate_layer" />
   <meta name="rh-index-keywords" content="instance_deactivate_layer" />
@@ -15,49 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
-  <p>With this function you can deactivate all instances assigned to a specific layer. You need to supply the <b>layer ID</b>, which can either be the name of the layer as written in the code editor (as a string) or the actual layer ID value as returned by the <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>, and note that you can only deactivate <i>instance</i> layers with this function. Note that if you have deactivated a layer that has instances of objects flagged as <b>Persistent</b>, then you will need to reactivate the layer again with the function <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a> before changing room, otherwise any persistent instances on the layer will <i>not</i> be carried over and will be discarded. Note too that deactivation is not instantaneous, and an instance that has been deactivated in this way will not be considered to be inactive until the end of the event in which the function was called.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Deactivate_On_Room_Start_Create_Event.hts"> </div>
-  <div data-conref="../../../../../assets/snippets/Note_Warning_Deactivating_Physics_Instances.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
+  <h1>dezaktywuj_warstwę</h1>
+  <p>Za pomocą tej funkcji można dezaktywować wszystkie instancje przypisane do określonej warstwy. Musisz podać <b>identyfikator</b> warstwy, który może być albo nazwą warstwy zapisaną w edytorze kodu (jako <span class="notranslate">string</span>), albo rzeczywistą wartością identyfikatora warstwy zwróconą przez funkcję <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>i należy pamiętać, że za pomocą tej funkcji można dezaktywować tylko warstwy <i>instancji.</i> Pamiętaj, że jeśli dezaktywowałeś warstwę, której instancje <span class="notranslate">objects</span> zostały oznaczone jako <b>trwałe</b>, musisz ponownie aktywować warstwę za pomocą funkcji <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a> przed zmianą <span class="notranslate">room</span>, w przeciwnym razie wszystkie trwałe instancje na tej warstwie <i>nie</i> zostaną przeniesione i zostaną odrzucone. Należy również pamiętać, że dezaktywacja nie jest natychmiastowa i instancja, która została dezaktywowana w ten sposób, nie będzie uważana za nieaktywną do końca zdarzenia, w którym wywołano funkcję.</p>
+  <p class="note"><b>UWAGA</b>: Jeśli dezaktywujesz instancję na początku <span class="notranslate">room</span> (tzn. z kodu tworzenia <span class="notranslate">room</span> lub ze zdarzenia tworzenia instancji w <span class="notranslate">room</span>), wszystkie instancje, które są umieszczone w <span class="notranslate">room</span> z edytora <span class="notranslate">room</span>, <b>będą nadal uruchamiać swoje zdarzenia tworzenia</b> przed dezaktywacją.</p>
+  <p class="note"><b></b><b>UWAGA</b>: Wyłączenie instancji, które mają włączoną fizykę, <b>NIE</b> spowoduje, że ich armatura przestanie oddziaływać w ramach symulacji fizyki. W tym celu należy ustawić ich zmienną <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> na <span class="inline">true</span> lub <span class="inline">false</span>, gdy będziesz włączać/wyłączać te instancje.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">instance_deactivate_layer(obj);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>layer</td>
-        <td><span data-keyref="Type_ID_Layer"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm" target="_blank">Layer ID</a></span> or <span data-keyref="Type_String"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The layer name string (or ID value) to be used</td>
+        <td><span class="notranslate">layer</span></td>
+        <td><span data-keyref="Type_ID_Layer">Identyfikator warstwy</span> lub <span data-keyref="Type_String">ciąg</span>znaków</td>
+        <td><span class="notranslate">The layer name string (or ID value) to be used</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(&quot;Enemy Layer&quot;);<br />
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">instance_deactivate_layer(&quot;Enemy Layer&quot;);<br />
     var _vx = camera_get_view_x(view_camera[0]);<br />
     var _vy = camera_get_view_y(view_camera[0]);<br />
     var _vw = camera_get_view_width(view_camera[0]);<br />
     var _vh = camera_get_view_height(view_camera[0]);<br />
     instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
-  <p>The above code deactivates all instances assigned to the layer &quot;Enemy_Layer&quot; and then activates a region within the room.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod dezaktywuje wszystkie instancje przypisane do warstwy &quot;Enemy_Layer&quot;, a następnie aktywuje region w witrynie <span class="notranslate">room</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
-        <div style="float:right">Next: <a href="instance_activate_all.htm">instance_activate_all</a></div>
+        <div style="float:left">Powrót: <a href="Deactivating_Instances.htm">Dezaktywacja instancji</a></div>
+        <div style="float:right">Następny: <a href="instance_activate_all.htm"><span class="notranslate">instance_activate_all</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 instance_deactivate_layer

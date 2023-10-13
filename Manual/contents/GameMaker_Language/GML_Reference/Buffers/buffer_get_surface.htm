@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_get_surface</title>
+  <title>bufor_get_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_get_surface" />
   <meta name="rh-index-keywords" content="buffer_get_surface,buffer_surface_copy (Deprecated)" />
@@ -15,56 +15,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_get_surface</h1>
-  <p>With this function you can write information from a surface to a given buffer. The buffer must have been created previously and should be a 1-byte aligned buffer large enough to store data for the surface you are going to write (if unsure, use a <a href="buffer_create.htm">grow</a> buffer or see the example at the bottom of this page).</p>
-  <p>The information for the surface will always be written to the start of the buffer (regardless of the seek position) but you can choose an offset value (in bytes) to move the write position from the start of the buffer.</p>
-  <p>The <a href="../Drawing/Surfaces/surface_create.htm">format</a> of the surface will affect how the surface is written into the buffer. Keep in mind that the same format may be written in a different way on different platforms.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>bufor_get_surface</h1>
+  <p>Za pomocą tej funkcji można zapisywać informacje z powierzchni do określonego adresu <span class="notranslate">buffer</span>. Strona <span class="notranslate">buffer</span> musi być utworzona wcześniej i powinna być stroną <span class="notranslate">buffer</span> o wyrównaniu 1-bajtowym, wystarczająco dużą, aby pomieścić dane powierzchni, którą zamierzasz zapisać (jeśli nie masz pewności, użyj bufora <a href="buffer_create.htm">grow</a> lub zobacz przykład na dole tej strony).</p>
+  <p>Informacje dotyczące powierzchni będą zawsze zapisywane na początku strony <span class="notranslate">buffer</span> (niezależnie od pozycji szukania), ale można wybrać wartość przesunięcia (w bajtach), aby przesunąć pozycję zapisu z początku strony <span class="notranslate">buffer</span>.</p>
+  <p>Zwróć uwagę, że funkcja zapisuje każdy piksel powierzchni do <span class="notranslate">buffer</span> przy użyciu formatowania <b>RGBA</b> w celu <span class="notranslate">Windows</span>, ale w innych celach może być ono inne w zależności od systemu operacyjnego lub nawet urządzenia.</p>
+  <p class="note"><strong>UWAGA</strong>: Ta funkcja uległa zmianie od aktualizacji <span data-keyref="GameMaker Name">GameMakera</span> do wersji 2.3.1. Poprzednie wersje używały stałej <span class="inline">buffer_surface_copy</span>, która jest obecnie wycofywana z użycia.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">buffer_get_surface(buffer, surface, offset);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Buffer ID</a></span></td>
-        <td>The index of the buffer to use.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"><a href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm" target="_blank">Identyfikator bufora</a></span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
       </tr>
       <tr>
-        <td>surface</td>
-        <td><span data-keyref="Type_ID_Surface"><a href="../../../../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_create.htm" target="_blank">Surface ID</a></span></td>
-        <td>The index of the surface to use.</td>
+        <td><span class="notranslate">surface</span></td>
+        <td><span data-keyref="Type_ID_Surface"><a href="../../../../GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_create.htm" target="_blank">Identyfikator powierzchni</a></span></td>
+        <td><span class="notranslate">The index of the surface to use.</span></td>
       </tr>
       <tr>
-        <td>offset</td>
+        <td><span class="notranslate">offset</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The data offset value (in bytes).</td>
+        <td><span class="notranslate">The data offset value (in bytes).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">buffer = buffer_create(surf_width * surf_height * 4, buffer_fixed, 1);<br />
     buffer_get_surface(buffer, surface, 0);</p>
-  <p>This code will create a fixed-size buffer which has the capacity to store 4 bytes per pixel (for the R, G, B and A components) based on the exact size of the surface, and then copy the surface data into it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Ten kod utworzy stronę <span class="notranslate">buffer</span> o stałym rozmiarze, która może pomieścić 4 bajty na piksel (dla składowych R, G, B i A) w oparciu o dokładny rozmiar powierzchni, a następnie skopiuje do niej dane powierzchni.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_set_surface.htm">buffer_set_surface</a></div>
+        <div style="float:left">Powrót: <a href="Buffers.htm">Bufory</a></div>
+        <div style="float:right">Następny: <a href="buffer_set_surface.htm"><span class="notranslate">buffer_set_surface</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_get_surface

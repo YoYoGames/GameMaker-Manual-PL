@@ -6,7 +6,7 @@
   <title>keyboard_check</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for keyboard_check" />
   <meta name="rh-index-keywords" content="keyboard_check" />
@@ -15,47 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">keyboard_check</span></h1>
-  <p>With this function you can check to see if a key is held down or not.</p>
-  <p>Unlike the <span class="inline3_func"><a data-xref="{title}" href="keyboard_check_pressed.htm">keyboard_check_pressed</a></span> or <span class="inline3_func"><a data-xref="{title}" href="keyboard_check_released.htm">keyboard_check_released</a></span> functions which are only triggered once when the key is pressed or released, this function is triggered every step that the key is held down for.</p>
-  <p>The function will take a keycode value as returned by the function <span class="inline3_func"><a data-xref="{title}" href="../../Strings/ord.htm">ord</a></span> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the <span class="inline">vk_*</span> constants listed on the main <a data-xref="{title}" href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
-  <p class="code"><span data-field="title" data-format="default">keyboard_check</span>(key);</p>
+  <h1>keyboard_check</h1>
+  <p>Za pomocą tej funkcji można sprawdzić, czy dany klawisz jest przytrzymany, czy nie. W przeciwieństwie do funkcji <a href="keyboard_check_pressed.htm"><span class="inline">keyboard_check_pressed()</span></a> lub <a href="keyboard_check_released.htm"><span class="inline">keyboard_check_released()</span></a> które są wywoływane tylko raz, gdy klawisz jest naciśnięty lub zwolniony, ta funkcja jest wywoływana przy każdym kroku, w którym klawisz jest przytrzymany. Funkcja przyjmuje wartość keycode zwróconą przez funkcję <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (tylko <i>wielkie</i> litery od A-Z lub cyfry od 0-9), lub dowolną stałą <span class="inline">vk_*</span> wymienioną na głównej stronie Keyboard <a href="Keyboard_Input.htm">Input</a>.</p>
+  <p> </p>
+  <h4><b>Składnia:</b></h4>
+  <p class="code">keyboard_check(key);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>key</td>
-        <td><span data-keyref="Type_Constant_VK"><a href="../../../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/Keyboard_Input.htm" target="_blank">Virtual Key Constant (vk_*)</a></span></td>
-        <td>The key to check the down state of.</td>
+        <td><span class="notranslate">key</span></td>
+        <td><span data-keyref="Type_Constant_VK">Stała klucza wirtualnego (vk_*)</span></td>
+        <td><span class="notranslate">The key to check the down state of.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4><b>Returns:</b></h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4><b><b>Example:</b></b></h4>
-  <p class="code">if <span data-field="title" data-format="default">keyboard_check</span>(vk_left)<br />
+  <p> </p>
+  <h4><b>Zwroty:</b></h4>
+  <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
+  <p> </p>
+  <h4><b><b>Przykład:</b></b></h4>
+  <p class="code">if keyboard_check(vk_left)<br />
     {<br />
         x -= 5;<br />
     }</p>
-  <p>The above code will check to see if the arrow key is being pressed and move the instance 5 pixels left every step that it returns <span class="inline2">true</span>.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdzi, czy został naciśnięty klawisz strzałki i przesunie instancję o 5 pikseli w lewo za każdym razem, gdy zwróci wartość true.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Keyboard_Input.htm">Keyboard Input</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="keyboard_check_pressed.htm">keyboard_check_pressed</a></div>
+        <div style="float:left">Powrót: <a href="Keyboard_Input.htm">Wejście klawiatury</a></div>
+        <div style="float:right">Następny: <a href="keyboard_check_pressed.htm"><span class="notranslate">keyboard_check_pressed</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 keyboard_check

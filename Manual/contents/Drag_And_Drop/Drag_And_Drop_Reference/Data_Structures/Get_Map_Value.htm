@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Map Value</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Uzyskaj wartość mapy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Map Value action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Map Value" />
@@ -14,47 +14,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Map Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Map_Value.png" /> Get Map Value</h1>
-  <p>With this action you can retrieve the value associated with a given key in a map data structure. You supply the variable that holds the map index (as returned by the action <a href="Create_Map.htm">Create Map</a>) and then give a &quot;key&quot; (which is the identifier within the map for a value), and also supply a target variable to hold the returned value (which can be flagged as a temporary local variable).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> If you give a key that does not exist in the map then the action will return <span class="inline">undefined</span>. You can check for this this using the <a href="../Common/If_Undefined.htm">If Undefined</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Map Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Map_Value.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Uzyskaj wartość mapy</h1>
+  <p>Za pomocą tej akcji można pobrać wartość przypisaną do danego klucza w strukturze danych mapy. Podaje się zmienną, która przechowuje indeks mapy (zwrócony przez akcję <a href="Create_Map.htm">Utwórz mapę</a>), a następnie podaje się &quot;klucz&quot; (który jest
+    jest identyfikatorem wartości w ramach mapy), a także zmienną docelową, która ma przechowywać zwróconą wartość (może być oznaczona jako tymczasowa zmienna lokalna).</p>
+  <p class="note"><b>UWAGA</b>: Jeśli podasz klucz, który nie istnieje na mapie, akcja zwróci <span class="inline">undefined</span>. Można to sprawdzić za pomocą akcji <a href="../Common/If_Undefined.htm">If Undefined</a>.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Get Map Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Map_Value.png" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Map</td>
-        <td>The index (stored in a variable) of the map to get the value from</td>
+        <td><span class="notranslate">Map</span></td>
+        <td>Indeks (przechowywany w zmiennej) mapy, z której ma zostać pobrana wartość</td>
       </tr>
       <tr>
-        <td>Key</td>
-        <td>The key to get (real or string)</td>
+        <td><span class="notranslate">Key</span></td>
+        <td>Kluczem do uzyskania (prawdziwego lub <span class="notranslate">string</span>)</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned map value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Zmienna docelowa przechowująca zwróconą wartość mapy</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Map Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Get_Map_Value.png" />The above action block code checks for a collision at the instance position and if one is found then a map is looked up to get a value from the key &quot;damage&quot;, and this value is then used to change the calling instance variable &quot;hp&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji sprawdza, czy na pozycji instancji nie doszło do kolizji, a jeśli takowa zostanie znaleziona
+    zostanie znaleziona, wówczas przeglądana jest mapa, aby uzyskać wartość z klucza &quot;damage&quot;, a następnie wartość ta jest używana do zmiany zmiennej wywołującej instancję &quot;hp&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Remove_Map_Entry.htm">Remove Map Entry</a></div>
+        <div style="float:left">Powrót: <a href="Data_Structure_Actions.htm">Działania związane ze strukturami danych</a></div>
+        <div style="float:right">Następny: <a href="Remove_Map_Entry.htm">Usuń wpis na mapie</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Map Value

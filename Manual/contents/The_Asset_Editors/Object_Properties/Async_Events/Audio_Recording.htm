@@ -1,49 +1,48 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Audio Recording</title>
+  <title>Nagrywanie dźwięku</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Audio Recording async event." />
   <meta name="rh-index-keywords" content="Objects - Async Audio Recording Event" />
-  <meta name="search-keywords" content="Audio Recording,ev_async_audio_recording" />
+  <meta name="search-keywords" content="Audio Recording,ev_audio_recording" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Audio Recording</span></h1>
-  <p><img alt="Audio Recording Event" class="center" src="../../../assets/Images/Asset_Editors/Async_AudioRecording.png" />This event can only be triggered by the <span class="inline3_func"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_start_recording.htm">audio_start_recording</a></span> function and will return a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> stored in the variable <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span>, containing different key/value pairs depending on the <a class="glossterm" data-glossterm="callback" href="Dialog.htm#">callback</a> from the function that has triggered the event.</p>
-  <p>The following keys will be available in the ds_map:</p>
+  <h1>Nagrywanie dźwięku</h1>
+  <p><img>To zdarzenie może być wywołane tylko przez <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_start_recording.htm"><span class="inline">audio_start_recording()</span></a> funkcja
+    i zwróci <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">mapę DS Map</a> przechowywaną w zmiennej <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>,
+    zawierającą różne pary klucz/wartość w zależności od <a class="glossterm" data-glossterm="callback" href="Dialog.htm#">wywołania zwrotnego</a> funkcji, która <a class="glossterm" data-glossterm="callback" href="Dialog.htm#">wywołała</a> zdarzenie.</p>
+  <p>W mapie ds_map będą dostępne następujące klucze:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">buffer_id</span>&quot; - the ID of the temporary <a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">buffer</a> you can use to retrieve the audio data</li>
-    <li class="dropspot">&quot;<span class="inline">channel_index</span>&quot; - the recording channel index as returned by the calling function that this data came from</li>
-    <li class="dropspot">&quot;<span class="inline">data_len</span>&quot; - the length of data (in bytes) you&#39;ve received</li>
+    <li class="dropspot">&quot;<span class="inline">buffer_id</span>&quot; - identyfikator <a href="../../../GameMaker_Language/GML_Reference/Buffers/Buffers.htm">bufora</a> tymczasowego, którego można użyć do pobierania danych audio</li>
+    <li class="dropspot">&quot;<span class="inline">channel_index</span>&quot; - indeks kanału zapisu zwrócony przez funkcję wywołującą, z którego pochodzą te dane</li>
+    <li class="dropspot">&quot;<span class="inline">data_len</span>&quot; - długość odebranych danych (w bajtach)</li>
   </ul>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> As mentioned at the start of this page, the variable <span class="inline2"><a data-xref="{title}" href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm">async_load</a></span> is only valid in the asynchronous events, as the DS map that is points to is created at the start of the event, then deleted again at the end. However, note that the temporary buffer in which all audio is stored with the map will also be removed at the end of the event so you should copy it to a custom buffer if you want to keep it for later use.</p>
-  <p>In the usage example below we will create a custom buffer to store our recorded audio, and also set our game to record from input source 0:</p>
-  <p class="code">channel_index = audio_start_recording(0);<br />
-    audio_buffer = buffer_create(len, buffer_fast, 1);</p>
-  <p>Every game step now that the recording is detected will trigger an asynchronous Audio Recording event where you can deal with the recorded input something like this:</p>
-  <p class="code">var channel = async_load[? &quot;channel_index&quot;];<br />
-    if channel == channel_index<br />
-       {<br />
-       len = async_load[? &quot;data_len&quot;];<br />
-       buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, audio_buffer, 0);<br />
-       }</p>
-  <p>Here we simply check the &quot;channel_index&quot; key to make sure it matches the value returned when we started recording, and if it does we copy the contents of the temporary buffer created for this event into our custom buffer. After that you can do what you want with the custom buffer - you could play it using the dedicated buffer audio functions, you could process it and send it over the network, you could save it to disk... Once you have your recorded audio in a buffer, you can do basically anything you want.</p>
-  <p> </p>
-  <p> </p>
+  <p class="note"><strong>UWAGA</strong>: Jak wspomniano na początku tej strony, zmienna <span class="inline" style="font-size: 14px">async_load </span>jest ważna tylko w zdarzeniach asynchronicznych, ponieważ mapa DS, na którą wskazuje, jest tworzona na początku zdarzenia,
+    a następnie ponownie usuwana na końcu. Należy jednak pamiętać, że tymczasowy adres <span class="notranslate">buffer</span>, w którym wraz z mapą przechowywany jest cały dźwięk, również zostanie usunięty po zakończeniu zdarzenia, więc jeśli chcesz go zachować do późniejszego użytku, powinieneś skopiować go do niestandardowego adresu <span class="notranslate">buffer</span>.</p>
+  <p>W poniższym przykładzie użycia utworzymy niestandardowy adres <span class="notranslate">buffer</span>, w którym będziemy przechowywać nagrany dźwięk, a także ustawimy grę tak, aby nagrywała ze źródła wejściowego 0:</p>
+  <p class="code">channel_index = audio_start_recording(0);<br/> audio_buffer = buffer_create(len, buffer_fast, 1);</p>
+  <p>W każdym kroku gry, w którym wykryto nagrywanie, zostanie uruchomione zdarzenie asynchronicznego nagrywania dźwięku, w którym można zająć się nagranym sygnałem wejściowym w następujący sposób:</p>
+  <p class="code">var channel = async_load[? &quot;channel_index&quot;];<br/> if channel == channel_index<br/>    {<br/>    len = async_load[? &quot;data_len&quot;];<br/>    buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, audio_buffer, 0);<br/>    }</p>
+  <p>Tutaj po prostu sprawdzamy klucz &quot;channel_index&quot;, aby upewnić się, że odpowiada on wartości zwróconej podczas rozpoczęcia nagrywania, a jeśli tak jest, kopiujemy zawartość tymczasowej strony <span class="notranslate">buffer</span> utworzonej dla tego zdarzenia do naszej własnej strony <span class="notranslate">buffer</span>. Następnie możesz
+    zrobić co chcesz z niestandardowym <span class="notranslate">buffer</span> - możesz go odtworzyć za pomocą dedykowanych funkcji audio <span class="notranslate">buffer</span>, możesz go przetworzyć i wysłać przez sieć, możesz go zapisać na dysku... Gdy nagrany dźwięk znajdzie się na stronie <span class="notranslate">buffer</span>, można z nim zrobić w zasadzie
+    wszystko, co chcesz.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Cloud.htm">Cloud</a></div>
+        <div style="float:left">Powrót: <a href="../Async_Events.htm">Zdarzenia asynchroniczne</a></div>
+        <div style="float:right">Następny: <a href="Cloud.htm">Chmura</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Audio Recording Event
@@ -52,5 +51,5 @@ ev_audio_recording
   <!-- TAGS
 ev_audio_recording
 -->
-</body>
-</html>
+
+</body></html>

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>random</title>
+  <title>losowo</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for random" />
   <meta name="rh-index-keywords" content="random" />
@@ -14,47 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">random</span></h1>
-  <p>This function returns a random floating-point (decimal) number between 0.0 (inclusive) and the specified upper limit (inclusive).</p>
-  <p>For example, <span class="inline">random(100)</span> will return a value from 0 to 100.00, but that value can be 22.56473! You can also use real numbers and not integers in this function like this - <span class="inline">random(0.5)</span>, which will return a value between 0 and 0.500.</p>
-  <div data-conref="../../../../assets/snippets/Note_randomise.hts"> </div>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">random</span>(n);</p>
+  <h1>losowo</h1>
+  <p>Ta funkcja jest dobra dla prawdopodobieństw, w których zwracanie liczby całkowitej nie jest konieczne. Na przykład funkcja <span class="inline">random(100)</span> zwróci wartość z przedziału od 0 do 99, ale może to być 22,56473! W tej funkcji można też używać liczb rzeczywistych, a nie całkowitych, np. <span class="inline">random(0.5)</span>, która zwróci wartość z przedziału od 0 do 0,4999999.</p>
+  <p class="note"><b>UWAGA</b>: Ta funkcja będzie zwracać tę samą wartość za każdym razem, gdy gra jest uruchamiana od nowa, ponieważ <span data-keyref="GameMaker Name">GameMaker</span> generuje za każdym razem to samo początkowe losowe ziarno, aby ułatwić <span class="notranslate">debugging</span> kod. Aby uniknąć tego zachowania, użyj <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span> na początku swojej gry.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">random(n);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
+     </tr>
       <tr>
-        <td>n</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The upper range from which the random number will be selected.</td>
-      </tr>
+        <td><span class="notranslate">n</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The upper range from which the random number will be selected.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if (<span data-field="title" data-format="default">random</span>(10) &gt;= 9)<br />
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_Real"></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">if (random(10) &gt;= 9)<br />
     {<br />
         score += 100;<br />
     }</p>
-  <p>This will produce approximately a one in ten chance of adding 100 to the score.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Daje to w przybliżeniu jedną na dziesięć szans na dodanie 100 do wyniku.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Number_Functions.htm">Number Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="random_range.htm">random_range</a></div>
+        <div style="float:left">Powrót: <a href="Number_Functions.htm">Funkcje numeryczne</a></div>
+        <div style="float:right">Następny: <a href="random_range.htm"><span class="notranslate">random_range</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 random

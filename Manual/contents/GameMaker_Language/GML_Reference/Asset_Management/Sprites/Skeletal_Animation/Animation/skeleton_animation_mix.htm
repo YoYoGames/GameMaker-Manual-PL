@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_animation_mix</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>szkielet_animacji_mix</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function skeleton_animation_mix" />
   <meta name="rh-index-keywords" content="skeleton_animation_mix" />
@@ -14,57 +14,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">skeleton_animation_mix</span></h1>
-  <p>You can switch animation sets easily using the <span class="inline3_func"><a data-xref="{title}" href="skeleton_animation_set.htm">skeleton_animation_set</a></span> function, but this may cause a skip or stutter as one animation is swapped for another. To prevent this, you can set the mix value between two animation sets and the sprite will interpolate between them. Normally you would want to do this in the Create Event of the instance with the skeletal animation as it only needs to be set once, and <span data-keyref="GameMaker Name">GameMaker</span> will interpolate all further changes to the sprite using the animation sets in that instance.</p>
-  <p class="note"><span class="note">NOTE</span> Spine 4.0 changes how rotational animation works, as it no longer interpolates rotation using the shortest route possible, but uses the absolute values in your keyframes for interpolation. This may cause unexpected behaviour if you are upgrading your Spine animation from an older version, and changes within your Spine project may be required for rotations to behave as required.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">skeleton_animation_mix</span>(animfrom, animto, duration);</p>
+  <h1>szkielet_animacji_mix</h1>
+  <p>Zestawy animacji można łatwo znaleźć na stronie <span class="notranslate">switch</span>, używając funkcji <a href="skeleton_animation_set.htm"><span class="inline">skeleton_animation_set()</span></a> ale może to powodować przeskakiwanie lub zacinanie się animacji, gdy jedna animacja jest zamieniana na drugą. Aby temu zapobiec, możesz ustawić wartość mieszania między dwoma zestawami animacji, a <span class="notranslate">sprite</span> będzie dokonywać interpolacji między nimi. Zwykle warto to zrobić w zdarzeniu tworzenia instancji z animacją szkieletową, ponieważ wystarczy ustawić ją tylko raz, a <span data-keyref="GameMaker Name">GameMaker</span> będzie interpolował wszystkie kolejne zmiany w <span class="notranslate">sprite</span> za pomocą zestawów animacji w tej instancji. Zauważ, że wartość czasu trwania mieści się w zakresie od 0 do 1, gdzie wartość 0,5 spowodowałaby interpolację &quot;pół na pół&quot; z jednego zestawu do drugiego.</p>
+  <p class="note"><span class="note">UWAGA</span> W wersji Spine 4.0 zmieniono sposób działania animacji obrotowej, ponieważ nie interpoluje ona już obrotów przy użyciu najkrótszej możliwej drogi, ale wykorzystuje do interpolacji wartości bezwzględne w witrynie <span class="notranslate">keyframes</span>. Może to spowodować nieoczekiwane zachowanie w przypadku aktualizacji animacji <span class="notranslate">Spine</span> ze starszej wersji. Aby obroty zachowywały się zgodnie z wymaganiami, konieczne może być wprowadzenie zmian w projekcie <span class="notranslate">Spine</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">skeleton_animation_mix(animfrom, animto, duration);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>animfrom</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name (a string) of the first animation set to interpolate from.</td>
+        <td><span class="notranslate">animfrom</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span class="notranslate">The name (a string) of the first animation set to interpolate from.</span></td>
       </tr>
       <tr>
-        <td>animto</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name (a string) of the second animation set to interpolate to.</td>
+        <td><span class="notranslate">animto</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span class="notranslate">The name (a string) of the second animation set to interpolate to.</span></td>
       </tr>
       <tr>
-        <td>duration</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The duration of the interpolation (in seconds)</td>
+        <td><span class="notranslate">duration</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span class="notranslate">The duration of the interpolation (from 0 to 1)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">skeleton_animation_set(&quot;walk&quot;);<br />
-    <span data-field="title" data-format="default">skeleton_animation_mix</span>(&quot;walk&quot;, &quot;jump&quot;, 0.2);<br />
-    <span data-field="title" data-format="default">skeleton_animation_mix</span>(&quot;jump&quot;, &quot;walk&quot;, 0.4);
-  </p>
-  <p>The above code would go in the Create Event of an instance with a skeletal animation sprite and sets the animation mix duration for interpolating between the two animations sets &quot;walk&quot; and &quot;jump&quot;.</p>
-  <p> </p>
-  <p> </p>
+    skeleton_animation_mix(&quot;walk&quot;, &quot;jump&quot;, 0.2);<br />
+    skeleton_animation_mix(&quot;jump&quot;, &quot;walk&quot;, 0.4);</p>
+  <p>Powyższy kod zostanie umieszczony w zdarzeniu tworzenia instancji z animacją szkieletową <span class="notranslate">sprite</span> i ustawi czas trwania mieszanki animacji dla interpolacji między dwiema animacjami ustawionymi jako &quot;chodzenie&quot; i &quot;skakanie&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Animation.htm">Animation</a></div>
-        <div style="float:right">Next: <a href="skeleton_animation_list.htm">skeleton_animation_list</a></div>
+        <div style="float:left">Powrót: <a href="Animation.htm">Animacja</a></div>
+        <div style="float:right">Następny: <a href="skeleton_animation_list.htm"><span class="notranslate">skeleton_animation_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_mix

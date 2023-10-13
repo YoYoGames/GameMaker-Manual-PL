@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>typeof</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function typeof" />
   <meta name="rh-index-keywords" content="typeof" />
@@ -15,69 +15,77 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">typeof</span></h1>
-  <p>This function returns the data type of any given variable as a string. The possible return values are listed in the table below:</p>
+  <h1>typeof</h1>
+  <p>Funkcja zwraca typ danych dowolnej zmiennej jako <span class="notranslate">string</span>. Możliwe wartości zwrotne są wymienione w poniższej tabeli:</p>
   <table>
     <tbody>
       <tr>
         <th>String</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td><span class="inline">&quot;number&quot;</span></td>
-        <td>The variable holds a real (floating point) number - this can include <span class="inline2">NaN</span> and <span class="inline2">infinity</span></td>
+        <td><span class="notranslate"><span class="inline">&quot;number&quot;</span></td>
+        <td>Zmienna przechowuje liczbę rzeczywistą (zmiennoprzecinkową) - może to być <span class="inline">NaN</span> oraz <span class="inline">infinity</span></td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;string&quot;</span></td>
-        <td>The variable holds a string</td>
+        <td><span class="notranslate"><span class="inline">&quot;string&quot;</span></td>
+        <td>Zmienna przechowuje ciąg znaków</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;array&quot;</span></td>
-        <td>The variable references an array</td>
+        <td><span class="notranslate"><span class="inline">&quot;array&quot;</span></td>
+        <td>Zmienna odwołuje się do tablicy</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;bool&quot;</span></td>
-        <td>The variable holds a boolean (<span class="inline2">true</span> / <span class="inline2">false</span>)</td>
+        <td><span class="notranslate"><span class="inline">&quot;bool&quot;</span></td>
+        <td>Zmienna przechowuje boolean (<span class="inline">true</span> / <span class="inline">false</span>)</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;int32&quot;</span></td>
-        <td>The variable holds a 32bit integer</td>
+        <td><span class="notranslate"><span class="inline">&quot;int32&quot;</span></td>
+        <td>Zmienna przechowuje 32-bitową liczbę całkowitą</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;int64&quot;</span></td>
-        <td>The variable holds a 64 bit integer</td>
+        <td><span class="notranslate"><span class="inline">&quot;int64&quot;</span></td>
+        <td>Zmienna przechowuje 64-bitową liczbę całkowitą</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;ptr&quot;</span></td>
-        <td>The variable holds a pointer</td>
+        <td><span class="notranslate"><span class="inline">&quot;ptr&quot;</span></td>
+        <td>Zmienna przechowuje wskaźnik</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;undefined&quot;</span></td>
-        <td>The variable is undefined</td>
+        <td><span class="notranslate"><span class="inline">&quot;undefined&quot;</span></td>
+        <td>Zmienna jest niezdefiniowana</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;null&quot;</span></td>
-        <td>The variable holds a null value (this should not be seen normally)</td>
+        <td><span class="notranslate"><span class="inline">&quot;null&quot;</span></td>
+        <td>Zmienna posiada wartość null (nie powinno to być normalnie widoczne)</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;method&quot;</span></td>
-        <td>The variable holds a function reference</td>
+        <td><span class="notranslate"><span class="inline">&quot;vec3&quot;</span></td>
+        <td>Zmienna przechowuje wektor 3 wartości</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;struct&quot;</span></td>
-        <td>The variable holds a struct reference</td>
+        <td><span class="notranslate"><span class="inline">&quot;vec4&quot;</span></td>
+        <td>Zmienna przechowuje wektor 4 wartości</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;ref&quot;</span></td>
-        <td>The variable holds an instance reference</td>
+        <td><span class="notranslate"><span class="inline">&quot;method&quot;</span></td>
+        <td>Zmienna przechowuje referencję do funkcji</td>
       </tr>
       <tr>
-        <td><span class="inline">&quot;unknown&quot;</span></td>
-        <td>Value is unknown. This should <i>never</i> be seen and signifies that something has gone wrong at the most basic level like a memory overwrite</td>
+        <td><span class="notranslate"><span class="inline">&quot;struct&quot;</span></td>
+        <td>Zmienna przechowuje referencję <span class="notranslate">struct</span> </td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">&quot;ref&quot;</span></td>
+        <td>Zmienna przechowuje referencję do instancji</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate"><span class="inline">&quot;unknown&quot;</span></td>
+        <td>Wartość jest nieznana. To nie powinno być <i>nigdy</i> widoczne i oznacza, że coś poszło nie tak na najbardziej podstawowym poziomie, jak nadpisanie pamięci.</td>
       </tr>
     </tbody>
   </table>
-  <p>Please note that there are cases when this function may not return the correct value for a <strong>method</strong>. Consider the following two function definitions:</p>
+  <p>Należy pamiętać, że istnieją przypadki, w których ta funkcja może nie zwrócić prawidłowej wartości dla <strong>metody</strong>. Rozważmy następujące dwie definicje funkcji:</p>
   <p class="code">a = function()<br />
     {<br />
         // something<br />
@@ -88,42 +96,43 @@
         // Something<br />
     }
   </p>
-  <p>Technically, these are both considered methods as they are binding a function to an instance scope variable, however calling <span class="inline3_func"><a data-xref="{title}" href="typeof.htm">typeof</a></span> on function <span class="inline3_func">b</span> will return &quot;number&quot; and <em>not </em>&quot;method&quot;, while calling it on <span class="inline3_func">a</span> will return &quot;method&quot;. This is due to the fact that methods created like the one for <span class="inline3_func">b</span> are assigned script indices (which are integer values), since this is the way that the compiler recognises script functions, even if the function was not defined in a script.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">typeof</span>(variable);</p>
+  <p>Technicznie, oba są uważane za metody, ponieważ wiążą funkcję ze zmienną zakresu instancji, jednak wywołanie <span class="inline">typeof()</span> na funkcji <span class="inline">b</span> zwróci &quot;number&quot;, a <em>nie </em>&quot;method&quot;, podczas gdy wywołanie na <span class="inline">a</span> zwróci &quot;method&quot;. Wynika to z faktu, że metody utworzone tak jak w przypadku <span class="inline">b</span> mają przypisane indeksy <span class="notranslate">script</span> (które są wartościami całkowitymi), ponieważ w ten sposób kompilator rozpoznaje funkcje skryptowe, nawet jeśli funkcja nie została zdefiniowana w <span class="notranslate">script</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">typeof(variable);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>variable</td>
-        <td><span data-keyref="Type_Any"><a href="GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></td>
-        <td>The variable to get the data type of.</td>
+        <td><span class="notranslate">variable</span></td>
+        <td><span data-keyref="Type_Any"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Każdy</a></span></td>
+        <td><span class="notranslate">The variable to get the data type of.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> (see table above)</p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
-  <p class="code">var _str = <span data-field="title" data-format="default">typeof</span>(global.ExtensionInput);<br />
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> (see table above)</p>
+  <p> </p>
+  <h4><b>Przykład:</b></h4>
+  <p class="code">var _str = typeof(global.ExtensionInput);<br />
     show_debug_message(&quot; <strong>global.ExtensionInput is a &quot; + _str);</strong></p>
-  <p>The above code gets the data type held by the given global variable and returns the string to a local variable which is then used to output a message to the console.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera typ danych przechowywany przez podaną zmienną globalną i zwraca <span class="notranslate">string</span> do zmiennej lokalnej, która następnie jest używana do wyprowadzenia komunikatu na konsolę.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="method.htm">method</a></div>
+        <div style="float:left">Powrót: <a href="Variable_Functions.htm">Funkcje zmienne</a></div>
+        <div style="float:right">Następny: <a href="bool.htm"><span class="notranslate">bool</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
   <!-- KEYWORDS
 typeof

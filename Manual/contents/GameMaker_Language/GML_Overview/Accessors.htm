@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Accessors</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Akcesoria</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different Accessors" />
   <meta name="rh-index-keywords" content="Accessors" />
@@ -14,47 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Accessors</span></h1>
-  <p>The GameMaker Language (GML) also permits you to access certain <a href="../GML_Reference/Data_Structures/Data_Structures.htm">Data Structures</a> and <a href="Arrays.htm">Arrays</a> through the use of logical expressions called <b>accessors</b>. This is structured in a similar way as when you are normally working with an array, only we use an <em>identifier symbol</em> before the first argument to tell <span data-keyref="GameMaker Name">GameMaker</span> that you are working on a (previously created) data structure or the array literal.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">DS Lists [| ]</a></p>
+  <h1>Akcesoria</h1>
+  <p>Strona <span class="notranslate">GameMaker Language</span> (<span class="notranslate">GML</span>) pozwala także na dostęp do pewnych <a href="../GML_Reference/Data_Structures/Data_Structures.htm">struktur danych</a> i <a href="Arrays.htm">tablic</a> za pomocą wyrażeń logicznych zwanych <b>accessorami</b>. Struktura jest podobna do normalnej pracy z tablicą, z tą różnicą, że używamy <em>symbolu identyfikatora</em> przed pierwszym argumentem, aby poinformować <span data-keyref="GameMaker Name">GameMakera</span>, że pracujemy nad (wcześniej utworzoną) strukturą danych lub literałem tablicy.</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#">Listy DS [| ]</a></p>
   <div class="droptext" data-targetname="drop-down10">
-    <p class="dropspot">The syntax for <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">DS lists</a> is:</p>
+    <p class="dropspot">Składnia <a href="../GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">list DS</a> jest następująca:</p>
     <p class="code">list_index[| index]</p>
-    <p class="dropspot">So when you have used <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm">ds_list_create</a></span> to create your list, you would use the list index (that you have stored in a variable) to reference it, with the <span class="inline2">index</span> value being the position in the list to set or add. For example, the following code creates a list and then adds 10 entries, setting each entry to random number from 0 to 9:</p>
+    <p class="dropspot">Tak więc po utworzeniu listy za pomocą strony <span class="inline">ds_list_create()</span> należy użyć indeksu listy (przechowywanego w zmiennej), aby się do niej odwołać, przy czym wartość &quot;index&quot; oznacza pozycję na liście, którą należy ustawić lub dodać. Na przykład poniższy kod tworzy listę, a następnie dodaje 10 wpisów, ustawiając każdy z nich na losową liczbę od 0 do 9:</p>
     <p class="code">ds = ds_list_create();<br />
       var index = 0;<br />
       repeat(10)<br />
       {<br />
           ds[| index++] = irandom(9);<br />
       }</p>
-    <p class="dropspot">Note that if you are using an expression to add a reference to an index that already has a value, the previous value will be replaced rather than have a further index added to the list. To add further entries you would need to know the DS list size and add them to the end. It is also worth noting that you can set a list index that is <i>greater</i> than the size of the list being referenced, and this will set that value, expanding the list at the same time and initialising all the positions in the list up to the given index to 0.</p>
-    <p class="dropspot">Once you have created your list structure and filled it with data, to get values from the list you would have something like:</p>
+    <p class="dropspot">Zwróć uwagę, że jeśli używasz wyrażenia do dodania odwołania do indeksu, który ma już wartość, poprzednia wartość zostanie zastąpiona, a nie dodany zostanie kolejny indeks do listy. Aby dodać kolejne wpisy, należałoby znać rozmiar listy ds_list i dodać je na końcu. Warto również zauważyć, że można ustawić indeks listy <i>większy</i> niż rozmiar listy, do której się odwołujemy, a to spowoduje ustawienie tej wartości, jednocześnie rozwijając listę i inicjalizując wszystkie pozycje na liście do podanego indeksu jako 0.</p>
+    <p class="dropspot">Po utworzeniu struktury listy i wypełnieniu jej danymi, aby pobrać wartości z listy, należy wykonać następujące czynności:</p>
     <p class="code">value = ds[| 5];</p>
-    <p class="dropspot">The above will get the value from position 5 (the sixth index, since lists start at 0) and store it in a variable. If you supply a position that is outside of the list size then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Powyższe polecenie pobierze wartość z pozycji 5 (szósty indeks, ponieważ listy zaczynają się od 0) i zapisze ją w zmiennej. Jeśli podasz pozycję spoza rozmiaru listy, to zwrócona zostanie wartość <span class="inline">undefined</span>, którą możesz sprawdzić za pomocą funkcji <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">DS Maps [? ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#">Mapy DS [? ]</a></p>
   <div class="droptext" data-targetname="drop-down13">
-    <p class="dropspot">The accessor for <a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Maps</a> is <span class="inline2"><a id="?"></a>?</span> and the syntax is: </p>
+    <p class="dropspot">Składnia <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">map DS</a> jest następująca:</p>
     <p class="code">map_index[? key]</p>
-    <div data-conref="../../assets/snippets/Note_Tip_Map_Key_Can_Be_Any.hts"> </div>
-    <p class="dropspot">After creating your map with <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm#h">ds_map_create</a></span>, you would use the map index that you have stored in a variable to reference it, with the <span class="inline2">key</span> value being the map key to set or get. For example, the following code creates a map and then adds a few entries to it using this syntax: </p>
+    <p class="dropspot">Po utworzeniu mapy za pomocą <span class="inline">ds_map_create()</span>, w celu odwołania się do niej należy użyć indeksu mapy zapisanego w zmiennej, przy czym wartość &quot;key&quot; oznacza klucz mapy, który należy ustawić lub uzyskać. Na przykład poniższy kod tworzy mapę, a następnie dodaje do niej kilka wpisów, używając tej składni:</p>
     <p class="code">ds = ds_map_create();<br />
       ds[? &quot;Name&quot;] = &quot;Hamish&quot;;<br />
       ds[? &quot;Company&quot;] = &quot;MacSeweeny Games&quot;;<br />
       ds[? &quot;Game&quot;] = &quot;Catch The Haggis&quot;;</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the map already contains the same key value as you are trying to add, it will not create a duplicate key with the new value, but rather the previous value will be replaced.</p>
-    <p class="dropspot">Once you have created your map structure and filled it with data, to get values from a specific map key you would have something like this:</p>
+    <p class="dropspot">Należy zauważyć, że jeśli mapa zawiera już tę samą wartość klucza, którą próbujemy dodać, nie zostanie utworzony duplikat klucza z nową wartością, lecz poprzednia wartość zostanie zastąpiona.</p>
+    <p class="dropspot">Po utworzeniu struktury mapy i wypełnieniu jej danymi, aby uzyskać wartości z określonego klucza mapy, należy wykonać coś takiego:</p>
     <p class="code">value = ds[? &quot;Name&quot;];</p>
-    <p class="dropspot">The above will get the value from the key <span class="inline2">&quot;Name&quot;</span> and store it in a variable, but be aware that if the given key does not exist in the DS map, then the value returned will be <span class="inline2">undefined</span>. This can be checked for using the function <span class="inline3_func"><a data-xref="{text}" href="../GML_Reference/Variable_Functions/is_undefined.htm#h">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Powyższe polecenie pobierze wartość z klucza &quot;Nazwa&quot; i zapisze ją w zmiennej, ale należy pamiętać, że jeśli podany klucz nie istnieje w mapie DS, to zwrócona wartość będzie miała postać <span class="inline">undefined</span>. Można to sprawdzić za pomocą funkcji <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS Grids [# ]</a></p>
   <div class="droptext" data-targetname="drop-down14">
-    <p class="dropspot">The syntax for <a data-xref="{text}" href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm#h">DS Grids</a> is:</p>
+    <p class="dropspot">Składnia dla <a href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">siatki DS</a> jest następująca:</p>
     <p class="code">grid_index[# xpos, ypos]</p>
-    <p class="dropspot">After creating your grid with the <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Data_Structures/DS_Grids/ds_grid_create.htm">ds_grid_create</a></span> function, you would use the grid index that you have stored in a variable to reference it, with the <span class="inline2">xpos</span> and <span class="inline2">ypos</span> being the position within the grid to get or set a value. For example, the following code creates a grid, clears it to 0, then and then adds a few entries to it:</p>
+    <p class="dropspot">Po utworzeniu siatki za pomocą funkcji <span class="inline">ds_grid_create()</span> należy użyć indeksu siatki przechowywanego w zmiennej, aby się do niej odwołać, przy czym &quot;xpos&quot; i &quot;ypos&quot; oznaczają pozycję w siatce w celu uzyskania lub ustawienia wartości. Na przykład w poniższym kodzie utworzono siatkę, wyczyszczono ją do wartości 0, a następnie dodano do niej kilka wpisów:</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
       var gw = ds_grid_width(ds) - 1;<br />
@@ -68,21 +67,21 @@
               ds[# xx, yy] = 1;<br />
           }<br />
       }</p>
-    <p class="dropspot">Once you have created your grid structure and filled it with data, to get values from a specific grid position you would have something like:</p>
+    <p class="dropspot">Po utworzeniu struktury siatki i wypełnieniu jej danymi, aby uzyskać wartości z określonej pozycji siatki, należy wykonać następujące czynności:</p>
     <p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
-    <p class="dropspot">The above will get the value from the given DS grid based on the mouse position (divided by the &quot;cell&quot; width in the room to get the correct location). If you supply a position that is outside of the grid boundaries then the value <span class="inline2">undefined</span> will be returned, which you can check for using the function <span class="inline3_func"><a data-xref="{title}" href="../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined</a></span>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Powyższe działanie spowoduje pobranie wartości z podanej ds_grid na podstawie pozycji myszy (podzielonej przez szerokość &quot;komórki&quot; w <span class="notranslate">room</span>, aby uzyskać prawidłowe położenie). Jeśli podasz pozycję, która znajduje się poza granicami siatki, zwrócona zostanie wartość <span class="inline">undefined</span>, którą można sprawdzić za pomocą funkcji <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Arrays [@ ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down15" href="#">Tablice [@ ]</a></p>
   <div class="droptext" data-targetname="drop-down15">
-    <p class="dropspot">This accessor is only used when the <a href="../../Settings/Game_Options.htm">Copy on Write option</a> is enabled.</p>
-    <p class="dropspot">Arrays also have their own accessors which works in a similar way as those listed above for data structures. However array accessors have an interesting property and that is to permit you to modify an array from a <a href="Script_Functions.htm">script function</a> or <a href="Method_Variables.htm">method</a> without having to copy it. When you pass an array into a function, it is <strong>passed by reference</strong>, meaning that the array itself isn&#39;t being given into the script but rather it is simply being referenced to get the data. Normally if you then need to change the array, it would be <em>copied </em>to the script and then you would need to pass back (return) the copied array for the original array to be updated. This can have costly processing overheads, and so you can use the accessor instead, as that will change the original array <em>directly </em>without the need for it to be copied. You can see how this works in the examples below.</p>
-    <p class="dropspot">The syntax for arrays, using the <span class="inline2">@</span> accessor, is:</p>
+    <p class="dropspot">Ten accessor jest używany tylko wtedy, gdy włączona jest <a href="../../Settings/Game_Options.htm">opcja Copy on Write</a>.</p>
+    <p class="dropspot">Tablice posiadają również własne accessory, które działają w podobny sposób, jak te wymienione powyżej dla struktur danych. Jednak dostęp do tablic ma jeszcze jedną ciekawą właściwość, a mianowicie pozwala na modyfikowanie tablicy z poziomu <a href="Script_Functions.htm">funkcji skryptu</a> lub <a href="Method_Variables.htm"><span class="notranslate">method</span></a> bez konieczności jej kopiowania. Gdy przekazujemy tablicę do funkcji, jest ona przekazywana <strong>przez referencję</strong>, co oznacza, że sama tablica nie jest <strong>przekazywana</strong> do <span class="notranslate">script</span>, lecz po prostu jest do niej odwoływana w celu uzyskania danych. W normalnej sytuacji, jeśli trzeba by zmienić tablicę, należałoby ją <em>skopiować </em>na stronę <span class="notranslate">script</span>, a następnie przekazać z powrotem (zwrócić) skopiowaną tablicę, aby oryginalna tablica została zaktualizowana. Może to powodować kosztowne koszty przetwarzania, dlatego zamiast tego można skorzystać z narzędzia dostępu, które zmieni oryginalną tablicę <em>bezpośrednio </em>, bez konieczności jej kopiowania. Jak to działa, można zobaczyć w poniższych przykładach.</p>
+    <p class="dropspot">Składnia dla tablic, przy użyciu narzędzia dostępu <span class="inline">@</span>, jest następująca:</p>
     <p class="code">array[@ i]</p>
-    <p class="dropspot">After you have created your array in an instance, you can then pass it to a script by reference and use the accessor <span class="inline">@</span> to change it directly. For example you would create the array and call the funtion like this:</p>
+    <p class="dropspot">Po utworzeniu tablicy w instancji można przekazać ją do <span class="notranslate">script</span> przez referencję i użyć akcesora <span class="inline">@</span>, aby ją bezpośrednio zmienić. Na przykład można utworzyć tablicę i wywołać funkcję w następujący sposób:</p>
     <p class="code">array[99] = 0;<br />
       array_populate(array);</p>
-    <p class="dropspot">The function itself would have something like this:</p>
+    <p class="dropspot">Sama funkcja będzie miała następującą postać:</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
           var a = _array; var i = 0; repeat(25)<br />
@@ -95,28 +94,26 @@
               a[@ i] = 100;<br />
           }<br />
       }</p>
-    <p class="dropspot">All this function is doing is selecting 25 random positions in the array and setting the value of the chosen array position to 100.</p>
-    <p class="dropspot">Of course, the <span class="inline">@</span> accessor is not required when <strong>Copy on Write</strong> is disabled.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> You cannot use the array accessor <span class="inline">@</span>  when working with the <span class="inline">argument[n]</span> array in script functions.</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Funkcja ta wybiera 25 losowych pozycji w tablicy i ustawia wartość wybranej pozycji tablicy na 100.</p>
+    <p class="dropspot">Oczywiście, gdy funkcja <strong>kopiowania przy zapisie</strong> jest wyłączona, dostęp do <span class="inline">@</span> nie jest wymagany.</p>
+    <p class="note"><span class="note">UWAGA</span> Podczas pracy z tablicą <span class="inline">argument[n]</span> w funkcjach skryptu nie można używać akcesora tablicy <span class="inline">@</span>.</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Structs [$ ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#">Struktury [$ ]</a></p>
   <div class="droptext" data-targetname="drop-down16">
-    <p class="dropspot"><span>The struct accessor uses the <span class="inline2"><a id="$"></a>$</span> sign as the identifier symbol. This makes the accessor syntax for <a href="Structs.htm">structs</a>: </span></p>
+    <p class="dropspot"><span>Składnia <a href="Structs.htm">struktów</a> jest następująca</span></p>
     <p class="code">struct[$ &quot;name&quot;]</p>
-    <p class="dropspot">This accessor is essentially a wrapper for the functions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> and <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, and you would use it much like the accessor for a DS map. For example, if you have created a struct and want to retrieve a value from a variable called &quot;my_health&quot; then you&#39;d do:</span></p>
+    <p class="dropspot">Dostęp ten jest w zasadzie opakowaniem funkcji <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> i <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>, z których można korzystać podobnie jak z dostępu do mapy DS. Na przykład, jeśli utworzyłeś stronę <span class="notranslate">struct</span> i chcesz pobrać wartość ze zmiennej o nazwie &quot;my_health&quot;, wykonaj następujące czynności:</span></p>
     <p class="code">var _hp = struct[$ &quot;my_health&quot;];</p>
-    <p class="dropspot">As you can see, you don&#39;t supply the variable itself, but rather a <em>string</em> with the variable&#39;s name.</p>
-    <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> If the struct does not have a variable with the given name, then the accessor will return <span class="inline2">undefined</span> as the value.</p>
-    <div data-conref="../../assets/snippets/Note_tip_use_nullish_with_accessors.hts"> </div>
-    <p class="dropspot">To set a variable in a struct then you would do the following</p>
+    <p class="dropspot">Jak widać, nie podajemy samej zmiennej, ale raczej <em>łańcuch</em> znaków zawierający tę zmienną. Zauważ, że jeśli na stronie <span class="notranslate">struct</span> nie ma zmiennej o podanej nazwie, to accessor zwróci wartość <span class="inline">undefined</span>.</p>
+    <p class="dropspot">Aby ustawić zmienną w witrynie <span class="notranslate">struct</span>, należy wykonać następujące czynności</p>
     <p class="code">struct[$ &quot;my_score&quot;] = 100;</p>
-    <p class="dropspot">As with getting a value, you supply the name of the variable to set as a string, and it will be set to the value given. If the variable name used doesn&#39;t exist in the struct, then it will be created and set to the given value.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Podobnie jak w przypadku pobierania wartości, podajesz nazwę zmiennej, którą chcesz ustawić jako <span class="notranslate">string</span>, a zostanie ona ustawiona na podaną wartość. Jeśli użyta nazwa zmiennej nie istnieje w <span class="notranslate">struct</span>, to zostanie ona utworzona i ustawiona na podaną wartość.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>An important feature of accessors is the fact that they can be <i>chained</i> together. This means that if you have several nested data structures and/or arrays, there is no longer the need to use a variety of functions to get access to a value that is deep within the nested structure. For example, say you have an array, and each item in the array is a DS list, like this:</p>
+  <p> </p>
+  <p>Ważną cechą akcesorów jest to, że można je <i>łączyć w łańcuchy</i>. Oznacza to, że jeśli masz kilka zagnieżdżonych struktur danych i/lub tablic, nie musisz już używać wielu funkcji, aby uzyskać dostęp do wartości, która znajduje się głęboko w zagnieżdżonej strukturze. Na przykład, powiedzmy, że mamy tablicę, a każdy element w tablicy jest listą DS, jak poniżej:</p>
   <p class="code">array = array_create(3);<br />
     for (var i = 0; i &lt; 3; ++i;)<br />
     {<br />
@@ -137,12 +134,12 @@
         }<br />
     }
   </p>
-  <p>In the above code we&#39;ve created a 3 item array and assigned a DS list to each of them, and then we&#39;ve populated the different lists with the instance IDs of various objects in the game. Now, to access an ID in one of the lists we can do the following:</p>
+  <p>W powyższym kodzie utworzyliśmy tablicę składającą się z 3 elementów i przypisaliśmy każdej z nich listę DS, a następnie wypełniliśmy poszczególne listy identyfikatorami instancji różnych <span class="notranslate">objects</span> w grze. Teraz, aby uzyskać dostęp do identyfikatora na jednej z list, możemy wykonać następujące czynności:</p>
   <p class="code">var _list = array[0];<br />
     var _id = ds_list_find_value(_list, 0);</p>
-  <p>However, you can do the same thing using chained accessors in a much cleaner way that uses less code:</p>
+  <p>Można jednak zrobić to samo, używając łańcuchowych accessorów, w znacznie czystszy sposób i przy użyciu mniejszej ilości kodu:</p>
   <p class="code">var _id = array[0][| 0];</p>
-  <p>You can chain multiple accessors together in this way and they can be of multiple types to get access to the information stored in each part of the nested structure. Here are some more examples:</p>
+  <p>W ten sposób można łączyć ze sobą wiele akcesorów i mogą one być różnych typów, aby uzyskać dostęp do informacji przechowywanych w każdej części zagnieżdżonej struktury. Oto kilka kolejnych przykładów:</p>
   <p class="code">// Access a grid that has been added to a list that is part of a map:<br />
     var _a = data[? &quot;lists&quot;][| 0][# 0, 0];<br />
     <br />
@@ -152,32 +149,33 @@
     // Access a map nested in a grid nested in a list nested in an array:<br />
     data[0][| 10][# 3, 4][? &quot;key&quot;] = &quot;hello world&quot;;
   </p>
-  <p>Using chained accessors for things not only means you can write more compact code, it will also permit you to use iteration (for example, using a <a href="Language_Features/for.htm"><span class="inline">for</span></a> loop) and other techniques to access your data in a cleaner and more intuitive manner.</p>
-  <p>It is worth noting that when using accessors in this way, you should always use the <span class="inline2">@</span> accessor for arrays, as otherwise you will be adding extra overhead to any actions being performed. As mentioned above, by default arrays are passed by reference into functions and then use the &quot;copy on write&quot; behaviour when modified. However, if the array is part of a chain, then the previous item in the chain will be updated with the copied array and the &quot;original&quot; will be deleted. For example, doing something like this:</p>
+  <p>Używanie łańcuchowych akcesorów nie tylko oznacza, że można pisać bardziej zwarty kod, ale także pozwala na użycie iteracji (na przykład przy użyciu pętli <a href="Language_Features/for.htm"><span class="inline">for</span></a> pętli) oraz innych technik umożliwiających dostęp do danych w czystszy i bardziej intuicyjny sposób.</p>
+  <p>Warto zauważyć, że używając w ten sposób akcesorów, należy zawsze korzystać z akcesora <span class="inline">@</span> dla tablic, ponieważ w przeciwnym razie spowoduje to dodanie dodatkowego narzutu do wykonywanych działań. Jak wspomniano powyżej, tablice są domyślnie przekazywane do funkcji przez referencję, a następnie przy modyfikacji są kopiowane przy zapisie. Jeśli jednak tablica jest częścią łańcucha, to poprzedni element łańcucha zostanie zaktualizowany skopiowaną tablicą, a &quot;oryginał&quot; zostanie usunięty. Na przykład, wykonując coś takiego:</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][0] = 200;
   </p>
-  <p>achieves the same results as doing this:</p>
+  <p>daje takie same rezultaty jak to:</p>
   <p class="code">// In an object event<br />
     data[| 0][0] = 100;<br />
     <br />
     // In a function<br />
     data[| 0][@ 0] = 200;
   </p>
-  <p>However, the second example is better as it works without the unnecessary overhead of copying the entire array first.</p>
-  <p> </p>
-  <p> </p>
+  <p>Drugi przykład jest jednak lepszy, ponieważ działa bez zbędnego narzutu związanego z kopiowaniem całej tablicy.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Language_Features.htm">Language Features</a></div>
+        <div style="float:left">Powrót: <a href="GML_Overview.htm">Przegląd GML</a></div>
+        <div style="float:right">Następny: <a data-xref="{title}" href="Language_Features.htm">Cechy języka</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 div

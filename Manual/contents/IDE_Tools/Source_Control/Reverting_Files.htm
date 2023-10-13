@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Reverting Files</title>
+  <title>Odwracanie plików</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control reverting files" />
   <meta name="rh-index-keywords" content="Source Control - Reverting Files" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Reverting Files</h1>
-  <p>In the previous sections you&#39;ve seen how to <a href="Repository_Options.htm">create a repository</a> and <a href="Standard_Workflow.htm">commit things to it</a>, but what happens if you make a mistake and want to &quot;roll back&quot; to a previous commit? Let&#39;s make a deliberate error and see how we can deal with it then...</p>
-  <p>First of all create a new resource - in this example we&#39;ll make a Script resource - and initially you&#39;ll see no status icon since as far as source control is concerned it doesn&#39;t exist exist yet. In the script resource add a simple line of code, like:</p>
+  <h1>Odwracanie plików</h1>
+  <p>W poprzednich rozdziałach dowiedziałeś się, jak <a href="Repository_Options.htm">utworzyć repozytorium</a> i wysyłać <a href="Standard_Workflow.htm">do niego</a> poprawki, ale co się stanie, jeśli popełnisz błąd i będziesz chciał cofnąć się do poprzedniej poprawki? Popełnijmy celowy błąd i zobaczmy, jak sobie z nim poradzić...</p>
+  <p>Najpierw utwórz nowy zasób - w tym przykładzie będzie to zasób <span class="notranslate">Script</span> - i na początku nie zobaczysz żadnej ikony statusu, ponieważ jeśli chodzi o <span class="notranslate">source control</span>, to jeszcze nie istnieje. W zasobie <span class="notranslate">script</span> dodajemy prostą linijkę kodu, np:</p>
   <p class="code">show_debug_message(&quot;Hello World&quot;);</p>
-  <p>If you now close the code editor, the script will save and the modified file icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will appear beside it in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a>. Now, open up the <strong>Commit </strong>window and you&#39;ll see there are four staged changes, as new resources automatically get added:</p>
-  <p><img alt="Source Control Staged Changes" class="center" src="../../assets/Images/IDE Tools/SCM_StagedChanges.png" />The changes staged will be:</p>
+  <p>Jeśli teraz zamkniesz edytor kodu, plik <span class="notranslate">script</span> zostanie zapisany, a w <a href="../../Introduction/The_Asset_Browser.htm">Przeglądarce</a> zasobów pojawi się obok niego ikona zmodyfikowanego pliku <img>. Teraz otwórz okno <strong>Zobowiązania </strong>, a zobaczysz, że zmiany są czterostopniowe, ponieważ nowe zasoby są automatycznie dodawane:</p>
+  <p><img>Wprowadzane zmiany będą następujące:</p>
   <ul class="colour">
-    <li>the <span class="inline">.yyp</span> project file</li>
-    <li>a view file</li>
-    <li>the GML script itself</li>
-    <li>the <span class="inline">.yy</span> file referencing it</li>
+    <li>plik projektu <span class="inline">.yyp</span> </li>
+    <li>plik widoku</li>
+    <li>sama strona <span class="notranslate">GML</span> <span class="notranslate">script</span> </li>
+    <li>plik <span class="inline">.yy</span>, który się do niego odwołuje</li>
   </ul>
-  <p>You should type in a commit message and then click the <strong>Commit </strong>button, just as we explained previously. Now, we go back to our script and change the line of code to (for example):</p>
+  <p>Należy wpisać komunikat commit, a następnie kliknąć przycisk <strong>Commit </strong>, tak jak to opisaliśmy wcześniej. Teraz wracamy do naszej strony <span class="notranslate">script</span> i zmieniamy wiersz kodu na (na przykład):</p>
   <p class="code">show_debug_message(&quot;Hello World, how are you?&quot;);</p>
-  <p>When we close the code editor, again a red icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will be shown beside the script, but we&#39;ve realised that we made a mistake with our code and we want to roll back to a previous version to fix it (obviously, you could just open the script and fix it easily, since the example is so simple, but in large projects that&#39;s not normally a feasible approach). What we need to do is <strong>revert </strong>our changes.</p>
-  <p>To revert a change we first need to open up the commit window again, so we go to <strong>Source Control</strong> &gt; <strong>Commit Changes</strong> once more. Our changed file will again be staged ready for committing, but this isn&#39;t what we want so we click the button <strong>Unstage All</strong> to take it out of the staging area.</p>
-  <p>If we now right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on the file we changed we&#39;ll get a context menu with an option to <strong>Revert Path</strong>:</p>
-  <p><img alt="Source Control Revert Path" class="center" src="../../assets/Images/IDE Tools/SCM_RevertPath.png" />When you select this option, you will revert the files back to the previous state that they were in.</p>
-  <p class="note"><strong>IMPORTANT!</strong> When you revert you will get a message asking you to reload or save the current project due to the file checker detecting changes on disk:<br />
-    <img alt="Source Control Warning" class="center" src="../../assets/Images/IDE Tools/SCM_Warning.png" />You must hit Reload and not save, as saving will save what is memory rather than reloading the reverted files.
+  <p>Gdy zamkniemy edytor kodu, obok strony <span class="notranslate">script</span> ponownie pojawi się czerwona ikona <img>. Zdaliśmy sobie sprawę, że popełniliśmy błąd w naszym kodzie i chcemy cofnąć się do poprzedniej wersji, aby go naprawić (oczywiście można by po prostu otworzyć stronę <span class="notranslate">script</span> i łatwo go naprawić, ponieważ przykład jest tak prosty, ale w dużych projektach takie podejście zwykle nie jest wykonalne). W tym celu należy <strong>cofnąć </strong>nasze zmiany.</p>
+  <p>Aby cofnąć zmianę, musimy najpierw ponownie otworzyć okno zatwierdzania, a więc ponownie przechodzimy do sekcji <strong>Kontrola źródła</strong> &gt; Zatwierdź <strong>zmiany</strong>. Nasz zmieniony plik zostanie ponownie wystawiony na scenie, gotowy do zatwierdzenia, ale to nie jest to, czego chcemy, więc klikamy przycisk <strong>Unstage All</strong>, aby usunąć go z obszaru wystawiania.</p>
+  <p>Jeśli teraz klikniemy prawym przyciskiem myszy <strong><img></strong> na pliku, który zmieniliśmy, pojawi się menu kontekstowe z opcją <strong>Przywróć ścieżkę</strong>:</p>
+  <p><img>Po wybraniu tej opcji pliki zostaną przywrócone do poprzedniego stanu.</p>
+  <p class="note"><strong>WAŻNE!</strong> Podczas przywracania zostanie wyświetlony komunikat z prośbą o ponowne załadowanie lub zapisanie bieżącego projektu, ponieważ mechanizm sprawdzania plików wykrył zmiany na dysku:<br>
+    <img>Musisz kliknąć przycisk Przeładuj, a nie Zapisz, ponieważ zapisanie spowoduje zachowanie tego, co jest w pamięci, a nie ponowne załadowanie odwracanych plików.
   </p>
-  <p>That&#39;s all great for when you edit something and want to change back without having already performed a commit, but what about when you have committed one or more changes and want to roll back to a <em>previous </em>commit? Well, let&#39;s edit our script again to say:</p>
+  <p>Jest to świetne rozwiązanie, gdy edytujesz coś i chcesz cofnąć zmiany bez wcześniejszego wykonania commitu, ale co zrobić, gdy już dokonałeś jednej lub więcej zmian i chcesz cofnąć się do <em>poprzedniego </em>commitu? Cóż, edytujmy ponownie nasz <span class="notranslate">script</span>, aby powiedzieć:</p>
   <p class="code">show_debug_message(&quot;This is a bad idea&quot;);</p>
-  <p>Now we commit it as before to get it under source control. So, this was a bad idea and we want to roll back, which means to start with we need to open the <strong>Source Control</strong> &gt; <strong>View History</strong> window. Here we will see a list of all previous commits now in this window, starting with the initial commit, the commit for the script, and then the commit for the script that we have edited as a &quot;bad idea&quot;:</p>
-  <p><img alt="Source Control Bad Idea History" class="center" src="../../assets/Images/IDE Tools/SCM_BadIdea.png" />We now have two choices. We can revert an entire revision - which will revert all files that were changed to those of the chosen commit - or we can choose to revert a path - which will simply revert a single file. Let&#39;s do the first option to start with:</p>
+  <p>Teraz zatwierdzamy go tak jak poprzednio, aby uzyskać go pod adresem <span class="notranslate">source control</span>. To był zły pomysł i chcemy go cofnąć, co oznacza, że na początek musimy otworzyć okno <strong>Kontrola źródła</strong> &gt; <strong>Wyświetl historię</strong>. W tym oknie zobaczymy listę wszystkich poprzednich commitów, począwszy od początkowego commitu, poprzez commit dla <span class="notranslate">script</span>, a skończywszy na commicie dla <span class="notranslate">script</span>, który został uznany za &quot;zły pomysł&quot;:</p>
+  <p><img>Mamy teraz dwie możliwości. Możemy przywrócić całą rewizję - co spowoduje przywrócenie wszystkich plików, które zostały zmienione, do tych z wybranego commitu - lub możemy wybrać opcję przywrócenia <span class="notranslate">path</span> - co spowoduje przywrócenie pojedynczego pliku. Na początek wybierzmy pierwszą opcję:</p>
   <ul class="colour">
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> our second commit in the <strong>Commit History</strong> pane (the &quot;Hello World&quot; commit).</li>
-    <li>Select <strong>Revert To This Revision</strong> and then choose <strong>ReLoad</strong> on the warning message.</li>
+    <li>Kliknij prawym przyciskiem myszy <strong><img></strong> nasz drugi commit w oknie <strong>Commit History</strong> (commit &quot;Hello World&quot;).</li>
+    <li>Wybierz opcję <strong>Revert To This Revision (Przywróć tę</strong> wersję), a następnie wybierz opcję <strong>ReLoad (Załaduj ponownie</strong> ) w komunikacie ostrzegawczym.</li>
   </ul>
-  <p>You should see that the script now has a red status icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" />, and if we open it up, we&#39;ll have the following:</p>
-  <p><img alt="Source Control Revert To Revision" class="center" src="../../assets/Images/IDE Tools/SCM_RevertToRevision.png" />We can then do a commit on the project and we&#39;ll be back to where we were once again. However we can also undo that action for the file and get our &quot;bad idea&quot; commit back by doing the following:</p>
+  <p>Na stronie <span class="notranslate">script</span> powinna pojawić się czerwona ikona stanu <img>, a jeśli ją otworzymy, uzyskamy następujący obraz:</p>
+  <p><img>Następnie możemy wykonać commit projektu i wrócić do punktu wyjścia. Możemy jednak cofnąć to działanie dla pliku i odzyskać nasz &quot;zły pomysł&quot; commit, wykonując następujące czynności:</p>
   <ul class="colour">
-    <li>Open the <strong>Commit Changes</strong> window.</li>
-    <li>Unstage the script with the &quot;Hello World&quot; code in it.</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> and <strong>Revert Path</strong>.</li>
+    <li>Otwórz okno <strong>Commit Changes</strong>.</li>
+    <li>Usuń stronę <span class="notranslate">script</span>, na której znajduje się kod &quot;Hello World&quot;.</li>
+    <li>Kliknij prawym przyciskiem myszy <strong><img></strong> i <strong>Przywróć ścieżkę</strong>.</li>
   </ul>
-  <p>Now we are back to having the erroneous file in the project again! Well, we can take this opportunity to revert only that file path instead of reverting everything to a previous revision. For that we need to do the following:</p>
+  <p>Teraz znów mamy w projekcie błędny plik! Cóż, możemy skorzystać z okazji i przywrócić tylko ten plik <span class="notranslate">path</span> zamiast przywracać wszystko do poprzedniej wersji. W tym celu należy wykonać następujące czynności:</p>
   <ul class="colour">
-    <li>Open the <strong>View History</strong> window.</li>
-    <li>Click on the second commit (the &quot;Hello World&quot; commit).</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on our script GML in the Files pane and select <strong>Revert Path</strong>.</li>
+    <li>Otwórz okno <strong>Historia przeglądania</strong>.</li>
+    <li>Kliknij na drugi commit (commit &quot;Hello World&quot;).</li>
+    <li>Kliknij prawym przyciskiem myszy <strong><img></strong> na naszej stronie <span class="notranslate">script</span> <span class="notranslate">GML</span> w panelu Pliki i wybierz polecenie <strong>Przywróć ścieżkę</strong>.</li>
   </ul>
-  <p>We should be back to having our &quot;Hello World&quot; code and we can then do a fresh commit to update the source control again with the corrected file.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powinniśmy powrócić do naszego kodu &quot;Hello World&quot;, a następnie możemy wykonać nowy commit, aby ponownie zaktualizować stronę <span class="notranslate">source control</span> o poprawiony plik.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">Cloning A Repository</a> </div>
+        <div style="float:left">Powrót: <a href="../Source_Control.htm">Kontrola źródła</a></div>
+        <div style="float:right">Następny: <a href="Cloning_A_Repository.htm">Klonowanie repozytorium</a> </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Reverting Files

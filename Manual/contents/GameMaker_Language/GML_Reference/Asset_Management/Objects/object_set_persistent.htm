@@ -6,7 +6,7 @@
   <title>object_set_persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_set_persistent" />
   <meta name="rh-index-keywords" content="object_set_persistent" />
@@ -15,53 +15,53 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_set_persistent</h1>
-  <p>With this function you can set the persistence of a specific object. A persistent object is &quot;carried over&quot; from room to room and maintains its properties at all times (for more information on persistence see the section on the <a href="../../../../The_Asset_Editors/Objects.htm">Object Editor</a>). Setting the persistence of the object means that all instances of this object that are created <i>after the persistence has been changed</i> will be created persistent, while instances that are already in the room may not be affected.</p>
-  <p>When you create an instance with persistence enabled in a room, it will be assigned a layer or a depth (depending on which function you used to create the instance of the object). When the room is changed, and if the following room does <i>not</i> have a layer with the same name or depth as the one assigned, then a new layer will be created for the instance that is persisting across the rooms. If you gave a named layer when the instance was created, then the new layer will also be named the same as original layer, while if you assigned a depth to the instance then the new layer will be named &quot;<span class="inline">_layer_XXX</span>&quot;, where &quot;XXX&quot; is a hex value used to give the layer a unique name. These layers will be removed from the room on Room End. Another thing to note about layers and persistent instances is that if you have assigned the instance a named layer on creation, and there is another layer in the following rooms with the same name, then the persisted instance will be assigned to the layer with the same name <i>regardless of the depth of the layer</i>. Finally, if a persisted instance moves to a room with a layer at the same depth as the instance was created on, it will <i>not</i> be assigned to this layer, but instead a new layer will be created at the same depth (following the naming convention explained previously).</p>
-  <p>Please note that this is not an instance function! You can set the persistent flag of individual instances using the <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a> variable and so have ten instances all flagged as persistent even though the object in question has the flag set to false in the IDE, and even if you change the persistent flag of the object to true using this function, all instances that currently in the room will remain as they were, and only instances created after calling the function will start with persistent flagged as true.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można ustawić trwałość określonej strony <span class="notranslate">object</span>. Trwały <span class="notranslate">object</span> jest &quot;przenoszony&quot; z <span class="notranslate">room</span> na <span class="notranslate">room</span> i zachowuje swoje właściwości przez cały czas (więcej informacji o trwałości znajdziesz w rozdziale <a href="../../../../The_Asset_Editors/Objects.htm">Edytor obiektów</a>). Ustawienie trwałości dla <span class="notranslate">object</span> oznacza, że wszystkie instancje <span class="notranslate">object</span>, które zostaną utworzone <i>po zmianie trwał</i> ości, zostaną utworzone jako trwałe, podczas gdy instancje, które już znajdują się w <span class="notranslate">room</span>, mogą pozostać bez <i>zmian</i>.</p>
+  <p>Gdy utworzysz instancję z włączoną opcją persystencji w witrynie <span class="notranslate">room</span>, zostanie jej przypisana warstwa lub głębokość (w zależności od tego, jakiej funkcji użyłeś do utworzenia instancji w witrynie <span class="notranslate">object</span>). Gdy <span class="notranslate">room</span> zostanie zmieniony i jeśli następna <span class="notranslate">room</span> <i>nie</i> będzie miała warstwy o tej samej nazwie lub głębokości, co warstwa przypisana, to dla instancji zostanie utworzona nowa warstwa, która będzie trwała przez <span class="notranslate">rooms</span>. Jeśli podczas tworzenia instancji nadałeś jej nazwę, to nowa warstwa również będzie miała taką samą nazwę jak warstwa oryginalna, a jeśli przypisałeś jej głębokość, to nowa warstwa będzie miała nazwę &quot;<span class="inline">_layer_XXX</span>&quot;, gdzie &quot;XXX&quot; to wartość heksadecymalna służąca do nadania warstwie unikalnej nazwy. Warstwy te zostaną usunięte z <span class="notranslate">room</span> na <span class="notranslate">Room</span> End. Kolejną rzeczą, o której należy pamiętać w kontekście warstw i instancji trwałych, jest to, że jeśli podczas tworzenia instancji przypisałeś jej warstwę o tej samej nazwie, a w następnej części <span class="notranslate">rooms</span> znajduje się inna warstwa o tej samej nazwie, to instancja trwała zostanie przypisana do warstwy o tej samej nazwie, <i>niezależnie od głębokości</i> warstwy. Wreszcie, jeśli instancja uporczywa zostanie przeniesiona na stronę <span class="notranslate">room</span> z warstwą na tej samej głębokości, na której została utworzona, <i>nie</i> zostanie przypisana do tej warstwy, ale zamiast tego zostanie utworzona nowa warstwa na tej samej głębokości (zgodnie z konwencją nazewnictwa wyjaśnioną wcześniej).</p>
+  <p>Należy pamiętać, że nie jest to funkcja instancji! Możesz ustawić persystencję <span class="notranslate">flag</span> poszczególnych instancji za pomocą zmiennej <a href="../Instances/Instance_Variables/persistent.htm"><span class="inline">persistent</span></a> i w ten sposób mieć dziesięć instancji oznaczonych jako trwałe, nawet jeśli <span class="notranslate">object</span>, o którym mowa, ma w <span class="notranslate">flag</span> ustawioną wartość <span class="notranslate">IDE</span> na false, i nawet jeśli zmienisz za pomocą tej funkcji wartość persystencji <span class="notranslate">flag</span> w <span class="notranslate">object</span> na true, wszystkie instancje znajdujące się obecnie w <span class="notranslate">room</span> pozostaną takie, jakie były, a tylko instancje utworzone po wywołaniu tej funkcji będą zaczynały z persystencją oznaczoną jako true.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">object_set_persistent(index, pers);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Object">Object Asset</span></td>
-        <td>The index of the object to change.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Object">Obiekt Aktywa</span></td>
+        <td><span class="notranslate">The index of the object to change.</span></td>
       </tr>
       <tr>
-        <td>pers</td>
+        <td><span class="notranslate">pers</span></td>
         <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the object should be flagged as persistent (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span class="notranslate">Whether the object should be flagged as persistent (<span class="inline">true</span>) lub nie (<span class="inline">false</span>).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if (room == rm_final)<br />
     {<br />
         object_set_persistent(obj_Player, false);<br />
     }<br />
     instance_create_layer(32, 32, &quot;Instances&quot;, obj_Player);</p>
-  <p>The above code checks to see in which room the instance is currently in and if it is in the specified &quot;rm_final&quot; then it sets the persistence of the object &quot;obj_Player&quot; to false and then creates the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, w którym <span class="notranslate">room</span> znajduje się obecnie instancja i jeśli jest w określonym &quot;rm_final&quot;, ustawia trwałość <span class="notranslate">object</span> &quot;obj_Player&quot; na false, a następnie tworzy instancję.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_set_solid.htm">object_set_solid</a></div>
+        <div style="float:left">Powrót: <a href="Objects.htm">Obiekty</a></div>
+        <div style="float:right">Następny: <a href="object_set_solid.htm"><span class="notranslate">object_set_solid</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 object_set_persistent

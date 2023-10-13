@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Deactivating Instances</title>
+  <title>Dezaktywacja instancji</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the different functions for Deactivating Instances" />
   <meta name="rh-index-keywords" content="" />
@@ -14,35 +14,36 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Deactivating Instances</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> offers you the possibility to &quot;switch off&quot; instances so that they are no longer processed in any way. Technically they don&#39;t really exist anymore, except as a pointer within the deactivation process itself, which means that a deactivated instance cannot be manipulated or changed in any way at all until it is re-activated again. So, these functions should be used with great care as they can cause problems when not used properly, particularly with persistent objects, as a persistent object that has been deactivated will not be moved to the next room unless it is re-activated first (effectively deleting it from the game). Note too that <strong>activation and deactivation are not instantaneous</strong>, and an instance that has had its state changed in this way will not be considered to be active/inactive until the <em>end of the event in which the function was called</em>.</p>
-  <p>It is normally not necessary to deactivate instances every step of your game and this can actually cause your game to have performance issues. Instead it is recommended that you only run these functions every few steps in an alarm (for example), or if the camera view has changed position, and it is especially important that you do not use these functions in the draw event as this can lead to serious errors in your game.</p>
-  <p>A deactivated instance effectively ceases to exist in the game, but individual instances can still have their variables accessed. You cannot use <span class="inline">with(object)</span> or <span class="inline">with(instance)</span> however, but rather you must access the instance directly using it&#39;s unique ID in the following form:</p>
+  <h1>Dezaktywacja instancji</h1>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> oferuje możliwość &quot;wyłączania&quot; instancji, tak że nie są one już w żaden sposób przetwarzane. Technicznie rzecz biorąc, instancje te tak naprawdę już nie istnieją, chyba że jako wskaźnik w samym procesie dezaktywacji, co oznacza, że nieaktywną instancją nie można w żaden sposób manipulować ani jej zmieniać, dopóki nie zostanie ponownie aktywowana. Dlatego funkcji tych należy używać z wielką ostrożnością, ponieważ mogą one powodować problemy, jeśli nie są używane właściwie, zwłaszcza w przypadku trwałych obiektów <span class="notranslate">objects</span>, ponieważ trwały obiekt <span class="notranslate">object</span>, który został dezaktywowany, nie zostanie przeniesiony do następnego obiektu <span class="notranslate">room</span>, chyba że zostanie najpierw ponownie aktywowany (co w efekcie spowoduje usunięcie go z gry). Należy również pamiętać, że <strong>aktywacja i dezaktywacja nie są natychmiastowe</strong>, a instancja, której stan został zmieniony w ten sposób, nie będzie uważana za aktywną/nieaktywną do <em>końca zdarzenia, w którym wywołano funkcję</em>.</p>
+  <p>Zazwyczaj nie jest konieczne wyłączanie instancji na każdym etapie gry, co może powodować problemy z wydajnością. Zamiast tego zaleca się uruchamianie tych funkcji tylko co kilka kroków w alarmie (na przykład) lub gdy widok kamery zmienił położenie, a szczególnie ważne jest, aby nie używać tych funkcji w zdarzeniu losowania, ponieważ może to prowadzić do poważnych błędów w grze.</p>
+  <p>Dezaktywowana instancja w rzeczywistości przestaje istnieć w grze, ale do poszczególnych instancji można nadal mieć dostęp do ich zmiennych. Nie możesz jednak używać <span class="inline">with(object)</span> ani <span class="inline">with(instance)</span>, lecz musisz uzyskać bezpośredni dostęp do instancji, używając jej unikalnego identyfikatora w następującej formie:</p>
   <p class="code">val = inst.variable;</p>
-  <p>In the above example, &quot;inst&quot; would be a variable that holds the ID of the deactivated instance, and this is the only way that a deactivated instance can be referenced without it being activated previously.</p>
-  <div data-conref="../../../../../assets/snippets/Note_Deactivate_On_Room_Start_Create_Event.hts"> </div>
-  <div data-conref="../../../../../assets/snippets/Note_Warning_Deactivating_Physics_Instances.hts"> </div>
-  <p><b></b>The following functions exist for deactivating instances:</p>
+  <p>W powyższym przykładzie &quot;inst&quot; będzie zmienną przechowującą identyfikator dezaktywowanej instancji i jest to jedyny sposób, w jaki można odwoływać się do dezaktywowanej instancji bez jej wcześniejszego uaktywnienia.</p>
+  <p class="note"><b><span class="note">UWAGA</span></b> Jeśli dezaktywujesz instancję na starcie <span class="notranslate">room</span> (tzn. z kodu tworzenia <span class="notranslate">room</span> lub ze zdarzenia tworzenia instancji w <span class="notranslate">room</span>), wszystkie instancje, które są umieszczone w <span class="notranslate">room</span> z edytora <span class="notranslate">room</span>, będą nadal uruchamiać swoje zdarzenia tworzenia przed dezaktywacją.</p>
+  <p class="note"><b>UWAGA: </b>Wyłączenie instancji, które mają włączoną fizykę, NIE spowoduje, że ich armatura przestanie oddziaływać w ramach symulacji fizyki. W tym celu należy ustawić ich zmienną <span class="inline" style="font-size: 14px">phy_active</span> na <span class="inline"><span style="font-size:14px">true</span> lub <span class="inline"><span style="font-size:14px">false</span>, gdy aktywujesz/dezaktywujesz instancje.<b></b></p>
+  <p><b></b>Do dezaktywowania instancji służą następujące funkcje:</p>
   <ul class="colour">
-    <li><a href="instance_activate_all.htm">instance_activate_all</a></li>
-    <li><a href="instance_activate_object.htm">instance_activate_object</a></li>
-    <li><a href="instance_activate_region.htm">instance_activate_region</a></li>
-    <li><a href="instance_activate_layer.htm">instance_activate_layer</a></li>
-    <li><a href="instance_deactivate_all.htm">instance_deactivate_all</a></li>
-    <li><a href="instance_deactivate_object.htm">instance_deactivate_object</a></li>
-    <li><a href="instance_deactivate_region.htm">instance_deactivate_region</a></li>
-    <li><a href="instance_deactivate_layer.htm">instance_deactivate_layer</a></li>
+    <li><a href="instance_activate_all.htm"><span class="notranslate">instance_activate_all</span></a></li>
+    <li><a href="instance_activate_object.htm"><span class="notranslate">instance_activate_object</span></a></li>
+    <li><a href="instance_activate_region.htm"><span class="notranslate">instance_activate_region</span></a></li>
+    <li><a href="instance_activate_layer.htm"><span class="notranslate">instance_activate_layer</span></a></li>
+    <li><a href="instance_deactivate_all.htm"><span class="notranslate">instance_deactivate_all</span></a></li>
+    <li><a href="instance_deactivate_object.htm"><span class="notranslate">instance_deactivate_object</span></a></li>
+    <li><a href="instance_deactivate_region.htm"><span class="notranslate">instance_deactivate_region</span></a></li>
+    <li><a href="instance_deactivate_layer.htm"><span class="notranslate">instance_deactivate_layer</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Instances.htm">Instances</a></div>
-        <div style="float:right">Next: <a href="../Instance_Variables/Instance_Variables.htm">Instance Variables</a></div>
+        <div style="float:left">Powrót: <a href="../Instances.htm">Instancje</a></div>
+        <div style="float:right">Następny: <a href="../Instance_Variables/Instance_Variables.htm">Zmienne instancji</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Deactivating Instances

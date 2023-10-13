@@ -6,7 +6,7 @@
   <title>skeleton_skin_get</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function skeleton_skin_get" />
   <meta name="rh-index-keywords" content="skeleton_skin_get" />
@@ -15,32 +15,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">skeleton_skin_get</span></h1>
-  <p>With skeletal animation sprites, you can assign separate textures (called &quot;skins&quot;) to the animation, thereby using one animation for multiple different things. This function will return the name of the skin (as a string) that is currently assigned to the skeletal animation sprite your instance is using. The name returned is that which you set when you created the sprite in your animation program.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">skeleton_skin_get</span>();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if <span data-field="title" data-format="default">skeleton_skin_get</span>() == &quot;skin_Enemy1&quot;<br />
+  <h1>skeleton_skin_get</h1>
+  <p>W przypadku animacji szkieletowej <span class="notranslate">sprites</span> możesz przypisać do animacji osobne <span class="notranslate">textures</span> (zwane &quot;skórkami&quot;), dzięki czemu jedna animacja może być używana do wielu różnych rzeczy. Ta funkcja zwraca nazwę skórki (w postaci <span class="notranslate">string</span>), która jest aktualnie przypisana do animacji szkieletowej <span class="notranslate">sprite</span> używanej przez Twoją instancję. Zwracana nazwa jest tą, którą ustawiłeś podczas tworzenia <span class="notranslate">sprite</span> w swoim programie animacyjnym.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">skeleton_skin_get();</p>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_String"></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">if skeleton_skin_get() == &quot;skin_Enemy1&quot;<br />
     {<br />
         skeleton_skin_set(choose(&quot;skin_Enemy1&quot;, &quot;skin_Enemy2&quot;, &quot;skin_Enemy3&quot;);<br />
     }</p>
-  <p>The above code would check the currently assigned skin for the animation and if it is &quot;skin_Enemy1&quot;, it chooses and sets a new skin from one of three options.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdziłby aktualnie przypisaną skórkę dla animacji i jeśli jest to &quot;skin_Enemy1&quot;, wybrałby i ustawił nową skórkę z jednej z trzech opcji.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Skins.htm">Skins</a></div>
-        <div style="float:right">Next: <a href="skeleton_skin_set.htm">skeleton_skin_set</a></div>
+        <div style="float:left">Powrót: <a href="Skins.htm">Skóry</a></div>
+        <div style="float:right">Następny: <a href="skeleton_skin_set.htm"><span class="notranslate">skeleton_skin_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_skin_get

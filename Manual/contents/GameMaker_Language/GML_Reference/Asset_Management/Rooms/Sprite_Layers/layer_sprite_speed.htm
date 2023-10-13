@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_sprite_speed</title>
+  <title>warstwa_sprite_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sprite_speed" />
   <meta name="rh-index-keywords" content="layer_sprite_speed" />
@@ -14,50 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sprite_speed</h1>
-  <p>This function can be used to set the speed of an animating image that has been assigned to a sprite element. You give the sprite element ID (which you get when you create a sprite element using <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> or when you use the function <a href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a>), and then set the animation speed. If the IDE has set the animation speed for the sprite used to be calculated as Frames Per Game Frame, then the speed value given is a <i>multiplier</i>, with 1 being the default value, and setting it to 0.5 will half the animation speed, while setting it to 1.5 will double it. However, if the IDE has set the animation speed for the sprite used to be calculated as Frames Per Second, then the speed value given is a literal frames per second value, so setting this to 5, for example, will set the animation to loop 5 frames every second that the game runs. If the sprite used has no sub-images, this function will have no effect.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>warstwa_sprite_speed</h1>
+  <p>Za pomocą tej funkcji można ustawić szybkość animowanego obrazu, który został przypisany do elementu <span class="notranslate">sprite</span>. Podaje się identyfikator elementu <span class="notranslate">sprite</span> (który otrzymuje się podczas tworzenia elementu <span class="notranslate">sprite</span> za pomocą <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a> lub po użyciu funkcji <a href="layer_sprite_get_id.htm"><span class="inline">layer_sprite_get_id()</span></a>), a następnie ustawia szybkość animacji. Jeśli w witrynie <span class="notranslate">IDE</span> ustawiono, że szybkość animacji dla używanego elementu <span class="notranslate">sprite</span> jest obliczana jako klatki na klatkę gry, to podana wartość szybkości jest <i>mnożnikiem</i>, przy czym wartość domyślna wynosi 1, a ustawienie jej na 0,5 spowoduje zmniejszenie szybkości animacji o połowę, natomiast ustawienie na 1,5 spowoduje jej podwojenie. Jeśli jednak na stronie <span class="notranslate">IDE</span> ustawiono, że szybkość animacji dla używanej strony <span class="notranslate">sprite</span> jest obliczana jako klatki na sekundę, wówczas podana wartość szybkości jest dosłowną wartością klatek na sekundę, więc ustawienie jej na przykład na 5 spowoduje, że animacja będzie <span class="notranslate">loop</span> miała 5 klatek w każdej sekundzie działania gry. Jeśli używana strona <span class="notranslate">sprite</span> nie ma żadnych podobrazów, ta funkcja nie będzie miała żadnego efektu.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">layer_sprite_speed(sprite_element_id, speed);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>sprite_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Sprite">Sprite Asset</span></td>
-        <td>The unique ID value of the sprite element to change</td>
+        <td><span class="notranslate">sprite_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Sprite">Aktywa Sprite</span></td>
+        <td><span class="notranslate">The unique ID value of the sprite element to change</span></td>
       </tr>
       <tr>
-        <td>speed</td>
+        <td><span class="notranslate">speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The speed multiplier/value to use for the element</td>
+        <td><span class="notranslate">The speed multiplier/value to use for the element</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Assets_water&quot;);<br />
     var spr_id = layer_sprite_get_id(lay_id, &quot;gfc_water&quot;);<br />
     layer_sprite_speed(spr_id, 0.5);</p>
-  <p>The above code will get the layer ID for the layer named &quot;Assets_water&quot; and then use that to get the ID of the given sprite element on that layer. This ID is then used to change the element image speed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobierze identyfikator warstwy o nazwie &quot;Assets_water&quot;, a następnie użyje go do pobrania identyfikatora elementu <span class="notranslate">sprite</span> znajdującego się na tej warstwie. Identyfikator ten zostanie następnie użyty do zmiany szybkości obrazu elementu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Layers.htm">Sprite Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sprite_xscale.htm">layer_sprite_xscale</a></div>
+        <div style="float:left">Powrót: <a href="Sprite_Layers.htm">Warstwy Sprite'ów</a></div>
+        <div style="float:right">Następny: <a href="layer_sprite_xscale.htm"><span class="notranslate">layer_sprite_xscale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sprite_speed

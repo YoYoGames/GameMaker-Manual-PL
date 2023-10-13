@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Audio Pitch</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Ustawianie wysokości dźwięku</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Audio Pitch action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Audio Pitch" />
@@ -14,44 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Audio Pitch Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png" width="32" /> Set Audio Pitch</h1>
-  <p>This action can be used to set the pitch of a sound. You supply the sound asset from the Asset Browser, and then give the desired pitch to change it to, and all further instances of that sound which you play will have their pitch changed. This action will not change the pitch of any sound currently playing, however, and should be used before you use the <a href="Play_Audio.htm">Play Audio</a> action for the sound.</p>
-  <p>The pitch value is a pitch <i>multiplier</i>, in that the input value multiplies the current pitch by that amount, so the default value of 1 is no pitch change, while a value of less than 1 will lower the pitch and greater than 1 will raise the pitch. It is best to use small increments for this function as any value under 0 or over 5 may not be audible anyway. It is worth noting that the total pitch change permitted is clamped to (1/256) - 256 octaves, so any value over or under this will not be registered.<b></b></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> The clamped value given above is what <span data-keyref="GameMaker Name">GameMaker</span> attempts to clamp the range to, but this value is not guaranteed on all target platforms. iOS, for example, clamps to (1/256) - 8, so you may need to experiment on each target platform and have different versions of a sound resource, each one pre-shifted, should you require higher or lower octave values.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Audio Pitch Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Set_Audio_Pitch.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Ustawianie wysokości dźwięku</h1>
+  <p>Tej akcji można użyć do ustawienia wysokości dźwięku. Dźwięk należy podać na stronie <span class="notranslate">asset</span> w przeglądarce <span class="notranslate">Asset</span>, a następnie określić żądaną wysokość dźwięku, na którą ma zostać zmieniony. Ta czynność
+    nie zmieni wysokości aktualnie odtwarzanego dźwięku i powinna być stosowana przed użyciem akcji <a href="Play_Audio.htm">Odtwórz</a> dźwięk dla danego dźwięku.</p>
+  <p>Wartość pitch jest <i>mnożnikiem</i> wysokości dźwięku, co oznacza, że wartość wejściowa mnoży bieżącą wysokość dźwięku przez tę wartość. Wartość domyślna 1 nie powoduje zmiany wysokości dźwięku, natomiast wartość mniejsza niż 1 obniża wysokość dźwięku, a większa niż 1 podwyższa ją.
+    W przypadku tej funkcji najlepiej jest stosować małe przyrosty, ponieważ wartości poniżej 0 lub powyżej 5 mogą być niesłyszalne. Warto zauważyć, że całkowita dozwolona zmiana wysokości dźwięku jest ograniczona do (1/256) - 256 oktaw, więc wszelkie wartości powyżej lub poniżej tej wartości nie będą
+    zarejestrowana.<b></b></p>
+  <p class="note"><b>UWAGA</b>: Podana powyżej wartość zacisku jest tym, do czego <span data-keyref="GameMaker Name">GameMaker</span> próbuje zacisnąć zakres, ale nie jest to gwarantowane na wszystkich platformach docelowych. <span class="notranslate">iOS</span> na przykład, zaciska się na (1/256) - 8, więc możesz potrzebować poeksperymentować na każdej platformie docelowej
+    i mieć różne wersje zasobów dźwiękowych, z których każda jest wstępnie przesunięta, jeśli potrzebujesz wyższych lub niższych wartości oktaw.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Set Audio Pitch Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/i_Audio_Set_Audio_Pitch.png" width="32" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Sound</td>
-        <td>The sound resource to set the pitch of</td>
+        <td><span class="notranslate">Sound</span></td>
+        <td>Zasób dźwiękowy do ustawiania wysokości dźwięku</td>
       </tr>
       <tr>
-        <td>pitch</td>
-        <td>The pitch to set the sound to (default is 1)</td>
+        <td><span class="notranslate">pitch</span></td>
+        <td>Wysokość dźwięku, na którą ma być ustawiony dźwięk (domyślnie 1)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Audio Pitch Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/e_Audio_Get_Audio_Pitch.png" />The above action block code first gets the pitch for the given sound and stores it in a temporary local variable. It then checks for a key press, and if one is detected, the value of the pitch is checked to see if it is less than 2. If it is, then the sound is stopped, the pitch variable has 0.1 added to it, and then this variable is used to set the pitch of the sound again before it is played.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji najpierw pobiera wysokość podanego dźwięku i zapisuje ją w tymczasowej
+    zmiennej lokalnej. Następnie sprawdza, czy nie został naciśnięty klawisz, a jeśli tak, to wartość pitch jest sprawdzana, czy jest mniejsza niż 2. Jeśli tak, to dźwięk jest zatrzymywany, do zmiennej pitch dodawana jest wartość 0,1, a następnie zmienna ta jest używana do ponownego ustawienia wysokości dźwięku przed jego odtworzeniem.
+    wysokości dźwięku przed jego odtworzeniem.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Actions.htm">Audio Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Audio_Pitch.htm">Get Audio Pitch</a></div>
+        <div style="float:left">Powrót: <a href="Audio_Actions.htm">Akcje dźwiękowe</a></div>
+        <div style="float:right">Następny: <a href="Get_Audio_Pitch.htm">Pobierz ścieżkę dźwiękową</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Audio Pitch

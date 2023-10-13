@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Pause Particle System</title>
+  <title>System cząstek stałych z pauzą</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Pause Particle System action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Pause Particle System" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Pause Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png" /> Pause Particle System</h1>
-  <p>This action will pause the given particle system. You supply the unique ID value for the system to pause, as returned when you created the system with the action <a href="Create_Particle_System.htm">Create Particle System</a>. A paused particle system
-    will still draw the particles that have been spawned but they will no longer update their colour, position or alpha, nor will they complete their lifespan and disappear until you resume the system. You can choose to pause or resume the system using the
-    &quot;State&quot; option.</p>
-  <p>Note that this does <i>not</i> pause emitters that are streaming particles, nor will it stop an emitter bursting particles - emitters will still create particles when called, but when the system is paused the particles will do nothing and be drawn exactly
-    where they are created until you reset the paused state or call <a href="Update_Particle_System.htm">Update Particle System</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Pause Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Pause_Particle_System.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> System cząstek stałych z pauzą</h1>
+  <p>Ta akcja wstrzymuje podany system cząstek. Podajesz unikatową wartość identyfikacyjną systemu, który ma zostać wstrzymany, zwróconą podczas tworzenia systemu za pomocą akcji <a href="Create_Particle_System.htm">Utwórz</a> system cząstek. Wstrzymany system cząstek
+    nadal będzie rysować zrodzone cząstki, ale nie będą one aktualizować swojego koloru, położenia ani alfa, a także nie zakończą swojego życia i nie znikną, dopóki nie wznowisz działania systemu. Wstrzymanie lub wznowienie działania systemu można wybrać za pomocą opcji
+    &quot;Stan&quot;.</p>
+  <p>Należy pamiętać, że <i>nie</i> wstrzymuje to emiterów, które wysyłają cząstki, ani nie zatrzymuje emiterów wysyłających cząstki - emitery nadal będą tworzyć cząstki, gdy zostaną wywołane, ale gdy system zostanie wstrzymany, cząstki nie będą nic robić i będą rysowane dokładnie w miejscu, w którym zostały utworzone, dopóki nie zostanie zresetowany stan wstrzymania lub nie zostanie wywołane polecenie Aktualizuj system cząstek.
+    w miejscu, w którym zostały utworzone, dopóki nie zostanie przywrócony stan wstrzymania lub nie zostanie wywołane polecenie <a href="Update_Particle_System.htm">Aktualizuj</a> system cząsteczek.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Pause Particle System Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Pause_Particle_System.png" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>System</td>
-        <td>The unique ID value for the system to be paused</td>
+        <td><span class="notranslate">System</span></td>
+        <td>Unikalna wartość identyfikacyjna systemu, który ma zostać wstrzymany.</td>
       </tr>
       <tr>
-        <td>State</td>
-        <td>Whether to pause or resume the particle system</td>
+        <td><span class="notranslate">State</span></td>
+        <td>Możliwość wstrzymania lub wznowienia pracy systemu cząstek stałych</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Pause Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Pause_Particle_System.png" />The above action block code will check a global variable and if it returns
-    <span class="inline">true</span> then the given particle system will be paused otherwise it will be resumed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji sprawdzi zmienną globalną i jeśli zwróci wartość
+    <span class="inline">true</span> to dany system cząsteczek zostanie wstrzymany, w przeciwnym razie zostanie wznowiony.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Update_Particle_System.htm">Update Particle System</a></div>
+        <div style="float:left">Powrót: <a href="Particle_Actions.htm">Akcje cząstek</a></div>
+        <div style="float:right">Następny: <a href="Update_Particle_System.htm">Aktualizacja systemu cząsteczek</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Pause Particle System

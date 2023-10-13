@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>path_get_point_speed</title>
+  <title>ścieżka_get_punkt_prędkość</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function path_get_point_speed" />
   <meta name="rh-index-keywords" content="path_get_point_speed" />
@@ -15,53 +15,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_get_point_speed</h1>
-  <p>With this function you can get the speed of the point (as defined in the <a href="../../../../The_Asset_Editors/Paths.htm">Path Editor</a> or when you dynamically add a path point using <a href="Path_Manipulation/path_add_point.htm"><span class="inline">path_add_point()</span></a>) expressed as a percentage. So, if you have a path point set to 50 in the path editor, this function would return 50 when used.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>ścieżka_get_punkt_prędkość</h1>
+  <p>Za pomocą tej funkcji można uzyskać prędkość punktu (zdefiniowaną w <a href="../../../../The_Asset_Editors/Paths.htm">Edytorze ścieżek</a> lub po dynamicznym dodaniu punktu <span class="notranslate">path</span> za pomocą polecenia <a href="Path_Manipulation/path_add_point.htm"><span class="inline">path_add_point()</span></a>) wyrażoną w procentach. Jeśli więc w edytorze <span class="notranslate">path</span> punkt <span class="notranslate">path</span> jest ustawiony na 50, to po użyciu ta funkcja zwróci wartość 50.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">path_get_point_speed(index, n);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Asset_Path">Path Asset</span></td>
-        <td>The index of the path to check.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Asset_Path">Aktywa na ścieżce</span></td>
+        <td><span class="notranslate">The index of the path to check.</span></td>
       </tr>
       <tr>
-        <td>n</td>
+        <td><span class="notranslate">n</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The point number to check.</td>
+        <td><span class="notranslate">The point number to check.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if (path_get_point_speed(pth_Patrol, 0) != 100)<br />
     {<br />
         var _px = path_get_point_x(pth_Patrol, 0);<br />
         var _py = path_get_point_x(pth_Patrol, 0);<br />
         path_change_point(pth_Patrol, 0, _px, _py, 100);<br />
     }</p>
-  <p>The above code checks the path point &quot;0&quot; of the path indexed by &quot;pth_Patrol&quot; to see if the speed is not equal to 100. If it is not then it sets the speed of that point to 100.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> <span class="notranslate">path</span> Powyższy kod sprawdza w punkcie &quot;0&quot; strony <span class="notranslate">path</span> indeksowanej przez &quot;pth_Patrol&quot;, czy prędkość nie jest równa 100. Jeśli nie, to ustawia prędkość tego punktu na 100.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
-        <div style="float:right">Next: <a href="path_get_point_x.htm">path_get_point_x</a></div>
+        <div style="float:left">Powrót: <a href="Paths.htm">Ścieżki</a></div>
+        <div style="float:right">Następny: <a href="path_get_point_x.htm"><span class="notranslate">path_get_point_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 path_get_point_speed

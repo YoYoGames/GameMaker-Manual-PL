@@ -6,7 +6,7 @@
   <title>buffer_async_group_begin</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_async_group_begin" />
   <meta name="rh-index-keywords" content="buffer_async_group_begin" />
@@ -15,48 +15,56 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_async_group_begin</h1>
-  <p>This function is called when you want to begin the saving out of multiple buffers to multiple files (or loading multiple buffers). The <span class="inline2">groupname</span> is a string and will be used as the directory name for where the files are saved, and should be used as part of the file path when loading the files back into the IDE later (using any of the <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> functions). This function is <i>only</i> for use with the <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> and <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span> functions and you must also end the async group by calling <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> function otherwise the files will not be saved/loaded.</p>
-  <p>Note that for the console platforms (like PS4 for example), the <span class="inline2">groupname</span> will be used as the save slot description, and using this function can help you avoid having the UI show for every file that is being saved out.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja jest wywoływana, gdy chcesz rozpocząć zapisywanie wielu <span class="notranslate">buffers</span> do wielu plików (lub ładowanie wielu <span class="notranslate">buffers</span>). <span class="inline2">Nazwa grupy</span> jest nazwą <span class="notranslate">string</span> i będzie używana jako nazwa katalogu, w którym pliki zostaną zapisane, oraz powinna być używana jako część pliku <span class="notranslate">path</span> podczas późniejszego ładowania plików z powrotem do <span class="notranslate">IDE</span> (przy użyciu dowolnej z <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> funkcji). Ta funkcja jest przeznaczona <i>wyłącznie</i> do użytku z funkcjami <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> i <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span>. Musisz także zakończyć grupę async przez wywołanie funkcji <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> w przeciwnym razie pliki nie zostaną zapisane/wczytane.</p>
+  <p>Zauważ, że w przypadku platform konsolowych (np. PS4) <span class="inline2">nazwa grupy</span> będzie używana jako opis slotu zapisu, a użycie tej funkcji może pomóc uniknąć wyświetlania interfejsu użytkownika dla każdego zapisywanego pliku. Należy również pamiętać, że podczas korzystania z UWP można przenosić zapisane gry między natywnymi oknami Xbox i Microsoft Store, tworząc na przykład grupę, która jest taka sama jak grupa ERA Xbox:</p>
+  <p class="code">if os_type == os_uwp<br />
+    {<br />
+        buffer_async_group_begin(&quot;root/yourgroupname&quot;);<br />
+    }<br />
+    else<br />
+    {<br />
+        buffer_async_group_begin(&quot;yourgroupname&quot;);<br />
+    }</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">buffer_async_group_begin(groupname);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>groupname</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the group (as a string).</td>
+        <td><span class="notranslate">groupname</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span class="notranslate">The name of the group (as a string).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">buffer_async_group_begin(&quot;SaveGame&quot;);<br />
     save1 = buffer_save_async(buff1, &quot;Player_Save1.sav&quot;, 0, 16384);<br />
     save2 = buffer_save_async(buff2, &quot;Player_Save2.sav&quot;, 0, 16384);<br />
     save3 = buffer_save_async(buff3, &quot;Player_Save3.sav&quot;, 0, 16384);<br />
     save4 = buffer_save_async(buff4, &quot;Player_Save4.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
-  <p>The above code starts a buffer group then sets it to save out 4 files asynchronously. The group definition is then ended (at which point saving will begin).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod uruchamia grupę <span class="notranslate">buffer</span>, a następnie ustawia ją na asynchroniczne zapisywanie 4 plików. Następnie definicja grupy zostaje zakończona (w tym momencie rozpocznie się zapisywanie).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_async_group_option.htm">buffer_async_group_option</a></div>
+        <div style="float:left">Powrót: <a href="Buffers.htm">Bufory</a></div>
+        <div style="float:right">Następny: <a href="buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_async_group_begin

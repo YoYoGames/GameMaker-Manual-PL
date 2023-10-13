@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Creating Tile Sets</title>
+  <title>Tworzenie zestawów płytek</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Overview of what a tile set is and how to make one." />
   <meta name="rh-index-keywords" content="Quick Start - Tile Sets" />
@@ -15,31 +14,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Creating Tile Sets</span></h1>
-  <p><strong>Tile Sets</strong> are created from sprites, but they are also classified as a separate asset type since the way that <span data-keyref="GameMaker Name">GameMaker</span> handles them is a bit different to both sprites and objects. So, a tile set is a collection of tiles created together in one sprite, and a tile is simply a graphical resource that gets added to a <span data-keyref="GameMaker Name">GameMaker</span> room as part of a <strong> <a class="glossterm" data-glossterm="tile map" href="#">tile map</a></strong>. These tile maps are then drawn to the screen with very little CPU/GPU processing, making them ideal for designing any static items in levels.</p>
-  <p>To make processing tiles so fast, they do have certain restrictions, with the most basic one being that they can <strong>only be rectangular or square</strong> (if you want anything other than this, then you&#39;ll need to create a regular sprite and use the <em>Asset Layer</em> in the room editor, but we&#39;ll discuss that in the later section on <a href="Rooms.htm">rooms</a>). Other restrictions include the fact that they can only be rotated by 90°, or mirrored or flipped, and they can only be animated with frames that number a <strong>power of 2</strong> (ie: 2, 4, 8, 16, etc...).</p>
-  <p>Let&#39;s take a look at a simple example of a tile set - some square wall tiles for a top down game:</p>
-  <p><img alt="Example Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png" /></p>
-  <p>To start with, we need to make this into a tile set <strong>sprite</strong>, which would be done in the <a href="../The_Asset_Editors/Sprites.htm">Sprite Editor</a>/<a href="../The_Asset_Editors/Image_Editor.htm">Image Editor</a> (or an external image editor and then imported as a sprite). The final sprite should look something like this:</p>
-  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png" /> <strong>Notice that the very first tile is blank in that image</strong>. The way that the tile map for the room is stored in <span data-keyref="GameMaker Name">GameMaker</span> means that first tile will always need to be blank as it&#39;s essentially the &quot;delete&quot; tile or the &quot;empty space&quot; tile (this &quot;blank&quot; tile will have an <strong>index </strong>value of 0 - tiles are indexed with a value that starts at 0 and counts up from left to right, top to bottom). So, when creating your tile sets, the top left corner tile will always need to be empty in this way. Also note that while the image above shows a full wall tile set with 47 tiles, you may not need so many as you can rotate and flip tiles when placing them in the room editor later.</p>
-  <p>With the sprite created, we can go ahead and define the tile set itself, which means you have to first create a new tile set resource by right clicking <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> the Tile Set asset folder and selecting <em>Create</em>. This will open the <a href="../The_Asset_Editors/Tile_Sets.htm">Tile Set Editor</a> where you can then add the sprite and set its properties:</p>
-  <p><img alt="Tile set Editor" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Editor.png" /></p>
-  <p>We have set the tile set size to 64px, and we have left the rest of the options at their default values, since we have no need for offsets or anything like that (the offset values are useful for any tile set sprite that has spaces around each of the tiles). You&#39;ll want to name the tile set asset using an appropriate prefix like &quot; <span class="inline">ts_</span>&quot; so you can easily identify it later, and note that the same restrictions apply as for sprites, ie: the name cannot start with a number, and can only use the underscore &quot;_&quot; symbol and alpha-numeric characters.</p>
-  <p>You can now close the tile set editor, as you can use the tile set &quot;as is&quot; to create tile map layers in the room editor, however if you want to know more about the advanced functions of the Tile Set Editor, then see the following section of the manual:</p>
+  <h1>Tworzenie zestawów płytek</h1>
+  <p><strong>Zestawy k</strong> afelków są tworzone z <span class="notranslate">sprites</span>, ale są one także klasyfikowane jako osobny typ <span class="notranslate">asset</span>, ponieważ sposób, w jaki <span data-keyref="GameMaker Name">GameMaker</span> je obsługuje, różni się nieco od sposobu, w jaki robią to <span class="notranslate">sprites</span> i <span class="notranslate">objects</span>. Tak więc, <span class="notranslate">tile set</span> to zbiór <span class="notranslate">tiles</span> utworzonych
+    razem w jednym <span class="notranslate">sprite</span>, a <span class="notranslate">tile</span> to po prostu zasób graficzny dodawany do <span data-keyref="GameMaker Name">GameMakera</span> <span class="notranslate">room</span> jako część <strong> <a class="glossterm" data-glossterm="mapa z płytkami" href="#">mapa kafelkowa</a></strong>. Te mapy <span class="notranslate">tile</span> są następnie rysowane na
+    ekranu przy bardzo niewielkim przetwarzaniu CPU/GPU, co czyni je idealnymi do projektowania wszelkich statycznych elementów w poziomach.</p>
+  <p>Aby przetwarzanie stron <span class="notranslate">tiles</span> było tak szybkie, mają one pewne ograniczenia, z których najbardziej podstawowym jest to, że mogą <strong>być tylko prostokątne lub kwadratowe</strong> (jeśli chcesz uzyskać coś innego niż to, musisz utworzyć zwykły sprite
+    i użyć <em>warstwy zasobów</em> w edytorze <span class="notranslate">room</span>, ale omówimy to w dalszej części rozdziału poświęconej <a href="Rooms.htm">pomieszczeniom</a>). Inne ograniczenia to fakt, że można je obracać tylko o 90°, odbijać lustrzanie lub odwracać, a także to, że mogą być
+    animować tylko klatki, których liczba jest <strong>potęgą</strong> liczby <strong>2</strong> (tzn. 2, 4, 8, 16 itd.).</p>
+  <p>Przyjrzyjmy się prostemu przykładowi <span class="notranslate">tile set</span> - kilka kwadratowych ścian <span class="notranslate">tiles</span> dla gry typu top down:</p>
+  <p><img alt="Example Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_ExampleTileset.png"/></p>
+  <p>Na początek musimy przekształcić go w <strong>sprite</strong>'a <span class="notranslate">tile set</span> <a href="../The_Asset_Editors/Sprites.htm">, co można zro</a><a href="../The_Asset_Editors/Image_Editor.htm">bić w</a> Sprite Editor/Image Editor (lub w zewnętrznym edytorze obrazów, a następnie zaimportować jako ).
+    a następnie zaimportować jako <span class="notranslate">sprite</span>). Ostateczna wersja <span class="notranslate">sprite</span> powinna wyglądać mniej więcej tak:</p>
+  <p><img> <strong>Zauważ, że pierwszy adres <span class="notranslate">tile</span> jest na tym obrazku pusty</strong>. Sposób, w jaki mapa <span class="notranslate">tile</span> dla <span class="notranslate">room</span> jest przechowywana w <span data-keyref="GameMaker Name">GameMakerze</span>, oznacza, że
+    że pierwsza strona <span class="notranslate">tile</span> zawsze musi być pusta, ponieważ jest to w zasadzie &quot;usunięcie&quot; <span class="notranslate">tile</span> lub &quot;puste miejsce&quot; <span class="notranslate">tile</span> (ta &quot;pusta&quot; strona <span class="notranslate">tile</span> będzie miała <strong>indeks </strong>0 - strony <span class="notranslate">tiles</span> są indeksowane wartością, która
+    zaczyna się od 0 i jest liczona od lewej do prawej, od góry do dołu). Dlatego podczas tworzenia strony <span class="notranslate">tile sets</span> lewy górny róg <span class="notranslate">tile</span> zawsze będzie musiał być pusty. Zwróć też uwagę, że na powyższym rysunku widać całą ścianę <span class="notranslate">tile set</span> z 47 <span class="notranslate">tiles</span>, ale może się okazać, że
+    nie trzeba ich aż tylu, ponieważ można obracać i przerzucać <span class="notranslate">tiles</span> podczas umieszczania ich później w edytorze <span class="notranslate">room</span>.</p>
+  <p>Mając utworzoną stronę <span class="notranslate">sprite</span>, możemy przejść do definiowania samej strony <span class="notranslate">tile set</span>, co oznacza, że najpierw należy utworzyć nowy zasób <span class="notranslate">tile set</span>, klikając prawym przyciskiem myszy <img> folder <span class="notranslate">Tile Set</span> asset
+    i wybierz opcję <em>Utwórz</em>. Spowoduje to otwarcie <a href="../The_Asset_Editors/Tile_Sets.htm">edytora zestawu kafelków</a>, w którym można dodać <span class="notranslate">sprite</span> i ustawić jego właściwości:</p>
+  <p><img alt="Tile Set Sprite" class="center" src="../assets/Images/QS_Guide/QS_Tileset_Sprite.png"/></p>
+  <p>Rozmiar strony <span class="notranslate">tile set</span> ustawiliśmy na 64px, a pozostałe opcje pozostawiliśmy na wartościach domyślnych, ponieważ nie potrzebujemy przesunięć ani nic podobnego (wartości przesunięć są przydatne w przypadku strony <span class="notranslate">tile set</span> <span class="notranslate">sprite</span>, która ma spacje wokół każdego z elementów
+   <span class="notranslate">tiles</span>). Nazwij plik <span class="notranslate">tile set</span> <span class="notranslate">asset</span>, używając odpowiedniego prefiksu, takiego jak &quot; <span class="inline">ts_</span>&quot;, aby można go było później łatwo zidentyfikować, i pamiętaj, że obowiązują te same ograniczenia, co w przypadku <span class="notranslate">sprites</span>, tzn. nazwa nie może zaczynać się
+    od liczby i może zawierać tylko symbol podkreślenia &quot;_&quot; oraz znaki alfanumeryczne.</p>
+  <p>Możesz teraz zamknąć edytor <span class="notranslate">tile set</span>, ponieważ możesz użyć <span class="notranslate">tile set</span> &quot;tak jak jest&quot; do tworzenia warstw mapy <span class="notranslate">tile</span> w edytorze <span class="notranslate">room</span>. Jeśli jednak chcesz dowiedzieć się więcej o zaawansowanych funkcjach edytora <span class="notranslate">Tile Set</span>, zapoznaj się z następującą częścią
+    podręcznika:</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Editors: The Tile Set Editor</a></li>
+    <li><a href="../The_Asset_Editors/Tile_Sets.htm">Redakcja: The <span class="notranslate">Tile Set</span> Editor</a></li>
   </ul>
-  <p>Now to move on to talk about adding <strong>sound effects</strong> to your project...</p>
-  <p> </p>
-  <p> </p>
+  <p>Przejdźmy teraz do omawiania dodawania <strong>efektów dźwiękowych</strong> do projektu...</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Creating_Sound_Effects.htm">Creating Sound Effects</a></div>
+        <div style="float:left">Powrót: <a href="../Content.htm">Indeks</a></div>
+        <div style="float:right">Następny: <a href="Creating_Sound_Effects.htm">Tworzenie efektów dźwiękowych</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Creating Tilesets
@@ -48,5 +59,5 @@ Quick Start: Creating Tilesets
   <!-- TAGS
 qs_tilesets
 -->
-</body>
-</html>
+
+</body></html>

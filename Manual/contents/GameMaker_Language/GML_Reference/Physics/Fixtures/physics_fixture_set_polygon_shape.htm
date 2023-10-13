@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>physics_fixture_set_polygon_shape</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_fixture_set_polygon_shape" />
   <meta name="rh-index-keywords" content="physics_fixture_set_polygon_shape" />
@@ -15,45 +15,42 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_fixture_set_polygon_shape</h1>
-  <p>This function sets a polygon shape for your fixture, but you will need to use <span class="inline3_func"><a data-xref="{title}" href="physics_fixture_add_point.htm">physics_fixture_add_point</a></span> to actually define the shape of this polygon relative to the origin of the fixture. The polygon is closed when the fixture is bound to an instance. You should note too that this function <i>must</i> be called before defining any points, and you must also have at least three points defined for your polygon before binding it to an instance or you will get an error.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja ustawia kształt wielokąta dla twojego obiektu, ale będziesz musiał użyć <a href="physics_fixture_add_point.htm"><span class="inline">physics_fixture_add_point()</span></a> aby faktycznie zdefiniować kształt tego wielokąta względem początku uchwytu. Wielokąt
+    jest zamykany, gdy uchwyt jest związany z instancją. Powinieneś także zauważyć, że ta funkcja <i>musi</i> zostać wywołana przed zdefiniowaniem jakichkolwiek punktów, a także musisz mieć przynajmniej trzy punkty zdefiniowane dla twojego wielokąta przed związaniem go z instancją, w przeciwnym razie
+    pojawi się błąd.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_fixture_set_polygon_shape(fixture)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
+     </tr>
       <tr>
-        <td>fixture</td>
-        <td><span data-keyref="Type_ID_PhyFixture"><a href="../../../../../GameMaker_Language/GML_Reference/Physics/Fixtures/physics_fixture_create.htm" target="_blank">Physics Fixture ID</a></span></td>
-        <td>the index of the fixture</td>
-      </tr>
+        <td><span class="notranslate">fixture</span></td><td><span data-keyref="Type_ID_PhyFixture"></span></td>
+        <td><span class="notranslate">the index of the fixture</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">physics_fixture_set_polygon_shape(fix_Ship);<br />
-    physics_fixture_add_point(fix_Ship, 0,0);<br />
-    physics_fixture_add_point(fix_Ship, -40, 100);<br />
-    physics_fixture_add_point(fix_Ship, 40, 100);</p>
-  <p>The code above will apply a polygon shape to the fixture indexed in the variable &quot;fix_Ship&quot; and then defines three points to create a triangular shape.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">physics_fixture_set_polygon_shape(fix_Ship);<br/> physics_fixture_add_point(fix_Ship, 0,0);<br/> physics_fixture_add_point(fix_Ship, -40, 100);<br/> physics_fixture_add_point(fix_Ship, 40, 100);</p>
+  <p>Powyższy kod zastosuje kształt wielokąta do elementu mocującego indeksowanego w zmiennej &quot;fix_Ship&quot;, a następnie zdefiniuje trzy punkty, aby utworzyć kształt trójkąta.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_fixture_add_point.htm">physics_fixture_add_point</a></div>
+        <div style="float:left">Powrót: <a href="Fixtures.htm">Armatura</a></div>
+        <div style="float:right">Następny: <a href="physics_fixture_add_point.htm"><span class="notranslate">physics_fixture_add_point</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_set_polygon_shape

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Particle Type</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Utwórz typ cząstki</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Create Particle Type action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Create Particle Type" />
@@ -14,45 +14,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /> Create Particle Type</h1>
-  <p>In your projects you can have multiple different particle <i>types</i>, each with their own properties like direction and colour, etc... which are set using the different particle type actions. However you first need to create a <b>particle type</b> using this action, which essentially allocates a small amount of memory to hold all the particle details so that you can use the particles at any time in the future. You give a variable to hold the unique ID value for the particle type, and then in all future actions relating to this particle you can call the variable. You can choose to flag this variable as being a temporary local variable, but that will mean that it is discarded at the end of the action script or event, meaning that the particle type will still exist but leave you without any means to access it, so care must be taken when using this (in general particle types will never need to be stored in a temporary local variable, but for certain things, like drawing particles to a surface, it may be required).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> A particle type, once created, remains resident in the system memory for the duration of the game, and so if you need to recreate it at any point (for example, if you call the <a href="../Game/Restart_Game.htm">Restart Game</a> action), then you <b>must destroy the current particle type</b> otherwise you get a memory leak. This happens when a resource is added to memory and then &quot;de-referenced&quot;, meaning that <span data-keyref="GameMaker Name">GameMaker</span> has no way to interact with that resource any more. This leads to the memory being clogged by inaccessible resources which in turn can cause issues with your game. To destroy a particle type when no longer required use the action <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a>.</p>
-  <p>You can also set the <b>Blend</b> mode to be used for the particles. By default they will be drawn with a &quot;normal&quot; blend mode, so colours will not be modified by what was drawn underneath the particle, however when the &quot;Blend&quot; option is enabled, they will be drawn using <i>additive</i> blending, which means that things will be drawn with changes to the colours based on what was drawn under the particle. Additive blending gives very bright and &quot;glowing&quot; effects, and is ideal for explosions, lasers, fire, etc. while normal blending is better for things like rain, smoke, and debris effects. The image below shows the same effect with additive blending off (left) and on (right):</p>
+  <h1><img> Utwórz typ cząstki</h1>
+  <p>W projektach można mieć wiele różnych <i>typów</i> cząstek, z których każdy ma swoje własne właściwości, takie jak kierunek, kolor itp., ustawiane za pomocą różnych akcji typu cząstki. Najpierw jednak trzeba utworzyć <b>typ</b> cząstki za pomocą tej akcji, która zasadniczo przydziela niewielką ilość pamięci na wszystkie szczegóły cząstki, aby można było z niej korzystać w dowolnym momencie w przyszłości. Podajesz zmienną, w której przechowywana jest unikatowa wartość ID typu cząstki, a następnie we wszystkich
+    wszystkich przyszłych działaniach związanych z tą cząstką można wywoływać tę zmienną. Możesz wybrać stronę <span class="notranslate">flag</span> jako tymczasową zmienną lokalną, ale będzie to oznaczać, że zostanie ona usunięta po zakończeniu akcji <span class="notranslate">script</span> lub zdarzenia, co oznacza, że cząsteczka
+    Typ cząsteczki będzie nadal istniał, ale nie będziesz miał do niego dostępu, więc należy zachować ostrożność podczas korzystania z tej funkcji (generalnie typy cząsteczek nigdy nie muszą być przechowywane w tymczasowej zmiennej lokalnej, ale w przypadku niektórych rzeczy, takich jak przyciąganie cząsteczek do powierzchni,
+    może to być konieczne).</p>
+  <p class="note"><b>UWAGA</b>: Raz utworzony typ cząstki pozostaje w pamięci systemu przez cały czas trwania gry, więc jeśli w którymś momencie trzeba będzie go ponownie utworzyć (na przykład po wywołaniu akcji <a href="../Game/Restart_Game.htm">Uruchom ponownie</a> grę),
+   <b>musisz zniszczyć bieżący typ cząstki</b>, w przeciwnym razie nastąpi wyciek pamięci. Dzieje się tak, gdy zasób jest dodawany do pamięci, a następnie &quot;odwoływany&quot;, co oznacza, że <span data-keyref="GameMaker Name">GameMaker</span> nie ma już możliwości interakcji z tym zasobem.
+    więcej. Prowadzi to do zapchania pamięci przez niedostępne zasoby, co z kolei może powodować problemy w grze. Aby zniszczyć typ cząsteczki, gdy nie jest już potrzebny, użyj akcji <a href="Destroy_Particle_Type.htm">Zniszcz typ</a> cząsteczki.</p>
+  <p>Można także ustawić tryb <b>mieszania</b>, który będzie używany dla cząstek. Domyślnie będą one rysowane w &quot;normalnym&quot; trybie mieszania, więc kolory nie będą modyfikowane przez to, co zostało narysowane pod cząstką, jednak gdy opcja &quot;Mieszanie&quot; jest włączona, cząstki będą rysowane z użyciem mieszania addytywnego.
+    zostanie włączona, cząstki będą rysowane z użyciem mieszania <i>addytywnego</i>, co oznacza, że kolory będą się zmieniać w zależności od tego, co zostało narysowane pod cząstką. Mieszanie addytywne daje bardzo jasne i &quot;świecące&quot; efekty i jest
+    Idealnie nadaje się do eksplozji, laserów, ognia itp., podczas gdy normalne mieszanie jest lepsze do takich efektów, jak deszcz, dym i gruz. Na poniższym rysunku pokazano ten sam efekt przy wyłączonym (po lewej) i włączonym (po prawej) mieszaniu addytywnym:</p>
+  <p><img alt="Create Particle Type Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Create_Particle_Type.png" /></p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
   <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/Particle_Blending.gif" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Create Particle Type Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Create_Particle_Type.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned type ID value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Zmienna docelowa przechowująca zwróconą wartość identyfikatora typu</td>
       </tr>
       <tr>
-        <td>Blend</td>
-        <td>Whether the particle type should use additive blending</td>
+        <td><span class="notranslate">Blend</span></td>
+        <td>Czy typ cząstek powinien wykorzystywać mieszanie dodatków?</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji utworzy nowy typ cząstki i przypisze jej unikatową wartość
+    ID do zmiennej globalnej. Następnie ustawi wszystkie właściwości typu cząstki.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a></div>
+        <div style="float:left">Powrót: <a href="Particle_Actions.htm">Akcje cząstek</a></div>
+        <div style="float:right">Następny: <a href="Destroy_Particle_Type.htm">Zniszcz typ cząstki</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Create Particle Type

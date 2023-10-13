@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>angle_difference</title>
+  <title>kąt_różnicy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <script src="../../../../assets/scripts/canvas_helpers.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for angle_difference" />
@@ -16,40 +16,40 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>angle_difference</h1>
-  <p>This function will return the smallest difference between the two specified angles, where the difference is calculated from the source angle towards the destination angle. The returned value will be between -180 and 180 degrees (where a positive angle is anti-clockwise and a negative angle is clockwise).</p>
-  <p>The relationship between the &quot;source&quot; and &quot;destination&quot; angles is such that the difference that you get by calling <span class="inline2">angle_difference(dest, src)</span>, when added back to the <span class="inline2">src</span> value, gives you the <span class="inline2">dest</span> angle (although the exact numeric values may differ). You can use a similar technique to move the source angle towards the destination angle gradually every step, where you add, say, 10% of the returned difference back to <span class="inline2">src</span> to move it a little bit towards <span class="inline2">dest</span> (this is demonstrated in the example below).</p>
-  <p> </p>
-  <h4><b>Syntax:</b></h4>
+  <h1>kąt_różnicy</h1>
+  <p>Funkcja zwraca najmniejszą różnicę między dwoma podanymi kątami, przy czym różnica ta jest obliczana od kąta źródłowego do kąta docelowego. Zwrócona wartość będzie zawierać się w przedziale od -180 do 180 stopni (gdzie kąt dodatni jest przeciwny do ruchu wskazówek zegara, a kąt ujemny jest zgodny z ruchem wskazówek zegara).</p>
+  <p>Zależność między kątami &quot;źródłowymi&quot; i &quot;docelowymi&quot; jest taka, że różnica uzyskana przez wywołanie polecenia <span class="inline2">angle_difference(dest, src)</span>, po dodaniu jej do wartości <span class="inline2">src</span>, daje kąt <span class="inline2">docelowy</span> (choć dokładne wartości liczbowe mogą się różnić). Podobną technikę można zastosować do stopniowego przesuwania kąta źródłowego w kierunku kąta docelowego, dodając do wartości <span class="inline2">src</span>, powiedzmy, 10% zwróconej różnicy, aby przesunąć ją nieco w kierunku kąta <span class="inline2">docelowego</span> (pokazano to w poniższym przykładzie).</p>
+  <p> </p>
+  <h4><b>Składnia:</b></h4>
   <p class="code">angle_difference(dest, src)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>dest</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The destination or target angle</td>
+        <td><span class="notranslate">dest</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The destination or target angle</span></td>
      </tr>
       <tr>
-        <td>src</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The source angle</td>
+        <td><span class="notranslate">src</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The source angle</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _dir = point_direction(x, y, mouse_x, mouse_y);<br />
     var _diff = angle_difference(_dir, image_angle);<br />
     image_angle += _diff * 0.1;</p>
-  <p>The above code will get the direction from the instance to the mouse cursor, then get the difference between that angle and the current <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="inline">image_angle</span></a>, using this value to gradually rotate the instance towards the mouse.</p>
+  <p>Powyższy kod pobierze kierunek od instancji do kursora myszy, a następnie obliczy różnicę między tym kątem a aktualną wartością kąta. <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><span class="inline">image_angle</span></a>i użyje tej wartości do stopniowego obracania instancji w kierunku myszy.</p>
   <p><img class="invisible" src="../../../../assets/Images/InteractiveExamples/DirectionalSprite.png" /></p>
   <p><canvas class="gml_reference_example" height="128" id="angle_difference_example" width="128"> </canvas></p>
-  <p class="canvas_subtitle">Interactive Example</p>
+  <p class="canvas_subtitle">Przykład interaktywny</p>
   <script>
     //<![CDATA[
     let elm = document.getElementById("angle_difference_example");
@@ -80,11 +80,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="lengthdir_x.htm">lengthdir_x</a></div>
+        <div style="float:left">Powrót: <a href="Angles_And_Distance.htm">Kąty i odległości</a></div>
+        <div style="float:right">Następny: <a href="lengthdir_x.htm"><span class="notranslate">lengthdir_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 angle_difference

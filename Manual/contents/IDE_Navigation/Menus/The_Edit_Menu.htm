@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Edit Menu</title>
+  <title>Menu Edycja</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section on the Edit Menu" />
   <meta name="rh-index-keywords" content="Menu - Edit" />
@@ -14,51 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Edit Menu</h1>
+  <h1>Menu Edycja</h1>
   <p><img alt="The Edit Menu" class="center" src="../../assets/Images/IDE_Input/Edit_Menu.png" /></p>
-  <p>The edit menu is where you can use the general edition tools of the <span data-keyref="GameMaker Name">GameMaker</span> interface. The available options are:</p>
+  <p>Strona <span class="notranslate">edit menu</span> to miejsce, w którym można korzystać z ogólnych narzędzi edycyjnych interfejsu programu <span data-keyref="GameMaker Name">GameMaker</span>. Dostępne opcje to:</p>
   <ul class="colour">
-    <li><strong>Undo </strong>- Undo an action.</li>
-    <li><strong>Redo </strong>- Redo a previous action.</li>
-    <li><strong>Search and replace </strong>- This will open a search window which permits you to search through your entire code (including room creation code, scripts, and events) for a given input - see below for further information.</li>
+    <li><strong>Cofnij - </strong> cofnięcie działania.</li>
+    <li>Ponów<strong>- </strong> ponowne wykonanie poprzedniej czynności.</li>
+    <li><strong>Szukaj i zamieniaj - </strong> w tym miejscu zostanie otwarte okno wyszukiwania, które umożliwia przeszukiwanie całego kodu (w tym kodu tworzenia <span class="notranslate">room</span>, <span class="notranslate">scripts</span> i zdarzeń) pod kątem podanych danych wejściowych - więcej informacji na ten temat można znaleźć poniżej.</li>
   </ul>
-  <p>When you select Search &amp; Replace from the Edit menu, it will open the following window:</p>
-  <p><img alt="Search In Assets Window" class="center" src="../../assets/Images/IDE_Input/Search_Menu.png" />You can use this to search through all the scripted assets in your game, including room code, event code, scripts and shaders. When searching, you
-    can type in a new search term in the box at the top, or you can click the arrow icon to the right to open a list of previously searched for terms. You also have the option to give a replacement term that will be used to replace the initial search
-    term, and this too has an option to use a previously used replace string from the arrow button on the right.</p>
-  <p>Searches can be general or you can refine them using the options below the search term inputs:</p>
+  <p>Po wybraniu opcji Search &amp; Replace (Wyszukaj i zamień) na stronie <span class="notranslate">Edit menu</span>, zostanie otwarte następujące okno:</p>
+  <p><img>Za jego pomocą można przeszukiwać wszystkie skryptowane strony <span class="notranslate">assets</span> w grze, w tym kody <span class="notranslate">room</span>, kody zdarzeń, <span class="notranslate">scripts</span> i <span class="notranslate">shaders</span>. Podczas wyszukiwania
+    możesz wpisać nowe hasło w polu na górze lub kliknąć ikonę strzałki po prawej stronie, aby otworzyć listę wcześniej wyszukiwanych terminów. Istnieje również możliwość podania terminu zastępczego, który zostanie użyty w miejsce początkowego terminu wyszukiwania.
+    i również w tym przypadku istnieje możliwość użycia poprzednio używanego terminu zastępczego <span class="notranslate">string</span> za pomocą przycisku strzałki po prawej stronie.</p>
+  <p>Wyszukiwania mogą być ogólne lub można je zawęzić, korzystając z opcji znajdujących się pod wpisywanymi terminami:</p>
   <ul class="colour">
-    <li>You can choose to make the search <strong>case sensitive</strong>, in which case it will only include words that exactly match the search string case, ie: searching for &quot;My_Var&quot; without this option and you will get results with &quot;my_var&quot;,
-      &quot;mY_VAR&quot;, or &quot;My_Var&quot;, but with this option checked only &quot;My_Var&quot; will be included in the search results.</li>
-    <li>You can choose to only include search results that include the <strong>whole word only</strong>, in which case any results that include the search term but aren&#39;t an exact match will be ignored, ie: a search for &quot;game&quot; without this checked
-      will show up things like the function &quot;game_end()&quot; or variables like &quot;game_state&quot;, while checking this and doing the search will only show results that are &quot;game&quot; itself.</li>
-    <li>You can choose to have the search <strong>ignore comments</strong>. When this is checked, any comments in your code that contain the search term will simply be ignored and not shown in the output results.</li>
-    <li>You can apply a <strong>filter </strong>on the search results based on the different asset types in the asset browser. By default this is set to &quot;Everything&quot;, but clicking on this will open the following menu where you can check or uncheck
-      assets to be included in the search:</li>
+    <li>Można wybrać opcję <strong>rozróżniania wielkości liter</strong>, w którym to przypadku w wynikach wyszukiwania będą uwzględniane tylko słowa dokładnie odpowiadające wielkości liter podanej w wyszukiwaniu <span class="notranslate">string</span>, np. szukając &quot;My_Var&quot; bez tej opcji, otrzymasz wyniki zawierające &quot;my_var&quot;,
+      &quot;mY_VAR&quot; lub &quot;My_Var&quot;, ale po zaznaczeniu tej opcji w wynikach wyszukiwania pojawi się tylko &quot;My_Var&quot;.</li>
+    <li>Możesz wybrać, aby uwzględniać tylko wyniki wyszukiwania zawierające <strong>całe słowo</strong>, w tym przypadku wszystkie wyniki zawierające szukane słowo, ale nie będące dokładnym dopasowaniem, zostaną zignorowane, np. wyszukiwanie &quot;gra&quot; bez zaznaczenia tej opcji
+      wyświetli rzeczy takie jak funkcja &quot;game_end()&quot; lub zmienne takie jak &quot;game_state&quot;, podczas gdy zaznaczenie tej opcji i wykonanie wyszukiwania wyświetli tylko wyniki zawierające samo słowo &quot;gra&quot;.</li>
+    <li>Można wybrać opcję <strong>ignorowania komentarzy</strong> przez wyszukiwarkę. Gdy ta opcja jest zaznaczona, wszelkie komentarze w kodzie zawierające szukane wyrażenie będą ignorowane i nie będą pokazywane w wynikach wyszukiwania.</li>
+    <li>Do wyników wyszukiwania można zastosować <strong>filtr </strong>oparty na różnych typach stron <span class="notranslate">asset</span> w przeglądarce <span class="notranslate">asset</span>. Domyślnie jest on ustawiony na &quot;Wszystko&quot;, ale kliknięcie go spowoduje otwarcie następującego menu, w którym można zaznaczyć lub usunąć zaznaczenie
+      <span class="notranslate">assets</span> które mają być uwzględnione w wyszukiwaniu:</li>
   </ul>
-  <p><img alt="Search Filter Options" class="center" src="../../assets/Images/IDE_Input/Search_Menu_Filter.png" />Once you have given a search (and optionally a replace) term and set up the search options, you can use the different buttons at the bottom
-    to choose how to perform the search and any actions to take. These buttons are:</p>
+  <p><img>Po podaniu terminu wyszukiwania (i opcjonalnie zamiany) oraz skonfigurowaniu opcji wyszukiwania można użyć różnych przycisków na dole strony
+    aby wybrać sposób wykonania wyszukiwania i ewentualne działania. Przyciski te to:</p>
   <ul class="colour">
-    <li><strong>Find All</strong>: Find all the search terms and show them in the output window.</li>
-    <li><strong>Find Previous</strong>: Find the previous instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Find Next</strong>: Find the next instance of the search term. This will open the asset containing the reference in the workspace (if it&#39;s not already open) and pan to it.</li>
-    <li><strong>Replace All</strong>: This will perform a search for the given term with the options set and also replace it in the assets with the new replace term you have specified.</li>
-    <li><strong>Replace</strong>: This will replace the currently selected term in the current editor where it&#39;s highlighted with the selected replace term.</li>
-    <li><strong>Stop Search</strong>: Stop the current search if one is in progress.</li>
+    <li><strong>Znajdź wszystko</strong>: Znajdź wszystkie wyszukiwane hasła i pokaż je w oknie wyjściowym.</li>
+    <li><strong>Znajdź poprzednie</strong>: Znajdź poprzednie wystąpienie szukanego wyrażenia. Spowoduje to otwarcie strony <span class="notranslate">asset</span> zawierającej odniesienie w <span class="notranslate">workspace</span> (jeśli nie jest ona jeszcze otwarta) i przejście do niej.</li>
+    <li><strong>Znajdź następny</strong>: Znajduje następne wystąpienie szukanego terminu. Spowoduje to otwarcie strony <span class="notranslate">asset</span> zawierającej odniesienie w <span class="notranslate">workspace</span> (jeśli nie jest jeszcze otwarta) i przejście do niej.</li>
+    <li><strong>Zastąp wszystko</strong>: Spowoduje to wyszukanie podanego terminu z ustawionymi opcjami, a także zastąpienie go w witrynie <span class="notranslate">assets</span> nowym terminem zastępczym, który został określony.</li>
+    <li><strong>Zamień</strong>: Zastąpi aktualnie zaznaczony termin w bieżącym edytorze, w którym jest on podświetlony, wybranym terminem zastępczym.</li>
+    <li><strong>Zatrzymaj</strong> wyszukiwanie: Zatrzymanie bieżącego wyszukiwania, jeśli jest ono w toku.</li>
   </ul>
-  <p>Pressing the <strong>Escape </strong>key while this window is open will clear the selected field, however if that field is already empty, then it will close the window.</p>
-  <p>All results from using the Search &amp; Replace window will be shown in the <a href="../../Introduction/The_Output_Window.htm">Search Output Window</a> at the bottom of the IDE. Each result can be <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"
-    /> double-clicked to open the asset with the term in the current workspace and pan to it, ready for editing.</p>
-  <p> </p>
-  <p> </p>
+  <p>Naciśnięcie klawisza <strong>Escape </strong>, gdy to okno jest otwarte, spowoduje wyczyszczenie wybranego pola, ale jeśli pole to jest już puste, spowoduje zamknięcie okna.</p>
+  <p>Wszystkie wyniki użycia okna Search &amp; Replace zostaną wyświetlone w <a href="../../Introduction/The_Output_Window.htm">oknie Search Output Window</a> na dole strony <span class="notranslate">IDE</span>. Każdy wynik można <img> kliknąć dwukrotnie, aby otworzyć stronę <span class="notranslate">asset</span> z terminem w bieżącej witrynie <span class="notranslate">workspace</span> i przejść do niego, gotowego do edycji.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Menus.htm">Menus</a></div>
-        <div style="float:right">Next: <a href="The_Build_Menu.htm">The Build Menu</a></div>
+        <div style="float:left">Powrót: <a href="../Menus.htm">Menu</a></div>
+        <div style="float:right">Następny: <a href="The_Build_Menu.htm">Menu budowania</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 The Edit Menu

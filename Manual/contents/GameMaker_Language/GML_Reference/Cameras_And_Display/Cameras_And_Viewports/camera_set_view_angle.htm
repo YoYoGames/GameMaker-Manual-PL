@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>camera_set_view_angle</title>
+  <title>kamera_set_view_angle</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for camera_set_view_angle" />
   <meta name="rh-index-keywords" content="camera_set_view_angle" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_view_angle</h1>
-  <p>You can use this function to update the angle of the view camera within the room. You give the unique camera ID value (as returned by the different <a href="camera_create.htm"><span class="inline">camera_create()</span></a> functions) and then give the angle that you
-    wish to set the camera view to. The default value is 0° with positive values rotating the camera <b>counter-clockwise</b>, ie: setting the value to 90 will rotate the camera 90° to the left.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>kamera_set_view_angle</h1>
+  <p>Tej funkcji można użyć do aktualizacji kąta kamery widoku w witrynie <span class="notranslate">room</span>. Należy podać unikatową wartość identyfikatora kamery (zwracaną przez różne <a href="camera_create.htm"><span class="inline">camera_create()</span></a> funkcje), a następnie podajesz kąt, który
+    który ma być ustawiony w widoku kamery. Domyślną wartością jest 0°, przy czym wartości dodatnie powodują obrót kamery w kierunku <b>przeciwnym do ruchu wskazówek zegara</b>, np. ustawienie wartości 90 spowoduje obrót kamery o 90° w lewo.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">camera_set_view_angle(camera_id, angle)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>camera_id</td><td><span data-keyref="Type_ID_Camera"></span></td>
-        <td>The unique camera ID value returned when you created the camera</td>
+        <td><span class="notranslate">camera_id</span></td><td><span data-keyref="Type_ID_Camera"></span></td>
+        <td><span class="notranslate">The unique camera ID value returned when you created the camera</span></td>
      </tr>
       <tr>
-        <td>angle</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The new angle to set the camera view to</td>
+        <td><span class="notranslate">angle</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The new angle to set the camera view to</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">camera_set_view_angle(view_camera[0], point_direction(x, y, mouse_x, mouse_y));</p>
-  <p>The above code will set the view camera angle for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod ustawi kąt kamery widoku dla kamery przypisanej do portu widoku[0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="camera_set_view_target.htm">camera_set_view_target</a></div>
+        <div style="float:left">Powrót: <a href="Cameras_And_View_Ports.htm">Kamery i porty podglądu</a></div>
+        <div style="float:right">Następny: <a href="camera_set_view_target.htm"><span class="notranslate">camera_set_view_target</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 camera_set_view_angle

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Sprites And Tiles</title>
+  <title>Sprite'y i płytki</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Sprites And Tiles functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -14,54 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Sprites And Tiles</h1>
-  <p>Even though you can set up backgrounds in the room editor and you can assign sprites to instances, often this is not flexible enough for the game you are making. For example, if you have an instance that has to draw a menu, you may want to display various button sprites at a time, or if you have a game with scrolling parallax backgrounds you will need to be able to set them through code in a controller instance of some type. In these situations you should be using the following functions which can draw sprite and background assets anywhere in the room with some of the functions also permitting you to manipulate the shape, size, colour and alpha of the sprite to achieve special effects.</p>
-  <p>You can assign a sprite to an instance and by default <span data-keyref="GameMaker Name">GameMaker</span> will draw it with the properties given by the various <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">sprite variables</a>, however if you add anything into the draw event, you are &quot;taking control&quot; and must tell <span data-keyref="GameMaker Name">GameMaker</span> exactly what to draw. This means that if you must use the following functions to define exactly what it is the instance is to draw and where about in the room it is to draw it:</p>
+  <h1>Sprite'y i płytki</h1>
+  <p>Mimo że w edytorze <span class="notranslate">room</span> można ustawiać tła i przypisywać <span class="notranslate">sprites</span> do instancji, często nie jest to wystarczająco elastyczne dla tworzonej gry. Na przykład, jeśli masz instancję, która ma rysować menu, możesz chcieć wyświetlać różne przyciski <span class="notranslate">sprites</span> w tym samym czasie, lub jeśli masz grę z przewijanym tłem paralaksy, musisz mieć możliwość ustawienia go za pomocą kodu w instancji kontrolera. W takich sytuacjach należy korzystać z poniższych funkcji, które mogą rysować <span class="notranslate">sprite</span> i tło <span class="notranslate">assets</span> w dowolnym miejscu na stronie <span class="notranslate">room</span>. Niektóre z tych funkcji umożliwiają także manipulowanie kształtem, rozmiarem, kolorem i alfą strony <span class="notranslate">sprite</span> w celu uzyskania efektów specjalnych.</p>
+  <p>Możesz przypisać instancję do <span class="notranslate">sprite</span> i domyślnie <span data-keyref="GameMaker Name">GameMaker</span> narysuje ją za pomocą właściwości podanych przez różne <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/Sprite_Instance_Variables.htm">zmienne sprite</a>'a, jednak jeśli dodasz coś do zdarzenia draw, &quot;przejmujesz kontrolę&quot; i musisz powiedzieć <span data-keyref="GameMaker Name">GameMakerowi</span>, co dokładnie ma narysować. Oznacza to, że jeśli musisz użyć poniższych funkcji, aby określić, co dokładnie ma narysować instancja i w którym miejscu na stronie <span class="notranslate">room</span> ma to zrobić:</p>
   <ul class="colour">
-    <li><a href="draw_self.htm">draw_self</a></li>
-    <li><a href="draw_sprite.htm">draw_sprite</a></li>
-    <li><a href="draw_sprite_ext.htm">draw_sprite_ext</a></li>
-    <li><a href="draw_sprite_general.htm">draw_sprite_general</a></li>
-    <li><a href="draw_sprite_part.htm">draw_sprite_part</a></li>
-    <li><a href="draw_sprite_part_ext.htm">draw_sprite_part_ext</a></li>
-    <li><a href="draw_sprite_stretched.htm">draw_sprite_stretched</a></li>
-    <li><a href="draw_sprite_stretched_ext.htm">draw_sprite_stretched_ext</a></li>
-    <li><a href="draw_sprite_pos.htm">draw_sprite_pos</a></li>
-    <li><a href="draw_sprite_tiled.htm">draw_sprite_tiled</a></li>
-    <li><a href="draw_sprite_tiled_ext.htm">draw_sprite_tiled_ext</a></li>
+    <li><a href="draw_self.htm"><span class="notranslate">draw_self</span></a></li>
+    <li><a href="draw_sprite.htm"><span class="notranslate">draw_sprite</span></a></li>
+    <li><a href="draw_sprite_ext.htm"><span class="notranslate">draw_sprite_ext</span></a></li>
+    <li><a href="draw_sprite_general.htm"><span class="notranslate">draw_sprite_general</span></a></li>
+    <li><a href="draw_sprite_part.htm"><span class="notranslate">draw_sprite_part</span></a></li>
+    <li><a href="draw_sprite_part_ext.htm"><span class="notranslate">draw_sprite_part_ext</span></a></li>
+    <li><a href="draw_sprite_stretched.htm"><span class="notranslate">draw_sprite_stretched</span></a></li>
+    <li><a href="draw_sprite_stretched_ext.htm"><span class="notranslate">draw_sprite_stretched_ext</span></a></li>
+    <li><a href="draw_sprite_pos.htm"><span class="notranslate">draw_sprite_pos</span></a></li>
+    <li><a href="draw_sprite_tiled.htm"><span class="notranslate">draw_sprite_tiled</span></a></li>
+    <li><a href="draw_sprite_tiled_ext.htm"><span class="notranslate">draw_sprite_tiled_ext</span></a></li>
   </ul>
-  <p> </p>
-  <p>If you are using SWF format sprites, then there are also additional options for controlling the anti-aliasing used when drawing (see <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importing Non-Bitmap Sprites</a> for more information on these types of sprites). Note that these functions work on a <i>global</i> level and will set the AA on all vector SWF sprites drawn after they have been called.</p>
+  <p> </p>
+  <p>Jeśli używasz formatu SWF <span class="notranslate">sprites</span>, to istnieją również dodatkowe opcje kontroli antyaliasingu używanego podczas rysowania (więcej informacji na temat tego typu funkcji <span class="notranslate">sprites</span> znajdziesz w części <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importowanie sprite'ów niebitmapowych</a> ). Należy pamiętać, że te funkcje działają na poziomie <i>globalnym</i> i ustawią AA na wszystkich wektorowych plikach SWF <span class="notranslate">sprites</span> rysowanych po ich wywołaniu.</p>
   <ul class="colour">
-    <li><a href="draw_enable_swf_aa.htm">draw_enable_swf_aa</a></li>
-    <li><a href="draw_set_swf_aa_level.htm">draw_set_swf_aa_level</a></li>
-    <li><a href="draw_get_swf_aa_level.htm">draw_get_swf_aa_level</a></li>
+    <li><a href="draw_enable_swf_aa.htm"><span class="notranslate">draw_enable_swf_aa</span></a></li>
+    <li><a href="draw_set_swf_aa_level.htm"><span class="notranslate">draw_set_swf_aa_level</span></a></li>
+    <li><a href="draw_get_swf_aa_level.htm"><span class="notranslate">draw_get_swf_aa_level</span></a></li>
   </ul>
-  <p> </p>
-  <p>Apart from those functions listed above, there are also two special functions designed for use with skeletal animations (see <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importing Non-Bitmap Sprites</a> for more information on these types of sprites, and the section <a href="../../Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Skeletal Animations</a> for specific functions related to these types of sprites):</p>
+  <p> </p>
+  <p>Oprócz funkcji wymienionych powyżej istnieją także dwie specjalne funkcje przeznaczone do stosowania w animacjach szkieletowych (więcej informacji na temat tego typu animacji można znaleźć w sekcji <a href="../../../../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Importowanie sprite'ów niebitmapowych</a> na stronie <span class="notranslate">sprites</span> oraz w sekcji <a href="../../Asset_Management/Sprites/Skeletal_Animation/Skeletal_Animation.htm">Animacje szkieletowe</a>, gdzie opisano konkretne funkcje związane z tymi typami animacji <span class="notranslate">sprites</span>):</p>
   <ul class="colour">
-    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton.htm">draw_skeleton</a></li>
-    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_instance.htm">draw_skeleton_instance</a></li>
-    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_collision.htm">draw_skeleton_collision</a></li>
-    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_time.htm">draw_skeleton_time</a></li>
+    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton.htm"><span class="notranslate">draw_skeleton</span></a></li>
+    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_instance.htm"><span class="notranslate">draw_skeleton_instance</span></a></li>
+    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_collision.htm"><span class="notranslate">draw_skeleton_collision</span></a></li>
+    <li><a href="../../Asset_Management/Sprites/Skeletal_Animation/Drawing_And_Miscellaneous/draw_skeleton_time.htm"><span class="notranslate">draw_skeleton_time</span></a></li>
   </ul>
-  <p> </p>
-  <p>Tiles are drawn automatically based on the data that they contain, the tile set used and the tile map properties. However you <i>can</i> draw individual tiles or tile maps using the following functions:</p>
+  <p> </p>
+  <p>Kafelki są rysowane automatycznie na podstawie danych, które zawierają, użytej strony <span class="notranslate">tile set</span> oraz właściwości mapy <span class="notranslate">tile</span>. Poszczególne mapy <span class="notranslate">tiles</span> lub <span class="notranslate">tile</span> <i>można</i> jednak rysować za pomocą następujących funkcji:</p>
   <ul class="colour">
-    <li><a href="draw_tile.htm">draw_tile</a></li>
-    <li><a href="draw_tilemap.htm">draw_tilemap</a></li>
+    <li><a href="draw_tile.htm"><span class="notranslate">draw_tile</span></a></li>
+    <li><a href="draw_tilemap.htm"><span class="notranslate">draw_tilemap</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="../Text/Text.htm">Text</a></div>
+        <div style="float:left">Powrót: <a href="../Drawing.htm">Rysunek</a></div>
+        <div style="float:right">Następny: <a href="../Text/Text.htm">Tekst</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Sprites And Tiles

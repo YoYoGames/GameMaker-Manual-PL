@@ -6,7 +6,7 @@
   <title>gpu_set_texfilter</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_set_texfilter" />
   <meta name="rh-index-keywords" content="gpu_set_texfilter, gpu_set_tex_filter" />
@@ -15,29 +15,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_texfilter</h1>
-  <p>This function can be used to set the texture filtering (linear interpolation) of all images drawn on the game screen. When this is enabled (<span class="inline">true</span>) all textures will be smoothed when drawn (this includes sprites as they too are considered textures), meaning that when scaled or moved if there is not a 1:1 pixel ratio then there will be a &quot;smudging&quot; across various pixels which may make images appear blurry depending on the art style used. If this is disabled (<span class="inline">false</span>) then images will be drawn based on the nearest pixel when scaled or moving which may lead to &quot;blocky&quot; images. The default value is <span class="inline">false</span>, and this can also be changed in the <b>Global Game Options</b> for individual target platforms.</p>
-  <p class="note"><b>NOTE</b>:This setting will override any texture stage interpolation set for shaders using the function <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
-  <p class="note"><b>NOTE</b>: On the HTML5 target, this function will only work with WebGL enabled.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można ustawić filtrowanie <span class="notranslate">texture</span> (interpolacja liniowa) wszystkich obrazów rysowanych na ekranie gry. Gdy ta funkcja jest włączona (<span class="inline">true</span>), wszystkie obrazy <span class="notranslate">textures</span> będą wygładzane podczas rysowania (dotyczy to również <span class="notranslate">sprites</span>, ponieważ są one również uważane za <span class="notranslate">textures</span>), co oznacza, że podczas skalowania lub przesuwania, jeśli stosunek pikseli nie jest 1:1, będzie występować &quot;smużenie&quot; w różnych pikselach, co może powodować, że obrazy będą wydawać się rozmyte, w zależności od zastosowanego stylu artystycznego. Jeśli ta opcja jest wyłączona (<span class="inline">false</span>), obrazy będą rysowane na podstawie najbliższego piksela podczas skalowania lub przesuwania, co może prowadzić do powstawania &quot;klockowatych&quot; obrazów. Domyślną wartością jest <span class="inline">false</span>, można ją również zmienić w <b>Globalnych opcjach gry</b> dla poszczególnych platform docelowych.</p>
+  <p class="note"><b>UWAGA</b>: To ustawienie zastąpi każdą interpolację etapu <span class="notranslate">texture</span> ustawioną dla strony <span class="notranslate">shaders</span> za pomocą funkcji <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
+  <p class="note"><b>UWAGA</b>: W przypadku celu HTML5 ta funkcja będzie działać tylko z włączoną obsługą WebGL.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">gpu_set_texfilter(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
+        <td><span class="notranslate">enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Enable or disable texture filtering (<span class="inline">true</span> / <span class="inline">false</span>)</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if gpu_get_texfilter()<br />
     {<br />
         gpu_set_texfilter(false);<br />
@@ -46,18 +46,18 @@
     {<br />
         gpu_set_texfilter(true);<br />
     }</p>
-  <p>The above code checks to see if texture filtering is on or off and switches it accordingly.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy filtrowanie <span class="notranslate">texture</span> jest włączone, czy wyłączone, i odpowiednio je przełącza.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_set_texfilter_ext.htm">gpu_set_texfilter_ext</a></div>
+        <div style="float:left">Powrót: <a href="GPU_Control.htm">Sterowanie procesorem graficznym</a></div>
+        <div style="float:right">Następny: <a href="gpu_set_texfilter_ext.htm"><span class="notranslate">gpu_set_texfilter_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_texfilter

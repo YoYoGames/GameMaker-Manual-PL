@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>player_id</title>
+  <title>identyfikator_gracza</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
@@ -15,18 +15,18 @@
   <meta name="search-keywords" content="player_id" />
 </head>
 <body>
-  <h1>player_id</h1>
-  <p>When you use <a href="../Rollback_Functions/rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> to define a player object, the system automatically creates an instance of that object for each player. Each instance of that object gets the <span class="inline">player_id</span> variable, which stores the ID of that player.</p>
-  <p>This ID starts at 0, which initially is the host itself. Any players from 1 and up are &quot;peers&quot; that have joined the game.</p>
-  <p>If you do not use <span class="inline">rollback_define_player()</span>, then this variable will not be created for any objects. In that case, player instances and their IDs must be managed manually, as explained in <a data-xref="{text}" href="../Rollback_System.htm#h1">Defining A Player Object</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>identyfikator_gracza</h1>
+  <p>Gdy użyjesz <a href="../Rollback_Functions/rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> do zdefiniowania gracza <span class="notranslate">object</span>, system automatycznie tworzy instancję tej strony <span class="notranslate">object</span> dla każdego gracza. Każda instancja tej strony <span class="notranslate">object</span> otrzymuje zmienną <span class="inline">player_id</span>, która przechowuje identyfikator zawodnika.</p>
+  <p>Identyfikator ten zaczyna się od 0, czyli początkowo jest to sam host. Wszyscy gracze od 1 wzwyż są &quot;współgraczami&quot;, którzy dołączyli do gry.</p>
+  <p>Jeśli nie używasz <span class="inline">rollback_define_player()</span>, ta zmienna nie zostanie utworzona dla żadnego <span class="notranslate">objects</span>. W takim przypadku instancje graczy i ich identyfikatory muszą być zarządzane ręcznie, jak wyjaśniono w rozdziale <a data-xref="{text}" href="../Rollback_System.htm#h1">Definiowanie obiektu gracza</a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">player_id;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">// Create event<br />
     if (player_id == 0)<br />
     {<br />
@@ -36,8 +36,8 @@
     {<br />
         x = 500;<br />
     }</p>
-  <p>The code above changes the X position of the player instance based on its ID.</p>
-  <p>You can also use this ID as an array index, for example, to store scores for all players:</p>
+  <p>Powyższy kod zmienia pozycję X instancji gracza na podstawie jej identyfikatora.</p>
+  <p>Tego identyfikatora można także użyć jako indeksu tablicy, na przykład do przechowywania wyników wszystkich zawodników:</p>
   <p class="code">// Step event<br />
     var _coin = instance_place(x, y, obj_coin);<br />
     if (_coin != noone)<br />
@@ -50,18 +50,18 @@
     var _my_score = obj_game.scores[player_id];<br />
     draw_text(x, y, _my_score);
   </p>
-  <p>The Step event code above increases the score of the player in an array in <span class="inline2">obj_game</span> when it collides with a coin. That coin instance is then destroyed.</p>
-  <p>The Draw event code above retrieves the player&#39;s score from the same array, and draws its value.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod zdarzenia Step zwiększa wynik gracza w tablicy w <span class="inline2">obj_game</span>, gdy zderzy się on z monetą. Ta instancja monety jest następnie niszczona.</p>
+  <p>Powyższy kod zdarzenia Draw pobiera wynik gracza z tej samej tablicy i rysuje jego wartość.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Variables.htm">Rollback Variables</a></div>
-        <div>Next: <a data-xref="{title}" href="player_local.htm">player_local</a></div>
+        <div>Powrót: <a data-xref="{title}" href="Rollback_Variables.htm">Zmienne cofania</a></div>
+        <div>Next: <a data-xref="{title}" href="player_local.htm">player_local</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 player_id

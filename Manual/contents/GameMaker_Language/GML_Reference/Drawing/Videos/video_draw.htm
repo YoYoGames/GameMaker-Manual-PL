@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>video_draw</title>
+  <title>wideo_rysuj</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
@@ -15,41 +15,41 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1>video_draw</h1>
-  <p>This function draws the current frame of the <a href="video_open.htm">opened video</a> to a surface (or two surfaces). It returns the surface(s) as part of its return array, which can be <a href="../Surfaces/draw_surface.htm">drawn manually</a>.</p>
-  <p>The function also returns data regarding the status of the video, which is expanded upon below.</p>
-  <p>Ensure that this is only called after a <span class="inline"><a href="video_open.htm">video_open()</a></span> call but before a <span class="inline"><a href="video_close.htm">video_close()</a></span> call, otherwise it will not do anything (as there will not be a video loaded).</p>
-  <h2>Return Data</h2>
-  <p>The function will return an array, the first element (<span class="inline2">[0]</span>) of which will be a real value. This value tells the status of the video, and will be:</p>
+  <h1>wideo_rysuj</h1>
+  <p>Ta funkcja rysuje bieżącą klatkę <a href="video_open.htm">otwartego filmu wideo</a> na powierzchni (lub dwóch powierzchniach). Zwraca powierzchnię (powierzchnie) jako część zwracanej tablicy, którą można <a href="../Surfaces/draw_surface.htm">narysować ręcznie</a>.</p>
+  <p>Funkcja zwraca również dane dotyczące stanu obrazu wideo, które omówiono poniżej.</p>
+  <p>Upewnij się, że jest on wywoływany tylko po wywołaniu <span class="inline"><a href="video_open.htm">video_open()</a></span>, ale przed wywołaniem <span class="inline"><a href="video_close.htm">video_close()</a></span>, w przeciwnym razie nie wykona żadnego działania (ponieważ nie zostanie załadowany film).</p>
+  <h2>Dane dotyczące powrotu</h2>
+  <p>Funkcja zwróci tablicę, której pierwszy element (<span class="inline2">[0]</span>) będzie wartością rzeczywistą. Wartość ta określa stan filmu i będzie to:</p>
   <ul class="colour">
-    <li><strong>0</strong>, if the video is playing without any issues</li>
-    <li><strong>-1</strong>, if there was an error</li>
-    <li>On some platforms, <strong>-2</strong>, if the video finished playing (at which point it can be removed from memory with a <span class="inline"><a href="video_close.htm">video_close()</a></span> call)
+    <li><strong>0</strong>, jeśli film jest odtwarzany bez żadnych problemów</li>
+    <li><strong>-1</strong>, jeśli wystąpił błąd</li>
+    <li>Na niektórych platformach, <strong>-2</strong>, jeśli film zakończył odtwarzanie (w tym momencie można go usunąć z pamięci za pomocą wywołania <span class="inline"><a href="video_close.htm">video_close()</a></span> )
       <ul>
-        <li>It&#39;s recommended to use the <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> instead to know when a video ends</li>
+        <li>Zaleca się używanie <a data-xref="{text}" href="Videos.htm#h">wywołań zwrotnych asynchronicznych</a>, aby wiedzieć, kiedy film się kończy</li>
       </ul>
     </li>
   </ul>
-  <p>When this status value is <strong>0</strong>, the array will contain more data, which will depend on the format of the video. You can know the video format by calling <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
-  <h2>RGBA Videos</h2>
-  <p><span>For RGBA videos, the position <span class="inline2">[1]</span> will contain the surface where the video frame was drawn. You can get this surface and <a href="../Surfaces/draw_surface.htm">draw it</a> manually.</span></p>
-  <h2>YUV Videos</h2>
-  <p><span>Some platforms (especially consoles) use the YUV colour format for videos, which makes use of two surfaces. In that case the array will have positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span> with two surfaces:</span></p>
+  <p>Gdy wartość tego stanu wynosi <strong>0</strong>, tablica będzie zawierała więcej danych, których ilość będzie zależała od formatu wideo. Format wideo można poznać, wywołując adres <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>.</p>
+  <h2>Filmy RGBA</h2>
+  <p><span>W przypadku filmów RGBA pozycja <span class="inline2">[1]</span> będzie zawierać powierzchnię, na której została narysowana klatka wideo. Można uzyskać tę powierzchnię i <a href="../Surfaces/draw_surface.htm">narysować ją</a> ręcznie.</span></p>
+  <h2>Wideoklipy YUV</h2>
+  <p><span>Niektóre platformy (zwłaszcza konsole) używają formatu kolorów YUV dla filmów wideo, który wykorzystuje dwie powierzchnie. W takim przypadku tablica będzie miała pozycje <span class="inline2">[1]</span> i <span class="inline2">[2]</span> z dwiema powierzchniami:</span></p>
   <ul class="colour">
-    <li><span><span class="inline2">[1]</span> is the main video surface in black and white</span></li>
-    <li><span><span class="inline2">[2]</span> is the chroma surface that contains all the colour data</span></li>
+    <li><span><span class="inline2">[1]</span> to główna powierzchnia wideo w czerni i bieli</span></li>
+    <li><span><span class="inline2">[2]</span> to powierzchnia chromatyczna, która zawiera wszystkie dane o kolorze</span></li>
   </ul>
-  <p>Both these surfaces are then combined using a YUV shader before being used to texture a custom quad, which will draw the video to the screen.</p>
-  <p>Read <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a> for steps on drawing these two surfaces using a shader.</p>
-  <p>For the specific implementation details for a particular console, please refer to its documentation on the <a href="https://help.yoyogames.com/hc/en-us/">YoYo Games Helpdesk</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Obie te powierzchnie są następnie łączone przy użyciu YUV <span class="notranslate">shader</span>, a następnie wykorzystywane do <span class="notranslate">texture</span> niestandardowego quada, który będzie rysował obraz wideo na ekranie.</p>
+  <p>Przeczytaj <a data-xref="{title}" href="YUV_Videos.htm">film wideo YUV</a>, aby poznać kolejne etapy rysowania tych dwóch powierzchni za pomocą strony <span class="notranslate">shader</span>.</p>
+  <p>Szczegółowe informacje na temat implementacji danej konsoli można znaleźć w jej dokumentacji w <a href="https://help.yoyogames.com/hc/en-us/">dziale pomocy technicznej YoYo Games</a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">video_draw();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _data = video_draw();<br />
     var _status = _data[0];<br />
     <br />
@@ -60,18 +60,18 @@
         draw_surface(_surface, x, y);<br />
     }
   </p>
-  <p>The above code calls <span class="inline">video_draw()</span>, and checks if the returned status is 0, meaning the video is playing. In that case it gets the surface ID and draws it at the instance&#39;s position. This will only work for RGBA videos.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod wywołuje stronę <span class="inline">video_draw()</span> i sprawdza, czy zwrócony stan wynosi 0, co oznacza, że film jest odtwarzany. W takim przypadku pobiera identyfikator powierzchni i rysuje ją w miejscu, w którym znajduje się instancja. Ta metoda działa tylko w przypadku filmów RGBA.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="YUV_Videos.htm">YUV Videos</a></div>
+        <div>Wstecz: <a data-xref="{title}" href="Videos.htm">Odtwarzanie wideo</a></div>
+        <div>Następny: <a data-xref="{title}" href="YUV_Videos.htm">Filmy YUV</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 video_draw

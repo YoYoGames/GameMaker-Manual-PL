@@ -6,7 +6,7 @@
   <title>camera_set_view_border</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for camera_set_view_border" />
   <meta name="rh-index-keywords" content="camera_set_view_border" />
@@ -16,50 +16,50 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>camera_set_view_border</h1>
-  <p>You can use this function to set the follow border of the view camera within the room. You give the unique camera ID value (as returned by the different <span class="inline">camera_create</span> functions) and then give the x border size and the y border size (horizontal
-    and vertical). These values will only be used when the view camera has been assigned an instance target to follow (either in the Room Editor or using the function <a href="camera_set_view_target.htm"><span class="inline">camera_set_view_target()</span></a>) and relate
-    to how far from the border of the view the instance needs to be before the view will update its position to follow.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można ustawić granicę podążania kamery podglądu w witrynie <span class="notranslate">room</span>. Należy podać unikatową wartość identyfikacyjną kamery (zwracaną przez różne funkcje <span class="inline">camera_create</span> ), a następnie podać rozmiar granicy x oraz rozmiar granicy y (w poziomie
+    i pionowa). Wartości te są używane tylko wtedy, gdy kamerze przypisano instancję celu do śledzenia (w edytorze <span class="notranslate">Room</span> lub za pomocą funkcji <a href="camera_set_view_target.htm"><span class="inline">camera_set_view_target()</span></a>) i odnoszą się do
+    i odnoszą się do tego, jak daleko od granicy widoku musi znajdować się instancja, zanim widok zaktualizuje swoją pozycję, aby podążać za nią.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">camera_set_view_border(camera_id, x_border, y_border)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>camera_id</td><td><span data-keyref="Type_ID_Camera"></span></td>
-        <td>The unique camera ID value returned when you created the camera.</td>
+        <td><span class="notranslate">camera_id</span></td><td><span data-keyref="Type_ID_Camera"></span></td>
+        <td><span class="notranslate">The unique camera ID value returned when you created the camera.</span></td>
      </tr>
       <tr>
-        <td>x_border</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The border (in pixels) for the view camera along the horizontal axis</td>
+        <td><span class="notranslate">x_border</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The border (in pixels) for the view camera along the horizontal axis</span></td>
      </tr>
       <tr>
-        <td>y_border</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The border (in pixels) for the view camera along the vertical axis</td>
+        <td><span class="notranslate">y_border</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The border (in pixels) for the view camera along the vertical axis</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">camera_set_view_border(view_camera[0], 64, 64);</p>
-  <p>The above code will set the view camera border for the camera assigned to view port[0].</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod ustawi granicę kamery widoku dla kamery przypisanej do portu widoku[0].</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
-        <div style="float:right">Next: <a href="camera_set_view_angle.htm">camera_set_view_angle</a></div>
+        <div style="float:left">Powrót: <a href="Cameras_And_View_Ports.htm">Kamery i porty podglądu</a></div>
+        <div style="float:right">Następny: <a href="camera_set_view_angle.htm"><span class="notranslate">camera_set_view_angle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 camera_set_view_border

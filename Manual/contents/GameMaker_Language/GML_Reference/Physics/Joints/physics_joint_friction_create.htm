@@ -6,7 +6,7 @@
   <title>physics_joint_friction_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_friction_create" />
   <meta name="rh-index-keywords" content="physics_joint_friction_create" />
@@ -16,60 +16,60 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_joint_friction_create</h1>
-  <p>The friction joint is a bit different to all other joints in the physics simulation in that the connection created will not constrain the instances position or movement, but rather its speed and rotation. This works by taking the maximum input values for force and torque and applying those to the second fixture to bring the speed and angular momentum down to the same values as that of the first instance. So, if you have a stationary instance and a moving instance then connect them with a friction joint, the moving instance will gradually slow down until it too is stationary. If both instances were moving then the second instance will have its movement speed modified to match that of the first instance.</p>
-  <p><img alt="Friction joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/friction_joint_image.png" />As with most other joints, you supply the instances to join together, as well as the position for the joint to be created at within the room. You then supply the maximum force and maximum torque (directional and rotational friction), and if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Przegub cierny różni się nieco od wszystkich innych przegubów w symulacji fizyki tym, że utworzone połączenie nie ogranicza położenia ani ruchu instancji, lecz jej prędkość i obrót. Działa to w ten sposób, że bierze się maksymalne wartości wejściowe siły i momentu obrotowego i stosuje je do drugiego uchwytu, aby sprowadzić prędkość i moment pędu do takich samych wartości jak w pierwszym przypadku. Jeśli więc mamy instancję nieruchomą i instancję ruchomą, a następnie połączymy je za pomocą przegubu ciernego, to instancja ruchoma będzie stopniowo zwalniać, aż do momentu, gdy również będzie nieruchoma. Jeśli obie instancje były ruchome, to druga instancja będzie miała zmodyfikowaną prędkość ruchu, tak by odpowiadała prędkości pierwszej instancji.</p>
+  <p><img>Podobnie jak w przypadku większości innych przegubów, podajesz instancje, które mają zostać połączone, a także pozycję, w której przegub ma zostać utworzony w obrębie strony <span class="notranslate">room</span>. Następnie podajesz maksymalną siłę i maksymalny moment obrotowy (tarcie kierunkowe i obrotowe), a jeśli ustawisz wartość &quot;col&quot; na <span class="inline">true</span>, to dwie instancje mogą oddziaływać na siebie i zderzać się ze sobą, ale <i>tylko</i> wtedy, gdy wystąpią zdarzenia kolizji, natomiast jeśli ustawisz tę wartość na <span class="inline">false</span>, to nie będą się one zderzać bez względu na wszystko.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">Identyfikator instancji</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">Identyfikator instancji</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>anchor_x</td>
+        <td><span class="notranslate">anchor_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>anchor_y</td>
+        <td><span class="notranslate">anchor_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>max_force</td>
+        <td><span class="notranslate">max_force</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum frictional force that will be applied</td>
+        <td><span class="notranslate">The maximum frictional force that will be applied</span></td>
       </tr>
       <tr>
-        <td>max_torque</td>
+        <td><span class="notranslate">max_torque</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum rotational force that will be applied</td>
+        <td><span class="notranslate">The maximum rotational force that will be applied</span></td>
       </tr>
       <tr>
-        <td>col</td>
+        <td><span class="notranslate">col</span></td>
         <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
@@ -78,18 +78,18 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_friction_create(id, o_id, x, y, 10, 0.3, true);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>The above code will create a fixture then bind it to two instances, before connecting them both using a friction joint.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod utworzy uchwyt, a następnie powiąże go z dwiema instancjami, po czym połączy je za pomocą złącza ciernego.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_delete.htm">physics_joint_delete</a></div>
+        <div style="float:left">Plecy: <a href="Joints.htm">Stawy</a></div>
+        <div style="float:right">Następny: <a href="physics_joint_delete.htm"><span class="notranslate">physics_joint_delete</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_friction_create

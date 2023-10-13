@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>rollback_create_game</title>
+  <title>cofnąć_tworzenie_gry</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_create_game" />
@@ -16,14 +16,14 @@
   <meta name="search-keywords" content="rollback_create_game" />
 </head>
 <body>
-  <h1>rollback_create_game</h1>
-  <p>This function hosts a new multiplayer game. It takes the number of players that must be connected for the game to start, and optionally allows you to disable <a data-xref="{text}" href="../Rollback_System.htm#h">Sync Test</a>.</p>
-  <p>When called with Sync Test disabled, the system waits for <span class="inline2">num_players</span> amount of players to join before <a href="../Rollback_Events.htm">starting</a> the game. Make sure to not create or modify any managed instances until the game starts.</p>
-  <p class="note"><span class="tip">TIP</span> You can optionally force the game to start before all players have joined, by calling <a href="rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a>.</p>
-  <p>Currently you can only have up to 4 players in one game.</p>
-  <p class="note"><span class="warning">WARNING</span> It is not recommended to set a default region in this function unless you are allowing the player to select it through a menu.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>cofnąć_tworzenie_gry</h1>
+  <p>Funkcja ta hostuje nową grę wieloosobową. Pobiera liczbę graczy, którzy muszą być podłączeni, aby gra się rozpoczęła, i opcjonalnie pozwala wyłączyć <a data-xref="{text}" href="../Rollback_System.htm#h">Test Sync</a>.</p>
+  <p>W przypadku wywołania z wyłączonym testem synchronizacji, system czeka na dołączenie graczy w <span class="inline2">liczbie num_players</span> przed <a href="../Rollback_Events.htm">rozpoczęciem</a> gry. Upewnij się, że nie tworzysz ani nie modyfikujesz żadnych zarządzanych instancji, dopóki gra się nie rozpocznie.</p>
+  <p class="note"><span class="tip">WSKAZÓWKA</span> Możesz opcjonalnie wymusić rozpoczęcie gry zanim wszyscy gracze dołączą, poprzez wywołanie <a href="rollback_start_game.htm"><span class="inline">rollback_start_game()</span></a>.</p>
+  <p>Obecnie w jednej grze można mieć tylko do 4 graczy.</p>
+  <p class="note"><span class="warning">OSTRZEŻENIE</span> Nie zaleca się ustawiania domyślnego regionu w tej funkcji, chyba że pozwalasz odtwarzaczowi wybrać go poprzez menu.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">rollback_create_game(num_players, [enable_sync_test, region]);</p>
   <table>
     <colgroup>
@@ -34,31 +34,31 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>num_players</td>
+        <td><span class="notranslate">num_players</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of players that must be connected for the game to start. If <a href="rollback_define_player.htm"><span class="inline">rollback_define_player()</span></a> is used, this is the number of instances that are automatically created.</td>
+        <td><span class="notranslate">The number of players that must be connected for the game to start. If <a href="rollback_define_player.htm"><span class="inline">rollback_define_player()</span> jest używany, jest to liczba instancji, które są automatycznie tworzone.</td>
       </tr>
       <tr>
-        <td>enable_sync_test</td>
+        <td><span class="notranslate">enable_sync_test</span></td>
         <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span class="optional">OPTIONAL</span> Specifies whether Sync Test should be enabled, and is <span class="inline2">true</span> by default. When set to <span class="inline2">false</span>, online functionality is enabled.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Określa, czy test synchronizacji powinien być włączony i domyślnie ma wartość <span class="inline2">true.</span> Gdy ustawione na <span class="inline2">false</span>, funkcjonalność online jest włączona.</td>
       </tr>
       <tr>
-        <td>region</td>
+        <td><span class="notranslate">region</span></td>
         <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td><span class="optional">OPTIONAL</span> Specifies the default region where the virtual room will be created. See example at the bottom.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Określa domyślny region, w którym zostanie utworzony wirtualny <span class="notranslate">room</span>. Zobacz przykład na dole.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">rollback_define_player(obj_player);<br />
     var _joined = rollback_join_game();<br />
     <br />
@@ -67,10 +67,10 @@
         rollback_create_game(2, false, &quot;Europe&quot;);<br />
     }
   </p>
-  <p>The above code defines a player object, and then attempts to join a game. If it was not joined, it creates a new game instead, with a maximum of 2 players and Sync Test disabled.</p>
-  <p>For an extended example, see <a data-xref="{title}" href="../Creating_Multiplayer.htm">Create a Multiplayer Game</a>.</p>
-  <h3 id="h">Getting region names</h3>
-  <p>If you want to specify a default region, you will need the region strings. You can get them with an HTTP request to base API URL + <span class="inline2">/regions</span>.</p>
+  <p>Powyższy kod definiuje gracza <span class="notranslate">object</span>, a następnie próbuje dołączyć do gry. Jeśli nie został dołączony, tworzy zamiast niego nową grę, z maksymalnie 2 graczami i wyłączonym testem synchronizacji.</p>
+  <p>Rozbudowany przykład znajdziesz w rozdziale <a data-xref="{title}" href="../Creating_Multiplayer.htm">Tworzenie gry wieloosobowej</a>.</p>
+  <h3 id="h">Pobieranie nazw regionów</h3>
+  <p>Jeśli chcesz określić domyślny region, będziesz potrzebował regionu <span class="notranslate">strings</span>. Możesz je uzyskać za pomocą żądania HTTP do adresu URL API bazy + <span class="inline2">/regions</span>.</p>
   <p class="code">// Create event<br />
     http_get(rollback_api_server + &quot;/gg/regions&quot;);<br />
     <br />
@@ -88,17 +88,17 @@
         }<br />
     }
   </p>
-  <p>This requests the region list from GX.games, and in the <strong>Async - HTTP</strong> event, iterates through the list and stores all regions in a global array.</p>
-  <p> </p>
-  <p> </p>
+  <p>To żąda listy regionów z GX.games, a w zdarzeniu <strong>Async - HTTP</strong>, iteruje przez listę i przechowuje wszystkie regiony w globalnej tablicy.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_join_game.htm">rollback_join_game</a></div>
+        <div>Powrót: <a data-xref="{title}" href="Rollback_Functions.htm">Funkcje cofania</a></div>
+        <div>Następny: <a data-xref="{title}" href="rollback_join_game.htm">rollback_join_game</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_create_game

@@ -6,7 +6,7 @@
   <title>tile_get_flip</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function tile_get_flip" />
   <meta name="rh-index-keywords" content="tile_get_flip" />
@@ -16,29 +16,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>tile_get_flip</h1>
-  <p>This function can be used to check whether in a given set of tile-data the tile has been flipped or not. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and the function will return <span class="inline">true</span> if the tile is flipped, or <span class="inline">false</span> if not.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można sprawdzić, czy w danym zbiorze danych kafelków <span class="notranslate">tile</span> został odwrócony, czy nie. Podajesz dane o kafelkach, które można pobrać za pomocą funkcji <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>a funkcja zwróci <span class="inline">true</span>, jeśli <span class="notranslate">tile</span> jest odwrócony, lub <span class="inline">false</span>, jeśli nie jest odwrócony.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">tile_get_flip(tiledata)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>the tile-data to check</td>
+        <td><span class="notranslate">tiledata</span></td>
+        <td><span data-keyref="Type_Real_Tile_Data">Dane o płytkach</span></td>
+        <td><span class="notranslate">the tile-data to check</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
@@ -47,18 +47,18 @@
     var bool = !tile_get_flip(data);<br />
     data = tile_set_flip(data, bool);<br />
     tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then gets the x and y cell position for the tile under the mouse. This position is then used to get the tile-data which is flipped and then used to set the tile again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera identyfikator mapy <span class="notranslate">tile</span> z podanej warstwy, a następnie pobiera pozycję komórki x i y dla <span class="notranslate">tile</span> pod myszą. Pozycja ta jest następnie wykorzystywana do uzyskania danych kafelka, które są odwracane, a następnie wykorzystywane do ponownego ustawienia adresu <span class="notranslate">tile</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="tile_get_mirror.htm">tile_get_mirror</a></div>
+        <div style="float:left">Wstecz: <a href="Tile_Map_Layers.htm">Warstwy mapy kafelkowej</a></div>
+        <div style="float:right">Następny: <a href="tile_get_mirror.htm"><span class="notranslate">tile_get_mirror</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 tile_get_flip

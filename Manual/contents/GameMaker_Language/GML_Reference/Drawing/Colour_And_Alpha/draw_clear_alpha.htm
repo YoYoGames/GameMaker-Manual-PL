@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>draw_clear_alpha</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section the function draw_clear_alpha" />
   <meta name="rh-index-keywords" content="draw_clear_alpha" />
@@ -14,53 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1 id="h">draw_clear_alpha</h1>
-  <p>This function can be used to clear the entire screen with a given colour and the alpha component of the destination is set to the value you have set - this function does <i>not</i> do any blending as it works but any subsequent blend operations can
-    be set up to use the destination alpha that you have set. This is only for use in the draw event of an instance (it will not show if used in any other event), and it can also be very useful for clearing <a href="../Surfaces/Surfaces.htm">surfaces</a> when they are newly created.</p>
-  <p>It is worth noting that when using the HTML5 module, you can use this function to make the canvas background transparent, which will then permit any images being used in the host HTML to be seen with the game running over them. To achieve this effect
-    you must first go into the room editor and remove any <b>Background Layers</b> from the <a href="../../../../The_Asset_Editors/Rooms.htm">Room Editor</a>, then untick the option <b>Clear View Background</b> found on the <a href="../../../../The_Asset_Editors/Room_Properties/Room_Properties.htm">View Properties</a>.
-    Finally, you will need to make a new object, place it in the first room of the game, and assign it a very high depth (for example, 10000). Then in the <b>Pre Draw</b> event use this function to set the canvas alpha to the colour and transparency that
-    you wish it to have.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>draw_clear_alpha</h1>
+  <p>Za pomocą tej funkcji można wyczyścić cały ekran danym kolorem, a składnik alfa miejsca docelowego zostanie ustawiony na ustawioną wartość - funkcja ta <i>nie</i> wykonuje żadnego mieszania, ale wszelkie kolejne operacje mieszania można
+    być skonfigurowane tak, aby używały ustawionej alfy miejsca docelowego. Funkcja ta jest przeznaczona tylko do użycia w zdarzeniu draw instancji (nie będzie widoczna, jeśli zostanie użyta w innym zdarzeniu) i może być bardzo przydatna do czyszczenia <a href="../Surfaces/Surfaces.htm">powierzchni</a>, gdy są one nowo tworzone.</p>
+  <p>Warto zauważyć, że w przypadku korzystania z modułu HTML5 można użyć tej funkcji, aby tło płótna stało się przezroczyste, dzięki czemu obrazy używane w hostingu HTML będą widoczne, gdy gra będzie się nad nimi toczyć. Aby osiągnąć ten efekt
+    musisz najpierw wejść do edytora <span class="notranslate">room</span> i usunąć wszystkie <b>warstwy t</b> ła z <a href="../../../../The_Asset_Editors/Rooms.htm">edytora pokoju</a>, a następnie usunąć zaznaczenie opcji <b>Wyczyść</b> tło widoku we <a href="../../../../The_Asset_Editors/Room_Properties/Room_Properties.htm">właściwościach wid</a>oku.
+    Na koniec musisz utworzyć nową stronę <span class="notranslate">object</span>, umieścić ją na pierwszej stronie <span class="notranslate">room</span> gry i nadać jej bardzo dużą głębokość (na przykład 10000). Następnie w zdarzeniu <b>Pre Draw</b> użyj tej funkcji, aby ustawić alfa płótna na kolor i przezroczystość, które
+    jakie ma mieć.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">draw_clear_alpha(col, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
+     </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Constant_Colour"></span></td>
-        <td>The colour with which the screen will be cleared</td>
-      </tr>
+        <td><span class="notranslate">col</span></td><td><span data-keyref="Type_Constant_Colour"></span></td>
+        <td><span class="notranslate">The colour with which the screen will be cleared</span></td>
+     </tr>
       <tr>
-        <td>alpha</td>
-        <td><span data-keyref="Type_Real"></span></td>
-        <td>The transparency of the colour with which the screen will be cleared</td>
-      </tr>
+        <td><span class="notranslate">alpha</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The transparency of the colour with which the screen will be cleared</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">draw_clear_alpha(c_red, 0.5);</p>
-  <p>This will clear the screen with 50% (0.5) transparency with the colour red.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Spowoduje to wyczyszczenie ekranu z przezroczystością 50% (0,5) i kolorem czerwonym.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Colour_And_Alpha.htm">Colour And Alpha</a></div>
-        <div style="float:right">Next: <a href="draw_set_alpha.htm">draw_set_alpha</a></div>
+        <div style="float:left">Powrót: <a href="Colour_And_Alpha.htm">Kolor i alfa</a></div>
+        <div style="float:right">Następny: <a href="draw_set_alpha.htm"><span class="notranslate">draw_set_alpha</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 draw_clear_alpha

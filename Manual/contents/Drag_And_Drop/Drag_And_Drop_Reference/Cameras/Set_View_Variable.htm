@@ -2,105 +2,105 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Set View Variable</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Set View Variable action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Set View Variable"/>
-  <meta name="search-keywords" content="Set View Variable"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Ustaw zmienną widoku</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Set View Variable action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Set View Variable" />
+  <meta name="search-keywords" content="Set View Variable" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set View Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Set_View_Variable.png"/> Set View Variable</h1>
-  <p>This action permits you to set certain built in variables related to how the <b>view port</b> will display camera views of the room. You select the view port variable to edit, then give the view port to target (from 0 to 7) and finally the new value
-    for the variable. The view port is the area of the screen that will be used to draw a given camera view (as set up in the room editor), and the different variables that you are able to set in this way are outlined in the table below:</p>
+  <h1><img> Ustaw zmienną widoku</h1>
+  <p>Ta czynność umożliwia ustawienie pewnych wbudowanych zmiennych związanych z wyświetlaniem przez <b>port widokowy wid</b> oku z kamery na stronie <span class="notranslate">room</span>. Wybierz zmienną portu widokowego do edycji, następnie podaj port widokowy jako cel (od 0 do 7), a na końcu nową wartość
+    dla zmiennej. Port widoku to obszar ekranu, który będzie używany do rysowania danego widoku z kamery (zgodnie z ustawieniami w edytorze <span class="notranslate">room</span> ), a różne zmienne, które można ustawić w ten sposób, przedstawiono w poniższej tabeli:</p>
   <table>
     <tbody>
       <tr>
-        <th>Variable</th>
-        <th>Description</th>
+        <th>Zmienna</th>
+        <th>Opis</th>
       </tr>
       <tr>
         <td><span class="inline">Camera</span></td>
-        <td>This is for setting the viewport to show a different Camera View. You need to supply the unique ID value of the camera to change to (see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a> for
-          more information).</td>
+        <td>Służy do ustawienia rzutni tak, aby pokazywała inny widok z kamery. Należy podać unikatową wartość ID kamery, na którą ma zostać zmieniony widok (więcej informacji na ten temat można znaleźć <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">tutaj</a> 
+          więcej informacji).</td>
       </tr>
       <tr>
         <td><span class="inline">Visibility</span></td>
-        <td>This is the visibility toggle for the view port and expects a value of <span class="inline">true</span> or <span class="inline">false</span> where setting it to <span class="inline">true</span> will make the view port visible (ie: it will draw to the screen), and a value of <span class="inline">false</span> will not draw
-          anything to the screen.</td>
+        <td>Jest to przełącznik widoczności portu widoku i oczekuje wartości <span class="inline">true</span> lub <span class="inline">false</span>, gdzie ustawienie wartości <span class="inline">true</span> spowoduje, że port widoku będzie widoczny (tzn. będzie rysował na ekranie), a wartość <span class="inline">false</span> nie spowoduje rysowania
+          niczego na ekranie.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port X Coordinate</span></td>
-        <td>This is the X position of the view port within the game window. Note though that is is only really required when more than one view port is active - for example to create a split screen effect - and if used when only one port is active you get
-          unexpected results.</td>
+        <td>Jest to pozycja X portu widoku w oknie gry. Zauważ jednak, że jest ona wymagana tylko wtedy, gdy aktywny jest więcej niż jeden port widoku - na przykład w celu utworzenia efektu podzielonego ekranu - a jeśli zostanie użyta, gdy aktywny jest tylko jeden port, uzyskasz
+          nieoczekiwane rezultaty.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Y Coordinate</span></td>
-        <td>This is the Y position of the view port within the game window. Note though that is is only really required when more than one view port is active - for example to create a split screen effect - and if used when only one port is active you get
-          unexpected results.</td>
+        <td>Jest to pozycja Y portu widoku w oknie gry. Zauważ jednak, że jest ona wymagana tylko wtedy, gdy aktywny jest więcej niż jeden port widoku - na przykład w celu utworzenia efektu podzielonego ekranu - a jeśli zostanie użyta, gdy aktywny jest tylko jeden port, uzyskasz
+          nieoczekiwane rezultaty.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Width</span></td>
-        <td>This is the width (in pixels) of the view port. The width of the view port (or combined view ports if more than one are active) define the width of the game window or background canvas at the start of the game, so changing this value after the
-          game has started <i>will have no visible effect on the game window size</i> unless called along with the GML function <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>.
-          Also note that if you have a larger or smaller port size than that assigned to the camera, then the camera view will be scaled down - or up - to fit.</td>
+        <td>Jest to szerokość (w pikselach) portu widoku. Szerokość portu widoku (lub połączonych portów widoku, jeśli aktywnych jest więcej niż jeden) określa szerokość okna gry lub tła na początku gry, więc zmiana tej wartości po
+          po rozpoczęciu gry <i>nie będzie miała widocznego wpływu na rozmiar okna gry</i>, chyba że zostanie wywołana razem z funkcją <span class="notranslate">GML</span> <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>.
+          Należy również pamiętać, że jeśli rozmiar portu jest większy lub mniejszy niż rozmiar przypisany do kamery, widok z kamery zostanie przeskalowany w dół lub w górę, aby go dopasować.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Height</span></td>
-        <td>This is the height (in pixels) of the view port. The height of the view port (or combined view ports if more than one are active) define the height of the game window or background canvas at the start of the game, so changing this value after
-          the game has started <i>will have no visible effect on the game window size</i> unless called along with the GML function <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>.
-          Also note that if you have a larger or smaller port size than that assigned to the camera view, then the camera view will be scaled down - or up - to fit.</td>
+        <td>Jest to wysokość (w pikselach) portu widoku. Wysokość portu widoku (lub połączonych portów widoku, jeśli aktywnych jest więcej niż jeden) określa wysokość okna gry lub tła obrazu na początku gry, więc zmiana tej wartości po
+          po rozpoczęciu gry <i>nie będzie miała widocznego wpływu na rozmiar okna</i> gry, chyba że zostanie wywołana razem z funkcją <span class="notranslate">GML</span> <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/The_Game_Window/window_set_size.htm"><span class="inline">window_set_size()</span></a>.
+          Należy również pamiętać, że jeśli rozmiar portu jest większy lub mniejszy niż rozmiar przypisany do widoku z kamery, to widok z kamery zostanie przeskalowany w dół lub w górę, aby go dopasować.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Surface ID</span></td>
-        <td>With this variable you can set the contents of a given view port to draw to a surface, with the value you supply being that of the surface to use for drawing the view port to. For more information please see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm">here</a>.</td>
+        <td>Za pomocą tej zmiennej można ustawić, aby zawartość danego okna podglądu była rysowana na powierzchni, przy czym wartość podawana przez użytkownika jest wartością powierzchni, na którą ma być rysowane okno podglądu. Więcej informacji na ten temat można znaleźć <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm">tutaj</a>.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set View Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/a_Cameras_Set_View_Variable.png"/></p>
-  <h4>Arguments:</h4>
-  <p> </p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Set View Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Set_View_Variable.png"/></p>
+  <h4>Argumenty:</h4>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The built in view variable to set</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>Wbudowana zmienna widoku do ustawiania</td>
       </tr>
       <tr>
-        <td>View</td>
-        <td>The view port to target (from 0 - 7)</td>
+        <td><span class="notranslate">View</span></td>
+        <td>Port widoku, który ma być docelowy (od 0 do 7)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The new value for the built in variable</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>Nowa wartość dla wbudowanej zmiennej</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Set_View_Variable.png"/>The above action block code will check for a key press and if one is detected it will
-    make the view port [0] visible, otherwise it will make it invisible.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji sprawdzi, czy został naciśnięty klawisz i jeśli zostanie wykryty, to
+    sprawi, że port widokowy [0] stanie się widoczny, w przeciwnym razie będzie niewidoczny.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Camera_Actions.htm">Camera Actions</a></div>
-        <div style="float:right">Next: <a href="Get_View_Variable.htm">Get View Variable</a></div>
+        <div style="float:left">Powrót: <a href="Camera_Actions.htm">Działania aparatu</a></div>
+        <div style="float:right">Dalej: <a href="Get_View_Variable.htm">Pobierz zmienną widoku</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set View Variable

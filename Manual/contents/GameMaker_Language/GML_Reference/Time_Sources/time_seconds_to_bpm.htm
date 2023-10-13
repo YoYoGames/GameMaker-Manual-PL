@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>time_seconds_to_bpm</title>
+  <title>czas_sekund_do_bpm</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for time_seconds_to_bpm" />
@@ -15,10 +15,10 @@
   <meta name="search-keywords" content="time_seconds_to_bpm" />
 </head>
 <body>
-  <h1>time_seconds_to_bpm</h1>
-  <p>This function takes the length of a beat in seconds, and returns a beats-per-minute value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>czas_sekund_do_bpm</h1>
+  <p>Funkcja pobiera długość taktu w sekundach i zwraca wartość uderzeń na minutę.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">time_seconds_to_bpm(seconds);</p>
   <table>
     <colgroup>
@@ -29,38 +29,38 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>seconds</td>
+        <td><span class="notranslate">seconds</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The seconds-per-beat value to convert into beats-per-minute</td>
+        <td><span class="notranslate">The seconds-per-beat value to convert into beats-per-minute</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _period = time_source_get_period(time_source);<br />
     var _bpm = time_seconds_to_bpm(_period);<br />
     <br />
     show_debug_message(_bpm);
   </p>
-  <p>This function gets the period of a <span data-keyref="Type_Resource_TimeSource">Time Source</span>, converts it to BPM and prints that value to the output log.</p>
-  <p>This code follows the example for <a href="time_bpm_to_seconds.htm"><span class="inline">time_bpm_to_seconds()</span></a>.</p>
-  <p> </p>
-  <p> </p>
+  <p>Funkcja ta pobiera okres ze <span data-keyref="Type_Resource_TimeSource">źródła czasu</span>, konwertuje go na BPM i drukuje tę wartość do dziennika wyjściowego.</p>
+  <p>Ten kod jest zgodny z przykładem dla <a href="time_bpm_to_seconds.htm"><span class="inline">time_bpm_to_seconds()</span></a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a></div>
-        <div>Next: <a data-xref="{title}" href="call_later.htm">call_later</a><a href="call_later.htm"></a></div>
+        <div>Powrót: <a data-xref="{title}" href="Time_Sources.htm">Źródła czasu</a></div>
+        <div>Następny: <a data-xref="{title}" href="call_later.htm">call_later</a><a href="call_later.htm"></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
   <!-- KEYWORDS
 time_seconds_to_bpm

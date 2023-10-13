@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>event_inherited</title>
+  <title>dziedziczone zdarzenie</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function event_inherited" />
   <meta name="rh-index-keywords" content="event_inherited" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>event_inherited</h1>
-  <p>This function will call the current event of the parent object of the instance. Normally, when an instance has a parent object, it automatically inherits all the same events as the parent, but if (for example) your parent object has a create event and you add one to your child object, all instances of the child object will run the new create event that you have added and <i>not</i> that which is in the parent object. Should you need to use both the parent object event and the child object event of the same type, you should use this function as it will run the parent object event before continuing with the rest of the code or actions that the child event contains.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>dziedziczone zdarzenie</h1>
+  <p>Ta funkcja wywoła bieżące zdarzenie rodzica <span class="notranslate">object</span> instancji. Normalnie, gdy instancja ma rodzica <span class="notranslate">object</span>, automatycznie <span class="notranslate">inherits</span> wszystkie te same zdarzenia, co rodzic, ale jeśli (na przykład) twój rodzic <span class="notranslate">object</span> ma zdarzenie create i dodasz je do swojego dziecka <span class="notranslate">object</span>, wszystkie instancje dziecka <span class="notranslate">object</span> będą uruchamiać nowe zdarzenie create, które dodałeś, a <i>nie to</i>, które jest w rodzicu <span class="notranslate">object</span>. Jeśli zajdzie potrzeba użycia zarówno zdarzenia rodzica <span class="notranslate">object</span>, jak i zdarzenia dziecka <span class="notranslate">object</span> tego samego typu, należy użyć tej funkcji, ponieważ uruchomi ona zdarzenie rodzica <span class="notranslate">object</span> przed kontynuowaniem reszty kodu lub akcji, które zawiera zdarzenie dziecka.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">event_inherited();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">event_inherited();<br />
     switch (sprite_index)<br />
     {<br />
@@ -31,18 +31,18 @@
         case spr_Enemy_4: dmg -= 1; break;<br />
         case spr_Enemy_10: dmg +=10; break;<br />
     }</p>
-  <p>The above code calls the inherited parent event (in which we initialise the variable &quot;<span class="inline">dmg</span>&quot;) and then goes on to modify the &quot;<span class="inline">dmg</span>&quot; variable. If there is no parent specified for the instance running this code, we would get an &quot;unknown variable&quot; error as <span class="inline">dmg</span> has not been defined.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod wywołuje dziedziczone zdarzenie rodzica (w którym inicjalizujemy zmienną &quot;<span class="inline">dmg</span>&quot;), a następnie przechodzi do modyfikacji zmiennej &quot;<span class="inline">dmg</span>&quot;. Jeśli dla instancji wykonującej ten kod nie zostałby określony rodzic, otrzymalibyśmy błąd &quot;nieznanej zmiennej&quot;, ponieważ zmienna <span class="inline">dmg</span> nie została zdefiniowana.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
-        <div style="float:right">Next: <a href="event_perform.htm">event_perform</a></div>
+        <div style="float:left">Powrót: <a href="Generating_Object_Events.htm">Generowanie zdarzeń <span class="notranslate">Object</span> </a></div>
+        <div style="float:right">Następny: <a href="event_perform.htm"><span class="notranslate">event_perform</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 event_inherited

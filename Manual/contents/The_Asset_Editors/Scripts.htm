@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Script Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Skrypty</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the script editor works" />
   <meta name="rh-index-keywords" content="Script Editor" />
@@ -14,118 +14,118 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Script Editor</span></h1>
-  <p><img alt="The Script Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts.png" />This section deals with the <strong>script editor</strong> (also called the <strong>text editor</strong>) which is where you type in all the code that your game will require to run. This editor is used for creating custom script assets, as well as for coding <a href="Object_Properties/Object_Events.htm">object events</a>, for adding <a href="Room_Properties/Room_Properties.htm">room creation code</a>, and for many other things.</p>
-  <p>This section simply details how the script <strong>editor </strong>works, and <em>not</em> how to create script assets nor how to use <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span> to make scripts. For that please see the following sections: </p>
+  <h1>Redaktor <span class="notranslate">Script</span> </h1>
+  <p><img>W tym rozdziale omówiono <strong>edytor skryptów</strong> (zwany także edytorem <strong>tekstowym</strong>), w którym wpisuje się cały kod wymagany do działania gry. Edytor ten jest używany do tworzenia własnych stron <span class="notranslate">script</span> <span class="notranslate">assets</span>, a także do kodowania <a href="Object_Properties/Object_Events.htm">zdarzeń obiektów</a>, dodawania <a href="Room_Properties/Room_Properties.htm">kodu tworzenia pomieszczeń</a> i wielu innych rzeczy.</p>
+  <p>W tej części opisano po prostu sposób działania <strong>edytora </strong> <span class="notranslate">script</span>, a <em>nie</em> sposób tworzenia strony <span class="notranslate">script</span> <span class="notranslate">assets</span> ani użycia <span data-keyref="GML_Code">kodu GML</span> lub <span data-keyref="GML_Visual">wizualnej</span> wersji GML do stworzenia strony <span class="notranslate">scripts</span>. Więcej informacji na ten temat znajduje się w następnych rozdziałach: </p>
   <ul class="colour">
-    <li><a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">GML Code Scripts </a></li>
-    <li><a href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">GML Visual Scripts</a></li>
+    <li><a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">Kod GML <span class="notranslate">Scripts</span> </a></li>
+    <li><a href="../Drag_And_Drop/Drag_And_Drop_Overview/Action_Block_Functions.htm">Skrypty wizualne GML</a></li>
   </ul>
-  <p class="note">On creating a script asset, you may be asked to choose between <span data-keyref="GML_Visual">GML Visual</span> and <span data-keyref="GML_Code">GML Code</span>. See <a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker Language</a> for more information.</p>
-  <p>The script editor is where you write your GameMaker Language code, which is the built-in programming language that <span data-keyref="GameMaker Name">GameMaker</span> uses (see the <a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker Language</a> section for more details). Once you become more familiar with <span data-keyref="GameMaker Name">GameMaker</span> and want to use it to its fullest extent, it is advisable to start learning to use this language, as it greatly expands your possibilities when creating games.</p>
-  <p>A script asset can be renamed by right-clicking <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on it in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and selecting <em>Rename</em>, but note that the script name must conform to the scripting rules for assets, so they can only be alpha-numeric, must start with a letter, and the only symbol they can contain is the &quot;_&quot; under-bar symbol. The script editor in other places cannot be renamed and will have a name specific to what is being edited, like an object event for example.</p>
-  <p>When you open the script editor window it will have the following options and layout:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Script / Event Tab</a></p>
+  <p class="note">Podczas tworzenia strony <span class="notranslate">script</span> <span class="notranslate">asset</span> możesz zostać poproszony o wybranie języka <span data-keyref="GML_Visual">GML Visual</span> lub <span data-keyref="GML_Code">GML Code</span>. Więcej informacji można znaleźć w części <a data-xref="{title}" href="../GameMaker_Language.htm">Język GameMaker</a>.</p>
+  <p>W edytorze <span class="notranslate">script</span> piszesz swój kod <span class="notranslate">GameMaker Language</span>, który jest wbudowanym językiem programowania używanym w programie <span data-keyref="GameMaker Name">GameMaker</span> (więcej informacji na ten temat znajdziesz w rozdziale <a data-xref="{title}" href="../GameMaker_Language.htm">Język GameMakera</a> ). Gdy już lepiej poznasz <span data-keyref="GameMaker Name">GameMakera</span> i zechcesz w pełni z niego korzystać, warto rozpocząć naukę tego języka, ponieważ znacznie rozszerza on Twoje możliwości podczas tworzenia gier.</p>
+  <p>Nazwę <span class="notranslate">script</span> <span class="notranslate">asset</span> można zmienić, klikając prawym przyciskiem myszy na <img> w <a href="../Introduction/The_Asset_Browser.htm">Przeglądarce zasobów</a> i wybierając <em>Zmień</em> nazwę, ale należy pamiętać, że nazwa <span class="notranslate">script</span> musi być zgodna z zasadami skryptów dla <span class="notranslate">assets</span>, a więc może być tylko alfanumeryczna, musi zaczynać się od litery, a jedynym symbolem, jaki może zawierać, jest symbol &quot;_&quot; pod paskiem. Nazwy edytora <span class="notranslate">script</span> w innych miejscach nie można zmienić i będzie on miał nazwę właściwą dla edytowanego wydarzenia, np. wydarzenie <span class="notranslate">object</span>.</p>
+  <p>Po otwarciu okna edytora <span class="notranslate">script</span> będzie ono miało następujące opcje i układ:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Zakładka Skrypt / Zdarzenia</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The script editor opens in a window with tabs across the top to let you have multiple scripts or events in one window (although this behaviour can be changed from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">Preferences</a> to give a new window to each script or event). You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on a tab and then drag it to change the tab order, or - if you prefer - you can pull
-      it out of the current window and place it on the workspace to create a new window for that script (or add it to a different window), and you can also maximise the script editor to create a new workspace too. If you drag a script tab out of the
-      <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> window, then a new IDE will be spawned to hold this script resource, and it can be used as you would the Main window.
+    <p class="dropspot">Edytor <span class="notranslate">script</span> otwiera się w oknie z zakładkami na górze, co pozwala na umieszczenie wielu stron <span class="notranslate">scripts</span> lub wydarzeń w jednym oknie (można jednak zmienić to zachowanie w <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Text_Editor_Preferences.htm">Preferencjach</a>, aby dla każdej strony <span class="notranslate">script</span> lub wydarzenia utworzyć nowe okno). Możesz kliknąć <img> na zakładce, a następnie przeciągnąć ją, aby zmienić kolejność zakładek, lub - jeśli wolisz - możesz wyciągnąć
+      z bieżącego okna i umieścić ją na stronie <span class="notranslate">workspace</span>, aby utworzyć nowe okno dla tej strony <span class="notranslate">script</span> (lub dodać ją do innego okna). Można także zmaksymalizować edytor <span class="notranslate">script</span>, aby utworzyć nową stronę <span class="notranslate">workspace</span>. Jeśli przeciągniesz kartę <span class="notranslate">script</span> poza okno
+     <a class="glossterm" data-glossterm="IDE" href="#">IDE</a>, zostanie utworzone nowe okno <span class="notranslate">IDE</span>, w którym będzie znajdował się zasób <span class="notranslate">script</span> i będzie można go używać tak samo, jak okna głównego.
     </p>
-    <p class="dropspot">Note that if you are editing code from an <strong>object event </strong>in the script editor and you have maximised the script editor or have it on a separate window or workspace, then the right-click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> editor menu will have some extra options:</p>
-    <p class="dropspot"><img alt="Script Editor RMB Object Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_RMB_Object_Menu.png" /></p>
+    <p class="dropspot">Zwróć uwagę, że jeśli edytujesz kod ze <strong>zdarzenia obiektu </strong>w edytorze <span class="notranslate">script</span> i zmaksymalizowałeś edytor <span class="notranslate">script</span> lub masz go w osobnym oknie lub na stronie <span class="notranslate">workspace</span>, to menu edytora <img> po kliknięciu prawym przyciskiem myszy będzie miało dodatkowe opcje:</p>
+    <p class="dropspot"><img alt="The Script Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts.png" /></p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>Restore to workspace</strong>: This will take the script editor out of a maximised/workspace state and re-chain it to the object in the workspace.</li>
-      <li class="dropspot"><strong>Go to Object</strong>: This will take you to the workspace that the object with the code is on and focus on the object.</li>
-      <li class="dropspot"><strong>Add /Open Event</strong>: This permits you to add a new event to the object the current script belongs to, and will open a new code tab in the Script Editor for the added event. If the event selected already has code in it, then this will
-        be opened in a new tab.</li>
+      <li class="dropspot"><strong>Przywróć do przestrzeni roboczej</strong>: Spowoduje to wyprowadzenie edytora <span class="notranslate">script</span> ze stanu maksymalizacji/przestrzeni roboczej i ponowne powiązanie go z <span class="notranslate">object</span> w <span class="notranslate">workspace</span>.</li>
+      <li class="dropspot"><strong>Przejdź do Object</strong>: Spowoduje to przejście do strony <span class="notranslate">workspace</span>, na której znajduje się strona <span class="notranslate">object</span> z kodem, i skoncentrowanie się na stronie <span class="notranslate">object</span>.</li>
+      <li class="dropspot"><strong>Dodaj /Otwórz</strong> zdarzenie: Umożliwia dodanie nowego zdarzenia do strony <span class="notranslate">object</span>, do której należy bieżąca strona <span class="notranslate">script</span>, oraz otwarcie nowej karty kodu w edytorze <span class="notranslate">Script</span> dla dodanego zdarzenia. Jeśli w wybranym wydarzeniu znajduje się już kod, zostanie on
+        zostanie otwarty w nowej karcie.</li>
     </ul>
-    <p class="dropspot">For information on the rest of the right-click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> menu options, see the section on <strong>Editing</strong>, below.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Informacje na temat pozostałych opcji menu <img>, dostępnych po kliknięciu prawym przyciskiem myszy, znajdują się w części <strong>Edycja</strong> poniżej.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Gutter</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Rynna</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The <strong>Gutter </strong>is used to show the line numbers for your code and also to convey some specific pieces of information about the state of the code. Most importantly, if you make a <a class="glossterm" data-glossterm="typo" href="#">typo</a> or construct the code incorrectly, then the <span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> will inform you of the issue by flagging the line of code with a red exclamation mark <img alt="Code Error Icon" height="17" src="../assets/Images/Icons/Icon_CodeError.png" width="18" /> showing a <a class="glossterm" data-glossterm="syntax" href="#">syntax</a> error. You can then mouse over the symbol to get a brief description of what the issue is:</p>
-    <p class="dropspot"><img alt="Script Editor Syntax Error" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_Errors.png" />You can find more information on Syntax errors (and general errors when testing or compiling your code) from the following section:</p>
+    <p class="dropspot"> <strong>Rynna </strong>jest używana do wyświetlania numerów linii kodu, a także do przekazywania pewnych informacji o stanie kodu. Co najważniejsze, jeśli zrobisz <a class="glossterm" data-glossterm="literówka" href="#">literówkę</a> lub niepoprawnie skonstruujesz kod, <span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="IDE" href="#">IDE</a> poinformuje Cię o tym, oznaczając linię kodu czerwonym wykrzyknikiem <img>, wskazującym na błąd <a class="glossterm" data-glossterm="składnia" href="#">składni</a>. Możesz następnie najechać kursorem myszy na symbol, aby uzyskać krótki opis problemu:</p>
+    <p class="dropspot"><img>Więcej informacji na temat błędów składni (oraz ogólnych błędów występujących podczas testowania lub kompilowania kodu) można znaleźć w następującej sekcji:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="../Additional_Information/Error_Reporting.htm">Error Reporting</a></li>
+      <li class="dropspot"><a href="../Additional_Information/Error_Reporting.htm">Zgłaszanie błędów</a></li>
     </ul>
-    <p class="dropspot">The gutter will also mark any line of the script that has had a <strong>breakpoint </strong>added. A breakpoint is simply a place in the script where you want the <a href="../IDE_Tools/The_Debugger.htm">debugger</a> to pause the execution of your
-      game when it is reached. You can toggle a breakpoint from any line of any script or object event by pressing &quot;<span class="inline">f9</span>&quot; or using the right-click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> menu. When you add a breakpoint, it will show up like this in the gutter:</p>
-    <p class="dropspot"><img alt="Script Editor Breakpoint Marker" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_Breakpoint.png" />Finally, the gutter will also show any bookmarked items too. To bookmark a line of code simply hold down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <span class="inline">Number</span> (from 0 to 9), and this will permit you to skip back to this line of code from anywhere in the IDE simply by using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <span class="inline">Number</span> (from 0 to 9). To delete the bookmark, simply perform the same action as you used to add it
-      on the line of code again. When a bookmark has been added, it will show like this:</p>
-    <p class="dropspot"><img alt="Script Editor Bookmark Marker" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_Bookmark.png" /></p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Rynna będzie również oznaczać każdy wiersz <span class="notranslate">script</span>, w którym dodano <strong>punkt przerwania </strong>. <span class="notranslate">breakpoint</span> to po prostu miejsce w <span class="notranslate">script</span>, w którym <a href="../IDE_Tools/The_Debugger.htm">debugger</a> ma wstrzymać wykonywanie gry
+      gry po jego osiągnięciu. Możesz przełączać stronę <span class="notranslate">breakpoint</span> z dowolnej linii dowolnego zdarzenia <span class="notranslate">script</span> lub <span class="notranslate">object</span>, naciskając &quot;<span class="inline">f9</span>&quot; lub korzystając z menu prawego przycisku myszy <img>. Po dodaniu zdarzenia <span class="notranslate">breakpoint</span> zostanie ono wyświetlone w rynnie w taki sposób:</p>
+    <p class="dropspot"><img>Wreszcie, w rynience będą również widoczne wszystkie zakładki. Aby dodać zakładkę do wiersza kodu, wystarczy przytrzymać wciśnięty przycisk <img> / <img> + <img> + <span class="inline">Number</span> (od 0 do 9), co pozwoli na powrót do tego wiersza kodu z dowolnego miejsca na stronie <span class="notranslate">IDE</span> za pomocą przycisku <img> / <img> + <span class="inline">Number</span> (od 0 do 9). Aby usunąć zakładkę, wystarczy wykonać tę samą czynność, co przy jej dodawaniu
+      ponownie w danej linii kodu. Po dodaniu zakładki wyświetli się ona w taki sposób:</p>
+    <p class="dropspot"><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Search / Replace</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Wyszukaj/Zamień</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">While working in the script editor, you can press <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">F</span>&quot; to open up the Search box or <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">H</span>&quot; to open up Search and Replace:</p>
-    <p class="dropspot"><img alt="Script Editor Search Box" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_Search.png" />Here you can perform a <em>local </em>search for the keyword you input and once you have entered your search term, you can then use
-      the arrows at the top right of the search window to skip from one found term to the next in the script. You can change how the search operation is carried out by toggling the following buttons:</p>
+    <p class="dropspot">Podczas pracy w edytorze <span class="notranslate">script</span> można nacisnąć przycisk <img> / <img> + &quot;<span class="inline">F</span>&quot;, aby otworzyć okno wyszukiwania, lub <img> / <img> + &quot;<span class="inline">H</span>&quot;, aby otworzyć okno wyszukiwania i zamiany:</p>
+    <p class="dropspot"><img>W tym miejscu można przeprowadzić wyszukiwanie <em>lokalne </em>dla wprowadzonego słowa kluczowego, a po wprowadzeniu szukanego terminu można użyć
+      strzałek w prawym górnym rogu okna wyszukiwania, aby przechodzić od jednego znalezionego terminu do następnego na stronie <span class="notranslate">script</span>. Sposób przeprowadzania wyszukiwania można zmienić, przełączając następujące przyciski:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Exact Word Icon" src="../assets/Images/Icons/Icon_ExactWord.png" style="margin-left: 24px;" /></td>
-          <td class="text">When you toggle this, the search function will only highlight those strings that match the whole input string. For example, with it off a search for &quot;<em>random</em>&quot; will show up all words that contain this string - like <span class="inline">irandom()</span>,
-            or <span class="inline">randomise()</span> - while toggling it to on would only show the function <span class="inline">random()</span>.</td>
+          <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+          <td class="text">Po włączeniu tej opcji funkcja wyszukiwania będzie podświetlać tylko te <span class="notranslate">strings</span>, które pasują do całego wprowadzonego tekstu <span class="notranslate">string</span>. Na przykład przy wyłączonej funkcji wyszukiwanie słowa &quot;<em>random</em>&quot; spowoduje wyświetlenie wszystkich słów, które zawierają to słowo <span class="notranslate">string</span> - np. <span class="inline">irandom()</span>,
+            lub <span class="inline">randomise()</span> - podczas gdy włączenie tej opcji spowoduje wyświetlenie tylko funkcji <span class="inline">random()</span>.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Case Sensitive Icon" src="../assets/Images/Icons/Icon_CaseSensitive.png" style="margin-left: 24px" /></td>
-          <td class="text">When this option is toggled, you are telling <span data-keyref="GameMaker Name">GameMaker</span> to check not only the contents of the search string, but the case too. For example, if you have a sprite called &quot;<span class="inline">spr_Dog</span>&quot; and do a search for
-            &quot; <em>dog</em>&quot; with this toggle <em>off</em>, then the sprite string will be highlighted, however if the toggle is <em>on </em>then it won&#39;t since &quot;<em>Dog</em>&quot; is no longer considered the same as &quot;<em>dog</em>&quot;.</td>
+          <td class="icons"><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></td>
+          <td class="text">Gdy ta opcja jest włączona, mówisz <span data-keyref="GameMaker Name">GameMakerowi</span>, aby sprawdzał nie tylko zawartość wyszukiwanej strony <span class="notranslate">string</span>, ale także jej obudowę. Na przykład, jeśli masz stronę <span class="notranslate">sprite</span> o nazwie &quot;<span class="inline">spr_Dog</span>&quot; i wyszukasz na niej
+            &quot; <em>dog</em>&quot; z <em>wyłączonym</em> przełącznikiem, to <span class="notranslate">sprite</span> <span class="notranslate">string</span> zostanie podświetlony, ale jeśli przełącznik jest <em>włączony </em>, to nie zostanie, ponieważ &quot;<em>Dog</em>&quot; nie jest już uważany za to samo co &quot;<em>dog</em>&quot;.</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">If you have opened the search window using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">F</span>&quot;, then the replace functionality will not be visible, so you need to click the Replace button <img alt="Replace Toggle Icon" class="icon" src="../assets/Images/Icons/Icon_ReplaceToggle.png" /> to open
-      it. Once open, you can then enter a string that will be used to replace any given search string, using the following buttons to perform the action:</p>
+    <p class="dropspot">Jeśli okno wyszukiwania zostało otwarte za pomocą <img> / <img> + &quot;<span class="inline">F</span>&quot;, funkcja zamień nie będzie widoczna, więc aby ją otworzyć, należy kliknąć przycisk Zamień <img>.
+      go. Po otwarciu okna można wprowadzić tekst <span class="notranslate">string</span>, który zostanie użyty do zastąpienia dowolnego wyszukanego tekstu <span class="notranslate">string</span>, używając następujących przycisków do wykonania akcji:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Replace Next Icon" src="../assets/Images/Icons/Icon_ReplaceNext.png" style="margin-left: 24px" /></td>
-          <td class="text">Clicking this will replace the next search string found in the script with the given replace string. Note that the &quot;next&quot; term is considered the next one after the current cursor position, and you can skip to different ones using arrow
-            buttons at the top right of the search window.</td>
+          <td class="icons"><img alt="Script Editor RMB Object Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Scripts_RMB_Object_Menu.png" /></td>
+          <td class="text">Kliknięcie tego przycisku spowoduje zastąpienie następnego wyszukanego terminu <span class="notranslate">string</span> znalezionego na stronie <span class="notranslate">script</span> podanym zamiennikiem <span class="notranslate">string</span>. Należy pamiętać, że za &quot;następny&quot; termin uważa się następny po aktualnej pozycji kursora, a do różnych terminów można przechodzić za pomocą strzałek
+            znajdujących się w prawym górnym rogu okna wyszukiwania.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Replace All Icon" src="../assets/Images/Icons/Icon_ReplaceAll.png" style="margin-left: 24px" /></td>
-          <td class="text">Clicking this will replace <em>all </em>examples of the search string within the script using the given replace string.</td>
+          <td class="icons"><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></td>
+          <td class="text">Kliknięcie tego przycisku spowoduje zastąpienie <em>wszystkich </em>przykładów wyszukiwania <span class="notranslate">string</span> w obrębie strony <span class="notranslate">script</span> przy użyciu podanego polecenia replace <span class="notranslate">string</span>.</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">Note that if you want to do a <em>global </em>search (ie: search the whole project rather than the current script or event), then you can press <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;F&quot;.</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Uwaga: jeśli chcesz przeprowadzić wyszukiwanie <em>globalne </em>(tzn. przeszukać cały projekt, a nie bieżący adres <span class="notranslate">script</span> lub wydarzenie), możesz nacisnąć <img> / <img> + <img> + &quot;F&quot;.</p>
+    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Main Code Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Główny edytor kodu</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The main code editor is where you&#39;ll write all your code to create the script asset or fill an object event. The actual edition of your code is covered in the section on <strong>Editing</strong> further down this page.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Główny edytor kodu to miejsce, w którym napiszesz cały swój kod do utworzenia strony <span class="notranslate">script</span> <span class="notranslate">asset</span> lub wypełnienia zdarzenia <span class="notranslate">object</span>. Samą edycję kodu omówiono w rozdziale <strong>Edycja</strong>, znajdującym się w dalszej części tej strony.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Information</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Informacje</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The information bar at the bottom of the IDE shows you the current line number you are on and the position along the line. It is also where you can see the code helper, which is a line of text that shows the function you are currently editing along
-      with the arguments it requires. As you fill in the function in the editor, the arguments will highlight to show you which one you are currently editing.</p>
-    <p class="dropspot">Note that any optional arguments in your script functions will be shown with <span class="inline">[]</span> brackets around them. If you have used the <a href="Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDoc Script Comments</a> within a script asset then the
-      information you have supplied will also show here.</p>
+    <p class="dropspot">Pasek informacyjny na dole strony <span class="notranslate">IDE</span> pokazuje numer wiersza, w którym aktualnie się znajdujesz, oraz pozycję w wierszu. Jest to również miejsce, w którym można zobaczyć pomocnik kodu, czyli wiersz tekstu, który pokazuje aktualnie edytowaną funkcję wraz z
+      wraz z wymaganymi przez nią argumentami. W miarę wypełniania funkcji w edytorze argumenty będą podświetlane, aby pokazać, które z nich są aktualnie edytowane.</p>
+    <p class="dropspot">Należy pamiętać, że wszelkie opcjonalne argumenty w funkcjach <span class="notranslate">script</span> będą wyświetlane z nawiasami <span class="inline">[]</span> wokół nich. Jeśli użyto <a href="Code_Editor_Properties/JSDoc_Script_Comments.htm">komentarzy JSDoc <span class="notranslate">Script</span> </a> w ramach strony <span class="notranslate">script</span> <span class="notranslate">asset</span>, to informacje
+      informacje, które podałeś, będą również wyświetlane w tym miejscu.</p>
   </div>
-  <p> </p>
-  <p>You can get further information about using the script and code editors from the following pages:</p>
+  <p> </p>
+  <p>Więcej informacji na temat korzystania z witryny <span class="notranslate">script</span> i edytorów kodu można znaleźć na kolejnych stronach:</p>
   <ul class="colour">
-    <li><a href="Code_Editor_Properties/Editing_Code.htm">Editing Code</a></li>
-    <li><a data-xref="{title}" href="Code_Editor_Properties/Feather_Features.htm">Feather Features</a></li>
-    <li><a data-xref="{title}" href="Code_Editor_Properties/JSDoc_Script_Comments.htm">JSDoc Script Comments</a></li>
-    <li><a data-xref="{title}" href="Code_Editor_Properties/Feather_Data_Types.htm">Feather Data Types</a></li>
-    <li><a href="Code_Editor_Properties/Code_Snippets.htm">Code Snippets</a></li>
-    <li><a data-xref="{title}" href="Code_Editor_Properties/Feather_Directives.htm">Feather Directives</a></li>
+    <li><a href="Code_Editor_Properties/Editing_Code.htm">Edytowanie kodu</a></li>
+    <li><a data-xref="{title}" href="Code_Editor_Properties/Feather_Features.htm">Cechy piór</a></li>
+    <li><a href="Code_Editor_Properties/JSDoc_Script_Comments.htm">Uwagi JSDoc</a></li>
+    <li><a data-xref="{title}" href="Code_Editor_Properties/Feather_Data_Types.htm">Typy danych pióra</a></li>
+    <li><a href="Code_Editor_Properties/Code_Snippets.htm">Wycinki kodu</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Sequences.htm">The Sequence Editor</a></div>
+        <div style="float:left">Powrót: <a href="The_Asset_Editors.htm">Redaktorzy Aktywów</a></div>
+        <div style="float:right">Następny: <a href="Sequences.htm">Sekwencje</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Script Editor

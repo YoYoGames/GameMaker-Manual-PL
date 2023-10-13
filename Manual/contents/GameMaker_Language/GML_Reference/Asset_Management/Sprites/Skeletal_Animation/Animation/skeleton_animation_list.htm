@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_animation_list</title>
+  <title>lista_szkieletów_animacji</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function skeleton_animation_list" />
   <meta name="rh-index-keywords" content="skeleton_animation_list" />
@@ -14,35 +14,35 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_animation_list</h1>
-  <p>With this function you can populate a (pre-created) <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">DS list</a> with all the names of the animations included as part of the skeletal animation sprite. The names will be strings and can then be used in the other animation functions for these types of sprite.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>lista_szkieletów_animacji</h1>
+  <p>Za pomocą tej funkcji można wypełnić (utworzoną wcześniej) <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">listę DS</a> wszystkimi nazwami animacji wchodzących w skład animacji szkieletowej <span class="notranslate">sprite</span>. Nazwy te zostaną umieszczone na stronie <span class="notranslate">strings</span> i będzie można ich używać w innych funkcjach animacji tego typu <span class="notranslate">sprite</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">skeleton_animation_list(sprite, list);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>sprite</td>
-        <td><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></td>
-        <td>The sprite index of the Spine skeletal animation to get the list from.</td>
+        <td><span class="notranslate">sprite</span></td>
+        <td><span data-keyref="Type_Asset_Sprite">Aktywa Sprite</span></td>
+        <td><span class="notranslate">The sprite index of the Spine skeletal animation to get the list from.</span></td>
       </tr>
       <tr>
-        <td>list</td>
-        <td><span data-keyref="Type_ID_DS_List">DS List ID</span></td>
-        <td>The ID of the DS list to populate with the animation names.</td>
+        <td><span class="notranslate">list</span></td>
+        <td><span data-keyref="Type_ID_DS_List">Identyfikator listy DS</span></td>
+        <td><span class="notranslate">The ID of the DS list to populate with the animation names.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var list = ds_list_create();<br />
     skeleton_animation_list(sprite_index, list);<br />
     <br />
@@ -53,18 +53,18 @@
     <br />
     ds_list_destroy(list);
   </p>
-  <p>The above code creates a DS list of all the animation names for the sprite being used by the instance. It then loops through these and sets the mix value for all of them with the first animation to 0.5.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod tworzy listę DS zawierającą wszystkie nazwy animacji dla strony <span class="notranslate">sprite</span> używanej przez daną instancję. Następnie <span class="notranslate">loops</span> przegląda je i ustawia wartość mix dla wszystkich animacji z pierwszą na 0,5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Animation.htm">Animation</a></div>
-        <div style="float:right">Next: <a href="skeleton_animation_clear.htm">skeleton_animation_clear</a></div>
+        <div style="float:left">Powrót: <a href="Animation.htm">Animacja</a></div>
+        <div style="float:right">Następny: <a href="skeleton_animation_clear.htm"><span class="notranslate">skeleton_animation_clear</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_animation_list

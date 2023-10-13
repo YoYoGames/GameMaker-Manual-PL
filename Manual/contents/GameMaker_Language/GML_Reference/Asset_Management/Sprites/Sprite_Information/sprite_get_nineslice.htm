@@ -6,7 +6,7 @@
   <title>sprite_get_nineslice</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet Matharoo" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_nineslice" />
   <meta name="rh-index-keywords" content="sprite_get_nineslice" />
@@ -16,29 +16,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_get_nineslice</h1>
-  <p>This function returns the <a href="../Nine_Slice_Struct.htm">Nine Slice struct</a> for a sprite, containing all its Nine Slice properties as set in the <a href="../../../../../The_Asset_Editors/Sprites.htm" title="The Sprite Editor">Sprite Editor</a> or using <a href="../Sprite_Manipulation/sprite_set_nineslice.htm" title="sprite_set_ninceslice">sprite_set_nineslice()</a>. The contents of this struct are detailed on <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">this page</a>.</p>
-  <p>If the supplied sprite does not have a Nine Slice struct assigned to it, a new struct with default Nine Slice properties will be created for the sprite and returned.</p>
-  <p>Changing any values in this struct <strong>will </strong>modify the Nine Slice properties of the original sprite, affecting any future draw calls made with that sprite.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Funkcja zwraca <a href="../Nine_Slice_Struct.htm">strukturę Nine Slice</a> dla strony <span class="notranslate">sprite</span>, zawierającą wszystkie właściwości Nine Slice ustawione w <a href="../../../../../The_Asset_Editors/Sprites.htm" title="The Sprite Editor">edytorze sprajtów</a> lub za pomocą <a href="../Sprite_Manipulation/sprite_set_nineslice.htm" title="sprite_set_ninceslice">sprite_set_nineslice()</a>. Zawartość tej <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">strony</a> <span class="notranslate">struct</span> jest szczegółowo opisana na <a href="../Nine_Slice_Struct.htm" title="The Nine Slice Struct">tej stronie</a>.</p>
+  <p>Jeśli do dostarczonej strony <span class="notranslate">sprite</span> nie jest przypisana strona Nine Slice <span class="notranslate">struct</span>, dla strony <span class="notranslate">struct</span> zostanie utworzona i zwrócona nowa strona <span class="notranslate">sprite</span> z domyślnymi właściwościami Nine Slice.</p>
+  <p>Zmiana jakichkolwiek wartości w tej witrynie <span class="notranslate">struct</span> <strong>spowoduje </strong>modyfikację właściwości plastra dziewięciokrotnego oryginalnej witryny <span class="notranslate">sprite</span>, wpływając na wszystkie przyszłe wywołania losowania wykonywane za pomocą tej witryny <span class="notranslate">sprite</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">sprite_get_nineslice(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite from which the Nine Slice struct will be retrieved</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite from which the Nine Slice struct will be retrieved</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Struct_NineSlice">Nine Slice Struct</span> (or -1 if the sprite doesn&#39;t exist)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _box_nineslice = <strong>sprite_get_nineslice</strong>(spr_box_0);<br />
     <br />
     _box_nineslice.enabled = true;<br />
@@ -47,17 +47,17 @@
     _box_nineslice.top = 10;<br />
     _box_nineslice.bottom = 10;
   </p>
-  <p>The code above retrieves the Nine Slice struct from a sprite, enables Nine Slicing for it and sets the guide offsets.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera stronę <span class="notranslate">struct</span> z witryny <span class="notranslate">sprite</span>, włącza dla niej funkcję plasterków dziewięciokrotnych i ustawia przesunięcia prowadnicy.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sprite_Manipulation/Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_get_tpe.htm">sprite_get_tpe</a></div>
+        <div style="float:left">Powrót: <a href="../Sprite_Manipulation/Sprite_Manipulation.htm">Manipulacja sprite'ami</a></div>
+        <div style="float:right">Następny: <a href="sprite_get_tpe.htm"><span class="notranslate">sprite_get_tpe</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_nineslice

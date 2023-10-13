@@ -6,7 +6,7 @@
   <title>audio_get_listener_info</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_get_listener_info" />
   <meta name="rh-index-keywords" content="audio_get_listener_info" />
@@ -16,37 +16,37 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_get_listener_info</h1>
-  <p>This function will create a <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> and populate it with information for the given listener.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>You are responsible for the destruction of the returned <span class="inline">DS Map</span> using the appropriate function.</p>
-  <p>The DS map will contain the following keys:</p>
+  <p>Ta funkcja tworzy <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapę DS</a> i wypełnia ją informacjami dla podanego słuchacza.</p>
+  <p class="note"><b><span class="note">UWAGA</span> </b>Użytkownik jest odpowiedzialny za zniszczenie zwróconej strony <span class="inline">DS Map</span> przy użyciu odpowiedniej funkcji.</p>
+  <p>Mapa DS będzie zawierać następujące klucze:</p>
   <ul class="colour">
-    <li>&quot;<strong>name</strong>&quot; - The name of the listener, as a string, with &quot;default&quot; being the standard listener name on most target platforms</li>
-    <li>&quot;<strong>mask</strong>&quot; - The bit-mask for the listener</li>
-    <li>&quot;<strong>index</strong>&quot; - The unique index value of the listener</li>
+    <li>&quot;<strong>name</strong>&quot; - nazwa listenera w postaci <span class="notranslate">string</span>, przy czym &quot;default&quot; jest standardową nazwą listenera na większości platform docelowych</li>
+    <li>&quot;<strong>maska</strong>&quot; - maska bitowa dla słuchacza</li>
+    <li>&quot;<strong>index</strong>&quot; - unikalna wartość indeksu słuchacza</li>
   </ul>
-  <p>The mask value can be used to set a sound or emitter to play from multiple listeners at once, simply using the bitwise <span class="inline">or</span> &quot;|&quot; to generate a mask for the sound (see the example code below), while the index is used to set the properties like position or velocity for a given listener using functions like <a href="audio_listener_set_position.htm"><span class="inline">audio_listener_set_position()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Wartość maski może być użyta do ustawienia dźwięku lub emitera tak, aby był odtwarzany z wielu słuchaczy jednocześnie, po prostu używając bitowego <span class="inline">or</span> &quot;|&quot; do wygenerowania maski dla dźwięku (zobacz przykładowy kod poniżej), podczas gdy indeks jest używany do ustawiania właściwości takich jak pozycja lub prędkość dla danego słuchacza za pomocą funkcji takich jak <a href="audio_listener_set_position.htm"><span class="inline">audio_listener_set_position()</span></a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">audio_get_listener_info(num);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>num</td>
-        <td><span data-keyref="Type_Real">Real</span> or <span data-keyref="Type_ID_Audio_Listener">Audio Listener ID</span></td>
-        <td>The listener number to get the data for.</td>
+        <td><span class="notranslate">num</span></td>
+        <td> <span data-keyref="Type_ID_Audio_Listener">Identyfikator słuchacza</span><span data-keyref="Type_Real">rzeczywistego</span> lub <span data-keyref="Type_ID_Audio_Listener">dźwiękowego</span></td>
+        <td><span class="notranslate">The listener number to get the data for.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_ID_DS_Map">DS Map ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var num = audio_get_listener_count();<br />
     var mask = 0; for(var i = 0; i &lt; num; ++i;)<br />
     {<br />
@@ -56,18 +56,18 @@
         ds_map_destroy(info);<br />
     }<br />
     audio_set_listener_mask(mask);</p>
-  <p>The above code checks the number of listeners available then loops through them gets their mask bits, which are then combined to create a single bit mask which is applied to the global listener.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza liczbę dostępnych listenerów, a następnie <span class="notranslate">loops</span> pobiera z nich bity masek, które są następnie łączone w jedną maskę bitową, która jest stosowana do globalnego listenera.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_get_listener_mask.htm">audio_get_listener_mask</a></div>
+        <div style="float:left">Powrót: <a href="Audio_Listeners.htm">Słuchacze audio</a></div>
+        <div style="float:right">Następny: <a href="audio_get_listener_mask.htm"><span class="notranslate">audio_get_listener_mask</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 audio_get_listener_info

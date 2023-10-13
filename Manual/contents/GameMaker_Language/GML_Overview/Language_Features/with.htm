@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>with</title>
+  <title>z</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the with function" />
   <meta name="rh-index-keywords" content="with" />
@@ -14,26 +14,26 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>with</h1>
-  <p>As indicated in the section <a href="../Addressing_Variables_In_Other_Instances.htm">Addressing Variables in Other Instances</a>, it is possible to read and change the value of variables in instances and <a href="../Structs.htm">structs</a> other than the one currently executing any given code. However, in a number of cases you want to do a lot more than just change a single variable within those other instances, and may want to perform more complex code actions that require multiple functions and lines of code. For example, imagine that you want to move all the instances of a ball object in your game 8 pixels down. You may think that this is achieved simply by the following piece of code:</p>
+  <h1>z</h1>
+  <p>Jak wskazano w rozdziale <a href="../Addressing_Variables_In_Other_Instances.htm">Adresowanie zmiennych w innych inst</a>ancjach, możliwe jest odczytywanie i zmienianie wartości zmiennych w instancjach i <a href="../Structs.htm">strukturach</a> innych niż ta, w której aktualnie wykonywany jest dany kod. Jednak w wielu przypadkach chcesz zrobić znacznie więcej niż tylko zmienić pojedynczą zmienną w tych innych instancjach i możesz chcieć wykonać bardziej złożone działania, które wymagają wielu funkcji i linii kodu. Na przykład, wyobraź sobie, że chcesz przesunąć wszystkie instancje piłki <span class="notranslate">object</span> w swojej grze o 8 pikseli w dół. Może Ci się wydawać, że można to osiągnąć za pomocą następującego fragmentu kodu:</p>
   <p class="code">obj_ball.y = obj_ball.y + 8;</p>
-  <p>But this is not correct, as the right side of the assignment gets the value of the y-coordinate of the first ball and adds 8 to it. Next this new value is set as the y-coordinate of <em>all </em>balls, so the result is that all balls get the same y-coordinate, and even if you use the following:</p>
+  <p>Ale to nie jest poprawne, ponieważ prawa strona przypisania pobiera wartość współrzędnej y pierwszej kulki i dodaje do niej 8. Następnie ta nowa wartość jest ustawiana jako współrzędna y <em>wszystkich </em>kulek, więc w rezultacie wszystkie kulki otrzymują tę samą współrzędną y i nawet jeśli użyjesz następującego rozwiązania:</p>
   <p class="code">obj_ball.y += 8;</p>
-  <p>it will have exactly the same effect because it is simply an abbreviation of the first statement. So how <i>do</i> we achieve something like this? This is why the <span class="inline">with</span> statement exists in GML. The <span class="inline">with</span> statement has the following syntax:</p>
+  <p>będzie miało dokładnie taki sam efekt, ponieważ jest po prostu skrótem pierwszego wyrażenia. Jak <i>więc</i> osiągnąć coś takiego? Właśnie dlatego w <span class="notranslate">GML</span> istnieje instrukcja <span class="inline">with</span>. Stwierdzenie <span class="inline">with</span> ma następującą składnię:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p>For the <a class="glossterm" data-glossterm="expression" href="#">expression</a>, you can indicate one or more instances (or a struct) to perform the code on, using an instance ID, the object ID (which indicates that <i>all instances</i> in the room of this object are to run the code block), the struct ID, or one of the special <a href="../Instance_Keywords.htm">keywords</a> (<span class="inline">all</span> or <span class="inline">other</span>). This will then change the <strong>scope</strong> of the code within the curly brackets <span class="inline">{}</span> from the instance, struct or function that actually holds the code to the instance (or instances or struct) given in the expression.</p>
-  <p>Once the expression has set the scope of the <span class="inline">with</span>, the <a class="glossterm" data-glossterm="statement" href="#">statement</a> will then be executed for each of the indicated instances, as if that instance is the current ( <span class="inline">self</span>) instance. So, returning to our original problem, to move all instances of the ball object 8 pixels down you would type:</p>
+  <p>W <a class="glossterm" data-glossterm="wyrażenie" href="#">wyrażeniu</a> można wskazać jedną lub więcej instancji (lub <span class="notranslate">struct</span>), na których ma zostać wykonany kod, używając identyfikatora instancji, identyfikatora <span class="notranslate">object</span> (który wskazuje, że <i>wszystkie</i> instancje w <span class="notranslate">room</span> tego <span class="notranslate">object</span> mają wykonać blok kodu), identyfikatora <span class="notranslate">struct</span> lub jednego ze specjalnych <a href="../Instance_Keywords.htm">słów kluczowych</a> (<span class="inline">all</span> lub <span class="inline">other</span>). Spowoduje to zmianę <strong>zakresu</strong> kodu w nawiasach klamrowych <span class="inline">{}</span> z instancji, <span class="notranslate">struct</span> lub funkcji, w której faktycznie znajduje się kod, na instancję (lub instancje lub <span class="notranslate">struct</span>) podaną w wyrażeniu.</p>
+  <p>Po ustawieniu przez wyrażenie zakresu <span class="inline">with</span>, <a class="glossterm" data-glossterm="oświadczenie" href="#">instrukcja</a> zostanie wykonana dla każdej ze wskazanych instancji, tak jakby ta instancja była instancją bieżącą ( <span class="inline">self</span>). Tak więc, wracając do naszego oryginalnego problemu, aby przesunąć wszystkie instancje kulki <span class="notranslate">object</span> o 8 pikseli w dół, należałoby wpisać:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
         y += 8;<br />
     }</p>
-  <p>Essentially this is a loop, and each <a class="glossterm" data-glossterm="iteration" href="#">iteration</a> of the loop, the code will run on one instance of the object <span class="inline">obj_ball</span>.</p>
-  <p>If you want to execute multiple statements, just include them in the curly brackets, the same as you would around any other code block. So for example, to move all the balls in our example to a random position and give them a random speed and direction, you would use:</p>
+  <p>Zasadniczo jest to strona <span class="notranslate">loop</span>, a każda <a class="glossterm" data-glossterm="iteracja" href="#">iteracja</a> strony <span class="notranslate">loop</span> powoduje uruchomienie kodu na jednej instancji strony <span class="notranslate">object</span> <span class="inline">obj_ball</span>.</p>
+  <p>Jeśli chcesz wykonać wiele poleceń, po prostu umieść je w nawiasach klamrowych, tak samo jak każdy inny blok kodu. Na przykład, aby przesunąć wszystkie kulki w naszym przykładzie w losowe położenie i nadać im losową prędkość i kierunek, użyjesz polecenia:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
         x = random(room_width);<br />
@@ -41,24 +41,24 @@
         speed = 1 + random(2);<br />
         direction = random(360);<br />
     }</p>
-  <p>As mentioned above, within the statement(s), the indicated instance or struct has become the target (<span class="inline">self</span>) instance that runs the code block, which means that the original instance (that contains the <span class="inline">with</span> and the entire code block) has become the <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> instance. So - for example - to move all balls to the position of the current instance that actually contains the code, you can type this:</p>
+  <p>Jak wspomniano powyżej, w instrukcji (instrukcjach) wskazana instancja lub struktura stała się instancją docelową (<span class="inline">self</span>), która uruchamia blok kodu, co oznacza, że oryginalna instancja (zawierająca <span class="inline">with</span> i cały blok kodu) stała się instancją <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> instancją. Tak więc - na przykład - aby przenieść wszystkie kulki na pozycję bieżącej instancji, która faktycznie zawiera kod, można napisać tak:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
         x = other.x;<br />
         y = other.y;<br />
     }</p>
-  <p>The <span class="inline">with</span> statement is an extremely powerful tool and is useful in many, many circumstances so it is important that you understand fully how it can be used. To help there are a few more examples of use below:</p>
+  <p>Oświadczenie <span class="inline">with</span> to niezwykle potężne narzędzie, przydatne w wielu, wielu okolicznościach, dlatego ważne jest, aby w pełni zrozumieć, jak można je wykorzystać. Dla ułatwienia poniżej podajemy kilka przykładów użycia:</p>
   <p class="code">with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Ball))<br />
     {<br />
         speed = other.speed;<br />
         direction = other.direction;<br />
     }</p>
-  <p>The above code will create an instance of <span class="inline">obj_Ball</span> and assign it the speed and direction of the instance that runs the whole code block.</p>
+  <p>Powyższy kod utworzy instancję <span class="inline">obj_Ball</span> i przypisze jej prędkość i kierunek instancji, która uruchamia cały blok kodu.</p>
   <p class="code">with (instance_nearest(x, y, obj_Ball))<br />
     {<br />
         instance_destroy();<br />
     }</p>
-  <p>The above code will destroy the instance of <span class="inline">obj_Ball</span> nearest to the instance running the code.</p>
+  <p>Powyższy kod zniszczy instancję <span class="inline">obj_Ball</span> znajdującą się najbliżej instancji uruchamiającej kod.</p>
   <p class="code">with(clone_struct)<br />
     {<br />
         xx = other.x;<br />
@@ -66,7 +66,7 @@
         spd = other.speed;<br />
         dir = other.direction;<br />
     }</p>
-  <p>The above code uses <span class="inline">with</span> to target a struct and set the given struct member variables to the values stored in the instance variables from the instance calling the code.</p>
+  <p>Powyższy kod używa adresu <span class="inline">with</span>, aby wycelować w <span class="notranslate">struct</span> i ustawić zmienne członkowskie <span class="notranslate">struct</span> na wartości przechowywane w zmiennych instancji wywołującej kod.</p>
   <p class="code">var _inst = noone;<br />
     with (obj_ball)<br />
     {<br />
@@ -79,8 +79,8 @@
     {<br />
         target = _inst;<br />
     }</p>
-  <p>The above code is slightly more complex than previous ones due to it using a <a href="../Variables_And_Variable_Scope.htm">local variable</a>. This variable is <strong>local </strong>to either the <em>event</em> or the <em>script </em><em>function</em> and not to the instance or struct and so can be used and accessed by all instances that are referenced within the code block. So, in the code above we have set a local variable to the special keyword <span class="inline">noone</span> and then use the <span class="inline">with</span> construction to have every instance of <span class="inline">obj_Ball</span> check their <span class="inline">str</span> variable against that of the instance running the code block. If the value of the variable is larger, then they store their unique ID in the <span class="inline">inst</span> local variable, meaning that at the end of the code, only the instance with a value greater than the calling instance (or the keyword <span class="inline">noone</span> if none are larger) will be stored in the local variable <span class="inline">_inst</span>.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a <font face="Lucida Console"><span style="font-size: 16px;"><b>with</b></span></font> call too. Using <span class="inline">break</span> will immediately exit the <span class="inline">with</span> code block and move on to any code that is in the event or function after the <span class="inline">with</span> should have finished, eg:</p>
+  <p>Powyższy kod jest nieco bardziej skomplikowany niż poprzednie, ponieważ wykorzystuje zmienną <a href="../Variables_And_Variable_Scope.htm">lokalną</a>. Zmienna ta jest <strong>lokalna </strong>dla <em>zdarzenia</em> lub<em>funkcji</em> <em>skryptu </em>, a nie dla instancji lub <span class="notranslate">struct</span> i dlatego może być używana i dostępna dla wszystkich instancji, do których odwołujemy się w bloku kodu. Tak więc w powyższym kodzie ustawiliśmy zmienną lokalną na specjalne słowo kluczowe <span class="inline">noone</span>, a następnie użyliśmy konstrukcji <span class="inline">with</span>, aby każda instancja <span class="inline">obj_Ball</span> sprawdziła swoją zmienną <span class="inline">str</span> względem zmiennej instancji uruchamiającej blok kodu. Jeśli wartość zmiennej jest większa, to zapisują one swój unikalny identyfikator w zmiennej lokalnej <span class="inline">inst</span>, co oznacza, że na końcu kodu w zmiennej lokalnej <span class="inline">_inst</span> będą przechowywane tylko instancje o wartości większej niż instancja wywołująca (lub słowo kluczowe <span class="inline">noone</span>, jeśli żadna nie jest większa).</p>
+  <p>Warto zauważyć, że w ramach wywołania można używać specjalnych instrukcji <span class="inline"><a href="break.htm">break</a></span> i <span class="inline"><a href="continue.htm">continue</a></span>. <font face="Lucida Console"><span style="font-size: 16px;"><b>z</b></span></font> również w wywołaniu. Użycie <span class="inline">break</span> spowoduje natychmiastowe opuszczenie bloku kodu <span class="inline">with</span> i przejście do dowolnego kodu znajdującego się w zdarzeniu lub funkcji po zakończeniu <span class="inline">with</span>, np:</p>
   <p class="code">var count = 0;<br />
     with (obj_Enemy)<br />
     {<br />
@@ -90,8 +90,8 @@
         }<br />
         hp = 100;<br />
     }</p>
-  <p>The above code loops through the instances in the room of the object <span class="inline">obj_Enemy</span> and sets the variable <span class="inline">hp</span> to 100 for the first 10 it finds. If any more than 10 instances exist, the with code will call <span class="inline">break</span> and end.</p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">with</span> loop would be:</p>
+  <p>Powyższy kod <span class="notranslate">loops</span> przegląda instancje w <span class="notranslate">room</span> z <span class="notranslate">object</span> <span class="inline">obj_Enemy</span> i ustawia zmienną <span class="inline">hp</span> na 100 dla pierwszych 10, które znajdzie. Jeśli istnieje więcej niż 10 instancji, kod ten wywoła stronę <span class="inline">break</span> i zakończy działanie.</p>
+  <p>Przykładem użycia adresu <span class="inline">continue</span> w pętli <span class="inline">with</span> może być:</p>
   <p class="code">with (obj_Enemy_Parent)<br />
     {<br />
         if (invulnerable == true)<br />
@@ -100,19 +100,19 @@
         }<br />
         hp -= 25;<br />
     }</p>
-  <p>This code will loop through all instance with the parent <span class="inline">obj_Enemy_Parent</span>, then checks each instance to see if the <span class="inline">invulnerable</span> instance variable is <span class="inline">true</span> or not. If it is, the <span class="inline">continue</span> keyword ends the current iteration of the loop and moves on to the next available instance, otherwise it removes 25 from the <span class="inline">hp</span> variable. This will repeat until all instances with that parent have been checked.</p>
+  <p>Ten kod <span class="notranslate">loop</span> przechodzi przez wszystkie instancje z rodzicem <span class="inline">obj_Enemy_Parent</span>, a następnie sprawdza każdą z nich, czy zmienna instancji <span class="inline">invulnerable</span> jest <span class="inline">true</span> czy nie. Jeśli tak, słowo kluczowe <span class="inline">continue</span> kończy bieżącą iterację <span class="notranslate">loop</span> i przechodzi do następnej dostępnej instancji, w przeciwnym razie usuwa 25 ze zmiennej <span class="inline">hp</span>. Czynność ta jest powtarzana do momentu, aż zostaną sprawdzone wszystkie instancje z tym rodzicem.</p>
   <div data-conref="../../../assets/snippets/Instance_creation_order_warning.hts"> </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="return.htm">return</a></div>
+        <div style="float:left">Powrót: <a href="../Language_Features.htm">Cechy językowe</a></div>
+        <div style="float:right">Następny: <a href="return.htm"><span class="notranslate">return</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 with

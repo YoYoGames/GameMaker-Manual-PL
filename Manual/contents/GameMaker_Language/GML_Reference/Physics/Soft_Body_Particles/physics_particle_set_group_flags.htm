@@ -6,7 +6,7 @@
   <title>physics_particle_set_group_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_group_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_group_flags,phy_particle_group_flag_solid,phy_particle_group_flag_rigid" />
@@ -15,65 +15,65 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_set_group_flags</h1>
-  <p>With this function you can change the group flags for a group of particles. The <span class="inline">group</span> value is that which was returned when you created the group of particles using the function <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
+  <p>Za pomocą tej funkcji można zmienić grupę <span class="notranslate">flags</span> dla grupy cząstek. Wartość <span class="inline">group</span> jest wartością zwróconą podczas tworzenia grupy cząstek za pomocą funkcji <a href="physics_particle_group_end.htm"><span class="inline">physics_particle_group_end()</span></a>natomiast <span class="notranslate">flags</span> jest wartością zwracaną przez kombinację następujących <b>stałych</b>:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Stała</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_group_flag_solid</span></td>
-        <td>A solid particle group prevents other fixtures from lodging inside of it. Should anything penetrate it, the solid particle group pushes the offending fixture back out to its surface, making a a solid particle group possess an especially strong repulsive force.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_group_flag_solid</span></td>
+        <td>Stała grupa cząstek stałych zapobiega umieszczaniu w niej innych elementów. W przypadku przedostania się do środka, grupa cząstek stałych wypycha uszkodzony element z powrotem na swoją powierzchnię, dzięki czemu grupa cząstek stałych posiada szczególnie silną siłę odpychania.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_group_flag_rigid</span></td>
-        <td>Rigid particle groups are ones whose shape does not change, even when they collide with other fixtures.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_group_flag_rigid</span></td>
+        <td>Sztywne grupy cząstek to takie, których kształt nie zmienia się, nawet gdy zderzają się z innymi elementami.</td>
       </tr>
     </tbody>
   </table>
-  <p>These group flags use bit-masking to create a final output value that is then checked to set the different basic properties of the group, apart from those set by the particle flags. You can use none, one or both of these constants by using the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask the appropriate bits (as shown in the example below).</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta grupa <span class="notranslate">flags</span> wykorzystuje maskowanie bitów do utworzenia końcowej wartości wyjściowej, która jest następnie sprawdzana w celu ustawienia różnych podstawowych właściwości grupy, oprócz tych ustawionych przez cząstkę <span class="notranslate">flags</span>. Można nie używać żadnej z tych stałych, jednej lub obu, stosując maskowanie bitowe <a href="../../../../Additional_Information/Bitwise_Operators.htm"> <i>lub</i></a> &quot;|&quot;, aby zamaskować odpowiednie bity (jak pokazano w poniższym przykładzie).</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_particle_set_group_flags(group, flags)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>group</td>
-        <td><span data-keyref="Type_ID_Phy_Particle_Group">Physics Particle Group ID</span></td>
-        <td>The particle group to set.</td>
+        <td><span class="notranslate">group</span></td>
+        <td><span data-keyref="Type_ID_Phy_Particle_Group">Identyfikator grupy cząstek fizycznych</span></td>
+        <td><span class="notranslate">The particle group to set.</span></td>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag">Physics Particle Group Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle group.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Group_Flag">Fizyka Grupa cząstek <span class="notranslate">Flag</span> Stała</span>(y)</td>
+        <td><span class="notranslate">The flags to set on the particle group.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var flags = phy_particle_group_flag_solid | phy_particle_group_flag_rigid;<br />
     physics_particle_set_group_flags(group, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags of all particles created in the group indexed by the variable &quot;group&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod utworzy zmienną przechowującą wartość <span class="notranslate">flags</span>, a następnie użyje jej do ustawienia wartości <span class="notranslate">flags</span> wszystkich cząstek utworzonych w grupie indeksowanej zmienną &quot;grupa&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_group_flags.htm">physics_particle_get_group_flags</a></div>
+        <div style="float:left">Powrót: <a href="Soft_Body_Particles.htm">Miękkie cząstki ciała</a></div>
+        <div style="float:right">Następny: <a href="physics_particle_get_group_flags.htm"><span class="notranslate">physics_particle_get_group_flags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_group_flags
