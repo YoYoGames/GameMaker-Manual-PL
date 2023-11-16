@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Using Animation Curves</title>
+  <title>Używanie krzywych animacji</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how to use animation curves with sequences
 " />
@@ -15,139 +15,130 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Using Animation Curves</h1>
-  <p>An important feature of the <a href="Using_The_Dope_Sheet.htm">dope sheet</a> is the ability to assign <a href="../Animation_Curves.htm">Animation Curves</a> to parameter tracks within the sequence to create <strong>parameter curves</strong> instead
-    of parameter keyframes. There are two types of curves that can be used for parameter tracks:</p>
+  <h1>Używanie krzywych animacji</h1>
+  <p>Ważną cechą <a href="Using_The_Dope_Sheet.htm">arkusza dope</a> jest możliwość przypisania <a href="../Animation_Curves.htm">krzywych animacji</a> do ścieżek parametrów na stronie <span class="notranslate">sequence</span> w celu utworzenia <strong>krzywych parametrów</strong> zamiast
+    zamiast parametru <span class="notranslate">keyframes</span>. Istnieją dwa rodzaje krzywych, które mogą być używane dla ścieżek parametrów:</p>
   <ul class="colour">
-    <li><strong>Embedded Curves</strong>: These are curves that are embedded in the sequence and are unique to the parameter track they are used on.</li>
-    <li><strong>Shared Curves</strong>: These are curves that are created independently of the sequence using the <a href="../Animation_Curves.htm">Animation Curve Editor</a>.</li>
+    <li>Krzywe<strong>wbudowane</strong>: Są to krzywe wbudowane w stronę <span class="notranslate">sequence</span> i są unikatowe dla ścieżki parametrów, na której są używane.</li>
+    <li><strong>Krzywe współdzielone</strong>: Są to krzywe, które są tworzone niezależnie od strony <span class="notranslate">sequence</span> za pomocą <a href="../Animation_Curves.htm">Edytora krzywych animacji</a>.</li>
   </ul>
-  <p>We&#39;ll start by explaining how to use an Animation Curve asset, which is simply a case of creating a new curve, setting up the channels in the Animation Curve Editor, and then dragging the curve asset into the dope sheet to apply it to a parameter
-    track:</p>
-  <p><br/>
+  <p>Zaczniemy od wyjaśnienia, jak używać krzywej animacji <span class="notranslate">asset</span>, która polega po prostu na utworzeniu nowej krzywej, ustawieniu kanałów w edytorze krzywych animacji, a następnie przeciągnięciu krzywej <span class="notranslate">asset</span> na stronę <span class="notranslate">dope sheet</span>, aby zastosować ją do parametru
+    ścieżka:</p>
+  <p><br />
     <img alt="Add Animation Curve Asset To The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_AddAnimCurve.gif" /></p>
-  <p>You can also use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Assign Shared Curve (Import)</strong><strong> </strong>to add an animation curve asset
-    to the selected parameter track. This will open the Asset Explorer where you can select the required curve from the ones presented to you:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" />It is important to note that the animation curve asset <strong>must have the correct number of channels for the track it is being applied to</strong>, as each
-    type of parameter track will require a different number of channels in the animation curve. Any animation curves that do not have enough channels will be shown with a <img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
-    /> indicator in the asset browser.</p>
-  <p>Below is a list of the different parameter tracks and the channels that they will require in each curve asset (channels should be added in the order given for each parameter type):</p>
+  <p>Można również użyć prawego przycisku myszy <img> opcji menu <strong>Assign Shared Curve (Import)</strong><strong> </strong>, aby dodać składnik aktywów <span class="notranslate">animation curve</span> 
+    do wybranej ścieżki parametrów. Spowoduje to otwarcie Eksploratora <span class="notranslate">Asset</span>, w którym można wybrać żądaną krzywą spośród przedstawionych:</p>
+  <p><img>Należy pamiętać, że zasoby <span class="notranslate">animation curve</span> <strong>muszą mieć odpowiednią liczbę kanałów dla ścieżk</strong>i, do której są stosowane, ponieważ każdy typ ścieżki parametrów wymaga innej liczby kanałów w przeglądarce .
+   <span class="notranslate">animation curve</span> Każdy rodzaj ścieżki parametrów wymaga innej liczby kanałów w przeglądarce <span class="notranslate">animation curves</span>. Wszystkie strony <span class="notranslate">asset</span>, które nie mają wystarczającej liczby kanałów, zostaną wyświetlone w przeglądarce <img>.</p>
+  <p>Poniżej znajduje się lista różnych ścieżek parametrów oraz kanałów, które będą wymagane w każdej krzywej <span class="notranslate">asset</span> (kanały należy dodawać w kolejności podanej dla każdego typu parametru):</p>
   <ul class="colour">
-    <li><strong>Position</strong>: 2 channels, X and Y.</li>
-    <li><strong>Rotation</strong>: 1 channel.</li>
-    <li><strong>Colour Multiply</strong>: 4 channels, Alpha, Red, Green and Blue, and the range <em>must</em> be between 0 and 255.</li>
-    <li><strong>Image Index</strong>: 1 channel.</li>
-    <li><strong>Image Speed</strong>: 1 channel.</li>
-    <li><strong>Origin</strong>: 2 channels, X and Y.</li>
-    <li><strong>Scale</strong>: 2 channels, X scale and Y scale, and note that the value is a multiplier, so the base value is 1 (no scale) and greater than one will make the image bigger, and less than 1 will make it smaller. Negative values will flip or
-      mirror the image as well as apply scale.</li>
-    <li><strong>Pitch</strong>: 1 channel, which <em>must</em> be a minimum of 0, where 1 is the default pitch of the sound.</li>
-    <li><strong>Volume</strong>: 1 channel, which <em>must </em>be a minimum of 0 and a maximum of 1.</li>
+    <li><strong>Położenie</strong>: 2 kanały, X i Y.</li>
+    <li><strong>Obrót</strong>: 1 kanał.</li>
+    <li><strong>Mnożenie kolorów</strong>: 4 kanały, Alfa, Czerwony, Zielony i Niebieski, a zakres <em>musi</em> wynosić od 0 do 255.</li>
+    <li><strong>Indeks obrazu</strong>: 1 kanał.</li>
+    <li><strong>Szybkość obrazu</strong>: 1 kanał.</li>
+    <li><strong>Pochodzenie</strong>: 2 kanały, X i Y.</li>
+    <li><strong>Skala</strong>: 2 kanały, skala X i skala Y. Należy pamiętać, że wartość jest mnożnikiem, więc wartość podstawowa wynosi 1 (brak skali), a wartość większa od 1 powoduje powiększenie obrazu, a mniejsza od 1 - jego pomniejszenie. Wartości ujemne spowodują odwrócenie lub
+      lustrzane odbicie obrazu, a także zastosowanie skali.</li>
+    <li><strong>Wysokość</strong> dźwięku: 1 kanał, którego minimalna wartość <em>musi</em> wynosić 0, gdzie 1 jest domyślną wysokością dźwięku.</li>
+    <li><strong>Głośność</strong>: 1 kanał, którego minimalna wartość <em>musi </em>wynosić 0, a maksymalna 1.</li>
   </ul>
-  <p>If you import an animation curve that does not have enough channels for the parameter track, you will be prompted to choose whether any missing channels should be added into the animation curve:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p>
-  <p>Shared curves can also be made invalid if any required channels are deleted in an external animation curve editor. In such a case the shared curve will appear as invalid in the dope sheet, and you can click on &quot;Add Channel(s)&quot; to create any
-    missing channels which will make the curve valid again:</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p>
-  <p>By default, the animation curve will be applied along the entire length of the asset key it is attached to, however, much like with keyframes, you can click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"
-    /> on a curve and drag it to re-position it on the timeline, and you can also hold down the <img alt="Alt Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Alt.png" width="55" /> key and and drag to resize the length of the curve
-    (this also applies to <strong>embedded curves</strong>):</p>
-  <p><img alt="Resize and reposition anim curves" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ResizeCurve.gif" />The other way to add a parameter curve to a track is to embed it. This can be done by either clicking the right mouse button
-    <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> on the parameter track and selecting &quot;<em>Convert to Curve</em>&quot;, or by clicking on the <strong>Toggle Curve Mode</strong> <img src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button, which will show you the track as an animation curve in the full dope sheet area, and you can then click the <strong>Convert To Curve</strong> button:</p>
-  <p><img alt="Convert keyframes to a curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_ConvertToCurve.gif" />Once you have converted the parameter keyframe track to a curve it can be edited within the dope sheet, exactly the same way
-    that you can edit <a href="../Animation_Curves.htm">animation curve assets</a>, this includes adding or removing points, changing their position, changing the curve type (linear, smooth or bezier), applying presets, and renaming channels and the colours
-    associated with them.</p>
-  <p class="note"><strong>IMPORTANT</strong>: You can also edit animation curve assets that have been applied to parameter tracks in this way, however any changes you make <strong>will be applied to all tracks that use the animation curve</strong>, as you are editing
-    the curve asset and not a single copy of it. To edit an animation curve asset that has been applied to a track <strong>only</strong> on that track, you must first use the right mouse menu <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-      width="21" /> on the parameter track and select <b>Embed Curve</b>. This will duplicate the animation curve asset and embed it in the pararmeter track as an independent curve only for that track. Conversely, you can convert an embedded animation curve
-    into an Animation Curve asset using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> menu option <strong>Export To Shared Curve</strong>. This will convert the embedded
-    curve into a new asset which can then be edited as normal as well as applied to other parameter tracks if required.</p>
-  <p><img alt="The dope sheet curve editor" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_EmbeddedCurves.png" /></p>
-  <p>The image above shows how the embedded animation curve editor looks, and it&#39;s very similar to the <a href="../Animation_Curves.htm">Animation Curve Editor</a>. Expand each section below for more information on the different sections.</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Curve Name</a></p>
+  <p>W przypadku importu strony <span class="notranslate">animation curve</span>, na której nie ma wystarczającej liczby kanałów dla ścieżki parametrów, zostanie wyświetlony monit o określenie, czy brakujące kanały powinny zostać dodane do krzywej animacji:</p>
+  <p><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></p>
+  <p>Krzywe współdzielone mogą również zostać unieważnione, jeśli w zewnętrznym edytorze <span class="notranslate">animation curve</span> zostaną usunięte wymagane kanały. W takim przypadku współdzielona krzywa będzie wyświetlana jako nieważna na stronie <span class="notranslate">dope sheet</span>, a ty możesz kliknąć na &quot;Add Channel(s)&quot;, aby utworzyć brakujące kanały, które sprawią, że krzywa będzie znowu ważna.
+    brakujące kanały, co spowoduje, że krzywa znów będzie ważna:</p>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Shared_Curve.gif" /></p>
+  <p>Domyślnie narzędzie <span class="notranslate">animation curve</span> zostanie zastosowane na całej długości klawisza <span class="notranslate">asset</span>, do którego jest dołączone, jednak podobnie jak w przypadku <span class="notranslate">keyframes</span>, można kliknąć <img> na krzywej i przeciągnąć ją, aby zmienić jej położenie na <span class="notranslate">timeline</span>, a także przytrzymać klawisz <img> i przeciągnąć, aby zmienić długość krzywej
+    (dotyczy to również <strong>krzywych osadzonych</strong>):</p>
+  <p><img>Innym sposobem dodania krzywej parametru do ścieżki jest jej osadzenie. Można to zrobić, klikając prawym przyciskiem myszy
+    <img> na ścieżce parametrów i wybierając opcję &quot;<em>Convert to</em> Curve&quot; ( <strong>Konwertuj</strong> na krzywą) lub klikając przycisk <strong>Toggle Curve Mode (Przełącz tryb</strong> krzywej) <img>, co spowoduje wyświetlenie ścieżki jako <span class="notranslate">animation curve</span> w pełnym obszarze <span class="notranslate">dope sheet</span>, a następnie można kliknąć przycisk <strong>Convert To Curve (Konwertuj</strong> na krzywą):</p>
+  <p><img>Po przekształceniu ścieżki parametru <span class="notranslate">keyframe</span> w krzywą można ją edytować w witrynie <span class="notranslate">dope sheet</span>, dokładnie w taki sam sposób
+    w taki sam sposób, w jaki można edytować <a href="../Animation_Curves.htm">zasoby krzywej animacji</a>. Obejmuje to dodawanie i usuwanie punktów, zmianę ich położenia, zmianę typu krzywej (liniowa, gładka lub beziera), stosowanie ustawień wstępnych oraz zmianę nazw kanałów i powiązanych z nimi kolorów.
+    i powiązanych z nimi kolorów.</p>
+  <p class="note"><strong>WAŻNE</strong>: W ten sposób można również edytować stronę <span class="notranslate">animation curve</span> <span class="notranslate">assets</span>, która została zastosowana do ścieżek parametrów, jednak wszelkie wprowadzone zmiany zostaną <strong>zastosowane do wszystkich ścieżek korzystających z krzywej animacji</strong>, ponieważ edytowana jest
+    krzywą <span class="notranslate">asset</span>, a nie jej pojedynczą kopię. Aby edytować krzywą <span class="notranslate">animation curve</span> <span class="notranslate">asset</span>, która została zastosowana do ścieżki <strong>tylko</strong> na tej ścieżce, należy najpierw użyć prawego menu myszy <img> na ścieżce parametrów i wybrać opcję <b>Osadzanie</b> krzywej. Spowoduje to zduplikowanie strony <span class="notranslate">animation curve</span> <span class="notranslate">asset</span> i osadzenie jej na ścieżce parametrów jako niezależnej krzywej tylko dla tej ścieżki. I odwrotnie, można przekształcić osadzoną krzywą animacji
+    w krzywą animacji <span class="notranslate">asset</span>, używając prawego przycisku myszy <img> i wybierając opcję menu <strong>Export To Shared Curve (Eksportuj do wspólnej</strong> krzywej). Spowoduje to przekształcenie osadzonej
+    w nową krzywą <span class="notranslate">asset</span>, którą można normalnie edytować i w razie potrzeby zastosować do innych ścieżek parametrów.</p>
+  <p><img class="icon_small" src="../../assets/Images/Icons/Invalid_Triangle_Yellow.png"
+    /></p>
+  <p>Na powyższym rysunku pokazano wygląd wbudowanego edytora <span class="notranslate">animation curve</span>, który jest bardzo podobny do <a href="../Animation_Curves.htm">edytora krzywych animacji</a>. Rozwiń poszczególne sekcje poniżej, aby uzyskać więcej informacji na ich temat.</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Nazwa łuku</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This will be the name of the external animation curve asset or the name of the parameter track for an embedded curve.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Będzie to nazwa zewnętrznej strony <span class="notranslate">animation curve</span> <span class="notranslate">asset</span> lub nazwa ścieżki parametrów dla krzywej wbudowanej.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Curve Library</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Biblioteka krzywych</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button opens the <strong><span data-keyref="Animation_Curve_Presets_Library">Animation Curve Library</span></strong> window,
-      which allows you to change the Curve Type of the embedded or shared curve, and apply a preset to the selected channel.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Library.png" />See the section on <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Animation Curve Library</a> for
-      information on Curve Types and Presets. Note that opening the window through the <img class="icon" height="20" src="../../assets/Images/Icons/Animation_Curve_Library_Button.png" style="cursor: nwse-resize;" width="13" /> button will have the <strong>&quot;Overwrite&quot;</strong>      Apply Mode selected by default.</p>
-    <ul class="dropspotlist"><br/>
+    <p class="dropspot">Przycisk <img> otwiera <strong><span data-keyref="Animation_Curve_Presets_Library">Biblioteka krzywych animacji</span></strong> okno,
+      w którym można zmienić typ krzywej osadzonej lub współdzielonej oraz zastosować ustawienie wstępne do wybranego kanału.</p>
+    <p class="dropspot"><img>Informacje na temat typów krzywych i ustawień wstępnych znajdują się w rozdziale <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm" title="Animation Curve Library">Biblioteka krzywych animacji</a>.
+      Informacje o typach i ustawieniach wstępnych krzywych. Należy pamiętać, że otwarcie okna za pomocą przycisku <img> spowoduje domyślne wybranie trybu Zastosuj <strong>&quot;Nadpisz</strong> &quot;.</p>
+    <ul class="dropspotlist"><br />
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Channel List</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Lista kanałów</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The channel list is where you can edit the different channels that comprise your parameter curve. Each channel must have a unique name (using <span data-keyref="Asset name restriction">alphanumeric characters and the &quot;_&quot; underscore symbol only</span>),
-      and you can also set the colour for the channel by double clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on the colour swatch to the left, which will open the colour picker to let you choose a new colour.
-      To rename the channel, you can do a slow double click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and rename, and you can also use the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"
-      /> to open a menu where you can choose to rename, change the colour or copy the channel. Channels can be expanded by clicking the arrow beside the name to show each of the points on the channel curve, and these points can be edited manually by clicking
-      the current value and typing in the new value. You can also toggle the channel visibility in the dope sheet by clicking on the &quot;eye&quot; icon <img alt="Eye Icon" class="icon" src="../../assets/Images/Icons/Icon_ToggleVisibility.png" />.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Na liście kanałów można edytować różne kanały, które składają się na krzywą parametrów. Każdy kanał musi mieć unikatową nazwę ( <span data-keyref="Asset name restriction">wyłącznie</span> przy użyciu <span data-keyref="Asset name restriction">znaków alfanumerycznych i znaku podkreślenia &quot;_&quot;</span>),
+      Można także ustawić kolor kanału, klikając dwukrotnie stronę <img> na próbce koloru po lewej stronie, co spowoduje otwarcie palety kolorów umożliwiającej wybór nowego koloru.
+      Aby zmienić nazwę kanału, można wykonać powolne podwójne kliknięcie <img> i zmienić nazwę. Można też użyć prawego przycisku myszy <img>, aby otworzyć menu, w którym można zmienić nazwę, kolor lub skopiować kanał. Kanały można rozwinąć, klikając strzałkę obok nazwy, aby wyświetlić każdy z punktów na krzywej kanału, a punkty te można edytować ręcznie, klikając
+      bieżącą wartość i wpisanie nowej wartości. Można także przełączać widoczność kanału w witrynie <span class="notranslate">dope sheet</span>, klikając ikonę &quot;oka&quot; <img>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Conversion Control</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Kontrola konwersji</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">Here keyframes can be converted into parameter curves (as explained fiurther up this page) but there is also a button to convert parameter curves into keyframes. However, you should be aware that when doing this there are a couple of caveats. Keyframes
-      cannot be &quot;between&quot; frames, and so some curve values will need to be rounded to the nearest frame, which in turn will change the way the parameter track behaves. Also, if the parameter curve uses catmull-rom or bezier interpolation, <strong>this will be lost </strong>and
-      the interpolation between keyframes will be set to linear interpolation.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">W tym miejscu <span class="notranslate">keyframes</span> można przekształcić w krzywe parametrów (jak wyjaśniono w dalszej części tej strony), ale dostępny jest także przycisk do przekształcania krzywych parametrów w <span class="notranslate">keyframes</span>. Należy jednak pamiętać, że w tym przypadku istnieje kilka zastrzeżeń. Klatki kluczowe
+      nie mogą znajdować się &quot;między&quot; klatkami, dlatego niektóre wartości krzywej będą musiały zostać zaokrąglone do najbliższej klatki, co z kolei zmieni sposób zachowania się ścieżki parametrów. Ponadto, jeśli krzywa parametru wykorzystuje interpolację catmull-rom lub bezier, <strong>zostanie ona utracona </strong>, a
+      interpolacja między stronami <span class="notranslate">keyframes</span> zostanie ustawiona na interpolację liniową.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Curve Menu</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Menu krzywej</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">This menu contains options available elsewhere in the editor, but all in one place. The options are:</p>
+    <p class="dropspot">To menu zawiera opcje dostępne w innych miejscach edytora, ale zebrane w jednym miejscu. Dostępne są następujące opcje:</p>
     <ul class="dropspotlist">
-      <li><strong>Set Range</strong>: Set the vertical range of the parameter curve (see <em>Channel Range</em>, below).</li>
-      <li><strong>Convert To Curve</strong>: Convert the selected parameter track using keyframes into a parameter curve.</li>
-      <li><strong>Embed Curve</strong>: Embed the shared curve asset being used by the parameter track into the track.</li>
-      <li><strong>Assigned Shared Curve (Import)</strong>: Assign an Animation Curve asset to be used as a shared curve for the parameter track.</li>
-      <li><strong>Convert To Keys</strong>: Convert the selected parameter track using parameter curves into keyframes.</li>
-      <li><strong>Export to Shared Curve</strong>: Convert the embedded curve into a shared curve asset.</li>
+      <li><strong>Set Range</strong>: Ustawia pionowy zakres krzywej parametru (patrz <em>Zakres kanału</em>, poniżej).</li>
+      <li><strong>Convert To Curve</strong>: Konwertuje wybraną ścieżkę parametrów za pomocą <span class="notranslate">keyframes</span> na krzywą parametrów.</li>
+      <li><strong>Embed Curve</strong>: Osadzenie współdzielonej krzywej <span class="notranslate">asset</span> używanej przez ścieżkę parametrów w ścieżce.</li>
+      <li><strong>Przypisana krzywa współdzielona (Import)</strong>: Przypisanie krzywej animacji <span class="notranslate">asset</span>, która ma być używana jako wspólna krzywa dla ścieżki parametrów.</li>
+      <li><strong>Convert To Keys</strong>: Konwertuje wybraną ścieżkę parametrów za pomocą krzywych parametrów na <span class="notranslate">keyframes</span>.</li>
+      <li><strong>Eksportuj do krzywej współdzielonej</strong>: Konwertowanie krzywej osadzonej na krzywą współdzieloną <span class="notranslate">asset</span>.</li>
     </ul>
-    <p class="dropspot"> </p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Channel Range</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Zakres kanałów</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The Channel Range button is used for setting the visual vertical range for the Channel Editor. By default this will be set from -1 to 1, but clicking this button will open the following window:</p>
-    <p><img alt="Animation Curve Editor Channel Range" class="center" height="136" src="../../assets/Images/Asset_Editors/Editor_Animation_Curves_Range.png" width="198" /></p>
-    <p class="dropspot">Changing these values will change the way the data is represented in the Channel Editor section, permitting you to have higher/lower values along the channel curve than just -1 to 1. Note that this is purely visual and does not clamp the values for
-      the channel.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Przycisk Zakres kanału służy do ustawiania wizualnego zakresu pionowego dla Edytora kanałów. Domyślnie jest to zakres od -1 do 1, ale kliknięcie tego przycisku spowoduje otwarcie następującego okna:</p>
+    <p><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve.png" /></p>
+    <p class="dropspot">Zmiana tych wartości spowoduje zmianę sposobu przedstawiania danych w sekcji Edytor kanałów, umożliwiając uzyskanie wyższych/niższych wartości wzdłuż krzywej kanału niż tylko od -1 do 1. Należy pamiętać, że jest to zmiana czysto wizualna i nie powoduje zaciśnięcia wartości dla
+      kanału.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Channel Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Redaktor kanału</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The Channel Editor shows a visual representation of the different channels used in the parameter curve. By default, all channels will be shown here, but you can only edit the channel currently selected from the Channel List, which will be highlighted
-      in the editor. You can change the position of any of the points along the channel curve by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on them and dragging them around within the editor, but note that
-      the first and last point can only be changed along the vertical axis and their horizontal value will always be 0 and 1 respectively.</p>
+    <p class="dropspot">Edytor kanałów przedstawia wizualną reprezentację różnych kanałów używanych w krzywej parametrów. Domyślnie wyświetlane są tu wszystkie kanały, ale można edytować tylko kanał aktualnie wybrany z listy kanałów, który zostanie podświetlony w edytorze.
+      w edytorze. Położenie każdego z punktów na krzywej kanału można zmienić klikając na niego na stronie <img> i przeciągając go w obrębie edytora, ale należy pamiętać, że
+      pierwszy i ostatni punkt można zmienić tylko wzdłuż osi pionowej, a ich wartości poziome będą zawsze wynosić odpowiednio 0 i 1.</p>
     <div class="droptext" data-targetname="drop-down7">
-      <p class="dropspot">You can add points directly to the channel curve by moving the mouse close to the main channel line and then clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> when the cursor changes to the &quot;<strong>Add Point</strong>&quot;
-        tool, and you can then edit these points by clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> and dragging or by changing their values in the expanded channel options in the Channel List:</p>
-      <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor.gif" /></p>
+      <p class="dropspot">Punkty można dodawać bezpośrednio do krzywej kanału, przesuwając kursor myszy w pobliże głównej linii kanału, a następnie klikając przycisk <img>, gdy kursor zmieni się na narzędzie &quot;<strong>Dodaj punkt</strong>&quot;.
+        Następnie można edytować te punkty, klikając <img> i przeciągając je lub zmieniając ich wartości w rozwiniętych opcjach kanału na liście kanałów:</p>
+      <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Invalid_Curve_Error.png" /></p>
     </div>
-    <p class="dropspot">You can edit multiple points at once by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging within the editor to select all the points you want to edit or by using <img alt="CTRL Icon"
-        class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png"
-        width="21" /> to add points to the selection individually. Releasing the mouse button and then clicking again on any of the points in the selection and dragging will move them all together:</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Move.gif" />You can <img class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> right-click anywhere in the Channel Editor to open the <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">Animation Curve Library</a>      window (only when the selected Curve Type is <strong>Bezier</strong>). Applying a preset in this way will affect the whole channel. To modify only a part of the channel, you can <img class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png"
-        width="21" /> right-click on an individual line to apply a preset to it, or select multiple lines by clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> and dragging, then <img class="icon"
-        height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /> right-click on the selection to apply a preset to the selected lines.</p>
-    <p class="dropspot"><img class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Channel_Editor_Library.gif" />Note that opening the <strong>Animation Curve Library</strong> window through the Channel Editor will have the <strong>&quot;Between&quot;</strong>      Apply Mode selected by default.</p>
+    <p class="dropspot">Możesz edytować wiele punktów jednocześnie, klikając <img> i przeciągając w obrębie edytora, aby zaznaczyć wszystkie punkty, które chcesz edytować, lub używając <img> / <img> + <img>, aby dodawać punkty do zaznaczenia pojedynczo. Zwolnienie przycisku myszy, a następnie ponowne kliknięcie dowolnego z punktów w zaznaczeniu i przeciągnięcie spowoduje przesunięcie ich wszystkich razem:</p>
+    <p class="dropspot"><img>Kliknięcie prawym przyciskiem myszy w dowolnym miejscu edytora kanałów na stronie <img> otwiera okno <a href="../Animation_Curve_Properties/Animation_Curve_Library.htm">Biblioteka krzywych animacji</a> (tylko jeśli wybranym typem krzywej jest <strong>Beziera</strong>). Zastosowane w ten sposób ustawienie wstępne będzie miało wpływ na cały kanał. Aby zmodyfikować tylko część kanału, możesz <img> kliknąć prawym przyciskiem myszy pojedynczą linię, aby zastosować do niej ustawienie wstępne, lub zaznaczyć wiele linii, klikając <img> i przeciągając, a następnie <img> kliknąć prawym przyciskiem myszy zaznaczony obszar, aby zastosować ustawienie wstępne do wybranych linii.</p>
+    <p class="dropspot"><img>Należy pamiętać, że otwierając okno <strong>Biblioteka krzywych animacji</strong> za pomocą Edytora kanałów, domyślnie wybrany jest tryb Zastosuj <strong>&quot;Pomiędzy</strong> &quot;.</p>
   </div>
-  <p> </p>
-  <p>Once you are finished editing the parameter curves you can go back to the regular dope sheet view of the different tracks by clicking on the the <strong>Toggle Curve Mode</strong> <img class="icon" src="../../assets/Images/Icons/Icon_Seq_ToggleCurves.png"
-    /> button.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>Po zakończeniu edycji krzywych parametrów można powrócić do zwykłego widoku <span class="notranslate">dope sheet</span> poszczególnych ścieżek, klikając przycisk <strong>Toggle Curve Mode</strong> <img>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="Broadcast_Messages.htm">Broadcast Messages</a></div>
+        <div style="float:left">Powrót: <a href="../Sequences.htm">Sekwencje</a></div>
+        <div style="float:right">Następny: <a href="Broadcast_Messages.htm">Rozsyłanie wiadomości</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Room Editor

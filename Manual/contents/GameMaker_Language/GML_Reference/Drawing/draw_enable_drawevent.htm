@@ -6,7 +6,7 @@
   <title>draw_enable_drawevent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function draw_enable_drawevent" />
   <meta name="rh-index-keywords" content="draw_enable_drawevent" />
@@ -15,28 +15,28 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_enable_drawevent</h1>
-  <p>With this function you can choose to enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) the draw event for <b>all instances in the game</b>, thus giving you control over how and when things are drawn, which is useful if you wish to implement a &quot;frame skip&quot; technique. Note that this doesn&#39;t just prevent instances drawing to the screen, it suppresses the draw event completely meaning that care should be taken since any game logic that is present in that event will not be run either.</p>
-  <p>One important thing to understand about this function is that if you call it right at the start of the game, before the initial frame is rendered (i.e.: the Create Event of the first object in the first room of the game), then the game window <b>will not be rendered</b>. This could be useful for multiplayer projects that require a dedicated server which doesn&#39;t need to render anything, however keep in mind that this does <strong>not</strong> make it headless as GameMaker does not support that -- so you will not be able to run it on a server that does not have a graphical interface.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji możesz włączyć (<span class="inline">true</span>) lub wyłączyć (<span class="inline">false</span>) zdarzenie draw dla <b>wszystkich instancji w grze</b>, dzięki czemu masz kontrolę nad tym, jak i kiedy rzeczy są rysowane, co jest przydatne, jeśli chcesz zastosować technikę &quot;pomijania klatek&quot;. Zwróć uwagę, że nie tylko uniemożliwia to rysowanie instancji na ekranie, ale całkowicie wyłącza zdarzenie draw, co oznacza, że należy zachować ostrożność, ponieważ logika gry, która jest obecna w tym zdarzeniu, również nie zostanie uruchomiona.</p>
+  <p>Należy pamiętać, że jeśli wywołasz tę funkcję na samym początku gry, zanim zostanie wyrenderowana pierwsza klatka (np. zdarzenie Create Event pierwszej strony <span class="notranslate">object</span> w pierwszej stronie <span class="notranslate">room</span> gry), okno gry <b>nie zostanie wyrenderowane</b>. Może to być przydatne w projektach dla wielu graczy, które wymagają dedykowanej strony <span class="notranslate">server</span>, która <strong>nie</strong> musi niczego renderować, ale należy pamiętać, że nie czyni to gry bezgłową, ponieważ strona <span class="notranslate">GameMaker</span> tego nie obsługuje - nie będzie więc można jej uruchomić na stronie <span class="notranslate">server</span>, która nie ma interfejsu graficznego.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">draw_enable_drawevent(enable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>Enable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>Set to <span class="inline">true</span> or <span class="inline">false</span>.</td>
+        <td><span class="notranslate">Enable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> lub <span class="inline">false</span>.</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">frame_skip ++;<br />
     if (frame_skip mod 5) == 0<br />
     {<br />
@@ -46,18 +46,18 @@
     {<br />
         draw_enable_drawevent(false);<br />
     }</p>
-  <p>The above code checks a variable and if it returns <span class="inline">true</span>, it enables the draw event, otherwise the draw event is disabled.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza zmienną i jeśli zwraca <span class="inline">true</span>, włącza zdarzenie losowania, w przeciwnym razie zdarzenie losowania jest wyłączone.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a href="draw_flush.htm">draw_flush</a></div>
+        <div style="float:left">Powrót: <a href="Drawing.htm">Rysunek</a></div>
+        <div style="float:right">Następny: <a href="draw_flush.htm"><span class="notranslate">draw_flush</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 draw_enable_drawevent

@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Image Loaded</title>
+  <title>Obraz wczytany</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing the Image Loaded async event." />
   <meta name="rh-index-keywords" content="Objects - Async Image Loaded Event" />
-  <meta name="search-keywords" content="Image Loaded,ev_async_web_image_load" />
+  <meta name="search-keywords" content="Image Loaded,ev_web_image_load" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Image Loaded</span></h1>
-  <p><img alt="Image Loaded Event" class="center" src="../../../assets/Images/Asset_Editors/Async_ImageLoaded.png" />This event is triggered when you load an image into <span data-keyref="GameMaker Name">GameMaker</span> either on HTML5, or through a <a class="glossterm" data-glossterm="URL" href="#">URL</a>. For example, say you want to load a sprite image, and only change the current sprite for the instance to the new one after it has loaded. You would have something like this in the Create event (or any other event):</p>
-  <p class="code">var _url = &quot;http://www.angusgames.com/game/background1.png&quot;;<br />
-    spr = sprite_add(_url, 0, false, false, 0, 0);</p>
-  <p>This will now start to load the image into the device or the browser, but it will not block <span data-keyref="GameMaker Name">GameMaker</span> while it waits for the file to be loaded. Instead <span data-keyref="GameMaker Name">GameMaker</span> will keep running as normal until the image is loaded and the <a class="glossterm" data-glossterm="callback" href="#">callback</a> triggers the <strong>Image Loaded Event</strong>, where a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> is created and stored in the special variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. The map contains the following information:</p>
+  <h1>Obraz wczytany</h1>
+  <p><img>To zdarzenie jest wywoływane, gdy wczytasz obrazek do <span data-keyref="GameMaker Name">GameMakera</span> albo przez HTML5, albo przez <a class="glossterm" data-glossterm="URL" href="#">URL</a>. Na przykład, powiedzmy, że chcesz załadować obrazek <span class="notranslate">sprite</span> i dopiero po jego załadowaniu zmienić aktualny adres <span class="notranslate">sprite</span> na nowy. W zdarzeniu Create (lub jakimkolwiek innym zdarzeniu) znalazłoby się coś takiego:</p>
+  <p class="code">var _url = &quot;http://www.angusgames.com/game/background1.png&quot;;<br/> spr = sprite_add(_url, 0, false, false, 0, 0);</p>
+  <p>Spowoduje to rozpoczęcie ładowania obrazu do urządzenia lub przeglądarki, ale nie zablokuje programu <span data-keyref="GameMaker Name">GameMaker</span> w oczekiwaniu na załadowanie pliku. Zamiast tego <span data-keyref="GameMaker Name">GameMaker</span> będzie działał normalnie, dopóki obrazek nie zostanie załadowany, a <a class="glossterm" data-glossterm="callback" href="#">wywołanie zwrotne nie wywoła</a> <strong>zdarzenia Image Loaded</strong>, w którym zostanie utworzona <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">mapa DS Map</a> i zapisana w specjalnej zmiennej
+    <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. Mapa zawiera następujące informacje:</p>
   <ul class="dropspotlist">
-    <li class="dropspot">&quot;<span class="inline">filename</span>&quot;: The complete path to the file you requested.</li>
-    <li class="dropspot">&quot;<span class="inline">id</span>&quot;: The ID of the resource that you have loaded. This will be the same as the variable that you have assigned the resource to.</li>
-    <li class="dropspot">&quot;<span class="inline">status</span>&quot;: Returns a value of less than 0 for an error.</li>
+    <li class="dropspot">&quot;<span class="inline">filename</span>&quot;: Pełny adres <span class="notranslate">path</span> do żądanego pliku.</li>
+    <li class="dropspot">&quot;<span class="inline">id</span>&quot;: Identyfikator zasobu, który wczytałeś. Będzie on taki sam, jak zmienna, do której przypisałeś zasób.</li>
+    <li class="dropspot">&quot;<span class="inline">status</span>&quot;: Zwraca wartość mniejszą niż 0 w przypadku błędu.</li>
   </ul>
-  <p>You would then assign the newly loaded image to a sprite in this event. The following code example demonstrates how the returned information would be used:</p>
-  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == spr<br />
-    {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0<br />
-        {<br />
-            sprite_index = spr;<br />
-        }<br />
-    }</p>
-  <p>The above code will first check the <span class="inline">id</span> of the DS map that has been created, then check the <span class="inline">status</span> of the callback. If the value is greater than or equal to 0 (signalling success) the result from the callback will then be used to set the sprite index to the newly loaded image.</p>
-  <p> </p>
-  <p> </p>
+  <p>Następnie należy przypisać nowo załadowany obraz do strony <span class="notranslate">sprite</span> w tym zdarzeniu. Poniższy przykład kodu demonstruje sposób wykorzystania zwróconych informacji:</p>
+  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == spr<br/> {
+    <br/>     if ds_map_find_value(async_load, &quot;status&quot;) &gt;= 0<br/>     {<br/>         sprite_index = spr;<br/>     }<br/> }
+  </p>
+  <p>Powyższy kod najpierw sprawdzi adres <span class="inline">id</span> utworzonej mapy DS, a następnie sprawdzi adres <span class="inline">status</span> wywołania zwrotnego. Jeśli wartość jest większa lub równa 0 (co sygnalizuje powodzenie), to wynik z
+    z wywołania zwrotnego zostanie użyty do ustawienia indeksu <span class="notranslate">sprite</span> na nowo załadowanym obrazie.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
-        <div style="float:right">Next: <a href="Networking.htm">Networking</a></div>
+        <div style="float:left">Powrót: <a href="../Async_Events.htm">Zdarzenia asynchroniczne</a></div>
+        <div style="float:right">Następny: <a href="Networking.htm">Tworzenie sieci</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Image Loaded Event
@@ -51,5 +48,5 @@ ev_web_image_load
   <!-- TAGS
 ev_web_image_load
 -->
-</body>
-</html>
+
+</body></html>

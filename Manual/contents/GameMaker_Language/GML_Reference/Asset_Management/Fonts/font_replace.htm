@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>czcionka_zastąp</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function font_replace" />
+  <meta name="rh-index-keywords" content="font_replace" />
+  <meta name="search-keywords" content="" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>czcionka_zastąp</h1>
+  <p>Za pomocą tej funkcji można zastąpić w grze stronę <span class="notranslate">font</span> z tych stron <span class="notranslate">fonts</span>, które są zainstalowane w systemie, w którym działa gra. Należy pamiętać, że zastępowana strona <span class="notranslate">font</span> <em>nie może</em> być stroną <span class="notranslate">font</span> z przeglądarki <span class="notranslate">Asset</span> i musi być stroną <span class="notranslate">font</span>, która została dodana wcześniej za pomocą funkcji <a href="font_add.htm"><span class="inline">font_add()</span></a>.</p>
+  <p>Zastępując w ten sposób stronę <span class="notranslate">font</span>, można określić wielkość strony <span class="notranslate">font</span> (w punktach), a także to, czy strona <span class="notranslate">font</span> ma być <b>pogrubiona</b> czy <i>pochylona</i>, oraz zakres znaków, które mają być uwzględnione. Jeżeli funkcja nie powiedzie się, to nie zostanie wykonana, a podany adres <span class="notranslate">font</span> nie zostanie zastąpiony.</p>
+  <p>W przypadku modułu docelowego HTML5 tej funkcji <b>można użyć tylko do zastąpienia <i>czcionek internetowych</i></b> i będzie ona działać tylko wtedy, gdy <b>nie</b> jest włączona obsługa WebGL - jeśli WebGL jest włączona, należy użyć ogólnego zasobu <span class="notranslate">font</span> (tzn. użyć <a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a> wraz z <span class="notranslate">font</span> z przeglądarki <span class="notranslate">Asset</span> ) lub bitmapy <span class="notranslate">fonts</span> (zob. <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>).</p>
+  <p class="note"><span class="optional">WAŻNE</span> W przypadku stosowania języka HTML5 kursywa i pogrubienie tekstu są obsługiwane tylko wtedy, gdy na stronie <span class="notranslate">font</span> <span class="notranslate">asset</span> lub stronie <span class="notranslate">font</span> znajdują się te znaki. Nie będą one syntetyzowane z podstawowej strony <span class="notranslate">font</span>.</p>
+  <p>W poniższej tabeli przedstawiono czcionki <span class="notranslate">fonts</span>, które są standardowe we wszystkich przeglądarkach i które powinny być dostępne do bezproblemowego użycia. Wszelkie inne <span class="notranslate">font</span> mogą, ale nie muszą, występować na komputerze lub urządzeniu, na którym uruchomiona jest gra, dlatego korzystanie z tej funkcji powinno być ograniczone do tych standardowych czcionek:</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Windows <span class="notranslate">Font</span> Nazwa</th>
+        <th>Mac <span class="notranslate">Font</span> Nazwa</th>
+        <th>Rodzina czcionek</th>
+      </tr>
+      <tr>
+        <td>Arial</td>
+        <td>Arial / Helvetica</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Arial Black</td>
+        <td>Arial Black / Gadżet</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Comic Sans MS</td>
+        <td>Comic Sans MS</td>
+        <td>kursywę</td>
+      </tr>
+      <tr>
+        <td>Kurier Nowy</td>
+        <td>Kurier Nowy</td>
+        <td>jednoprzestrzenny</td>
+      </tr>
+      <tr>
+        <td>Georgia</td>
+        <td>Georgia</td>
+        <td>szeryf</td>
+      </tr>
+      <tr>
+        <td>Impact</td>
+        <td>Uderzenie / Węgiel drzewny</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Konsola Lucida</td>
+        <td>Monako</td>
+        <td>jednoprzestrzenny</td>
+      </tr>
+      <tr>
+        <td>Lucida Sans Unicode</td>
+        <td>Lucida Grande</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Palatino Linotype / Book Antiqua</td>
+        <td>Palatino</td>
+        <td>szeryf</td>
+      </tr>
+      <tr>
+        <td>Tahoma</td>
+        <td>Genewa</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Times New Roman</td>
+        <td>Times New Roman / Times</td>
+        <td>szeryf</td>
+      </tr>
+      <tr>
+        <td>Trebusze MS</td>
+        <td>Trebusze MS</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Verdana</td>
+        <td>Verdana / Geneva</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Georgia</td>
+        <td>Georgia</td>
+        <td>szeryf</td>
+      </tr>
+      <tr>
+        <td>Symbol</td>
+        <td>Symbol</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Webdings</td>
+        <td>Webdings</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Wingdings</td>
+        <td>Zapf Dingbats</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>MS Sans Serif</td>
+        <td>Genewa</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>MS Serif</td>
+        <td>Nowy Jork</td>
+        <td>sans-serif</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>W przypadku wszystkich innych celów (nie internetowych) można użyć tej funkcji do zastąpienia adresu <span class="notranslate">font</span> z pliku. Plik <b>musi być dołączony do pakietu z grą</b> za pomocą funkcji <a href="../../../../Settings/Included_Files.htm">Included Files</a> programu <span data-keyref="GameMaker Name">GameMaker</span> i musi być plikiem w formacie <span class="inline">*.ttf</span> lub <span class="inline">*.otf</span> <span class="notranslate">font</span> , przydatnym do dodawania niestandardowych plików <span class="notranslate">fonts</span>, takich jak azjatyckie lub arabskie.</p>
+  <p class="note"><span class="tip">WSKAZÓWKA</span><b> </b>Jeśli dołączasz taki plik <span class="notranslate">font</span> do gry, upewnij się, że posiada on <b>odpowiednią licencję</b> na dystrybucję z grą.</p>
+  <p>Podczas ładowania strony <span class="notranslate">font</span> z pliku w ten sposób <i>rozmiar</i> strony <span class="notranslate">font</span> jest podawany w <b>pikselach</b>, a <i>pierwsza</i> i <i>ostatnia</i> wartość są ignorowane, co oznacza, że wszystkie glify w <span class="notranslate">font</span> zostaną dodane. <span class="notranslate">Fonts</span> dodane w ten sposób są przypisane do własnej strony <span class="notranslate">texture</span>, więc należy zachować ostrożność podczas korzystania z tej funkcji, ponieważ spowoduje ona zwiększenie liczby podmian <span class="notranslate">texture</span> podczas rysowania. Warto także zauważyć, że strona <span class="notranslate">fonts</span> może wydawać się nieco większa podczas rysowania, ponieważ glify mogą mieć części rysowane poza ramką zdefiniowaną dla strony <span class="notranslate">font</span>. Należy także pamiętać, że istnieje ograniczenie liczby glifów, które mogą być renderowane w pojedynczej ramce dla danej strony <span class="notranslate">font</span>, do około 200.</p>
+  <p class="note"><b><span class="note">UWAGA</span> </b>Po załadowaniu strony <span class="notranslate">font</span> do programu <span data-keyref="GameMaker Name">GameMaker</span> musisz pamiętać o jej ponownym usunięciu (za pomocą <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>), gdy nie jest już potrzebna, w przeciwnym razie istnieje ryzyko wycieku pamięci, który spowolni, a w końcu spowoduje awarię gry.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Typ</th>
+        <th>Opis</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font">Czcionka Aktywa</span></td>
+        <td><span class="notranslate">The index of the (previously added) font to be replaced.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">String</span></td>
+        <td><span class="notranslate">The name of the font to be used (eg &#39;Arial&#39;), or the file path if the font is an included <span class="inline"></span>*. plik<span class="inline">ttf</span> lub <span class="inline">*.otf</span>.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The size of the font - points for Web Fonts, pixels for file fonts.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">bold</span></td>
+        <td><span data-keyref="Type_Bool">Boolean</span></td>
+        <td><span class="notranslate">Whether the font is bold (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">italics</span></td>
+        <td><span data-keyref="Type_Bool">Boolean</span></td>
+        <td><span class="notranslate">Whether the font is italic (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The first character to include (if you&#39;re unsure, go for 32).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">last</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The last character to include (if you&#39;re unsure, go for 128).</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">font_replace(myfont, &quot;Arial&quot;, 24, true, true, 32, 128);</p>
+  <p>Spowoduje to zastąpienie strony <span class="notranslate">font</span> zindeksowanej w zmiennej &quot;myfont&quot; nową stroną <span class="notranslate">font</span> o rozmiarze 24 pkt, napisaną czcionką &quot;Arial&quot;, pogrubioną i kursywą. Zakres <span class="notranslate">font</span> obejmuje wielkie i małe litery, cyfry oraz wszystkie powszechnie używane znaki interpunkcyjne.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Powrót: <a href="Fonts.htm">Czcionki</a></div>
+        <div style="float:right">Następny: <a href="font_replace_sprite.htm"><span class="notranslate">font_replace_sprite</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_replace_sprite
+-->
+  <!-- TAGS
+font_replace_sprite
+-->
+</body>
+</html>

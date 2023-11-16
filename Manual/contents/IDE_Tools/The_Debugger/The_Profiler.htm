@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Profiler</title>
+  <title>Profiler</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the profiler in the debugger" />
   <meta name="rh-index-keywords" content="Debugger - Profiling" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Profiler</h1>
-  <p>The Debugger permits you to step through your code and find any issues with the code base, but sometimes you need to check for subtler details in order to properly optimise your games. The <strong>Profile </strong>option helps to do just that by giving you a performance overview, showing the time it takes to call functions, scripts, and even how long it took a specific event to complete.</p>
-  <p><img alt="Debug Profile Window" class="center" src="../../assets/Images/IDE Tools/Debug_Profile.png" />Apart from the main window showing all the different events, scripts and functions being called, you also have the following options for using the Profiler:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Enable / Disable</a></p>
+  <h1>Profiler</h1>
+  <p>Strona <span class="notranslate">Debugger</span> umożliwia przeglądanie kodu i znajdowanie wszelkich problemów z bazą kodu, ale czasami trzeba sprawdzić subtelniejsze szczegóły, aby prawidłowo zoptymalizować grę. Opcja <strong>Profil </strong>pomaga w tym, dając przegląd wydajności, pokazując czas potrzebny na wywołanie funkcji, <span class="notranslate">scripts</span>, a nawet czas potrzebny na wykonanie określonego zdarzenia.</p>
+  <p><img>Oprócz okna głównego, w którym wyświetlane są różne zdarzenia, strony <span class="notranslate">scripts</span> i wywoływane funkcje, dostępne są również następujące opcje korzystania z Profiler:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Włączanie / Wyłączanie</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This is the button to enable or disable the Profiler. When enabled, the profiler will start and you will start to see events, scripts and functions be listed in the main window along with different data values for each of them. How this data is displayed
-      will depend on the <strong>Time Display</strong> and the <strong>View Mode</strong> (both explained in more depth below).</p>
+    <p class="dropspot">Ten przycisk służy do włączania i wyłączania profilera. Po włączeniu profiler zostanie uruchomiony i w oknie głównym pojawią się zdarzenia, strony <span class="notranslate">scripts</span> i funkcje wraz z różnymi wartościami danych dla każdej z nich. Sposób wyświetlania tych danych
+      zależy od opcji Wyświetlanie <strong>czasu</strong> i <strong>Tryb widoku</strong> (obie opcje są szczegółowo opisane poniżej).</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Time Display</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Wyświetlanie czasu</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This checkbox permits you to switch between the <strong>average </strong>time and the <strong>absolute </strong>time for the profiler. When it is not checked, the values shown in the main window will be the <em>total </em>number of calls made to the
-      function, script or event and the <em>total </em>time taken (times are in <strong>microseconds</strong>) over the course of the profile. However if you enable this then these columns show the <em>average </em>time taken per step for each function,
-      script or event, and the <em>average </em>number of times that it was called.</p>
+    <p class="dropspot">To pole wyboru umożliwia wybór między <strong>średnim </strong>czasem a czasem <strong>bezwzględnym </strong>dla profilera na stronie <span class="notranslate">switch</span>. Jeśli nie jest zaznaczone, wartości wyświetlane w oknie głównym będą <em>całkowitą </em>liczbą wywołań funkcji
+      funkcji, <span class="notranslate">script</span> lub zdarzenia oraz <em>całkowity </em>czas (czasy podawane są w <strong>mikrosekundach</strong>) w czasie trwania profilu. Jeśli jednak włączysz tę funkcję, w kolumnach tych będzie wyświetlany <em>średni </em>czas trwania każdego kroku dla każdej funkcji,
+      <span class="notranslate">script</span> lub zdarzenia oraz <em>średnią </em>liczbę wywołań.</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">View Mode</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Tryb przeglądania</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This menu lets you choose the view mode, which can be either <strong>Top Down</strong> or <strong>Bottom Up</strong>.</p>
-    <p class="dropspot">Selecting the <strong>Top Down</strong> view mode will show the profile from the top down (more or less the same as the callstack hierarchy) so it will show the event, then the script and then any functions used. Note that you can double click <img alt="LMB Icon" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_LMB.png" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the entries to have it open in the <strong>Source </strong>debug window if you
-      have one. If you see a <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" /> icon beside a name then there are further script or function calls within that
-      section, and clicking the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" /> will expand the tree to show them.</p>
-    <p class="dropspot">Selecting the <strong>Bottom Up</strong> view mode will show things from the bottom up so you can see all the functions and script calls individually. When using this view mode, clicking on the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12" /> will expand the function or script to show what actually called it.</p>
+    <p class="dropspot">To menu umożliwia wybór trybu widoku, który może być z <strong>góry</strong> na dół lub z <strong>dołu</strong> do góry.</p>
+    <p class="dropspot">Wybranie trybu Widok od <strong>góry</strong> do dołu spowoduje wyświetlenie profilu od góry do dołu (mniej więcej tak samo jak hierarchia stosu wywołań), a więc zostanie pokazane zdarzenie, następnie <span class="notranslate">script</span>, a potem wszystkie użyte funkcje. Zauważ, że możesz dwukrotnie kliknąć <img> na dowolnym wpisie, aby otworzyć go w oknie debugowania <strong>Source </strong>, jeśli je posiadasz.
+      masz takie okno. Jeśli obok nazwy widoczna jest ikona <img>, oznacza to, że w danej sekcji znajdują się kolejne <span class="notranslate">script</span> lub wywołania funkcji.
+      Klikając ikonę <img>, rozwiniesz drzewo, aby je wyświetlić.</p>
+    <p class="dropspot">Wybór trybu widoku Bottom <strong>Up</strong> spowoduje wyświetlenie wszystkiego od dołu do góry, dzięki czemu można zobaczyć wszystkie funkcje i wywołania <span class="notranslate">script</span> z osobna. Podczas korzystania z tego trybu widoku kliknięcie na stronie <img> spowoduje rozwinięcie funkcji lub strony <span class="notranslate">script</span>, aby pokazać, co tak naprawdę ją wywołano.</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">View Target</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Wyświetl cel</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The <strong>View Target</strong> permits you to choose between viewing the project GML (event and code data), the background engine processes or both. If you choose &quot;GML&quot;, then you will get the events, functions and scripts being called
-      each step while the &quot;Engine&quot; view will only show the engine calls required by the project, enabling you to see any bottlenecks in the way that your project is handling things. If you select &quot;Both&quot;, then both sets of data will
-      be displayed, but note that when combined with the &quot;Bottom Up&quot; view, the different script and function calls will be nested within the engine calls and you will need to click the <img alt="Expand Debug Icon" data-cke-saved-src="../../assets/Images/Icons/Debug_Expand.png" src="../../assets/Images/Icons/Debug_Expand.png" width="12" height="12" /> to expand these out to see them.</p>
+    <p class="dropspot">Funkcja <strong>View Target</strong> umożliwia wybór między wyświetlaniem projektu <span class="notranslate">GML</span> (dane zdarzeń i kodu), procesów silnika działającego w tle lub obu tych elementów. Jeśli wybierzesz &quot;GML&quot;, zobaczysz zdarzenia, funkcje i <span class="notranslate">scripts</span> wywoływane w każdym kroku.
+      natomiast w widoku &quot;Silnik&quot; zostaną wyświetlone tylko wywołania silnika wymagane przez projekt, co pozwoli Ci dostrzec wszelkie wąskie gardła w sposobie obsługi projektu. Jeśli wybierzesz opcję &quot;Oba&quot;, wyświetlone zostaną oba zestawy danych.
+      Należy jednak pamiętać, że w połączeniu z widokiem &quot;Bottom Up&quot; różne <span class="notranslate">script</span> i wywołania funkcji będą zagnieżdżone w wywołaniach silnika i aby je zobaczyć, trzeba będzie kliknąć przycisk <img>, aby je rozwinąć.</p>
     <p class="dropspot"><br /></p>
   </div>
-  <p><br />
-    The profile data is shown in four columns, and clicking on any of them will sort the data according to the column criteria.</p>
-  <p><img alt="Profile Display" class="center" src="../../assets/Images/IDE Tools/Profiler_Display.gif" /></p>
+  <p><br>
+    Dane profilu są wyświetlane w czterech kolumnach, a kliknięcie dowolnej z nich powoduje posortowanie danych zgodnie z kryterium kolumny.</p>
+  <p><img alt="Debug Profile Window" class="center" src="../../assets/Images/IDE Tools/Debug_Profile.png" /></p>
   <ul class="colour">
-    <li><strong>Name</strong>: This is the name of the event, script or function being called, and may have a <img alt="Expand Debug Icon" height="12" src="../../assets/Images/Icons/Debug_Expand.png" width="12" /> beside it to denote further calls to it or from it (depending on the <strong>View Mode</strong> you have selected). You can double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the names to have it open the code block or script within the Source window. Clicking the top of this column will sort the names in alphabetical order.</li>
-    <li><strong>Time</strong>: This will show either the <em>total </em>time that a function (or script or event) has taken while profiling, or the <em>average </em>time that it has taken each step to be called (depending on the <strong>Time Display</strong> option selected) and it is displayed in microseconds.</li>
-    <li><strong>Calls</strong>: Here you can see either the <em>total </em>number of calls to the given event, function or script, or the <em>average </em>number of calls to it in a single step (again, depending on the <strong>Time Display</strong> option selected).</li>
-    <li><strong>Step%</strong>: The value shown here is the overall percentage of a single step that the call has taken.</li>
+    <li><strong>Nazwa</strong>: Jest to nazwa wywoływanego zdarzenia, <span class="notranslate">script</span> lub funkcji, obok której może znajdować się <img> oznaczający kolejne wywołania (w zależności od wybranego <strong>trybu widoku</strong> ). Możesz dwukrotnie kliknąć <img> na dowolnej nazwie, aby otworzyć blok kodu lub <span class="notranslate">script</span> w oknie Źródło. Kliknięcie górnej części tej kolumny spowoduje posortowanie nazw w kolejności alfabetycznej.</li>
+    <li><strong>Czas</strong>: W tym miejscu wyświetlany jest <em>całkowity </em>czas, jaki funkcja (lub <span class="notranslate">script</span> albo zdarzenie) zajęła podczas profilowania, lub <em>średni </em>czas, jaki zajęło wywołanie każdego kroku (w zależności od wybranej opcji <strong>Wyświetlanie</strong> czasu), wyświetlany w mikrosekundach.</li>
+    <li><strong>Wywołania</strong>: W tym miejscu można wyświetlić <em>całkowitą </em>liczbę wywołań danego zdarzenia, funkcji lub strony <span class="notranslate">script</span> albo <em>średnią </em>liczbę wywołań w pojedynczym kroku (ponownie, w zależności od wybranej opcji <strong>Wyświetlanie czasu</strong> ).</li>
+    <li><strong>Krok%</strong>: Wartość wyświetlana w tym miejscu to ogólny procent pojedynczego kroku wykonanego przez połączenie.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Debugger.htm">The Debugger</a></div>
-        <div style="float:right">Next: <a href="Watches.htm">Watches</a></div>
+        <div style="float:left">Powrót: <a href="../The_Debugger.htm">Debugger</a></div>
+        <div style="float:right">Następny: <a href="Watches.htm">Zegarki</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 The Profiler

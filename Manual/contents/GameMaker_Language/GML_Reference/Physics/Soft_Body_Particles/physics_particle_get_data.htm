@@ -6,7 +6,7 @@
   <title>physics_particle_get_data</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_get_data" />
   <meta name="rh-index-keywords" content="physics_particle_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color" />
@@ -16,7 +16,7 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_get_data</h1>
-  <p>This function returns various pieces of information about each particle in the physics simulation using the given flags checked. The buffer used must have been created previously using the function <a href="../../Buffers/buffer_create.htm"><span class="inline">buffer_create()</span></a>, and should be of the &quot;grow&quot; type, with the size being approximately that of the expected return data. The flags are set using any of the constants given below, and you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to create a single flag value to get the desired information.</p>
+  <p>Ta funkcja zwraca różne informacje o każdej cząstce w symulacji fizycznej przy użyciu podanego adresu <span class="notranslate">flags</span>. Używany adres <span class="notranslate">buffer</span> musi być utworzony wcześniej za pomocą funkcji <a href="../../Buffers/buffer_create.htm"><span class="inline">buffer_create()</span></a>i powinien być typu &quot;grow&quot;, a jego rozmiar powinien być zbliżony do oczekiwanego rozmiaru zwracanych danych. Adres <span class="notranslate">flags</span> ustawia się za pomocą dowolnej z podanych poniżej stałych, a do utworzenia pojedynczej wartości <span class="notranslate">flag</span> w celu uzyskania żądanych informacji należy użyć <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitownicy <i>lub</i></a> &quot;|&quot;.</p>
   <table>
     <colgroup>
       <col />
@@ -25,67 +25,67 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="3"><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Physics Particle Data Flag Constant</a></span></th>
+        <th colspan="3"><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Dane dotyczące cząstek fizyki <span class="notranslate">Flag</span> Stała</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
-        <th>Data Type</th>
+        <th>Stała</th>
+        <th>Opis</th>
+        <th>Typ danych</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_data_flag_typeflags</span></td>
-        <td>The flags value for the particle.</td>
-        <td>buffer_u32</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_data_flag_typeflags</span></td>
+        <td>Wartość <span class="notranslate">flags</span> dla cząstki.</td>
+        <td><span class="notranslate">buffer_u32</span></td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_data_flag_position</span></td>
-        <td>The x and y position of the particle.</td>
-        <td>2 x buffer_f32</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_data_flag_position</span></td>
+        <td>Położenie x i y cząstki.</td>
+        <td><span class="notranslate">2 x buffer_f32</span></td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_data_flag_velocity</span></td>
-        <td>The horizontal and vertical speed.</td>
-        <td>2 x buffer_f32</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_data_flag_velocity</span></td>
+        <td>Prędkość pozioma i pionowa.</td>
+        <td><span class="notranslate">2 x buffer_f32</span></td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_data_flag_colour</span></td>
-        <td>The colour and alpha value (hexadecimal).</td>
-        <td>buffer_f32</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_data_flag_colour</span></td>
+        <td>Kolor i wartość alfa (w systemie szesnastkowym).</td>
+        <td><span class="notranslate">buffer_f32</span></td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_data_flag_category</span></td>
-        <td>The particle category (as defined when you created the particle or group to which it belongs).</td>
-        <td>buffer_u32</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_data_flag_category</span></td>
+        <td>Kategoria cząstki (określona podczas tworzenia cząstki lub grupy, do której należy).</td>
+        <td><span class="notranslate">buffer_u32</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_particle_get_data(buffer, flags)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Buffer ID</a></span></td>
-        <td>The (previously created) buffer to use to store the data.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">Identyfikator bufora</a></span></td>
+        <td><span class="notranslate">The (previously created) buffer to use to store the data.</span></td>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Physics Particle Data Flag Constant</a></span>(s)</td>
-        <td>The flags to use to extract data about specific particle types.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Data_Flag"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Physics/Soft_Body_Particles/physics_particle_get_data.htm">Dane dotyczące cząstek fizycznych <span class="notranslate">Flag</span> Stała</a></span>(s)</td>
+        <td><span class="notranslate">The flags to use to extract data about specific particle types.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../LINKGOESHERE">N/A</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var count = physics_particle_count();<br />
     var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br />
     if (count &gt; 0)<br />
@@ -102,18 +102,18 @@
         }<br />
         buffer_delete(buffer);<br />
     }</p>
-  <p>The above code gets the number of particles and creates a variable with the data flags to check, then checks to see if there are any particles in the room. If there are, a buffer is created and then filled with the particle data, which is checked and used to draw a sprite at the particle position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera liczbę cząstek i tworzy zmienną z danymi <span class="notranslate">flags</span> do sprawdzenia, a następnie sprawdza, czy na stronie <span class="notranslate">room</span> znajdują się jakieś cząstki. Jeśli tak, tworzona jest strona <span class="notranslate">buffer</span>, a następnie wypełniana danymi cząstek, które są sprawdzane i używane do narysowania strony <span class="notranslate">sprite</span> w miejscu, w którym znajdują się cząstki.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_get_data_particle.htm">physics_particle_get_data_particle</a></div>
+        <div style="float:left">Powrót: <a href="Soft_Body_Particles.htm">Miękkie cząstki ciała</a></div>
+        <div style="float:right">Następny: <a href="physics_particle_get_data_particle.htm"><span class="notranslate">physics_particle_get_data_particle</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_get_data

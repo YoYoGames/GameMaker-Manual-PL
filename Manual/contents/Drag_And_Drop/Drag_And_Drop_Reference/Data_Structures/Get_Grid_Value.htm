@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get Grid Value</title>
+  <title>Pobierz wartość siatki</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get Grid Value action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get Grid Value" />
@@ -14,53 +14,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Grid Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Grid_Value.png" /> Get Grid Value</h1>
-  <p>With this action you can set a specific cell within the grid data structure to a value. You supply the variable that holds the grid index (as returned by the action <a href="Create_Grid.htm">Create Grid</a>) and then give the x and y position (the column
-    and row) for the cell to set, and then finally the value for that cell. You must also set a target variable (which can be flagged as a temporary local variable) to store the returned cell value, and the value can be any valid data type. Note that
-    the x and y position for the cell must be whole integers within the bounds of the grid.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Grid Value Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/a_DS_Get_Grid_Value.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Pobierz wartość siatki</h1>
+  <p>Za pomocą tej akcji można ustawić wartość w określonej komórce struktury danych siatki. W tym celu należy podać zmienną, która przechowuje indeks siatki (zwrócony przez akcję <a href="Create_Grid.htm">Utwórz</a> siatkę), następnie podać pozycję x i y (kolumnę
+    i wiersz) dla komórki, która ma zostać ustawiona, a następnie wartość dla tej komórki. Musisz także ustawić zmienną docelową (która może być oznaczona jako tymczasowa zmienna lokalna) do przechowywania zwróconej wartości komórki, przy czym wartość ta może być dowolnego poprawnego typu danych. Zwróć uwagę, że
+    pozycje x i y dla komórki muszą być całymi liczbami całkowitymi w granicach siatki.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Get Grid Value Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/i_DS_Get_Grid_Value.png" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Grid</td>
-        <td>The index (stored in a variable) of the grid to get</td>
+        <td><span class="notranslate">Grid</span></td>
+        <td>Indeks (przechowywany w zmiennej) siatki, którą należy pobrać</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The cell position along the x axis to get (the column)</td>
+        <td><span class="notranslate">x</span></td>
+        <td>Położenie komórki wzdłuż osi x, które należy uzyskać (kolumna)</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The cell position along the y axis to get (the row)</td>
+        <td><span class="notranslate">y</span></td>
+        <td>Pozycja komórki wzdłuż osi y, którą należy pobrać (wiersz)</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to use to store the returned value</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Zmienna docelowa, która ma być użyta do przechowywania zwróconej wartości</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Get Grid Value Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Data_Structures/e_DS_Get_Grid_Value.png" />The above action block code gets the value in the grid stored in a global variable that
-    corresponds to the instances position within the room. This value is then checked and if it is an instance ID value, that instance is destroyed and the grid cell set to the keyword <span class="inline">noone</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji pobiera wartość w siatce przechowywaną w zmiennej globalnej, która
+   <span class="notranslate">room</span> Wartość ta jest następnie sprawdzana i jeśli jest to wartość identyfikatora instancji, instancja ta jest niszczona, a komórka siatki ustawiana na słowo kluczowe <span class="inline">noone</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Data_Structure_Actions.htm">Data Structure Actions</a></div>
-        <div style="float:right">Next: <a href="Clear_Grid.htm">Clear Grid</a></div>
+        <div style="float:left">Powrót: <a href="Data_Structure_Actions.htm">Działania związane ze strukturami danych</a></div>
+        <div style="float:right">Następny: <a href="Clear_Grid.htm">Wyczyść siatkę</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get Grid Value

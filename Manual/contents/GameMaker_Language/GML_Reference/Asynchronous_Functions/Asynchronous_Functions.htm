@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Asynchronous Functions</title>
+  <title>Funkcje asynchroniczne</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for all the different Asynchronous Functions" />
   <meta name="rh-index-keywords" content="" />
@@ -14,43 +14,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Asynchronous Functions</h1>
-  <p>In the context of <span data-keyref="GameMaker Name">GameMaker</span>, an asynchronous function is one that sends out to a web server, or asks for user input, or even streams data, while letting <span data-keyref="GameMaker Name">GameMaker</span> continue to run without blocking the game being run. When the information <a class="glossterm" data-glossterm="callback" href="#">callback</a> is received a special <b>Async Event</b> is fired which, in turn, allows any instance with an Async Event assigned to it to execute further functions (although this does not have to be the case). So, basically, it&#39;s a way to communicate with some external resource (server, user or device) without the game or project stopping while waiting for a reply.</p>
-  <p>Why is this important? Well, since it allows <span data-keyref="GameMaker Name">GameMaker</span> to continue functioning while sending or receiving data, and this means that you can do many things all without blocking the game loop like:</p>
+  <h1>Funkcje asynchroniczne</h1>
+  <p>W kontekście <span data-keyref="GameMaker Name">GameMakera</span> funkcja asynchroniczna to taka, która wysyła informacje na stronę <span class="notranslate">server</span>, prosi o dane wejściowe użytkownika lub nawet przesyła dane, pozwalając jednocześnie na kontynuowanie pracy programu <span data-keyref="GameMaker Name">GameMaker</span> bez blokowania uruchomionej gry. Po otrzymaniu <a class="glossterm" data-glossterm="callback" href="#">wywołania zwrotnego</a> informacji uruchamiane jest specjalne <b>zdarzenie Async Event</b>, które z kolei pozwala dowolnej instancji z przypisanym <b>zdarzeniem</b> Async Event wykonywać dalsze funkcje (choć nie musi tak być). Zasadniczo jest to więc sposób komunikacji z jakimś zasobem zewnętrznym (<span class="notranslate">server</span>, użytkownikiem lub urządzeniem) bez zatrzymywania gry lub projektu w oczekiwaniu na odpowiedź.</p>
+  <p>Dlaczego jest to ważne? Cóż, ponieważ pozwala to na dalsze działanie programu <span data-keyref="GameMaker Name">GameMaker</span> podczas wysyłania i odbierania danych, a to oznacza, że można robić wiele rzeczy bez blokowania gry <span class="notranslate">loop</span>, np:</p>
   <ul class="colour">
-    <li>stream data from the device into your game without the player waiting for things to load</li>
-    <li>have callback events to do things only when the correct information is received</li>
-    <li>communicate and interchange data with a web server</li>
+    <li>przesyłanie danych z urządzenia do gry bez konieczności czekania przez gracza na załadowanie się elementów</li>
+    <li>mieć zdarzenia wywołania zwrotnego, aby wykonywać zadania tylko wtedy, gdy zostaną odebrane właściwe informacje</li>
+    <li>komunikować się i wymieniać dane z serwerem internetowym</li>
   </ul>
-  <p>This makes everything function in a much more fluid and unobtrusive way. It should be noted that the Async Events will be triggered for <em>all </em>instances that have them, so you can use an async function in one instance, and have the Asynchronous Event that deals with the reply in another one, or even various other ones. You can go here for more information on how the Asynchronous event works - <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>.</p>
-  <p>The different type of asynchronous functions are listed in the sections below:</p>
+  <p>Dzięki temu wszystko działa w sposób znacznie bardziej płynny i nie rzucający się w oczy. Należy zauważyć, że zdarzenia asynchroniczne będą wywoływane we <em>wszystkich </em>instancjach, które je posiadają, więc możesz używać funkcji asynchronicznej w jednej instancji, a zdarzenie asynchroniczne, które zajmuje się odpowiedzią, mieć w innej, a nawet w różnych innych. Więcej informacji o tym, jak działa zdarzenie asynchroniczne, można znaleźć tutaj - Zdarzenia <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">asynchroniczne</a>.</p>
+  <p>Różne rodzaje funkcji asynchronicznych są wymienione w poniższych sekcjach:</p>
   <ul class="colour">
     <li><a name="async_http"></a><a href="HTTP/HTTP.htm"><label for="one">HTTP</label></a></li>
     <li><a href="Dialog/Dialog.htm"><label for="two">Dialog</label></a></li>
-    <li><a href="Cloud_Saving/Cloud_Saving.htm"><label for="three">Cloud Saving</label></a></li>
-    <li><a href="Push_Notifications/Push_Notifications.htm"><label for="four">Push Notifications</label></a></li>
+    <li><a href="Cloud_Saving/Cloud_Saving.htm"><label for="three">Oszczędzanie w chmurze</label></a></li>
+    <li><a href="Push_Notifications/Push_Notifications.htm"><label for="four">Powiadomienia push</label></a></li>
     <li><a href="Facebook/Facebook.htm"><label for="five">Facebook</label></a></li>
   </ul>
-  <p> </p>
-  <p>There are also a number of <a href="../Buffers/Buffers.htm">Buffer</a> functions that can be used for loading and saving buffers in an asynchronous manner, which are required when working on the different consoles that <span data-keyref="GameMaker Name">GameMaker</span> supports, although they can also be used on the other target platforms:</p>
+  <p> </p>
+  <p>Istnieje także wiele funkcji <a href="../Buffers/Buffers.htm">Buffer</a>, których można używać do asynchronicznego wczytywania i zapisywania strony <span class="notranslate">buffers</span>. Są one wymagane podczas pracy na różnych konsolach obsługiwanych przez program <span data-keyref="GameMaker Name">GameMaker</span>, choć można ich używać także na innych platformach docelowych:</p>
   <ul class="colour">
-    <li><a href="../Buffers/buffer_save_async.htm">buffer_save_async</a></li>
-    <li><a href="../Buffers/buffer_load_async.htm">buffer_load_async</a></li>
-    <li><a href="../Buffers/buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
-    <li><a href="../Buffers/buffer_async_group_option.htm">buffer_async_group_option</a></li>
-    <li><a href="../Buffers/buffer_async_group_end.htm">buffer_async_group_end</a></li>
+    <li><a href="../Buffers/buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li>
+    <li><a href="../Buffers/buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
+    <li><a href="../Buffers/buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a href="../Networking/Networking.htm">Networking</a></div>
+        <div style="float:left">Powrót: <a href="../GML_Reference.htm">Odniesienie do GML</a></div>
+        <div style="float:right">Następny: <a href="../Networking/Networking.htm">Tworzenie sieci</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 GML Reference

@@ -6,7 +6,7 @@
   <title>audio_set_master_gain</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_set_master_gain" />
   <meta name="rh-index-keywords" content="audio_set_master_gain" />
@@ -14,55 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">audio_set_master_gain</span></h1>
-  <p>With this function you can set the absolute value for the global volume of all sounds and music for a specific listener.</p>
-  <p>The default listener index is 0, but you can use the function <span class="inline2"><a data-xref="{title}" href="Audio_Listeners/audio_get_listener_info.htm">audio_get_listener_info</a></span> to get the different indices available for the target platform. The gain value is based on a linear scale from 0 (silent) to 1 (full volume) and will affect the relative volume of all sounds and music played from within your game through that listener.</p>
-  <div data-conref="../../../../assets/snippets/Note_Gain_Linear_dB.hts"> </div>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_set_master_gain</span>(listenerIndex, gain);</p>
+  <h1>audio_set_master_gain</h1>
+  <p>Za pomocą tej funkcji można ustawić wartość bezwzględną globalnej głośności wszystkich dźwięków i muzyki dla określonego słuchacza. Domyślnym indeksem słuchacza jest 0, ale można użyć funkcji <span class="inline"><a href="Audio_Listeners/audio_get_listener_info.htm">audio_get_listener_info()</a></span>, aby uzyskać różne indeksy dostępne dla platformy docelowej. Wartość wzmocnienia jest oparta na skali liniowej od 0 (cisza) do 1 (pełna głośność) i będzie miała wpływ na względną głośność wszystkich dźwięków i muzyki odtwarzanych w grze za pośrednictwem danego słuchacza.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">audio_set_master_gain(listenerIndex, gain);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>listenerIndex</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_ID_Audio_Listener"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Listeners/Audio_Listeners.htm" target="_blank">Audio Listener ID</a></span></td>
-        <td>The index of the listener to set the gain on.</td>
+        <td><span class="notranslate">listenerIndex</span></td>
+        <td> <span data-keyref="Type_ID_Audio_Listener">Identyfikator słuchacza</span><span data-keyref="Type_Real">rzeczywistego</span> lub <span data-keyref="Type_ID_Audio_Listener">dźwiękowego</span></td>
+        <td><span class="notranslate">The index of the listener to set the gain on.</span></td>
       </tr>
       <tr>
-        <td>gain</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>Value for the global volume (0 to 1).</td>
+        <td><span class="notranslate">gain</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">Value for the global volume (0 to 1).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var num = audio_get_listener_count();<br />
     for( var i = 0; i &lt; num; i++;)<br />
     {<br />
         var info = audio_get_listener_info(i);<br />
-        <span data-field="title" data-format="default">audio_set_master_gain</span>(info[? &quot;index&quot;], 0.75);<br />
+        audio_set_master_gain(info[? &quot;index&quot;], 0.75);<br />
         ds_map_destroy(info);<br />
     }</p>
-  <p>The above code loops through the available listeners and then sets their master gain to 0.75.</p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod <span class="notranslate">loops</span> przegląda dostępne urządzenia nasłuchujące, a następnie ustawia ich wzmocnienie główne na 0,75.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="audio_get_master_gain.htm">audio_get_master_gain</a></div>
+        <div style="float:left">Powrót: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Następny: <a href="audio_get_master_gain.htm"><span class="notranslate">audio_get_master_gain</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 audio_set_master_gain

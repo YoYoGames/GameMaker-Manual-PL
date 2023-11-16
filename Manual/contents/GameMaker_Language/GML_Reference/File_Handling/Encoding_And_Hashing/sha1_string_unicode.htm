@@ -6,7 +6,7 @@
   <title>sha1_string_unicode</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for sha1_string_unicode" />
   <meta name="rh-index-keywords" content="sha1_string_unicode" />
@@ -16,46 +16,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sha1_string_unicode</h1>
-  <p>In cryptography, SHA-1 is a cryptographic hash function designed by the United States <i>National Security Agency</i> and is employed in several widely used applications and protocols like the popular <b>Git</b> where it is used to check for file changes.
-    This function will take an input unicode string and returns a 160 bit message digest in ASCII format, for example:</p>
+  <p>W kryptografii SHA-1 to kryptograficzna funkcja skrótu zaprojektowana przez <i>Agencję Bezpieczeństwa Narodowego</i> Stanów Zjednoczonych. Jest ona wykorzystywana w kilku powszechnie używanych aplikacjach i protokołach, takich jak popularny <b>Git</b>, gdzie służy do sprawdzania zmian w plikach.
+    Funkcja ta pobiera dane wejściowe w formacie unicode <span class="notranslate">string</span> i zwraca 160-bitowy skrót wiadomości w formacie ASCII, na przykład:</p>
   <p class="code">sha1 input string = &quot;The quick brown fox jumps over the lazy dog&quot;<br/> sha1 output hash = &quot;2fd4e1c6 7a2d28fc ed849ee1 bb76e739 1b93eb12&quot;</p>
-  <p>In this way you can generate a secure key which can be stored and used to check the integrity of the information being sent to (or received from) an external server (for example).</p>
-  <p class="note"><b>NOTE</b>: There are two formats for the sha1 encoding, UTF-8 and unicode. Both are provided to facilitate communication with different server setups, but the most common to use is unicode.</p>
-  <p class="note"><strong>NOTE</strong>: SHA-1 is not completely secure and can be broken. See <a href="https://en.wikipedia.org/wiki/SHA-1">this page</a> for more info.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>W ten sposób można wygenerować bezpieczny klucz, który może być przechowywany i używany do sprawdzania integralności informacji wysyłanych do (lub odbieranych z) zewnętrznej witryny <span class="notranslate">server</span> (na przykład).</p>
+  <p class="note"><b>UWAGA</b>: Istnieją dwa formaty kodowania sha1, UTF-8 i unicode. Oba są przewidziane w celu ułatwienia komunikacji z różnymi konfiguracjami <span class="notranslate">server</span>, ale najczęściej używanym jest unicode.</p>
+  <p class="note"><strong>UWAGA</strong>: SHA-1 nie jest całkowicie bezpieczny i może zostać złamany. Więcej informacji można znaleźć na <a href="https://en.wikipedia.org/wiki/SHA-1">tej stronie</a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">sha1_string_unicode(string)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>string</td><td><span data-keyref="Type_String"></span></td>
-        <td>The string to hash.</td>
+        <td><span class="notranslate">string</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The string to hash.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var hash, str;<br/> str = base64_encode(game_data);<br/> hash = sha1_string_unicode(str);<br/> http_get(&quot;http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?hash=&quot; + hash); http_get(&quot;http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?data=&quot;
     + str);</p>
-  <p>The above code will base64 encode a string and then generate a sha1 hash. Finally, both the hash and the encoded string are sent to a server.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod zakoduje plik <span class="notranslate">string</span> w base64, a następnie wygeneruje skrót sha1. Na koniec zarówno hash, jak i zakodowana strona <span class="notranslate">string</span> są wysyłane do strony <span class="notranslate">server</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Encoding_And_Hashing.htm">File Encoding</a></div>
-        <div style="float:right">Next: <a href="sha1_file.htm">sha1_file</a></div>
+        <div style="float:left">Powrót: <a href="Encoding_And_Hashing.htm">Kodowanie plików</a></div>
+        <div style="float:right">Następny: <a href="sha1_file.htm"><span class="notranslate">sha1_file</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 sha1_string_unicode

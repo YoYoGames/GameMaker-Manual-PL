@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_get_uvs</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_uvs" />
   <meta name="rh-index-keywords" content="sprite_get_uvs" />
@@ -15,64 +15,57 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">sprite_get_uvs</span></h1>
-  <p>This function returns an <a href="../../../../GML_Overview/Arrays.htm">array</a> with the UV coordinates and other data for the texture of the sprite sub-image on the texture page. The function returns an array with the following 8 elements:</p>
+  <h1>sprite_get_uvs</h1>
+  <p>Ta funkcja zwraca <a href="../../../../GML_Overview/Arrays.htm">tablicę</a> zawierającą współrzędne UV i inne dane dla <span class="notranslate">texture</span> podobrazu <span class="notranslate">sprite</span> na stronie <span class="notranslate">texture</span>. Funkcja zwraca tablicę zawierającą 8 następujących elementów:</p>
   <ul class="colour">
-    <li>[0] = left</li>
-    <li>[1] = top</li>
-    <li>[2] = right</li>
-    <li>[3] = bottom</li>
-    <li>[4] = amount of pixels the asset compiler has trimmed from the sprites left side</li>
-    <li>[5] = amount of pixels the asset compiler has trimmed from the sprites top side</li>
-    <li>[6] = normalised percentage of pixel data from the original sprites width that has been saved to the texture page</li>
-    <li>[7] = normalised percentage of pixel data from the original sprites height that has been saved to the texture page</li>
+    <li>[0] = lewa</li>
+    <li>[1] = góra</li>
+    <li>[2] = prawo</li>
+    <li>[3] = dół</li>
+    <li>[4] = ilość pikseli, którą kompilator <span class="notranslate">asset</span> odciął od lewej strony <span class="notranslate">sprites</span> </li>
+    <li>[5] = ilość pikseli, którą kompilator <span class="notranslate">asset</span> odciął od górnej strony <span class="notranslate">sprites</span> </li>
+    <li>[6] = znormalizowany procent danych pikseli z oryginalnej szerokości <span class="notranslate">sprites</span>, które zostały zapisane na stronie <span class="notranslate">texture</span> </li>
+    <li>[7] = znormalizowany procent danych pikseli z oryginalnej wysokości <span class="notranslate">sprites</span>, które zostały zapisane na stronie <span class="notranslate">texture</span> </li>
   </ul>
-  <p>This array can then be used in other draw functions, particularly when working in 3D or using the <a href="../../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">2D primitive</a> functions, as well as when working with the <a href="../../Shaders/Shaders.htm">Shader</a> functions.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> This function will <b>not</b> work with vector sprites or skeleton animation sprites.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">sprite_get_uvs</span>(sprite, subimage);</p>
+  <p>Tę tablicę można następnie wykorzystać w innych funkcjach rysowania, zwłaszcza podczas pracy w trybie 3D lub przy użyciu funkcji <a href="../../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">prymitywów 2D</a>, a także podczas pracy z funkcjami <a href="../../Shaders/Shaders.htm">cieniowania</a>.</p>
+  <p class="note"><b>UWAGA</b>: Ta funkcja <b>nie</b> będzie działać w przypadku animacji wektorowej <span class="notranslate">sprites</span> lub animacji szkieletowej <span class="notranslate">sprites</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">sprite_get_uvs(sprite, subimage);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
+     </tr>
       <tr>
-        <td>sprite</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to use.</td>
-      </tr>
+        <td><span class="notranslate">sprite</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to use.</span></td>
+     </tr>
       <tr>
-        <td>subimage</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The sub-image of the sprite to use.</td>
-      </tr>
+        <td><span class="notranslate">subimage</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The sub-image of the sprite to use.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Array"><a href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> (1D, 8 elements)</p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var tex = <span data-field="title" data-format="default">sprite_get_uvs</span>(sprite, 0);<br />
-    tex_left = tex[0];<br />
-    tex_top = tex[1];<br />
-    tex_right = tex[2];<br />
-    tex_bottom = tex[3];</p>
-  <p>The above code will store the UV coordinates for the given sprite in a local array and then assign the values to instance variables.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Zwraca</h4>
+  <p class="code"><span data-keyref="Type_Array"></span> (1D, 8 elements)</p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">var tex = sprite_get_uvs(sprite, 0);<br/> tex_left = tex[0];<br/> tex_top = tex[1];<br/> tex_right = tex[2];<br/> tex_bottom = tex[3];</p>
+  <p>Powyższy kod zapisze współrzędne UV dla podanej strony <span class="notranslate">sprite</span> w lokalnej tablicy, a następnie przypisze te wartości do zmiennych instancji.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Information.htm">Sprite Information</a></div>
+        <div style="float:left">Powrót: <a href="Sprite_Information.htm">Informacje o Sprite</a></div>
         <div style="float:right">Next: <a href="sprite_get_info.htm">sprite_get_info</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_uvs

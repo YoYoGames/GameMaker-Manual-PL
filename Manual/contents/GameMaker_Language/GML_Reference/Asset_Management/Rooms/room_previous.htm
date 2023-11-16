@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>room_previous</title>
+  <title>pomieszczenie_poprzednie</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function room_previous" />
   <meta name="rh-index-keywords" content="room_previous" />
@@ -14,44 +14,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_previous</h1>
-  <p>With this function you can retrieve the index of the room <i>before</i> the room input into the function. For example you can use the variable <a href="room.htm"><span class="inline">room</span></a> to get the index of the current room and then use this function to find the room that comes before it, as listed in the <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a>. If there is no room before the one you input then -1 is returned. Note that this function will not recognise or take into consideration rooms that have been added dynamically using <span class="inline"><a href="room_add.htm">room_add()</a></span> or <span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>pomieszczenie_poprzednie</h1>
+  <p>Za pomocą tej funkcji można pobrać indeks strony <span class="notranslate">room</span> <i>przed</i> stroną <span class="notranslate">room</span> wprowadzoną do funkcji. Na przykład można użyć zmiennej <a href="room.htm"><span class="inline">room</span></a> aby uzyskać indeks bieżącego adresu <span class="notranslate">room</span>, a następnie użyć tej funkcji do znalezienia adresu <span class="notranslate">room</span>, który znajduje się przed nim, zgodnie z listą w programie <a href="../../../../Settings/The_Room_Manager.htm">Room Manager</a>. Jeśli przed wprowadzonym przez Ciebie adresem nie ma adresu <span class="notranslate">room</span>, zwracane jest -1. Należy pamiętać, że ta funkcja nie rozpoznaje ani nie uwzględnia stron <span class="notranslate">rooms</span>, które zostały dodane dynamicznie przy użyciu <span class="inline"><a href="room_add.htm">room_add()</a></span> lub <span class="inline"><a href="room_duplicate.htm">room_duplicate()</a></span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">room_previous(numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>numb</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The index of the room to get the one before from.</td>
+        <td><span class="notranslate">numb</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The index of the room to get the one before from.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Asset_Room">Room Asset</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if room_previous(room) != -1<br />
     {<br />
         room_goto_previous();<br />
     }</p>
-  <p>The above code will check to see if the previous room exists and if so, it will go to it.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdzi, czy istnieje poprzednia strona <span class="notranslate">room</span>, a jeśli tak, to przejdzie do niej.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Rooms.htm">Rooms</a></div>
-        <div style="float:right">Next: <a href="room.htm">room</a></div>
+        <div style="float:left">Powrót: <a href="Rooms.htm">Pokoje</a></div>
+        <div style="float:right">Następny: <a href="room.htm"><span class="notranslate">room</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 room_previous

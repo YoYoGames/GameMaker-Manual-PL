@@ -6,7 +6,7 @@
   <title>game_save_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="This page outlines the function game_save_buffer" />
   <meta name="rh-index-keywords" content="game_save_buffer" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>game_save_buffer</h1>
-  <p>This is a variant of the <span class="inline"><a href="game_save.htm">game_save()</a></span> function, so please read <a href="game_save.htm">its page</a> first as it contains important information related to its use and to this function&#39;s as well.</p>
-  <p>With this function you can save the current state of the game to a previously created &quot;grow&quot; buffer (see <a href="../Buffers/Buffers.htm">Buffers</a>) which can then be loaded again at any time using <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> function. This function is designed for use in a single room at a time (ie: it&#39;s not advised to do a buffer save in one room, then try and load the buffer from another one) and should ideally be used only for checkpoints or level restarts.</p>
-  <p class="note"><b>NOTE</b>: This function is <i>very</i> limited and it is designed for the beginner to get a checkpoint system up and running quickly, but more advanced users may prefer to code their own system using the <a href="../File_Handling/File_Handling.htm">File</a> functions, due to the fact that the game will <i>not</i> save any of the dynamic resources like data structures, surfaces, added sprites etc.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Jest to odmiana funkcji <span class="inline"><a href="game_save.htm">game_save()</a></span>, dlatego należy najpierw przeczytać <a href="game_save.htm">stronę</a> poświęconą tej funkcji, ponieważ zawiera ona ważne informacje dotyczące jej użycia, a także tej funkcji.</p>
+  <p>Za pomocą tej funkcji można zapisać aktualny stan gry w utworzonym wcześniej <a href="../Buffers/Buffers.htm">buforze</a>&quot;grow&quot; <span class="notranslate">buffer</span> (patrz <a href="../Buffers/Buffers.htm">Bufory</a>), który następnie można w dowolnym momencie ponownie załadować za pomocą <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> funkcja. Ta funkcja jest przeznaczona do użycia w jednym <span class="notranslate">room</span> w danym czasie (np. nie zaleca się zapisywania <span class="notranslate">buffer</span> w jednym <span class="notranslate">room</span>, a następnie próbowania załadowania <span class="notranslate">buffer</span> z innego ) i powinna być używana tylko do punktów kontrolnych lub restartów poziomów.</p>
+  <p class="note"><b>UWAGA</b>: Ta funkcja jest <i>bardzo</i> ograniczona i została zaprojektowana dla początkujących graczy, aby szybko uruchomić system punktów kontrolnych. Bardziej zaawansowani użytkownicy mogą jednak preferować kodowanie własnego systemu za pomocą funkcji <a href="../File_Handling/File_Handling.htm">Plik</a>, ponieważ gra <i>nie</i> będzie zapisywać żadnych zasobów dynamicznych, takich jak struktury danych, powierzchnie, dodane strony <span class="notranslate">sprites</span> itp.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">game_save_buffer(buffer);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The buffer id to save to.</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The buffer id to save to.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br />
     {<br />
         global.Checkpoint = true;<br />
         game_save_buffer(save_buff);<br />
     }</p>
-  <p>The above code will set a global variable to <span class="inline">true</span> and then save the current game state to the buffer indexed in the variable &quot;save_buff&quot; when the key &quot;S&quot; is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod ustawi zmienną globalną na <span class="inline">true</span>, a następnie po naciśnięciu klawisza &quot;S&quot; zapisze aktualny stan gry na stronie <span class="notranslate">buffer</span> zaindeksowanej w zmiennej &quot;save_buff&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Game_Control.htm">General Game Control</a></div>
-        <div style="float:right">Next: <a href="game_get_speed.htm">game_get_speed</a></div>
+        <div style="float:left">Powrót: <a href="General_Game_Control.htm">Ogólne sterowanie grą</a></div>
+        <div style="float:right">Następny: <a href="game_get_speed.htm"><span class="notranslate">game_get_speed</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 game_save_buffer

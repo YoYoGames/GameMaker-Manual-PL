@@ -6,7 +6,7 @@
   <title>Amazon Fire</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that details the Amazon Fire Game Options" />
   <meta name="rh-index-keywords" content="Game Options - Amazon Fire (Legacy)" />
@@ -14,89 +14,89 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Amazon Fire Game Options (Legacy)</h1>
-  <h3><span class="important"><strong>IMPORTANT</strong></span> Amazon Fire options are only visible for old projects, and are read-only. Amazon Fire and all other Android targets are now configured in the <a href="Android.htm">Android Game Options</a>.</h3>
-  <p>This section outlines the different options available to you that control how your Amazon Fire game projects will be compiled. The different sections are:</p>
-  <p> </p>
-  <h2>General</h2>
-  <p><img alt="Amazon Fire General Options Part 1" class="center" src="../../assets/Images/Settings/AmazonFire_General1_Options.png" />The first part of the <strong>General </strong>section is dedicated to the <strong>Product Information</strong> and the <strong>Build Settings</strong>. You should fill in the Product information, which includes the projects <strong>Display Name</strong>, its Package information, which consists of a <strong>Domain</strong>, <strong>Company </strong>and <strong>Product</strong>. The package information can only be made up of letters from A-Z and numbers 0-9, with no symbols or other special characters at all, nor should it have uppercase characters. These details will then be used to generate a Package ID with the format &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
-  <p class="note"><strong>NOTE</strong>: If you have already set up the <a href="Android.htm">Android</a> target Game Options, you can click the &quot;<strong>Sync from Android</strong>&quot; button at the top to transfer the relevant information from the Android target to the Amazon Fire.</p>
-  <p>You then need to set the <strong>Build Tools</strong> as well as the <strong>Target</strong>, <strong>Minimum </strong>and <strong>Compile SDK</strong> versions.</p>
-  <p class="note"><strong>NOTE</strong>: There is also an option for the &quot;<strong>Support Library</strong>&quot; version to use. From <span data-keyref="GameMaker Name">GameMaker</span> v2.2.4 and above, this is no longer required and any values used here will be ignored. The setting is maintained for use with legacy projects that require an earlier runtime than 2.2.4.</p>
-  <p>The Build Tools (and Support Library if required) are used when <span data-keyref="GameMaker Name">GameMaker</span> builds your game for the Android/Amazon Fire target and should be set to appropriate values based on the tools you have installed using Android Studio.</p>
+  <h1>Amazon Fire Opcje gier (starsze)</h1>
+  <h3><span class="important"><strong>WAŻNE</strong></span> Opcje Amazon Fire są widoczne tylko w starych projektach i są tylko do odczytu. <span class="notranslate">Amazon Fire</span> i wszystkie inne cele <span class="notranslate">Android</span> są teraz konfigurowane w <a href="Android.htm">opcjach gry Android</a>.</h3>
+  <p>W tej sekcji opisano różne dostępne opcje, które pozwalają kontrolować sposób kompilowania projektów gier <span class="notranslate">Amazon Fire</span>. Poszczególne sekcje to:</p>
+  <p> </p>
+  <h2>Ogólne</h2>
+  <p><img>Pierwsza część sekcji <strong>Ogólne </strong>jest poświęcona <strong>Informacjom</strong> o produkcie oraz <strong>Ustawieniom budowania</strong>. Należy wypełnić Informacje o produkcie, które obejmują <strong>Nazwę wyświetlaną</strong> projektu, Informacje o pakiecie, które składają się z <strong>Domeny</strong>, <strong>Firmy </strong>i <strong>Produktu</strong>. Informacje o pakiecie mogą składać się wyłącznie z liter od A-Z i cyfr 0-9, bez symboli i innych znaków specjalnych, nie powinny też zawierać wielkich liter. Informacje te zostaną następnie wykorzystane do wygenerowania identyfikatora pakietu w formacie &quot;<span class="inline">com.company.myappname</span>&quot;.</p>
+  <p class="note"><strong>UWAGA</strong>: Jeśli skonfigurowano już opcje gry w systemie <a href="Android.htm">Android</a>, można kliknąć przycisk &quot;<strong>Synchronizacja z systemu Android</strong>&quot; u góry, aby przenieść odpowiednie informacje z urządzenia docelowego <span class="notranslate">Android</span> na stronę <span class="notranslate">Amazon Fire</span>.</p>
+  <p>Następnie należy ustawić <strong>Narzędzia do budowania</strong> oraz Wersje <strong>docelowe</strong>, <strong>minimalne </strong>i <strong>kompilowane SDK</strong>.</p>
+  <p class="note"><strong>UWAGA</strong>: Istnieje także opcja określająca wersję &quot;<strong>Support Library</strong>&quot;, która ma być używana. Od wersji <span data-keyref="GameMaker Name">GameMaker</span> 2.2.4 nie jest ona już wymagana, a wszelkie wartości użyte w tym miejscu zostaną zignorowane. Ustawienie to zostało zachowane do użytku w starszych projektach, które wymagają wersji <span class="notranslate">runtime</span> wcześniejszej niż 2.2.4.</p>
+  <p>Narzędzia do budowania (i biblioteka pomocnicza, jeśli jest wymagana) są używane podczas budowania gry w programie <span data-keyref="GameMaker Name">GameMaker</span> dla systemu Android/Amazon Fire i powinny być ustawione na odpowiednie wartości w zależności od narzędzi zainstalowanych w <span class="notranslate">Android</span> Studio.</p>
   <ul class="colour">
-    <li>The <strong>Target SDK</strong> indicates that you have tested your app on (up to and including) the version you specify here. This is simply to give the Android OS an idea of how it should handle your app in terms of OS features. For all practical purposes, most apps are going to want to set Target SDK to the latest released version of the API (as used by the Compile SDK setting). This will ensure your app looks as good as possible on the most recent Android devices. Note that from November 2019 Google has made API level 28 the required target.</li>
-    <li>The <strong>Minimum SDK</strong> version is the minimum API level that will run your project. From November 2019 Google has made API level 16 the absolute minimum required, but if you add extensions then they may require a higher minimum API level.</li>
-    <li>The <strong>Compile SDK</strong> version is the version of the API that the project is compiled against. This means you can use Android API features included in that version of the API. If you try and use API 16 features - for example - but set Compile SDK 15, then you will get a compilation error. However, if you set the Compile SDK to 28 then you can still run the app on an API 26 device (as well as all other previous versions too).</li>
+    <li> <strong>Target SDK</strong> wskazuje, że aplikacja została przetestowana na wersji (do podanej tutaj włącznie). Ma to na celu umożliwienie systemowi <span class="notranslate">Android</span> zorientowanie się, jak powinien obsługiwać Twoją aplikację pod względem funkcji systemu. Ze względów praktycznych większość aplikacji będzie chciała ustawić opcję Target SDK na najnowszą wydaną wersję API (zgodnie z ustawieniami Compile SDK). Dzięki temu Twoja aplikacja będzie wyglądać tak dobrze, jak to tylko możliwe na najnowszych urządzeniach <span class="notranslate">Android</span>. Należy pamiętać, że od listopada 2019 roku Google wprowadziło poziom API 28 jako wymagany poziom docelowy.</li>
+    <li> <strong>Minimalna</strong> wersja <strong>SDK</strong> to minimalny poziom API, na którym będzie działać Twój projekt. Od listopada 2019 r. Google wyznaczyło poziom API 16 jako absolutne minimum, ale jeśli dodasz stronę <span class="notranslate">extensions</span>, może ona wymagać wyższego minimalnego poziomu API.</li>
+    <li>Wersja <strong>Compile SDK</strong> jest wersją API, z którą projekt jest kompilowany. Oznacza to, że można używać funkcji API <span class="notranslate">Android</span> zawartych w tej wersji API. Jeśli na przykład spróbujesz użyć funkcji API 16, ale ustawisz Compile SDK 15, otrzymasz błąd kompilacji. Jeśli jednak ustawisz Compile SDK na 28, nadal będziesz mógł uruchomić aplikację na urządzeniu z interfejsem API 26 (a także wszystkimi poprzednimi wersjami).</li>
   </ul>
-  <p>You can select from one of the predefined target settings by clicking on the <strong>Pre-populate SDK</strong> values to chosen API level button, which will open a list of different APIs to choose from. Selecting any one of them will populate all the SDK files with appropriate values which you can then use or edit as required.</p>
-  <p class="note"><strong>NOTE</strong>: You must have installed the appropriate APIs in the Android SDK Manager or through Android Studio for your projects to compile correctly.</p>
-  <p><img alt="Amazon Fire General Options Part 2" class="center" src="../../assets/Images/Settings/AmazonFire_General2_Options.png" />The second part of the General section covers the different <strong>Orientations </strong>that your game can be run on for the best user experience. The available options are:</p>
+  <p>Można wybrać jedno z predefiniowanych ustawień docelowych, klikając przycisk <strong>Wstępnie wypełnij</strong> wartości <strong>SDK</strong> do wybranego poziomu API, co spowoduje otwarcie listy różnych interfejsów API do wyboru. Wybranie dowolnego z nich spowoduje wypełnienie wszystkich plików SDK odpowiednimi wartościami, które można następnie wykorzystać lub edytować zgodnie z potrzebami.</p>
+  <p class="note"><strong>UWAGA</strong>: Aby projekty zostały poprawnie skompilowane, należy zainstalować odpowiednie interfejsy API w menedżerze <span class="notranslate">Android</span> SDK Manager lub za pośrednictwem <span class="notranslate">Android</span> Studio.</p>
+  <p><img>Druga część sekcji Ogólne zawiera informacje o różnych <strong>orientacjach </strong>, w jakich można uruchomić grę, aby zapewnić jak najlepsze wrażenia. Dostępne są następujące opcje:</p>
   <ul class="Disc">
-    <li>Portrait</li>
-    <li>Portrait-flipped</li>
-    <li>Landscape</li>
-    <li>Landscape-flipped</li>
+    <li>Portret</li>
+    <li>Odwrócona w pionie</li>
+    <li>Krajobraz</li>
+    <li>Przerzucanie krajobrazu</li>
   </ul>
-  <p>Finally you have the following miscellaneous options:</p>
+  <p>Na koniec dostępne są następujące różne opcje:</p>
   <ul class="colour">
-    <li><strong>Enable Bluetooth/iCade support</strong>: This will add support for bluetooth or iCade gamepads to your game project. This is on by default.</li>
-    <li><strong>Run Lint Code Analysis</strong>: When this option is flagged, the build tools will run a lint code analysis on the project as it builds, giving a more in-depth error check and showing more information in the output window as the project compiles (a LOG file will be created too, with the path to the file shown at the end of compiling in the <a href="../../Introduction/The_Output_Window.htm">Output Window</a>). Note that not everything flagged by lint analysis as an error is necessarily problematic for your game, and having this enabled may mean that your game no longer compiles, even though when it is off, it will compile and run fine. Essentially this is only for debugging, and the option is off by default.</li>
-    <li><strong>Install Location</strong>: Here you can set the default Install Location for your game. This can either be set to <strong>Automatic</strong>, in which case the game will be installed to the location chosen by the user on their device, or it can be set to <strong>Prefer External</strong> which will always try to install the game to the external storage of the device.</li>
+    <li><strong>Włącz obsługę Bluetooth/iCade</strong>: To spowoduje dodanie do projektu gry obsługi gamepadów bluetooth lub iCade. Domyślnie opcja ta jest włączona.</li>
+    <li><strong>Uruchom analizę kodu Lint</strong>: Gdy ta opcja jest zaznaczona, narzędzia kompilacji uruchomią analizę kodu lint na projekcie podczas jego kompilacji, dając bardziej dogłębną kontrolę błędów i pokazując więcej informacji w oknie wyjściowym podczas kompilacji projektu (zostanie także utworzony plik LOG, z <span class="notranslate">path</span> do pliku pokazanego na końcu kompilacji w <a href="../../Introduction/The_Output_Window.htm">oknie wyjściowym</a>). Należy pamiętać, że nie wszystko, co jest sygnalizowane przez analizę lint jako błąd, musi być problematyczne dla gry, a włączenie tej funkcji może spowodować, że gra przestanie się kompilować, mimo że gdy jest wyłączona, będzie się kompilować i działać poprawnie. Zasadniczo dotyczy to tylko witryny <span class="notranslate">debugging</span>, a opcja ta jest domyślnie wyłączona.</li>
+    <li><strong>Lokalizacja instalacji</strong>: W tym miejscu można ustawić domyślną lokalizację instalacji gry. Można wybrać opcję <strong>Automatycznie</strong>, co spowoduje, że gra zostanie zainstalowana w lokalizacji wybranej przez użytkownika na jego urządzeniu, lub opcję <strong>Preferuj zewnętrzne</strong>, co spowoduje, że gra będzie zawsze próbowała zostać zainstalowana w pamięci zewnętrznej urządzenia.</li>
   </ul>
-  <p>You can also set the Amazon Fire <strong>Sleep Margin</strong> here. This option is related to reducing stuttering when running your game on specific systems. Basically, if your game is running faster than your room speed <span data-keyref="GameMaker Name">GameMaker</span> will &quot;sleep&quot; for the remaining time, but this sleep can be quite inaccurate and you can often end of sleeping for longer than necessary, causing your frame to take longer which causes stuttering. To get around this we can sleep for less time, then sit in a tight loop for the remainder of the time to make it more accurate - although the problem with sitting in a loop is that it causes CPU usage to increase, which in turn can cause your CPU temperatures to rise and your device to use more battery. By default, this value is set to 4, and in 99.99% of the cases you&#39;ll be fine with this, but for low end devices or for devices with a lot of background processes running this may not be an ideal solution and a value of 5 up to 10 may be required. Note though that this is very much a device specific configuration and what works on your build device may not be appropriate for another user, and as such if in doubt leave it set to 4.</p>
-  <p> </p>
-  <h2>Graphics</h2>
-  <p><img alt="Amazon Fire Graphics Options" class="center" src="../../assets/Images/Settings/AmazonFire_Graphics_Options.png" />Here you can change the following details related to how your game will be displayed, with the following options are available:</p>
+  <p>W tym miejscu można także ustawić <strong>Margines uśpienia</strong> <span class="notranslate">Amazon Fire</span>. Ta opcja jest związana z redukcją zacinania się gry podczas uruchamiania jej na określonych systemach. Zasadniczo, jeśli Twoja gra działa szybciej niż prędkość <span class="notranslate">room</span>, <span data-keyref="GameMaker Name">GameMaker</span> &quot;uśpi&quot; ją na pozostały czas, ale to uśpienie może być dość niedokładne i często może skończyć się uśpieniem dłuższym niż to konieczne, powodując wydłużenie czasu wyświetlania klatek, co powoduje zacinanie się gry. Aby to obejść, możemy spać krócej, a następnie przez resztę czasu siedzieć w ciasnym miejscu pod adresem <span class="notranslate">loop</span>, co sprawi, że pomiar będzie dokładniejszy. Problem z siedzeniem pod adresem <span class="notranslate">loop</span> polega jednak na tym, że powoduje to większe użycie procesora, co z kolei może spowodować wzrost temperatury procesora i większe zużycie baterii przez urządzenie. Domyślnie wartość ta jest ustawiona na 4 i w 99,99% przypadków będzie ona wystarczająca, ale w przypadku urządzeń z niższej półki lub urządzeń, w których działa wiele procesów w tle, może to nie być idealne rozwiązanie i może być wymagana wartość od 5 do 10. Należy jednak pamiętać, że jest to konfiguracja zależna od urządzenia i to, co działa na Twoim urządzeniu, może nie być odpowiednie dla innego użytkownika, dlatego w razie wątpliwości pozostaw ustawienie 4.</p>
+  <p> </p>
+  <h2>Grafika</h2>
+  <p><img>W tym miejscu można zmienić następujące szczegóły dotyczące sposobu wyświetlania gry, przy czym dostępne są następujące opcje:</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="glossterm" data-glossterm="linear interpolation">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is on by default.</li>
-    <li><strong>Screen Colour Depth</strong>: This can be used to set the colour depth for rendering to either 16bit or 24bit. This will affect the compatibility with some older devices if it is set to 24bit, and will also increase the <em>ashmem </em>that is needed (this is the shared memory on AmazonFire devices).</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit the device screen.</li>
+    <li><strong>Interpoluj kolory między pikselami</strong>: Włącza <a class="glossterm" data-glossterm="interpolacja liniowa">interpolację liniową</a>, która zasadniczo &quot;wygładza&quot; piksele. W przypadku wyraźnej grafiki pikselowej powinno być wyłączone, ale jeśli chcesz uzyskać ładne mieszanki alfa i grafikę o wygładzonych krawędziach, lepiej pozostawić to włączone. Domyślnie opcja ta jest włączona.</li>
+    <li><strong>Głębia kolorów ekranu</strong>: Można tu ustawić głębię kolorów dla renderowania na 16bit lub 24bit. Ustawienie 24bit wpłynie na kompatybilność z niektórymi starszymi urządzeniami, a także zwiększy zapotrzebowanie na <em>ashmem </em>(jest to pamięć współdzielona w urządzeniach AmazonFire).</li>
+    <li><strong>Skalowanie</strong>: W tym miejscu możesz wybrać, czy rysowany obszar ma być skalowany z zachowaniem proporcji ekranu urządzenia - dodając &quot;wypełnienie&quot; wokół krawędzi, aby dopasować go do ekranu - czy też może być rozciągnięty, aby dopasować go do ekranu urządzenia.</li>
   </ul>
-  <p>Finally there is the option to set the size of the <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
-  <p> </p>
-  <h2>Icons</h2>
-  <p><img alt="Amazon Fire Icons Options" class="center" src="../../assets/Images/Settings/AmazonFire_Icons_Options.png" />This section permits you to add the various <strong>Icon</strong> images that your project will need for the different store pages and devices. All icon images should be created as 24bit <span class="inline">*.png</span> files of the appropriate sizes given.</p>
-  <p>It is worth noting that <span data-keyref="GameMaker Name">GameMaker</span> has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require. The tool will generate Icons as well as Images (see the section below).</p>
-  <p> </p>
-  <h2>Images</h2>
-  <p><img alt="Amazon Fire Images Options" class="center" src="../../assets/Images/Settings/AmazonFire_Images_Options.png" />Here you can set the <strong>Border Colour</strong> that will be used as the background for splash screens that are not set to fill the full screen. You can also add <strong>Splash Screens</strong> to your final game file, for both <em>landscape </em>and <em>portrait </em>modes, which will be shown while the game loads on the device. This screen should be a 24bit <span class="inline">*.png</span> file, and is recommended to be the same size as the first room (or view) of your game. If you require that the splash screen be shown for a specific time then you can also set it here from 0 to 10 seconds (the default time of 0 means that it will only show for the duration of the asset loading). You can also set how the splash screen should be displayed from the following options:</p>
+  <p>Na koniec jest jeszcze opcja ustawienia rozmiaru <a class="glossterm" data-glossterm="strona tekstury" href="macOS.htm#">strony tekstury</a>. Domyślnym (i najbardziej kompatybilnym) rozmiarem jest 2048x2048, ale można wybrać dowolny rozmiar z zakresu od 256x256 do 8192x8192. Dostępny jest także przycisk oznaczony <strong><strong>Podgląd </strong></strong>który wygeneruje strony <span class="notranslate">texture</span> dla tej platformy, a następnie otworzy okno, w którym będzie można zobaczyć, jak wyglądają. Może to być bardzo przydatne, jeśli chcesz zobaczyć, jaką strukturę mają strony <span class="notranslate">texture</span> i uniknąć sytuacji, w której strony <span class="notranslate">texture</span> byłyby większe (lub mniejsze) niż to konieczne. Więcej informacji na temat stron <span class="notranslate">texture</span> można znaleźć <a href="../Texture_Information/Texture_Pages.htm">tutaj</a>.</p>
+  <p class="note"><strong>UWAGA</strong>: Pamiętaj, że im większy rozmiar strony <span class="notranslate">texture</span>, tym mniejsza kompatybilność gry z różnymi przeglądarkami i urządzeniami.</p>
+  <p> </p>
+  <h2>Ikony</h2>
+  <p><img>Ta sekcja umożliwia dodanie różnych obrazów <strong>ikon</strong>, które będą potrzebne w projekcie dla różnych stron sklepu i urządzeń. Wszystkie obrazy ikon powinny być utworzone jako pliki 24bit <span class="inline">*.png</span> o odpowiednich rozmiarach.</p>
+  <p>Warto zauważyć, że <span data-keyref="GameMaker Name">GameMaker</span> posiada narzędzie <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a>, które może być używane do automatycznego tworzenia wszystkich obrazów wymaganych dla różnych platform docelowych, na które kompilowana jest gra. Jeśli korzystasz z tego narzędzia, powinieneś zweryfikować utworzone obrazy, aby upewnić się, że spełniają one Twoje wymagania. Narzędzie wygeneruje zarówno ikony, jak i obrazy (patrz sekcja poniżej).</p>
+  <p> </p>
+  <h2>Zdjęcia</h2>
+  <p><img>W tym miejscu można ustawić <strong>kolor obramowania</strong>, który będzie używany jako tło dla ekranów powitalnych, które nie mają wypełniać całego ekranu. Możesz także dodać <strong>ekrany</strong> powitalne do ostatecznego pliku gry, zarówno dla trybu <em>poziomego </em>, jak i <em>pionowego </em>, które będą wyświetlane podczas ładowania gry na urządzeniu. Ekran ten powinien być plikiem <span class="inline">*.png</span> o rozdzielczości 24 bitów i powinien mieć taki sam rozmiar jak pierwsza strona <span class="notranslate">room</span> (lub widok) gry. Jeśli chcesz, aby splash screen był wyświetlany przez określony czas, możesz go tutaj ustawić w zakresie od 0 do 10 sekund (domyślny czas 0 oznacza, że splash screen będzie wyświetlany tylko przez czas ładowania <span class="notranslate">asset</span> ). Możesz także określić sposób wyświetlania ekranu powitalnego, korzystając z następujących opcji:</p>
   <ul class="colour">
-    <li><strong>Keep Aspect Ratio</strong>: This will maintain the aspect ratio of the image compared to the device screen, adding &quot;padding&quot; around the edges where required.</li>
-    <li><strong>Crop To Fit</strong>: This will keep the image 1:1 with the device screen and crop (or pad) the edges as required.</li>
-    <li><strong>Stretch</strong>: This will stretch the image to fill the device screen (and may distort the image shown).</li>
+    <li><strong>Zachowaj</strong> proporcje: Ta opcja pozwoli zachować proporcje obrazu w stosunku do ekranu urządzenia, dodając &quot;wyściełanie&quot; wokół krawędzi tam, gdzie jest to wymagane.</li>
+    <li><strong>Kadruj, aby dopasować</strong>: Spowoduje to zachowanie obrazu w proporcji 1:1 z ekranem urządzenia i przycięcie (lub wyściełanie) krawędzi w razie potrzeby.</li>
+    <li><strong>Rozciągnij</strong>: Spowoduje to rozciągnięcie obrazu tak, aby wypełnił ekran urządzenia (może to spowodować zniekształcenie wyświetlanego obrazu).</li>
   </ul>
-  <p>Finally you can set the <strong>Banner Image</strong>, which is also a 24bit <span class="inline">*.png</span>.</p>
-  <p> </p>
-  <h2>Permissions</h2>
-  <p><img alt="Amazon Fire Permissions Options" class="center" src="../../assets/Images/Settings/AmazonFire_Permissions_Options.png" />From this tab you can change some of the permissions that your game may request within the Amazon Fire Manifest. <span data-keyref="GameMaker Name">GameMaker</span> will allocate permissions automatically as required based on the functions the game uses, however you may find you require a permission for your game that hasn&#39;t been correctly assigned (for example, when you use custom extensions) in which case tick the requisite permission box.</p>
-  <p>The list below outlines those permissions that are available:</p>
+  <p>Na koniec można ustawić <strong>obrazek banera</strong>, który również ma postać 24-bitową: <span class="inline">*.png</span>.</p>
+  <p> </p>
+  <h2>Uprawnienia</h2>
+  <p><img>Na tej karcie możesz zmienić niektóre z uprawnień, których Twoja gra może wymagać w Manifeście <span class="notranslate">Amazon Fire</span>. <span data-keyref="GameMaker Name">GameMaker</span> automatycznie przydziela uprawnienia w zależności od funkcji używanych przez grę, jednak może się okazać, że w grze potrzebne są uprawnienia, które nie zostały prawidłowo przypisane (np. w przypadku korzystania z niestandardowych stron <span class="notranslate">extensions</span>).</p>
+  <p>Na poniższej liście przedstawiono dostępne uprawnienia:</p>
   <ul class="colour">
-    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span>: Will permit your game to write to external storage.</li>
-    <li><span class="inline">READ_PHONE_STATE</span>: Allow read only access to the phone state.</li>
-    <li><span class="inline">ACCESS_NETWORK_STATE</span>: Permit your game to access information about networks.</li>
-    <li><span class="inline">INTERNET</span>: Permit your game to open network sockets.</li>
-    <li><span class="inline">BLUETOOTH</span>: Will permit your game to connect to paired Bluetooth devices.</li>
-    <li><span class="inline">RECORD_AUDIO</span>: Will permit your game to record audio input from the microphone.</li>
+    <li><span class="inline">WRITE_EXTERNAL_STORAGE</span>: Umożliwia zapis gry na zewnętrznej pamięci masowej.</li>
+    <li><span class="inline">READ_PHONE_STATE</span>: Zezwolenie na dostęp do stanu telefonu tylko w trybie odczytu.</li>
+    <li><span class="inline">ACCESS_NETWORK_STATE</span>: Zezwolenie grze na dostęp do informacji o sieciach.</li>
+    <li><span class="inline">INTERNET</span>: Zezwalaj grze na otwieranie gniazd sieciowych.</li>
+    <li><span class="inline">BLUETOOTH</span>: Umożliwia podłączenie gry do sparowanych urządzeń Bluetooth.</li>
+    <li><span class="inline">RECORD_AUDIO</span>: Umożliwia grze nagrywanie dźwięku z mikrofonu.</li>
   </ul>
-  <p class="note"><strong>NOTE</strong>: If you are not sure that you need these, you should probably just leave them un-checked by default and let <span data-keyref="GameMaker Name">GameMaker</span> deal with the permissions for your game.</p>
-  <p>The Amazon Fire Permissions secton also has an area where you can inject permissions into the <strong>Android Application Tags</strong> in the <span class="inline">Androidmanifest.xml</span>. You can find a full list of available tags from the Android documentation here:</p>
+  <p class="note"><strong>UWAGA</strong>: Jeśli nie jesteś pewien, czy potrzebujesz tych opcji, prawdopodobnie powinieneś pozostawić je domyślnie odznaczone i pozwolić programowi <span data-keyref="GameMaker Name">GameMaker</span> zająć się uprawnieniami dla Twojej gry.</p>
+  <p>Sekcja Uprawnienia na stronie <span class="notranslate">Amazon Fire</span> zawiera również obszar, w którym można wstrzykiwać uprawnienia do znaczników <strong>aplikacji na Androida</strong> na stronie <span class="inline">Androidmanifest.xml</span>. Pełną listę dostępnych znaczników można znaleźć w dokumentacji <span class="notranslate">Android</span> tutaj:</p>
   <ul class="colour">
-    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Android Developer: Application Tags</a></li>
+    <li><a href="https://developer.android.com/guide/topics/manifest/application-element">Programista Android: Znaczniki aplikacji</a></li>
   </ul>
-  <p>It is worth noting that for target API 28 and above, you will no longer be permitted to use any external web calls using &quot;<span class="inline">http</span>&quot; - &quot;<span class="inline">https</span>&quot; is required instead - unless you add the following tag:</p>
+  <p>Warto zauważyć, że w przypadku docelowego API 28 i nowszych nie będzie już można używać zewnętrznych wywołań internetowych z użyciem &quot;<span class="inline">http</span>&quot; - zamiast tego wymagane jest &quot;<span class="inline">https</span>&quot; - chyba że zostanie dodany następujący znacznik:</p>
   <p class="code">android:usesCleartextTraffic = &quot;true&quot;</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a href="Android.htm">Android</a></div>
+        <div style="float:left">Wstecz: <a href="../Game_Options.htm">Opcje gry</a></div>
+        <div style="float:right">Następny: <a href="Android.htm">Android</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Amazon Fire Game Options (Legacy)

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>device_mouse_x_to_gui</title>
+  <title>urządzenie_mouse_x_do_gui</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for device_mouse_x_to_gui" />
   <meta name="rh-index-keywords" content="device_mouse_x_to_gui" />
@@ -15,28 +15,28 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>device_mouse_x_to_gui</h1>
-  <p>This function returns the x position of the touch on the device in relation to the GUI layer. Since the GUI layer can be set to be a different size independently of the screen resolution <i>and</i> the room size, it can sometimes be complicated to get the exact point on the GUI layer that a user has touched the screen. With this function you can get that position based on the actual GUI size, making GUI buttons and HUD elements easier to create and interact with. If you are running this on a the HTML5 or PC and Mac modules then this value is updated constantly, as long as the device (usually a mouse) is plugged in, however for mobile devices, this will only be updated while the screen is being touched, and note that the maximum number of touches that can be detected will depend very much on the device being used and the OS it runs.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>urządzenie_mouse_x_do_gui</h1>
+  <p>Ta funkcja zwraca pozycję x dotknięcia na urządzeniu w stosunku do warstwy GUI. Ponieważ warstwa GUI może mieć różny rozmiar, niezależnie od rozdzielczości ekranu <i>i</i> rozmiaru strony <span class="notranslate">room</span>, uzyskanie dokładnego punktu na warstwie GUI, w którym użytkownik dotknął ekranu, może być czasem skomplikowane. Dzięki tej funkcji można uzyskać tę pozycję w oparciu o rzeczywisty rozmiar GUI, co ułatwia tworzenie przycisków GUI i elementów HUD oraz interakcję z nimi. Jeśli korzystasz z modułów HTML5 lub PC i Mac, wartość ta jest aktualizowana na bieżąco, dopóki urządzenie (zwykle mysz) jest podłączone, jednak w przypadku urządzeń przenośnych będzie ona aktualizowana tylko wtedy, gdy ekran jest dotykany. Należy pamiętać, że maksymalna liczba dotknięć, które można wykryć, zależy w dużym stopniu od używanego urządzenia i systemu operacyjnego.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">device_mouse_x_to_gui(device);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The device (from 0 - <i>n</i>) that is being checked.</td>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The device (from 0 - <i>n</i>) that is being checked.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if device_mouse_check_button(0, mb_left)<br />
     {<br />
         if device_mouse_x_to_gui(0) &gt; 0 &amp;&amp; device_mouse_x_to_gui(0) &lt; 32<br />
@@ -48,18 +48,18 @@
             pressed = false;<br />
         }<br />
     }</p>
-  <p>The above code checks to see if the device mouse is being pressed and if so it then polls the device x position on the GUI layer to see if it is within the parameters. If it is it sets the variable &quot;pressed&quot; to <span class="inline">true</span>, other wise it sets it to <span class="inline">false</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy mysz urządzenia jest naciskana, a jeśli tak, to sprawdza pozycję x urządzenia na warstwie GUI, aby sprawdzić, czy mieści się ona w parametrach. Jeśli tak, ustawia zmienną &quot;pressed&quot; na <span class="inline">true</span>, w przeciwnym razie ustawia ją na <span class="inline">false</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Device_Input.htm">Device Input</a></div>
-        <div style="float:right">Next: <a href="device_mouse_y_to_gui.htm">device_mouse_y_to_gui</a></div>
+        <div style="float:left">Powrót: <a href="Device_Input.htm">Wejście urządzenia</a></div>
+        <div style="float:right">Następny: <a href="device_mouse_y_to_gui.htm"><span class="notranslate">device_mouse_y_to_gui</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 device_mouse_x_to_gui

@@ -6,7 +6,7 @@
   <title>os_is_paused</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for os_is_paused" />
   <meta name="rh-index-keywords" content="os_is_paused" />
@@ -16,18 +16,18 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>os_is_paused</h1>
-  <p>When developing for mobile devices, you need to have a way to check that the device is still focused on your game or not, especially as if your game is on an iOS, Android or Windows Phone device then it can be interrupted by phone calls and other apps. You can use this function to check if the device is paused or not.</p>
-  <p>It is worth noting that this function will run any code that is contained within the code block on devices but then <span data-keyref="GameMaker Name">GameMaker</span> will be paused immediately after as the device caches the game as a background process. So if you have something like the example code provided below, the instance to be created will not actually appear or run any of its events <i>until after the game has been restarted from the cached state</i>. This means that you may prefer to have the <span class="inline">os_is_paused</span> function call an alarm and then in the alarm event (which will be set when the device is paused but not run until it is un-paused) create a pause menu, restart music etc...</p>
-  <p>If you are using this function on Windows, Ubuntu (Linux), MacOS or HTML5 platforms, then the function is only toggled for <b>one step</b> to <span class="inline">true</span> when the game loses focus, and then it will return <span class="inline">false</span> again until the game is returned to focus (and loses it again). This is because these platforms do not cache apps and games, and so these will continue to run in the background.</p>
-  <p class="note"><b>NOTE</b>: On mobile devices, sounds and music will be stopped when the os is paused. They will <b>not</b> restart again unless you specifically start them with the appropriate function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Podczas tworzenia gier na urządzenia mobilne trzeba mieć możliwość sprawdzenia, czy urządzenie jest nadal skoncentrowane na grze, czy nie. Zwłaszcza że gra na urządzeniu <span class="notranslate">iOS</span>, <span class="notranslate">Android</span> lub <span class="notranslate">Windows Phone</span> może zostać przerwana przez rozmowy telefoniczne i inne aplikacje. Za pomocą tej funkcji można sprawdzić, czy urządzenie jest wstrzymane, czy nie.</p>
+  <p>Warto zauważyć, że ta funkcja uruchomi na urządzeniach dowolny kod zawarty w bloku kodu, ale zaraz potem <span data-keyref="GameMaker Name">GameMaker</span> zostanie wstrzymany, ponieważ urządzenie <span class="notranslate">caches</span> gra jako proces działający w tle. Jeśli więc masz coś takiego, jak w poniższym przykładzie, tworzona instancja nie pojawi się ani nie wykona żadnego ze swoich zdarzeń, <i>dopóki gra nie zostanie ponownie uruchomiona z buforowanego stanu</i>. Oznacza to, że lepiej jest, aby funkcja <span class="inline">os_is_paused</span> wywoływała alarm, a następnie w zdarzeniu alarmowym (które zostanie ustawione, gdy urządzenie zostanie wstrzymane, ale nie zostanie uruchomione, dopóki nie zostanie ponownie wstrzymane) tworzyła menu pauzy, uruchamiała ponownie muzykę itd.</p>
+  <p>Jeśli korzystasz z tej funkcji na platformach <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>), MacOS lub HTML5, funkcja jest przełączana tylko na <b>jeden krok</b> do <span class="inline">true</span>, gdy gra traci fokus, a następnie powraca do <span class="inline">false</span> ponownie, dopóki gra nie odzyska fokusu (i ponownie go nie straci). Dzieje się tak dlatego, że na tych platformach nie ma strony <span class="notranslate">cache</span> aplikacje i gry będą nadal działać w tle.</p>
+  <p class="note"><b>UWAGA</b>: Na urządzeniach przenośnych dźwięki i muzyka zostaną zatrzymane po wstrzymaniu os. <b>Nie</b> zostaną one ponownie uruchomione, chyba że użytkownik uruchomi je za pomocą odpowiedniej funkcji.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">os_is_paused()</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if os_is_paused()<br />
     {<br />
         if !instance_exists(obj_PauseMenu)<br />
@@ -35,18 +35,18 @@
             instance_create_layer(0, 0, &quot;Controllers&quot;, obj_PauseMenu);<br />
         }<br />
     }</p>
-  <p>The above code checks to see if the game has been paused, and if it has then it creates an instance of the object &quot;obj_PauseMenu&quot; if none exist already.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza, czy gra została wstrzymana, a jeśli tak, to tworzy instancję <span class="notranslate">object</span> &quot;obj_PauseMenu&quot;, jeśli żadna jeszcze nie istnieje.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
-        <div style="float:right">Next: <a href="os_is_network_connected.htm">os_is_network_connected</a></div>
+        <div style="float:left">Powrót: <a href="OS_And_Compiler.htm">System operacyjny i kompilator</a></div>
+        <div style="float:right">Następny: <a href="os_is_network_connected.htm"><span class="notranslate">os_is_network_connected</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 os_is_paused

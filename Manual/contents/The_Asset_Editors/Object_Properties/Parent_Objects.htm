@@ -3,70 +3,69 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Parent Objects</title>
+  <title>Obiekty macierzyste</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing object parenting" />
   <meta name="rh-index-keywords" content="Objects - Parents" />
   <meta name="search-keywords" content="parent,child,inheritance,object parenting" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Parent Objects</h1>
-  <p>When working with objects in the <span data-keyref="GameMaker Name">GameMaker</span> IDE, you can set up <strong>Parent </strong>/ Child hierarchies. This is done by clicking the &quot;Parent&quot; button in the object editor and then choosing another object from the Asset Browser
-    to be the &quot;parent&quot; of the one being edited:</p>
-  <p><img alt="Adding A Parent" class="center" src="../../assets/Images/Asset_Editors/Editor_Objects_Parent.png" />So, every object in your game project can have a parent object, but what does this mean? Well, when an object has a parent assigned it can
-    share code, actions and events with that parent. This sharing is called &quot;inheritance&quot; and an object that has a parent is called a &quot;child&quot; object. Not only can a child share code with its parent, but you can do checks and run code
-    on parent objects and it will automatically include the child objects too, which saves a lot of time and energy.</p>
-  <p>If that sounds complicated, then another way to look at a parent object is as a way to &quot;group&quot; objects together under the same umbrella and have them share certain things without losing their own unique identity. Maybe that still doesn&#39;t
-    clarify things too much, so let&#39;s give some examples...</p>
-  <p>Say you have a &quot;player&quot; object and four different &quot;enemy&quot; objects. Now, you want the player to die if he touches any of these four objects and this would normally entail four different collision events with four different sets of
-    actions or code, one for each of the enemy objects. BUT if we make a parent object for all the enemies, then we can create one collision event with the parent object only and it will trigger no matter which one of the four &quot;child&quot; enemy
-    objects touch the player. Handy stuff! In the actual <span data-keyref="GameMaker Name">GameMaker</span> object you would see something like this:</p>
-  <p><img alt="Parenting For Collisions" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentCollision.png" />On the left we have four separate collision events and on the right we have a single collision event, as we have created a
-    &quot;parent&quot; object and assigned all the enemy objects to it. Note that a parent object doesn&#39;t have to have any events or code in it...</p>
-  <p>Another example of parenting would be if you have a game where you want to create 10 different looking objects and have them all behave in the same way. For that you would create one parent object and in that have all your behaviour actions or code
-    in the required events, and then you would create your ten objects with no actions or code, but different sprites, and assign them your parent object. Now, when you place these instances in a room they will all behave the same, but look different,
-    since they will &quot;inherit&quot; the events of the parent.</p>
-  <p>Finally you can use parenting to &quot;mix and match&quot; events and behaviours. We&#39;ll illustrate this with one final example... Say you want two monsters: one that moves up and down, while another that moves left and right, but you also want the
-    two of them to have the same health, shoot at the player and hurt the player if they collide with them. In this case you can see that almost all events should have the same actions except for one or two that govern movement. So, again, we can make
-    one object the parent of the other, but in this case we also define certain events for the child object. These events &quot;override&quot; the parent events, meaning that whenever an event for the child object contains actions, these are executed
-    instead of the actions contained in the event of the parent. If you also want to execute the parent event you can call the so-called &quot;inherited&quot; event using the function <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a>,
-    or the GML Visual action <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a>.</p>
-  <p><img alt="Inheriting Events" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_InheritEvents.png" />On the left above is the parent object with 5 events in it, and on the right you can see the &quot;child&quot; object. The child object
-    also has 5 events in it, but two of them override the inherited events from the parent (the <strong>Step </strong>and <strong>Draw </strong>events) and the other three are greyed out as they are the events inherited from the parent. Inherited events
-    will also have the &quot;parent override&quot; icon beside them in the Event Editor:</p>
-  <p><img alt="Parent Override" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_ParentOverride.png" />When you click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> on an event that has been inherited,
-    it will open the code editor to show the inherited parent code, but you will not be able to edit this code as you can only edit it in the parent object itself. You can click the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"
-    /> on any of the parent events to open the following menu of options:</p>
-  <p><img alt="Parent Event RMB Menu" class="center" src="../../assets/Images/Asset_Editors/Editor_Object_Parent_Menu.png" />Here you can choose two <strong>Open </strong>the parent event to inspect the code, or you can choose to <strong>Inherit </strong>the
-    event or <strong>Override </strong>the event. If you choose <strong>Inherit </strong>then the code editor will open with the function <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> already
-    added to it (or the <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a> action if using GML Visual). Any further code you place in this event will now be run as well as the code that the parent object
-    has. If you choose to <strong>Override </strong>the event, then the code window will also open, only now the <span class="inline">event_inherited()</span> function won&#39;t be called, so anything you add here will be run <em>instead </em>of the code
-    in the parent object.</p>
-  <p class="note"><strong>NOTE</strong>: From the code editor you can quickly navigate to the parent object by clicking the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> and selecting <strong>Go To Object</strong>    from the pop-up menu, or (if the event has been overridden) you can select <strong>Open Inherited Event</strong> to go directly to a code editor with the parent event code in it.</p>
-  <p>Whenever you target a parent object in code, the code will also apply to the &quot;children&quot; of the parent object too. This happens when, in an action, you indicate that the action must be applied to instances of a certain object, and in code it
-    happens when you use the <a href="../../GameMaker_Language/GML_Overview/Language_Features/with.htm"><span class="inline">with()</span></a> statement. It will work like this too when you call code functions, like <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_position.htm"><span class="inline">instance_position()</span></a>,
-    <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>, etc... where - if you supply a parent object - all instances of the parent <em>and </em>child instances
-    will be included in the checks. Finally, parenting works when you refer to variables in other objects too, like in the above monster example if I set the enemy 1 speed to 10, then the enemy 2 speed will also go to ten as it is a child object of enemy
+  <h1>Obiekty macierzyste</h1>
+  <p>Podczas pracy z <span class="notranslate">objects</span> w programie <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> można tworzyć hierarchie <strong>rodzic / </strong> dziecko. Robi się to klikając przycisk &quot;Parent&quot; w edytorze <span class="notranslate">object</span>, a następnie wybierając inną stronę <span class="notranslate">object</span> z przeglądarki <span class="notranslate">Asset</span> Browser
+    który ma być &quot;rodzicem&quot; edytowanego pliku:</p>
+  <p><img>Tak więc każda strona <span class="notranslate">object</span> w projekcie gry może mieć rodzica <span class="notranslate">object</span>, ale co to oznacza? Cóż, gdy <span class="notranslate">object</span> ma przypisanego rodzica, może
+    współdzielić kod, akcje i zdarzenia z rodzicem. To współdzielenie jest nazywane &quot;dziedziczeniem&quot;, a <span class="notranslate">object</span>, który ma rodzica, jest nazywany &quot;dzieckiem&quot; <span class="notranslate">object</span>. Dziecko nie tylko może współdzielić kod ze swoim rodzicem, ale można też sprawdzać i uruchamiać kod
+    na rodzica <span class="notranslate">objects</span> i automatycznie uwzględni on również dziecko <span class="notranslate">objects</span>, co pozwala zaoszczędzić wiele czasu i energii.</p>
+  <p>Jeśli brzmi to skomplikowanie, to innym sposobem spojrzenia na stronę <span class="notranslate">object</span> jest sposób na &quot;zgrupowanie&quot; <span class="notranslate">objects</span> pod jednym parasolem i umożliwienie im dzielenia pewnych rzeczy bez utraty własnej, niepowtarzalnej tożsamości. Może to nadal nie
+    nie wyjaśnia zbyt wiele, więc podajmy kilka przykładów...</p>
+  <p>Załóżmy, że masz &quot;gracza&quot; <span class="notranslate">object</span> i czterech różnych &quot;wrogów&quot; <span class="notranslate">objects</span>. Teraz chcesz, aby gracz zginął, jeśli dotknie któregoś z tych czterech <span class="notranslate">objects</span>. W normalnych warunkach wymagałoby to czterech różnych zdarzeń kolizji z czterema różnymi zestawami
+    działań lub kodu, po jednym dla każdego z wrogów <span class="notranslate">objects</span>. ALE jeśli dla wszystkich wrogów utworzymy nadrzędny <span class="notranslate">object</span>, możemy utworzyć jedno zdarzenie kolizji tylko z nadrzędnym <span class="notranslate">object</span> i będzie ono wywoływane niezależnie od tego, które z czterech &quot;dzieci&quot; wroga
+    <span class="notranslate">objects</span> dotknie gracza. Przydatna rzecz! W rzeczywistym programie <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">object</span> zobaczyłbyś coś takiego:</p>
+  <p><img>Po lewej stronie mamy cztery osobne zdarzenia kolizji, a po prawej jedno zdarzenie kolizji, ponieważ utworzyliśmy
+    &quot;rodzica&quot; <span class="notranslate">object</span> i przypisaliśmy do niego wszystkie wrogie <span class="notranslate">objects</span>. Zauważ, że strona nadrzędna <span class="notranslate">object</span> nie musi mieć żadnych zdarzeń ani kodu...</p>
+  <p>Innym przykładem parentingu może być gra, w której chcesz stworzyć 10 różnie wyglądających stron <span class="notranslate">objects</span> i sprawić, by wszystkie zachowywały się w ten sam sposób. W tym celu należałoby utworzyć jedną stronę nadrzędną <span class="notranslate">object</span> i w niej umieścić wszystkie akcje związane z zachowaniem lub kod
+    w wymaganych zdarzeniach, a następnie utworzysz dziesięć <span class="notranslate">objects</span> bez żadnych akcji ani kodu, ale z różnymi <span class="notranslate">sprites</span>, i przypiszesz im swojego rodzica <span class="notranslate">object</span>. Teraz, gdy umieścisz te instancje w witrynie <span class="notranslate">room</span>, wszystkie będą zachowywać się tak samo, ale będą wyglądać inaczej,
+    ponieważ &quot;odziedziczą&quot; zdarzenia po rodzicu.</p>
+  <p>Wreszcie, można używać funkcji rodzicielskich do &quot;mieszania i dopasowywania&quot; zdarzeń i zachowań. Zilustrujemy to na ostatnim przykładzie... Powiedzmy, że chcemy mieć dwa potwory: jeden porusza się w górę i w dół, a drugi w lewo i w prawo.
+    aby oba potwory miały takie samo zdrowie, strzelały do gracza i zadawały mu obrażenia, jeśli się z nimi zderzy. W tym przypadku widać, że prawie wszystkie zdarzenia powinny mieć takie same akcje, z wyjątkiem jednego lub dwóch, które regulują ruch. Ponownie możemy więc sprawić, że
+    jeden <span class="notranslate">object</span> rodzicem drugiego, ale w tym przypadku definiujemy także pewne zdarzenia dla dziecka <span class="notranslate">object</span>. Te zdarzenia &quot;nadpisują&quot; zdarzenia rodzica, co oznacza, że gdy zdarzenie dla dziecka <span class="notranslate">object</span> zawiera akcje, są one wykonywane
+    zamiast akcji zawartych w zdarzeniu rodzica. Jeśli chcesz także wykonać zdarzenie rodzica, możesz wywołać tak zwane zdarzenie &quot;dziedziczone&quot;, używając funkcji <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a>,
+    lub akcji wizualnej <span class="notranslate">GML</span> Visual <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a>.</p>
+  <p><img>Po lewej stronie znajduje się strona nadrzędna <span class="notranslate">object</span> z 5 zdarzeniami, a po prawej stronie - &quot;dziecko&quot; <span class="notranslate">object</span>. Obiekt dziecka
+    również ma 5 zdarzeń, ale dwa z nich zastępują zdarzenia odziedziczone po rodzicu (zdarzenia <strong>Krok </strong>i <strong>Rysuj </strong>), a pozostałe trzy są wyszarzone, ponieważ są to zdarzenia odziedziczone po rodzicu. Zdarzenia dziedziczone
+    będą miały również ikonę &quot;nadpisania przez rodzica&quot; w edytorze zdarzeń:</p>
+  <p><img>Po kliknięciu na stronie <img> zdarzenia, które zostało odziedziczone,
+    otworzy się edytor kodu, aby wyświetlić odziedziczony kod rodzica, ale nie będzie można edytować tego kodu, ponieważ można go edytować tylko w samym rodzicu <span class="notranslate">object</span>. Kliknięcie prawym przyciskiem myszy <img> na dowolnym zdarzeniu nadrzędnym spowoduje otwarcie następującego menu opcji:</p>
+  <p><img>W tym miejscu można wybrać dwie opcje <strong>Otwórz </strong>zdarzenie nadrzędne, aby sprawdzić kod, lub można wybrać opcję <strong>Dziedziczenie </strong>zdarzenia
+    lub <strong>Zastąpić </strong>zdarzenie. Jeśli wybierzesz opcję <strong>Dziedziczenie </strong>, edytor kodu zostanie otwarty z funkcją <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_inherited.htm"><span class="inline">event_inherited()</span></a> już
+    (lub akcją <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Instance/Call_Parent_Event.htm">Call Parent Event</a>, jeśli używasz <span class="notranslate">GML</span> Visual). Każdy kolejny kod umieszczony w tym zdarzeniu zostanie uruchomiony tak samo, jak kod obiektu nadrzędnego
+    ma. Jeśli wybierzesz opcję <strong>Zastąp </strong>zdarzenie, okno z kodem również zostanie otwarte, ale teraz funkcja <span class="inline">event_inherited()</span> nie zostanie wywołana, więc wszystko, co dodasz w tym miejscu, zostanie uruchomione <em>zamiast </em>kodu
+    w obiekcie nadrzędnym <span class="notranslate">object</span>.</p>
+  <p class="note"><strong>UWAGA</strong>: W edytorze kodu można szybko przejść do strony nadrzędnej <span class="notranslate">object</span>, klikając prawym przyciskiem myszy <img> i wybierając z menu podręcznego polecenie <strong>Przejdź do obiektu</strong>, lub (jeśli zdarzenie zostało nadpisane) można wybrać polecenie <strong>Otwórz</strong> zdarzenie <strong>dziedziczone</strong>, aby przejść bezpośrednio do edytora kodu z kodem zdarzenia nadrzędnego.</p>
+  <p>Zawsze, gdy w kodzie jest mowa o instancjach rodzica <span class="notranslate">object</span>, kod ten zostanie zastosowany także do &quot;dzieci&quot; rodzica <span class="notranslate">object</span>. Dzieje się tak, gdy w akcji wskażesz, że akcja musi być zastosowana do instancji określonego obiektu <span class="notranslate">object</span>, a w kodzie
+    dzieje się to, gdy używasz <a href="../../GameMaker_Language/GML_Overview/Language_Features/with.htm"><span class="inline">with()</span></a> oświadczenia. Tak samo będzie to działać, gdy wywołasz w kodzie funkcje, takie jak <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_position.htm"><span class="inline">instance_position()</span></a>,
+    <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a>, itp... gdzie - jeśli podasz adres nadrzędny <span class="notranslate">object</span> - wszystkie instancje rodzica <em>i </em>dziecka
+    zostaną uwzględnione w sprawdzeniach. Wreszcie, parenting działa także w przypadku odwoływania się do zmiennych w innych witrynach <span class="notranslate">objects</span>, np. w powyższym przykładzie potwora, jeśli ustawię prędkość wroga 1 na 10, to prędkość wroga 2 również wyniesie 10, ponieważ jest on dzieckiem <span class="notranslate">object</span> wroga
     1.</p>
-  <p>It is generally considered good practice in most cases to create one base parent object and have this base object contain all the default behaviour but never use an instance of it in the game. Rather use all child objects and only use the parent in
-    situations like those I have outlined above, for collisions, for referencing variables, etc... You should also realise that parents can have parents too! Obviously you can&#39;t create a cycle of &quot;parent 1 is child of parent 2 is child of parent
-    1&quot; but you can create what is called &quot;object hierarchy&quot; where &quot;<em>parent3 </em>is child of <em>parent2 </em>is child of <em>parent1</em>&quot;. This is extremely useful to keep your game structured and you are strongly advised
-    to learn to use this mechanism.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> <span class="notranslate">object</span> W większości przypadków za dobrą praktykę uważa się tworzenie jednego rodzica <span class="notranslate">object</span> i umieszczanie w nim wszystkich domyślnych zachowań, ale nigdy nieużywanie jego instancji w grze. Należy raczej używać wszystkich dzieci <span class="notranslate">objects</span> i korzystać z rodzica tylko w
+    w sytuacjach takich jak te, które opisałem powyżej, w przypadku kolizji, odwołań do zmiennych itp. Powinieneś także zdawać sobie sprawę, że rodzice mogą mieć rodziców! Oczywiście nie można utworzyć cyklu &quot;rodzic 1 jest dzieckiem rodzica 2 jest dzieckiem rodzica
+    1&quot;, ale możesz stworzyć tak zwaną &quot;hierarchię obiektów&quot;, gdzie &quot;<em>rodzic3 </em>jest dzieckiem <em>rodzica2 </em>jest dzieckiem <em>rodzica1</em>&quot;. Jest to niezwykle użyteczne, aby zachować strukturę gry i zdecydowanie zaleca się
+    nauczenie się korzystania z tego mechanizmu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Objects.htm">The Object Editor</a></div>
-        <div style="float:right">Next: <a href="Physics_Objects.htm">Physics Objects</a></div>
+        <div style="float:left">Powrót: <a href="../Objects.htm">Redaktor <span class="notranslate">Object</span> </a></div>
+        <div style="float:right">Następny: <a href="Physics_Objects.htm">Obiekty fizyki</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Parent Objects

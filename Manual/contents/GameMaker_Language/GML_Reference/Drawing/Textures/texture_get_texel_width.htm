@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>texture_get_texel_width</title>
+  <title>tekstura_get_texel_width</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ​texture_get_texel_width" />
   <meta name="rh-index-keywords" content="texture_get_texel_width" />
@@ -15,45 +15,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>texture_get_texel_width</h1>
-  <p>A texel, or <i>texture element</i> is the fundamental unit of texture space used in computer graphics. Textures are represented by arrays of texels, just as pictures are represented by arrays of pixels, and this function returns the width of a single texel from the texture page of the image asset used.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>tekstura_get_texel_width</h1>
+  <p>Teksel, czyli <i>element tekstury</i>, jest podstawową jednostką przestrzeni <span class="notranslate">texture</span> używaną w grafice komputerowej. <span class="notranslate">Textures</span> są reprezentowane przez tablice tekseli, tak jak obrazy są reprezentowane przez tablice pikseli, a ta funkcja zwraca szerokość pojedynczego teksela ze strony <span class="notranslate">texture</span> użytego obrazu <span class="notranslate">asset</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">texture_get_texel_width(tex);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>tex</td>
-        <td><span data-keyref="Type_Pointer_Texture">Texture Pointer</span></td>
-        <td>The texture page asset pointer to use</td>
+        <td><span class="notranslate">tex</span></td>
+        <td><span data-keyref="Type_Pointer_Texture">Wskaźnik tekstury</span></td>
+        <td><span class="notranslate">The texture page asset pointer to use</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var tex = sprite_get_texture(sprite_index, 0);<br />
     tex_w = texture_get_texel_width(tex);<br />
     tex_h = texture_get_texel_height(tex);</p>
-  <p>The above code will get the texel width and height of the texture taken from a sprite asset.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobierze szerokość i wysokość tekstu <span class="notranslate">texture</span> z witryny <span class="notranslate">sprite</span> <span class="notranslate">asset</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
-        <div style="float:right">Next: <a href="texture_get_texel_height.htm">texture_get_texel_height</a></div>
+        <div style="float:left">Powrót: <a href="Textures.htm">Tekstury</a></div>
+        <div style="float:right">Następny: <a href="texture_get_texel_height.htm"><span class="notranslate">texture_get_texel_height</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 texture_get_texel_width

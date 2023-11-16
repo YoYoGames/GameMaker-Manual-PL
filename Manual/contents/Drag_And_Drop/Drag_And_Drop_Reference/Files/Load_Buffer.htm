@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Load Buffer</title>
+  <title>Bufor ładunkowy</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Load Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Load Buffer" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /> Load Buffer</h1>
-  <p>With this action you can load a buffer that was previously saved with the action <a href="Save_Buffer.htm">Save Buffer</a>. The action will create a new buffer, load the data file into it, and return the unique ID value to identify the buffer to the
-    variable. You supply the name of the file to load (as a string) and a variable to store the returned buffer ID in. Note that if you flag the variable as a temporary local variable, you need to make sure to delete the buffer this function creates before
-    the end of the action script or event, otherwise you will lose the reference to it and get a memory leak when the variable is discarded.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Load Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Load_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Bufor ładunkowy</h1>
+  <p>Za pomocą tej akcji można wczytać stronę <span class="notranslate">buffer</span>, która została wcześniej zapisana za pomocą akcji <a href="Save_Buffer.htm">Zapisz bufor</a>. Ta akcja utworzy nową stronę <span class="notranslate">buffer</span>, załaduje do niej plik danych i zwróci unikalną wartość ID identyfikującą stronę <span class="notranslate">buffer</span> do zmiennej
+    zmiennej. Użytkownik podaje nazwę pliku do załadowania (jako <span class="notranslate">string</span>) oraz zmienną, w której ma być przechowywany zwrócony identyfikator <span class="notranslate">buffer</span>. Zwróć uwagę, że jeśli <span class="notranslate">flag</span> zmienna jest tymczasową zmienną lokalną, musisz upewnić się, że <span class="notranslate">buffer</span> utworzony przez tę funkcję zostanie usunięty przed
+    przed zakończeniem działania <span class="notranslate">script</span> lub zdarzenia, w przeciwnym razie utracisz do niej odniesienie i dojdzie do wycieku pamięci, gdy zmienna zostanie usunięta.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Load Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Load_Buffer.png" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name (as a string) of the file to open</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>Nazwa (w formacie <span class="notranslate">string</span>) pliku do otwarcia</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the unique ID value for the buffer created on load</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Zmienna docelowa przechowująca unikatową wartość ID dla strony <span class="notranslate">buffer</span> utworzonej podczas ładowania.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Load Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Load_Buffer.png" />The above action block code will create a variable to hold buffer data and then check to see if a
-    buffer save file has been made previously. If the file exists, then it is loaded into the buffer variable that we created, but if it doesn&#39;t exist, it is created, written to and then saved out ready for loading the next time.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji utworzy zmienną przechowującą dane <span class="notranslate">buffer</span>, a następnie sprawdzi, czy plik
+    <span class="notranslate">buffer</span> czy plik zapisu został już wcześniej utworzony. Jeśli plik istnieje, zostanie wczytany do utworzonej przez nas zmiennej <span class="notranslate">buffer</span>, ale jeśli nie istnieje, zostanie utworzony, zapisany, a następnie zapisany i gotowy do wczytania następnym razem.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Save_Buffer.htm">Save Buffer</a></div>
+        <div style="float:left">Wstecz: <a href="File_Actions.htm">Akcje plików</a></div>
+        <div style="float:right">Następny: <a href="Save_Buffer.htm">Zapisz bufor</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Load Buffer

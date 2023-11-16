@@ -6,7 +6,7 @@
   <title>event_perform_object</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function event_perform_object" />
   <meta name="rh-index-keywords" content="event_perform_object" />
@@ -15,54 +15,54 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>event_perform_object</h1>
-  <p>This functions works the same as <a href="event_perform.htm"><span class="inline">event_perform()</span></a> except that this time you can specify events from another object. There are many options here which allow complete simulation of all possible events, but note that this literally just performs all the code in the event and the game will not modify anything to make it trigger itself manually, for example if you choose to perform a keyboard press event, the event will be triggered but the relevant key will not be recognised as having been pressed. Or if you perform an alarm event, the alarm counter will not be set to -1 but rather continue to count down. You can find a complete list of the available constants this function requires from the page for the function <a href="event_perform.htm"><span class="inline">event_perform()</span></a>.</p>
-  <p class="note"><span class="note">NOTE</span> Actions in the event called with this function are applied to the <b>current instance</b>, and not to instances of the given object.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja działa tak samo jak <a href="event_perform.htm"><span class="inline">event_perform()</span></a> z tą różnicą, że tym razem możesz podać zdarzenia z innej strony <span class="notranslate">object</span>. Jest tu wiele opcji, które umożliwiają pełną symulację wszystkich możliwych zdarzeń, ale należy pamiętać, że to dosłownie tylko wykonuje cały kod zdarzenia, a gra nie zmodyfikuje niczego, aby uruchomić się ręcznie, na przykład jeśli wybierzesz zdarzenie naciśnięcia klawiatury, zdarzenie zostanie uruchomione, ale odpowiedni klawisz nie zostanie rozpoznany jako naciśnięty. Na przykład, jeśli użytkownik zdecyduje się na wykonanie zdarzenia związanego z naciśnięciem klawisza, zdarzenie zostanie wywołane, ale odpowiedni klawisz nie zostanie rozpoznany jako naciśnięty. Pełną listę dostępnych stałych, których wymaga ta funkcja, można znaleźć na stronie funkcji <a href="event_perform.htm"><span class="inline">event_perform()</span></a>.</p>
+  <p class="note"><span class="note">UWAGA</span> Akcje w zdarzeniu wywołanym za pomocą tej funkcji są stosowane do <b>bieżącej instancji</b>, a nie do instancji podanej strony <span class="notranslate">object</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">event_perform_object(obj, type, numb);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Type_Asset_Object"><a href="../../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span></td>
-        <td>The object that should have its event triggered.</td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">Obiekt Aktywa</span></td>
+        <td><span class="notranslate">The object that should have its event triggered.</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Event_Type"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Type Constant</a></span></td>
-        <td>The type of event to perform.</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Event_Type">Typ zdarzenia Stała</span></td>
+        <td><span class="notranslate">The type of event to perform.</span></td>
       </tr>
       <tr>
-        <td>numb</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> or <span data-keyref="Type_Constant_Event_Number"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm" target="_blank">Event Number Constant</a></span></td>
-        <td>The specific event, if one is necessary (otherwise, just use 0).</td>
+        <td><span class="notranslate">numb</span></td>
+        <td> <span data-keyref="Type_Constant_Event_Number">Stała liczby</span><span data-keyref="Type_Real">rzeczywistej</span> lub <span data-keyref="Type_Constant_Event_Number">zdarzeniowej</span></td>
+        <td><span class="notranslate">The specific event, if one is necessary (otherwise, just use 0).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">event_perform_object(obj_Player, ev_keypress, ord(&quot;W&quot;));</p>
-  <p>This would perform the event associated with Keyboard Check Pressed &gt; W key from the object &quot;obj_Player&quot; in the current instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Spowoduje to wykonanie zdarzenia związanego z przyciskiem Keyboard Check Pressed &gt; W z adresu <span class="notranslate">object</span> &quot;obj_Player&quot; w bieżącej instancji.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
-        <div style="float:right">Next: <a href="event_user.htm">event_user</a></div>
+        <div style="float:left">Powrót: <a href="Generating_Object_Events.htm">Generowanie zdarzeń <span class="notranslate">Object</span> </a></div>
+        <div style="float:right">Następny: <a href="event_user.htm"><span class="notranslate">event_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 event_perform_object

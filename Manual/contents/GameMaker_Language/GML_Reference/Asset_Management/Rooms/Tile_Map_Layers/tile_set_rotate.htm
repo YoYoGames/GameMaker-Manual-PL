@@ -6,7 +6,7 @@
   <title>tile_set_rotate</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function tile_set_rotate" />
   <meta name="rh-index-keywords" content="tile_set_rotate" />
@@ -15,34 +15,34 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>tile_set_rotate</h1>
-  <p>This function can be used to set a given set of tile-data to rotate the tile 90 degrees or not. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>, and then set the rotate argument to either <span class="inline">true</span> if you want the tile rotated, or <span class="inline">false</span> if you want the tile to be in its default, un-rotated state. The function will return a modified tile-data set which can then be applied using the <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> function.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można ustawić podany zestaw danych kafelków, aby obrócić stronę <span class="notranslate">tile</span> o 90 stopni lub nie. Podajesz dane kafelków, które można pobrać za pomocą funkcji <a href="tilemap_get.htm"><span class="inline">tilemap_get()</span></a>a następnie ustawiasz argument rotate na <span class="inline">true</span>, jeśli chcesz, aby <span class="notranslate">tile</span> była obrócona, lub <span class="inline">false</span>, jeśli chcesz, aby <span class="notranslate">tile</span> była w domyślnym, nieobróconym stanie. Funkcja zwróci zmodyfikowany zestaw danych kafelków, który można następnie zastosować za pomocą funkcji <a href="tilemap_set.htm"><span class="inline">tilemap_set()</span></a> funkcji.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code"><span class="inline"></span>tile_set_rotate(tiledata, rotate)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>tiledata</td>
-        <td><span data-keyref="Type_Real_Tile_Data">Tile Data</span></td>
-        <td>The tile-data to set</td>
+        <td><span class="notranslate">tiledata</span></td>
+        <td><span data-keyref="Type_Real_Tile_Data">Dane o płytkach</span></td>
+        <td><span class="notranslate">The tile-data to set</span></td>
       </tr>
       <tr>
-        <td>rotate</td>
+        <td><span class="notranslate">rotate</span></td>
         <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Set to <span class="inline">true</span> to rotate and <span class="inline">false</span> to leave it as-is</td>
+        <td><span class="notranslate">Set to <span class="inline">true</span> aby obrócić i <span class="inline">false</span>, aby pozostawić bez zmian</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br />
@@ -51,18 +51,18 @@
     var bool = !tile_get_rotate(data);<br />
     data = tile_set_rotate(data, bool);<br />
     tilemap_set(map_id, data, mx, my);</p>
-  <p>The above code gets the tile map ID from the given layer and then gets the x and y cell position for the tile under the mouse. This position is then used to get the tile-data which is rotated and then used to set the tile again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera identyfikator mapy <span class="notranslate">tile</span> z podanej warstwy, a następnie pobiera pozycję komórki x i y dla <span class="notranslate">tile</span> pod myszą. Pozycja ta jest następnie wykorzystywana do uzyskania danych kafelka, które są obracane, a następnie wykorzystywane do ponownego ustawienia adresu <span class="notranslate">tile</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
-        <div style="float:right">Next: <a href="layer_tilemap_get_id.htm">layer_tilemap_get_id</a></div>
+        <div style="float:left">Wstecz: <a href="Tile_Map_Layers.htm">Warstwy mapy kafelkowej</a></div>
+        <div style="float:right">Następny: <a href="layer_tilemap_get_id.htm"><span class="notranslate">layer_tilemap_get_id</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 tile_set_rotate

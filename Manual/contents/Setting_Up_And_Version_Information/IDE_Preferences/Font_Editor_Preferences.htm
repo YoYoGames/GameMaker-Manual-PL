@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Font Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="The Font Editor Preferences"/>
-  <meta name="rh-index-keywords" content="Prefs - Fonts"/>
-  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Preferencje edytora czcionek</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="The Font Editor Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Fonts" />
+  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Font Editor Preferences</h1>
-  <p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;"/>The <strong>Font Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Fonts.htm">Font Editor</a> behaves.
-    The different options available are listed below along with a description of what each one does.</p>
+  <h1>Preferencje edytora czcionek</h1>
+  <p><img><strong>Preferencje edyt</strong> ora czcionek służą do określania sposobu działania <a href="../../The_Asset_Editors/Fonts.htm">edytora czcionek</a>.
+    Poniżej wymieniono różne dostępne opcje wraz z opisem działania każdej z nich.</p>
   <ul class="colour">
-    <li><strong>Update Fonts imported from <span data-keyref="GameMaker Name">GameMaker</span> 1 projects</strong>: When this is checked, <span data-keyref="GameMaker Name">GameMaker</span> will attempt to update fonts and regenerate their texture. This will happen only if:
+    <li><strong>Aktualizuj stronę <span class="notranslate">Fonts</span> zaimportowaną z projektów <span data-keyref="GameMaker Name">GameMaker</span></strong> 1: Gdy ta opcja jest zaznaczona, <span data-keyref="GameMaker Name">GameMaker</span> będzie próbował zaktualizować <span class="notranslate">fonts</span> i zregenerować ich <span class="notranslate">texture</span>. Stanie się tak tylko wtedy, gdy:
       <ul class="Disc">
-        <li>This preference is enabled</li>
-        <li>The font is available on the machine</li>
-        <li><span data-keyref="GameMaker Name">GameMaker</span> can locate a matching face in the font family (this is the most likely cause of inconsistency on import)</li>
+        <li>Ta preferencja jest włączona.</li>
+        <li>Strona <span class="notranslate">font</span> jest dostępna na komputerze.</li>
+        <li><span data-keyref="GameMaker Name">GameMaker</span> może znaleźć pasującą twarz w rodzinie <span class="notranslate">font</span> (jest to najbardziej prawdopodobna przyczyna niespójności podczas importu).</li>
       </ul>
-      Note that it will also happen if the <span data-keyref="GameMaker Name">GameMaker</span> 1 font does not have a <a class="glossterm" data-glossterm="Cache" href="#">cached</a> font texture. If a legacy font cannot be updated, then <span data-keyref="GameMaker Name">GameMaker</span> will default to using the cached
-      font texture, and the Font Editor will no longer permit you to edit the font, showing an option to backup and update to another:<br/>
-      <br/>
-      <img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png"/>Clicking this will enable you to edit the font, either adding the missing font or setting another one, and the
-      backed up font is stored in the font asset folder, as <span class="inline">&lt;font name&gt;.yy.gms1</span> and <span class="inline">&lt;font name&gt;.png.gms1</span>. To restore these files, manually delete the <span class="inline">&lt;font name&gt;.yy</span>      files and replace them with these by removing the <span class="inline">.gms1</span> extension from the filenames. <em> <strong>Important!</strong></em> All assets store their names in the <span class="inline">.yy</span> file, so you must edit these
-      and put the right name of the resource in the <span class="inline">&lt;name&gt;</span> field as well (if different).</li>
-    <li><strong>Automatic choice for failed content regeneration dialog</strong>: When you go to regenerate a font asset texture, you are shown a warning. Setting this option to &quot;OK&quot; will mean that the font is regenerated without the warning being
-      shown.</li>
-    <li><strong>Automatic choice for failed font regeneration dialog</strong>: When regeneration of a font asset texture fails, you are shown a warning. Setting this option to &quot;OK&quot; will skip showing the message.</li>
-    <li><strong>Automatic choice for upgrading imported legacy fonts</strong>: When you import a legacy project, you may get a warning about legacy fonts and the offer to upgrade. Setting this option to &quot;OK&quot; will okay the update automatically without
-      showing this message.</li>
+      Zauważ, że stanie się to również wtedy, gdy projekt <span data-keyref="GameMaker Name">GameMaker</span> 1 <span class="notranslate">font</span> nie ma <a class="glossterm" data-glossterm="Pamięć podręczna" href="#">zbuforowanej</a> strony <span class="notranslate">font</span> <span class="notranslate">texture</span>. Jeśli starszy <span class="notranslate">font</span> nie moż <span data-keyref="GameMaker Name">e zostać</span> zaktualizowany, GameMaker domyślnie użyje buforowanej wersji .
+     <span class="notranslate">font</span> <span class="notranslate">texture</span> a edytor <span class="notranslate">Font</span> nie będzie pozwalał na edycję <span class="notranslate">font</span>, wyświetlając opcję tworzenia kopii zapasowej i aktualizacji do innej:<br>
+      <br>
+      <img>Kliknięcie tej opcji umożliwi Ci edycję <span class="notranslate">font</span>, dodając brakujący <span class="notranslate">font</span> lub ustawiając inny, a
+      <span class="notranslate">font</span> jest przechowywany w folderze <span class="notranslate">font</span> <span class="notranslate">asset</span> jako <span class="inline">&lt;font name&gt;.yy.gms1</span> i <span class="inline">&lt;font name&gt;.png.gms1</span>. Aby przywrócić te pliki, należy ręcznie usunąć pliki <span class="inline">&lt;font name&gt;.yy</span> i zastąpić je tymi, usuwając <span class="inline">.gms1</span> <span class="notranslate">extension</span> z nazw plików. <em> <strong>Ważne!</strong></em> Wszystkie pliki <span class="notranslate">assets</span> przechowują swoje nazwy w pliku <span class="inline">.yy</span>, więc musisz je edytować
+      i w polu <span class="inline">&lt;name&gt;</span> umieścić właściwą nazwę zasobu (jeśli jest inna).</li>
+    <li><strong>Automatyczny wybór okna dialogowego nieudanej regeneracji zawartości</strong>: Gdy chcesz zregenerować stronę <span class="notranslate">font</span> <span class="notranslate">asset</span> <span class="notranslate">texture</span> , wyświetlane jest ostrzeżenie. Ustawienie tej opcji na &quot;OK&quot; spowoduje, że strona <span class="notranslate">font</span> zostanie zregenerowana bez wyświetlania ostrzeżenia.
+      wyświetlania ostrzeżenia.</li>
+    <li><strong>Automatyczny wybór w przypadku nieudanej regeneracji <span class="notranslate">font</span> okno dialogowe</strong>: Gdy regeneracja <span class="notranslate">font</span> <span class="notranslate">asset</span> <span class="notranslate">texture</span> nie powiedzie się, wyświetlane jest ostrzeżenie. Ustawienie tej opcji na &quot;OK&quot; spowoduje pominięcie wyświetlania tego komunikatu.</li>
+    <li><strong>Automatyczny wybór uaktualnienia zaimportowanych starszych czcionek</strong>: Podczas importowania starszego projektu może zostać wyświetlone ostrzeżenie o starszej wersji <span class="notranslate">fonts</span> oraz propozycja aktualizacji. Ustawienie tej opcji na &quot;OK&quot; spowoduje, że aktualizacja zostanie wykonana automatycznie bez
+      wyświetlania tego komunikatu.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Room_Editor_Preferences.htm">Room Editor Preferences</a></div>
+        <div style="float:left">Powrót: <a href="../IDE_Preferences.htm">Preferencje IDE</a></div>
+        <div style="float:right">Następny: <a href="Room_Editor_Preferences.htm">Preferencje edytora pomieszczeń</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
-Preferences - Font Editor
+Preferences - <span class="notranslate">Font</span> Editor
 -->
   <!-- TAGS
 prefs_font_editor

@@ -6,7 +6,7 @@
   <title>physics_fixture_delete</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_fixture_delete" />
   <meta name="rh-index-keywords" content="physics_fixture_delete" />
@@ -15,44 +15,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_fixture_delete</h1>
-  <p>Since once a fixture has been bound to an instance that instance maintains the fixtures properties, we can remove the fixture from memory with this function, particularly if we no longer plan to use it again. Please note that failure to remove fixtures
-    after they are no longer needed may cause a memory leak which will slow down and eventually crash your game, so you should take care to clean up properly after defining and binding fixtures.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ponieważ raz powiązany z instancją obiekt jest utrzymywany przez tę instancję we właściwościach, możemy usunąć obiekt z pamięci za pomocą tej funkcji, szczególnie jeśli nie planujemy już jego ponownego użycia. Proszę zauważyć, że nieusunięcie elementów stałych
+    po tym jak nie są już potrzebne może spowodować wyciek pamięci, który spowolni i ostatecznie zawiesi twoją grę, więc powinieneś zadbać o właściwe czyszczenie pamięci po zdefiniowaniu i powiązaniu stałych elementów.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_fixture_delete(fixture)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>fixture</td><td><span data-keyref="Type_ID_PhyFixture"></span></td>
-        <td>the fixture that is to be deleted from memory</td>
+        <td><span class="notranslate">fixture</span></td><td><span data-keyref="Type_ID_PhyFixture"></span></td>
+        <td><span class="notranslate">the fixture that is to be deleted from memory</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var fix, inst;<br/> fix = physics_fixture_create();<br/> physics_fixture_set_circle_shape(fix, 16);<br/> physics_fixture_set_density(fix, 1.0);<br/> inst = instance_create_layer(x, y, &quot;Instances&quot;, genericBodyObject);<br/> physics_fixture_bind(fix,
     inst);<br/> physics_fixture_delete(fix);
   </p>
-  <p>The code above will create a fixture and assign its index to the variable &quot;fix&quot;. It then defines the shape and density of the fixture before binding it to the instance that was created with the index stored in the variable &quot;inst&quot;.
-    Finally, the fixture is deleted to prevent memory leaks as it is no longer needed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod utworzy uchwyt i przypisze jego indeks do zmiennej &quot;fix&quot;. Następnie definiuje kształt i gęstość uchwytu przed związaniem go z instancją, która została utworzona z indeksem przechowywanym w zmiennej &quot;inst&quot;.
+    Na koniec uchwyt jest usuwany, by zapobiec wyciekom pamięci, ponieważ nie jest już potrzebny.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
-        <div style="float:right">Next: <a href="physics_remove_fixture.htm">physics_remove_fixture</a></div>
+        <div style="float:left">Powrót: <a href="Fixtures.htm">Armatura</a></div>
+        <div style="float:right">Następny: <a href="physics_remove_fixture.htm"><span class="notranslate">physics_remove_fixture</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_fixture_delete

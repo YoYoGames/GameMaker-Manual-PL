@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>delete</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>usuń</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the delete function" />
   <meta name="rh-index-keywords" content="delete" />
@@ -14,32 +13,32 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>delete</h1>
-  <p>The <span class="inline">delete</span> operator is used to <strong>de-reference</strong> a <a href="../Structs.htm">struct</a>, and has the following syntax:</p>
+  <h1>usuń</h1>
+  <p>Operator <span class="inline">delete</span> jest używany do <strong>usuwania odniesienia do</strong> <a href="../Structs.htm">struktury</a> i ma następującą składnię:</p>
   <p class="code">delete &lt;variable&gt;;</p>
-  <p>What this means is that you call the delete operator along with the variable that holds a struct and it will remove the specific <em>reference </em>to the struct stored in the given variable (a reference is simply a value that points to the memory area that is storing the struct and its contents). If this reference was the last reference to the struct in your game, then the <a class="glossterm" data-glossterm="garbage collector" href="#">garbage collector</a> will remove the struct from memory in a following <a class="glossterm" data-glossterm="iteration" href="#">iteration</a>, typically at the very start of the next step.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> <span class="inline">delete</span> can only be used along with variables, and <i>not</i> expressions.</p>
-  <p>By default, structs with no further references in code will be garbage collected automatically in the steps following their use, but it is good practice to use this operator to flag them explicitly for the garbage collector to remove from memory at the very start of the following step, freeing the memory quickly and more efficiently.</p>
-  <p>The following example shows a struct being created - for example in the Create Event of an instance:</p>
-  <p class="code">mystruct =<br />
-    {<br />
-        a : 0,<br />
-        b : 100,<br />
-        c : &quot;Hello World&quot;<br />
-    }</p>
-  <p>This struct will then be used in the instance events as usual, before finally being flagged for garbage collection in the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a> event, like this:</p>
+  <p>Oznacza to, że wywołujesz operator delete wraz ze zmienną przechowującą <span class="notranslate">struct</span>, a on usunie konkretne <em>odwołanie </em>do <span class="notranslate">struct</span> przechowywane w danej zmiennej (odwołanie to po prostu wartość wskazująca na obszar pamięci
+    w którym przechowywana jest strona <span class="notranslate">struct</span> i jej zawartość). Jeśli ta referencja była ostatnią referencją do <span class="notranslate">struct</span> w Twojej grze, to <a class="glossterm" data-glossterm="odśmiecacz (garbage collector)" href="#">garbage collector</a> usunie <span class="notranslate">struct</span> z pamięci w
+    w następnej <a class="glossterm" data-glossterm="iteracja" href="#">iteracji</a>, zazwyczaj na samym początku następnego kroku.</p>
+  <p class="note"><strong>UWAGA</strong>: <span class="inline">delete</span> można używać tylko wraz ze zmiennymi, a <i>nie</i> z wyrażeniami</p>
+  <p>Domyślnie adres <span class="notranslate">structs</span>, do którego nie ma już żadnych odwołań w kodzie, jest automatycznie usuwany z pamięci w kolejnych krokach, ale dobrą praktyką jest użycie tego operatora do <span class="notranslate">flag</span>, aby śmieciarz usunął je z pamięci na
+    na samym początku kolejnego kroku, dzięki czemu pamięć zostanie zwolniona szybciej i bardziej efektywnie.</p>
+  <p>Poniższy przykład pokazuje tworzenie strony <span class="notranslate">struct</span> - na przykład w zdarzeniu Create Event (Utwórz) instancji:</p>
+  <p class="code">mystruct =<br/> {
+    <br/>     a : 0,<br/>     b : 100,<br/>     c : &quot;Hello World&quot;<br/> }
+  </p>
+  <p>Strona <span class="notranslate">struct</span> będzie następnie używana w zdarzeniach instancji w zwykły sposób, a na koniec zostanie oznaczona jako przeznaczona do usunięcia śmieci w zdarzeniu <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a>, jak poniżej:</p>
   <p class="code">delete mystruct;</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="If_Else_and_Conditional_Operators.htm">if / else And Conditional Operators</a></div>
+        <div style="float:left">Powrót: <a href="../Language_Features.htm">Cechy językowe</a></div>
+        <div style="float:right">Następny: <a href="If_Else_and_Conditional_Operators.htm">if / else i operatory warunkowe</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 delete
@@ -47,5 +46,5 @@ delete
   <!-- TAGS
 delete
 -->
-</body>
-</html>
+
+</body></html>

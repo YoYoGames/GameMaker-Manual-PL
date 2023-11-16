@@ -6,7 +6,7 @@
   <title>weak_ref_alive</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for weak_ref_alive" />
   <meta name="rh-index-keywords" content="weak_ref_alive" />
@@ -16,45 +16,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>weak_ref_alive</h1>
-  <p>With this function you can check the <a class="glossterm" data-glossterm="weak reference" href="#">weak reference</a> to a struct to see if it is still &quot;alive&quot; or not. You supply the weak reference to check (as returned by the function <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), and the function will return <span class="inline">true</span> if the struct is still being referenced somewhere or <span class="inline">false</span> if it&#39;s not and has been garbage collected. Note that if you supply a value that is not a weak reference, the function will return <span class="inline">undefined</span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można sprawdzić, czy <a class="glossterm" data-glossterm="słabe odniesienie" href="#">słaba referencja</a> do strony <span class="notranslate">struct</span> jest nadal &quot;żywa&quot;, czy nie. Podajesz słabą referencję do sprawdzenia (zwróconą przez funkcję <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), a funkcja zwróci <span class="inline">true</span>, jeśli <span class="notranslate">struct</span> jest nadal gdzieś przywoływana, lub <span class="inline">false</span>, jeśli nie jest i została wyrzucona do śmieci. Zwróć uwagę, że jeśli podasz wartość, która nie jest słabą referencją, funkcja zwróci <span class="inline">undefined</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">weak_ref_alive(weak_ref);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>weak_ref</td>
-        <td><span data-keyref="Type_Struct_WeakRef">Struct Weak Reference</span></td>
-        <td>The weak reference to the struct you want to check.</td>
+        <td><span class="notranslate">weak_ref</span></td>
+        <td><span data-keyref="Type_Struct_WeakRef">Struktura Słabe odniesienie</span></td>
+        <td><span class="notranslate">The weak reference to the struct you want to check.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span> (or undefined)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if weak_ref_alive(inventory_ref)<br />
     {<br />
         inventory = -1;<br />
     }</p>
-  <p>The above code checks a weak reference to a struct and if it is still alive the variable referencing it is set to -1, de-referencing the struct and enabling it to be garbage collected.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod sprawdza słabe odwołanie do <span class="notranslate">struct</span> i jeśli jest ono wciąż żywe, zmienna odwołująca się do niego jest ustawiana na -1, co powoduje usunięcie odwołania do <span class="notranslate">struct</span> i umożliwia jego wyrzucenie do śmieci.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Garbage_Collection.htm">Garbage Collection</a></div>
-        <div style="float:right">Next: <a href="weak_ref_any_alive.htm">weak_ref_any_alive</a></div>
+        <div style="float:left">Powrót: <a href="Garbage_Collection.htm">Garbage Collection</a></div>
+        <div style="float:right">Następny: <a href="weak_ref_any_alive.htm"><span class="notranslate">weak_ref_any_alive</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 weak_ref_alive

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Room Editor</title>
+  <title>Pokoje</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page detailing how the room editor works" />
   <meta name="rh-index-keywords" content="Room Editor" />
@@ -14,147 +14,148 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Room Editor</span></h1>
+  <h1>Redaktor <span class="notranslate">Room</span> </h1>
   <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room.png" style="cursor: nesw-resize;" /></p>
-  <p><span data-field="title" data-format="default">The Room Editor</span> is where you create your game <strong>rooms</strong>. Every game requires <em>at least one room to run</em>, and in the room you can place instances, sprites, tiles, paths, backgrounds, sequences and particle systems. Each of these different assets can be placed on their own unique <strong>layer </strong>which can then be ordered however you wish in the <strong>Layers Editor</strong>. Due to the complexity of the room editor, we&#39;ll give you first a brief overview of the most important features, and then you can find more in-depth details from the section links listed below.</p>
-  <p>When you create a room asset, you can right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> on it in the Asset Browser to open the context menu, which will permit you to create <strong>child rooms </strong>(see the page on <a href="Room_Properties/Room_Inheritance.htm">Inheritance</a> for more information), open up the room for editing, add a new resource group to better organise the rooms, rename the room or delete it. Note that to change the room order and/or inheritance you need to use the <a href="../Settings/The_Room_Manager.htm">Room Manager</a>, which you can open using the menu in the top right of the Asset Browser.</p>
-  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png" /><span data-field="title" data-format="default">The Room Editor</span> is itself a <a href="../Introduction/Workspaces.htm">workspace</a> and as such you can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the tab and drag it off of the main window into a new window of its own - perhaps in another display, for example. You can also place it back into the main window by dragging the tab to the top of the IDE and releasing the mouse button.</p>
-  <p>The user interface for the room editor is simple to navigate and split in various discrete sections. Those parts of the editor that are docked - the <a href="../IDE_Tools/The_Inspector.htm">Inspector</a> that shows the <strong>room or layer properties</strong> and the <strong>layer editor</strong> - can also be removed from the dock by simply dragging them out into the workspace, and they can be added back into the docks again by dragging them to the sides or the bottom of the workspace.</p>
-  <p>Below is a brief overview of each of the Room Editor sections:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Rulers / Guides</a></p>
+  <p>W edytorze <span class="notranslate">room</span> tworzy się <strong>pokoje</strong> gier. Każda gra wymaga <em>do działania co najmniej jednej strony <span class="notranslate">room</span>.</em> Na stronie <span class="notranslate">room</span> można umieszczać instancje, <span class="notranslate">sprites</span>, <span class="notranslate">tiles</span>, <span class="notranslate">paths</span> i tła. Każda z tych różnych stron <span class="notranslate">assets</span> może być umieszczona na swojej własnej <strong>warstwie </strong>, którą można dowolnie uporządkować w <strong>edytorze warstw</strong>. Ze względu na złożoność edytora <span class="notranslate">room</span> przedstawimy najpierw krótki przegląd najważniejszych funkcji, a następnie można znaleźć bardziej szczegółowe informacje w odnośnikach do sekcji wymienionych poniżej.</p>
+  <p> <img> Gdy utworzysz zasób <span class="notranslate">room</span>, możesz kliknąć prawym przyciskiem myszy na nim w przeglądarce <span class="notranslate">Asset</span>, by otworzyć menu kontekstowe, które pozwoli Ci utworzyć <strong>dzieci <span class="notranslate">rooms</span> </strong>(więcej informacji znajdziesz na stronie <a href="Room_Properties/Room_Inheritance.htm">Dziedziczenie</a> ), otworzyć <span class="notranslate">room</span> do edycji, dodać nową grupę zasobów, by lepiej zorganizować <span class="notranslate">rooms</span>, zmienić nazwę <span class="notranslate">room</span> lub go usunąć. Pamiętaj, że aby zmienić kolejność i/lub dziedziczenie <span class="notranslate">room</span>, musisz użyć narzędzia <a href="../Settings/The_Room_Manager.htm">Room Manager</a>, które możesz otworzyć za pomocą menu w prawym górnym rogu przeglądarki <span class="notranslate">Asset</span>.</p>
+  <p><img>Edytor <span class="notranslate">room</span> jest sam w sobie <a href="../Introduction/Workspaces.htm">obszarem roboczym</a> i jako taki może być kliknięty na zakładce <img> i przeciągnięty z okna głównego do nowego, własnego okna - na przykład w innym wyświetlaczu. Można ją również umieścić z powrotem w oknie głównym, przeciągając kartę na górę okna <span class="notranslate">IDE</span> i zwalniając przycisk myszy.</p>
+  <p>Interfejs użytkownika edytora <span class="notranslate">room</span> jest prosty w nawigacji i podzielony na różne dyskretne sekcje. Te części edytora, które są zadokowane - <strong>właściwości pomieszczenia</strong> i <strong>edytor warstw</strong>, a także różne sekcje właściwości warstw - można również usunąć z doku, przeciągając je na stronę <span class="notranslate">workspace</span>, a następnie dodać z powrotem do doku, przeciągając je na boki lub na dół strony <span class="notranslate">workspace</span>.</p>
+  <p>Poniżej znajduje się krótkie omówienie każdej z sekcji Edytora <span class="notranslate">Room</span>:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Linijki / Prowadnice</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The rulers along the edge of the canvas show you the position of the things that are placed within it, and are marked from (0, 0) which is the center of the canvas and the origin for the room. You can click and drag on the rulers to pull a horizontal or vertical guide into the room, and this guide can then be used to accurately position the different assets that are being used, as moving an asset close to one will &quot;snap&quot; it to the guide. While positioning assets within the room, smart guides will also be temporarily shown indicating the distance between assets, as well as the distance from the room boundary or center point.</p>
-    <p class="dropspot"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" />The distance that assets &quot;snap&quot; to guides, as well as other properties, can be set in the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">Room Editor Preferences</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Linijki wzdłuż krawędzi płótna pokazują położenie elementów, które są w nim umieszczane, i są zaznaczone od punktu (0, 0), który jest środkiem płótna i punktem początkowym dla <span class="notranslate">room</span>. Możesz kliknąć i przeciągnąć linijki, aby przyciągnąć poziomą lub pionową prowadnicę do <span class="notranslate">room</span>. Prowadnica ta może być używana do dokładnego pozycjonowania różnych używanych stron <span class="notranslate">assets</span>, ponieważ zbliżenie strony <span class="notranslate">asset</span> do jednej z nich spowoduje jej &quot;przytrzaśnięcie&quot; do prowadnicy. Podczas pozycjonowania strony <span class="notranslate">assets</span> w obrębie strony <span class="notranslate">room</span> tymczasowo wyświetlane są także inteligentne prowadnice wskazujące odległość między stronami <span class="notranslate">assets</span> oraz odległość od granicy lub punktu centralnego strony <span class="notranslate">room</span>.</p>
+    <p class="dropspot"><img>Odległość, na jaką strona <span class="notranslate">assets</span> &quot;przyciąga&quot; się do prowadnic, a także inne właściwości, można ustawić w <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Room_Editor_Preferences.htm">preferencjach edytora sali</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Layer Editor</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Edytor warstw</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The room editor places things onto layers within the room. Each layer is at a discrete &quot;depth&quot;, where those that appear at the bottom of the list in the layer window will be drawn under those that appear near the top.</p>
-    <div data-conref="../assets/snippets/Note_layer_depth_range.hts"> </div>
-    <p class="dropspot">Layers are created by clicking  the appropriate button for the type of layer you want to create, which are:</p>
+    <p class="dropspot">Edytor <span class="notranslate">room</span> umieszcza elementy na warstwach w witrynie <span class="notranslate">room</span>. Każda warstwa ma określoną &quot;głębokość&quot;, przy czym te, które są wyświetlane na dole listy w oknie warstw, będą rysowane pod tymi, które są wyświetlane na górze.</p>
+    <p class="note"><strong>WAŻNE!</strong> Minimalna i maksymalna głębokość warstwy wynosi od -16000 do 16000. Wszystko, co zostanie umieszczone na warstwie spoza tego zakresu, nie zostanie narysowane, choć wszystkie zdarzenia będą przebiegać normalnie.</p>
+    <p class="dropspot">Warstwy tworzy się, klikając przycisk odpowiedni dla typu warstwy, którą chcemy utworzyć:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
+          <td class="icons"><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></td>
+          <td class="icons"><strong>Instancje</strong></td>
+          <td class="text">Na tej warstwie umieszcza się <a href="../Quick_Start_Guide/Objects_And_Instances.htm">instancje</a>, które będą używane w witrynie <span class="notranslate">room</span>.</td>
+        </tr>
+        <tr>
+          <td class="icons"><img class="center" src="../assets/Images/Asset_Editors/Editor_Room_RoomManager.png" /></td>
+          <td class="icons"><strong>Mapy kafelkowe</strong></td>
+          <td class="text">Ta warstwa służy do umieszczania strony <span class="notranslate">tiles</span> z <a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">zestawów k</a> afelków jako<span class="glossextra">mapy</span> <a class="glossterm" data-glossterm="mapa z płytkami" href="#">kafelków</a>.</td>
+        </tr>
+        <tr>
+          <td class="icons"><img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /></td>
+          <td class="icons"><strong>Ścieżki</strong></td>
+          <td class="text">Ta warstwa służy do wyświetlania i dodawania <a href="Paths.htm">ścieżek</a> w witrynie <span class="notranslate">room</span>.</td>
+        </tr>
+        <tr>
+          <td class="icons"><img alt="Guides and Smart Guides in the Sequences Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Guides.png" /></td>
+          <td class="icons"><strong>Aktywa</strong></td>
+          <td class="text"> <span class="notranslate">assets</span>Ta warstwa służy do wizualnego dodawania do strony <span class="notranslate">room</span> takich elementów, jak <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprite</a> 'y i <a href="../Quick_Start_Guide/Sequences.htm">sekwencje</a>.</td>
+        </tr>
+        <tr>
           <td class="icons"><img alt="Instance Layer Icon" src="../assets/Images/Icons/Icon_Instance.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Instances</strong></td>
-          <td class="text">This layer is for placing <a href="../Quick_Start_Guide/Objects_And_Instances.htm">instances</a> that will be used in the room.</td>
+          <td class="icons"><strong>Filtr/efekt</strong></td>
+          <td class="text">Ten typ warstwy definiuje <a href="Room_Properties/Filters_and_Effects.htm">filtr/efekt</a>, który jest stosowany do wszystkich warstw znajdujących się pod nim.</td>
         </tr>
         <tr>
           <td class="icons"><img alt="Tile map Layer Icon" src="../assets/Images/Icons/Icon_Tilemap.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Tile Maps</strong></td>
-          <td class="text">This layer is for placing tiles from <a href="../Quick_Start_Guide/Creating_Tile_Sets.htm">tile sets</a> as <a class="glossterm" data-glossterm="tile map" href="#">tile map</a><span class="glossextra">s</span>.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Path Layer Icon" height="30" src="../assets/Images/Icons/Icon_Paths.png" style="margin-left: 24px;" width="30" /></td>
-          <td class="icons"><strong>Paths</strong></td>
-          <td class="text">This layer is for showing and adding <a href="Paths.htm">paths</a> in the room.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Asset Layer Icon" src="../assets/Images/Icons/Icon_Assets.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Assets</strong></td>
-          <td class="text">This layer is for visual assets to be added to the room, like <a href="../Quick_Start_Guide/Creating_Sprites.htm">sprites</a>, <a href="../Quick_Start_Guide/Sequences.htm">sequences</a> and <a href="../Additional_Information/Guide_To_Using_Particles.htm">particles</a>.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img src="../assets/Images/Icons/Icon_FX_Layer.png" style="margin-left: 24px" /></td>
-          <td class="icons"><strong>Filter/Effect</strong></td>
-          <td class="text">This type of layer defines a <a href="Room_Properties/Filters_and_Effects.htm">filter/effect</a> that is applied to all layers below it.</td>
-        </tr>
-        <tr>
-          <td class="icons"><img alt="Background Layer Icon" src="../assets/Images/Icons/Icon_Background.png" style="margin-left: 24px;" /></td>
-          <td class="icons"><strong>Background</strong></td>
-          <td class="text">This type of layer defines a background, which is essentially a single colour or sprite image that may be tiled over the whole room.</td>
+          <td class="icons"><strong>Tło</strong></td>
+          <td class="text">Ten typ warstwy definiuje tło, które jest zasadniczo pojedynczym kolorem lub obrazem <span class="notranslate">sprite</span>, który może być umieszczony w kafelkach na całej stronie <span class="notranslate">room</span>.</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">You can also create a layer folder using the folder button <img alt="Folder Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_Folder.png" width="24" /> where you can group selected layers together, as well as delete the selected layers with the delete button <img alt="Delete Layer Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_DeleteLayer.png" width="24" />. Each of these layer types are discussed <a href="Room_Properties/Layer_Properties.htm">here</a> in more detail.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You can toggle <a href="Room_Properties/Room_Inheritance.htm">inheritance</a> for the layer editor which will affect layer order and visibility. The visibility itself can be set by clicking the eye icon <img alt="Eye Icon" class="icon" height="21" src="../assets/Images/Icons/Icon_Eye.png" width="21" /> beside each of the layers, or you can click the one at the very top to enable/disable all layers at once. You also have the possibility to &quot;lock&quot; a layer (or all of them) so that they cannot be changed by clicking the padlock icon <img alt="Padlock Icon" class="icon" src="../assets/Images/Icons/Icon_Padlock.png" />.</p>
-    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> Layers which are flagged as invisible will <strong>not</strong> be shown when the game is run.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Można również utworzyć folder warstw za pomocą przycisku folderu <img>, w którym można pogrupować wybrane warstwy, a także usunąć wybrane warstwy za pomocą przycisku Usuń <img>. Każdy z tych typów warstw został <a href="Room_Properties/Layer_Properties.htm">tutaj</a> omówiony bardziej szczegółowo.</p>
+    <p class="dropspot">Należy pamiętać, że w edytorze warstw można przełączać <a href="Room_Properties/Room_Inheritance.htm">dziedziczenie</a>, co wpłynie na kolejność warstw i ich widoczność. Samą widoczność można ustawić, klikając ikonę oka <img> obok każdej z warstw lub klikając ikonę na samej górze, aby włączyć/wyłączyć wszystkie warstwy naraz. Istnieje również możliwość &quot;zablokowania&quot; warstwy (lub wszystkich warstw), aby nie można było ich zmieniać, klikając ikonę kłódki <img>. Należy pamiętać, że warstwy oznaczone jako niewidoczne <strong>nie</strong> będą widoczne podczas gry.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Layer Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Właściwości warstwy</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">The Inspector window will show layer properties depending on the currently selected layer in the layer editor.</p>
-    <p class="dropspot"><img alt="Room Layer Properties In Full" class="center" src="../assets/Images/Asset_Editors/Editor_Room_LayerProperties.png" /> Each window will have the different properties and lists associated with the currently selected layer type, and you will be able to edit fundamental details for how the layer is displayed and what is actually on the layer. Please see <a href="Room_Properties/Layer_Properties.htm">here</a> for more detail.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Okno właściwości warstwy <span class="notranslate">room</span> będzie się zmieniać w zależności od aktualnie wybranej warstwy w edytorze warstw.</p>
+    <p class="dropspot"><img> W każdym oknie będą znajdować się różne właściwości i listy związane z aktualnie wybranym typem warstwy, a użytkownik będzie mógł edytować podstawowe szczegóły dotyczące sposobu wyświetlania warstwy oraz tego, co się na niej znajduje. Więcej szczegółów znajdziesz <a href="Room_Properties/Layer_Properties.htm">tutaj</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Room Properties</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Właściwości pomieszczenia</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">When the room asset is selected in the Asset Browser, the Inspector shows all the base properties for the room, like its size, whether it uses physics, or any cameras and viewports it requires. These can be changed here as well. This section is dicussed in more detail on the <a href="Room_Properties/Room_Properties.htm">Room Properties page</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">W tej części edytora <span class="notranslate">room</span> można zdefiniować wszystkie podstawowe właściwości strony <span class="notranslate">room</span>, takie jak jej rozmiar, użycie fizyki czy wymagane kamery i rzutnie. Sekcja ta jest omówiona bardziej szczegółowo <a href="Room_Properties/Room_Properties.htm">tutaj</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Layer Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Przybornik warstw</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">Certain layer types will have additional tools added to the top of the IDE in the <strong>Layer Toolbox</strong> (for example, tile layers or path layers). The exact tools will change based on the layer type currently being edited, and so are explained on the page explaining each layer, <a href="Room_Properties/Layer_Properties.htm">here</a>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">W przypadku niektórych typów warstw do górnej części strony <span class="notranslate">IDE</span> w <strong>Przyborniku warstw</strong> zostaną dodane dodatkowe narzędzia (na przykład warstwy <span class="notranslate">tile</span> lub <span class="notranslate">path</span> ). Dokładne narzędzia zmieniają się w zależności od typu aktualnie edytowanej warstwy, dlatego zostały wyjaśnione na stronie wyjaśniającej poszczególne warstwy, <a href="Room_Properties/Layer_Properties.htm">tutaj</a>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Room Toolbox</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Przybornik pokojowy</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">At the top of the main Room Editor canvas you have a few controls to deal with how things are displayed. They are:</p>
+    <p class="dropspot">W górnej części głównego okna edytora <span class="notranslate">Room</span> znajdują się elementy sterujące sposobem wyświetlania elementów. Są to:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><img alt="Canvas Grid Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasGrid.png" /> <strong>Toggle Canvas Grid</strong>: This will toggle on/off the Room Editor canvas grid. This is a grid that <span data-keyref="GameMaker Name">GameMaker</span> draws over the main canvas to divide it into sections, and by default is set to 32x32px in size. However if you click the Grid Menu icon <img alt="Icon Grid Menu" class="icon" src="../assets/Images/Icons/Icon_CanvasOptions.png" /> you will open the grid options:<img alt="Room Grid Options" class="center" src="../assets/Images/Asset_Editors/Editor_RoomGridControls.png" />These options permit you to set the grid colour and alpha, as well as the cell values for the grid along the X and Y axis. You also have an option to enable or disable grid snapping here (enabled by default). You can use the keyboard shortcuts &quot;G&quot; and <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;G&quot; to toggle the grid visibility and grid snapping respectively.</li>
-      <li class="dropspot"><img alt="Canvas Zoom Controls Icons" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasZoom.png" width="120" /> <strong>Canvas Zoom Controls</strong>: These buttons control the current canvas zoom level. You can zoom in or out and clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png" /> button will reset the canvas to be 1:1 with the room being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png" /> to make the entire room canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55" /> will set the room canvas to be 1:1 with the room settings.</li>
-      <li class="dropspot"><strong><img alt="Canvas View Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasViews.png" /> Show Views</strong>: Clicking this will enable or disable the view rectangle. When enabled you will see a highlighted area that signifies the different views that are enabled for the room.</li>
-      <li class="dropspot"><strong><img alt="Play Room Icon" class="icon" src="../assets/Images/Icons/Icon_PlayRoom.png" /> Play Animations</strong>: When adding sprites, sequences or animated tiles, you may want to get an idea of how these will look within the room itself without having to compile the whole project, and so you can click this to start all the different animations playing. Clicking it again will stop the animation.</li>
-      <li class="dropspot"><strong><img alt="Canvas Layer Select Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasSelect.png" /> Canvas Select From Any Layer</strong>: By default when you click on an element in the room canvas you will only be able to select those assets that are on the layer currently being edited, however if you enable this option you can then click on any element and it will be selected, changing the target layer to the one that the element is on. You can use the keyboard shortcut &quot; <span class="inline">P</span>&quot; to temporarily enable this (hold &quot;<span class="inline">P</span>&quot; to enable and release to disable)
-        <p class="dropspot"> </p>
+      <li class="dropspot"><img> <strong>Przełącz siatkę na płót</strong>nie: Ta opcja włącza/wyłącza siatkę płótna edytora <span class="notranslate">Room</span>. Jest to siatka, którą <span data-keyref="GameMaker Name">GameMaker</span> rysuje nad głównym płótnem, aby podzielić je na sekcje. Domyślnie jest ona ustawiona na rozmiar 32x32px. Jeśli jednak klikniesz ikonę menu siatki <img>, otworzysz opcje siatki:<img>. Opcje te pozwalają ustawić kolor i alfę siatki, a także wartości komórek siatki wzdłuż osi X i Y. Masz także możliwość włączenia lub wyłączenia siatki. Można tu również włączyć lub wyłączyć przyciąganie siatki (domyślnie włączone). Skróty klawiaturowe &quot;G&quot; oraz <img> + &quot;G&quot; służą do przełączania widoczności siatki i jej przyciągania.</li>
+      <li class="dropspot"><img> Elementy <strong>sterujące powiększeniem</strong> obrazu: Te przyciski sterują bieżącym poziomem powiększenia obrazu. Możesz powiększać lub pomniejszać, a kliknięcie przycisku <img> spowoduje przywrócenie proporcji obszaru roboczego 1:1 z edytowanym obszarem <span class="notranslate">room</span>. Możesz także kliknąć przycisk Dopasuj do okna <img>, aby całe płótno <span class="notranslate">room</span> zmieściło się w bieżącym edytorze <span class="notranslate">workspace</span> (nastąpi odpowiednie powiększenie/pomniejszenie). Możesz także powiększać i zmniejszać obraz za pomocą przycisków <img> / <img> i kółka myszy <img>, a naciśnięcie przycisków <img> / <img> + <img> spowoduje ustawienie płótna <span class="notranslate">room</span> w stosunku 1:1 z ustawieniami <span class="notranslate">room</span>.</li>
+      <li class="dropspot"><strong><img> </strong> Pokaż widoki: Kliknięcie tego przycisku powoduje włączenie lub wyłączenie prostokąta widoku. Po włączeniu tej funkcji pojawi się podświetlony obszar oznaczający różne widoki dostępne na stronie <span class="notranslate">room</span>.</li>
+      <li class="dropspot"><strong><img> </strong> Odtwórz animacje: Podczas dodawania stron <span class="notranslate">sprites</span>, <span class="notranslate">sequences</span> lub animowanych <span class="notranslate">tiles</span>, możesz chcieć zobaczyć, jak będą one wyglądać w samej witrynie <span class="notranslate">room</span>, bez konieczności kompilowania całego projektu. Możesz więc kliknąć to pole, aby rozpocząć odtwarzanie różnych animacji. Ponowne kliknięcie tego przycisku spowoduje zatrzymanie animacji.</li>
+      <li class="dropspot"><strong><img> </strong> Kanwa Zaznacz z dowolnej warstwy: Domyślnie po kliknięciu elementu na kanwie <span class="notranslate">room</span> można zaznaczyć tylko te elementy <span class="notranslate">assets</span>, które znajdują się na aktualnie edytowanej warstwie. Jeśli jednak włączysz tę opcję, możesz kliknąć dowolny element i zostanie on zaznaczony, a warstwa docelowa zostanie zmieniona na tę, na której znajduje się dany element. Aby tymczasowo włączyć tę funkcję, można użyć skrótu klawiaturowego &quot; <span class="inline">P</span>&quot; (przytrzymaj &quot;<span class="inline">P</span>&quot;, aby włączyć, i puść, aby wyłączyć)
+       <p class="dropspot"> </p>
       </li>
     </ul>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Room Canvas</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#">Płótno pokojowe</a></p>
   <div class="droptext" data-targetname="drop-down6">
-    <p class="dropspot">The center of the room editor window is taken up with the area where all the actual editing takes place. Here is where you&#39;ll be placing your instances and assets, drawing your tiles, or positioning your paths. You can zoom in and out using the mouse wheel or the room controls at the top, and you can pan around by holding the middle mouse button <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" /> down and moving the mouse around or using <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Space.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> while moving.</p>
-    <p class="dropspot">When creating asset layers or instance layers, you can place the asset or instance by simply dragging it from the Asset Browser and then dropping it where you want it to be positioned. Alternatively you can select an asset or instance from the Asset Browser and then press and hold <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> to preview the resource &quot;in-situ&quot;, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> you can add the instance and even &quot;paint&quot; it into the room layer by maintaining the button pressed and dragging the mouse. Note that by default instances and sprites that are added to a room in this way will be snapped to the defined room grid settings, but you can hold down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> to have the instance follow the mouse precisely and not snap (releasing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> will permit snapping again).</p>
-    <p class="dropspot">For paths you can create a new path layer and path resource right from within the Room Editor- or create a new path resource and then drag it into the main editor window as you would for an instance - and then edit the path and its connections in the editor window too. For tile sets, you can &quot;paint&quot; them in from the tile set editor.</p>
-    <p class="dropspot">Note that you can select and move or delete multiple assets from the same layer by holding down <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the ones you want, and most resources in the room editor will permit you to rotate and scale them (singly or as a group) by clicking and holding <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> along the outside edges or corners and dragging the mouse. You can also double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on any single asset (tiles, instances, sprites) to have the editor pan to it and open up the properties window for the selected asset in the Inspector.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">W środkowej części okna edytora <span class="notranslate">room</span> znajduje się obszar, w którym odbywa się cała właściwa edycja. To tutaj będziesz umieszczał swoje instancje i <span class="notranslate">assets</span>, rysował <span class="notranslate">tiles</span> lub pozycjonował <span class="notranslate">paths</span>. Powiększanie i pomniejszanie odbywa się za pomocą kółka myszy lub elementów sterujących <span class="notranslate">room</span> na górze, a przesuwanie - przez przytrzymanie środkowego przycisku myszy <img> i przesuwanie myszy lub użycie <img> + <img> podczas przesuwania.</p>
+    <p class="dropspot">Podczas tworzenia warstw <span class="notranslate">asset</span> lub warstw instancji możesz umieścić warstwę <span class="notranslate">asset</span> lub instancję, po prostu przeciągając ją z przeglądarki <span class="notranslate">Asset</span>, a następnie upuszczając w wybranym miejscu. Możesz też wybrać stronę <span class="notranslate">asset</span> lub instancję z przeglądarki <span class="notranslate">Asset</span>, a następnie nacisnąć i przytrzymać przycisk <img>, aby wyświetlić podgląd zasobu &quot;in-situ&quot;, a jeśli dodatkowo klikniesz lewy przycisk myszy <img>, możesz dodać instancję, a nawet &quot;namalować&quot; ją na warstwie <span class="notranslate">room</span>, trzymając wciśnięty przycisk i przeciągając mysz. Zauważ, że domyślnie instancje i <span class="notranslate">sprites</span> dodane do <span class="notranslate">room</span> w ten sposób będą przyciągane do zdefiniowanych ustawień siatki <span class="notranslate">room</span>, ale możesz przytrzymać <img> / <img>, by instancja podążała dokładnie za myszą i nie była przyciągana (zwolnienie <img> / <img> pozwoli na ponowne przyciąganie).</p>
+    <p class="dropspot">W przypadku <span class="notranslate">paths</span> możesz utworzyć nową warstwę <span class="notranslate">path</span> i zasób <span class="notranslate">path</span> bezpośrednio z edytora <span class="notranslate">Room</span> - lub utworzyć nowy zasób <span class="notranslate">path</span> i przeciągnąć go do głównego okna edytora, tak jak w przypadku instancji - a następnie edytować warstwę <span class="notranslate">path</span> i jej połączenia także w oknie edytora. W przypadku <span class="notranslate">tile sets</span> można je &quot;namalować&quot; z poziomu edytora <span class="notranslate">tile set</span>.</p>
+    <p class="dropspot">Zauważ, że możesz zaznaczyć i przenieść lub usunąć wiele stron <span class="notranslate">assets</span> z tej samej warstwy, przytrzymując przyciski <img> / <img> + <img> na tych, które chcesz, a większość zasobów w edytorze <span class="notranslate">room</span> pozwoli Ci je obracać i skalować (pojedynczo lub jako grupę), klikając i przytrzymując <img> wzdłuż zewnętrznych krawędzi lub rogów i przeciągając myszą. Możesz także dwukrotnie kliknąć <img> na dowolnej pojedynczej stronie <span class="notranslate">asset</span> (<span class="notranslate">tiles</span>, instancje, <span class="notranslate">sprites</span>), aby edytor przesunął się na nią i otworzył okno właściwości wybranej strony <span class="notranslate">asset</span>.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Status Bar</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#">Pasek stanu</a></p>
   <div class="droptext" data-targetname="drop-down7">
-    <p class="dropspot">The status bar is used to show you context specific information. The status bar will always show you where in the room the mouse cursor is, but it will also show additional information based on the layer being edited, the tool being used and the state of that tool.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Pasek stanu służy do wyświetlania informacji kontekstowych. Pasek stanu zawsze pokazuje, w którym miejscu na stronie <span class="notranslate">room</span> znajduje się kursor myszy, ale pokazuje również dodatkowe informacje w zależności od edytowanej warstwy, używanego narzędzia i stanu tego narzędzia.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p> </p>
-  <p>You can get more information about some of the above mentioned sections from the following pages:</p>
+  <p> </p>
+  <p>Więcej informacji na temat niektórych z wyżej wymienionych sekcji można znaleźć na kolejnych stronach:</p>
   <ul class="colour">
-    <li><a href="Room_Properties/Layer_Properties.htm">Layer Types And Properties</a></li>
-    <li><a href="Room_Properties/Room_Properties.htm">Room Properties</a></li>
-    <li><a href="Room_Properties/Room_Inheritance.htm">Room Inheritance</a></li>
-    <li><a data-xref="{title}" href="Room_Properties/Filters_and_Effects.htm">Filters and Effects</a></li>
+    <li><a href="Room_Properties/Layer_Properties.htm">Typy i właściwości warstw</a></li>
+    <li><a href="Room_Properties/Room_Properties.htm">Właściwości pomieszczenia</a></li>
+    <li><a href="Room_Properties/Room_Inheritance.htm">Dziedziczenie pomieszczeń</a></li>
+    <li><a data-xref="{title}" href="Room_Properties/Filters_and_Effects.htm">Filtry i efekty</a></li>
   </ul>
-  <h2>Room Menu</h2>
-  <p>Apart from the in-editor tools, you will also see a drop down menu at the top of the IDE.</p>
-  <p><img alt="Room Editor Menus" class="center" src="../assets/Images/Asset_Editors/Editor_RoomContextMenu.png" />These menus are explained below:</p>
+  <h2>Menu pokojowe</h2>
+  <p>Oprócz narzędzi wewnętrznych w edytorze, w górnej części strony <span class="notranslate">IDE</span> dodano nowe menu rozwijane.</p>
+  <p><img>Poniżej przedstawiono wyjaśnienia dotyczące tych menu:</p>
   <ul class="colour">
-    <li><strong>Layer View</strong>: This will re-open the Layer Editor window should you have closed it at any time.</li>
-    <li><strong>Instance Creation Order</strong>: This will open the <strong>Instance Creation Order Window </strong>(which can also be opened by using the button in the <a href="Room_Properties/Room_Properties.htm">Room Properties</a><strong> </strong>window):<br />
-      <img alt="Room Creation Order Window" class="center" src="../assets/Images/Asset_Editors/Editor_Room_CreationOrder.png" />This window lists all the instances in the room in the order that they will be created (from top to bottom). Should you require a specific instance to be created before any other, you can simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag it to the position your require.
+    <li><strong>Widok warstwy</strong>: Umożliwia ponowne otwarcie okna edytora warstw, jeśli zostało ono zamknięte w dowolnym momencie.</li>
+    <li><strong>Właściwości pomieszczenia</strong>: Spowoduje to ponowne otwarcie okna <span class="notranslate">Room</span> Properties (Właściwości sali), jeśli zostało ono zamknięte w dowolnym momencie.</li>
+    <li><strong>Właściwości warstwy</strong>: Umożliwia ponowne otwarcie <a href="Room_Properties/Layer_Properties.htm">okna Właściwości warstwy</a>, jeśli zostało ono zamknięte w dowolnym momencie.</li>
+    <li><strong>Kolejność tworzenia</strong> instancji: Otworzy to <strong>okno </strong> Kolejność tworzenia instancji (można je także otworzyć za pomocą przycisku w oknie <a href="Room_Properties/Room_Properties.htm">Właściwości pomieszczenia</a><strong> </strong>):<br>
+      <img>Okno to zawiera listę wszystkich instancji w <span class="notranslate">room</span> w kolejności, w jakiej będą one tworzone (od góry do dołu). Jeśli chcesz, by konkretna instancja została utworzona przed innymi, możesz po prostu kliknąć na stronie <img> i przeciągnąć ją na żądaną pozycję.
     </li>
-    <li><strong>Reset Windows On Current Desktop</strong>: This will reset the room editor window layout to its default values for the desktop workspace currently focused.</li>
+    <li><strong>Resetuj <span class="notranslate">Windows</span> na bieżącym</strong> pulpicie: Spowoduje to przywrócenie domyślnych wartości układu okna edytora <span class="notranslate">room</span> dla aktualnie skoncentrowanego pulpitu <span class="notranslate">workspace</span>.</li>
   </ul>
-  <p> </p>
+  <p> </p>
   <ul class="colour">
-    <li><strong>Tile Editing</strong>: When working with a tile layer, this option will be highlighted in the drop down menu. It has the following sub-menu:<br />
-      <img alt="Room Tile Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileMenu.png" />When editing the tile layer you can select multiple tiles by clicking, holding down and dragging the left mouse button <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />, or you can select and group individual tiles using <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />, or remove individual tiles from the selection using <img alt="Alt Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> + <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" />. From this menu you can then clear the selection or invert it as well as cut, copy or paste the selection to another layer (or even the same layer but in another position). The final option will re-open the tile set editor docked window should you have closed it.
+    <li><strong>Edycja kafelków</strong>: Podczas pracy z warstwą <span class="notranslate">tile</span> ta opcja będzie podświetlona w menu rozwijanym. Posiada ona następujące podmenu:<br>
+      <img>Podczas edycji warstwy <span class="notranslate">tile</span> możesz zaznaczyć wiele <span class="notranslate">tiles</span>, klikając, przytrzymując i przeciągając lewy przycisk myszy <img>, lub zaznaczyć i pogrupować poszczególne <span class="notranslate">tiles</span>, używając <img> / <img> + <img>, albo usunąć poszczególne <span class="notranslate">tiles</span> z zaznaczenia, używając <img> + <img>. Z tego menu można następnie wyczyścić zaznaczenie lub odwrócić je, a także wyciąć, skopiować lub wkleić zaznaczenie do innej warstwy (lub nawet do tej samej warstwy, ale w innym położeniu). Ostatnia opcja spowoduje ponowne otwarcie zadokowanego okna edytora <span class="notranslate">tile set</span>, jeśli zostało ono zamknięte.
     </li>
-    <li><strong>Convert Image To Tile Map</strong>: The Convert Image To Tile Map option is a powerful tool that can be used to import a single image and then extract the tiles used from the image and recreate it as a tile map layer in the room editor, creating the required tile set and sprite as part of process. When you select this tool, you will be asked to supply an uncompressed image file (<span class="inline">PNG</span>, <span class="inline">GIF </span>or <span class="inline">BMP</span>) which will then be loaded. On load you will be presented with the <strong>Image Import</strong> tool:<br />
-      <img alt="Convert Image To Tilemap Tool" class="center" src="../assets/Images/Asset_Editors/Editor_Room_ConvertImage.png" />Here you are given options on how to split up the tile when creating the tile set, and you can set the cell width and height as well as any offsets required around the edges. You can also set the approximate width (in pixels) for the final sprite that is created. For example, if the tile set is made up of 64x64 tile cells and you set a width here of 200, the final sprite that is created for use in the tile set will be 192 pixels wide (ie: 3 tile cells). If you leave it at the default value of 0, then <span data-keyref="GameMaker Name">GameMaker</span> will attempt to make as &quot;square&quot; a sprite as possible with approximately the same number of horizontal and vertical tile cells.<br />
-      <br />
-      After setting the way the image is to be split, clicking the swatch beside the <strong>Remove Colour</strong> option will open the colour picker and permit you to select a colour that is to be removed from the final sprite. This is usually a background colour that you want to remove and setting this swatch to anything other than 100% transparent (alpha 0) will remove the selected colour on import.<br />
-      <br />
-      Finally, you have the option to name the sprite, tile set and tile map layer that will be created for you by this tool. When you finalise the import, a sprite with all the images laid out in a grid will be created, as well as a tile set from this sprite. In the room, a new tile map layer will be created and the image reproduced using the generated tile set. Note that the tool will <em>not </em>duplicate tiles and will instead recognise when a cell has image data that coincides with another cell (this includes rotated tiles). You can see this in the following image where only one flower tile has been created and one crate tile too, yet there are multiple instances of both, with some instances rotated in the base image:<br />
-      <img alt="Convert Image To Tilemap Example Tileset" class="center" src="../assets/Images/Asset_Editors/Editor_Room_TileExample.png" />
+    <li><strong>Konwertuj obraz na mapę <span class="notranslate">Tile</span>:</strong> Opcja Konwertuj obraz na mapę <span class="notranslate">Tile</span> jest potężnym narzędziem, które może być używane do importowania pojedynczego obrazu, a następnie wyodrębnienia z niego <span class="notranslate">tiles</span> i odtworzenia go jako warstwy mapy <span class="notranslate">tile</span> w edytorze <span class="notranslate">room</span>, tworząc w tym procesie wymagane <span class="notranslate">tile set</span> i <span class="notranslate">sprite</span>. Po wybraniu tego narzędzia użytkownik zostanie poproszony o dostarczenie nieskompresowanego pliku obrazu (<span class="inline">PNG</span>, <span class="inline">GIF </span>lub <span class="inline">BMP</span>), który następnie zostanie wczytany. Po wczytaniu pliku zostanie wyświetlone narzędzie <strong>Import obrazu</strong>:<br>
+      <img>W tym miejscu można wybrać sposób podziału pliku <span class="notranslate">tile</span> podczas tworzenia strony <span class="notranslate">tile set</span>, a także ustawić szerokość i wysokość komórek oraz ewentualne przesunięcia wokół krawędzi. Można także ustawić przybliżoną szerokość (w pikselach) ostatecznej wersji tworzonej strony <span class="notranslate">sprite</span>. Na przykład jeśli witryna <span class="notranslate">tile set</span> składa się z komórek <span class="notranslate">tile</span> o rozmiarach 64x64 i ustawisz szerokość 200, ostateczna strona <span class="notranslate">sprite</span>, która zostanie utworzona w witrynie <span class="notranslate">tile set</span>, będzie miała szerokość 192 pikseli (czyli 3 komórki <span class="notranslate">tile</span> ). Jeśli pozostawisz domyślną wartość 0, <span data-keyref="GameMaker Name">GameMaker</span> będzie próbował utworzyć jak najbardziej &quot;kwadratową&quot; stronę <span class="notranslate">sprite</span> z mniej więcej taką samą liczbą komórek <span class="notranslate">tile</span> w poziomie i w pionie.<br>
+      <br>
+      Po ustawieniu sposobu podziału obrazu kliknięcie suwaka obok opcji <strong>Usuń</strong> kolor spowoduje otwarcie palety kolorów i umożliwi wybranie koloru, który ma zostać usunięty z ostatecznej wersji <span class="notranslate">sprite</span>. Zazwyczaj jest to kolor tła, który ma zostać usunięty, a ustawienie tego paska na wartość inną niż 100% przezroczystości (alfa 0) spowoduje usunięcie wybranego koloru podczas importu.<br>
+      <br>
+      Na koniec możesz nadać nazwy warstwom map <span class="notranslate">sprite</span>, <span class="notranslate">tile set</span> i <span class="notranslate">tile</span>, które zostaną utworzone za pomocą tego narzędzia. Po zakończeniu importu zostanie utworzona strona <span class="notranslate">sprite</span> ze wszystkimi obrazami ułożonymi w siatkę, a także strona <span class="notranslate">tile set</span> z tej strony <span class="notranslate">sprite</span>. Na stronie <span class="notranslate">room</span> zostanie utworzona nowa warstwa mapy <span class="notranslate">tile</span>, a obraz zostanie odtworzony przy użyciu wygenerowanej strony <span class="notranslate">tile set</span>. Należy pamiętać, że narzędzie <em>nie </em>powiela strony <span class="notranslate">tiles</span> i zamiast tego rozpoznaje, gdy komórka zawiera dane obrazu, które pokrywają się z inną komórką (dotyczy to także obróconej strony <span class="notranslate">tiles</span>). Widać to na poniższym obrazie, na którym utworzono tylko jeden kwiat <span class="notranslate">tile</span> i jedną skrzynię <span class="notranslate">tile</span>, ale na obrazie podstawowym jest wiele instancji obu tych elementów, a niektóre z nich są obrócone:<br>
+      <img>
     </li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Scripts.htm">The Script Editor</a></div>
+        <div style="float:left">Powrót: <a href="The_Asset_Editors.htm">Redaktorzy Aktywów</a></div>
+        <div style="float:right">Następny: <a href="Scripts.htm">Skrypty</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Room Editor

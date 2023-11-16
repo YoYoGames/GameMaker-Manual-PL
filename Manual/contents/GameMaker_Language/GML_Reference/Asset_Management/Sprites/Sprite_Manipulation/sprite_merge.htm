@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>sprite_merge</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_merge" />
   <meta name="rh-index-keywords" content="sprite_merge" />
@@ -15,55 +15,53 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_merge</h1>
-  <p>This function will merge the sprite indexed in argument 1 (&quot;ind2&quot;) with that which is indexed in argument 0 (&quot;ind1&quot;). The images themselves are <b>NOT</b> merged together, but rather the image indices are merged, with the sub images from sprite &quot;ind2&quot; appended onto those of sprite &quot;ind1&quot;, ie: they are added on at the end. Note that if the sprites are different sizes, then the appended sprites are stretched to fit the image size for &quot;ind1&quot;.</p>
-  <p>This change is permanent, and from the moment you use this function until the game is closed or the sprite deleted, the sprite that is being merged into will be changed, however the sprite that it is being merged with will remain the same.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> Neither the image asset that is being merged into, nor the image asset that is for merging, can be one of the original game resources. You must use <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span> first to create two new resources (if you are merging included game assets) and then merge those.</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> This function is only useful for <b>bitmap</b> sprites and will not work with SWF or JSON (Spine) sprites.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja połączy obraz <span class="notranslate">sprite</span> o indeksie w argumencie 1 (&quot;ind2&quot;) z obrazem o indeksie w argumencie 0 (&quot;ind1&quot;). Same obrazy <b>NIE</b> są łączone ze sobą, ale raczej indeksy obrazów są
+    łączone, a podobrazy z <span class="notranslate">sprite</span> &quot;ind2&quot; są dołączane do tych z <span class="notranslate">sprite</span> &quot;ind1&quot;, czyli dodawane na końcu. Zwróć uwagę, że jeśli obrazy <span class="notranslate">sprites</span> mają różne rozmiary, to dołączone obrazy <span class="notranslate">sprites</span> są rozciągane, aby dopasować je do rozmiaru obrazu
+    dla &quot;ind1&quot;.</p>
+  <p>Zmiana ta jest trwała i od momentu użycia tej funkcji do momentu zamknięcia gry lub usunięcia strony <span class="notranslate">sprite</span>, strona <span class="notranslate">sprite</span>, z którą jest łączona, zostanie zmieniona, jednak strona <span class="notranslate">sprite</span>, z którą jest łączona, pozostanie bez zmian.</p>
+  <p class="note"><b>UWAGA</b>: Ani obraz <span class="notranslate">asset</span>, który jest łączony, ani obraz <span class="notranslate">asset</span>, który ma być łączony, nie mogą być jednym z oryginalnych zasobów gry. Musisz użyć <span style="font-size:1px;"><a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a></span> first
+    aby utworzyć dwa nowe zasoby (jeśli scalasz dołączoną grę <span class="notranslate">assets</span>), a następnie je scalić.</p>
+  <p class="note"><b>UWAGA</b>: Ta funkcja jest przydatna tylko w przypadku <b>map bitowych</b> <span class="notranslate">sprites</span> i nie będzie działać z plikami SWF lub JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">sprite_merge(ind1, ind2);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
+     </tr>
       <tr>
-        <td>ind1</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to merge.</td>
-      </tr>
+        <td><span class="notranslate">ind1</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to merge.</span></td>
+     </tr>
       <tr>
-        <td>ind2</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite that ind1 is to be merged with.</td>
-      </tr>
+        <td><span class="notranslate">ind2</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite that ind1 is to be merged with.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">var tspr;<br />
-    tspr[0] = spr_add(working_directory + &quot;Sprite Assets\explode1.png&quot;, 16, true, true, 0, 0);<br />
-    tspr[1] = sprite_duplicate(spr_Explosion);<br />
-    sprite_merge(tspr[0], tspr[1]);<br />
-    sprite_index = t_spr[0];<br />
-    sprite_delete(tspr[1]);</p>
-  <p>The above code loads a sprite into a local variable then merges it with another sprite that has been duplicated. Finally the merged sprite is assigned to the instance <span class="inline">sprite_index</span> while the loaded sprite is removed to free the memory it uses. Note that at some point after this operation, like in the Destroy or Room End events, you will also need to use <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a> to remove the merged sprite from memory too.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Zwraca</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p class="code">var tspr;<br/> tspr[0] = spr_add(working_directory + &quot;Sprite Assets\explode1.png&quot;, 16, true, true, 0, 0);<br/> tspr[1] = sprite_duplicate(spr_Explosion);<br/> sprite_merge(tspr[0], tspr[1]);<br/> sprite_index = t_spr[0];<br/> sprite_delete(tspr[1]);
+  </p>
+  <p>Powyższy kod ładuje stronę <span class="notranslate">sprite</span> do zmiennej lokalnej, a następnie łączy ją z inną <span class="notranslate">sprite</span>, która została zduplikowana. Na koniec połączona strona <span class="notranslate">sprite</span> jest przypisywana do instancji <span class="inline">sprite_index</span>, a załadowana strona <span class="notranslate">sprite</span> jest usuwana
+    aby zwolnić wykorzystywaną przez nią pamięć. Zauważ, że w pewnym momencie po wykonaniu tej operacji, np. w zdarzeniach Destroy lub <span class="notranslate">Room</span> End, będziesz musiał także użyć polecenia <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a> aby usunąć połączonego sprite'a
+    z pamięci.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_create_from_surface.htm">sprite_create_from_surface</a></div>
+        <div style="float:left">Powrót: <a href="Sprite_Manipulation.htm">Manipulacja sprite'ami</a></div>
+        <div style="float:right">Następny: <a href="sprite_create_from_surface.htm"><span class="notranslate">sprite_create_from_surface</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_merge

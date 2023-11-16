@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_crc32</title>
+  <title>bufor_crc32</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_crc32" />
   <meta name="rh-index-keywords" content="buffer_crc32" />
@@ -15,50 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_crc32</h1>
-  <p>This function will take input data from a buffer and returns a crc32 checksum hash. You specify the buffer ID of the buffer to use, then an offset value (in bytes) for where to begin, and then a size (again in bytes) for the region to be hashed, and
-    the function will return a 32 bit integer value for that region.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>bufor_crc32</h1>
+  <p>Ta funkcja pobiera dane wejściowe z adresu <span class="notranslate">buffer</span> i zwraca skrót sumy kontrolnej crc32. Podajesz identyfikator <span class="notranslate">buffer</span> identyfikator <span class="notranslate">buffer</span>, którego chcesz użyć, następnie wartość offsetu (w bajtach) określającą miejsce rozpoczęcia, a następnie rozmiar (również w bajtach) regionu, który ma zostać zhashowany.
+    a funkcja zwróci 32-bitową liczbę całkowitą dla tego regionu.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">buffer_crc32(buffer, offset, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to use.</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
      </tr>
       <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The data offset value.</td>
+        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The data offset value.</span></td>
      </tr>
       <tr>
-        <td>size</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The size of the buffer.</td>
+        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The size of the buffer.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">check_val = buffer_crc32(buff, 0, buffer_get_size(buff));</p>
-  <p>The above code will create a crc32 checksum hash value for the full data stored in the buffer indexed by the variable &quot;buff&quot;, and store the returned integer hash value in the variable &quot;check_val&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod utworzy wartość skrótu sumy kontrolnej crc32 dla pełnych danych przechowywanych w pliku <span class="notranslate">buffer</span> indeksowanym przez zmienną &quot;buff&quot; i zapisze zwróconą wartość skrótu w zmiennej &quot;check_val&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_base64_encode.htm">buffer_base64_encode</a></div>
+        <div style="float:left">Powrót: <a href="Buffers.htm">Bufory</a></div>
+        <div style="float:right">Następny: <a href="buffer_base64_encode.htm"><span class="notranslate">buffer_base64_encode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_crc32

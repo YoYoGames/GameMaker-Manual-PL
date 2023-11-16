@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>If Collision Point</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Jeśli punkt kolizji</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the If Collision Point action" />
   <meta name="rh-index-keywords" content="GML Visual Action - If Collision Point" />
@@ -14,72 +14,85 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="If Collision Point Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Point.png" /> If Collision Point</h1>
-  <p>This action is used to check and see if there is a collision with one or more instances of the given object(s) at a specific point in the room and will evaluate to <span class="inline">true</span> if a collision is detected, or <span class="inline">false</span> otherwise. You give the object to check for and the position to check at - which can be an absolute position in the room or a position relative to the instance - and you can also check the <b>Not</b> flag to check if there is <i>not</i> a collision at the given position, meaning that the action will then only evaluate as <span class="inline">true</span> if <i>no</i> collisions are found, otherwise it will evaluate as <span class="inline">false</span>. You can also set the <b>Exclude Self</b> option to exclude the calling instance from the collision check.</p>
-  <p>Next you can check/uncheck the option to <b>Return List</b>. Checking this means the action will create and populate a <a href="../Data_Structures/Data_Structure_Actions.htm">list</a><span> </span>data structure with <i>all</i> instances in collision with the point and set the <b>Target</b> variable to the DS list ID. When unchecked, it will only set the <b>Target</b> variable to a value less than 0 when no collision is detected, or the unique ID value of <i>one</i> of the instances in the collision (note that if multiple instances are in collision then you have no way of knowing which instance ID will be returned when not using a list).</p>
-  <p>If you have selected to return a list - and the Target variable is <i>not</i> set to <b>Temp</b> - then you can also select the <b>Free Target</b> option. When set to <span class="inline">true</span>, then the list contained in the target variable will be destroyed and a new list created (and returned to the target variable) each time you call the action. In this way you can re-use the same variable without worrying about memory leaks, as, if you do <i>not</i> check <b>Free Target</b> option, you become responsible for destroying the list before using the variable again in the action. Note that <i>regardless</i> of whether this option is checked or not, if you have set the action to <b>Return List</b>, then the target variable will <i>always contain a list ID</i>, and as such, this will need to be freed when the instance is destroyed or the room ends (you can use the <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a> event for this, for example, along with the <a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a><span> </span>action). It is worth noting that you can set the <b>Free Target</b> option to use a pre-defined variable or an expression and so control when the list data structure is freed by setting the variable elsewhere (or having different outcomes for the expression) as long as it evaluates to <span class="inline">true</span>/<span class="inline">false</span>.</p>
-  <p>Finally, you supply the <b>Target</b> variable that you want to hold the returned value or list ID. If you flag the Target variable to hold the returned value as being a <b>Temp</b> (local) variable, then the action will create this variable to hold the return value <i>only</i> until the end of the event, in this case the Free Target option does nothing and you will be responsible for destroying the DS list if that option has been checked. If no target variable is supplied and the <b>Return List</b> option is checked, no list will be created.</p>
-  <p class="note"><b>IMPORTANT!</b> Collisions will only register for those instances that have a valid collision mask, ie: they have a sprite assigned to the <span class="inline">sprite_index</span>, or a sprite assigned to the <span class="inline">mask_index</span>. If the instances of the object being checked for in this action have no collision mask then the collision will not be detected, regardless of what the instance is drawing at the time.</p>
-  <p>Note that to add actions into an &quot;<span class="inline">if</span>&quot; block, they should be dropped to the <i>side</i> of the action, as shown in the image below:</p>
+  <h1><img> Jeśli punkt kolizji</h1>
+  <p>Ta akcja jest używana do sprawdzania, czy w określonym miejscu na stronie <span class="notranslate">object</span> występuje kolizja z jedną lub kilkoma instancjami danego obiektu <span class="notranslate">room</span>. W przypadku wykrycia kolizji akcja przyjmuje wartość <span class="inline">true</span>, a w przeciwnym razie <span class="inline">false</span>. Użytkownik podaje obiekt
+    który ma być sprawdzany, oraz pozycję, w której ma być sprawdzany - może to być pozycja bezwzględna w <span class="notranslate">room</span> lub pozycja względem instancji - i możesz także sprawdzić <b>Not</b> <span class="notranslate">flag</span>, aby sprawdzić, czy w podanej pozycji <i>nie</i> ma kolizji, co oznacza, że
+    że działanie zostanie ocenione jako <span class="inline">true</span> tylko wtedy, gdy <i>nie</i> zostaną znalezione żadne kolizje, w przeciwnym razie zostanie ocenione jako <span class="inline">false</span>. Możesz także ustawić opcję <b>Wyklucz siebie</b>, aby wykluczyć instancję wywołującą ze sprawdzania kolizji.</p>
+  <p>Następnie możesz zaznaczyć/odznaczyć opcję <b>Zwróć listę</b>. Zaznaczenie tej opcji oznacza, że akcja utworzy i zapełni strukturę danych <a href="../Data_Structures/Data_Structure_Actions.htm">Lista</a><span> </span><i>wszystkimi</i> instancjami w kolizji z punktem i ustawi zmienną Cel na identyfikator listy DS.
+    z punktem i ustawi zmienną <b>Target</b> na identyfikator listy DS. Jeśli nie jest zaznaczone, zmienna <b>Target</b> będzie miała wartość mniejszą od 0 tylko wtedy, gdy nie zostanie wykryta żadna kolizja, lub będzie miała unikatową wartość ID <i>jednej</i> z instancji w kolizji
+    (zauważ, że jeśli w kolizji bierze udział wiele instancji, to nie wiadomo, który identyfikator instancji zostanie zwrócony, jeśli nie używa się listy).</p>
+  <p>Jeśli wybrano opcję zwracania listy, a zmienna Target <i>nie</i> jest ustawiona na <b>Temp</b>, można również wybrać opcję <b>Free Tar</b> get. Jeśli ustawisz ją na <span class="inline">true</span>, wówczas lista zawarta w zmiennej docelowej zostanie zniszczona, a
+    a nowa lista będzie tworzona (i zwracana do zmiennej docelowej) przy każdym wywołaniu akcji. W ten sposób można ponownie używać tej samej zmiennej bez obawy o wycieki pamięci, ponieważ jeśli <i>nie</i> zaznaczymy opcji Free <b>Target</b>, to stajemy się odpowiedzialni
+    za zniszczenie listy przed ponownym użyciem zmiennej w akcji. Zauważ, że <i>niezależnie</i> od tego, czy opcja ta jest zaznaczona, czy nie, jeśli akcja została ustawiona na <b>Zwróć</b> listę, to zmienna docelowa <i>zawsze będzie zawierać identyfikator</i> listy,
+    i jako taka będzie musiała zostać zwolniona, gdy instancja zostanie zniszczona lub gdy zakończy się działanie strony <span class="notranslate">room</span> (możesz do tego użyć zdarzenia <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up</a>, na przykład wraz z akcją <a href="../Data_Structures/Free_Data_Structure.htm">Free Data Structure</a><span> </span>).
+    Warto zauważyć, że można ustawić opcję <b>Free Target</b> tak, aby używała predefiniowanej zmiennej lub wyrażenia i w ten sposób kontrolować, kiedy struktura danych listy zostanie zwolniona, ustawiając zmienną w innym miejscu (lub mając różne wyniki dla wyrażenia)
+    tak długo, jak będzie ono odpowiadać <span class="inline">true</span>/<span class="inline">false</span>.</p>
+  <p>Na koniec należy podać zmienną <b>docelową</b>, która ma przechowywać zwróconą wartość lub identyfikator listy. Jeśli <span class="notranslate">flag</span> zmienna docelowa, która ma przechowywać wartość zwracaną, jest zmienną <b>Temp</b> (lokalną), to akcja utworzy tę zmienną, aby przechowywać wartość zwracaną tylko do końca zdarzenia.
+    W tym przypadku opcja Free Target nie robi nic, a użytkownik będzie odpowiedzialny za zniszczenie listy DS, jeśli opcja ta została zaznaczona. Jeśli nie podano zmiennej docelowej i zaznaczono opcję <b>Lista</b> zwracana, lista nie zostanie utworzona.</p>
+  <p class="note"><b>WAŻNE!</b> Kolizje będą rejestrowane tylko dla tych instancji, które mają poprawną maskę kolizji, tzn. mają <span class="notranslate">sprite</span> przypisaną do <span class="inline">sprite_index</span>, lub <span class="notranslate">sprite</span> przypisaną do <span class="inline">mask_index</span>. Jeśli instancje <span class="notranslate">object</span> sprawdzane w tej akcji nie mają maski kolizji, to nie zostaną wykryte, niezależnie od tego, co w danej chwili rysuje instancja.
+    sprawdzane w tej akcji nie mają maski kolizji, to kolizja nie zostanie wykryta, niezależnie od tego, co dana instancja rysuje w danym momencie.</p>
+  <p>Należy pamiętać, że aby dodać akcje do bloku &quot;<span class="inline">if</span>&quot;, należy je upuścić z <i>boku</i> akcji, jak pokazano na poniższym rysunku:</p>
+  <p><img alt="If Collision Point Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/i_Collision_Point.png" /></p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
   <p><img alt="If Collision Point drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/If_Collision_Point.png" /></p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="If Collision Point Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/a_Collision_Point.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Object</td>
-        <td>The object or instance to check for collisions. You can click the <img class="icon" src="../../../assets/Images/Icons/Icon_AddVisualItem.png" /> icon to add multiple objects to check collisions with.</td>
+        <td><span class="notranslate">Shape</span></td>
+        <td>Kształt, którego należy użyć</td>
       </tr>
       <tr>
-        <td>x</td>
-        <td>The x position to check</td>
+        <td><span class="notranslate">Object</span></td>
+        <td> <span class="notranslate">object</span>, aby sprawdzić, czy nie występują przypadki</td>
       </tr>
       <tr>
-        <td>y</td>
-        <td>The y position to check</td>
+        <td><span class="notranslate">x1</span></td>
+        <td>Pozycja x, od której należy rozpocząć pracę</td>
       </tr>
       <tr>
-        <td>Exclude Self</td>
-        <td>Whether the collision checker should ignore the current instance or not</td>
+        <td><span class="notranslate">y1</span></td>
+        <td>Pozycja y, od której ma rozpocząć się praca</td>
       </tr>
       <tr>
-        <td>Not</td>
-        <td>Used to invert the condition; only satisfies if a collision is <strong>not</strong> found</td>
+        <td><span class="notranslate">x2</span></td>
+        <td>Pozycja x, na której ma się zakończyć</td>
       </tr>
       <tr>
-        <td>Return List</td>
-        <td>Whether a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/DS_Lists.htm">list</a> of collisions should be returned in <strong>Target</strong>, or only the first collision</td>
+        <td><span class="notranslate">y2</span></td>
+        <td>Pozycja y, na której ma się zakończyć</td>
       </tr>
       <tr>
-        <td>Free Target</td>
-        <td>Can be set to a variable or expression, or set to <span class="inline">true</span>/<span class="inline">false</span> to control freeing of the list memory when re-using a list variable</td>
+        <td><span class="notranslate">Free Target</span></td>
+        <td>Może być ustawiona na zmienną lub wyrażenie, albo na <span class="inline">true</span>/<span class="inline">false</span>, aby kontrolować zwalnianie pamięci listy przy ponownym użyciu zmiennej listy</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The variable to target for the return value of the action</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Zmienna, która ma być docelową wartością zwracaną przez akcję</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="If Collision Point Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Collisions/e_Collision_Point.png" />The above action block code checks for a collision at the mouse x/y position with an instance of the object &quot;obj_Enemy&quot;. If one (or more) collisions is found, an effect is created and at the position of the instance with the ID stored in the Target variable, and then the instance is destroyed. If no collision is found, a different effect is created at the mouse position.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji sprawdza, czy w położeniu x/y myszy nie wystąpiła kolizja z instancją
+    <span class="notranslate">object</span> &quot;obj_Enemy&quot;. Jeśli zostanie znaleziona jedna (lub więcej) kolizja, tworzony jest efekt na pozycji instancji o identyfikatorze zapisanym w zmiennej Target, a następnie instancja jest niszczona. Jeśli nie zostanie znaleziona żadna kolizja, w pozycji myszy zostanie utworzony inny
+    efekt zostanie utworzony w miejscu, w którym znajduje się mysz.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collision_Actions.htm">Collision Actions</a></div>
-        <div style="float:right">Next: <a href="If_Any_Object_At_Place.htm">If Any Object At Place</a></div>
+        <div style="float:left">Powrót: <a href="Collision_Actions.htm">Działania związane z kolizją</a></div>
+        <div style="float:right">Następny: <a href="If_Any_Object_At_Place.htm">If Any <span class="notranslate">Object</span> At Place</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - If Collision Point

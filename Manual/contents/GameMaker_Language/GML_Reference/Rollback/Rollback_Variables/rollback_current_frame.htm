@@ -7,7 +7,7 @@
   <title>rollback_current_frame</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="condition-tags" content="Export:Beta" />
@@ -16,28 +16,28 @@
 </head>
 <body>
   <h1>rollback_current_frame</h1>
-  <p>This is a global variable that stores the number of frames that have passed since the multiplayer game was started.</p>
-  <p>This should be used instead of <span class="inline"><a data-xref="{title}" href="../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> and other similar variables, as explained in <a data-xref="{text}" href="../Rollback_Constraints.htm#h">Time Variables</a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Jest to zmienna globalna, która przechowuje liczbę klatek, które upłynęły od momentu rozpoczęcia gry wieloosobowej.</p>
+  <p>Należy jej używać zamiast <span class="inline"><a data-xref="{title}" href="../../Maths_And_Numbers/Date_And_Time/current_time.htm">current_time</a></span> i innych podobnych zmiennych, jak wyjaśniono w rozdziale <a data-xref="{text}" href="../Rollback_Constraints.htm#h">Zmienne czasowe</a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">rollback_current_frame</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">image_angle = dsin(rollback_current_frame) * 90;</p>
-  <p>The code above uses <span class="inline">rollback_current_frame</span> with <a href="../../Maths_And_Numbers/Angles_And_Distance/dsin.htm"><span class="inline">dsin()</span></a> to calculate an oscillating value between 1 and -1, which is multiplied by 90 and applied to the instance&#39;s angle.</p>
-  <p> </p>
-  <p> </p>
+  <p>W powyższym kodzie użyto adresu <span class="inline">rollback_current_frame</span> z <a href="../../Maths_And_Numbers/Angles_And_Distance/dsin.htm"><span class="inline">dsin()</span></a> aby obliczyć wartość oscylującą między 1 a -1, która jest mnożona przez 90 i stosowana do kąta instancji.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Variables.htm">Rollback Variables</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_game_running.htm">rollback_game_running</a></div>
+        <div>Powrót: <a data-xref="{title}" href="Rollback_Variables.htm">Zmienne cofania</a></div>
+        <div>Next: <a data-xref="{title}" href="rollback_game_running.htm">rollback_game_running</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_current_frame

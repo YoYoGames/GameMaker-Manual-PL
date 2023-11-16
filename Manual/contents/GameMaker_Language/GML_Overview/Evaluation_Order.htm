@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Evaluation Order</title>
+  <title>Zlecenie oceny</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the Evaluation Order of arguments" />
   <meta name="rh-index-keywords" content="Evaluation Order" />
@@ -14,30 +14,30 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Evaluation Order</h1>
-  <p>When programming your game using the GameMaker Language you should be aware that function call arguments <strong>are not guaranteed an evaluation order</strong>. What this means is that the order in which functions placed in your code are run will change from platform to platform, so you should code them in an explicit manner. This is due to optimisation differences between the different target platforms, for example on the Windows target function arguments may be evaluated from right to left, but on the HTML5 target, they may be evaluated from left to right. So to avoid any issues you are best not to call multiple functions in the arguments of a single function call as you may well be building in a reliance on the order of evaluation.</p>
-  <p>To see an example of what this means, consider the following code which has a <a href="Script_Functions.htm">script function</a> &quot;<span class="inline">buffer_get_info</span>&quot; which is calling several <a href="Runtime_Functions.htm">runtime functions</a> and using them as arguments:</p>
+  <h1>Zlecenie oceny</h1>
+  <p>Podczas programowania gry za pomocą <span class="notranslate">GameMaker Language</span> należy pamiętać, że argumenty wywołania funkcji <strong>nie mają zagwarantowanej kolejności</strong> wykonywania. Oznacza to, że kolejność wykonywania funkcji umieszczonych w kodzie będzie się zmieniać w zależności od platformy, dlatego należy je kodować w sposób jawny. Wynika to z różnic w optymalizacji pomiędzy różnymi platformami docelowymi, na przykład na platformie docelowej <span class="notranslate">Windows</span> argumenty funkcji mogą być obliczane od prawej do lewej, ale na platformie docelowej HTML5 mogą być obliczane od lewej do prawej. Dlatego, aby uniknąć problemów, nie należy wywoływać wielu funkcji w argumentach pojedynczego wywołania funkcji, ponieważ może to powodować uzależnienie od kolejności obliczania argumentów.</p>
+  <p>Aby zobaczyć przykład tego, co to oznacza, rozważmy poniższy kod zawierający <a href="Script_Functions.htm">funkcję skryptu</a> &quot;<span class="inline">buffer_get_info</span>&quot;, która wywołuje kilka <a href="Runtime_Functions.htm">funkcji runtime</a> i używa ich jako argumentów:</p>
   <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br />
     buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff, buffer_s16),buffer_read(buff, buffer_s16));</p>
-  <p>Now, the problem here is that on some platforms, the <i>last</i> <span class="inline">buffer_read()</span> will be called <i>first</i>, and so all the arguments of the script will be wrong as the data is being read from the buffer in &quot;reverse&quot; order as you would perceive it. This has the knock-on effect here of affecting all further values for the <span class="inline">buffer_read()</span> function so all the arguments being passed to this script function will be wrong!</p>
-  <p>To get around this you should <i>explicitly</i> call the functions in the required order and store the returned values in variables, like this:</p>
+  <p>Problem polega na tym, że na niektórych platformach <i>ostatnia</i> funkcja <span class="inline">buffer_read()</span> będzie wywoływana jako <i>pierwsza</i>, a więc wszystkie argumenty funkcji <span class="notranslate">script</span> będą nieprawidłowe, ponieważ dane są odczytywane z funkcji <span class="notranslate">buffer</span> w &quot;odwrotnej&quot; kolejności, jak byśmy to postrzegali. Ma to wpływ na wszystkie dalsze wartości funkcji <span class="inline">buffer_read()</span>, więc wszystkie argumenty przekazywane do funkcji <span class="notranslate">script</span> będą nieprawidłowe!</p>
+  <p>Aby to obejść, należy <i>jawnie</i> wywoływać funkcje w wymaganej kolejności i przechowywać zwracane wartości w zmiennych, na przykład w ten sposób:</p>
   <p class="code">var val[0] = buffer_read(buff, buffer_s8);<br />
     var val[1] = buffer_read(buff, buffer_s16);<br />
     var val[2] = buffer_read(buff, buffer_s16);<br />
     buffer_get_info(val[0], val[1], val[2]);</p>
-  <p>While it may seem a more verbose method, it keeps everything clear and avoids any possible problems with evaluation order.</p>
-  <p>You should also take care when using <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> too, as the order in which they are evaluated in will change depending on which target you are compiling to. So, when using expressions in your code, ensure you use brackets <span class="inline">()</span> to properly control the order of operations. This is very important to ensure the correct behaviour of your games across all the target platforms games and is <i>essential</i> for the HTML5 platform. The page on <a href="Expressions_And_Operators.htm">expressions</a> explains this in more detail.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Choć metoda ta może wydawać się bardziej czasochłonna, to dzięki niej wszystko jest jasne i nie ma problemów z kolejnością wykonywania obliczeń.</p>
+  <p>Należy również uważać przy stosowaniu <a class="glossterm" data-glossterm="wyrażenie" href="#">wyrażeń</a>, ponieważ kolejność ich obliczania zmienia się w zależności od celu kompilacji. Dlatego używając wyrażeń w swoim kodzie, upewnij się, że używasz nawiasów <span class="inline">()</span>, aby odpowiednio kontrolować kolejność operacji. Jest to bardzo ważne, aby zapewnić poprawne działanie gier na wszystkich platformach docelowych, a w przypadku platformy HTML5 jest wręcz <i>niezbędne</i>. Na stronie poświęconej <a href="Expressions_And_Operators.htm">wyrażeniom</a> wyjaśniono to bardziej szczegółowo.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Accessors.htm">Accessors</a></div>
+        <div style="float:left">Powrót: <a href="GML_Overview.htm">Przegląd GML</a></div>
+        <div style="float:right">Następny: <a data-xref="{title}" href="Accessors.htm">Accessors</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 evaluation order

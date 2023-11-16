@@ -6,7 +6,7 @@
   <title>timeline_get_name</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function timeline_get_name" />
   <meta name="rh-index-keywords" content="timeline_get_name" />
@@ -16,42 +16,42 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>timeline_get_name</h1>
-  <p>This function can be used to get the name of a time line as a string. if the time line has been created dynamically using the <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> function, the name returned will have the
-    format &quot;__newtimeline<i>N</i>&quot; where &quot;<i>N</i>&quot; is the number of the time line (starting from 0). Please note that this is <i>only</i> a string and cannot be used to reference the timeline directly - for
-    that you would need the <i>timeline index</i>. You can, however, use this string to get the <i>timeline index</i> using the returned string along with the function <a href="../Assets_And_Tags/asset_get_index.htm"><span class="inline">asset_get_index()</span></a>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Funkcja ta może być użyta do uzyskania nazwy linii czasu w postaci <span class="notranslate">string</span>. jeżeli linia czasu została utworzona dynamicznie za pomocą funkcji <a href="timeline_add.htm"><span class="inline">timeline_add()</span></a> to zwrócona nazwa będzie miała format
+    format &quot;__newtimelineN&quot;, gdzie &quot;<i>N</i>&quot; jest numerem linii czasowej (zaczynając od 0). Należy pamiętać, że jest to <i>tylko</i> adres <span class="notranslate">string</span> i nie można go użyć do bezpośredniego odwołania się do strony <span class="notranslate">timeline</span> - do tego
+    do tego potrzebny jest <i>indeks osi czasu</i>. Można jednak użyć tej strony <span class="notranslate">string</span>, aby uzyskać <i>indeks</i> osi czasu, używając zwróconej strony <span class="notranslate">string</span> wraz z funkcją <a href="../Assets_And_Tags/asset_get_index.htm"><span class="inline">asset_get_index()</span></a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">timeline_get_name(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Timeline"></span></td>
-        <td>The index of the time line to check the name of.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Timeline"></span></td>
+        <td><span class="notranslate">The index of the time line to check the name of.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _str = timeline_get_name(timeline_index);<br/> show_debug_message(&quot;Current timeline = &quot; + _str);</p>
-  <p>The above code get the name of the currently assigned timeline and output it to the console.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera nazwę aktualnie przypisanej strony <span class="notranslate">timeline</span> i wysyła ją do konsoli.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Timelines.htm">Timelines</a></div>
-        <div style="float:right">Next: <a href="timeline_add.htm">timeline_add</a></div>
+        <div style="float:left">Powrót: <a href="Timelines.htm">Timelines</a></div>
+        <div style="float:right">Następny: <a href="timeline_add.htm"><span class="notranslate">timeline_add</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 timeline_get_name

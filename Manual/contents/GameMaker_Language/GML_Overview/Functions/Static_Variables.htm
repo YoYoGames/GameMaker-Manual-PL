@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Static Variables</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Zmienne statyczne</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the use of Static Variables" />
   <meta name="rh-index-keywords" content="Static Variables" />
@@ -14,19 +14,19 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Static Variables</span></h1>
-  <p>An interesting feature of <a href="../Script_Functions.htm">script functions</a> and <a href="../Method_Variables.htm">method variables</a> is that they can have <strong>static variables</strong>. A static variable is one that is defined the first time that the function is called and that will maintain its value from then onward. To create a static variable you need to define it using the <span class="inline">static</span> keyword, as shown in this simple example:</p>
+  <h1>Zmienne statyczne</h1>
+  <p>Interesującą cechą <a href="../Script_Functions.htm">funkcji skryptowych</a> i <a href="../Method_Variables.htm">zmiennych metod</a> jest to, że mogą one posiadać zmienne <strong>statyczne</strong>. Zmienna statyczna to taka, która jest definiowana przy pierwszym wywołaniu funkcji i która od tego momentu będzie utrzymywać swoją wartość. Aby utworzyć zmienną statyczną, należy zdefiniować ją za pomocą słowa kluczowego <span class="inline">static</span>, jak pokazano w tym prostym przykładzie:</p>
   <p class="code">counter = function()<br />
     {<br />
         static num = 0;<br />
         return num++;<br />
     }</p>
-  <p>In the above example, the variable <span class="inline">num</span> is a static variable, and so will be defined as <span class="inline">0</span> the first time the function is called, but every time the function is called after that, the variable initialisation will be ignored. So, if you then call this function like this:</p>
-  <p class="code">repeat (10)<br />
+  <p>W powyższym przykładzie zmienna <span class="inline">num</span> jest zmienną statyczną, a więc zostanie zdefiniowana jako <span class="inline">0</span> przy pierwszym wywołaniu funkcji, ale przy każdym kolejnym wywołaniu funkcji inicjalizacja zmiennej zostanie zignorowana. Jeśli więc następnie wywołasz tę funkcję w następujący sposób:</p>
+  <p class="code">for (var i = 0; i &lt; 10; ++i;)<br />
     {<br />
         show_debug_message(counter());<br />
     }</p>
-  <p>The output will be:</p>
+  <p>Dane wyjściowe będą następujące:</p>
   <p class="code">0<br />
     1<br />
     2<br />
@@ -37,90 +37,16 @@
     7<br />
     8<br />
     9</p>
-  <p>If you didn&#39;t use the <span class="inline">static</span> keyword here then the output would simply be <span class="inline">0</span> for every iteration of the loop, since the variable <span class="inline">num</span> will be getting defined as <span class="inline">0</span> every time the function is called before being returned. Note that a static variable can only be changed inside the original function, and returning it will simply give you a copy of its value - essentially the shared static variable can only be changed by the function that contains it.</p>
-  <h2>Statics with Constructors</h2>
-  <p>You can also use static variables in <a href="../Structs.htm#constr">constructor functions</a>. These functions are used to create new structs that contain the variables defined within the function.</p>
-  <p>Static variables in constructors are only initialised once for that constructor, and <strong>they are not duplicated</strong> for each new struct made from the constructor.</p>
-  <p>This means that no matter how many structs you create from a constructor, they will all <strong>share the same value</strong> for each static variable they have.</p>
-  <p class="code">function weapon() constructor<br />
-    {<br />
-        static number_of_weapons = 0;<br />
-        number_of_weapons++;<br />
-    }<br />
-    <br />
-    var _weapon1 = new weapon();<br />
-    var _weapon2 = new weapon();<br />
-    <br />
-    show_debug_message(_weapon1.number_of_weapons); // Prints 2
-  </p>
-  <p>In the example above, the <span class="inline2">weapon</span> constructor holds a static variable called <span class="inline2">number_of_weapons</span>, which is shared across all of its structs. With each new call to the <span class="inline2">weapon</span> constructor, the <span class="inline2">number_of_weapons</span> value goes up by 1.</p>
-  <p>After being called twice, the value of that variable becomes <span class="inline2">2</span>, which can be read from any of its structs, or from the constructor directly by writing <span class="inline2">weapon.number_of_weapons</span>.</p>
-  <h2>Accessing Static Variables</h2>
-  <p>You can read a static value for a function using the <span class="inline2">&lt;function_name&gt;.&lt;static_variable&gt;</span> syntax.</p>
-  <p>Say, for a function called <span class="inline2">counter</span>, you have a static variable <span class="inline2">count</span>. You can access that by typing <span class="inline2">counter.count</span> after its first call.</p>
-  <p class="code">function counter() {<br />
-        static count = 0;<br />
-        return count ++;<br />
-    }<br />
-    <br />
-    repeat (10) <br />
-    {<br />
-        counter()<br />
-    }<br />
-    <br />
-    show_debug_message(counter.count);
-  </p>
-  <p>You can&#39;t access a static variable from a function that was never called, as static variables are initialised on the first call to a function. Trying to do so will give you an error and crash your game.</p>
-  <p>For constructors, you can access static variables from the constructor function directly, or from any of the structs created from the constructor:</p>
-  <p class="code">function weapon() constructor<br />
-    {<br />
-        static number_of_weapons = 0;<br />
-        number_of_weapons ++;<br />
-    }<br />
-    <br />
-    var _weapon1 = new weapon();<br />
-    var _weapon2 = new weapon();<br />
-    <br />
-    show_debug_message(weapon.number_of_weapons);   // Accessing from constructor directly<br />
-    show_debug_message(_weapon1.number_of_weapons); // Accessing from a struct<br />
-    show_debug_message(_weapon2.number_of_weapons); // Accessing from a struct
-  </p>
-  <p>All three <span class="inline2">show_debug_message()</span> calls above would print the same value, as they are reading the exact same variable.</p>
-  <p>Just like with regular functions, you can&#39;t access a static variable from a constructor if that constructor was never called.</p>
-  <h3>Static Struct</h3>
-  <p>All static variables belonging to a function are stored in a struct, which you can retrieve using <span class="inline3_func"><a data-xref="{title}" href="../../GML_Reference/Variable_Functions/static_get.htm">static_get</a></span>. You can modify the static struct of a function to change the static variables it has using <span class="inline3_func"><a data-xref="{title}" href="../../GML_Reference/Variable_Functions/static_set.htm">static_set</a></span>, however this function is only provided for use with structs for deserialisation purposes.</p>
-  <p>Static structs have most of their use with structs created from constructors. See: <a data-xref="{title}" href="../Structs/Static_Structs.htm">Static Struct</a></p>
-  <h3>Initialisation Order</h3>
-  <p>Inside the function, as with other variables, you should always <em>define</em> static variables <em>before </em><em>accessing</em> them.</p>
-  <p>While it is possible to access a static variable before the line where it&#39;s defined (as, before running the function, <span data-keyref="GameMaker Name">GameMaker</span> first initalises all of its static variables), it is recommended to follow a natural order (define first, access after):</p>
+  <p>Gdybyś nie użył tutaj słowa kluczowego <span class="inline">static</span>, to wyjściem byłoby po prostu <span class="inline">0</span> dla każdej iteracji funkcji <span class="notranslate">loop</span>, ponieważ zmienna <span class="inline">num</span> będzie definiowana jako <span class="inline">0</span> przy każdym wywołaniu funkcji przed jej zwróceniem. Zwróć uwagę, że zmienna statyczna może być zmieniana tylko wewnątrz oryginalnej funkcji, a zwrócenie jej da po prostu kopię jej wartości - zasadniczo współdzielona zmienna statyczna może być zmieniana tylko przez funkcję, która ją zawiera.</p>
+  <p>Zmienna statyczna jest zawsze inicjalizowana na początku funkcji, więc niezależnie od tego, gdzie w funkcji zdefiniujemy zmienną statyczną, będzie ona zawsze dostępna do odczytu i zmiany w całej funkcji (nawet jeśli zostanie użyta przed jej zdefiniowaniem). Zobacz poniższy przykład:</p>
   <p class="code">function add_health()<br />
     {<br />
-        static my_health = 1;<br />
         my_health++;<br />
         show_debug_message(my_health);<br />
+        static my_health = 1;<br />
     }</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> <a data-xref="{title}" href="../../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a> will show a GM2043 warning if you try to access a static variable before it&#39;s initialised.</p>
-  <p>When using inheritance with constructors, any static variables in the child constructor will only be initialised once the parent constructor has been executed. See the following example:</p>
-  <p class="code">function parent() constructor<br />
-    {<br />
-        static value = 10;<br />
-        show_debug_message(value);<br />
-    }<br />
-    <br />
-    function child() : parent() constructor<br />
-    {<br />
-        static value = 20;<br />
-        show_debug_message(value);<br />
-    }<br />
-    <br />
-    var _child = new child();
-  </p>
-  <p>Calling the <span class="inline2">child()</span> constructor prints this to the output log:</p>
-  <p class="code">10<br />
-    20</p>
-  <p>The first value is from the parent constructor, and the second is from the child constructor. This shows that the child&#39;s static variable <span class="inline2">value</span> was not initialised until the parent constructor was finished.</p>
-  <h2>Static Methods</h2>
-  <p>You can also use the <span class="inline">static</span> keyword within a function to create a <strong>static function</strong>, which - like with variables - simply means that the function will only be defined once, which is the first time the function is called, for example:</p>
+  <p>Tutaj zmienna statyczna &quot;<span class="inline">my_health</span>&quot; jest zmieniana i wypisywana na wyjście kompilatora <em>przed</em> jej zainicjalizowaniem. Chociaż wygląda to źle, jest to całkowicie w porządku, ponieważ zmienne statyczne są inicjowane <em>przed </em>wykonaniem jakiegokolwiek kodu funkcji. Należy pamiętać, że jeśli w funkcji znajduje się wiele zmiennych statycznych, to przy ich inicjalizacji na początku zostanie zachowana kolejność, w jakiej zostały zdefiniowane.</p>
+  <p>Można również użyć słowa kluczowego <span class="inline">static</span> wewnątrz funkcji, aby utworzyć funkcję <strong>statyczną</strong>, co - podobnie jak w przypadku zmiennych - oznacza po prostu, że funkcja zostanie zdefiniowana tylko raz, na przykład przy pierwszym wywołaniu funkcji:</p>
   <p class="code">function(_x, _y) Vector2 constructor<br />
     {<br />
         x = _x;<br />
@@ -133,17 +59,36 @@
         }<br />
     }
   </p>
-  <p>In the above example, the <a href="../Structs.htm#constr">constructor function</a> <span class="inline"><span class="inline">Vector2</span></span> can be used to create a struct, and the struct will have some variables, one of which is the method variable <span class="inline"><span class="inline">Add</span></span>. Since this variable has been defined as static, the function it contains will only be initialised <em>once </em>the first time the <span class="inline">Vector2</span> function is called, and all further structs created with this constructor will reference the function <span class="inline">Add</span> that was created initially, instead of creating a new function for each struct (for more information on structs and the <span class="inline">constructor</span> keyword please see <a data-xref="{title}" href="../Structs.htm">Structs &amp; Constructors</a>).</p>
-  <p> </p>
-  <p> </p>
+  <p>W powyższym przykładzie można użyć funkcji konstruktora <span class="inline"><span class="inline">Vector2</span> do utworzenia strony <span class="notranslate">struct</span>, a strona <span class="notranslate">struct</span> będzie miała kilka zmiennych, z których jedną jest zmienna metody <span class="inline"><span class="inline">Add</span>. Ponieważ zmienna ta została zdefiniowana jako statyczna, funkcja, którą zawiera, zostanie zainicjalizowana tylko <em>raz </em>, przy pierwszym wywołaniu funkcji <span class="inline">Vector2</span>, a wszystkie kolejne <span class="notranslate">structs</span> utworzone za pomocą tego konstruktora będą odwoływać się do funkcji <span class="inline">Add</span>, która została utworzona na początku, zamiast tworzyć nową funkcję dla każdego <span class="notranslate">struct</span> (więcej informacji na temat <span class="notranslate">structs</span> i słowa kluczowego <span class="inline">constructor</span> można znaleźć <a href="../Structs.htm">tutaj</a>).</p>
+  <p>Gdy używamy dziedziczenia z konstruktorami, wszelkie zmienne statyczne w konstruktorze potomnym zostaną zainicjowane dopiero po wykonaniu konstruktora nadrzędnego, więc zmienne statyczne konstruktora potomnego nie będą nadpisywać zmiennych statycznych konstruktora nadrzędnego. Zobacz poniższy przykład:</p>
+  <p class="code">function Parent() constructor<br />
+    {<br />
+        show_debug_message(value);<br />
+        static value = 10;<br />
+    }<br />
+    <br />
+    function Child() : Parent() constructor<br />
+    {<br />
+        show_debug_message(value);<br />
+        static value = 20;<br />
+    }<br />
+    <br />
+    var _child = new Child();
+  </p>
+  <p>Wywołanie konstruktora <span class="inline">Child()</span> powoduje wypisanie tego do dziennika wyjściowego:</p>
+  <p class="code">10<br />
+    20</p>
+  <p>Pierwsza wartość pochodzi z konstruktora rodzica, a druga z konstruktora dziecka. Pokazuje to, że zmienna statyczna <span class="inline">value</span> dziecka nie została zainicjalizowana do momentu zakończenia konstruktora rodzica, a w każdym konstruktorze zmienna statyczna została zainicjowana przed wywołaniem <span class="inline">show_debug_message()</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Arrays.htm">Arrays</a></div>
+        <div style="float:left">Powrót: <a href="../GML_Overview.htm">Przegląd GML</a></div>
+        <div style="float:right">Następny: <a data-xref="{title}" href="../Arrays.htm">Tablice</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Static Variables

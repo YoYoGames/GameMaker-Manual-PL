@@ -2,69 +2,69 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>window_get_visible_rects</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for window_get_visible_rects"/>
-  <meta name="rh-index-keywords" content="window_get_visible_rects"/>
-  <meta name="search-keywords" content="window_get_visible_rects"/>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for window_get_visible_rects" />
+  <meta name="rh-index-keywords" content="window_get_visible_rects" />
+  <meta name="search-keywords" content="window_get_visible_rects" />
   <meta name="is_pure" content="true" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>window_get_visible_rects</h1>
-  <p>With this function you can find the overlapping region of the rectangle defined by (x1,y1) to (x2,y2) on each of the attached displays. The function will return an array with 8 values per display (ie: if you have two displays, the array will have a
-    length of 16 indices), where the values [0 ... 3] correspond to the overlapx1, overlapy1, overlapx2, overlapy2 - defining the region of overlap on this display and will be set to 0,0,0,0 if no overlap - and the values [4 ... 7] corresponds to the
-    monitorx1, monitory1, monitorx2, monitory2 - the coordinates of the display in the virtual display space. This can be used to test whether a saved window position is going to be visible or not (the user may have disconnected an external monitor or
-    moved the window off screen which left the window position that was saved as not being valid), for example.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Za pomocą tej funkcji można znaleźć nakładający się obszar prostokąta zdefiniowanego przez (x1,y1) do (x2,y2) na każdym z dołączonych wyświetlaczy. Funkcja zwróci tablicę z 8 wartościami na każdy wyświetlacz (tzn. jeśli masz dwa wyświetlacze, tablica będzie miała
+    długość 16 indeksów), gdzie wartości [0 ... 3] odpowiadają wartościom overlapx1, overlapy1, overlapx2, overlapy2 - określającym obszar nakładania się na tym wyświetlaczu i będą ustawione na 0,0,0,0, jeśli nie ma nakładania się - a wartości [4 ... 7] odpowiadają wartościom
+    monitorx1, monitor1, monitorx2, monitor2 - współrzędnym wyświetlacza w przestrzeni wirtualnej. Można to wykorzystać do sprawdzenia, czy zapisana pozycja okna będzie widoczna, czy nie (użytkownik mógł odłączyć zewnętrzny monitor lub
+    przesunąć okno poza ekran, co spowodowało, że zapisana pozycja okna nie jest ważna).</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">window_get_visible_rects(x1, y1, x2, y2);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The left edge of the rectangle to check</td>
+        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The left edge of the rectangle to check</span></td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The top edge of the rectangle to check.</td>
+        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The top edge of the rectangle to check.</span></td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The right edge of the rectangle to check</td>
+        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The right edge of the rectangle to check</span></td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The bottom edge of the rectangle to check.</td>
+        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The bottom edge of the rectangle to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Array"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var wx = window_get_x();<br/> var wy = window_get_y();<br/> var ww = window_get_width();<br/> var wh = window_get_height();<br/> display_data = window_get_visible_rects(wx, wy, wx + ww, wy + wh);<br/> display_num = array_length(display_data) / 8;</p>
-  <p>The above code will generate a 1D array held in the variable <span class="inline">display_data</span> containing the information about the displays, as well as create the variable <span class="inline">display_num</span> to hold the number of active displays found.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod wygeneruje tablicę 1D przechowywaną w zmiennej <span class="inline">display_data</span> zawierającą informacje o wyświetlaczach, a także utworzy zmienną <span class="inline">display_num</span> przechowującą liczbę znalezionych aktywnych wyświetlaczy.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_mouse_get_x.htm">window_mouse_get_x</a></div>
+        <div style="float:left">Powrót: <a href="../The_Game_Window/The_Game_Window.htm">Okno gry</a></div>
+        <div style="float:right">Następny: <a href="../The_Game_Window/window_mouse_get_x.htm"><span class="notranslate">window_mouse_get_x</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 window_get_visible_rects

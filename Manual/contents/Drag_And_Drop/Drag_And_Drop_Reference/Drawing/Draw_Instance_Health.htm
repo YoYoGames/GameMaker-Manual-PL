@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Instance Health</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Rysuj stan zdrowia</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Instance Health action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Instance Health" />
@@ -14,73 +14,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /> Draw Instance Health</h1>
-  <p>With this action you can draw a coloured bar to show a graphic representation of the instance variable <span class="inline">health</span> (when you use <i>any</i> &quot;health&quot; action in <span data-keyref="GameMaker Name">GameMaker</span> the instance that calls it will have a new instance scope variable called <span class="inline">health</span> added). The amount to be displayed is a percentage value that falls within the range of 0 - 100. You can set the direction anchor for drawing the healthbar (from left-to-right or right-to-left and top-to-bottom or bottom-to-top) as well as the position, either within the room or relative to the instance calling the action. You can also set the colour to be blended from each of the four corners of the healthbar, creating gradients from red to green (for example, but you can use any colours). Below you can see an image of how a simple healthbar looks with the different options:</p>
-  <p><b><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png" /></b></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action is only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>, and will not draw anything if used elsewhere.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Instance Health Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Health.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Rysuj stan zdrowia</h1>
+  <p>Za pomocą tej akcji możesz narysować kolorowy pasek, aby pokazać graficzną reprezentację zmiennej instancji <span class="inline">health</span> (gdy użyjesz <i>jakiejkolwiek</i> akcji &quot;health&quot; w <span data-keyref="GameMaker Name">GameMakerze</span>, instancja, która ją wywoła, będzie miała dodaną nową zmienną instance scope
+    o nazwie <span class="inline">health</span> ). Wartość, która ma zostać wyświetlona, jest wartością procentową z zakresu 0-100. Możesz określić kierunek rysowania paska zdrowia (od lewej do prawej lub od prawej do lewej i od góry do dołu lub od dołu do góry)
+    a także pozycję - w obrębie strony <span class="notranslate">room</span> lub względem instancji wywołującej akcję. Możesz także ustawić kolor, który ma być mieszany z każdego z czterech rogów paska zdrowia, tworząc gradienty od czerwonego do zielonego (na przykład, ale możesz
+    użyć dowolnych kolorów). Poniżej znajduje się obrazek przedstawiający wygląd prostego paska zdrowia z różnymi opcjami:</p>
+  <p><b><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /></b></p>
+  <p class="note"><b>UWAGA</b>: Ta akcja jest przeznaczona wyłącznie do użycia w różnych <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">zdarzeniach</a> losowania i nie spowoduje wylosowania niczego, jeśli zostanie użyta w innym miejscu.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png"/></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Direction</td>
-        <td>The direction to draw the healthbar contents</td>
+        <td><span class="notranslate">Direction</span></td>
+        <td>Kierunek, w którym ma być rysowana zawartość paska zdrowia</td>
       </tr>
       <tr>
-        <td>Left</td>
-        <td>The position of the left side of the healthbar</td>
+        <td><span class="notranslate">Left</span></td>
+        <td>Położenie lewej strony paska zdrowia</td>
       </tr>
       <tr>
-        <td>Top</td>
-        <td>The position of the top of the healthbar</td>
+        <td><span class="notranslate">Top</span></td>
+        <td>Położenie górnej części paska zdrowia</td>
       </tr>
       <tr>
-        <td>Right</td>
-        <td>The position of the right side of the healthbar</td>
+        <td><span class="notranslate">Right</span></td>
+        <td>Położenie prawej strony paska zdrowia</td>
       </tr>
       <tr>
-        <td>Bottom</td>
-        <td>The position of the bottom of the healthbar</td>
+        <td><span class="notranslate">Bottom</span></td>
+        <td>Pozycja dolnej części paska zdrowia</td>
       </tr>
       <tr>
-        <td>Background</td>
-        <td>The colour to draw as the background on the healthbar</td>
+        <td><span class="notranslate">Background</span></td>
+        <td>Kolor, który ma być tłem paska zdrowia</td>
       </tr>
       <tr>
-        <td>Outline</td>
-        <td>The colour to use to outline the healthbar</td>
+        <td><span class="notranslate">Outline</span></td>
+        <td>Kolor, który ma być używany do obrysowania paska zdrowia.</td>
       </tr>
       <tr>
-        <td>Min Colour</td>
-        <td>The colour to blend from the minimum value</td>
+        <td><span class="notranslate">Min Colour</span></td>
+        <td>Kolor, który ma być mieszany z wartością minimalną</td>
       </tr>
       <tr>
-        <td>Max Colour</td>
-        <td>The colour to blend from the maximum value</td>
+        <td><span class="notranslate">Max Colour</span></td>
+        <td>Kolor, który ma być mieszany z wartością maksymalną</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Instance Health Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Health.png" />The above action block code draws a healthbar in the top left of the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji rysuje pasek zdrowia w lewym górnym rogu ekranu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Instance_Lives.htm">Draw Instance Lives</a></div>
+        <div style="float:left">Powrót: <a href="Drawing_Actions.htm">Rysowanie działań</a></div>
+        <div style="float:right">Następny: <a href="Draw_Instance_Lives.htm">Rysowanie życia instancji</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Instance Health

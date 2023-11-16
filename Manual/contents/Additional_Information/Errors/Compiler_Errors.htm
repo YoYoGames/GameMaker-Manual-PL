@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Compiler Errors</title>
+  <title>Błędy kompilatora</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the various compiler errors" />
   <meta name="rh-index-keywords" content="Compile Errors" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Compile Errors</h1>
-  <p>The second type of error that can be reported for your game is the <strong>compiler error</strong>. A compiler error happens when your game encounters some type of error that the syntax checker may not have been able to detect - it&#39;s very easy to forget to declare a variable or mistakenly type a string as a real, for example - or when an error is related to how you have set up the compile tools from the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a> for the target platform. These errors will be caught by <span data-keyref="GameMaker Name">GameMaker</span> as the game is being compiled and this information will also be shown in the <a href="../../Introduction/The_Output_Window.htm">Compiler Error Output</a>, as shown below:</p>
+  <h1>Błędy kompilacji</h1>
+  <p>Drugim typem błędu, który może być zgłoszony dla Twojej gry jest <strong>błąd kompilatora</strong>. Błąd kompilatora pojawia się, gdy Twoja gra napotka jakiś rodzaj błędu, którego nie był w stanie wykryć system sprawdzania składni - bardzo łatwo jest zapomnieć o zadeklarowaniu zmiennej lub omyłkowo wpisać <span class="notranslate">string</span> jako real, na przykład - lub gdy błąd jest związany z tym, jak ustawiłeś narzędzia kompilacji z <a href="../../Setting_Up_And_Version_Information/Platform_Preferences.htm">Preferencji Platformy</a> dla platformy docelowej. Błędy te zostaną wychwycone przez <span data-keyref="GameMaker Name">GameMakera</span> w trakcie kompilacji gry, a informacja o nich pojawi się również w <a href="../../Introduction/The_Output_Window.htm">Compiler Error Output</a>, jak pokazano poniżej:</p>
   <p><img alt="Compile Errors" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/Errors_Compile_Output.png" /></p>
-  <p class="note"><span class="note">NOTE</span> These errors don&#39;t usually pop up a window and will simply show &quot;<span class="inline" style="font-size: 14px">Build Failed</span>&quot; in the compiler output. If a window pops up it&#39;s usually a Runner Error, which is explained <a href="Runner_Errors.htm">here</a>.</p>
-  <p>The compiler error messages will all follow the same format:</p>
+  <p class="note"><span class="note">UWAGA</span> Te błędy zazwyczaj nie wyskakują w oknie i po prostu pokażą &quot;<span class="inline" style="font-size: 14px">Build Failed</span>&quot; w wyjściu kompilatora. Jeśli pojawi się okno, jest to zwykle błąd biegacza, który jest wyjaśniony <a href="Runner_Errors.htm">tutaj</a>.</p>
+  <p>Wszystkie komunikaty o błędach kompilatora będą miały ten sam format:</p>
   <p class="code">[object] - [event] - [Line Number]: [error string]</p>
-  <p>If the error is found in a script then it will simply be:</p>
+  <p>Jeśli błąd zostanie znaleziony w <span class="notranslate">script</span> to po prostu będzie:</p>
   <p class="code">[script] - [Line Number]: [error string]</p>
-  <p>You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the compiler error entries to open the given asset at the position flagged as giving the error, and then you can use the information contained within the message to pinpoint exactly where in the object or script the error has occurred. However, sometimes these errors can seem a bit cryptic, so below you can find a complete list of all errors and a brief explanation of what they mean:</p>
-  <p> </p>
+  <p>Możesz wtedy dwukrotnie kliknąć <img> na dowolnym wpisie błędu kompilatora, aby otworzyć daną <span class="notranslate">asset</span> w miejscu oznaczonym jako dające błąd, a następnie możesz użyć informacji zawartych w komunikacie, aby dokładnie określić, w którym miejscu <span class="notranslate">object</span> lub <span class="notranslate">script</span> wystąpił błąd. Jednak czasami te błędy mogą wydawać się nieco tajemnicze, więc poniżej znajdziesz pełną listę wszystkich błędów i krótkie wyjaśnienie, co one oznaczają:</p>
+  <p> </p>
   <table>
     <colgroup>
       <col />
@@ -31,259 +31,259 @@
     </colgroup>
     <tbody>
       <tr>
-        <th>Error</th>
-        <th>Description</th>
+        <th>Błąd</th>
+        <th>Opis</th>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Miscellaneous</strong></p>
+          <p><strong>Różne</strong></p>
         </td>
       </tr>
       <tr>
-        <td>No program to compile</td>
-        <td>A previous compile error has caused the compiler parse tree to not be created and thus the compiler has no program data to compile</td>
+        <td>Brak programu do kompilacji</td>
+        <td>Poprzedni błąd kompilacji spowodował, że drzewo parsowania kompilatora nie zostało utworzone, a więc kompilator nie ma danych programu do kompilacji</td>
       </tr>
       <tr>
         <td>Fatal Error while compiling <i>[name]</i> - bailing details below</td>
-        <td>This message simply means that some error has been discovered but the compiler cannot place what or where (if this happens consistently you may wish to contact <a href="https://accounts.yoyogames.com/contact-us" target="_blank">support</a> and supply the details that the compiler output window shows)</td>
+        <td>Ta wiadomość oznacza po prostu, że jakiś błąd został wykryty, ale kompilator nie może określić co i gdzie (jeśli to się dzieje konsekwentnie, możesz chcieć skontaktować się z <a href="https://accounts.yoyogames.com/contact-us" target="_blank">pomocą</a> techniczną i dostarczyć szczegóły, które pokazuje okno wyjściowe kompilatora)</td>
       </tr>
       <tr>
-        <td>Recursive macro expansion is not supported</td>
-        <td>You have used recursive macros that refer to each other and constantly expand</td>
+        <td>Rekursywne rozszerzanie makr nie jest obsługiwane</td>
+        <td>Użyłeś rekurencyjnych makr, które odwołują się do siebie i stale rozszerzają</td>
       </tr>
       <tr>
-        <td>Unable to find TextureGroup <span class="inline">[group]</span></td>
-        <td>This error is usually only found from trying to run a malformed project file (if this happens consistently you may wish to contact <a href="https://accounts.yoyogames.com/contact-us" target="_blank">support</a> and supply the details that the compiler output window shows)</td>
+        <td>Nie można znaleźć TextureGroup <span class="inline">[group]</span></td>
+        <td>Ten błąd jest zwykle spotykany tylko przy próbie uruchomienia źle sformułowanego pliku projektu (jeśli zdarza się to konsekwentnie, możesz chcieć skontaktować się z <a href="https://accounts.yoyogames.com/contact-us" target="_blank">pomocą</a> techniczną i dostarczyć szczegóły, które pokazuje okno wyjściowe kompilatora)</td>
       </tr>
       <tr>
-        <td>Wrong to convert <span class="inline">[value]</span> to number</td>
-        <td>You have tried to convert the given value, for example a string, into a number</td>
+        <td>Błędna konwersja <span class="inline">[value]</span> na liczbę</td>
+        <td>Próbowałeś zamienić podaną wartość, np. <span class="notranslate">string</span>, na liczbę</td>
       </tr>
       <tr>
-        <td>Division by 0</td>
-        <td>You have tried to divide a value by 0</td>
+        <td>Podział przez 0</td>
+        <td>Próbowałeś podzielić wartość przez 0</td>
       </tr>
       <tr>
-        <td>Invalid object id <span class="inline">[object ID]</span> used</td>
-        <td>You have tried to access an object using an ID value that is incorrect</td>
+        <td>Użyto nieprawidłowego identyfikatora <span class="notranslate">object</span> <span class="inline">[object ID]</span> </td>
+        <td>Próbowałeś uzyskać dostęp do strony <span class="notranslate">object</span> używając nieprawidłowej wartości ID.</td>
       </tr>
       <tr>
-        <td>Unclosed comment (<span class="inline">/*</span>) at end of script</td>
-        <td>You have created a script comment using<br />
-          <span class="inline">/* [comment] */</span><br />
-          but have not supplied the closing comment tag
+        <td>Niezamknięty komentarz (<span class="inline">/*</span>) na końcu skryptu</td>
+        <td>Utworzyłeś komentarz <span class="notranslate">script</span> używając<br>
+          <span class="inline">/* [comment] */</span><br>
+          ale nie dostarczyłeś zamykającego tagu komentarza
         </td>
       </tr>
       <tr>
-        <td>Invalid token</td>
-        <td>You have an invalid character in your game code, which can happen with foreign language characters or Unicode</td>
+        <td>Nieważny token</td>
+        <td>Masz nieprawidłowy znak w kodzie gry, co może się zdarzyć w przypadku znaków obcojęzycznych lub Unicode</td>
       </tr>
       <tr>
-        <td>Number <span class="inline">[num]</span> in incorrect format</td>
-        <td>The given number - shown in the error - is not the correct format for the function or operation being performed, for example you supply an integer when a pointer is required</td>
+        <td>Numer <span class="inline">[num]</span> w nieprawidłowym formacie</td>
+        <td>Podana liczba - pokazana w błędzie - nie jest prawidłowym formatem dla wykonywanej funkcji lub operacji, np. podajesz liczbę całkowitą, gdy wymagany jest wskaźnik</td>
       </tr>
       <tr>
-        <td>Unexpected EOF encountered</td>
-        <td>You have reached the end of file unexpectedly while using the File Functions</td>
+        <td>Napotkano nieoczekiwane EOF</td>
+        <td>Nieoczekiwanie osiągnąłeś koniec pliku podczas korzystania z funkcji plików</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Strings</strong></p>
+          <p><strong>Struny</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Unable to Not a string</td>
-        <td>You have tried to use &quot;<span class="inline">!</span>&quot; (not) on a string</td>
+        <td>Nie można Not a string</td>
+        <td>Próbowałeś użyć &quot;<span class="inline">!</span>&quot; (nie) na ciągu znaków</td>
       </tr>
       <tr>
-        <td>Unable to Negate a string</td>
-        <td>You have tried to negate a string, for example<br />
+        <td>Nie można zanegować ciągu znaków</td>
+        <td>Próbowałeś zanegować <span class="notranslate">string</span>, np.<br>
           <span class="inline">string = -string</span>
         </td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Scripts, </strong><strong>Functions </strong><strong>and Arguments</strong></p>
+          <p><strong>Skrypty, </strong><strong>Funkcje </strong><strong>i argumenty</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Wrong number of arguments for function <span class="inline">[function]</span></td>
-        <td>You have supplied too many or too few arguments for the given function</td>
+        <td>Niewłaściwa liczba argumentów dla funkcji <span class="inline">[function]</span></td>
+        <td>Podałeś zbyt wiele lub zbyt mało argumentów dla danej funkcji</td>
       </tr>
       <tr>
-        <td>Failed to parse action_execute_script() - incorrect number of arguments received</td>
-        <td>The GML Visual action Execute Script has too many or too few arguments for the given script being called</td>
+        <td>Failed to parse action_execute_script() - nieprawidłowa liczba otrzymanych argumentów</td>
+        <td>Akcja wizualna <span class="notranslate">GML</span> Execute <span class="notranslate">Script</span> ma zbyt wiele lub zbyt mało argumentów dla wywoływanego <span class="notranslate">script</span> </td>
       </tr>
       <tr>
-        <td>Unknown function <span class="inline">[function]</span> check to see if script is empty</td>
-        <td>A script or function has been called that the compiler does not recognise (this error is usually thrown by empty script asset references since the compiler will strip out these assets on compile)</td>
+        <td>Nieznana funkcja <span class="inline">[function]</span> sprawdź, czy <span class="notranslate">script</span> jest pusta</td>
+        <td>Wywołana została strona <span class="notranslate">script</span> lub funkcja, której kompilator nie rozpoznaje (ten błąd jest zwykle powodowany przez puste odwołania <span class="notranslate">script</span> <span class="notranslate">asset</span>, ponieważ kompilator usuwa te <span class="notranslate">assets</span> podczas kompilacji)</td>
       </tr>
       <tr>
-        <td>Function <span class="inline">[function]</span> expects <span class="inline">n</span> arguments, <span class="inline">a</span> provided</td>
-        <td><span>A function has been given the wrong number of arguments (<span class="inline">n</span>) when a certain number were expected (<span class="inline">a</span>)</span></td>
+        <td>Funkcja <span class="inline">[function]</span> oczekuje argumentów <span class="inline">n</span>, <span class="inline">a</span> dostarczonych</td>
+        <td><span>Funkcja otrzymała niewłaściwą liczbę argumentów (<span class="inline">n</span>), gdy oczekiwano określonej liczby (<span class="inline">a</span>)</span></td>
       </tr>
       <tr>
-        <td>Assignment of an empty value (function does not return anything?)</td>
-        <td>You have tried to assign a return value from a function when that function returns nothing</td>
+        <td>Przypisanie pustej wartości (funkcja nic nie zwraca?)</td>
+        <td>Próbowałeś przypisać wartość zwrotną z funkcji, gdy ta funkcja nic nie zwraca</td>
       </tr>
       <tr>
-        <td>Unable to find function <span class="inline">[function]</span>    </td>
-        <td>You have called an unknown function</td>
+        <td>Nie można znaleźć funkcji <span class="inline">[function]</span> </td>
+        <td>Wywołałeś nieznaną funkcję</td>
       </tr>
       <tr>
-        <td>Calling a function that needs an instance and no instance is available</td>
-        <td><span>The function or script being called is for acting on an instance, but at the time of running no instances exist</span></td>
+        <td>Wywołanie funkcji, która wymaga instancji, a żadna instancja nie jest dostępna</td>
+        <td><span>Wywoływana funkcja lub <span class="notranslate">script</span> służy do działania na instancji, ale w momencie jej uruchomienia nie istnieją żadne instancje</span></td>
       </tr>
       <tr>
-        <td>Calling a function that needs an other and no other is available</td>
-        <td>You have used the keyword <span class="inline">other</span> outside of the Collision Event or outside of a <span class="inline">with</span> statement</td>
+        <td>Wywołanie funkcji, która potrzebuje innego, a żaden inny nie jest dostępny</td>
+        <td>Użyłeś słowa kluczowego <span class="inline">other</span> poza wydarzeniem kolizyjnym lub poza wypowiedzią <span class="inline">with</span>.</td>
       </tr>
       <tr>
-        <td>Argument naming error, <span class="inline">n</span> arguments but no reference found to<span class="inline"> a</span></td>
-        <td>You have given a number of arguments to a script, but fail to reference one of them in the script, for example, your script takes three arguments but you only use arguments <span class="inline">n </span>and <span class="inline">a</span></td>
+        <td>Błąd nazwy argumentu, <span class="inline">n</span> argumenty, ale nie znaleziono odniesienia do<span class="inline"> a</span></td>
+        <td>Podałeś kilka argumentów do <span class="notranslate">script</span>, ale nie odwołałeś się do jednego z nich w <span class="notranslate">script</span>, na przykład twój <span class="notranslate">script</span> przyjmuje trzy argumenty, ale używasz tylko argumentów <span class="inline">n </span>i <span class="inline">a</span></td>
       </tr>
       <tr>
-        <td>Cannot compare arguments</td>
-        <td>You have tried to compare two different argument types, like a string and a real number</td>
+        <td>Nie można porównać argumentów</td>
+        <td>Próbowałeś porównać dwa różne typy argumentów, takie jak <span class="notranslate">string</span> i liczba rzeczywista</td>
       </tr>
       <tr>
-        <td>Unknown function or script <span class="inline">[functions/script]</span> </td>
-        <td>The compiler does not recognise the function or script being called</td>
+        <td>Nieznana funkcja lub <span class="notranslate">script</span> <span class="inline">[functions/script]</span> </td>
+        <td>Kompilator nie rozpoznaje wywoływanej funkcji lub <span class="notranslate">script</span> </td>
       </tr>
       <tr>
-        <td>Cannot use resource name <span class="inline">[resource] </span>as it is not being exported</td>
-        <td>You have tried to access a resource that has not been flagged as part of the project for the platform being compiled to</td>
+        <td>Nie można użyć nazwy zasobu <span class="inline">[resource] </span>, ponieważ nie jest on eksportowany</td>
+        <td>Próbowałeś uzyskać dostęp do zasobu, który nie został oznaczony jako część projektu dla platformy, na którą jest kompilowany</td>
       </tr>
       <tr>
-        <td>Cannot use function/script name for a variable, using <span class="inline">[functions/script]</span></td>
-        <td>You have tried to use either a function name or a script name as a variable, for example:<br />
+        <td>Nie można użyć nazwy funkcji/skryptu dla zmiennej, używając <span class="inline">[functions/script]</span></td>
+        <td>Próbowałeś użyć nazwy funkcji lub nazwy <span class="notranslate">script</span> jako zmiennej, na przykład:<br>
           <span class="inline">string = &quot;Hello World&quot;</span>
         </td>
       </tr>
       <tr>
-        <td>Cannot use an argument outside a script </td>
-        <td>The built in argument variables can only be used inside a script but you have tried to use them elsewhere</td>
+        <td>Nie można użyć argumentu poza skryptem </td>
+        <td>Wbudowane zmienne argumentów mogą być używane tylko wewnątrz <span class="notranslate">script</span>, ale próbowałeś użyć ich gdzie indziej</td>
       </tr>
       <tr>
-        <td>No references to <span class="inline">argument[num]</span> but references <span class="inline">argument[num]</span></td>
-        <td>You are using a reference to an argument that does not exist but that could map to another argument</td>
+        <td>Brak odniesień do <span class="inline">argument[num]</span>, ale odniesienia <span class="inline">argument[num]</span></td>
+        <td>Używasz odniesienia do argumentu, który nie istnieje, ale który mógłby mapować do innego argumentu</td>
       </tr>
       <tr>
-        <td>Incorrect number of arguments for accessor</td>
-        <td>You have supplied the wrong number of arguments when using an accessor</td>
+        <td>Nieprawidłowa liczba argumentów dla accessora</td>
+        <td>Podałeś niewłaściwą liczbę argumentów podczas używania akcesora</td>
       </tr>
       <tr>
-        <td>Wrong type of arguments for (one of the below):<br />
-          /, div, mod, +, -, &amp;&amp;, ||, &amp;, |, ^, &lt;&lt;, &gt;&gt;</td>
-        <td>You have supplied the wrong type of argument for the expression being evaluated</td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Variables</b></p>
-        </td>
-      </tr>
-      <tr>
-        <td>Using uninitialized variable <i>[var]</i></td>
-        <td>You have tried to use the named variable before it has been initialised</td>
-      </tr>
-      <tr>
-        <td>Variable <i>[var]</i> is read-only</td>
-        <td>You have tried to change the named variable when it cannot be changed</td>
-      </tr>
-      <tr>
-        <td>Unable to find variable named <i>[var]</i></td>
-        <td>The named variable cannot be found in the current compile</td>
-      </tr>
-      <tr>
-        <td>Malformed variable reference</td>
-        <td>You have tried to reference a variable in the wrong way</td>
-      </tr>
-      <tr>
-        <td>Trying to set a read only variable <i>[var]</i></td>
-        <td>You have tried to set a variable that is read only</td>
-      </tr>
-      <tr>
-        <td>Cannot re-declare a built in variable</td>
-        <td>You have tried to declare a local variable using the same name as one of the built in variables</td>
-      </tr>
-      <tr>
-        <td>Cannot use resource name for a variable</td>
-        <td>You have use the same name as a resource from the resource tree as a local variable</td>
-      </tr>
-      <tr>
-        <td><i>[Variable]</i> is read-only</td>
-        <td>You have tried to use a variable that has been flagged as read only</td>
+        <td>Zły typ argumentów dla (jednego z poniższych):<br>
+          /, div, mod, +, -, &amp;&amp;, ||, &amp;, ^, &lt;&lt;, &gt;&gt;.</td>
+        <td>Podałeś niewłaściwy typ argumentu dla ocenianego wyrażenia</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Constants</b></p>
+          <p><b>Zmienne</b></p>
         </td>
       </tr>
       <tr>
-        <td>Cannot set a constant [constant] to a value</td>
-        <td>You have tried to set a constant to a different value</td>
+        <td>Użycie niezainicjowanej zmiennej <i>[var]</i></td>
+        <td>Próbowałeś użyć nazwanej zmiennej przed jej inicjalizacją</td>
       </tr>
       <tr>
-        <td>Constant is invalid here</td>
-        <td>You have tried to use a constant somewhere that is not valid for the code being run</td>
+        <td>Zmienna <i>[var]</i> jest tylko do odczytu</td>
+        <td>Próbowałeś zmienić nazwaną zmienną, gdy nie można jej zmienić</td>
       </tr>
       <tr>
-        <td>Cannot assign to [var] - it&#39;s a constant</td>
-        <td>You have tried to assign a new value to the named constant</td>
+        <td>Nie można znaleźć zmiennej o nazwie <i>[var]</i></td>
+        <td>Nazwana zmienna nie może być znaleziona w bieżącej kompilacji</td>
+      </tr>
+      <tr>
+        <td>Nieprawidłowe odniesienie do zmiennej</td>
+        <td>Próbowałeś odwołać się do zmiennej w niewłaściwy sposób</td>
+      </tr>
+      <tr>
+        <td>Próba ustawienia zmiennej tylko do odczytu <i>[var]</i></td>
+        <td>Próbowałeś ustawić zmienną, która jest tylko do odczytu</td>
+      </tr>
+      <tr>
+        <td>Nie można ponownie zadeklarować zmiennej wbudowanej</td>
+        <td>Próbowałeś zadeklarować zmienną lokalną używając tej samej nazwy co jedna z wbudowanych zmiennych</td>
+      </tr>
+      <tr>
+        <td>Nie można użyć nazwy zasobu dla zmiennej</td>
+        <td>Możesz użyć tej samej nazwy co zasób z drzewa zasobów jako zmiennej lokalnej</td>
+      </tr>
+      <tr>
+        <td>[<i>Zmienna]</i> jest tylko do odczytu</td>
+        <td>Próbowałeś użyć zmiennej, która została oznaczona jako tylko do odczytu</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Arrays</b></p>
+          <p><b>Stałe</b></p>
         </td>
       </tr>
       <tr>
-        <td>Array index should not be negative</td>
-        <td>You have tried to access, create, or set an array value using a negative array index</td>
+        <td>Nie można ustawić na wartość stałej [constant]</td>
+        <td>Próbowałeś ustawić stałą na inną wartość</td>
+      </tr>
+      <tr>
+        <td>Stała jest tu nieważna</td>
+        <td>Próbowałeś użyć gdzieś stałej, która nie jest ważna dla uruchamianego kodu</td>
+      </tr>
+      <tr>
+        <td>Nie można przypisać do [var] - jest to stała</td>
+        <td>Próbowałeś przypisać nową wartość do nazwanej stałej</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Malformed...</b></p>
+          <p><b>Tablice</b></p>
         </td>
       </tr>
       <tr>
-        <td>Malformed Conditional operator</td>
-        <td>You have used an erroneous conditional (ternary) operator or if statement, and not the format:<br />
+        <td>Indeks tablicy nie powinien być ujemny</td>
+        <td>Próbowałeś uzyskać dostęp, utworzyć lub ustawić wartość tablicy przy użyciu ujemnego indeksu tablicy</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <p><b>Malformacja...</b></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Nieprawidłowo sformułowany operator warunkowy</td>
+        <td>Użyłeś błędnego operatora warunkowego (trójskładnikowego) lub <span class="notranslate">if statement</span>, a nie formatu:<br>
           <span class="inline">[condition] ? [expression1] : [expression2];</span>
         </td>
       </tr>
       <tr>
-        <td>If requires a then statement</td>
-        <td>You have written an if statement and expression to evaluate, but not given any then part to run</td>
+        <td>Jeśli wymaga oświadczenia then</td>
+        <td>Napisałeś <span class="notranslate">if statement</span> i wyrażenie do oceny, ale nie podałeś żadnej części do uruchomienia</td>
       </tr>
       <tr>
-        <td>malformed assignment statement</td>
-        <td>In the code you are using an assignment operator wrong</td>
+        <td>nieprawidłowo sformułowane oświadczenie o przypisaniu</td>
+        <td>W kodzie używasz operatora przypisania błędnie</td>
       </tr>
       <tr>
-        <td>Malformed<br />
-          if / repeat / while / do / for / with / switch / break / continue / exit<br />
-          statement</td>
-        <td>The structure of the given statement is incorrect.</td>
+        <td>Zniekształcona<br>
+          if / repeat / while / do / for / with / <span class="notranslate">switch</span> / break / continue / exit<br>
+          oświadczenie</td>
+        <td>Struktura podanej wypowiedzi jest nieprawidłowa.</td>
       </tr>
       <tr>
-        <td>Malformed post inc or dec statement</td>
-        <td>You have tried to use <span class="inline">[var]++</span> or <span class="inline">[var]--</span> in an illegal way</td>
+        <td>Nieprawidłowe oświadczenie post inc lub dec</td>
+        <td>Próbowałeś używać <span class="inline">[var]++</span> lub <span class="inline">[var]--</span> w sposób nielegalny.</td>
       </tr>
       <tr>
-        <td>Malformed pre inc or dec statement</td>
-        <td>You have tried to use <span class="inline">++[var]</span> or <span class="inline">--[var]</span> in an illegal way</td>
+        <td>Nieprawidłowo sformułowana deklaracja pre inc lub dec</td>
+        <td>Próbowałeś używać <span class="inline">++[var]</span> lub <span class="inline">--[var]</span> w sposób nielegalny.</td>
       </tr>
       <tr>
-        <td>Malformed global gml_pragma</td>
-        <td>You have created a wrong global string when using <span class="inline">gml_pragma</span></td>
+        <td>Niewłaściwa globalna gml_pragma</td>
+        <td>Stworzyłeś błędny globalny <span class="notranslate">string</span> podczas używania <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
-        <td>Malformed PNGCrush gml_pragma</td>
-        <td>You have created a wrong string command for PNGCrush when using <span class="inline">gml_pragma</span></td>
+        <td>Nieformalny PNGCrush gml_pragma</td>
+        <td>Stworzyłeś złe polecenie <span class="notranslate">string</span> dla PNGCrush podczas używania <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
-        <td>Malformed Texgroup.Scale gml_pragma</td>
-        <td>You have create a wrong global string when using <span class="inline">gml_pragma</span></td>
+        <td>Złe sformułowanie Texgroup.Scale gml_pragma</td>
+        <td>Stworzyłeś błędny globalny <span class="notranslate">string</span> podczas używania <span class="inline">gml_pragma</span></td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
@@ -291,87 +291,87 @@
         </td>
       </tr>
       <tr>
-        <td>Default cannot be used multiple times in a switch</td>
-        <td>In your switch statement you have defined default: more than once</td>
+        <td>Default nie może być używany wielokrotnie w przełączniku</td>
+        <td>W twoim oświadczeniu <span class="notranslate">switch</span> zdefiniowałeś domyślne: więcej niż raz</td>
       </tr>
       <tr>
-        <td>Clause expression type mismatch (clause expressions should all be the same type)</td>
-        <td>In your switch you are checking for two different constant case types, for example a string in one case and an integer in another</td>
+        <td>Niedopasowanie typu wyrażenia klauzuli (wszystkie wyrażenia klauzuli powinny być tego samego typu)</td>
+        <td>W twoim <span class="notranslate">switch</span> sprawdzasz dla dwóch różnych stałych typów przypadków, na przykład <span class="notranslate">string</span> w jednym przypadku i liczba całkowita w innym</td>
       </tr>
       <tr>
-        <td>Case argument should be a constant</td>
-        <td>You have tried to use a value that does not evaluate to a constant within one of your switch cases</td>
+        <td>Argumentacja w sprawie powinna być stała</td>
+        <td>Próbowałeś użyć wartości, która nie jest stała w jednym z twoich przypadków <span class="notranslate">switch</span> </td>
       </tr>
       <tr>
-        <td>Statement in a switch MUST appear after case or default</td>
-        <td>You have added a statement to a switch outside of either a <span class="inline">case:</span> or <span class="inline">default:</span> call</td>
+        <td>Oświadczenie na stronie <span class="notranslate">switch</span> MUSI pojawić się po literze "case" lub "default".</td>
+        <td>Dodałeś deklarację do <span class="notranslate">switch</span> poza wywołaniem <span class="inline">case:</span> lub <span class="inline">default:</span> </td>
       </tr>
       <tr>
-        <td>Duplicate case statement found / original here</td>
-        <td>You have used the same case constant in two different places within a switch (note that the &quot;original here&quot; comment will be on another line and can be clicked to show the original case)</td>
-      </tr>
-      <tr>
-        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Expressions</b></p>
-        </td>
-      </tr>
-      <tr>
-        <td>No return value from expression (does expression have a return value?)</td>
-        <td>You have tried to assign a return value from an expression to a variable when the expression returns nothing</td>
-      </tr>
-      <tr>
-        <td>Expecting expression after the &#39;.&#39;</td>
-        <td>You have used the point &quot;<span class="inline">.</span>&quot; notation erroneously and not added an expression afterwords correctly</td>
-      </tr>
-      <tr>
-        <td>Unexpected symbol [symbol] in expression</td>
-        <td>The expression uses a symbol that is not part of the accepted expression symbol set - the symbol in question will be shown</td>
+        <td>Znaleziono duplikat oświadczenia w sprawie / oryginał tutaj</td>
+        <td>Użyłeś tej samej stałej przypadku w dwóch różnych miejscach w ramach <span class="notranslate">switch</span> (zauważ, że komentarz &quot;oryginalny tutaj&quot; będzie w innej linii i może być kliknięty, aby pokazać oryginalny przypadek.)</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Unknown Operators</b></p>
+          <p><b>Wyrażenia</b></p>
         </td>
       </tr>
       <tr>
-        <td>Unknown Pre operator</td>
-        <td>You have tried to use a symbol as a pre-operator when that symbol is not permitted, for example <span class="inline">**[var]</span> or <span class="inline">&gt;&gt;[var]</span> - only <span class="inline">++</span> and <span class="inline">--</span> are acceptable</td>
+        <td>Brak wartości zwrotnej z wyrażenia (czy wyrażenie ma wartość zwrotną?)</td>
+        <td>Próbowałeś przypisać wartość zwracaną z wyrażenia do zmiennej, gdy wyrażenie nic nie zwraca</td>
       </tr>
       <tr>
-        <td>Unknown Post operator</td>
-        <td>You have tried to use a symbol as a post-operator when that symbol is not permitted, for example <span class="inline">[var]**</span> or <span class="inline">[var]&gt;&gt;</span> - only <span class="inline">++</span> and <span class="inline">--</span> are acceptable</td>
+        <td>Oczekiwanie wyrażenia po ".</td>
+        <td>Błędnie użyłeś notacji punktowej &quot;<span class="inline">.</span>&quot; i nie dodałeś poprawnie wyrażenia po słowach</td>
       </tr>
       <tr>
-        <td>Unknown pragma [gml_pragma string]</td>
-        <td>You have used a pragma string that is unknown to the compiler</td>
-      </tr>
-      <tr>
-        <td>Unknown unary operator</td>
-        <td>You have tried to use an unknown symbol as a unary operator</td>
-      </tr>
-      <tr>
-        <td>Unknown binary operator</td>
-        <td>You have tried to use an unknown symbol as a binary operator</td>
-      </tr>
-      <tr>
-        <td>Unknown operator [operator]</td>
-        <td>You have tried to use an unknown symbol as an operator (the symbol will be shown in the error)</td>
+        <td>Nieoczekiwany symbol [symbol] w wyrażeniu</td>
+        <td>W wyrażeniu użyto symbolu, który nie jest częścią akceptowanego zestawu symboli wyrażenia - symbol ten zostanie pokazany</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><b>Break / Continue</b></p>
+          <p><b>Nieznani operatorzy</b></p>
         </td>
       </tr>
       <tr>
-        <td>Break used without context</td>
-        <td>You have not used break within a switch or a loop or any other permitted structure</td>
+        <td>Nieznany operator wstępny</td>
+        <td>Próbowałeś użyć symbolu jako preoperatora, gdy ten symbol jest niedozwolony, na przykład <span class="inline">**[var]</span> lub <span class="inline">&gt;&gt;[var]</span> - dopuszczalne są tylko <span class="inline">++</span> i <span class="inline">--</span> </td>
       </tr>
       <tr>
-        <td>Continue used without context</td>
-        <td>You have not used continue within the correct context</td>
+        <td>Nieznany operator poczty</td>
+        <td>Próbowałeś użyć symbolu jako post-operatora, gdy ten symbol jest niedozwolony, na przykład <span class="inline">[var]**</span> lub <span class="inline">[var]&gt;&gt;</span> - dopuszczalne są tylko <span class="inline">++</span> i <span class="inline">--</span> </td>
       </tr>
       <tr>
-        <td>continue statement is not allowed at this point</td>
-        <td>You have used continue within a apart of your code where it is not permitted</td>
+        <td>Nieznana pragma [gml_pragma string]</td>
+        <td>Użyłeś pragmy <span class="notranslate">string</span>, która nie jest znana kompilatorowi</td>
+      </tr>
+      <tr>
+        <td>Nieznany operator jednoargumentowy</td>
+        <td>Próbowałeś użyć nieznanego symbolu jako operatora jednoargumentowego</td>
+      </tr>
+      <tr>
+        <td>Nieznany operator binarny</td>
+        <td>Próbowałeś użyć nieznanego symbolu jako operatora binarnego</td>
+      </tr>
+      <tr>
+        <td>Nieznany operator [operator]</td>
+        <td>Próbowałeś użyć nieznanego symbolu jako operatora (symbol będzie pokazany w błędzie)</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
+          <p><b>Przerwa / Kontynuacja</b></p>
+        </td>
+      </tr>
+      <tr>
+        <td>Przerwa użyta bez kontekstu</td>
+        <td>Nie użyłeś break w ramach <span class="notranslate">switch</span> lub <span class="notranslate">loop</span> lub innej dozwolonej struktury</td>
+      </tr>
+      <tr>
+        <td>Kontynuacja użyta bez kontekstu</td>
+        <td>Nie użyłeś continue w odpowiednim kontekście</td>
+      </tr>
+      <tr>
+        <td>kontynuowanie wypowiedzi nie jest w tym momencie dozwolone</td>
+        <td>Użyłeś continue w części swojego kodu, gdzie jest to niedozwolone</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
@@ -379,67 +379,67 @@
         </td>
       </tr>
       <tr>
-        <td>enum num is invalid</td>
-        <td>The enum number is invalid for the enum</td>
+        <td>enum num jest niepoprawne</td>
+        <td>Numer enum jest nieprawidłowy dla enum</td>
       </tr>
       <tr>
-        <td>malformed enum</td>
-        <td>You have not created the enum correctly</td>
+        <td>zniekształcony enum</td>
+        <td>Nie utworzyłeś poprawnie enum</td>
       </tr>
       <tr>
-        <td>enum [enum] has already been defined</td>
-        <td>You have tried to define an enum using the same name as another previously defined</td>
+        <td>enum [enum] zostało już zdefiniowane</td>
+        <td>Próbowałeś zdefiniować enum używając tej samej nazwy, co inne wcześniej zdefiniowane</td>
       </tr>
       <tr>
-        <td>malformed enum entry</td>
-        <td>The enum has an invalid entry</td>
+        <td>nieprawidłowy wpis enum</td>
+        <td>Liczba ma niepoprawny wpis</td>
       </tr>
       <tr>
-        <td>enum expression must be an integer constant</td>
-        <td>The enum entry does not evaluate as an integer constant</td>
+        <td>wyrażenie enum musi być stałą całkowitą</td>
+        <td>Wpis enum nie jest obliczany jako stała całkowita.</td>
       </tr>
       <tr>
-        <td>enum reference [key] does not exist in [enum]</td>
-        <td>You have tried to reference an enum entry using a key that has not previously been defined for that enum</td>
+        <td>Odwołanie do enum [key] nie istnieje w [enum]</td>
+        <td>Próbowałeś odwołać się do wpisu enum używając klucza, który nie został wcześniej zdefiniowany dla tego enum</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
-          <p><strong>Expected Symbols / Values</strong></p>
+          <p><strong>Oczekiwane symbole / wartości</strong></p>
         </td>
       </tr>
       <tr>
-        <td>Symbol ( expected<br />
-          Symbol ) expected<br />
-          Symbol , or ) expected<br />
-          Symbol { expected<br />
-          Symbol } expected<br />
-          Symbol , or } expected<br />
-          Symbol : expected<br />
-          Symbol ; expected<br />
-          Symbol [ expected<br />
-          symbol ] expected<br />
-          Symbol , or ] expected</td>
-        <td>You have not used a required symbol when writing your code</td>
+        <td>Symbol ( oczekiwany<br>
+          Symbol ) oczekiwany<br>
+          Symbol , lub ) oczekiwany<br>
+          Symbol { oczekiwany<br>
+          Symbol } oczekiwany<br>
+          Symbol , lub } oczekiwany<br>
+          Symbol : oczekiwany<br>
+          Symbol ; oczekiwany<br>
+          Symbol [ oczekiwany<br>
+          symbol ] oczekiwany<br>
+          Symbol , lub ] oczekiwany</td>
+        <td>Nie użyłeś wymaganego symbolu podczas pisania swojego kodu</td>
       </tr>
       <tr>
-        <td>Expected id or string</td>
-        <td>You have used a value that is not either a layer ID or a layer name - as a string - in one of the Layer functions</td>
+        <td>Oczekiwane id lub ciąg znaków</td>
+        <td>W jednej z funkcji warstwy użyłeś wartości, która nie jest ani identyfikatorem warstwy, ani nazwą warstwy - jako <span class="notranslate">string</span>.</td>
       </tr>
       <tr>
-        <td>keyword Until expected</td>
-        <td>You have created a do... until loop but neglected to supply an until expression</td>
+        <td>słowo kluczowe Do czasu, gdy spodziewano się</td>
+        <td>Stworzyłeś do... until <span class="notranslate">loop</span> ale zaniedbałeś dostarczenie wyrażenia until</td>
       </tr>
       <tr>
-        <td>Function name expected</td>
-        <td>You have used something other than a function name in your code where a function should go</td>
+        <td>Oczekiwana nazwa funkcji</td>
+        <td>Użyłeś czegoś innego niż nazwa funkcji w swoim kodzie, gdzie powinna być funkcja</td>
       </tr>
       <tr>
-        <td>variable name expected</td>
-        <td>You have supplied a name that is not a variable name where one is expected</td>
+        <td>oczekiwana nazwa zmiennej</td>
+        <td>Podałeś nazwę, która nie jest nazwą zmiennej tam, gdzie jest ona oczekiwana</td>
       </tr>
       <tr>
-        <td>Assignment operator expected</td>
-        <td>You have created an assignment which expects an operator but none has been supplied</td>
+        <td>Oczekiwany operator przypisania</td>
+        <td>Utworzyłeś zadanie, które oczekuje operatora, ale żaden nie został dostarczony</td>
       </tr>
       <tr>
         <td colspan="2" style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">
@@ -447,20 +447,20 @@
         </td>
       </tr>
       <tr>
-        <td>Android ARM ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the ARM toolchain is incorrect and does not exist.</td>
+        <td>Android <span class="notranslate">ARM</span> Nie istnieje katalog ToolChain [dir]</td>
+        <td>Link podany w <span class="notranslate">Android</span> Preferences dla <span class="notranslate">ARM</span> toolchain jest nieprawidłowy i nie istnieje.</td>
       </tr>
       <tr>
-        <td>Android MIPS ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the MIPS toolchain is incorrect and does not exist.</td>
+        <td>Nie istnieje katalog Android MIPS ToolChain [dir]</td>
+        <td>Link podany w <span class="notranslate">Android</span> Preferences dla MIPS toolchain jest nieprawidłowy i nie istnieje.</td>
       </tr>
       <tr>
-        <td>Android x86 ToolChain directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the x86 toolchain is incorrect and does not exist.</td>
+        <td>Nie istnieje katalog Android x86 ToolChain [dir]</td>
+        <td>Link podany w <span class="notranslate">Android</span> Preferences dla toolchaina x86 jest nieprawidłowy i nie istnieje.</td>
       </tr>
       <tr>
-        <td>Android NDK directory [dir] does not exist</td>
-        <td>The link given in the Android Preferences for the Android NDK is incorrect and does not exist.</td>
+        <td>Katalog Android NDK [dir] nie istnieje</td>
+        <td>Link podany w Preferencjach <span class="notranslate">Android</span> dla <span class="notranslate">Android</span> NDK jest nieprawidłowy i nie istnieje.</td>
       </tr>
       <tr>
         <td colspan="2">
@@ -468,22 +468,22 @@
         </td>
       </tr>
       <tr>
-        <td>Configuration Problem : Windows Visual Studio Path needs to be set to point to Visual Studio (.bat) batch file.</td>
-        <td>The link given in the Windows Preferences for the Visual Studio (.bat) batch file is incorrect and does not exist.</td>
+        <td>Problem konfiguracyjny : <span class="notranslate">Windows</span> <span class="notranslate">Visual Studio</span> <span class="notranslate">Path</span> musi być ustawiony tak, aby wskazywał na plik wsadowy <span class="notranslate">Visual Studio</span> (.bat).</td>
+        <td>Link podany w Preferencjach <span class="notranslate">Windows</span> dla pliku wsadowego <span class="notranslate">Visual Studio</span> (.bat) jest nieprawidłowy i nie istnieje.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Error_Reporting.htm">Error Reporting</a></div>
-        <div style="float:right">Next: <a href="Runner_Errors.htm">Runner Errors</a></div>
+        <div style="float:left">Powrót: <a href="../Error_Reporting.htm">Zgłaszanie błędów</a></div>
+        <div style="float:right">Następny: <a href="Runner_Errors.htm">Błędy biegaczy</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
   <!-- KEYWORDS
 Compiler Errors

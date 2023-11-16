@@ -6,7 +6,7 @@
   <title>application_surface_draw_enable</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for application_surface_draw_enable" />
   <meta name="rh-index-keywords" content="application_surface_draw_enable" />
@@ -15,45 +15,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>application_surface_draw_enable</h1>
-  <p>You can use this function to enable or disable the automatic drawing of the application surface. By default this is enabled, but in many cases you will want to take over when and how the surface is drawn (when using shaders for example), in which case
-    you would use this function to set it to false so that you can draw it yourself when and how you require. It&#39;s important to note that when you switch off automatic drawing and draw the application surface yourself, that you may see certain issues
-    with the alpha component of sprites and the surface itself. This is because <span data-keyref="GameMaker Name">GameMaker</span> will draw the application surface <i>without alpha blending</i> when the automatic drawing is on. If you switch off automatic drawing then you need
-    to handle this yourself, using the following code (for example):</p>
+  <p>Za pomocą tej funkcji można włączyć lub wyłączyć automatyczne rysowanie powierzchni aplikacji. Domyślnie funkcja ta jest włączona, ale w wielu przypadkach użytkownik będzie chciał sam decydować o tym, kiedy i jak będzie rysowana powierzchnia (np. przy korzystaniu z <span class="notranslate">shaders</span> ), w takim przypadku
+    można użyć tej funkcji, aby ustawić tę wartość na false, dzięki czemu będzie można rysować powierzchnię samodzielnie, kiedy i jak się chce. Należy pamiętać, że po wyłączeniu automatycznego rysowania na stronie <span class="notranslate">switch</span> i samodzielnym rysowaniu powierzchni aplikacji mogą wystąpić pewne problemy z
+    z komponentem alfa na stronie <span class="notranslate">sprites</span> i z samą powierzchnią. Dzieje się tak dlatego, że <span data-keyref="GameMaker Name">GameMaker</span> będzie rysował powierzchnię aplikacji <i>bez mieszania al</i> fa, gdy włączone jest automatyczne rysowanie. Jeśli <span class="notranslate">switch</span> wyłączyłeś automatyczne rysowanie, musisz
+    poradzić sobie z tym samodzielnie, korzystając z następującego kodu (na przykład):</p>
   <p class="code">gpu_set_blendenable(false);<br/> draw_surface_ext(application_surface, 0, 0, 1, 1, 0, c_white, 1);<br/> gpu_set_blendenable(true);
   </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">application_surface_draw_enable(flag);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>flag</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>The flag will be either <span class="inline">true</span> (enabled, the default value) or <span class="inline">false</span> (disabled).</td>
+        <td><span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">The flag will be either <span class="inline">true</span> (włączona, wartość domyślna) lub <span class="inline">false</span> (wyłączona).</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">application_surface_draw_enable(false);</p>
-  <p>The above code will switch off the automatic drawing of the application surface.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod na stronie <span class="notranslate">switch</span> wyłączy automatyczne rysowanie powierzchni aplikacji.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_exists.htm">surface_exists</a></div>
+        <div style="float:left">Powrót: <a href="Surfaces.htm">Powierzchnie</a></div>
+        <div style="float:right">Następny: <a href="surface_exists.htm"><span class="notranslate">surface_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 application_surface_draw_enable

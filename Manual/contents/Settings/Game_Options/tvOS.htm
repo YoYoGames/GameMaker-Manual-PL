@@ -6,7 +6,7 @@
   <title>tvOS</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that details the tvOS Game Options" />
   <meta name="rh-index-keywords" content="Game Options - tvOS" />
@@ -14,43 +14,44 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">tvOS</span> Game Options</h1>
-  <p>This section outlines the different options available to you that control how your tvOS game projects will be compiled. The different sections are:</p>
-  <p> </p>
-  <h2>General</h2>
-  <p><img alt="iOS General Options" class="center" src="../../assets/Images/Settings/tvOS_General_Options.png" />Here you can fill in the <strong>Product Information</strong> about your game, including its <strong>Display Name</strong>, its <strong>Bundle ID</strong> and the <strong>Version </strong>info. Note that the Bundle ID must be in the correct reverse URL format for the final build of the game to work correctly, e.g. <span class="inline">com.[Company].[GameName]</span>. You can also set the <strong>App Output</strong> location on the build Mac, and you can give the <strong>Team Identifier</strong> that you wish to use for signing the final application that <span data-keyref="GameMaker Name">GameMaker</span> creates for you. Setting it here will override the Team ID that you have supplied in the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS Preferences</a>.</p>
-  <p>Finally there&#39;s the <strong>CocoaPods</strong> option. Check it to automate building using the <a href="https://cocoapods.org/">CocoaPods</a> dependency manager. For detailed information, see the following guide:</p>
+  <h1>Opcje gier w systemie tvOS</h1>
+  <p>W tej sekcji opisano różne dostępne opcje, które pozwalają kontrolować sposób kompilowania projektów gier <span class="notranslate">tvOS</span>. Poszczególne sekcje to:</p>
+  <p> </p>
+  <h2>Ogólne</h2>
+  <p><img>W tym miejscu możesz wypełnić <strong>informacje</strong> o <strong>produkcie</strong>, takie jak <strong>nazwa</strong> gry, <strong>ID</strong> pakietu i <strong>wersja </strong>. Zwróć uwagę, że identyfikator pakietu musi mieć poprawny odwrotny format URL, aby końcowy build gry działał poprawnie, np.: <span class="inline">com.[Company].[GameName]</span>. Możesz także ustawić lokalizację <strong>App Output</strong> na budowanym komputerze Mac oraz podać identyfikator zespołu, którego chcesz użyć do podpisania ostatecznej aplikacji tworzonej przez <span data-keyref="GameMaker Name">GameMakera</span>. Ustawienie go tutaj spowoduje zastąpienie identyfikatora zespołu, który podałeś w <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">Preferencjach tvOS</a>.</p>
+  <p>Tutaj masz również możliwość wygenerowania pliku <strong>Podfile</strong> i <strong>Podfile.lock</strong>. Te pliki są wymagane, jeśli dodajesz <span class="notranslate">CocoaPods</span> do <a href="../../The_Asset_Editors/Extension_Creation/iOS_Extensions.htm">rozszerzenia tvOS</a> za pomocą <a href="../../The_Asset_Editors/Extensions.htm">Edytora rozsz</a>erzeń. Pliki te zawierają określone makra wymagane przez <span data-keyref="GameMaker Name">program GameMaker</span> do skonfigurowania każdej wymienionej strony <span class="notranslate">CocaoPods</span> podczas budowania gry. Kliknięcie przycisków spowoduje utworzenie plików z wygenerowanymi makrami, a także otwarcie eksploratora plików w miejscu, w którym się znajdują, jeśli chcesz je ręcznie edytować. Dostępny jest również przycisk, który przeniesie Cię do następującego przewodnika:</p>
   <ul class="colour">
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS and tvOS: Using Cocoa Pods</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS i tvOS: Używanie Cocoa Pods</a></li>
   </ul>
-  <div data-conref="../../assets/snippets/Note_important_CocoaPods.hts"> </div>
-  <h2>Graphics</h2>
-  <p><img alt="tvOS Graphics Options" class="center" src="../../assets/Images/Settings/tvOS_Graphics_Options.png" />Here you can change the following details related to how your game will be displayed, with the following options available:</p>
+  <p> </p>
+  <h2>Grafika</h2>
+  <p><img>W tym miejscu można zmienić następujące szczegóły dotyczące sposobu wyświetlania gry:</p>
   <ul class="colour">
-    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="glossterm" data-glossterm="linear interpolation" href="macOS.htm#">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is off by default.</li>
-    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit the device screen.</li>
+    <li><strong>Interpoluj kolory między pikselami</strong>: Włącza <a class="glossterm" data-glossterm="interpolacja liniowa" href="macOS.htm#">interpolację liniową</a>, która zasadniczo &quot;wygładza&quot; piksele. W przypadku wyraźnej grafiki pikselowej powinno być wyłączone, ale jeśli chcesz uzyskać ładne mieszanki alfa i grafikę o wygładzonych krawędziach, lepiej pozostawić to włączone. Domyślnie opcja ta jest wyłączona.</li>
+    <li><strong>Skalowanie</strong>: W tym miejscu możesz wybrać, czy rysowany obraz ma być skalowany z zachowaniem proporcji ekranu urządzenia - dodając &quot;wypełnienie&quot; wokół krawędzi, aby dopasować go do ekranu - czy też może być rozciągnięty, aby dopasować go do ekranu urządzenia.</li>
   </ul>
-  <p>Next there is the option to set the size of the <a class="glossterm" data-glossterm="texture page" href="macOS.htm#">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There is also a button marked <strong>Preview </strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
-  <p>Finally, you choose to <strong>Display a cursor</strong> or not. If checked, the OS will show a cursor whenever the mouse is moved (at the mouse position), and the cursor will fade out and disappear when the mouse is not moved for a period of time. If unchecked, then no cursor will be shown.</p>
-  <p> </p>
-  <h2>Icons</h2>
-  <p><img alt="tvOS Images Icons Options" class="center" src="../../assets/Images/Settings/tvOS_Icons_Options.png" />This section permits you to add the various different <strong>Icons </strong>required by the various devices and the different parts of the App Store. These icons should be authored as 24bit <span class="inline">*.png</span> images at the size specified for each one.</p>
-  <p>It is worth noting that <span data-keyref="GameMaker Name">GameMaker</span> has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require, especially for this platform as the icons required are rectangular and not square. This tool will also generate Images (explained below) as well as Icons.</p>
-  <p> </p>
-  <h2>Images</h2>
-  <p><img alt="tvOS Images Splash Screens Options" class="center" src="../../assets/Images/Settings/tvOS_Images_Options.png" />This section permits you to add separate graphics as &quot;Top Shelf&quot; images and splash screens for each of the different tvOS target sizes. These images must be authored as individual 24bit <span class="inline">*.png</span> images with no transparencies and at the correct size. You can also set a minimum time for showing the splash screens from the drop down menu at the bottom (from 0 to 10 seconds).</p>
-  <p>As mentioned in the section on Icons, you can use the <strong>Project Image Generator</strong> to create these images.</p>
-  <p> </p>
-  <p> </p>
+  <p>Następnie można ustawić rozmiar <a class="glossterm" data-glossterm="strona tekstury" href="macOS.htm#">strony tekstury</a>. Domyślnym (i najbardziej kompatybilnym) rozmiarem jest 2048x2048, ale można wybrać dowolny rozmiar w zakresie od 256x256 do 8192x8192. Znajduje się tu również przycisk <strong>Podgląd </strong>, który wygeneruje strony <span class="notranslate">texture</span> dla tej platformy, a następnie otworzy okno, w którym można zobaczyć, jak wyglądają. Może to być bardzo przydatne, jeśli chcesz zobaczyć, jaką strukturę mają strony <span class="notranslate">texture</span> i uniknąć sytuacji, w której strony <span class="notranslate">texture</span> będą większe (lub mniejsze) niż to konieczne. Więcej informacji na temat stron <span class="notranslate">texture</span> można znaleźć <a href="../Texture_Information/Texture_Pages.htm">tutaj</a>.</p>
+  <p class="note"><strong>UWAGA</strong>: Pamiętaj, że im większy rozmiar strony <span class="notranslate">texture</span>, tym mniejsza kompatybilność gry z różnymi przeglądarkami i urządzeniami.</p>
+  <p>Na koniec należy wybrać opcję <strong>Wyświetl kursor</strong> lub nie. Jeśli opcja ta jest zaznaczona, system operacyjny będzie wyświetlał kursor przy każdym ruchu myszy (w pozycji myszy), a kursor będzie wygaszany i znikał, gdy mysz nie będzie poruszana przez pewien czas. Jeśli nie zostanie zaznaczone, kursor nie będzie wyświetlany.</p>
+  <p> </p>
+  <h2>Ikony</h2>
+  <p><img>W tej sekcji można dodawać różne <strong>ikony </strong>wymagane przez różne urządzenia i różne części App Store. Ikony te powinny być zapisane jako obrazy 24bit <span class="inline">*.png</span> o rozmiarze określonym dla każdej z nich.</p>
+  <p>Warto zauważyć, że <span data-keyref="GameMaker Name">GameMaker</span> posiada narzędzie <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a>, które może być używane do automatycznego tworzenia wszystkich obrazów wymaganych dla różnych platform docelowych, na które kompilowana jest gra. Jeśli korzystasz z tego narzędzia, powinieneś zweryfikować utworzone obrazy, aby upewnić się, że są one zgodne z Twoimi wymaganiami, zwłaszcza w przypadku tej platformy, ponieważ wymagane ikony są prostokątne, a nie kwadratowe. Narzędzie to generuje również obrazy (wyjaśnienie poniżej) oraz ikony.</p>
+  <p> </p>
+  <h2>Zdjęcia</h2>
+  <p><img>Ta sekcja umożliwia dodawanie oddzielnych grafik jako obrazów &quot;z górnej półki&quot; i ekranów powitalnych dla każdego z różnych rozmiarów docelowych <span class="notranslate">tvOS</span>. Obrazy te muszą być napisane jako pojedyncze obrazy 24bit <span class="inline">*.png</span> bez przezroczystości i w odpowiednim rozmiarze. W dolnym menu rozwijanym można również ustawić minimalny czas wyświetlania ekranów startowych (od 0 do 10 sekund).</p>
+  <p>Jak wspomniano w rozdziale Ikony, do tworzenia tych obrazów można użyć <strong>Generatora obrazów projektu</strong>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Template_Info.htm">Template Info</a></div>
+        <div style="float:left">Wstecz: <a href="../Game_Options.htm">Opcje gry</a></div>
+        <div style="float:right">Następny: <a href="Windows.htm">Windows</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 tvOS Game Options

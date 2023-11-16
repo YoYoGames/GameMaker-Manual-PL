@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>audio_create_play_queue</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_create_play_queue" />
   <meta name="rh-index-keywords" content="audio_create_play_queue,audio_mono,audio_stereo,audio_3D" />
@@ -16,79 +16,80 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_create_play_queue</h1>
-  <p>This function prepares a buffer queue for audio. You pass data format (only <span class="inline">buffer_u8</span> or <span class="inline">buffer_s16</span> are currently supported), the sample rate (which can be between 1000hz and 48000hz), and the channels that the audio requires from one of the constants listed below:</p>
+  <p>Ta funkcja przygotowuje stronę <span class="notranslate">buffer</span> <span class="notranslate">queue</span> do odbioru dźwięku. Przekazuje format danych (obecnie obsługiwane są tylko <span class="inline">buffer_u8</span> lub <span class="inline">buffer_s16</span> ), częstotliwość próbkowania (która może wynosić od 1000hz do 48000hz) oraz kanały, których wymaga dźwięk, z jednej z poniższych stałych:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Stała</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td><span class="inline">audio_mono</span></td>
-        <td>Mono (single channel) audio.</td>
+        <td><span class="notranslate"><span class="inline">audio_mono</span></td>
+        <td>Dźwięk monofoniczny (jednokanałowy).</td>
       </tr>
       <tr>
-        <td><span class="inline">audio_stereo</span></td>
-        <td>Stereo (dual channel) audio.</td>
+        <td><span class="notranslate"><span class="inline">audio_stereo</span></td>
+        <td>Dźwięk stereofoniczny (dwukanałowy).</td>
       </tr>
       <tr>
-        <td><span class="inline">audio_3D</span></td>
-        <td>3D (5.1) audio.</td>
+        <td><span class="notranslate"><span class="inline">audio_3D</span></td>
+        <td>Dźwięk 3D (5.1).</td>
       </tr>
     </tbody>
   </table>
-  <p>Note that you should free up any audio queues created with this function when no longer required to prevent memory leaks using the function <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>.</p>
-  <p>This function will trigger an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a> when the queue has reached the end, and in this event a special <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> will be created in the variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> with the following key/value pairs:</p>
+  <p><br>
+    Należy pamiętać, że należy zwolnić wszystkie pliki audio <span class="notranslate">queues</span> utworzone za pomocą tej funkcji, gdy nie są już potrzebne, aby zapobiec wyciekom pamięci przy użyciu funkcji <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>.</p>
+  <p>Ta funkcja wywoła <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">zdarzenie asynchronicznego odtwarzania dźwięku</a>, gdy strona <span class="notranslate">queue</span> osiągnie koniec, a w tym zdarzeniu w zmiennej <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS</a> zostanie utworzona specjalna <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> z następującymi parami klucz/wartość:</p>
   <ul class="colour">
-    <li>&quot;<strong>queue_id</strong>&quot; - the queue that has finished playing data</li>
-    <li>&quot;<strong>buffer_id</strong>&quot; - the buffer that is no longer being played from</li>
-    <li>&quot;<strong>queue_shutdown</strong>&quot; - this is set to 0 during normal playback and 1 when the event is received because <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a> has been called. When this is set to 1, you don&#39;t want to queue up any further data.</li>
+    <li>&quot;<strong>queue_id</strong>&quot; - strona <span class="notranslate">queue</span>, która zakończyła odtwarzanie danych</li>
+    <li>&quot;<strong>buffer_id</strong>&quot; - strona <span class="notranslate">buffer</span>, z której nie jest już odtwarzany plik</li>
+    <li>&quot;<strong>queue_shutdown</strong>&quot; - wartość ta jest ustawiana na 0 podczas normalnego odtwarzania i na 1, gdy zdarzenie jest odbierane, ponieważ <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a> zostało wywołane. Gdy wartość ta jest ustawiona na 1, nie chcesz <span class="notranslate">queue</span> żadnych dalszych danych.</li>
   </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">audio_create_play_queue(queueFormat, queueRate, queueChannels);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>queueFormat</td>
-        <td><span data-keyref="Type_Constant_Buffer_Data_Type"><a href="../../../../../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm" target="_blank">Buffer Data Type Constant</a></span></td>
-        <td>The format of the buffer data to use (<span class="inline">buffer_u8</span> or <span class="inline">buffer_s16</span>).</td>
+        <td><span class="notranslate">queueFormat</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Data_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm">Typ danych bufora Stała</a></span></td>
+        <td><span class="notranslate">The format of the buffer data to use (<span class="inline">buffer_u8</span> lub <span class="inline">buffer_s16</span>).</td>
       </tr>
       <tr>
-        <td>queueRate</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The sample rate of the data in the buffer queue.</td>
+        <td><span class="notranslate">queueRate</span></td>
+        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../LINKGOESHERE">Real</a></span></td>
+        <td><span class="notranslate">The sample rate of the data in the buffer queue.</span></td>
       </tr>
       <tr>
-        <td>queueChannels</td>
-        <td><span data-keyref="Type_Constant_Audio_Channel_Type"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_buffer_sound.htm" target="_blank">Audio Channel Constant</a></span></td>
-        <td>The channels to use from one of the constants listed above.</td>
+        <td><span class="notranslate">queueChannels</span></td>
+        <td><span data-keyref="Type_Constant_Audio_Channel_Type"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_buffer_sound.htm">Typ kanału audio</a></span></td>
+        <td><span class="notranslate">The channels to use from one of the constants listed above.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Audio_Queue"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_play_queue.htm" target="_blank">Audio Queue ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_ID_Audio_Queue"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Buffers/audio_create_play_queue.htm">Audio Queue ID</a></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">audio_queue = audio_create_play_queue(buffer_s16, 11052, audio_mono);</p>
-  <p>The above code creates a new audio queue and assigns its ID to a variable for future reference.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod tworzy nową stronę audio <span class="notranslate">queue</span> i przypisuje jej identyfikator do zmiennej w celu późniejszego wykorzystania.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Audio.htm">Audio Buffers</a></div>
-        <div style="float:right">Next: <a href="audio_free_play_queue.htm">audio_free_play_queue</a></div>
+        <div style="float:left">Powrót: <a href="../Audio.htm">Bufory audio</a></div>
+        <div style="float:right">Następny: <a href="audio_free_play_queue.htm"><span class="notranslate">audio_free_play_queue</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 audio_create_play_queue

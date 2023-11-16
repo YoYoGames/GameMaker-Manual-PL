@@ -6,7 +6,7 @@
   <title>shader_is_compiled</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function shader_is_compiled" />
   <meta name="rh-index-keywords" content="shader_is_compiled" />
@@ -16,45 +16,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shader_is_compiled</h1>
-  <p>This function will check a shader at run-time to make sure that it has been successfully compiled. If it has then the function returns <span class="inline">true</span> otherwise it returns <span class="inline">false</span>. This function should be used at the start of the game to make sure that the platform running your game has successfully compiled any shaders used (particularly on Windows where some computers may be using DX9 with Shader Level 2.0 and not a later version using shader level 3.0).</p>
-  <p>If your shader has <i>NOT</i> been compiled and you call <a href="shader_set.htm"><span class="inline">shader_set()</span></a> the game will crash, so it is worth while having some sort of check whenever you are using anything other than simple GLSL ES shaders.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja sprawdza w czasie wykonywania programu <span class="notranslate">shader</span>, czy został on pomyślnie skompilowany. Jeśli tak, funkcja zwraca <span class="inline">true</span>, w przeciwnym razie zwraca <span class="inline">false</span>. Funkcja ta powinna być używana na początku gry, aby upewnić się, że platforma, na której działa gra, pomyślnie skompilowała każdą używaną stronę <span class="notranslate">shaders</span> (szczególnie na <span class="notranslate">Windows</span>, gdzie niektóre komputery mogą używać DX9 z <span class="notranslate">Shader</span> poziomem 2.0, a nie późniejszej wersji z <span class="notranslate">shader</span> poziomem 3.0).</p>
+  <p>Jeśli Twój adres <span class="notranslate">shader</span> <i>NIE</i> został skompilowany i wywołasz polecenie <a href="shader_set.htm"><span class="inline">shader_set()</span></a> gra się zawiesi, więc warto jest mieć jakiś rodzaj sprawdzania, kiedy używasz czegoś innego niż prosty GLSL ES <span class="notranslate">shaders</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">shader_is_compiled(shader);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>shader</td><td><span data-keyref="Type_Asset_Shader"></span></td>
-        <td>The shader to check.</td>
+        <td><span class="notranslate">shader</span></td><td><span data-keyref="Type_Asset_Shader"></span></td>
+        <td><span class="notranslate">The shader to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">global.GFX = false;<br />
     if (shader_is_compiled(sh_glass) &amp;&amp; shader_is_compiled(sh_warp))<br />
     {<br />
         global.GFX = true;<br />
     }</p>
-  <p>The above code will set a global variable to <span class="inline">false</span>, and then if both the shaders being checked have compiled correctly, it will be set to <span class="inline">true</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod ustawi zmienną globalną na <span class="inline">false</span>, a następnie, jeśli obie sprawdzane strony <span class="notranslate">shaders</span> skompilowały się poprawnie, zostanie ona ustawiona na <span class="inline">true</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Shaders.htm">Shaders</a></div>
-        <div style="float:right">Next: <a href="shaders_are_supported.htm">shaders_are_supported</a></div>
+        <div style="float:left">Powrót: <a href="Shaders.htm">Shadery</a></div>
+        <div style="float:right">Następny: <a href="shaders_are_supported.htm"><span class="notranslate">shaders_are_supported</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 shader_is_compiled

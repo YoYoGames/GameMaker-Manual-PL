@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>vertex_argb</title>
+  <title>wierzchołek_argb</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for vertex_argb" />
   <meta name="rh-index-keywords" content="vertex_argb" />
@@ -14,48 +14,48 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_argb</h1>
-  <p>This function will set the <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> values for the vertex currently being defined for the custom primitive. You supply the buffer to write the data into as well as the red, green, blue and alpha values that you wish to use as a single 32-bit unsigned integer - alpha sample in the highest 8 bits, followed by the red sample, green sample and finally the blue sample in the lowest 8 bits. You can use hex notation ($AARRGGBB) a real number or use any of the <span class="inline">make_colour_*()</span> functions to define the colour value.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>wierzchołek_argb</h1>
+  <p>Ta funkcja ustawia wartości <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> dla strony <span class="notranslate">vertex</span> aktualnie zdefiniowanej dla niestandardowego elementu pierwotnego. Podajesz adres <span class="notranslate">buffer</span>, do którego mają być zapisane dane, jak również wartości czerwona, zielona, niebieska i alfa, których chcesz użyć jako pojedynczej 32-bitowej liczby całkowitej bez znaku - próbka alfa w najwyższych 8 bitach, następnie próbka czerwona, zielona i wreszcie niebieska w najniższych 8 bitach. Do określenia wartości koloru można użyć notacji heksadecymalnej ($AARRGGBB), liczby rzeczywistej lub dowolnej funkcji <span class="inline">make_colour_*()</span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">vertex_argb(buffer, argb);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></td>
-        <td>The buffer to write the information to.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer_Vertex">Vertex <span class="notranslate">Buffer</span> ID</span></td>
+        <td><span class="notranslate">The buffer to write the information to.</span></td>
       </tr>
       <tr>
-        <td>argb</td>
-        <td><span data-keyref="Type_Constant_Colour">Colour</span></td>
-        <td>The ARGB value to set.</td>
+        <td><span class="notranslate">argb</span></td>
+        <td><span data-keyref="Type_Constant_Colour">Kolor</span></td>
+        <td><span class="notranslate">The ARGB value to set.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">vertex_argb(buff, $FFFFFFFF);</p>
-  <p>The above code will set the ARGB values of the vertex being defined to white.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod ustawi wartości ARGB zdefiniowanej strony <span class="notranslate">vertex</span> na kolor biały.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_texcoord.htm">vertex_texcoord</a></div>
+        <div style="float:left">Powrót: <a href="Primitives_And_Vertex_Formats.htm">Prymitywy i <span class="notranslate">Vertex</span> Formaty</a></div>
+        <div style="float:right">Następny: <a href="vertex_texcoord.htm"><span class="notranslate">vertex_texcoord</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_argb

@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>instanceof</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function instanceof" />
   <meta name="rh-index-keywords" content="instanceof" />
@@ -15,64 +15,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">instanceof</span></h1>
-  <p>This function can be used to get the name of the <a href="../../GML_Overview/Structs.htm">constructor function</a> that was used to create a struct. The struct itself should have been created using the <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline"></span></a> <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline">new</span></a> operator along with the constructor itself. You supply the variable with the struct reference to check and the function will return either a string with the constructor name or <span class="inline">undefined</span>.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_tip.hts"> </span> It&#39;s recommended to use <span class="inline3_func"><a data-xref="{title}" href="is_instanceof.htm">is_instanceof</a></span> to check the constructor of a struct, as it additionally allows you to check using parent constructors (i.e. constructors that the struct&#39;s constructor may have inherited from). <span class="inline3_func"><a data-xref="{title}" href="is_instanceof.htm">is_instanceof</a></span> also allows you to check using the constructor function reference directly instead of strings.</p>
-  <h3>Usage Notes</h3>
-  <ul class="colour">
-    <li>If you pass the function a struct literal (i.e.: a struct that was created without using a constructor function) then it will simply return the string <span class="inline2">&quot;struct&quot;</span>.</li>
-    <li>If you pass the function the <span class="inline2">self</span> keyword inside an object instance, it will return <span class="inline2">&quot;instance&quot;</span>.</li>
-    <li>The returned constructor name will include additional text if the constructor function was not created in a script. If it was created inside an object, its name will include the object and the event where it was created. For example, a constructor called <span class="inline2">test_constructor</span> created in the Create event of <strong>Object1</strong> will be returned as <span class="inline2">&quot;test_constructor_gml_Object_Object1_Create_0&quot;</span>. To avoid this, create your constructors in a <a href="../../GML_Overview/Script_Functions.htm">script</a>.</li>
-    <li>This function can also be used to check if a struct reference is a <strong><a class="glossterm" data-glossterm="weak reference" href="#">weak reference</a></strong> or not, in which case the function will return the string <span class="inline2">&quot;weakref&quot;</span> instead of the name of the function that created the struct. For more information, see the function <a href="../Garbage_Collection/weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>.</li>
-  </ul>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">instanceof</span>(struct_id);</p>
+  <h1>instanceof</h1>
+  <p>Tej funkcji można użyć, aby uzyskać nazwę <a href="../../GML_Overview/Structs.htm">funkcji konstruktora</a>, która została użyta do utworzenia strony <span class="notranslate">struct</span>. Strona <span class="notranslate">struct</span> powinna zostać utworzona przy użyciu <a href="../../GML_Overview/Structs.htm">funkcji</a> <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline"></span></a> <a href="../../GML_Overview/Language_Features/new.htm"><span class="inline">new</span></a> wraz z samym konstruktorem. Podajesz zmienną z referencją <span class="notranslate">struct</span> do sprawdzenia, a funkcja zwróci albo <span class="notranslate">string</span> z nazwą konstruktora, albo <span class="inline">undefined</span>.</p>
+  <p>Zwróć uwagę, że jeśli przekażesz funkcji <span class="notranslate">struct</span> literal (tzn. <span class="notranslate">struct</span>, który został utworzony bez użycia funkcji konstruktora), to zwróci ona po prostu <span class="inline2">&quot;struct&quot;</span> <span class="notranslate">string</span> <span class="inline2"></span>.</p>
+  <p>Funkcji tej można również użyć do sprawdzenia, czy odwołanie <span class="notranslate">struct</span> jest <strong><a class="glossterm" data-glossterm="słabe odniesienie" href="#">słabe odwołanie</a></strong> lub nie, w takim przypadku funkcja zwróci <span class="notranslate">string</span> <span class="inline2">&quot;weakref&quot;</span> zamiast nazwy funkcji, która utworzyła <span class="notranslate">struct</span>. Więcej informacji można znaleźć w funkcji <a href="../Garbage_Collection/weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>.</p>
+  <p>Zwrócona nazwa konstruktora będzie zawierać dodatkowy tekst, jeśli funkcja konstruktora nie została utworzona w <span class="notranslate">script</span>. Jeśli została utworzona wewnątrz <span class="notranslate">object</span>, jej nazwa będzie zawierać <span class="notranslate">object</span> oraz zdarzenie, w którym została utworzona. Na przykład, konstruktor o nazwie <span class="inline2">test_constructor</span> utworzony w zdarzeniu Create <strong>obiektu1</strong> zostanie zwrócony jako <span class="inline2">&quot;test_constructor_gml_Object_Object1_Create_0&quot;</span>. Aby tego uniknąć, należy tworzyć konstruktory w zdarzeniach <a href="../../GML_Overview/Script_Functions.htm"><span class="notranslate">script</span></a>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">instanceof(struct_id);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>struct</td>
-        <td><span data-keyref="Type_Struct"><a href="../../../../GameMaker_Language/GML_Overview/Structs.htm" target="_blank">Struct</a></span></td>
-        <td>The struct reference to use.</td>
+        <td><span class="notranslate">struct</span></td>
+        <td><span data-keyref="Type_Struct"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struktura</a></span></td>
+        <td><span class="notranslate">The struct reference to use.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> or <span data-keyref="Type_Undefined"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">undefined</a></span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>In this example we must first define the function that will be used as the constructor for our struct. The following function is defined in a script asset:</p>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span> or <span data-keyref="Type_Undefined"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">undefined</a></span></p>
+  <p> </p>
+  <h4>Przykład rozszerzony:</h4>
+  <p>W tym przykładzie musimy najpierw zdefiniować funkcję, która zostanie użyta jako konstruktor dla naszej strony <span class="notranslate">struct</span>. Poniższa funkcja jest zdefiniowana w elemencie <span class="notranslate">script</span>:</p>
   <p class="code">function init_struct(_a, _b, _c) constructor<br />
     {<br />
         a = _a;<br />
         b = _b;<br />
         c = _c;<br />
     }</p>
-  <p>This function can then be used along with the <span class="inline">new</span> operator to create a struct and populate it with the variables set to the values of the arguments used in the function:</p>
+  <p>Funkcji tej można następnie użyć wraz z operatorem <span class="inline">new</span> do utworzenia strony <span class="notranslate">struct</span> i wypełnienia jej zmiennymi ustawionymi na wartości argumentów użytych w funkcji:</p>
   <p class="code">mystruct = new init_struct(10, 100, &quot;Hello World&quot;);</p>
-  <p>We can then get the name of the constructor function that was used like this:</p>
+  <p>Następnie możemy uzyskać nazwę funkcji konstruktora, która została użyta w ten sposób:</p>
   <p class="code">var _name = instanceof(mystruct);<br />
     if is_string(_name)<br />
     {<br />
         show_debug_message(_name);<br />
     }</p>
-  <p>This will print the string <span class="inline2">&quot;init_struct&quot;</span> to the output log, which is the name of the constructor function as defined in its script.</p>
-  <p> </p>
-  <p> </p>
+  <p>Spowoduje to wypisanie do dziennika wyjścia <span class="notranslate">string</span> <span class="inline2">&quot;init_struct&quot;</span>, czyli nazwy funkcji konstruktora zdefiniowanej na stronie <span class="notranslate">script</span>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="struct_foreach.htm">struct_foreach</a></div>
+        <div style="float:left">Powrót: <a href="Variable_Functions.htm">Funkcje zmienne</a></div>
+        <div style="float:right">Następny: <a href="array_create.htm"><span class="notranslate">array_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 instanceof

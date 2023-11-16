@@ -6,7 +6,7 @@
   <title>xboxlive_get_stats_for_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_get_stats_for_user" />
   <meta name="rh-index-keywords" content="xboxlive_get_stats_for_user" />
@@ -15,66 +15,66 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_get_stats_for_user</h1>
-  <p>This function can be used to retrieve data about specific stats from the Xbox Live servers. You supply the user ID as returned by the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, then your games Service Configuration ID (as shown on the XDP console), and finally the stats required. You can request up to a maximum of 14 stats, but this does not guarantee that you will get 14 stat results, as there is a limit to the total length of the request and therefore the maximum stat count depends on the length of the names of the stats themselves.</p>
-  <p>The function will return 0 if the stat request was sent or -1 if there was an error, and the callback will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>. This event will have the special DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> which should then be parsed for the following key:</p>
+  <p>Ta funkcja służy do pobierania danych o określonych statystykach z witryny Xbox Live <span class="notranslate">servers</span>. Użytkownik podaje identyfikator użytkownika zwrócony przez funkcję <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, następnie identyfikator konfiguracji usługi gry (widoczny na konsoli XDP), a na końcu wymagane statystyki. Użytkownik może zażądać maksymalnie 14 statystyk, ale nie gwarantuje to otrzymania wyników 14 statystyk, ponieważ istnieje ograniczenie długości żądania, a zatem maksymalna liczba statystyk zależy od długości nazw samych statystyk.</p>
+  <p>Funkcja zwróci 0, jeśli żądanie statystyki zostało wysłane, lub -1, jeśli wystąpił błąd, a wywołanie zwrotne spowoduje wywołanie <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">systemowego zdarzenia asynchronicznego</a>. Zdarzenie to będzie miało specjalną mapę DS <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> którą należy następnie przetworzyć w poszukiwaniu następującego klucza:</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - should hold the string &quot;<b>stat_result</b>&quot; if the event was triggered by this function</li>
+    <li>&quot;<b>event_type</b>&quot; - powinien zawierać adres <span class="notranslate">string</span> &quot;<b>stat_result</b>&quot;, jeśli zdarzenie zostało wywołane przez tę funkcję</li>
   </ul>
-  <p>If the event type relates to this function, then there will also be the following additional key:</p>
+  <p>Jeśli typ zdarzenia dotyczy tej funkcji, pojawi się również następujący klucz dodatkowy:</p>
   <ul class="colour">
-    <li>&quot;<b>user</b>&quot; - holds the user ID for the requested stats.</li>
+    <li>&quot;<b>user</b>&quot; - przechowuje identyfikator użytkownika dla żądanych statystyk.</li>
   </ul>
-  <p>There may also be an extra set of key value pairs, where the key is the stat name requested, and the value the value for that stat on the server. Note that if a stat has never been created for this user (because they haven&#39;t fired the events that set it), no value may be returned for that stat (<a href="../../Data_Structures/DS_Maps/ds_map_exists.htm"><span class="inline">ds_map_exists()</span></a> can be used to check for the stats in the <span class="inline">async_load</span> map).</p>
-  <p>If the request fails due to the request length being to large, there should be a message in the console output stating the error code:</p>
+  <p>Może też istnieć dodatkowy zestaw par klucz-wartość, gdzie kluczem jest nazwa żądanej statystyki, a wartością wartość dla tej statystyki na stronie <span class="notranslate">server</span>. Należy pamiętać, że jeśli dana statystyka nigdy nie została utworzona dla tego użytkownika (ponieważ nie uruchomił on zdarzeń, które ją ustawiają), może nie zostać zwrócona żadna wartość dla tej statystyki (<a href="../../Data_Structures/DS_Maps/ds_map_exists.htm"><span class="inline">ds_map_exists()</span></a> można użyć do sprawdzenia statystyk w mapie <span class="inline">async_load</span> ).</p>
+  <p>Jeśli żądanie zakończy się niepowodzeniem z powodu zbyt dużej długości żądania, na wyjściu konsoli powinien pojawić się komunikat z kodem błędu:</p>
   <p class="code">xboxlive_get_stats_for_user - exception occurred getting results - 0x80190190</p>
-  <p>When this happens, the async event DS map should have a &quot;succeeded&quot; key with a value of &quot;0&quot;, and in this case you should attempt to retrieve fewer stats in a single call.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>W takim przypadku na mapie DS zdarzenia asynchronicznego powinien znajdować się klucz &quot;succeeded&quot; o wartości &quot;0&quot; i w takim przypadku należy spróbować pobrać mniejszą liczbę statystyk w jednym wywołaniu.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">xboxlive_get_stats_for_user(user_id, serviceconfig_id, statname1, …);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>user_id</td>
-        <td><span data-keyref="Type_ID_Xbox_User">Xbox User ID</span></td>
-        <td>The user ID pointer.</td>
+        <td><span class="notranslate">user_id</span></td>
+        <td><span data-keyref="Type_ID_Xbox_User">Identyfikator użytkownika konsoli Xbox</span></td>
+        <td><span class="notranslate">The user ID pointer.</span></td>
       </tr>
       <tr>
-        <td>serviceconfig_id</td>
+        <td><span class="notranslate">serviceconfig_id</span></td>
         <td><span data-keyref="Type_String">String</span></td>
-        <td>The service config file ID</td>
+        <td><span class="notranslate">The service config file ID</span></td>
       </tr>
       <tr>
-        <td>statname1 (2, 3, etc...)</td>
-        <td><span data-keyref="Type_String">String</span>s</td>
-        <td>The stat names to retrieve the information for.</td>
+        <td><span class="notranslate">statname1 (2, 3, etc...)</span></td>
+        <td><span data-keyref="Type_String">Struny</span></td>
+        <td><span class="notranslate">The stat names to retrieve the information for.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _uid = xboxlive_get_user(0);<br />
     var _configid = &quot;00000000-0000-0000-0000-000000000000&quot;;<br />
     xboxlive_get_stats_for_user(xbuser, _configid, &quot;GameProgress&quot;, &quot;CurrentMode&quot;);</p>
-  <p>The above code gets the user ID and then uses that to request information about specific stats for that user.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod pobiera identyfikator użytkownika, a następnie używa go do żądania informacji o statystykach dla tego użytkownika.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_read_player_leaderboard.htm">xboxlive_read_player_leaderboard</a></div>
+        <div style="float:left">Powrót: <a href="Stats_And_Leaderboards.htm">Statystyki i rankingi</a></div>
+        <div style="float:right">Następny: <a href="xboxlive_read_player_leaderboard.htm"><span class="notranslate">xboxlive_read_player_leaderboard</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_get_stats_for_user

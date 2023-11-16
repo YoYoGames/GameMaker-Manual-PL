@@ -6,7 +6,7 @@
   <title>fx_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the function fx_create" />
   <meta name="rh-index-keywords" content="fx_create" />
@@ -15,56 +15,56 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>fx_create</h1>
-  <p>This function is used to create a new FX Struct for a given effect type, which can then be <a href="layer_set_fx.htm">applied to a layer</a>.</p>
-  <p>The names of the Filters/Effects that you can pass into this function are listed on this page: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>.</p>
-  <h2>Usage</h2>
-  <p>You can read the parameters for the created effect by calling <a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a>/<a href="fx_get_parameters.htm"><span class="inline">s</span></a> on the returned struct, and assign new values to them by calling <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span>/<span class="inline"><a href="fx_set_parameters.htm">s</a></span>.</p>
-  <p>Note that the struct returned by this function will contain no visible members and can only be modified through one of the <a href="Filter_Effect_Functions.htm">Filter/Effect Functions</a>.</p>
-  <h2>Function Failures</h2>
-  <p>The function will return -1 if the struct failed to create for any reason; this may happen if the specified FX name was wrong or the FX was not loaded into the game package.</p>
-  <p>To ensure that this function works properly, make sure the FX you need is loaded into your game package, as explained on the <a data-xref="{title}" href="Filter_Effect_Functions.htm">Filter and Effect Functions</a> page:</p>
+  <p>Ta funkcja służy do tworzenia nowej strony FX <span class="notranslate">Struct</span> dla danego typu efektu, który można następnie <a href="layer_set_fx.htm">zastosować do warstwy</a>.</p>
+  <p>Na tej stronie podano nazwy filtrów/efektów, które można włączyć do tej funkcji: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">Wszystkie typy filt</a>rów/efektów.</p>
+  <h2>Zastosowanie</h2>
+  <p>Parametry utworzonego efektu można odczytać, wywołując polecenie <a href="fx_get_parameter.htm"><span class="inline">fx_get_parameter</span></a>/<a href="fx_get_parameters.htm"><span class="inline">s</span></a> na zwróconym adresie <span class="notranslate">struct</span> i przypisać im nowe wartości, wywołując <span class="inline"><a href="fx_set_parameter.htm">fx_set_parameter</a></span>/<span class="inline"><a href="fx_set_parameters.htm">s</a></span>.</p>
+  <p>Należy pamiętać, że strona <span class="notranslate">struct</span> zwrócona przez tę funkcję nie będzie zawierała żadnych widocznych elementów i będzie można ją zmodyfikować tylko za pomocą jednej z <a href="Filter_Effect_Functions.htm">funkcji Filtr/Efekt</a>.</p>
+  <h2>Awarie funkcji</h2>
+  <p>Funkcja zwróci -1, jeśli z jakiegoś powodu nie uda się utworzyć strony <span class="notranslate">struct</span>; może się tak zdarzyć, jeśli podana nazwa FX jest nieprawidłowa lub FX nie został załadowany do pakietu gry.</p>
+  <p>Aby zapewnić prawidłowe działanie tej funkcji, należy upewnić się, że w pakiecie z grą zostały załadowane potrzebne <a data-xref="{title}" href="Filter_Effect_Functions.htm">efekty</a> FX, jak wyjaśniono na stronie <a data-xref="{title}" href="Filter_Effect_Functions.htm">Funkcje filtrów i efektów</a>:</p>
   <div class="snippet_quote">
     <div data-conref="../../../../../assets/snippets/FX_only_added_through_IDE.hts"> </div>
   </div>
-  <p>If these conditions are not fulfilled, i.e. you are not passing in a string literal <em>and</em> the filter/effect is not present in any rooms, then the function will not be able to load that filter/effect and will return -1.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Jeśli te warunki nie zostaną spełnione, tzn. nie zostanie przekazany dosłowny adres <span class="notranslate">string</span>, <em>a</em> filtr/efekt nie będzie występował w żadnym z adresów <span class="notranslate">rooms</span>, wówczas funkcja nie będzie mogła załadować tego filtra/efektu i zwróci -1.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">fx_create(filter_or_effect_name);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>filter_or_effect_name</td>
+        <td><span class="notranslate">filter_or_effect_name</span></td>
         <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td>The name of the filter/effect to create (get them from <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>).</td>
+        <td><span class="notranslate">The name of the filter/effect to create (get them from <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">All Filter/Effect Types</a>).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Struct_FX"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">FX Struct</a></span> or -1 (on failure)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">var _fx_tint = fx_create(&quot;_filter_tintfilter&quot;);<br />
     fx_set_parameter(_fx_tint, &quot;g_TintCol&quot;, [1, 0, 0, 1]);<br />
     layer_set_fx(&quot;EffectLayer&quot;, _fx_tint);</p>
-  <p>The above code creates a new FX struct from the <span class="inline2">&quot;_filter_tintfilter&quot;</span> effect, which is the &quot;Colour Tint&quot; filter found in the Room Editor. It assigns a value to its <span class="inline2">&quot;g_TintCol&quot;</span> parameter which is the colour of the tint, and as it&#39;s a <span class="inline">vec4</span> internally, it takes an array containing four values (corresponding to its red, green, blue and alpha values). The FX struct for the tint is then applied to an FX layer.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod tworzy nowy FX <span class="notranslate">struct</span> z efektu <span class="inline2">&quot;_filter_tintfilter&quot;</span>, który jest filtrem &quot;Colour Tint&quot; znajdującym się w edytorze <span class="notranslate">Room</span>. Przypisuje on parametrowi <span class="inline2">&quot;g_TintCol&quot;</span> wartość, która jest kolorem tinty, a ponieważ jest to wewnętrzna strona <span class="inline">vec4</span>, przyjmuje tablicę zawierającą cztery wartości (odpowiadające wartościom czerwonej, zielonej, niebieskiej i alfa). Następnie do warstwy FX <span class="notranslate">struct</span> zostaje zastosowana warstwa FX dla odcienia.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Filter_Effect_Functions.htm">Filter and Effect Functions</a></div>
-        <div style="float:right">Next: <a href="fx_get_parameter.htm">fx_get_parameter</a></div>
+        <div style="float:left">Powrót: <a href="Filter_Effect_Functions.htm">Funkcje filtrów i efektów</a></div>
+        <div style="float:right">Next: <a href="fx_get_parameter.htm">fx_get_parameter</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 fx_create

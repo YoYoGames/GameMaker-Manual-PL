@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_apply_local_force</title>
+  <title>fizyka_zastosuj_lokalną_siłę</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_apply_local_force" />
   <meta name="rh-index-keywords" content="physics_apply_local_force" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_apply_local_force</h1>
-  <p>Another way to use force in the physics world is to apply it <i>locally</i> to an instance. What this means is that the strength and direction of the force are calculated based on the origin (or the position if it has no sprite) of the instance, without taking into consideration the direction or rotation it may have in the game room or physics world. It should be noted that with this function, forces are not applied to the center of mass of the object, but rather at a point relative to the instance and they will not be instantly applied as they are dependent on any other forces that are working on the object (like gravity). This illustration demonstrates how a local force works:</p>
-  <p><img alt="Apply local physics force illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_apply_local_force_image.png" />As you can see, the xlocal and ylocal coordinates are calculated based on the axis position <i>always</i> being considered as the origin of the instance (0,0), so no matter where in the room the object is, xlocal and ylocal are always going to be the same. You then have to decide where the vector components of the force (xforce and yforce) should be positioned relative to the xlocal/ylocal position. The exact force is defined by the vector we get from the components xforce/yforce in relation to those coordinates - which simply means that the force is calculated as the distance from xlocal/ylocal to xforce/yforce in Newtons, and the direction is the angle that we get from xlocal/ylocal to xforce/yforce. This may seem slightly confusing, but you just have to look at the illustration to see how this works, and it saves you some complicated maths!</p>
-  <p class="note"><b>NOTE</b>: The physics world uses meters for all its calculations, and the ratio of pixels per meter is defined in the room editor or using <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <h1>fizyka_zastosuj_lokalną_siłę</h1>
+  <p>Innym sposobem użycia siły w świecie fizyki jest zastosowanie jej <i>lokalnie</i> do instancji. Oznacza to, że siła i kierunek siły są obliczane na podstawie początku (lub pozycji, jeśli nie ma <span class="notranslate">sprite</span>) instancji, bez uwzględniania kierunku lub obrotu, jaki może ona mieć w grze <span class="notranslate">room</span> lub w świecie fizyki. Należy zauważyć, że w przypadku tej funkcji siły nie są przykładane do środka masy <span class="notranslate">object</span>, ale raczej do punktu względem instancji, i nie zostaną natychmiast zastosowane, ponieważ są zależne od innych sił działających na <span class="notranslate">object</span> (np. grawitacji). Na tej ilustracji pokazano, jak działa siła lokalna:</p>
+  <p><img>Jak widać, współrzędne xlocal i ylocal są obliczane na podstawie pozycji osi, która jest <i>zawsze</i> uważana za początek instancji (0,0), więc bez względu na to, w którym miejscu na stronie <span class="notranslate">room</span> znajduje się <span class="notranslate">object</span>, współrzędne xlocal i ylocal będą zawsze takie same. Następnie musisz zdecydować, gdzie powinny być umieszczone składowe wektorowe siły (xforce i yforce) w stosunku do pozycji xlocal/ylocal. Dokładna siła jest określana przez wektor, który otrzymujemy ze składowych xforce/yforce w odniesieniu do tych współrzędnych - co oznacza po prostu, że siła jest obliczana jako odległość od xlocal/ylocal do xforce/yforce w Newtonach, a kierunek jest kątem, który otrzymujemy od xlocal/ylocal do xforce/yforce. Może się to wydawać nieco zagmatwane, ale wystarczy spojrzeć na rysunek, aby zobaczyć, jak to działa, a to pozwala zaoszczędzić trochę skomplikowanej matematyki!</p>
+  <p class="note"><b>UWAGA</b>: Świat fizyki używa metrów do wszystkich swoich obliczeń, a stosunek pikseli na metr definiuje się w edytorze <span class="notranslate">room</span> lub za pomocą <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>xlocal</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate <i>relative to the origin</i> where the force will be applied</td>
+        <td><span class="notranslate">xlocal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate <i>relative to the origin</i> where the force will be applied</span></td>
      </tr>
       <tr>
-        <td>ylocal</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate <i>relative to the origin</i> where the force will be applied</td>
+        <td><span class="notranslate">ylocal</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate <i>relative to the origin</i> where the force will be applied</span></td>
      </tr>
       <tr>
-        <td>xforce</td><td><span data-keyref="Type_Real"></span></td>
-        <td>the x component of the force vector</td>
+        <td><span class="notranslate">xforce</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">the x component of the force vector</span></td>
      </tr>
       <tr>
-        <td>yforce</td><td><span data-keyref="Type_Real"></span></td>
-        <td>the y component of the force vector</td>
+        <td><span class="notranslate">yforce</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">the y component of the force vector</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if keyboard_check(vk_right)<br />
     {<br />
         physics_apply_local_force(-25, 0, -50, 0);<br />
     }</p>
-  <p>The code above will apply a force to the instance of 50 Newtons from left to right <i>relative</i> to the origin while the right arrow key is pressed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższy kod spowoduje przyłożenie do instancji siły 50 niutonów od lewej do prawej strony <i>względem</i> początku, gdy naciśnięty jest klawisz strzałki w prawo.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Forces.htm">Forces</a></div>
-        <div style="float:right">Next: <a href="physics_apply_local_impulse.htm">physics_apply_local_impulse</a></div>
+        <div style="float:left">Powrót: <a href="Forces.htm">Siły</a></div>
+        <div style="float:right">Następny: <a href="physics_apply_local_impulse.htm"><span class="notranslate">physics_apply_local_impulse</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 physics_apply_local_force

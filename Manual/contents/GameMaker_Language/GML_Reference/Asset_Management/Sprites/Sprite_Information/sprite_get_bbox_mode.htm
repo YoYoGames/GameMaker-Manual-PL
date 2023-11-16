@@ -6,7 +6,7 @@
   <title>sprite_get_bbox_mode</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_get_bbox_mode" />
   <meta name="rh-index-keywords" content="sprite_get_bbox_mode,bboxmode_automatic,bboxmode_fullimage,bboxmode_manual" />
@@ -16,63 +16,63 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_get_bbox_mode</h1>
-  <p>This function will return the current &quot;mode&quot; for the bounding box calculations. You supply the sprite index of the sprite to check, and the function will return one of the constants shown below.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
+  <p>Ta funkcja zwraca bieżący &quot;tryb&quot; obliczeń ramki ograniczającej. Podajesz indeks <span class="notranslate">sprite</span> strony <span class="notranslate">sprite</span>, którą chcesz sprawdzić, a funkcja zwróci jedną z poniższych stałych.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
   <p class="code">sprite_get_bbox_mode(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Opis</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to check.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Zwraca</h4>
   <p class="code"><span data-keyref="Type_Constant_Bbox_Mode">Bounding Box Mode Constant</span></p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Stała</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td><span class="inline">bboxmode_automatic</span></td>
-        <td>Automatic - The bounding box will be calculated automatically, based on the tolerance setting for the sprite</td>
+        <td><span class="notranslate"><span class="inline">bboxmode_automatic</span></td>
+        <td>Automatycznie - ramka ograniczająca zostanie obliczona automatycznie na podstawie tolerancji ustawionej dla sprite'a.</td>
       </tr>
       <tr>
-        <td><span class="inline">bboxmode_fullimage</span></td>
-        <td>Full Image - The bounding box will be set to use the full width and height of the sprite, regardless of the tolerance and &quot;empty&quot; pixels</td>
+        <td><span class="notranslate"><span class="inline">bboxmode_fullimage</span></td>
+        <td>Pełny obraz - ramka ograniczająca zostanie ustawiona na pełną szerokość i wysokość strony <span class="notranslate">sprite</span>, niezależnie od tolerancji i &quot;pustych&quot; pikseli.</td>
       </tr>
       <tr>
-        <td><span class="inline">bboxmode_manual</span></td>
-        <td>Manual - The bounding box has been set manually to user defined values (either in the sprite editor, or using the function <a href="../Sprite_Manipulation/sprite_set_bbox.htm"><span class="inline">sprite_set_bbox()</span></a>)</td>
+        <td><span class="notranslate"><span class="inline">bboxmode_manual</span></td>
+        <td>Ręcznie - ramka ograniczająca została ustawiona ręcznie na wartości zdefiniowane przez użytkownika (w edytorze <span class="notranslate">sprite</span> lub za pomocą funkcji <a href="../Sprite_Manipulation/sprite_set_bbox.htm"><span class="inline">sprite_set_bbox()</span></a>)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">if sprite_get_bbox_mode(sprite_index) != 0<br />
     {<br />
         sprite_set_bbox_mode(sprite_index, bboxmode_automatic);<br />
     }</p>
-  <p>The above checks the bbox mode for the current sprite and if it&#39;s not <span class="inline">automatic</span>, then it is sets it to that value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Powyższe polecenie sprawdza tryb bbox dla bieżącego adresu <span class="notranslate">sprite</span> i jeśli nie jest to <span class="inline">automatic</span>, ustawia go na tę wartość.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Information.htm">Sprite Information</a></div>
-        <div style="float:right">Next: <a href="sprite_get_nineslice.htm">sprite_get_nineslice</a></div>
+        <div style="float:left">Powrót: <a href="Sprite_Information.htm">Informacje o Sprite</a></div>
+        <div style="float:right">Next: <a href="sprite_get_nineslice.htm">sprite_get_nineslice</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_get_bbox_mode

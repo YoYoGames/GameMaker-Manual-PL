@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Compiling Preferences</title>
+  <title>Kompilacja</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="The Compiling Preferences from the General Preferences section" />
   <meta name="rh-index-keywords" content="Prefs - General - Compiling" />
@@ -14,30 +14,31 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Compiling Preferences</span></h1>
+  <h1>Preferencje dotyczące kompilacji</h1>
   <p><img alt="Compiling Preferences" class="center" src="../../../assets/Images/Setup_And_Version/Preferences/General_Compiling_Prefs.png" /></p>
-  <p>The <span data-field="title" data-format="default">Compiling Preferences</span> deal with certain options related to the output when compiling your game for testing or creating a package, as well as certain areas of the compiling process. The options are:</p>
+  <p>Preferencje kompilacji dotyczą pewnych opcji związanych z danymi wyjściowymi podczas kompilowania gry do testów lub tworzenia pakietu, a także pewnych obszarów procesu kompilacji. Dostępne są następujące opcje:</p>
   <ul class="colour">
-    <li><strong>Automatically open syntax error window on detection</strong>: Enable or disable syntax error notification when compiling. This is off by default.</li>
-    <li><strong>Show the compile window during compilation</strong>: By default the compile window will be shown when you compile your projects, even if the compile dock is closed (it will open for the compile). Unchecking this will switch this behaviour off and the compile window will only be visible if open.</li>
-    <li><strong>Show compiler commands in compile output</strong>: This is checked by default and forces the compiler to show all relevant commands in the compile window. Unchecking this will make the output smaller and have less information.</li>
-    <li><strong>Show verbose compiler output</strong>: Checking this will force the compiler to show extra commands related to the compilation process. In general this is only required when debugging and may be requested by support should you have an issue. It is off by default (and this is the recommended setting).</li>
-    <li><strong>Show package in explorer on build completion</strong>: Checking this will make <span data-keyref="GameMaker Name">GameMaker</span> open the OS explorer window at the location where the final executable package has been created. It is on by default.</li>
-    <li><strong>Clear output window on compile start</strong>: By default the compiler window will clear all previous messages from the compiler output window at the start of each build, however unchecking this will maintain previous compiler logs. This is on by default and is the recommended configuration since large compiler logs can slow down compile times.</li>
-    <li><strong>Automatically Stop Running before packaging:</strong> By default, if your game is already running and you try to create an executable, you will be shown an error message and will need to <img class="icon" src="../../../assets/Images/Icons/Icon_StopGame.png" /> stop the game manually before creating an executable. You can enable this option to always skip this error message and automatically stop the game if it&#39;s running when &quot;Create Executable&quot; is selected. This is off by default.</li>
-    <li><strong>Automatically Stop Running before cleaning</strong>: When this preference is enabled the IDE <em>won&#39;t</em> show a warning message when you clean the project with a game already running. The preference is off by default.</li>
-    <li><strong>Maximum parallel compile jobs</strong>: This value sets the maximum number of CPU cores to dedicate to compiling a project. The default value is 8 and in general you shouldn&#39;t have to change this, but if you are on a laptop or a lower end machine you may want to lower this value. The default is set to 8.</li>
+    <li><strong>Automatycznie otwieraj okno błędu składni po wykryciu błędu</strong>: Włączenie lub wyłączenie powiadamiania o błędach składni podczas kompilacji. Domyślnie opcja ta jest wyłączona.</li>
+    <li><strong>Pokaż okno kompilacji podczas kompilacji</strong>: Domyślnie okno kompilacji będzie widoczne podczas kompilacji projektów, nawet jeśli dok kompilacji jest zamknięty (zostanie otwarty na czas kompilacji). Usunięcie zaznaczenia tej opcji spowoduje, że <span class="notranslate">switch</span> wyłączy to zachowanie, a okno kompilacji będzie widoczne tylko wtedy, gdy będzie otwarte.</li>
+    <li><strong>Pokazuj polecenia kompilatora w</strong> oknie kompilacji: Ta opcja jest domyślnie zaznaczona i zmusza kompilator do pokazywania wszystkich istotnych poleceń w oknie kompilacji. Usunięcie tego zaznaczenia spowoduje, że dane wyjściowe będą mniejsze i będą zawierały mniej informacji.</li>
+    <li><strong>Pokaż pełne dane wyjściowe kompilatora</strong>: Zaznaczenie tej opcji zmusi kompilator do pokazywania dodatkowych poleceń związanych z procesem kompilacji. Zazwyczaj jest to wymagane tylko na stronie <span class="notranslate">debugging</span> i może być wymagane przez pomoc techniczną w przypadku wystąpienia problemu. Domyślnie opcja ta jest wyłączona (i jest to zalecane ustawienie).</li>
+    <li><strong>Użyj subst dla ścieżek napędów</strong>: Gdy ta opcja jest zaznaczona, <span data-keyref="GameMaker Name">GameMaker</span> będzie tworzył - i usuwał, gdy nie będzie już potrzebny - wirtualne napędy, które będą używane jako substytut pełnego pliku <span class="notranslate">paths</span>. Te wirtualne napędy omijają wszelkie potencjalne problemy z tym, że plik <span class="notranslate">paths</span> jest zbyt długi dla systemu operacyjnego (zwłaszcza podczas kompilacji dla <span class="notranslate">Android</span> lub używania <span class="notranslate">extensions</span>) i zaleca się włączenie tej opcji. Jeśli jednak masz problemy z tworzeniem takich wirtualnych napędów przez <span data-keyref="GameMaker Name">program GameMaker</span>, możesz wyłączyć tę opcję. Domyślnie jest ona włączona.</li>
+    <li><strong>Pokaż pakiet w eksploratorze po zakończeniu komp</strong>ilacji: Zaznaczenie tej opcji spowoduje, że <span data-keyref="GameMaker Name">GameMaker</span> otworzy okno eksploratora systemu operacyjnego w miejscu, w którym został utworzony ostateczny pakiet wykonywalny. Domyślnie opcja ta jest włączona.</li>
+    <li><strong>Wyczyść okno wyjściowe przy uruchamianiu kompilacji</strong>: Domyślnie okno kompilatora czyści wszystkie poprzednie komunikaty z okna wyjściowego kompilatora na początku każdej kompilacji, jednak usunięcie zaznaczenia tej opcji spowoduje zachowanie poprzednich dzienników kompilatora. Ta opcja jest domyślnie włączona i jest zalecaną konfiguracją, ponieważ duże logi kompilatora mogą spowalniać czas kompilacji.</li>
+    <li><strong>Automatycznie zatrzymaj działanie gry przed jej spakowaniem:</strong> Domyślnie, jeśli gra jest już uruchomiona, a spróbujesz utworzyć plik wykonywalny, zostanie wyświetlony komunikat o błędzie i konieczne będzie <img> ręczne zatrzymanie gry przed utworzeniem pliku wykonywalnego. Możesz włączyć tę opcję, aby zawsze pomijać ten komunikat o błędzie i automatycznie zatrzymywać grę, jeśli jest uruchomiona po wybraniu opcji &quot;Utwórz plik wykonywalny&quot;. Domyślnie opcja ta jest wyłączona.</li>
+    <li><strong>Maksymalna liczba równoległych zadań kompilacji</strong>: Ta wartość określa maksymalną liczbę rdzeni procesora, które można przeznaczyć na kompilację projektu. Domyślną wartością jest 8 i generalnie nie powinno się jej zmieniać, ale jeśli korzystasz z laptopa lub maszyny z niższej półki, możesz chcieć obniżyć tę wartość. Domyślnie ustawiona jest wartość 8.</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../General_Preferences.htm">General Preferences</a></div>
-        <div style="float:right">Next: <a href="Confirm_Dialogs.htm">Confirm Dialog Preferences</a></div>
+        <div style="float:left">Powrót: <a href="../General_Preferences.htm">Preferencje ogólne</a></div>
+        <div style="float:right">Następnie: <a href="Confirm_Dialogs.htm">Preferencje okna dialogowego Potwierdzenie</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - General, Compiling

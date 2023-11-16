@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Source Control</title>
+  <title>Kontrola źródła</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control integration
 " />
@@ -15,42 +15,42 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Source Control</h1>
-  <p><strong>Source Control Management</strong> (SCM) is the name given to the method of working with <strong>sub-versions</strong> or backups of your projects through a repository and local source. Basically, an SCM solution is an independent software package which controls all the aspects of maintaining, changing and comparing versions of your project as you work on it. This is especially useful to those that work in a team and need to be able to control who does what and not worry about losing data or making changes that may need to be undone at a later date, but individuals can benefit from this powerful yet flexible system too.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> makes use of <a href="https://git-scm.com/" title="Git">Git</a> for its SCM, which must be installed and set up separately before SCM can be used within GameMaker. See the <a href="https://git-scm.com/doc" title="Git Documentation">Git Documentation</a> for more specific info regarding Git.</p>
-  <p>Below you can find links to a small tutorial on how to set up this plugin and use the SCM tools with a project.</p>
-  <p class="note"><strong>IMPORTANT!</strong> We recommend that you have some working knowledge of how source control works before attempting to use it in <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <h1>Kontrola źródła</h1>
+  <p><strong>Zarządzanie kontrolą źródła</strong> (SCM) to nazwa nadana metodzie pracy z <strong>podwersjami</strong> lub kopiami zapasowymi projektów za pośrednictwem repozytorium i lokalnego źródła. Zasadniczo rozwiązanie SCM jest niezależnym pakietem oprogramowania, który kontroluje wszystkie aspekty utrzymania, zmiany i porównywania wersji projektu w trakcie pracy nad nim. Jest to szczególnie przydatne dla osób pracujących w zespole, które muszą mieć kontrolę nad tym, kto co robi, i nie muszą się martwić o utratę danych lub wprowadzanie zmian, które trzeba będzie później cofnąć, ale z tego potężnego i elastycznego systemu mogą korzystać także osoby indywidualne.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> korzysta z <a href="https://git-scm.com/" title="Git">Git</a> jako SCM, który musi być zainstalowany i skonfigurowany oddzielnie, zanim SCM będzie mógł być użyty w <span class="notranslate">GameMaker</span>. Więcej informacji na temat <span class="notranslate">Git</span> można znaleźć w <a href="https://git-scm.com/doc" title="Git Documentation">Dokumentacji Git</a>.</p>
+  <p>Poniżej znajdują się odnośniki do małego samouczka, jak skonfigurować tę wtyczkę i używać narzędzi SCM w projekcie.</p>
+  <p class="note"><strong>WAŻNE!</strong> Zalecamy, abyś posiadał pewną praktyczną wiedzę na temat działania strony <span class="notranslate">source control</span>, zanim spróbujesz użyć jej w programie <span data-keyref="GameMaker Name">GameMaker</span>.</p>
   <ul class="colour">
-    <li><a href="Source_Control/Setting_Up_Git_Plugin.htm">Setting Up The Git Plugin</a></li>
-    <li><a href="Source_Control/Repository_Options.htm">Repository Options</a></li>
-    <li><a href="Source_Control/Standard_Workflow.htm">Standard Workflow</a></li>
-    <li><a href="Source_Control/Reverting_Files.htm">Reverting Files</a></li>
-    <li><a href="Source_Control/Cloning_A_Repository.htm">Cloning A Repository</a></li>
-    <li><a href="Source_Control/Conflicts.htm">Conflicts</a></li>
-    <li><a href="Source_Control/External_Merge_Diff_Tools.htm">Setting Up External Merge/Diff Tools</a></li>
+    <li><a href="Source_Control/Setting_Up_Git_Plugin.htm">Konfigurowanie wtyczki <span class="notranslate">Git</span> </a></li>
+    <li><a href="Source_Control/Repository_Options.htm">Opcje repozytorium</a></li>
+    <li><a href="Source_Control/Standard_Workflow.htm">Standardowy przepływ pracy</a></li>
+    <li><a href="Source_Control/Reverting_Files.htm">Odwracanie plików</a></li>
+    <li><a href="Source_Control/Cloning_A_Repository.htm">Klonowanie repozytorium</a></li>
+    <li><a href="Source_Control/Conflicts.htm">Konflikty</a></li>
+    <li><a href="Source_Control/External_Merge_Diff_Tools.htm">Konfigurowanie zewnętrznych narzędzi do scalania/rozróżniania</a></li>
   </ul>
-  <p> </p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> will show a drop-down menu in the Menu Bar for Source Control, which will be populated with the following options once Source Control has been activated for your project (see the section <a href="Source_Control/Setting_Up_Git_Plugin.htm">Setting Up The Git Plugin</a> above for details):</p>
-  <p><img alt="Source Control Context Menu" class="center" src="../assets/Images/IDE Tools/SCM_ContextMenu.png" />Here we outline each of the available options (most of them are explained in more depth in the tutorial sections above):</p>
+  <p> </p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> wyświetli rozwijane menu na pasku menu dla <span class="notranslate">Source Control</span>, które zostanie wypełnione następującymi opcjami po aktywowaniu <span class="notranslate">Source Control</span> dla Twojego projektu (szczegóły w rozdziale <a href="Source_Control/Setting_Up_Git_Plugin.htm">Setting Up The <span class="notranslate">Git</span> Plugin</a> powyżej):</p>
+  <p><img>Poniżej przedstawiamy w skrócie każdą z dostępnych opcji (większość z nich jest szczegółowo omówiona w powyższych sekcjach samouczka):</p>
   <ul class="colour">
-    <li><strong>Create Project Repository</strong>: This option permits you to create a local repository in the same directory as your project files.</li>
-    <li><strong>Clone Repository</strong>: This option will permit you to clone a repository from a source to a new destination.</li>
-    <li><strong>Commit Changes</strong>: With this option you can stage changed files in your project and then commit them to the repository.</li>
-    <li><strong>Push Changes</strong>: After doing a commit or a merge this option is used to push the changes to the master repository.</li>
-    <li><strong>Pull Changes</strong>: With this option you can update the local repository by pulling the changed files from the master repository.</li>
-    <li><strong>View History</strong>: This will open the history window where you can view all the version history of the project and choose to roll back specific file paths or whole revisions.</li>
-    <li><strong>Show Conflicts</strong>: This will open the Conflicts window and list any conflicted files that may exist in the project, permitting you to deal with them either through the <span data-keyref="GameMaker Name">GameMaker</span> IDE or using a specific Merge Tool.</li>
+    <li><strong>Create Project Repository</strong>: Ta opcja umożliwia utworzenie lokalnego repozytorium w tym samym katalogu, w którym znajdują się pliki projektu.</li>
+    <li><strong>Sklonuj</strong> repozytorium: Ta opcja umożliwia sklonowanie repozytorium ze źródła do nowego miejsca docelowego.</li>
+    <li><strong>Commit Changes</strong>: Dzięki tej opcji możesz etapować zmienione pliki w projekcie, a następnie zatwierdzić je w repozytorium.</li>
+    <li><strong>Pchnij zmiany</strong>: Po wykonaniu commitu lub merge ta opcja służy do wypchnięcia zmian do repozytorium głównego.</li>
+    <li><strong>Wyciągnij zmiany</strong>: Dzięki tej opcji można aktualizować lokalne repozytorium, pobierając zmienione pliki z repozytorium głównego.</li>
+    <li><strong>Wyświetl historię</strong>: Otworzy to okno historii, w którym można przejrzeć całą historię wersji projektu i wybrać cofnięcie określonego pliku <span class="notranslate">paths</span> lub całych rewizji.</li>
+    <li><strong>Show Conflicts (Pokaż</strong> konflikty): Spowoduje to otwarcie okna Konflikty i wyświetlenie listy wszystkich plików, które mogą być w konflikcie w projekcie, umożliwiając zajęcie się nimi w programie <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> lub za pomocą specjalnego narzędzia Merge Tool.</li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
-        <div style="float:right">Next: <a href="Source_Control/Setting_Up_Git_Plugin.htm">Setting Up The Git Plugin</a></div>
+        <div style="float:left">Powrót: <a href="Additional_IDE_Tools.htm">Dodatkowe narzędzia <span class="notranslate">IDE</span> </a></div>
+        <div style="float:right">Następny: <a href="Source_Control/Setting_Up_Git_Plugin.htm">Konfigurowanie wtyczki <span class="notranslate">Git</span> </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control

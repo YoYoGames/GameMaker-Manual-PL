@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Timeline State</title>
+  <title>Ustaw stan osi czasu</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Timeline State action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Timeline State" />
@@ -14,67 +14,67 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Timeline State Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_State.png" width="32" /> Set Timeline State</h1>
-  <p>This action can be used to start, stop, pause or resume a timeline. The timeline must first have been set for the instance using the action <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a>, and then you can use this action at any time to
-    change its running state from the following options</p>
+  <h1><img> Ustaw stan <span class="notranslate">Timeline</span> </h1>
+  <p>Tej akcji można użyć do uruchomienia, zatrzymania, wstrzymania lub wznowienia działania strony <span class="notranslate">timeline</span>. Strona <span class="notranslate">timeline</span> musi być najpierw ustawiona dla instancji za pomocą akcji <a href="Set_Instance_Timeline.htm">Ustaw oś czasu</a> instancji, a następnie można w dowolnym momencie użyć tej akcji do
+    zmienić jej stan roboczy, wybierając spośród następujących opcji</p>
   <table>
     <tbody>
       <tr>
-        <th>Option</th>
-        <th>Description</th>
+        <th>Opcja</th>
+        <th>Opis</th>
       </tr>
       <tr>
         <td>Start</td>
-        <td>Start the timeline assigned to the instance (if the timeline was paused this will set the start position to moment 0 again).</td>
+        <td>Uruchom stronę <span class="notranslate">timeline</span> przypisaną do instancji (jeśli strona <span class="notranslate">timeline</span> była wstrzymana, spowoduje to ponowne ustawienie pozycji startowej na moment 0).</td>
       </tr>
       <tr>
-        <td>Resume</td>
-        <td>Resume a paused timeline (if the timeline was stopped and not paused this will do nothing).</td>
+        <td>CV</td>
+        <td>Wznów wstrzymaną stronę <span class="notranslate">timeline</span> (jeśli strona <span class="notranslate">timeline</span> została zatrzymana i nie została wstrzymana, ten krok nic nie da).</td>
       </tr>
       <tr>
-        <td>Paused</td>
-        <td>Pause the timeline assigned to the instance (while paused the moments in a timeline will not advance with the game frames).</td>
+        <td>Wstrzymane</td>
+        <td>Wstrzymaj działanie strony <span class="notranslate">timeline</span> przypisanej do instancji (w stanie wstrzymania momenty w witrynie <span class="notranslate">timeline</span> nie będą się przesuwać wraz z klatkami gry).</td>
       </tr>
       <tr>
-        <td>Stop</td>
-        <td>Stop the timeline assigned to the instance.</td>
+        <td>Przestań</td>
+        <td>Zatrzymaj stronę <span class="notranslate">timeline</span> przypisaną do instancji.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p><img alt="Set Timeline State Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_State.png" /></p>
-  <p> </p>
-  <h4>Arguments:</h4>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p><img alt="Set Timeline State Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_State.png" width="32" /></p>
+  <p> </p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>State</td>
-        <td>The state to put the timeline in (see the table above)</td>
+        <td><span class="notranslate">State</span></td>
+        <td>Stan, w którym zostanie umieszczona strona <span class="notranslate">timeline</span> (patrz tabela powyżej)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p><img alt="Set Timeline State Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/e_Timelines_Set_Timeline_State.png" />The above action block code will check the value held in a global variable and
-    if it is <span class="inline">true</span> then the timeline is paused, and if it is <span class="inline">false</span> then the timeline will be resumed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p><img>Powyższy kod bloku akcji sprawdzi wartość przechowywaną w zmiennej globalnej i
+    jeśli jest to <span class="inline">true</span>, to działanie <span class="notranslate">timeline</span> zostanie wstrzymane, a jeśli jest to <span class="inline">false</span>, to działanie <span class="notranslate">timeline</span> zostanie wznowione.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Timeline_Actions.htm">Timeline Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a></div>
+        <div style="float:left">Powrót: <a href="Timeline_Actions.htm">Działania na osi czasu</a></div>
+        <div style="float:right">Następnie: <a href="Set_Instance_Timeline.htm">Ustawianie osi czasu instancji</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Set Timeline State
+Action - Set <span class="notranslate">Timeline</span> State
 -->
   <!-- TAGS
 action_set_timeline_state

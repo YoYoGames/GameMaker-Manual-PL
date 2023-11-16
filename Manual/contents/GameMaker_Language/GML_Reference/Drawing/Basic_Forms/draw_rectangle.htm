@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_rectangle</title>
+  <title>narysuj_prostokąt</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function draw_rectangle" />
   <meta name="rh-index-keywords" content="draw_rectangle" />
@@ -15,65 +15,65 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">draw_rectangle</span></h1>
-  <p>This function draws either an outline of a rectangle or a filled rectangle where the (x1,y1) position is the top left corner and the (x2,y2) position is the bottom right corner. Please note that the rectangle being drawn may need different values (+/-1 on the x, y, or width or height) to be drawn with the desired dimensions due to differences across the various supported platforms.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> If you want to draw a shape using a shader, you should be aware that most shaders expect the following inputs: vertex, texture, colour. However, when using this function, only vertex and colour data are being passed in, and so the shader may not draw anything (or draw something but not correctly). If you need to draw shapes in this way then the shader should be customised with this in mind.</p>
-  <p> </p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">draw_rectangle</span>(x1, y1, x2, y2, outline);</p>
+  <h1>narysuj_prostokąt</h1>
+  <p>Za pomocą tej funkcji można narysować kontur prostokąta lub wypełniony prostokąt, w którym pozycja (x1,y1) jest lewym górnym rogiem, a pozycja (x2,y2) jest prawym dolnym rogiem. Należy pamiętać, że rysowany prostokąt może wymagać innych wartości (+/-1 w polach x, y, szerokość lub wysokość), aby został narysowany w żądanych wymiarach, ze względu na różnice między różnymi obsługiwanymi platformami.</p>
+  <p class="note"><b>UWAGA</b>: Jeśli chcesz narysować kształt za pomocą strony <span class="notranslate">shader</span>, musisz wiedzieć, że większość stron <span class="notranslate">shaders</span> oczekuje następujących danych wejściowych: <span class="notranslate">vertex</span>, <span class="notranslate">texture</span>, Kolor. Jednak w przypadku korzystania z tej funkcji przekazywane są tylko dane <span class="notranslate">vertex</span> i kolor, a zatem <span class="notranslate">shader</span> może niczego nie narysować (lub narysować coś, ale niepoprawnie). Jeśli konieczne jest rysowanie kształtów w ten sposób, należy dostosować stronę <span class="notranslate">shader</span> do tego celu.</p>
+  <p> </p>
+  <h4>Składnia:</h4>
+  <p class="code">draw_rectangle(x1, y1, x2, y2, outline);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the top left corner of the rectangle.</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the top left corner of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the top left corner of the rectangle.</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the top left corner of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the bottom right corner of the rectangle.</td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the bottom right corner of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the bottom right corner of the rectangle.</td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the bottom right corner of the rectangle.</span></td>
       </tr>
       <tr>
-        <td>outline</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the rectangle is drawn filled (false) or as a one pixel wide outline (true).</td>
+        <td><span class="notranslate">outline</span></td>
+        <td><span data-keyref="Type_Bool">Boolean</span></td>
+        <td><span class="notranslate">Whether the rectangle is drawn filled (false) or as a one pixel wide outline (true).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">draw_set_colour(c_yellow);<br />
-    <span data-field="title" data-format="default">draw_rectangle</span>(100, 100, 300, 200, true);
-  </p>
-  <p>This will draw a rectangle outline, with its top left corner at (100,100) and its bottom right corner at (300,200).</p>
-  <p> </p>
-  <p> </p>
+    draw_rectangle(100, 100, 300, 200, true);</p>
+  <p>Spowoduje to narysowanie konturu prostokąta, którego lewy górny róg będzie znajdował się w punkcie (100,100), a prawy dolny w punkcie (300,200).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Basic_Forms.htm">Basic Forms</a></div>
-        <div style="float:right">Next: <a href="draw_rectangle_colour.htm">draw_rectangle_colour</a></div>
+        <div style="float:left">Powrót: <a href="Basic_Forms.htm">Formularze podstawowe</a></div>
+        <div style="float:right">Następny: <a href="draw_rectangle_colour.htm"><span class="notranslate">draw_rectangle_colour</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 draw_rectangle

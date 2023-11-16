@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <title>YoYo Compiler</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../assets/css/default.css" />
@@ -15,42 +15,40 @@
 </head>
 <body>
   <h1><span data-field="title" data-format="default">YoYo Compiler</span></h1>
-  <p>The <span data-field="title" data-format="default">YoYo Compiler</span> (YYC) is a special compiler for creating executable packages that use <a class="glossterm" data-glossterm="machine code" href="#">machine code</a> instead of interpreted code and a runner (which is what the <span data-keyref="GameMaker Name">GameMaker</span> VM compile uses). Compiled code is faster to run, but takes more time to compile the executable.</p>
-  <h2>Licence</h2>
-  <p>Your <span data-keyref="GameMaker Name">GameMaker</span> licence may or may not include the YoYo Compiler. To find out, see the Help Center page <a href="https://help.yoyogames.com/hc/en-us/articles/115002637011">Which Subscription Is Right For Me?</a>.</p>
-  <h2>Setting Up The SDK</h2>
-  <p>In order for the <span data-field="title" data-format="default">YoYo Compiler</span> to be able to compile for the target platform, you will need to have the correct <a class="glossterm" data-glossterm="SDK" href="#">SDK</a>s installed.</p>
-  <p>For a general overview on this, see the following Help Center page: <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">GameMaker Required SDKs</a>.</p>
-  <p>Information on the SDKs required per platform can be found in the Help Center as well: </p>
+  <p> <span data-field="title" data-format="default">YoYo Compiler</span> (YYC) jest specjalnym kompilatorem do tworzenia pakietów wykonywalnych, które używają <a class="glossterm" data-glossterm="kod maszynowy" href="#">kodu maszynowego</a> zamiast kodu interpretowanego i runnera (co jest tym, czego używa kompilacja <span data-keyref="GameMaker Name">GameMaker</span> VM). Skompilowany kod jest szybszy do uruchomienia, ale zajmuje więcej czasu, aby skompilować plik wykonywalny.</p>
+  <h2>Licencja</h2>
+  <p>Twoja licencja <span class="notranslate">GameMaker</span> może, ale nie musi obejmować kompilatora <span class="notranslate">YoYo</span>. Aby się tego dowiedzieć, zobacz stronę Centrum Pomocy <a href="https://help.yoyogames.com/hc/en-us/articles/115002637011">Która subskrypcja jest dla mnie odpowiednia?</a></p>
+  <h2>Konfiguracja zestawu SDK</h2>
+  <p>Aby kompilator <span data-field="title" data-format="default">YoYo</span> mógł skompilować się dla platformy docelowej, musisz mieć zainstalowane odpowiednie <a class="glossterm" data-glossterm="SDK" href="#">SDK</a>.</p>
+  <p>Aby uzyskać ogólny przegląd na ten temat, zobacz następującą stronę Help Center: <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">GameMaker Required SDKs</a>.</p>
+  <p>Informacje na temat pakietów SDK wymaganych dla poszczególnych platform można znaleźć również w Centrum Pomocy: </p>
   <ul class="Disc">
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193-Setting-Up-For-Opera-GX">GX.games</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193-Setting-Up-For-Opera-GX">Opera GX</a></li>
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows">Windows</a></li>
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186128">macOS</a></li>
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186168">Ubuntu</a></li>
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/115001368727">Android</a></li>
-    <li><a href="https://help.yoyogames.com/hc/en-us/articles/115001368747">iOS (Including iPadOS)</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/115001368747">iOS (w tym iPadOS)</a></li>
     <li><a href="https://help.yoyogames.com/hc/en-us/articles/360025349592">tvOS</a></li>
   </ul>
-  <h2>Building a project with YYC</h2>
-  <p>Once you have the <a class="glossterm" data-glossterm="SDK" href="#">SDK</a>s set up correctly you can change the Output option for the selected platform to YYC: </p>
-  <p><img class="center" src="../assets/Images/Introduction/QS_TargetYYC.png" /></p>
-  <p>In case the current runtime doesn&#39;t include the YYC module for the platform you want to build for you will be asked to install it first: </p>
-  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Module_Not_Installed_YYC.png" /></p>
-  <p>After that you can create the executable from <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">The Build Menu</a> as with the VM output.</p>
-  <p>If the path to the <a class="glossterm" data-glossterm="SDK" href="#">SDK</a> wasn&#39;t configured correctly you may get an error like the following (the image shows the message on the Windows platform): </p>
+  <h2>Budowanie projektu z YYC</h2>
+  <p>Po prawidłowym skonfigurowaniu <a class="glossterm" data-glossterm="SDK" href="#">SDKs</a>możesz zmienić opcję Output dla wybranej platformy na YYC: </p>
+  <p><img class="center_shadow" src="../assets/Images/Introduction/QS_TargetYYC.png" /></p>
+  <p>Następnie możesz utworzyć plik wykonywalny z <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">The Build Menu</a>, tak jak w przypadku wyjścia VM.</p>
+  <p>Jeśli <span class="notranslate">path</span> do <a class="glossterm" data-glossterm="SDK" href="#">SDK</a> nie został poprawnie skonfigurowany, możesz otrzymać błąd taki jak poniżej (obrazek pokazuje komunikat na platformie <span class="notranslate">Windows</span> ): </p>
   <p><img class="center_shadow" height="86" src="../assets/Images/Introduction/QS_Debug_CompileError_VSPath.png" style="cursor: nesw-resize;" width="941" /></p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> needs to know the location of the files needed to build an executable on the selected platform. In case this hasn&#39;t been set up correctly, a compile error is shown.</p>
-  <p>To verify that the paths have been set correctly for the selected platform, you can check the <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>.</p>
-  <p> </p>
-  <p> </p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> musi znać lokalizację plików potrzebnych do zbudowania pliku wykonywalnego na wybranej platformie. W przypadku, gdy nie zostało to poprawnie skonfigurowane, wyświetlany jest błąd kompilacji.</p>
+  <p>Aby sprawdzić, czy strona <span class="notranslate">paths</span> została ustawiona prawidłowo dla wybranej platformy, można sprawdzić <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Preferencje platformy</a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
-        <div>Next: <a href="../The_Asset_Editors/The_Asset_Editors.htm">The Asset Editors</a></div>
+        <div>Powrót: <a href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
+        <div>Następny: <a href="../The_Asset_Editors/The_Asset_Editors.htm">Redakcja <span class="notranslate">Asset</span> </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
 </body>
 </html>

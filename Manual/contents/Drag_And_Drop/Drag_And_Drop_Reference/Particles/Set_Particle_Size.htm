@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Particle Size</title>
+  <title>Ustawianie wielkości cząstek</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Particle Size action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Size" />
@@ -14,61 +14,61 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Particle Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Size.png" /> Set Particle Size</h1>
-  <p>This action is used to set the particle size, which can be static or set to increment / decrement over time. You supply the unique ID value for the type to set the size of (as returned when you created the type with the action <a href="Create_Particle_Type.htm">Create Particle Type</a>)
-    and then give a range of initial starting sizes, then the increase amount and finally the &quot;wiggle&quot;. The size a particle is created at is a scalar value, where 1 is the same size as the base particle image, 0.5 would be half the size of the
-    base image and a value of 2 would be double. If the minimum and maximum sizes are not the same, then initial size for any particle created will be a random value between them.</p>
-  <p>The option to increase a particle size enables you to input a value which will be added on to the base scalar value each game frame of the particle lifetime. So setting this value to, for example, 0.1 will add 0.1 to the scale value each game frame.
-    Note that you can use negative values here too to make the particle image scale down too. Note that the minimum scale <i>decrement</i> that is accepted is -0.01 and the minimum <i>increment</i> is 0.01.</p>
-  <p>Finally you can set the &quot;wiggle&quot; option. This is a value that will be generated randomly between 0 and the value you give and then added or subtracted to the size each step of the particles lifetime, causing the drawn image to fluctuate in
-    size. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Particle Size Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Size.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Ustawianie wielkości cząstek</h1>
+  <p>Ta akcja służy do ustawiania rozmiaru cząstki, który może być statyczny lub zwiększany/zmniejszany w czasie. Podajesz unikatową wartość identyfikacyjną typu, którego rozmiar chcesz ustawić (zwróconą podczas tworzenia typu za pomocą akcji <a href="Create_Particle_Type.htm">Utwórz</a> typ cząsteczki)
+    a następnie podajesz zakres początkowych rozmiarów początkowych, wielkość przyrostu, a na końcu &quot;wahania&quot;. Rozmiar tworzonej cząstki jest wartością skalarną, gdzie 1 oznacza taki sam rozmiar jak podstawowy obraz cząstki, 0,5 - połowę rozmiaru podstawowego obrazu, a wartość 2 - połowę rozmiaru podstawowego obrazu.
+    bazowego obrazu, a wartość 2 oznacza jego podwojenie. Jeśli rozmiary minimalny i maksymalny nie są takie same, to początkowy rozmiar każdej tworzonej cząstki będzie miał losową wartość pomiędzy nimi.</p>
+  <p>Opcja zwiększania rozmiaru cząstki umożliwia wprowadzenie wartości, która będzie dodawana do podstawowej wartości skalarnej w każdej klatce gry w czasie życia cząstki. Zatem ustawienie tej wartości na przykład na 0,1 spowoduje dodanie 0,1 do wartości skali w każdej klatce gry.
+    Można też użyć wartości ujemnych, aby zmniejszyć skalę obrazu cząstek. Minimalne dopuszczalne <i>zmniejszenie</i> skali to -0,01, a minimalne <i>zwiększenie</i> to 0,01.</p>
+  <p>Na koniec można ustawić opcję &quot;wiggle&quot;. Jest to wartość, która będzie generowana losowo w zakresie od 0 do podanej wartości, a następnie dodawana lub odejmowana do rozmiaru na każdym etapie życia cząsteczek, powodując, że rysowany obraz będzie się zmieniał pod względem
+    wielkości. Oczywiście większe wartości są bardziej widoczne niż mniejsze, a wartość ta może być nawet ujemna, przy czym maksymalny zakres wynosi od -20 do 20.</p>
+  <p> </p>
+  <h4>Składnia działania:</h4>
+  <p><img alt="Set Particle Size Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Size.png" /></p>
+  <h4>Argumenty:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>Type</td>
-        <td>The unique ID value for the particle type to set the size of</td>
+        <td><span class="notranslate">Type</span></td>
+        <td>Unikalna wartość identyfikacyjna typu cząstki, dla której ma być ustawiona wielkość</td>
       </tr>
       <tr>
-        <td>Min Size</td>
-        <td>The minimum scale for the particle type (default 0.1)</td>
+        <td><span class="notranslate">Min Size</span></td>
+        <td>Minimalna skala dla typu cząstki (domyślnie 0,1)</td>
       </tr>
       <tr>
-        <td>Max Size</td>
-        <td>The maximum scale for the particle type (default 1)</td>
+        <td><span class="notranslate">Max Size</span></td>
+        <td>Maksymalna skala dla typu cząstki (domyślnie 1)</td>
       </tr>
       <tr>
-        <td>Increase</td>
-        <td>The value to add on to the particle type size every game frame (can be negative, minimum +/-0.01)</td>
+        <td><span class="notranslate">Increase</span></td>
+        <td>Wartość dodawana do rozmiaru typu cząstki w każdej klatce gry (może być ujemna, minimalnie +/-0.01)</td>
       </tr>
       <tr>
-        <td>Wiggle</td>
-        <td>The maximum value to randomly be added or subtracted from the particles size per step (+/-20).</td>
+        <td><span class="notranslate">Wiggle</span></td>
+        <td>Maksymalna wartość, która może być losowo dodawana lub odejmowana od wielkości cząstek w każdym kroku (+/-20).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png" />The above action block code will create a new particle type and assign its unique
-    ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Przykład:</h4>
+  <p><img>Powyższy kod bloku akcji utworzy nowy typ cząstki i przypisze jej unikatową wartość
+    ID do zmiennej globalnej. Następnie ustawi wszystkie właściwości typu cząstki.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Particle_Sprite.htm">Set Particle Sprite</a></div>
+        <div style="float:left">Powrót: <a href="Particle_Actions.htm">Akcje cząstek</a></div>
+        <div style="float:right">Następny: <a href="Set_Particle_Sprite.htm">Ustaw sprajty cząstek</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Size

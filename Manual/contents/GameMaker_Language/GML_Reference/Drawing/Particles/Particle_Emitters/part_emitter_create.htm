@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_emitter_create</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>część_emitująca_tworzy</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for part_emitter_create" />
   <meta name="rh-index-keywords" content="part_emitter_create" />
@@ -15,43 +15,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">part_emitter_create</span></h1>
-  <p>This function creates a new particle emitter in the given particle system.</p>
-  <p>The function will return the index value for the new emitter which must be stored in a variable and used in all further functions that reference the emitter, and the emitter itself must be destroyed when no longer being used to prevent memory leaks (this can be achieved using the specific emitter destroy functions or by destroying the whole particle system that the emitter belongs to).</p>
-  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"> </span> Emitter IDs returned by this function are reused, e.g. if you first create three particle emitters they will have IDs 0, 1 and 2 assigned. If you then destroy the second emitter (which got an ID of 1) using <a href="part_emitter_destroy.htm">part_emitter_destroy</a> and then create another emitter, then this emitter will reuse the ID of 1. Since emitter ID 2 is in use, the next emitter will get an ID of 3, and so on.</p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">part_emitter_create</span>(ps);</p>
+  <h1>część_emitująca_tworzy</h1>
+  <p>Funkcja służy do tworzenia nowego emitora cząstek w podanym systemie cząstek. Funkcja zwróci wartość indeksu nowego emitera, który musi być przechowywany w zmiennej i używany we wszystkich dalszych funkcjach odwołujących się do emitera, a sam emiter musi być zniszczony, gdy nie jest już używany, aby zapobiec wyciekom pamięci (można to osiągnąć za pomocą specjalnych funkcji emitter destroy lub przez zniszczenie całego systemu cząstek, do którego należy emiter).</p>
+  <p class="note"><span class="note">UWAGA</span> ID emiterów zwracane przez tę funkcję są używane ponownie, np. jeśli najpierw stworzysz trzy emitery cząstek, będą one miały przypisane ID 0, 1 i 2. Jeśli następnie zniszczysz drugi emiter (który otrzymał ID 1) używając <a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a> a następnie stworzysz kolejny emiter, to ten emiter ponownie wykorzysta ID 1. Ponieważ emiter o ID 2 jest w użyciu, następny emiter otrzyma ID 3 itd.</p>
+  <h4>Składnia:</h4>
+  <p class="code">part_emitter_create(ps);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Opis</th>
       </tr>
       <tr>
-        <td>ps</td>
-        <td><span data-keyref="Type_ID_PartSys"><a href="GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm" target="_blank">Particle System ID</a></span></td>
-        <td>The particle system to create the emitter in.</td>
+        <td><span class="notranslate">ps</span></td>
+        <td><span data-keyref="Type_ID_PartSys"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm" target="_blank">Identyfikator systemu cząstek stałych</a></span></td>
+        <td><span class="notranslate">The particle system to create the emitter in.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_PartEmitter"><a href="GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Emitters/part_emitter_create.htm" target="_blank">Particle Emitter ID</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Zwroty:</h4>
+  <p class="code"><span data-keyref="Type_ID_PartEmitter"><a href="../../../../../../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Emitters/part_emitter_create.htm" target="_blank">Particle Emitter ID</a></span></p>
+  <p> </p>
+  <h4>Przykład:</h4>
   <p class="code">p_emit1 = part_emitter_create(Sname);</p>
-  <p>This will create a new particle emitter and store its index in the variable &quot;p_emit&quot;.</p>
-  <p> </p>
-  <p> </p>
+  <p>Spowoduje to utworzenie nowego emitera cząstek i zapisanie jego indeksu w zmiennej &quot;p_emit&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Emitters.htm">Particle Emitters</a></div>
-        <div style="float:right">Next: <a href="part_emitter_clear.htm">part_emitter_clear</a></div>
+        <div style="float:left">Powrót: <a href="Particle_Emitters.htm">Emitery cząstek stałych</a></div>
+        <div style="float:right">Następny: <a href="part_emitter_clear.htm"><span class="notranslate">part_emitter_clear</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone</span></h5>
   </div>
   <!-- KEYWORDS
 part_emitter_create

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Rooms</title>
+  <title>Pokoje</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Overview of the room editor." />
   <meta name="rh-index-keywords" content="Quick Start - Rooms" />
@@ -15,70 +14,87 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Rooms</h1>
-  <p>All games that you make in <span data-keyref="GameMaker Name">GameMaker</span> need at least one room to run (but can have many, many more) , and a room is just a space where you place instances of the objects that make up your game as well as tiles and any other graphical resources. When you first create a room in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> you will be presented with a new <a href="../The_Asset_Editors/Rooms.htm"><strong>Room Editor</strong></a> workspace with which to edit its properties, something like this:</p>
-  <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png" style="cursor: nwse-resize;" /></p>
-  <p>By default the room tools will be placed on the left, with two main sections:</p>
+  <h1>Pokoje</h1>
+  <p>Wszystkie gry tworzone w <span data-keyref="GameMaker Name">GameMakerze</span> wymagają do działania co najmniej jednej strony <span class="notranslate">room</span> (ale mogą mieć wiele, wiele więcej), a strona <span class="notranslate">room</span> to po prostu miejsce, w którym umieszcza się instancje stron <span class="notranslate">objects</span> tworzących grę, a także <span class="notranslate">tiles</span> i inne zasoby graficzne.
+    Gdy po raz pierwszy utworzysz stronę <span class="notranslate">room</span> w <a href="../Introduction/The_Asset_Browser.htm">Przeglądarce</a> zasobów, pojawi się nowa strona <a href="../The_Asset_Editors/Rooms.htm"><strong>Edytor pomieszczeń</strong></a> <span class="notranslate">workspace</span> za pomocą którego możesz edytować jego właściwości,
+    na przykład tak:</p>
+  <p><img alt="The Room Editor" class="center" src="../assets/Images/QS_Guide/QS_RoomEditor.png"/></p>
+  <p>Domyślnie narzędzia <span class="notranslate">room</span> są umieszczone po lewej stronie, z trzema głównymi sekcjami:</p>
   <ul class="colour">
-    <li><strong>Layer Editor</strong>: Everything in a room is placed on <em>layers</em>, and there are different layer types that you can choose from (more on this later). Layers are ordered by <em>depth </em>and this depth is what defines the order in which the layer contents will be rendered to the screen when the game runs. Depth ordering is from highest to lowest, so that the lower the depth the nearer the &quot;camera&quot; and the higher the depth the further away. For example, a layer with a depth of -300 will render over a layer with a depth of -100, and a layer with a depth of 1000 will render under everything with a depth less than this. Note that by default, <span data-keyref="GameMaker Name">GameMaker</span> will order layer depths for you according to the position in the Layer Editor, and you can drag around layers using the mouse to re-order them and <span data-keyref="GameMaker Name">GameMaker</span> will re-order the depths to match.</li>
-    <li><a href="../IDE_Tools/The_Inspector.htm"><strong>Inspector</strong></a>: When you open a room its properties such as room size and camera view ports are shown here. You can set them here as well.<br />
-      When you click a layer in the Layer Editor its properties, that depend on the layer type, are shown and can be changed here. This window permits you to change those properties and edit how the layer will be <a class="glossterm" data-glossterm="rendered" href="#">rendered</a>.</li>
+    <li><strong>Edytor warstw</strong>: Wszystko w witrynie <span class="notranslate">room</span> jest umieszczane na <em>warstwach</em>, a do wyboru są różne typy warstw (więcej na ten temat później). Warstwy są uporządkowane według <em>głębokości </em>i to właśnie ta głębokość określa kolejność, w jakiej
+      Głębokość określa kolejność, w jakiej zawartość warstwy będzie wyświetlana na ekranie podczas gry. Głębokość jest uporządkowana od największej do najmniejszej, a więc im mniejsza głębokość, tym bliżej &quot;kamery&quot;, a im większa głębokość, tym dalej od niej. Na przykład warstwa o głębokości
+      o głębokości -300 będzie renderowana nad warstwą o głębokości -100, a warstwa o głębokości 1000 będzie renderowana pod wszystkim, co ma głębokość mniejszą od tej wartości. Zauważ, że domyślnie <span data-keyref="GameMaker Name">GameMaker</span> porządkuje głębokość warstw zgodnie z pozycją
+      Możesz przeciągać warstwy myszą, aby zmienić ich kolejność, a <span data-keyref="GameMaker Name">GameMaker</span> zmieni kolejność głębokości, aby je dopasować.</li>
+    <li><strong>Właściwości warstwy</strong>: Każda warstwa dodana do witryny <span class="notranslate">room</span> będzie miała swoje właściwości, które zmieniają się w zależności od typu warstwy. W tym oknie można zmieniać te właściwości i edytować sposób, w jaki warstwa będzie
+     <a class="glossterm" data-glossterm="renderowane" href="#">renderowana</a>.</li>
+    <li><strong>Właściwości pomieszczenia</strong>: <span class="notranslate">Rooms</span> ma też wiele właściwości, które można tutaj ustawić. Można tu ustawić takie rzeczy, jak rozmiar strony <span class="notranslate">room</span>, aktywne porty widoku kamery i wiele innych.</li>
   </ul>
-  <p>We&#39;ve mentioned that there are different layer types, so let&#39;s just go over what they are and how they can be used when building your games:</p>
+  <p>Wspomnieliśmy już, że istnieją różne typy warstw, więc omówmy, czym się charakteryzują i jak można ich używać podczas tworzenia gier:</p>
   <table class="icons">
     <tbody>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png" /></td>
-        <td class="icons"><strong>Background Layer</strong></td>
-        <td class="text">The background layer is a layer that can be filled with a <em>single </em>colour or a <em>single </em>image. It can be moved and positioned within the room, and you can have multiple background layers. Generally this is used, as the name suggests, to generate a constant background for all the other layers in the room. By Default a new room will always contain a background layer, but you can remove it if you don&#39;t need it.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png"/></td>
+        <td class="icons"><strong>Warstwa tła</strong></td>
+        <td class="text">Warstwa tła to warstwa, która może być wypełniona <em>pojedynczym </em>kolorem lub obrazem. Można ją przesuwać i pozycjonować w obrębie strony <span class="notranslate">room</span>, a także utworzyć wiele warstw tła. Zazwyczaj, jak sama nazwa wskazuje, używa się jej do,
+         <span class="notranslate">room</span> Domyślnie nowa strona <span class="notranslate">room</span> będzie zawsze zawierać warstwę tła, ale jeśli nie jest ona potrzebna, można ją usunąć.</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png" /></td>
-        <td class="icons"><strong>Instance Layer</strong></td>
-        <td class="text">The instance layer is where you place all the instances of the objects that you require for the game. To add an instance to a layer, simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the object in the asset browser and then drag it into the room editor workspace. When you release the mouse button, an instance of that object will have been added to the room. By Default a new room will always contain an instance layer, but you can remove it if you don&#39;t need it.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png"/></td>
+        <td class="icons"><strong>Warstwa instancji</strong></td>
+        <td class="text">Na warstwie instancji umieszcza się wszystkie instancje <span class="notranslate">objects</span>, które są potrzebne w grze. Aby dodać instancję do warstwy, po prostu kliknij <img> na <span class="notranslate">object</span> w przeglądarce, a następnie przeciągnij ją do edytora  .
+          <span class="notranslate">asset</span> w przeglądarce, a następnie przeciągnij ją do edytora <span class="notranslate">room</span> <span class="notranslate">workspace</span> . Po zwolnieniu przycisku myszy instancja tej warstwy <span class="notranslate">object</span> zostanie dodana do <span class="notranslate">room</span>. Domyślnie nowa strona <span class="notranslate">room</span> zawsze będzie zawierać warstwę instancji, ale możesz ją usunąć
+          jeśli nie jest ona potrzebna.</td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png" /></td>
-        <td class="icons"><strong>Tile Map Layer</strong></td>
-        <td class="text"><span>After having created a <a class="glossterm" data-glossterm="tile sets" href="#">tile set</a>, you need to add the tiles to your room, which is done by creating a <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> layer. A tile map layer is a layer that permits you to add tiles from any of the tile set assets that you have created and will be set up automatically to use a grid the size of the tile set cells. You can only add a single tile to each grid cell, so if you require multiple tiles to occupy the same space, then you should be using multiple tile map layers.</span></td>
+        <td class="icons"><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/></td>
+        <td class="icons"><strong>Warstwa mapy kafelkowej</strong></td>
+        <td class="text"><span>Po utworzeniu <a class="glossterm" data-glossterm="zestawy płytek" href="#">zestawu kafelków</a> należy dodać stronę <span class="notranslate">tiles</span> do strony <span class="notranslate">room</span>, co można zrobić, tworząc warstwę <a class="glossterm" data-glossterm="mapa z płytkami" href="#">mapy kafelków</a>. Warstwa mapy <span class="notranslate">tile</span> to warstwa, która umożliwia dodawanie <span class="notranslate">tiles</span> z dowolnej utworzonej strony <span class="notranslate">tile set</span> <span class="notranslate">assets</span>. Zostanie ona automatycznie skonfigurowana w taki sposób, aby używać siatki o rozmiarze komórek <span class="notranslate">tile set</span>. Do każdej komórki siatki można dodać tylko jedną stronę <span class="notranslate">tile</span>, więc jeśli w tej samej przestrzeni ma być umieszczonych wiele stron <span class="notranslate">tiles</span>, należy użyć wielu warstw mapy <span class="notranslate">tile</span>.</span></td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png" /></td>
-        <td class="icons"><strong>Path Layer</strong></td>
-        <td class="text"><span>The path layer is the only one that does not actually get rendered when you run your game. This layer is more of a &quot;convenience&quot; layer for helping you to create or edit <strong>Path </strong>assets, since it permits you to add or edit paths within the actual room space.</span></td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png"/></td>
+        <td class="icons"><strong>Warstwa ścieżki</strong></td>
+        <td class="text"><span>Warstwa <span class="notranslate">path</span> jest jedyną warstwą, która nie jest renderowana podczas uruchamiania gry. Ta warstwa jest raczej warstwą ułatwiającą tworzenie lub edytowanie zasobów <strong>ścieżki </strong>, ponieważ umożliwia dodawanie lub edytowanie <span class="notranslate">paths</span> w obrębie rzeczywistej przestrzeni <span class="notranslate">room</span>.</span></td>
       </tr>
       <tr>
-        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Asset.png" /></td>
-        <td class="icons"><strong>Asset Layer</strong></td>
-        <td class="text">Sometimes you want a nice graphical effect but don&#39;t want the overhead of using an instance or don&#39;t need it to do anything other than draw itself. You could use a tile map, but given that tile maps are restricted to using a grid and only a single image per grid cell, they can be a bit restrictive. This is when you would use the asset layer. The asset layer simply takes a sprite resource and draws it using the parameters that you set when you add it into the room. Sprites and sequences can be added to this layer the same way that instances of objects are added to the instance layer, ie: you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> on the sprite in the asset browser and then drag it into the room editor workspace.</td>
+        <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png"/></td>
+        <td class="icons"><strong>Warstwa aktywów</strong></td>
+        <td class="text">Czasami chcesz uzyskać ładny efekt graficzny, ale nie chcesz narzutu związanego z używaniem instancji lub nie potrzebujesz jej do innych zadań niż samo rysowanie. Można użyć mapy <span class="notranslate">tile</span>, ale biorąc pod uwagę, że mapy <span class="notranslate">tile</span> są ograniczone do używania siatki i tylko
+          tylko jednego obrazu na komórkę siatki, mogą być nieco ograniczające. W takim przypadku należy użyć warstwy <span class="notranslate">asset</span>. Warstwa <span class="notranslate">asset</span> po prostu pobiera zasób <span class="notranslate">sprite</span> i rysuje go przy użyciu parametrów ustawionych podczas dodawania go do warstwy <span class="notranslate">room</span>. <span class="notranslate">Sprites</span> i
+          <span class="notranslate">sequences</span> można dodawać do tej warstwy w taki sam sposób, w jaki dodaje się instancje <span class="notranslate">objects</span> do warstwy instancji, czyli: klikasz <img> na stronie <span class="notranslate">sprite</span> w przeglądarce <span class="notranslate">asset</span>, a następnie
+          przeciągnij ją do edytora <span class="notranslate">room</span> <span class="notranslate">workspace</span> .</td>
       </tr>
     </tbody>
   </table>
   <p>
     <!--</div>-->
   </p>
-  <p>We won&#39;t go into much more details about the room editor here (for that we have <a href="../The_Asset_Editors/Rooms.htm">this section</a> of the manual), but we will briefly explain how to add instances to an Instance Layer, as you&#39;ll need to know that for the next section of the Quick Start Guide.</p>
-  <p>To add an instance to the room editor, you must first select an Instance Layer from the Layer Editor on the left (or create one if none exist). You can then go to the Asset Browser and simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png" /> and drag an object that you want from there and drop it into the room at the position you want, which will add a single instance of that object to your game:</p>
-  <p><img alt="Adding Instances To A room Animation" class="center" src="../assets/Images/QS_Guide/QS_AddingInstances.gif" /></p>
-  <p>If you want to place multiple instances in the room, then you can select an object from the resource tree and then press and hold <img alt="ALT Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Alt.png" width="55" /> to preview the resource, and if you additionally click the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> you can then &quot;paint&quot; it into the room layer.</p>
-  <p><img alt="Painting Instances In A Room Animation" class="center" src="../assets/Images/QS_Guide/QS_PaintingInstances.gif" /></p>
-  <p>Note that assets are given a position when they are added into the room editor based on their X and Y axis positions relative to the room <strong>origin</strong>. The room origin is the (0, 0) position, which in <span data-keyref="GameMaker Name">GameMaker</span> is the top left corner, and to the right is +X and down is +Y, e.g.:</p>
-  <p><img alt="Room Editor Axis Alignment" class="center" src="../assets/Images/QS_Guide/QS_RoomEditorAxis.png" />In the above example the instance is placed in the middle of the room at position (X:512, Y:384). It&#39;s also possible to go outside of the room bounds and have positions that are greater than the room axis lengths, or even less than than the room origin - in which case the X/Y coordinates will be negative values.</p>
-  <p>For more detailed information on the Room Editor, you can see the following section of the manual:</p>
+  <p>Nie będziemy tutaj wchodzić w szczegóły dotyczące edytora <span class="notranslate">room</span> (do tego służy <a href="../The_Asset_Editors/Rooms.htm">ta</a> część podręcznika), ale krótko wyjaśnimy, jak dodawać instancje do warstwy instancji, ponieważ ta wiedza będzie potrzebna
+    wiedzieć o tym w następnej części podręcznika Szybki start.</p>
+  <p>Aby dodać instancję do edytora <span class="notranslate">room</span>, musisz najpierw wybrać warstwę instancji w edytorze warstw po lewej stronie (lub utworzyć ją, jeśli jeszcze nie istnieje). Następnie możesz przejść do przeglądarki <span class="notranslate">Asset</span> i po prostu kliknąć <img>, przeciągnąć stamtąd dowolną warstwę <span class="notranslate">object</span> i upuścić ją na <span class="notranslate">room</span> w wybranym miejscu, co spowoduje dodanie pojedynczej instancji tej warstwy <span class="notranslate">object</span> do gry:</p>
+  <p><img src="../assets/Images/Icons/Icon_Layer_Asset.png"/></p>
+  <p>Jeśli chcesz umieścić wiele instancji w <span class="notranslate">room</span>, możesz wybrać <span class="notranslate">object</span> z drzewa zasobów, a następnie nacisnąć i przytrzymać <img>, aby wyświetlić podgląd zasobu,
+    a jeśli dodatkowo klikniesz lewym przyciskiem myszy <img>, możesz &quot;namalować&quot; go na warstwie <span class="notranslate">room</span>.</p>
+  <p><img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/></p>
+  <p>Zwróć uwagę, że <span class="notranslate">assets</span> otrzymują pozycję, gdy są dodawane do edytora <span class="notranslate">room</span>, na podstawie położenia ich osi X i Y względem <strong>początku</strong> <span class="notranslate">room</span>. Początek <span class="notranslate">room</span> to pozycja (0, 0), która w <span data-keyref="GameMaker Name">GameMakerze</span> jest górnym lewym rogiem,
+    a w prawo to +X, a w dół to +Y, np:</p>
+  <p><img>W powyższym przykładzie instancja jest umieszczona na środku strony <span class="notranslate">room</span> w pozycji (X:512, Y:384). Możliwe jest także wyjście poza granice
+    <span class="notranslate">room</span> i mieć pozycje większe niż długości osi <span class="notranslate">room</span> lub mniejsze niż początek <span class="notranslate">room</span> - w takim przypadku współrzędne X/Y będą miały wartości ujemne.</p>
+  <p>Więcej szczegółowych informacji na temat edytora <span class="notranslate">Room</span> można znaleźć w następującej części podręcznika:</p>
   <ul class="colour">
-    <li><a href="../The_Asset_Editors/Rooms.htm">Editors: The Room Editor</a></li>
+    <li><a href="../The_Asset_Editors/Rooms.htm">Redakcja: The <span class="notranslate">Room</span> Editor</a></li>
   </ul>
-  <p>That wraps it up for the Room Editor in this Quick Start Guide, and you should now know enough to actually get started creating sprites and objects and designing rooms for them. The next sections of this guide are going to cover some of the programming fundamentals to help you on your way, starting with actually <strong>Drawing </strong>things to the screen.</p>
-  <p> </p>
-  <p> </p>
+  <p>Na tym kończymy omawianie edytora <span class="notranslate">Room</span> w tym podręczniku szybkiego startu. Powinieneś już wiedzieć wystarczająco dużo, aby rozpocząć tworzenie stron <span class="notranslate">sprites</span> i <span class="notranslate">objects</span> oraz projektowanie dla nich strony <span class="notranslate">rooms</span>. W następnych częściach tego podręcznika omówione zostaną niektóre podstawy programowania
+    podstawy programowania, które pomogą Ci w pracy, poczynając od <strong>rysowania </strong>elementów na ekranie.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Drawing.htm">Drawing</a></div>
+        <div style="float:left">Powrót: <a href="../Content.htm">Indeks</a></div>
+        <div style="float:right">Następny: <a href="Drawing.htm">Rysunek</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
   <!-- KEYWORDS
 Rooms
@@ -87,5 +103,5 @@ Quick Start: Rooms
   <!-- TAGS
 qs_rooms
 -->
-</body>
-</html>
+
+</body></html>
