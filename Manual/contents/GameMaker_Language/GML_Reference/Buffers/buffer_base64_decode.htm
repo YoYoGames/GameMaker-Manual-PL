@@ -39,7 +39,7 @@
   <p> </p>
   <h4>Przykład:</h4>
   <p class="code">ini_open(&quot;Save.ini&quot;);<br />
-    buff = buffer_base64_decode(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
+    buff = <span data-field="title" data-format="default">buffer_base64_decode</span>(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
     ini_close();</p>
   <p>Powyższy kod otworzy plik ini, a następnie wczyta z niego adres <span class="notranslate">string</span> do funkcji decode. Funkcja ta zwróci indeks <span class="notranslate">buffer</span>, który jest przechowywany w zmiennej &quot;buff&quot;, zawierającej zakodowane i zapisane wcześniej dane. Następnie plik ini zostanie zamknięty.</p>
   <p> </p>
