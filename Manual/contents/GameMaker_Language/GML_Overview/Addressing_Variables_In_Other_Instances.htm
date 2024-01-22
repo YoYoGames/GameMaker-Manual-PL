@@ -40,7 +40,7 @@
   <p>W powyższym kodzie dla przykładu 1 znajduje się <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a> w bloku kodu. Dzieje się tak dlatego, że użycie metody point do uzyskania dostępu lub zmiany wartości innej instancji spowoduje błąd i zawieszenie gry, jeśli instancja nie istnieje, a istnieje możliwość, że tak właśnie jest w tym przykładzie. W przykładach 2 i 3 nie potrzebujemy jednak tego sprawdzania, ponieważ <i>wiemy</i>, że instancja istnieje, ponieważ w przykładzie 2 ją stworzyliśmy, a w przykładzie 3 jest to inna instancja w zdarzeniu kolizji. Jeśli jednak istnieje <i>jakakolwiek</i> możliwość, że instancja może zostać zniszczona, dezaktywowana lub w inny sposób usunięta z <span class="notranslate">room</span> podczas używania tej metody, <i>zawsze</i> powinieneś sprawdzić to wcześniej, używając funkcji <span class="inline">instance_exists()</span> lub funkcji <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a> function.</p>
   <p>Zauważ, że nie możesz użyć specjalnego <a href="Instance_Keywords.htm">słowa kluczowego</a> &quot;<span class="inline">all</span>&quot; w tej metodzie, aby skierować wszystkie instancje (np.: <span class="inline">all.val = 10</span> spowoduje błąd), ale <i>możesz</i> użyć <a href="Instance_Keywords.htm">słów kluczowych</a> &quot;<span class="inline">other</span>&quot; i &quot;<span class="inline">self</span>&quot; bez problemu. Na przykład, używając <span class="inline">other</span> w <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">zdarzeniu kolizji</a>:</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
-    if other.hp &lt;= 0<br />
+    if (other.hp &lt;= 0)<br />
     {<br />
         other.sprite_index = spr_E_Dead;<br />
     }</p>
@@ -51,8 +51,8 @@
     <br />
     //or<br />
     <br />
-    var inst = instance_nearest(x, y, obj);<br />
-    inst.speed = 0;
+    var _inst = instance_nearest(x, y, obj);<br />
+    _inst.speed = 0;
   </p>
   <p>Wszystkie te sposoby odczytywania, zmieniania i ustawiania zmiennych w innych instancjach są całkowicie poprawne, a działają dlatego, że point jest właściwie <i>operatorem</i>. Przyjmuje on wartość jako lewy <a class="glossterm" data-glossterm="operand" href="#">operand</a> i zmienną jako prawy operand, a następnie zwraca adres tej konkretnej zmiennej we wskazanej <span class="notranslate">object</span> lub instancji. Wszystkie nazwy <span class="notranslate">object</span>, stałe, identyfikatory itp. reprezentują po prostu wartości, z którymi można się obchodzić jak z każdą inną wartością.</p>
   <p>Innym sposobem odwoływania się do zmiennych w innej instancji jest użycie funkcji <span class="notranslate">GameMaker Language</span> <span class="inline">with()</span> , która została szczegółowo omówiona <a href="Language_Features/with.htm">tutaj</a>:</p>

@@ -39,9 +39,12 @@
   <p> </p>
   <h4>Przykład:</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
-    for (var i = 0; i &lt; gp_num; i++;)<br />
+    for (var i = 0; i &lt; gp_num; i++)<br />
     {<br />
-        if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
+        if gamepad_is_connected(i)<br />
+            global.gp[i] = true<br />
+        else<br />
+            global.gp[i] = false;<br />
     }</p>
   <p>Powyższy kod <span class="notranslate">loops</span> przegląda dostępne gamepady (lub gniazda gamepadów), a następnie sprawdza każdy z nich pod kątem podłączonego gamepada. zwrócona wartość jest następnie używana do ustawienia globalnej tablicy na <span class="inline">true</span> lub <span class="inline">false</span> w celu wykorzystania w przyszłych sprawdzeniach.</p>
   <p> </p>
