@@ -75,7 +75,7 @@
     inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br />
     if inst != noone<br />
     {<br />
-        with (inst) instance_destroy();<br />
+        instance_destroy(inst);<br />
     }</p>
   <p>Ten krótki kod używa collision_rectangle do sprawdzenia obszaru w <span class="notranslate">room</span> od 50x, 50y (lewy górny prostokąt) do 200x, 200y (prawy dolny prostokąt) dla instancji <span class="notranslate">object</span> o nazwie &quot;obj_ball&quot;. Wartość zwracaną zapisuje w zmiennej tymczasowej, która następnie jest sprawdzana, czy wartość ta jest identyfikatorem instancji, czy też słowem kluczowym <a href="../../../GML_Overview/Instance_Keywords.htm"><b>nikt</b></a>. Jeśli <i>nie</i> jest to <b>nikt</b>, to używa zapisanego identyfikatora instancji do zniszczenia strony <span class="notranslate">object</span>.</p>
   <p> </p>

@@ -49,11 +49,18 @@
   <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
   <p>Spowoduje to wysłanie żądania do witryny <span class="notranslate">Steam</span> <span class="notranslate">Server</span> o wyniki z tablicy wyników gry, zapisując identyfikator asynchroniczny żądania w zmiennej &quot;<span class="inline">score_get</span>&quot;. Zostanie to następnie obsłużone w <strong>zdarzeniu asynchronicznym Steam</strong> w następujący sposób:</p>
   <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if async_id == score_get<br />
-       {<br />
-       var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br />
-       var map = json_decode(entries);<br />
-       if ds_map_exists(map, &quot;default&quot;)<br />
+    <br />
+    if (async_id == score_get)<br />
+    {<br />
+        var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br />
+        var map = json_decode(entries);<br />
+    <br />
+        if (ds_map_exists(map, &quot;default&quot;))<br />
+        {<br />
+            ds_map_destroy(map);<br />
+            exit;<br />
+        }<br />
+        else<br />
         {<br />
           ds_map_destroy(map);<br />
           exit;<br />
