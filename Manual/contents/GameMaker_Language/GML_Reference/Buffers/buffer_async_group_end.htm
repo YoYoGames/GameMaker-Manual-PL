@@ -34,7 +34,7 @@
   <p>Powyższy kod uruchamia grupę <span class="notranslate">buffer</span>, a następnie ustawia ją na asynchroniczne zapisywanie 4 plików. Następnie kończy definicję grupy (w tym momencie rozpocznie się zapisywanie), zapisując identyfikator wywołania funkcji w zmiennej &quot;<i>save_id</i>&quot;. Po zakończeniu zapisywania zostanie wywołane zdarzenie asynchroniczne Save/Load i będzie można odczytać mapę <span class="inline">async_load</span> w celu znalezienia właściwego identyfikatora funkcji, jak poniżej:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

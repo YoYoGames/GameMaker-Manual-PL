@@ -61,7 +61,7 @@
   <p>Powyższy kod zapisuje zawartość strony <span class="notranslate">buffer</span> &quot;<i>buff</i>&quot; do podanego pliku zapisu, przechowując identyfikator wywołania funkcji w zmiennej &quot;<i>saveid</i>&quot;. Po zakończeniu zapisu zostanie wywołane zdarzenie asynchroniczne Save/Load i będzie można odczytać mapę <span class="inline">async_load</span> w celu znalezienia właściwego identyfikatora funkcji, jak poniżej:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

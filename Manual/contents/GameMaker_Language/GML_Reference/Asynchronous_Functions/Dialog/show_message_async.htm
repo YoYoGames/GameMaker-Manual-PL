@@ -45,9 +45,9 @@
   <p>Powyższe działanie spowoduje wyświetlenie komunikatu o podanym adresie <span class="notranslate">string</span>. Identyfikator komunikatu jest przechowywany w zmiennej &quot;msg&quot; i zostanie użyty w asynchronicznym zdarzeniu Dialogs, jak pokazano poniżej:</p>
   <p class="code">var i_d, stat;<br />
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
-    if i_d == msg<br />
+    if (i_d == msg) <br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;)<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
         {<br />
             url_open(&quot;https://play.google.com/store&quot;);<br />
         }<br />

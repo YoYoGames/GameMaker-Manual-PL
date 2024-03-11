@@ -27,7 +27,7 @@
     <li>Po trzecie, powierzchnie należy <b>tworzyć tylko w zdarzeniu draw</b>. Jeśli utworzysz powierzchnię w zdarzeniu tworzenia instancji, możesz potencjalnie otrzymać <i>ten sam</i> indeks, co na stronie <span class="inline">application_surface</span>. Może to spowodować wiele problemów i zamieszania, ponieważ myślisz, że używasz własnej powierzchni, a tak naprawdę używasz bieżącego celu renderowania. Powinieneś także zawsze starać się ograniczyć <i>rysowanie</i> do powierzchni w zdarzeniu draw, ponieważ ze względu na zoptymalizowany sposób rysowania na ekranie w <span data-keyref="GameMaker Name">GameMakerze</span>, zaleca się, aby wszystkie funkcje rysowania były wykonywane w <i>zdarzeniu draw</i> - dotyczy to także czyszczenia powierzchni przy jej pierwszym utworzeniu, itd. Rysowanie na powierzchni poza zdarzeniem draw jest możliwe, a nawet może być konieczne dla niektórych efektów, ale nie jest to sposób, w jaki <em>powinno</em> się to robić.</li>
     <li>Po czwarte, podczas ręcznego rysowania do powierzchni, powierzchnia <i>zawsze</i> znajduje się w położeniu (0,0). Oznacza to, że może zajść potrzeba przekształcenia współrzędnych <em>bezwzględnych</em> na <em>względne</em> dla powierzchni. Na przykład, jeśli masz powierzchnię o rozmiarach kamery i chcesz narysować na niej coś, co jest aktualnie widoczne w kamerze, powinieneś odjąć współrzędne x i y widoku kamery od rzeczywistych współrzędnych x i y, aby uzyskać względną pozycję względem pozycji powierzchni (0,0). Kod wyglądałby więc następująco:</li>
   </ul>
-  <p class="code">if view_current == 0<br />
+  <p class="code">if (view_current == 0) <br />
     {<br />
         surface_set_target(surf);<br />
         with (obj_Effect)<br />
