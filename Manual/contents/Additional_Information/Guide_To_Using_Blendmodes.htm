@@ -52,7 +52,7 @@
     <p class="dropspot">Zgodnie z tą samą zasadą, jeśli chcesz po prostu zmniejszyć jasność tła o 50%, uzyskasz kolor, który jest w 50% czerwony, w 50% zielony i w 50% niebieski, czyli RGB (128, 128, 128). Ten tryb mieszania jest używany głównie do rysowania cieni lub tworzenia ciekawych efektów wygaszania.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_max</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_reverse_subtract</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Ten tryb mieszania jest bardziej skomplikowany do wyjaśnienia, ale w zasadzie mnoży on kolory źródłowe przez źródłową alfę, a następnie dodaje je do wartości kolorów docelowych pomnożonych przez odwrotność wartości kolorów źródłowych. Właściwą matematykę kryjącą się za bm_max (i innymi trybami mieszania) omówimy w drugiej części naszego artykułu, ale wystarczy wiedzieć, że rezultatem będzie bardziej &quot;nasycony&quot; i jaśniejszy kolor, nie prowadzący do tego samego czystego białego blasku, który spowoduje użycie <span class="inline">bm_add</span>.</p>
     <p class="dropspot"><img>Ten tryb mieszania może być przydatny, gdy trzeba narysować nakładające się na siebie obrazy, a jednocześnie nie mogą one stać się tak jasne, że nie będzie ich widać. Jasne części staną się jaśniejsze, ale nadal powinny zachować odpowiedni poziom koloru i odcienia. Należy jednak pamiętać, że wartość alfa obrazu źródłowego również będzie miała wpływ na efekt końcowy przy użyciu tego trybu mieszania.</p>
@@ -99,17 +99,29 @@
     <p class="dropspot"><img>Tak więc nasz tryb mieszania wygląda następująco:</p>
     <p class="code">Source: (128, 255, 64, 255) = (0.5, 1, 0.25, 1)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (255, 255, 255, 255) = (1, 1, 1, 1)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) =  (0, 0, 0, 0)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 1) * (1, 1, 1, 1) + (0.25, 0.5, 1, 1) * (0, 0, 0, 0)<br />
       (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)</p>
     <p class="dropspot">Jak widać, mnożymy wartości docelowe przez 0, co również daje im wartość 0, co oznacza, że kolory źródłowe pozostają niezmienione, a więc nasza ostateczna wartość koloru wynosi <strong>(128, 255, 64, 255)</strong>. Widać, jak włączenie alfa wpływa również na tę wartość:</p>
     <p class="code">Source (128, 255, 64, 128) = (0.5, 1, 0.25, 0.5)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (128, 128, 128, 128) = (0.5, 0.5, 0.5, 0.5)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) = (0.5, 0.5, 0.5, 0.5)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 0.5) * (0.5, 0.5, 0.5, 0.5) + (0.25, 0.5, 1, 1) * (0.5, 0.5, 0.5, 0.5)<br />
       (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)</p>
     <p class="dropspot">W ten sposób uzyskasz ostateczny kolor pikseli (96, 192, 159, 192), a w efekcie obraz podobny do pokazanego poniżej:</p>
