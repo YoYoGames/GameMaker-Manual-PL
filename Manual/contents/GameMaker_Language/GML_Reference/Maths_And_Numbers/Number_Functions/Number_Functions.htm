@@ -20,12 +20,12 @@
   <p>To rozróżnienie między liczbami całkowitymi a zmiennoprzecinkowymi jest bardzo ważne w przypadku programowania międzyplatformowego, ponieważ precyzja obliczeń wykonywanych na komputerze <span class="notranslate">Windows</span> <i>nie</i> jest taka sama jak precyzja tych samych obliczeń wykonywanych na urządzeniach przenośnych. Oznacza to, że należy zwracać szczególną uwagę podczas wykonywania porównań, na przykład:</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>W powyższym przykładzie, jeśli ustawialiśmy wartość <span class="inline">image_speed</span> na 0,25 - na przykład - to po czterech krokach można założyć, że wartość <span class="inline">image_index</span> wyniesie 1, ale <i>może</i> to być wartość taka jak 1,0000002 ze względu na sposób działania matematyki zmiennoprzecinkowej, a więc ocena nie będzie <span class="inline">true</span>. Tego typu błędy mogą być dość trudne do usunięcia, dlatego zawsze warto być ich świadomym i zaplanować ich występowanie oraz użyć innych sposobów sprawdzania wartości lub skorzystać z odpowiednich funkcji wyliczania podłogi lub zaokrąglania (wymienionych poniżej), aby przekształcić sprawdzaną liczbę w liczbę całkowitą (więcej informacji o matematyce zmiennoprzecinkowej i o tym, dlaczego jest to problem, można <a href="https://floating-point-gui.de/" target="_blank">znaleźć tutaj</a>). Na przykład powyższy kod można zapisać jako:</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>Warto również zauważyć, że podczas korzystania z docelowych platform <b>kompilatora YoYo</b> wszystkie wyrażenia i funkcje są <i>obliczane od lewej do prawej</i>, podczas gdy na wszystkich innych platformach docelowych są one obliczane <i>od prawej do lewej</i>, co oznacza, że np. to da różne wyniki w zależności od platformy:</p>
   <p class="code">val = max(num, ++num, num++);</p>
