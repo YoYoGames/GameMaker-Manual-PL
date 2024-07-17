@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the with function" />
+  <meta name="topic-comment" content="Page outlining the with statement" />
   <meta name="rh-index-keywords" content="with" />
   <meta name="search-keywords" content="with" />
 </head>
@@ -22,46 +22,46 @@
   <p>będzie miało dokładnie taki sam efekt, ponieważ jest po prostu skrótem pierwszego wyrażenia. Jak <i>więc</i> osiągnąć coś takiego? Właśnie dlatego w <span class="notranslate">GML</span> istnieje instrukcja <span class="inline">with</span>. Stwierdzenie <span class="inline">with</span> ma następującą składnię:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-        &lt;statement&gt;;<br />
-        &lt;statement&gt;;<br />
-        ...<br />
+    &lt;statement&gt;;<br />
+    &lt;statement&gt;;<br />
+    ...<br />
     }</p>
   <p>W <a class="glossterm" data-glossterm="wyrażenie" href="#">wyrażeniu</a> można wskazać jedną lub więcej instancji (lub <span class="notranslate">struct</span>), na których ma zostać wykonany kod, używając identyfikatora instancji, identyfikatora <span class="notranslate">object</span> (który wskazuje, że <i>wszystkie</i> instancje w <span class="notranslate">room</span> tego <span class="notranslate">object</span> mają wykonać blok kodu), identyfikatora <span class="notranslate">struct</span> lub jednego ze specjalnych <a href="../Instance_Keywords.htm">słów kluczowych</a> (<span class="inline">all</span> lub <span class="inline">other</span>). Spowoduje to zmianę <strong>zakresu</strong> kodu w nawiasach klamrowych <span class="inline">{}</span> z instancji, <span class="notranslate">struct</span> lub funkcji, w której faktycznie znajduje się kod, na instancję (lub instancje lub <span class="notranslate">struct</span>) podaną w wyrażeniu.</p>
   <p>Po ustawieniu przez wyrażenie zakresu <span class="inline">with</span>, <a class="glossterm" data-glossterm="oświadczenie" href="#">instrukcja</a> zostanie wykonana dla każdej ze wskazanych instancji, tak jakby ta instancja była instancją bieżącą ( <span class="inline">self</span>). Tak więc, wracając do naszego oryginalnego problemu, aby przesunąć wszystkie instancje kulki <span class="notranslate">object</span> o 8 pikseli w dół, należałoby wpisać:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        y += 8;<br />
+        y += 8;<br />
     }</p>
   <p>Zasadniczo jest to strona <span class="notranslate">loop</span>, a każda <a class="glossterm" data-glossterm="iteracja" href="#">iteracja</a> strony <span class="notranslate">loop</span> powoduje uruchomienie kodu na jednej instancji strony <span class="notranslate">object</span> <span class="inline">obj_ball</span>.</p>
   <p>Jeśli chcesz wykonać wiele poleceń, po prostu umieść je w nawiasach klamrowych, tak samo jak każdy inny blok kodu. Na przykład, aby przesunąć wszystkie kulki w naszym przykładzie w losowe położenie i nadać im losową prędkość i kierunek, użyjesz polecenia:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = random(room_width);<br />
-        y = random(room_height);<br />
-        speed = 1 + random(2);<br />
-        direction = random(360);<br />
+        x = random(room_width);<br />
+        y = random(room_height);<br />
+        speed = 1 + random(2);<br />
+        direction = random(360);<br />
     }</p>
   <p>Jak wspomniano powyżej, w instrukcji (instrukcjach) wskazana instancja lub struktura stała się instancją docelową (<span class="inline">self</span>), która uruchamia blok kodu, co oznacza, że oryginalna instancja (zawierająca <span class="inline">with</span> i cały blok kodu) stała się instancją <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> instancją. Tak więc - na przykład - aby przenieść wszystkie kulki na pozycję bieżącej instancji, która faktycznie zawiera kod, można napisać tak:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = other.x;<br />
-        y = other.y;<br />
+        x = other.x;<br />
+        y = other.y;<br />
     }</p>
   <p>Oświadczenie <span class="inline">with</span> to niezwykle potężne narzędzie, przydatne w wielu, wielu okolicznościach, dlatego ważne jest, aby w pełni zrozumieć, jak można je wykorzystać. Dla ułatwienia poniżej podajemy kilka przykładów użycia:</p>
   <p class="code">with (instance_create_layer(x, y, &quot;Instances&quot;, obj_Ball))<br />
     {<br />
-        speed = other.speed;<br />
-        direction = other.direction;<br />
+        speed = other.speed;<br />
+        direction = other.direction;<br />
     }</p>
   <p>Powyższy kod utworzy instancję <span class="inline">obj_Ball</span> i przypisze jej prędkość i kierunek instancji, która uruchamia cały blok kodu.</p>
   <p class="code">with (instance_nearest(x, y, obj_Ball))<br />
     {<br />
-        instance_destroy();<br />
+        instance_destroy();<br />
     }</p>
   <p>Powyższy kod zniszczy instancję <span class="inline">obj_Ball</span> znajdującą się najbliżej instancji uruchamiającej kod.</p>
   <p class="code">with(clone_struct)<br />
     {<br />
-        xx = other.x;<br />
+        xx = other.x;<br />
         yy = other.y;<br />
         spd = other.speed;<br />
         dir = other.direction;<br />
@@ -70,11 +70,12 @@
   <p class="code">var _inst = noone;<br />
     with (obj_ball)<br />
     {<br />
-        if (str &gt; other.str)<br />
-        {<br />
+        if (str &gt; other.str)<br />
+        {<br />
             _inst = id;<br />
         }<br />
     }<br />
+    <br />
     if (_inst != noone)<br />
     {<br />
         target = _inst;<br />
@@ -114,9 +115,11 @@
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
   </div>
-  <p> </p>
-  <p><br />
-     </p>
-  <p> </p>
+  <!-- KEYWORDS
+with
+-->
+  <!-- TAGS
+with
+-->
 </body>
 </html>
