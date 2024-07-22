@@ -60,7 +60,7 @@
   <p>Powyższy kod wczytuje zawartość pliku &quot;<i>Player_Save.sav</i>&quot; na podany adres <span class="notranslate">buffer</span>, zapisując ID wywołania funkcji w zmiennej &quot;<i>loadid</i>&quot;. Po zakończeniu ładowania zostanie wywołane asynchroniczne zdarzenie Save/Load, a Ty będziesz mógł przeanalizować mapę <span class="inline">async_load</span> w poszukiwaniu właściwego identyfikatora funkcji, tak jak poniżej:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == loadid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Load failed!&quot;);<br />
         }<br />

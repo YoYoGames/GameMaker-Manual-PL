@@ -22,9 +22,9 @@
   <p>będzie miało dokładnie taki sam efekt, ponieważ jest po prostu skrótem pierwszego wyrażenia. Jak <i>więc</i> osiągnąć coś takiego? Właśnie dlatego w <span class="notranslate">GML</span> istnieje instrukcja <span class="inline">with</span>. Stwierdzenie <span class="inline">with</span> ma następującą składnię:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-    &lt;statement&gt;;<br />
-    &lt;statement&gt;;<br />
-    ...<br />
+        &lt;statement&gt;;<br />
+        &lt;statement&gt;;<br />
+        ...<br />
     }</p>
   <p>W <a class="glossterm" data-glossterm="wyrażenie" href="#">wyrażeniu</a> można wskazać jedną lub więcej instancji (lub <span class="notranslate">struct</span>), na których ma zostać wykonany kod, używając identyfikatora instancji, identyfikatora <span class="notranslate">object</span> (który wskazuje, że <i>wszystkie</i> instancje w <span class="notranslate">room</span> tego <span class="notranslate">object</span> mają wykonać blok kodu), identyfikatora <span class="notranslate">struct</span> lub jednego ze specjalnych <a href="../Instance_Keywords.htm">słów kluczowych</a> (<span class="inline">all</span> lub <span class="inline">other</span>). Spowoduje to zmianę <strong>zakresu</strong> kodu w nawiasach klamrowych <span class="inline">{}</span> z instancji, <span class="notranslate">struct</span> lub funkcji, w której faktycznie znajduje się kod, na instancję (lub instancje lub <span class="notranslate">struct</span>) podaną w wyrażeniu.</p>
   <p>Po ustawieniu przez wyrażenie zakresu <span class="inline">with</span>, <a class="glossterm" data-glossterm="oświadczenie" href="#">instrukcja</a> zostanie wykonana dla każdej ze wskazanych instancji, tak jakby ta instancja była instancją bieżącą ( <span class="inline">self</span>). Tak więc, wracając do naszego oryginalnego problemu, aby przesunąć wszystkie instancje kulki <span class="notranslate">object</span> o 8 pikseli w dół, należałoby wpisać:</p>
