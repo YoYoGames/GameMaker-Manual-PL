@@ -47,10 +47,10 @@
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if (i_d == msg) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;))<br />
         {<br />
-            coins -= armour[0,5];<br />
-            global.protection += armour[0,0];<br />
+            coins -= armour[0, 5];<br />
+            global.protection += armour[0, 0];<br />
         }<br />
     }</p>
   <p>Powyższy kod sprawdza, czy klucz &quot;id&quot; zwróconego adresu <span class="inline">DS Map</span> jest zgodny z wartością zapisaną w zmiennej &quot;msg&quot;. Jeśli są one takie same, sprawdza, czy został naciśnięty jeden z dwóch przycisków, a jeśli zwróci <span class="inline">true</span>, odejmie wartość ze zmiennej i doda ją również do zmiennej globalnej.</p>

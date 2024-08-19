@@ -59,14 +59,8 @@
   <p>Powyższy kod przekaże adres <span class="notranslate">string</span> przechowywany w zmiennej &quot;name&quot; do podanego adresu <span class="notranslate">server</span>, a także pobierze dane z tego adresu URL, wyzwalając zdarzenie Async Event, które będzie zawierało mapę async_load DS (indeks mapy async_load będzie przechowywany w zmiennej &quot;get&quot;, dzięki czemu można sprawdzić, czy jest to właściwy callback). Wywołane zdarzenie Async Event byłoby sub-zdarzeniem <b>HTTP</b>, a w tym zdarzeniu miałbyś następujące:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == get<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == 0) <br />
-        {<br />
-            r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
-        }<br />
-        else<br />
-        {<br />
-            r_str = &quot;null&quot;;<br />
-        }<br />
+        var _status = async_load[? &quot;status&quot;];<br />
+        var _r_str = (_status == 0) ? async_load[? &quot;result&quot;] : &quot;null&quot;;<br />
     }</p>
   <p>Powyższy kod najpierw sprawdzi id utworzonej mapy DS, a następnie sprawdzi &quot;status&quot; wywołania zwrotnego. Jeśli wartość jest równa 0 (sygnalizując sukces), wynik z callbacka zostanie zapisany w zmiennej do przyszłego użytku, w przeciwnym razie zmienna zostanie ustawiona na wartość domyślną (w tym przypadku &quot;null&quot;).</p>
   <p> </p>
