@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_priority_copy</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -42,8 +42,8 @@
   <h4>Przykład:</h4>
   <p class="code">with (instance_create_layer(x, y, &quot;Enemies&quot;, obj_Enemy))<br />
     {<br />
-        p_queue = ds_priority_create();<br />
-        ds_priority_copy(p_queue, other.p_queue);<br />
+    p_queue = ds_priority_create();<br />
+    ds_priority_copy(p_queue, other.p_queue);<br />
     }</p>
   <p>Powyższa funkcja tworzy nową instancję, a następnie w tej instancji tworzy nowy priorytet DS <span class="notranslate">queue</span> i kopiuje zawartość priorytetu <span class="notranslate">queue</span> w instancji, w której uruchomiony jest blok kodu, do nowo utworzonego priorytetu instancji <span class="notranslate">queue</span>.</p>
   <p> </p>
