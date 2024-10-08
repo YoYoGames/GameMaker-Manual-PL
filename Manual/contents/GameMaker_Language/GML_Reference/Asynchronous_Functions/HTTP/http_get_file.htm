@@ -62,10 +62,10 @@
   <p>Powyższy kod zażąda pliku z podanego adresu URL i ustawi jego pobranie do lokalnego obszaru przechowywania danych (określonego w Opcjach gry HTML5), do katalogu &quot;Downloads&quot; o podanej nazwie pliku (nie musi to być ta sama nazwa, co nazwa pliku źródłowego, ale powinna używać tego samego pliku <span class="notranslate">extension</span>). Indeks mapy <span class="inline">async_load</span> zostanie zapisany w zmiennej &quot;file&quot;, co umożliwi sprawdzenie poprawności wywołania zwrotnego w zdarzeniu asynchronicznym, a jeśli katalog zapisu nie istnieje, zostanie utworzony. Wywołanym zdarzeniem asynchronicznym będzie zdarzenie podrzędne <b>HTTP</b>, a w nim pojawi się coś takiego jak poniżej:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == file<br />
     {<br />
-        var _status = ds_map_find_value(async_load, &quot;status&quot;);<br />
+        var _status = async_load[? &quot;status&quot;];<br />
         if (_status == 0)<br />
         {<br />
-            var _path = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            var _path = async_load[? &quot;result&quot;];<br />
             var _files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
             if (_files &gt; 0)<br />
             {<br />
