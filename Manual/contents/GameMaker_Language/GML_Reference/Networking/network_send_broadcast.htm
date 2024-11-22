@@ -56,7 +56,7 @@
   <p> </p>
   <h4>Przykład:</h4>
   <p class="code">buffer_seek(broadcast_buffer, buffer_seek_start, 0);<br />
-    buffer_write(broadcast_buffer, buffer_string, global.ServerName);<br />
+    buffer_write(broadcast_buffer, buffer_string, global.server_name);<br />
     network_send_broadcast(server, 6511, broadcast_buffer, buffer_tell(broadcast_buffer));</p>
   <p>Powyższy kod zapisuje nazwę <span class="notranslate">string</span> bieżącego <span class="notranslate">server</span> (przechowywaną w &quot;global.ServerName&quot;), następnie zapisuje ją do binarnego <span class="notranslate">buffer</span> o id &quot;broadcast_buffer&quot;. Dane te są następnie rozgłaszane lokalnie do zakresu IP (IP urządzenia jest obecnie implikowane jako zakres bazowy rozgłaszania) na port 6511.</p>
   <p> </p>
