@@ -30,9 +30,9 @@
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>Po utworzeniu jednolitych uchwytów można je ustawić w kodzie <span class="notranslate">shader</span> dla <b>zdarzenia Draw</b> w następujący sposób:</p>
   <p class="code">shader_set(sShaderDemo5);<br />
-    shader_set_uniform_f(colour_to_find, 1,1,1 );<br />
-    shader_set_uniform_f(colour_to_set, 1,0,0 );<br />
-    draw_sprite(sprite_index,image_index,x+24, y);<br />
+    shader_set_uniform_f(colour_to_find, 1, 1, 1);<br />
+    shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
+    draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
   <p>Ostatnią rzeczą, na którą należy zwrócić uwagę, jest to, że chociaż <span class="notranslate">shaders</span> są akceptowane na wszystkich platformach, to jednak są specyficzne dla danego urządzenia i jeśli sprzęt lub oprogramowanie urządzenia nie może używać <span class="notranslate">shaders</span>, pojawi się błąd. Dlatego zaleca się sprawdzenie, czy <span class="notranslate">shader</span> został skompilowany przed ustawieniem uniformów lub użyciem samego <span class="notranslate">shader</span>, jak poniżej:</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
