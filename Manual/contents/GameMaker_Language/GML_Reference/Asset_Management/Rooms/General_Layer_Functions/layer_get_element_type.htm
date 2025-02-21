@@ -88,7 +88,7 @@
     {<br />
         if layer_get_element_type(a[i]) == layerelementtype_sprite<br />
         {<br />
-            layer_sprite_destroy(a[i])<br />
+            layer_sprite_destroy(a[i]);<br />
         }<br />
     }</p>
   <p>Powyższy kod pobiera identyfikatory wszystkich elementów instancji przypisanych do warstwy instancji, na której uruchomiony jest kod. Następnie kod sprawdza, czy zwrócone elementy mają adres <span class="notranslate">sprite</span> <span class="notranslate">assets</span> i jeśli tak, to są one niszczone.</p>

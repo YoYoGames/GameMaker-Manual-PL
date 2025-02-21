@@ -23,10 +23,10 @@
     <p class="code">list_index[| index]</p>
     <p class="dropspot">Tak więc po utworzeniu listy za pomocą strony <span class="inline">ds_list_create()</span> należy użyć indeksu listy (przechowywanego w zmiennej), aby się do niej odwołać, przy czym wartość &quot;index&quot; oznacza pozycję na liście, którą należy ustawić lub dodać. Na przykład poniższy kod tworzy listę, a następnie dodaje 10 wpisów, ustawiając każdy z nich na losową liczbę od 0 do 9:</p>
     <p class="code">ds = ds_list_create();<br />
-      var index = 0;<br />
+      var _index = 0;<br />
       repeat(10)<br />
       {<br />
-          ds[| index++] = irandom(9);<br />
+          ds[| _index++] = irandom(9);<br />
       }</p>
     <p class="dropspot">Zwróć uwagę, że jeśli używasz wyrażenia do dodania odwołania do indeksu, który ma już wartość, poprzednia wartość zostanie zastąpiona, a nie dodany zostanie kolejny indeks do listy. Aby dodać kolejne wpisy, należałoby znać rozmiar listy ds_list i dodać je na końcu. Warto również zauważyć, że można ustawić indeks listy <i>większy</i> niż rozmiar listy, do której się odwołujemy, a to spowoduje ustawienie tej wartości, jednocześnie rozwijając listę i inicjalizując wszystkie pozycje na liście do podanego indeksu jako 0.</p>
     <p class="dropspot">Po utworzeniu struktury listy i wypełnieniu jej danymi, aby pobrać wartości z listy, należy wykonać następujące czynności:</p>
@@ -56,15 +56,15 @@
     <p class="dropspot">Po utworzeniu siatki za pomocą funkcji <span class="inline">ds_grid_create()</span> należy użyć indeksu siatki przechowywanego w zmiennej, aby się do niej odwołać, przy czym &quot;xpos&quot; i &quot;ypos&quot; oznaczają pozycję w siatce w celu uzyskania lub ustawienia wartości. Na przykład w poniższym kodzie utworzono siatkę, wyczyszczono ją do wartości 0, a następnie dodano do niej kilka wpisów:</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
-      var gw = ds_grid_width(ds) - 1;<br />
-      var gh = ds_grid_height(ds) - 1;<br />
+      var _gw = ds_grid_width(ds) - 1;<br />
+      var _gh = ds_grid_height(ds) - 1;<br />
       repeat(10)<br />
       {<br />
-          var xx = irandom(gw);<br />
-          var yy = irandom(gh);<br />
-          if (ds[# xx, yy] == 0)<br />
+          var _xx = irandom(_gw);<br />
+          var _yy = irandom(_gh);<br />
+          if (ds[# _xx, _yy] == 0)<br />
           {<br />
-              ds[# xx, yy] = 1;<br />
+              ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
     <p class="dropspot">Po utworzeniu struktury siatki i wypełnieniu jej danymi, aby uzyskać wartości z określonej pozycji siatki, należy wykonać następujące czynności:</p>
@@ -84,7 +84,8 @@
     <p class="dropspot">Sama funkcja będzie miała następującą postać:</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0; repeat(25)<br />
+          var a = _array; var i = 0;<br />
+          repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />
