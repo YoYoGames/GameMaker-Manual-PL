@@ -40,7 +40,7 @@
   <p class="code">var scr = camera_get_end_script(camera_view[0]);<br />
     if (scr != cutScene) <br />
     {<br />
-        camera_set_update_script(camera_view[0], cutscene);<br />
+        camera_set_update_script(view_camera[0], cutscene);<br />
     }</p>
   <p>Powyższy kod sprawdza funkcję <span class="notranslate">script</span> przypisaną jako begin <span class="notranslate">script</span> dla kamery przypisanej do portu widoku[0] i jeśli nie jest to &quot;cutScene&quot;, jest ona ustawiana na tę funkcję.</p>
   <p> </p>
