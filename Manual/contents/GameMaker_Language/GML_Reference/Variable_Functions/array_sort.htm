@@ -59,9 +59,9 @@
   <h4>Przykład:</h4>
   <p class="code">var _a = [10, 9, 8, 7, 6, 5];<br />
     <br />
-    array_sort(_a, function(elm1, elm2)<br />
+    array_sort(_a, function(current, next)<br />
     {<br />
-        return elm1 - elm2;<br />
+        return current - next;<br />
     });
   </p>
   <p>Powyższy kod wykorzystuje własną funkcję sortującą do posortowania tablicy w porządku rosnącym. Funkcja sortująca pobiera dwa elementy tablicy: <span class="inline">elm1</span> oraz <span class="inline">elm2</span> i wykonuje na nich odejmowanie. Jeśli adres <span class="inline">elm1</span> jest większy od adresu <span class="inline">elm2</span>, to w wyniku odejmowania otrzymujemy liczbę dodatnią, która przesuwa adres <span class="inline">elm1</span> za adres <span class="inline">elm2</span>, co powoduje ułożenie ich w kolejności rosnącej.</p>
