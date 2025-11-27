@@ -51,10 +51,10 @@
         <tr>
           <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
           <td style="">Folder użytkownika używany do pobierania informacji o licencji
-            <br>
-            <br>
+            <br />
+            <br />
             W witrynie <span class="notranslate">Windows</span> będzie to: <span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br>
+            <br />
             Na stronie <span class="notranslate">macOS</span>, będzie to: <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
         </tr>
         <tr>
@@ -76,8 +76,8 @@
         <tr>
           <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
           <td style="">Katalog wyjściowy, do którego zostanie rozpakowany build; nie podawaj tylko katalogu, ponieważ końcowy wpis jest zawsze usuwany (np.: podanie <span class="inline">d:\game\output</span> spowoduje umieszczenie plików gry w <span class="inline">d:\game</span>)
-            <br>
-            <br>
+            <br />
+            <br />
             Jeśli nie zostanie to określone, katalog o nazwie <span class="inline">output</span> zostanie utworzony w tym samym katalogu co plik <span class="inline">.bat</span> (lub w miejscu, z którego uruchamiane jest polecenie) i będzie zawierał rozpakowane pliki kompilacji </td>
         </tr>
         <tr>
@@ -279,21 +279,21 @@
         <tr>
           <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
           <td style="">Wyświetla listę adresów <span class="notranslate">runtimes</span> dostępnych w bieżącym folderze (<span class="inline">directory</span>= pełny <span class="notranslate">path</span> do folderu)
-            <br>
-            <br>
+            <br />
+            <br />
             Można podać katalog, w którym ma być szukana, ale jeśli nie zostanie on podany, domyślnie będzie to katalog bieżący
-            <br>
-            <br>
+            <br />
+            <br />
             Sprawdza również, czy wewnątrz katalogu znajduje się plik <span class="inline">receipt.json</span> oraz folder <span class="inline">manifest</span> (upewniając się, że jest to faktycznie <span class="notranslate">runtime</span>). </td>
         </tr>
         <tr>
           <td style=""><span class="inline">Runtime Info [version]</span></td>
           <td style="">Wypisuje informacje o najnowszych stronach <span class="notranslate">runtime</span> w podanym kanale; wymaga również pliku licencji, aby wyświetlić informacje o modułach dostępnych dla użytkownika
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="inline">version</span> może mieć postać <span class="notranslate">string</span> używaną do przeszukiwania tytułów kanałów (np.: <span class="inline">&quot;739&quot;</span> pokaże informacje o wszystkich buildach zawierających 739 w numerze wersji) lub <span class="inline">all</span>, aby pokazać informacje dla wszystkich kanałów
-            <br>
-            <br>
+            <br />
+            <br />
             Wyświetlona zostanie lista modułów wraz z nazwami plików <span class="inline">.zip</span> dla każdego modułu </td>
         </tr>
         <tr>
@@ -303,11 +303,11 @@
         <tr>
           <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
           <td style="">Oblicza sumy kontrolne dla wszystkich zainstalowanych plików i porównuje je z sumami kontrolnymi zapisanymi w manifeście <span class="inline">folder</span>. Można określić folder do sprawdzenia, ale jeśli nie zostanie on podany, domyślnie będzie to bieżący katalog.
-            <br>
-            <br>
+            <br />
+            <br />
             Na stronie <span class="notranslate">flag</span> zostaną wyświetlone wszystkie pliki, których sumy kontrolne nie zgadzają się, pliki, których brakuje, oraz pliki, których nie powinno tam być.
-            <br>
-            <br>
+            <br />
+            <br />
             Należy pamiętać, że same pliki manifestów nie są weryfikowane i użytkownik może zmienić pliki manifestów, aby dopasować je do zainstalowanych. </td>
         </tr>
       </tbody>
@@ -348,8 +348,8 @@
         <tr>
           <td style=""><span class="inline">/target=[list_of_targets]</span></td>
           <td style="">Oddzielona przecinkami lista celów w formacie <span class="inline">PLATFORM|DEVICE</span>, np: <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br>
-            <br>
+            <br />
+            <br />
             Jeśli podasz <strong>wszystkie</strong>, testy będą próbować uruchomić się dla każdego urządzenia w pliku <span class="inline">devices.json</span>. </td>
         </tr>
       </tbody>

@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Należy również określić sposób wykorzystania tych stałych, aby można było odpowiednio &quot;powiązać&quot; wartości w tworzonej witrynie <span class="notranslate">shader</span>. Jest to konieczne ze względu na fakt, że DX i OpenGL mają różne wymagania, więc jeśli nie zwiążesz ich prawidłowo, nie będą one prawidłowo wyświetlane na stronie <span class="notranslate">shader</span>. Dostępne stałe użytkowe, które możesz wybrać, są wymienione poniżej, a te, których użyjesz, będą zależały od specyfiki tworzonej strony <span class="notranslate">shader</span>:</p>
   <table>
     <colgroup>
@@ -116,7 +116,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Przy korzystaniu z takich niestandardowych formatów należy pamiętać o kilku ważnych rzeczach:</p>
   <ul class="colour">
     <li>Funkcja <span class="inline">vertex_format_add_custom()</span> obsługuje tylko <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> i <span class="inline">vertex_usage_textcoord</span> przy użyciu GLSL <span class="notranslate">shaders</span>. Będą one mapowane odpowiednio na atrybuty <span class="notranslate">shader</span> <span class="inline">in_Position</span> , <span class="inline">in_Colour[0 - ...]</span>, <span class="inline">in_Normal</span> (wszystko, co nie jest jednym z tych trzech atrybutów - np. współrzędne <span class="notranslate">texture</span> - może być mapowane na dowolny atrybut zdefiniowany przez użytkownika).</li>

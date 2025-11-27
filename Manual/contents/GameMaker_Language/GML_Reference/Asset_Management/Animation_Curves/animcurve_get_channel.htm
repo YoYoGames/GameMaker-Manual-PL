@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Identyfikator <span class="notranslate">animation curve</span> to nazwa strony <span class="notranslate">animation curve</span> zdefiniowana w przeglądarce <span class="notranslate">Asset</span> lub wskaźnik <span class="notranslate">struct</span> zwrócony przez funkcję <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Nazwa kanału to znak <span class="notranslate">string</span>, który odnosi się do kanału zdefiniowanego w krzywej animacji <span class="notranslate">asset</span>, lub można podać wartość indeksu z zakresu od 0 do <i>n</i>, gdzie <i>n</i> to ostatni kanał w krzywej <span class="notranslate">asset</span> (np.: jeśli <span class="notranslate">animation curve</span> ma 4 kanały, będą one indeksowane od 0 do 3). Należy zauważyć, że przekazanie wartości indeksu będzie wymagało mniej przetwarzania niż przekazanie nazwy kanału. Jeśli funkcja się nie powiedzie (tzn. nie istnieje kanał o podanej nazwie lub indeksie), zostanie wyświetlony błąd.</p>
   <p>Punkty na pojedynczym kanale są przechowywane jako <span class="notranslate">structs</span> w <a href="../../../GML_Overview/Arrays.htm">tablicy</a>, gdzie każda pozycja w tablicy jest pojedynczym punktem <span class="notranslate">struct</span>. Punkt <span class="notranslate">struct</span> ma następujące zmienne:</p>
   <table>

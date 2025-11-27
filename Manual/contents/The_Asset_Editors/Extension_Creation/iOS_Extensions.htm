@@ -26,8 +26,8 @@
       <ol>
         <li>Upewnij się, że pliki źródłowe delegatów mają taką samą nazwę jak klasa delegata (np. <span class="inline">@interface MyCustomAppDelegate</span> powinien być zdefiniowany w &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
         <li>Dodaj zmienną środowiskową <span class="inline">${YYExtAppDelegateIncludes}</span> na początku pliku nagłówkowego delegata aplikacji. Zostanie ona zastąpiona w czasie kompilacji odpowiednimi plikami include dla klasy nadrzędnej delegata.</li>
-        <li>Użyj zmiennej środowiskowej <span class="inline">${YYExtAppDelegateBaseClass}</span> jako klasy bazowej dla swojego własnego delegata aplikacji. Zostanie ona zastąpiona w czasie kompilacji właściwą klasą bazową delegata.<br>
-          <br>
+        <li>Użyj zmiennej środowiskowej <span class="inline">${YYExtAppDelegateBaseClass}</span> jako klasy bazowej dla swojego własnego delegata aplikacji. Zostanie ona zastąpiona w czasie kompilacji właściwą klasą bazową delegata.<br />
+          <br />
           Aby zapewnić współpracę <span class="notranslate">extension</span> z innymi <span class="notranslate">extensions</span>, które używają niestandardowych delegatów aplikacji, należy wywoływać metody klasy bazowej z metod nadrzędnych w klasie potomnej. Przed wywołaniem metody nadklasy należy się upewnić, że jest ona zaimplementowana w hierarchii klas, aby uniknąć błędów, np:
         </li>
       </ol>
@@ -40,17 +40,17 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>Frameworki systemowe</strong>: W tym miejscu możesz dodać do swojej strony <span class="notranslate">iOS</span> dowolne <a class="glossterm" data-glossterm="rama" href="#">ramy</a>systemowe <span class="notranslate">extension</span>. Dodaje się je, klikając przycisk <img>, co spowoduje dodanie ramki zastępczej, którą można następnie edytować, klikając na niej dwukrotnie przycisk <img>. Więcej informacji o dostępnych frameworkach systemowych można znaleźć <a href="https://developer.apple.com/documentation/">tutaj</a>. Aby usunąć szkielet systemowy, zaznacz go i kliknij przycisk <img>.<br>
-      <br>
+    <li class="dropspot"><strong>Frameworki systemowe</strong>: W tym miejscu możesz dodać do swojej strony <span class="notranslate">iOS</span> dowolne <a class="glossterm" data-glossterm="rama" href="#">ramy</a>systemowe <span class="notranslate">extension</span>. Dodaje się je, klikając przycisk <img>, co spowoduje dodanie ramki zastępczej, którą można następnie edytować, klikając na niej dwukrotnie przycisk <img>. Więcej informacji o dostępnych frameworkach systemowych można znaleźć <a href="https://developer.apple.com/documentation/">tutaj</a>. Aby usunąć szkielet systemowy, zaznacz go i kliknij przycisk <img>.<br />
+      <br />
       <img>Aby oznaczyć framework jako &quot;<strong>Słabe referencje</strong>&quot;, można włączyć pole wyboru. Spowoduje to dodanie go do sekcji &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; na stronie <span class="notranslate">Xcode</span> jako &quot;<strong>Opcjonalny</strong>&quot; framework, a nie jako &quot;<strong>Wymagany</strong>&quot; (co jest zachowaniem domyślnym).
     </li>
-    <li class="dropspot"><strong>Frameworki i pakiety innych</strong> firm: Ta sekcja służy do dodawania pakietów SDK i frameworków innych firm. Podobnie jak w przypadku frameworków systemowych, należy kliknąć przycisk <img>, aby je dodać, a następnie kliknąć dwukrotnie <img>, aby je edytować, natomiast zaznaczenie ich i kliknięcie <img> spowoduje ich usunięcie (informacje o nazwie frameworka można znaleźć w dokumentacji dołączonej do wybranego zestawu SDK).<br>
-      <br>
-      W tym miejscu można wybrać opcję " <strong>Nie osadzaj</strong> frameworka", "Osadź <strong>i podp</strong> isz" lub "Osadź <strong>bez podpisywania</strong>":<br>
+    <li class="dropspot"><strong>Frameworki i pakiety innych</strong> firm: Ta sekcja służy do dodawania pakietów SDK i frameworków innych firm. Podobnie jak w przypadku frameworków systemowych, należy kliknąć przycisk <img>, aby je dodać, a następnie kliknąć dwukrotnie <img>, aby je edytować, natomiast zaznaczenie ich i kliknięcie <img> spowoduje ich usunięcie (informacje o nazwie frameworka można znaleźć w dokumentacji dołączonej do wybranego zestawu SDK).<br />
+      <br />
+      W tym miejscu można wybrać opcję " <strong>Nie osadzaj</strong> frameworka", "Osadź <strong>i podp</strong> isz" lub "Osadź <strong>bez podpisywania</strong>":<br />
       <img>Jest to ta sama opcja, co w przypadku frameworków dodanych w sekcji &quot;<strong>Frameworks, Libraries and Embedded Content</strong>&quot; na stronie <span class="notranslate">Xcode</span>.
     </li>
-    <li class="dropspot">Wprowadź<strong>framework <span class="notranslate">path</span> na komputerze Mac</strong>: Jeśli chcesz dodać framework do <span class="notranslate">extension</span>, którego pliki znajdują się na komputerze Mac używanym do budowania projektu, możesz wpisać w tym polu adres <span class="notranslate">path</span> do tego frameworka (na komputerze budującym), a następnie kliknąć przycisk <img>, aby go dodać.<br>
-      <br>
+    <li class="dropspot">Wprowadź<strong>framework <span class="notranslate">path</span> na komputerze Mac</strong>: Jeśli chcesz dodać framework do <span class="notranslate">extension</span>, którego pliki znajdują się na komputerze Mac używanym do budowania projektu, możesz wpisać w tym polu adres <span class="notranslate">path</span> do tego frameworka (na komputerze budującym), a następnie kliknąć przycisk <img>, aby go dodać.<br />
+      <br />
       Plik <span class="notranslate">path</span> musi wskazywać na plik <span class="inline">.framework</span>, który zostanie skompresowany jako <span class="inline">.zip</span> i umieszczony w folderze <span class="inline">iOSSourceFromMac</span> w katalogu <span class="notranslate">extension</span>. Możesz go łatwo otworzyć w dowolnym momencie, klikając prawym przyciskiem myszy <img> na stronie <span class="notranslate">extension</span> i wybierając polecenie <em>Otwórz</em> w Eksploratorze.
     </li>
     <li class="dropspot"><strong>Dodaj źródło</strong>: Możesz użyć tego przycisku, aby dodać pliki źródłowe wymagane do działania <span class="notranslate">extension</span>. Dodane pliki będą przechowywane w folderze <span class="inline">iOSSource</span> w katalogu rozszerzenia.</li>
@@ -96,28 +96,28 @@
       </tr>
       <tr>
         <td style=""><b>Uprawnienia</b></td>
-        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br>
+        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br />
          <span>${YYXCodeProjName}.entitlements</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br>
+        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br />
           Pliki pomocnicze${YYXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
         <td style=""><strong>infoPlist.strings</strong></td>
-        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br>
+        <td style="">{RUNTIME} Projekt szablonowy${YYYXCodeProjName}<br />
           pl.lproj.listaInfoPlist.strings</td>
       </tr>
       <tr>
         <td style=""><strong>project.pbxproj</strong></td>
-        <td style="">RUNTIME} {\i1}TemplateProject}${YYYXCodeProjName}.xcodeproj}<br>
+        <td style="">RUNTIME} {\i1}TemplateProject}${YYYXCodeProjName}.xcodeproj}<br />
           project.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">RUNTIME} {\i1}TemplateProject}${YYYXCodeProjName}.xcodeproj}<br>
+        <td style="">RUNTIME} {\i1}TemplateProject}${YYYXCodeProjName}.xcodeproj}<br />
           xcshareddata \\xcschemes\${YYXCodeProjName}.xcscheme</td>
       </tr>
       <tr>
