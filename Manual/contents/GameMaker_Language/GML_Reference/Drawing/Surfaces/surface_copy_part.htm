@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_copy_part</h1>
+  <h1><span data-field="title" data-format="default">surface_copy_part</span></h1>
   <p>Ta funkcja po prostu pobiera obraz z jednej powierzchni i kopiuje go na inną powierzchnię w określonym położeniu lokalnym na tej powierzchni (gdzie położenie (0,0) jest lewym górnym rogiem powierzchni docelowej). Można określić lokalną pozycję x i y, z której ma zostać skopiowany, a także szerokość i wysokość odcinka. Należy pamiętać, że są to współrzędne oparte na <i>rozmiarze powierzchni</i>, a nie na położeniu, w którym powierzchnia jest rysowana w witrynie <span class="notranslate">room</span>. Jeśli powierzchnia docelowa zawiera już informacje, zostaną one nadpisane przez kopiowanie, a funkcja w żaden sposób <i>nie</i> zmienia powierzchni źródłowej.</p>
   <p class="note"><b></b><b>UWAGA</b>: Podczas pracy z powierzchniami istnieje możliwość, że w każdej chwili mogą one przestać istnieć, ponieważ są przechowywane w pamięci <span class="notranslate">texture</span>. Należy <b>ZAWSZE</b> sprawdzić, czy powierzchnia istnieje, używając polecenia <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> przed bezpośrednim odwołaniem się do niej.</p>
   <p> </p>

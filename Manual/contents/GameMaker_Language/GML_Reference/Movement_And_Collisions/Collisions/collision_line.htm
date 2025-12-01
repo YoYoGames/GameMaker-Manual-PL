@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kolizja_linia</title>
+  <title>collision_line</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kolizja_linia</h1>
+  <h1><span data-field="title" data-format="default">collision_line</span></h1>
   <p><span class="inline">Collision_line</span> sprawdza wzdłuż prostej od punktu x1,y1 do punktu x2,y2, czy nie występuje kolizja z <b>dowolną</b> instancją <span class="notranslate">object</span> określoną przez argument &quot;obj&quot;. To sprawdzenie może być dokładne lub nie, ale aby można było włączyć dokładne kolizje, sprawdzana instancja lub <span class="notranslate">object</span> <i>musi</i> mieć również włączone dokładne kolizje dla swojej <span class="notranslate">sprite</span>. Jeśli nie, domyślne sprawdzenie jest oparte na polach ograniczających. Poniższy rysunek ilustruje, jak to działa:</p>
   <p><img>Pamiętaj, że aby kolizje precyzyjne zostały uwzględnione, <i>zarówno</i> na stronie <span class="notranslate">object</span> <span class="notranslate">sprite</span>, jak i w funkcji kolizji musi być zaznaczona opcja precyzyjne. Należy również zauważyć, że wartością zwracaną funkcji może być identyfikator <i>dowolnej</i> instancji uznanej za kolizyjną wzdłuż linii, więc jeśli trzy instancje zachodzą na zdefiniowaną linię, to wartością zwracaną funkcji może być dowolny identyfikator z tych instancji.</p>
   <p>Zauważ, że zamiast indeksu <span class="notranslate">object</span> można podać instancję <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> aby sprawdzić konkretną instancję, lub <a href="../../../GML_Overview/Instance_Keywords.htm">słowa kluczowe</a> instancji <span class="inline">all</span>, lub <span class="inline">other</span> (w zależności od zdarzenia i bieżącego zakresu kodu).</p>

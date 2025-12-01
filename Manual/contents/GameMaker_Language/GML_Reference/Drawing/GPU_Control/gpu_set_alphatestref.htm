@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_alphatestref</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_alphatestref</span></h1>
   <p>Ta funkcja ustawia wartość odniesienia dla testowania alfa (jeśli zostało ono włączone za pomocą przycisku <a href="gpu_set_alphatestenable.htm"><span class="inline">gpu_set_alphatestenable()</span></a>). Jest to próg &quot;odcięcia&quot;, po przekroczeniu którego piksele z alfą nie będą rysowane.</p>
   <p>Zasadniczo, jeśli wartość ta jest ustawiona na 0 i włączona jest interpolacja liniowa (w Opcjach gry lub za pomocą przycisku <a href="gpu_set_texfilter.htm"><span class="inline">gpu_set_texfilter()</span></a>), nadal mogą występować błędy wizualne na krawędziach nakładających się obszarów <span class="notranslate">objects</span>. Dzieje się tak dlatego, że możesz mieć <i>prawie</i> całkowicie przezroczyste obszary, które blokują rysowane za nimi elementy, ale jeśli ustawisz tę wartość odniesienia na przykład na 254 (czyli o jeden poniżej maksimum), zagwarantuje to, że rysowane będą tylko piksele w 100% nieprzezroczyste. Można również wyłączyć interpolację <span class="notranslate">texture</span>, co zazwyczaj pozwala na bezproblemowe korzystanie z wartości domyślnych i nie ma potrzeby używania tej funkcji, jednak wiele zależy od źródłowej grafiki.</p>
   <p class="note"><b>UWAGA</b>: Jest to zaawansowana funkcja rysowania, więc jeśli nie jesteś pewien, czy jej potrzebujesz, lub nie wiesz dokładnie, co ona robi, lepiej z niej nie korzystaj, ponieważ może ona poważnie zepsuć sposób rysowania gry.</p>

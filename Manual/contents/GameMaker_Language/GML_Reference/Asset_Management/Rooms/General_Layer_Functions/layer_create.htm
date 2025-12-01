@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>warstwa_tworzona</title>
+  <title>layer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>warstwa_tworzona</h1>
+  <h1><span data-field="title" data-format="default">layer_create</span></h1>
   <p>Ta funkcja służy do tworzenia nowej warstwy w obrębie bieżącej strony <span class="notranslate">room</span>. Funkcja zwraca unikalną wartość identyfikatora warstwy, która może być użyta do uzyskania dostępu do warstwy w innych funkcjach. Można również podać opcjonalny argument &quot;nazwa&quot;, który umożliwi nadanie warstwie konkretnej nazwy (np. <span class="notranslate">string</span>). Zamiast korzystać z identyfikatora warstwy, aby uzyskać do niej dostęp, można użyć tej nazwy <span class="notranslate">string</span>, choć należy zauważyć, że użycie nazwy <span class="notranslate">strings</span> będzie miało większy wpływ na wydajność niż użycie tylko wartości identyfikatora. Jeśli nie określisz nazwy warstwy, utworzonej warstwie zostanie przypisana nazwa w formacie &quot;<span class="inline">_layer_XXX</span>&quot;, gdzie &quot;XXX&quot; to wartość szesnastkowa służąca do nadania warstwie unikalnej nazwy.</p>
   <p>Jeśli więc masz trzy warstwy o głębokości -100, 0, 100, warstwy będą rysowane w kolejności 100, 0, -100, a więc warstwa &quot;górna&quot; (czyli znajdująca się najbliżej widoku z kamery, a więc rysowana ponad wszystkimi innymi) będzie warstwą o głębokości -100.</p>
   <p>Na poniższej ilustracji przedstawiono schemat działania głębokości dla warstw:</p>

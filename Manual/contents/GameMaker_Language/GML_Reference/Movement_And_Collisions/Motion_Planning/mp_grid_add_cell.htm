@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_cell</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_cell</span></h1>
   <p>Za pomocą tej funkcji można oznaczyć poszczególne komórki w obrębie danej siatki MP jako &quot;zabronione&quot;, co oznacza, że funkcje wyszukiwania <span class="notranslate">path</span> nigdy ich nie przekroczą. Zazwyczaj pracuje się we współrzędnych x/y <i>pomieszczenia</i>, a nie we współrzędnych <i>komórek</i> siatki MP. Rozważmy więc poniższy rysunek, który pokazuje, jak te dwie wielkości mogą być skorelowane:</p>
   <p><img>Jak widać, siatka mp_grid jest ponumerowana jako seria komórek (zaczynających się od 0,0 w lewym górnym rogu), a po umieszczeniu tej siatki na stronie <span class="notranslate">room</span> istnieje bezpośrednia korelacja między współrzędnymi <span class="notranslate">room</span> (które także zaczynają się od 0,0 w lewym górnym rogu) a komórkami siatki. Na rysunku widać, że instancja w pozycji 260,130 znajduje się w komórce siatki 8,4. Dokładną komórkę, na której znajduje się dana pozycja, można łatwo obliczyć matematycznie, dzieląc liczbę przez rozdzielczość siatki i zaokrąglając w dół <i>lub</i>, jeśli używasz rozdzielczości siatki równej potędze 2 (np. 8, 16, 32 itd.), możesz użyć <a href="../../../../Additional_Information/Bitwise_Operators.htm">operatorów bit</a>owych. Należy zauważyć, że operacja bitowa jest szybsza, a poniższy przykład przedstawia obie metody.</p>
   <p> </p>

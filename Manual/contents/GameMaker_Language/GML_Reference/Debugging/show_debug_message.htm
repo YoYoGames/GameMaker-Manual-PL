@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_debug_message</h1>
+  <h1><span data-field="title" data-format="default">show_debug_message</span></h1>
   <p>Ta funkcja utworzy niestandardowy komunikat debugowania, który będzie wyświetlany w oknie kompilatora pod adresem <span class="notranslate">runtime</span>. Zwróć uwagę, że komunikat może być <i>albo</i> liczbą <span class="notranslate">string</span>, albo liczbą rzeczywistą, ale jeśli potrzebujesz obu, to liczba będzie musiała być najpierw przekonwertowana na <span class="notranslate">string</span> za pomocą funkcji <a href="../Strings/Strings.htm"><span class="inline">string()</span></a> (patrz przykład poniżej) oraz że jeśli liczba ma więcej niż dwa miejsca po przecinku, należy użyć funkcji <a href="../Strings/string_format.htm"><span class="inline">string_format()</span></a> aby je pokazać, ponieważ domyślnie liczby dziesiętne są zaokrąglane do dwóch miejsc po przecinku (zatem &quot;1,2468&quot; w oknie wyjściowym będzie wyświetlane jako &quot;1,25&quot;).</p>
   <p>Komunikaty debugowania wyświetlane za pomocą tej funkcji będą widoczne w <a href="../../../Introduction/The_Output_Window.htm">oknie Compiler Output Window</a> na dole strony <span class="notranslate">IDE</span>, a także w <a href="../../../IDE_Tools/The_Debugger.htm">widoku Graph View</a> strony <span class="notranslate">debugger</span>, gdy gra jest uruchomiona w trybie Debug Mode. Jeśli chcesz widzieć komunikaty tylko w trybie Debug Mode, powinieneś użyć funkcji <a href="debug_event.htm"><span class="inline">debug_event()</span></a> zamiast.</p>
   <p> </p>

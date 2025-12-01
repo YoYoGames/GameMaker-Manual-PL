@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tworzenie kamery</title>
+  <title>camera_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tworzenie kamery</h1>
+  <h1><span data-field="title" data-format="default">camera_create</span></h1>
   <p>Ta funkcja spowoduje utworzenie &quot;pustej&quot; kamery, tzn. kamery bez zdefiniowanych ustawień widoku i rzutowania. Po utworzeniu kamery można użyć różnych <a href="../../Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">funkcji macie</a> rzy, aby ustawić macierze widoku i projekcji. Możesz także użyć tej funkcji do utworzenia kamery, a następnie użyć różnych funkcji <span class="inline">camera_set_*</span> do ustawienia widoku. Pamiętaj jednak, że <i>musisz</i> podać przynajmniej pozycję i rozmiar widoku, w przeciwnym razie wynikowa kamera nie będzie ważna i da dziwne wyniki, jeśli zostanie zastosowana do portu widoku (jeśli nie ustawisz <span class="notranslate">object</span> following, borders lub move speed, zostaną one ustawione na wartości domyślne dla kamery widoku w edytorze <span class="notranslate">Room</span> ).</p>
   <p>Należy pamiętać, że kamery, jak wszystkie zasoby dynamiczne, zajmują pamięć w momencie utworzenia. Oznacza to, że należy uważać, aby nie tworzyć kamer niepotrzebnie i niszczyć te, które nie są potrzebne, wywołując funkcję <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Oznacza to również, że kamery będą trwały od <span class="notranslate">room</span> do <span class="notranslate">room</span>, jeśli zostaną przypisane do zmiennej <span class="inline">global</span> (będą trwały także wtedy, gdy zostaną przypisane do zmiennych instancji lub zmiennych lokalnych, ale nie będzie można uzyskać do nich dostępu po zmianie <span class="notranslate">room</span>, stąd wyciek pamięci), tak więc można na przykład utworzyć nową kamerę, przypisać ją do zmiennej globalnej, a następnie na początku każdej strony <span class="notranslate">room</span> ustawić wymagane macierze widoku i rzutowania oraz port widoku, który ma być używany.</p>
   <p> </p>

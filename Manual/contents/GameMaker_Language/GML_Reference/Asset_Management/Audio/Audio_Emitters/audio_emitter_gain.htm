@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_gain</span></h1>
   <p>Funkcja ta służy do ustawiania maksymalnego wzmocnienia (głośności) dźwięku. Odczuwana głośność dźwięku może się zmieniać w zależności od <a href="audio_emitter_falloff.htm">wartości spadku</a> i pozycji względem <i>słuchacza</i>, ale dzięki ustawieniu wzmocnienia za pomocą tej funkcji pełna głośność nigdy nie przekroczy określonej wartości wzmocnienia. Na poniższym rysunku pokazano, jak wzmocnienie wpływa na głośność emitera, gdy wartość spadku jest większa niż 0:</p>
   <p><img>Ta funkcja zmieni głośność dźwięku podczas jego odtwarzania, a także wszystkich kolejnych dźwięków odtwarzanych przez dany emiter. Należy pamiętać, że na niektórych platformach można uzyskać wzmocnienie większe niż 1, chociaż wartość 1 jest uważana za &quot;pełną głośność&quot;, a większa może powodować przycięcia lub zniekształcenia dźwięku.</p>
   <p class="note"><b><span class="note">UWAGA</span> </b>na ostateczną głośność ma również wpływ globalne wzmocnienie dźwięku, które zostało ustawione za pomocą funkcji <span style="font-size:1px;"><a href="../audio_master_gain.htm"><span class="inline">audio_master_gain()</span></a></span>.</p>

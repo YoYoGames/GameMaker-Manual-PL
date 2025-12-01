@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_text_write_real</h1>
+  <h1><span data-field="title" data-format="default">file_text_write_real</span></h1>
   <p>Za pomocą tej funkcji można zapisać liczbę do otwartego wcześniej pliku tekstowego. Należy pamiętać, że ponieważ zapisywana wartość może być liczbą rzeczywistą, wszystkie miejsca dziesiętne zostaną zapisane z kropką &quot;.&quot; jako separatorem. Jeśli plik zawiera już informacje, zostaną one usunięte, a adres <span class="notranslate">string</span> zostanie zapisany na początku pliku, chyba że plik został otwarty za pomocą funkcji <a href="file_text_open_append.htm"><span class="inline">file_text_open_append()</span></a>. Można tego uniknąć, używając funkcji <a href="file_text_readln.htm"><span class="inline">file_text_readln()</span></a> wraz z funkcją <a href="file_text_eof.htm"><span class="inline">file_text_eof()</span></a> <span class="notranslate">loop</span> do przeglądania zawartości pliku aż do końca, a następnie rozpoczęcie pisania.</p>
   <p>Należy pamiętać, że podczas zapisywania bardzo dużych liczb do pliku tekstowego za pomocą tej funkcji, mogą one zostać przetłumaczone na standardowy, uproszczony format, taki jak &quot;6.6624e+003&quot;, którego nie można poprawnie odczytać w programie <span data-keyref="GameMaker Name">GameMaker</span>. Aby uniknąć tego typu problemów, należy przekonwertować wartość na <span class="notranslate">string</span> i użyć funkcji <a href="file_text_write_string.htm"><span class="inline">file_text_write_string()</span></a> zamiast.</p>
   <p> </p>

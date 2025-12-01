@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dezaktywuj_region</title>
+  <title>instance_deactivate_region</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dezaktywuj_region</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>Za pomocą tej funkcji można zdefiniować w witrynie <span class="notranslate">room</span> region, w którym będą dezaktywowane instancje, które wcześniej zostały aktywowane. Region ten może być oznaczony jako &quot;wewnętrzny&quot; lub &quot;zewnętrzny&quot;, jak pokazano na poniższym rysunku:</p>
   <p><img>Na powyższym rysunku widać, że instancja &quot;jabłka&quot; jest zawsze nieaktywna, ponieważ nawet jeśli sama strona <span class="notranslate">sprite</span> nie pokrywa się z regionem, to jej ramka brzegowa już tak. Tak więc instancje są uważane za znajdujące się w określonym regionie, gdy ich <i>ramka</i> nachodzi na niego, a stan maski kolizji (dokładny lub nie) <b>nie</b> jest brany pod uwagę. Zauważ, że dezaktywacja nie jest natychmiastowa, a instancja dezaktywowana w ten sposób nie będzie uważana za nieaktywną do końca zdarzenia, w którym wywołano tę funkcję.</p>
   <p class="note"><b>UWAGA</b>: Jeśli dezaktywujesz instancję na początku <span class="notranslate">room</span> (tzn. z kodu tworzenia <span class="notranslate">room</span> lub ze zdarzenia tworzenia instancji w <span class="notranslate">room</span>), wszystkie instancje, które są umieszczone w <span class="notranslate">room</span> z edytora <span class="notranslate">room</span>, <b>będą nadal uruchamiać swoje zdarzenia tworzenia</b> przed dezaktywacją.</p>

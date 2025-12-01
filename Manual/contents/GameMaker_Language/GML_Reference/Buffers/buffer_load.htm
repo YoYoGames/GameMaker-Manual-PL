@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_obciążenie</title>
+  <title>buffer_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_obciążenie</h1>
+  <h1><span data-field="title" data-format="default">buffer_load</span></h1>
   <p>Ta funkcja służy do wczytywania strony <span class="notranslate">buffer</span>, która została wcześniej zapisana przy użyciu <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> jak również wszelkich <a href="../../../Settings/Included_Files.htm" title="Included Files">dołączonych plików</a> lub plików załadowanych z zewnątrz. Zwraca ona identyfikator nowego bufora, który jest tworzony przez funkcję jako &quot;grow&quot; <span class="notranslate">buffer</span> (patrz <a href="buffer_create.htm">tutaj</a>) z wyrównaniem do 1 bajtu. Ten identyfikator powinien być przechowywany w zmiennej i używany we wszystkich dalszych wywołaniach funkcji na tej stronie <span class="notranslate">buffer</span>. Jeżeli ładowanie nie powiedzie się z jakiegokolwiek powodu, funkcja zwróci -1, a w oknie wyjściowym kompilatora pojawi się komunikat informujący, że ładowanie nie powiodło się.</p>
   <p class="note"><span class="note">UWAGA</span> Ważne jest, aby usuwać z pamięci wszelkie dynamicznie tworzone zasoby, gdy nie są już potrzebne, aby zapobiec wyciekom pamięci, dlatego po zakończeniu pracy z utworzoną stroną <span class="notranslate">buffer</span> należy ją ponownie zwolnić, korzystając z polecenia <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
   <h2>Uwagi dotyczące poszczególnych platform</h2>

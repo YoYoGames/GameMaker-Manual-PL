@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>Za pomocą tej funkcji można włączać i wyłączać dźwięk na określony czas lub natychmiast ustawiać jego wzmocnienie.</p>
   <p>Czas jest mierzony w milisekundach, a funkcja wymaga podania końcowego poziomu wzmocnienia, jaki dźwięk ma osiągnąć przed upływem tego czasu. Wzmocnienie to może mieć wartość od 0 (cisza) do dowolnej wartości większej od 0, choć normalnie za maksymalną głośność uważa się 1. Można użyć każdej wartości powyżej 1, ale w zależności od używanego dźwięku i platformy, na której jest on kompilowany, może dojść do zniekształceń lub przycięć podczas odtwarzania dźwięku. Należy pamiętać, że skala wzmocnienia jest liniowa i aby natychmiast zmienić wzmocnienie, wystarczy ustawić argument time na 0.</p>
   <p>Funkcja ta wpłynie na <i>wszystkie</i> instancje dźwięku, które są aktualnie odtwarzane w witrynie <span class="notranslate">room</span>, jeśli indeksem jest zasób dźwiękowy, a głośność końcowa będzie głośnością, przy której będą odtwarzane wszystkie kolejne instancje dźwięku. Jeśli jednak użyłeś indeksu zwróconego przez funkcję taką jak <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> będzie to miało wpływ tylko na tę jedną instancję dźwięku.</p>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_reset_target</h1>
+  <h1><span data-field="title" data-format="default">surface_reset_target</span></h1>
   <p>Ta funkcja resetuje wszystkie dalsze rysunki z powierzchni docelowej z powrotem na ekran. Należy pamiętać, że aby rozpocząć rysowanie na powierzchni, należy najpierw wywołać funkcję <a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a> a następnie tę funkcję po zakończeniu pracy, <i>dla każdej powierzchni docelowej, którą ustawiłeś</i>, w przeciwnym razie nic nie zostanie narysowane na ekranie, ponieważ wszystkie dalsze rysunki (nawet w innych przypadkach) będą wykonywane na powierzchni. Powinieneś także zdawać sobie sprawę, że nic nie będzie widać, jeśli sama powierzchnia nie zostanie narysowana na ekranie w zdarzeniu draw instancji.</p>
   <p class="note"><b>UWAGA</b>: Jeśli wcześniej nie ustawiono celu renderowania za pomocą funkcji <span style="font-size:1px;"><a href="surface_set_target.htm"><span class="inline">surface_set_target()</span></a></span>to użycie tej funkcji spowoduje ciche (tzn. bez żadnych komunikatów o błędach) zakończenie dalszego wykonywania kodu dla tego zdarzenia.</p>
   <p> </p>

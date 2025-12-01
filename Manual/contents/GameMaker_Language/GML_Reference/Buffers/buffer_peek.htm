@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_peek</title>
+  <title>buffer_peek</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_peek</h1>
+  <h1><span data-field="title" data-format="default">buffer_peek</span></h1>
   <p>Za pomocą funkcji <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> można odczytywać dane z podanej strony <span class="notranslate">buffer</span> w bieżącej pozycji wyszukiwania, przy czym każda odczytana część danych jest przesuwana do przodu o kolejne bajty odczytywanych lub zapisywanych danych. Może się jednak zdarzyć, że będziesz musiał odczytać daną część danych bez zmiany aktualnej pozycji wyszukiwania i wtedy właśnie użyjesz tej funkcji. Wystarczy podać tej funkcji identyfikator <span class="notranslate">buffer</span>, a następnie przesunięcie (od początku adresu <span class="notranslate">buffer</span> ) w obrębie adresu <span class="notranslate">buffer</span>, z którego ma nastąpić odczyt, oraz typ danych, które mają być odczytane.</p>
   <p class="note"><b>UWAGA</b>: Użycie nieprawidłowego typu danych dla odczytywanych danych spowoduje otrzymanie błędnych wartości!</p>
   <p>Jeśli funkcja powiedzie się, to zwrócona zostanie wartość (Real, <span class="notranslate">string</span>, boolean itd.) zależna od typu danych, natomiast niepowodzenie zwróci po prostu 0.</p>

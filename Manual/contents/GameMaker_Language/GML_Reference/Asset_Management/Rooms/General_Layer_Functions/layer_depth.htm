@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>warstwa_głębokość</title>
+  <title>layer_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>warstwa_głębokość</h1>
+  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
   <p>Za pomocą tej funkcji można zmienić <b>głębokość</b> podanej warstwy, zmieniając kolejność, w jakiej jej zawartość będzie renderowana na ekranie. Podajemy identyfikator warstwy (który otrzymujemy podczas tworzenia warstwy za pomocą polecenia <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) lub nazwę warstwy (jako <span class="notranslate">string</span> - będzie to miało wpływ na wydajność), a następnie podajesz nową głębokość, na jaką ma zostać ustawiona (wartość całkowita z zakresu od -16000 do 16000). Głębokość warstwy jest definiowana jako większa, gdy warstwa znajduje się &quot;dalej&quot; od kamery, i mniejsza, gdy znajduje się &quot;bliżej&quot; kamery. Jeśli więc masz trzy warstwy o głębokości -100, 0, 100, warstwy będą rysowane w kolejności 100, 0, -100, a więc warstwą &quot;górną&quot; (tzn. znajdującą się najbliżej widoku z kamery, a więc rysowaną ponad wszystkimi innymi) będzie warstwa o głębokości -100.</p>
   <p>Na poniższej ilustracji przedstawiono schemat działania głębokości dla warstw:</p>
   <p><img>Należy pamiętać, że głębokość warstwy można sprawdzić w dowolnym momencie, korzystając z funkcji <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Należy również pamiętać, że minimalna i maksymalna głębokość warstwy wynosi od -16000 do 16000 i wszystko, co znajduje się poza tymi wartościami, <b>nie zostanie wyrenderowane</b>. Jeśli potrzebujesz głębokości spoza tego zakresu, musisz użyć funkcji <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>

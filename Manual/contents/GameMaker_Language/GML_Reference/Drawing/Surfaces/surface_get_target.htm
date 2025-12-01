@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_get_target</h1>
+  <h1><span data-field="title" data-format="default">surface_get_target</span></h1>
   <p>Za pomocą tej funkcji możesz uzyskać identyfikator bieżącej powierzchni, do której chcesz rysować. Jeśli utworzyłeś tę powierzchnię używając <a href="surface_create.htm"><span class="inline">surface_create()</span></a>to będzie to dodatnia liczba całkowita, która jest unikalnym identyfikatorem tej powierzchni.</p>
   <p>Jeśli nie ustawiono żadnej niestandardowej powierzchni, ale domyślna application_surface jest nadal włączona, to funkcja zwykle zwróci 0. Jednakże, jeśli wcześniej manipulowałeś application_surface, możesz chcieć sprawdzić, czy ID, które otrzymałeś, nie pasuje do bieżącej wartości zmiennej application_surface, na wypadek gdyby nie było to już 0.</p>
   <p>Jeśli nie ustawiono żadnej niestandardowej powierzchni i domyślna application_surface również została wyłączona, to funkcja zwróci -1.</p>

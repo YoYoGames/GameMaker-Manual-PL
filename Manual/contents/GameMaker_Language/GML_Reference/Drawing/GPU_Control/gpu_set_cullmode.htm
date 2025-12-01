@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_cullmode</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
   <p>Za pomocą tej funkcji można ustawić tryb kadrowania tylnej powierzchni. Wielokąt (prymityw) ma <i>przednią</i> i <i>tylną</i> stronę. Za przednią stronę uważa się tę, w której wierzchołki są zdefiniowane w kolejności <b>przeciwnej do ruchu wskazówek zegara</b>. Zazwyczaj rysowane są obie strony, ale jeśli tworzymy kształt zamknięty (np. ostrosłup), to jest to marnowanie mocy obliczeniowej, ponieważ tylna strona trójkąta nigdy nie będzie widoczna. Właśnie w takich przypadkach można skorzystać ze strony <span class="notranslate">switch</span>. Pozwala to zaoszczędzić około połowy czasu rysowania, choć oznacza konieczność zdefiniowania wielokątów we właściwy sposób, aby uniknąć problemów.</p>
   <p>Użyta wartość trybu kadrowania musi być jedną z poniższych stałych (wartość domyślna to <span class="inline">cull_noculling</span>):</p>
   <table>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_set_velocity</h1>
+  <h1><span data-field="title" data-format="default">audio_listener_set_velocity</span></h1>
   <p>Za pomocą tej funkcji można nadać podanemu słuchaczowi efekty <em>Dopplera </em>i symulować ruch dźwięku na podstawie wektora wyznaczonego z podanych względnych pozycji x, y i z. Domyślnym indeksem słuchacza jest 0, ale można użyć funkcji <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> aby uzyskać różne indeksy dostępne dla platformy docelowej.</p>
   <p>Jeśli dany słuchacz nigdy się nie porusza lub ruch nie jest stały, zwykle nie ma potrzeby ustawiania tych wartości, ale na przykład jeśli tworzysz grę przewijaną, w której gracz porusza się stale z dołu do góry, a wrogowie z góry do dołu, ustawisz prędkości słuchacza <i>i</i> emitera (dla emiterów użyjesz <a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a>) na odpowiednie wektory, aby zasymulować prawidłowy efekt Dopplera, gdy poruszają się one obok instancji gracza.</p>
   <p>Na poniższym rysunku pokazano, jak można to skonfigurować dla przykładowej gry przedstawionej powyżej:</p>

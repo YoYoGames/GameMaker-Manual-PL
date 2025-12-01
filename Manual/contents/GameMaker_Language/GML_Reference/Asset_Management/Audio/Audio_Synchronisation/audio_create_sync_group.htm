@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_sync_group</h1>
+  <h1><span data-field="title" data-format="default">audio_create_sync_group</span></h1>
   <p>Tworzy grupę synchronizacji i zwraca dla niej unikalną wartość ID, która powinna być następnie używana we wszystkich dalszych wywołaniach funkcji audio dla tej grupy. Jeśli grupa ma mieć adres <span class="notranslate">loop</span>, należy podać adres <span class="inline">true</span>, w przeciwnym razie należy podać adres <span class="inline">false</span>, ale należy pamiętać, że jeśli grupa ma mieć adres <span class="notranslate">loop</span>, <i>wszystkie ścieżki dodane później muszą mieć tę samą długość</i>. Należy pamiętać, że po utworzeniu grupy synchronizacji należy zwolnić pamięć i dźwięki z nią związane, gdy nie są używane, za pomocą funkcji <a href="audio_destroy_sync_group.htm"><span class="inline">audio_destroy_sync_group()</span></a> na przykład w przypadku zdarzeń <b>Room End</b> lub <b>Destroy</b>.</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja nie jest dostępna dla platformy docelowej HTML5.</p>
   <p> </p>

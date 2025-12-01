@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ini_write_string</h1>
+  <h1><span data-field="title" data-format="default">ini_write_string</span></h1>
   <p>Za pomocą tej funkcji można zapisać plik <span class="notranslate">string</span> (tekst) do pliku danych ini. Pliki ini są dzielone na <b>sekcje</b>, a następnie każda sekcja jest dzielona na pary <b>klucz-wartość</b>. Typowy plik ini wygląda więc następująco:</p>
   <p><img>Warto zauważyć, że używanie cudzysłowów i znaków escape podczas pisania ini <span class="notranslate">strings</span> może spowodować problemy podczas późniejszego odczytywania danych, ponieważ mogą one zostać przedwcześnie obcięte. Problemem może być na przykład zapisanie następującej treści:</p>
   <p class="code">ini_write_string(&quot;test2&quot;, &quot;section&quot;, &quot;hello \&quot;Fritz\&quot;&quot;);</p>

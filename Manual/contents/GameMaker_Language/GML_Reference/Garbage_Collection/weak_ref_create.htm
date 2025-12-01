@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_create</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
   <p>Za pomocą tej funkcji można utworzyć <a class="glossterm" data-glossterm="słabe odniesienie" href="#">słabe odnies</a> ienie do <span class="notranslate">struct</span>, które następnie można wykorzystać do sprawdzenia, czy <span class="notranslate">struct</span> nadal &quot;żyje&quot; (ma odniesienie), czy nie w grze. Podajesz referencję do strony <span class="notranslate">struct</span>, którą chcesz śledzić, a funkcja zwróci inną stronę <span class="notranslate">struct</span>, która jest słabą referencją do tej strony <span class="notranslate">struct</span>. Zauważ, że możesz sprawdzić, czy odniesienie jest &quot;silne&quot; czy &quot;słabe&quot;, używając funkcji <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span>, ponieważ silne odniesienie zwróci albo &quot;<span class="inline">struct</span>&quot; lub nazwę funkcji konstruktora, która utworzyła <span class="notranslate">struct</span>, albo &quot;<span class="inline">weakref</span>&quot;, jeśli jest to słabe odniesienie. Należy również pamiętać, że słaba referencja <span class="notranslate">struct</span> będzie miała zmienną &quot;<span class="inline">ref</span>&quot;, do której można uzyskać dostęp, aby uzyskać silną referencję do danej strony <span class="notranslate">struct</span>, chyba że została ona wyrzucona do śmieci - w takim przypadku zwróci ona <span class="inline">undefined</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>

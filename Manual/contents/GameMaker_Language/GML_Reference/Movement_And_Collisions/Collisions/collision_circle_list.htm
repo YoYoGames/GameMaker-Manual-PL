@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>lista_kolizji</title>
+  <title>collision_circle_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>lista_kolizji</h1>
+  <h1><span data-field="title" data-format="default">collision_circle_list</span></h1>
   <p>Ta funkcja jest taka sama jak funkcja <a href="collision_circle.htm"><span class="inline">collision_circle()</span></a> z tą różnicą, że zamiast wykrywać tylko jedną instancję kolizji na raz, będzie ona wykrywać wiele instancji. Podajesz położenie x/y środka okręgu, który ma być sprawdzany, promień oraz adres <span class="notranslate">object</span>, a także możesz określić, czy sprawdzanie ma być dokładne (wtedy wszystkie sprawdzane instancje będą musiały mieć <i>dokładne</i> maski kolizji) oraz czy sprawdzanie ma obejmować instancję wywołującą, czy nie.</p>
   <p>Podajesz również <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">listę DS</a>, więc wartości <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> wszystkich instancji, które kolidują z instancją wywołującą, zostaną dodane na koniec podanej listy. Możesz <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">wyczyścić</a> listę przed wywołaniem tej funkcji, tak by zawierała ona tylko wyniki tego wywołania. Możesz również uporządkować instancje według odległości od początku obszaru kołowego do ich początków. Funkcja zwraca liczbę znalezionych instancji lub 0, jeśli nie znaleziono żadnej.</p>
   <p>Zwróć uwagę, że zamiast indeksu <span class="notranslate">object</span> możesz podać <a href="../../../GML_Overview/Instance_Keywords.htm">słowo kluczowe instance</a> <span class="inline">all</span>, aby sprawdzić wszystkie instancje w bieżącym <span class="notranslate">room</span>, co może obejmować instancję wykonującą kod (zależnie od argumentu <span class="inline">notme</span> ).</p>

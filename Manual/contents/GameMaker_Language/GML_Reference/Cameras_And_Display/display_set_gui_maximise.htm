@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_set_gui_maximise</h1>
+  <h1><span data-field="title" data-format="default">display_set_gui_maximise</span></h1>
   <p>Za pomocą tej funkcji można zmaksymalizować warstwę GUI oraz ustawić jej skalowanie i przesunięcie w stosunku do wymiarów ekranu, a nie domyślnego położenia i wymiarów powierzchni aplikacji. Domyślnie warstwa GUI ma rozdzielczość 1:1 z rozdzielczością powierzchni aplikacji i jest rysowana w pozycji (0,0) tej powierzchni. Jednak nie zawsze jest to pożądane, dlatego za pomocą tej funkcji można ustawić, aby warstwa była rysowana względem bezwzględnej (0,0) pozycji okna wyświetlacza lub gry. To, jakie argumenty podasz tej funkcji, będzie zależało od efektu, jaki chcesz uzyskać na warstwie GUI. Po prostu wywołanie funkcji bez argumentów spowoduje, że warstwa GUI będzie rysowana w pozycji (0,0) ekranu lub okna gry, a szerokość i wysokość będą skalowane tak, aby pasowały do całego obszaru:</p>
   <p class="code">display_set_gui_maximise();</p>
   <p>Można jednak ustawić <i>współczynnik skalowania</i> dla warstwy GUI, a szerokość i wysokość zostaną przeskalowane o tę wartość. Pamiętaj, że warstwa GUI jest zawsze dopasowywana do rozmiaru wyświetlacza, okna gry lub powierzchni aplikacji, więc ustawienie tej wartości na wartość inną niż 1 spowoduje przeskalowanie liczby pikseli na szerokość i wysokość. Jeśli Twój ekran ma rozmiar 1024x768, a współczynnik skalowania ustawisz na wartość 0,5, to warstwa GUI będzie o połowę mniejsza niż ekran, co oznacza podwojenie rozmiaru pikseli:</p>

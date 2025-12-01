@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tilemap_set_mask</h1>
+  <h1><span data-field="title" data-format="default">tilemap_set_mask</span></h1>
   <p>Za pomocą tej funkcji można ustawić <b>maskę bitową kafelków</b> dla pojedynczej mapy <span class="notranslate">tile</span>. Podaje się identyfikator elementu mapy <span class="notranslate">tile</span> (który otrzymuje się podczas tworzenia elementu mapy <span class="notranslate">tile</span> przy użyciu <a href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a> lub przy użyciu funkcji <a href="layer_tilemap_get_id.htm"><span class="inline">layer_tilemap_get_id()</span></a>), a następnie wartość maski. Chodzi o to, że jeśli na przykład masz dość mały adres <span class="notranslate">tile set</span> o wymiarach 16 x 16 <span class="notranslate">tiles</span>, to masz w sumie 256 różnych adresów <span class="notranslate">tiles</span> w swoim adresie <span class="notranslate">tile set</span>, który wykorzystuje tylko 8 bitów indeksu w &quot;bloczku&quot; danych <span class="notranslate">tile</span> (z dostępnych 19 bitów danych). Bity te można &quot;zamaskować&quot;, a następnie wykorzystać pozostałą część danych <span class="notranslate">tile</span> do przechowywania dodatkowych wartości.</p>
   <p>Łatwym sposobem na uzyskanie początkowej wartości maski indeksu jest wzięcie liczby <span class="notranslate">tiles</span> z adresu <span class="notranslate">tile set</span> i odjęcie 1, więc adres <span class="notranslate">tile set</span> o wymiarach 16x16 ma 256 adresów <span class="notranslate">tiles</span>, a wartość maski wynosi 255 (lub $ff w systemie szesnastkowym). Jeśli adres <span class="notranslate">tile set</span> ma liczbę adresów <span class="notranslate">tiles</span>, które nie są potęgą dwójki, to aby uzyskać maskę, należy zaokrąglić ją w górę do najbliższej potęgi dwójki, na przykład adres <span class="notranslate">tile set</span> o wymiarach 20x20 ma 400 adresów <span class="notranslate">tiles</span>, które należy zaokrąglić do 512, a więc uzyskać wartość indeksu maski równą 511 ($1ff w systemie szesnastkowym). Oprócz maski indeksu zwykle chciałoby się zachować wartości przerzucania, obracania i odbicia lustrzanego, które są przypisane do <span class="notranslate">tile</span>, więc aby to ułatwić, można użyć kilku <b>stałych</b>. Można je połączyć z wartością maski indeksu, aby zachować te bity danych. Można użyć następujących stałych (patrz przykładowy kod poniżej):</p>
   <table>
@@ -24,7 +24,7 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Tile_Mask"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_mask.htm">Maska płytki Stała</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Tile_Mask"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/tilemap_get_mask.htm" target="_blank">Tile Mask Constant</a></span></th>
       </tr>
       <tr>
         <th>Stała</th>
@@ -49,9 +49,9 @@
     </tbody>
   </table>
   <p>Maskowanie bitów mapy kafelkowej to zaawansowana funkcja, która umożliwia wykorzystanie bitów &quot;plamy&quot; danych <span class="notranslate">tile</span> do własnych celów. Na przykład użytkownik może zarezerwować bit oznaczający &quot;ciało stałe&quot; w strukturze danych kafelkowych, który następnie można sprawdzać pod kątem szybkich kolizji. Zasadniczo maska bitów jest &quot;i&quot; połączona z danymi <span class="notranslate">tile</span> podczas <i>rysowania</i> mapy <span class="notranslate">tile</span> (nie wpływa więc na żadną inną funkcjonalność), co oznacza, że bity, których nie ma w masce, są ignorowane, ale użytkownik może je odczytywać i zapisywać do własnych celów. Należy pamiętać, że istnieją dwie różne maski - globalna i dla każdej mapy <span class="notranslate">tile</span> - które są wewnętrznie łączone przez program <span data-keyref="GameMaker Name">GameMaker</span> przed użyciem do rysowania.</p>
-  <p> </p>
+  <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">tilemap_set_mask(tilemap_element_id, mask)</p>
+  <p class="code"><span data-field="title" data-format="default">tilemap_set_mask</span>(tilemap_element_id, mask)</p>
   <table>
     <tbody>
       <tr>
@@ -61,29 +61,29 @@
       </tr>
       <tr>
         <td><span class="notranslate">tilemap_element_id</span></td>
-        <td><span data-keyref="Type_ID_Element_Tilemap"><a data-rhwidget="HyperlinkPopover" href="../../../../../../LINKGOESHERE">Identyfikator elementu mapy kafelkowej</a></span></td>
+        <td><span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span></td>
         <td><span class="notranslate">The unique ID value of the tile map element to set the mask of</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">mask</span></td>
-        <td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../../LINKGOESHERE">Real</a></span></td>
+        <td><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
         <td><span class="notranslate">The mask value</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Zwroty:</h4>
-  <p class="code"><span data-keyref="Type_Void"><a data-rhwidget="HyperlinkPopover" href="../../../../../../LINKGOESHERE">N/A</a></span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
   <h4>Przykład:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br />
     var map_id = layer_tilemap_get_id(lay_id);<br />
     var mask = tile_mirror | tile_flip | tile_rotate | 255;<br />
     tilemap_set_mask(map_id, mask);</p>
   <p>Powyższy kod pobiera identyfikator mapy <span class="notranslate">tile</span> z podanej warstwy, a następnie ustawia maskę bitową mapy <span class="notranslate">tile</span> na 8 bitów, zachowując wartości przerzucania, odbicia lustrzanego i obracania dla każdej strony <span class="notranslate">tile</span> w mapie.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -91,7 +91,7 @@
         <div style="float:right">Następny: <a href="tilemap_set_global_mask.htm"><span class="notranslate">tilemap_set_global_mask</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tilemap_set_mask

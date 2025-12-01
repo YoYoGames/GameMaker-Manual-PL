@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texfilter</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texfilter</span></h1>
   <p>Za pomocą tej funkcji można ustawić filtrowanie <span class="notranslate">texture</span> (interpolacja liniowa) wszystkich obrazów rysowanych na ekranie gry. Gdy ta funkcja jest włączona (<span class="inline">true</span>), wszystkie obrazy <span class="notranslate">textures</span> będą wygładzane podczas rysowania (dotyczy to również <span class="notranslate">sprites</span>, ponieważ są one również uważane za <span class="notranslate">textures</span>), co oznacza, że podczas skalowania lub przesuwania, jeśli stosunek pikseli nie jest 1:1, będzie występować &quot;smużenie&quot; w różnych pikselach, co może powodować, że obrazy będą wydawać się rozmyte, w zależności od zastosowanego stylu artystycznego. Jeśli ta opcja jest wyłączona (<span class="inline">false</span>), obrazy będą rysowane na podstawie najbliższego piksela podczas skalowania lub przesuwania, co może prowadzić do powstawania &quot;klockowatych&quot; obrazów. Domyślną wartością jest <span class="inline">false</span>, można ją również zmienić w <b>Globalnych opcjach gry</b> dla poszczególnych platform docelowych.</p>
   <p class="note"><b>UWAGA</b>: To ustawienie zastąpi każdą interpolację etapu <span class="notranslate">texture</span> ustawioną dla strony <span class="notranslate">shaders</span> za pomocą funkcji <a href="gpu_set_texfilter_ext.htm"><span class="inline">gpu_set_texfilter_ext()</span></a>.</p>
   <p class="note"><b>UWAGA</b>: W przypadku celu HTML5 ta funkcja będzie działać tylko z włączoną obsługą WebGL.</p>

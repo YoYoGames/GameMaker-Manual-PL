@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_is_compiled</h1>
+  <h1><span data-field="title" data-format="default">shader_is_compiled</span></h1>
   <p>Ta funkcja sprawdza w czasie wykonywania programu <span class="notranslate">shader</span>, czy został on pomyślnie skompilowany. Jeśli tak, funkcja zwraca <span class="inline">true</span>, w przeciwnym razie zwraca <span class="inline">false</span>. Funkcja ta powinna być używana na początku gry, aby upewnić się, że platforma, na której działa gra, pomyślnie skompilowała każdą używaną stronę <span class="notranslate">shaders</span> (szczególnie na <span class="notranslate">Windows</span>, gdzie niektóre komputery mogą używać DX9 z <span class="notranslate">Shader</span> poziomem 2.0, a nie późniejszej wersji z <span class="notranslate">shader</span> poziomem 3.0).</p>
   <p>Jeśli Twój adres <span class="notranslate">shader</span> <i>NIE</i> został skompilowany i wywołasz polecenie <a href="shader_set.htm"><span class="inline">shader_set()</span></a> gra się zawiesi, więc warto jest mieć jakiś rodzaj sprawdzania, kiedy używasz czegoś innego niż prosty GLSL ES <span class="notranslate">shaders</span>.</p>
   <p> </p>

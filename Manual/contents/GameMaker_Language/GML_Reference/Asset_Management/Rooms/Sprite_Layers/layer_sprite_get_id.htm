@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sprite_get_id</h1>
+  <h1><span data-field="title" data-format="default">layer_sprite_get_id</span></h1>
   <p>Za pomocą tej funkcji można pobrać unikatową wartość ID elementu <span class="notranslate">sprite</span> na warstwie. Podajesz identyfikator warstwy (który otrzymujesz podczas tworzenia warstwy za pomocą polecenia <a href="../General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> lub gdy użyjemy nazwy warstwy wraz z <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>) oraz nazwę elementu <span class="notranslate">sprite</span> zdefiniowaną w edytorze <span class="notranslate">Room</span>. Funkcja zwróci wartość ID skojarzoną z tym elementem <span class="notranslate">sprite</span> na warstwie.</p>
   <p>Zwróć uwagę, że ta funkcja jest przeznaczona specjalnie do użytku ze stroną <span class="notranslate">sprites</span>, która została dodana do warstwy <span class="notranslate">IDE</span> na stronie <span class="notranslate">asset</span>. Jeśli dodałeś element <span class="notranslate">sprite</span> do warstwy za pomocą kodu wykorzystującego funkcję <a href="layer_sprite_create.htm"><span class="inline">layer_sprite_create()</span></a>to w przyszłości należy posługiwać się identyfikatorem zwróconym przez tę funkcję (ponieważ element <span class="notranslate">sprite</span> nie będzie miał nazwy, którą można by przekazać do tej funkcji).</p>
   <p>Jeśli określona warstwa nie istnieje lub nie można znaleźć podanego elementu <span class="notranslate">sprite</span>, funkcja zwraca -1.</p>

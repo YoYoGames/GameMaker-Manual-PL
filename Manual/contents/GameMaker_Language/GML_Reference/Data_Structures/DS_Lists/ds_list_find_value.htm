@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_find_value</h1>
+  <h1><span data-field="title" data-format="default">ds_list_find_value</span></h1>
   <p>Za pomocą tej funkcji można sprawdzić podaną pozycję na liście, a następnie zwrócona zostanie wartość przechowywana na tej pozycji na liście. Zwróć uwagę, że jeśli podasz pozycję, która nie mieści się w podanym rozmiarze listy (np.: pozycja 11 na liście 10 wartości), funkcja może zwrócić <span class="inline">undefined</span> <i>lub</i> 0. Dzieje się tak, ponieważ podczas tworzenia listy kilka pierwszych pozycji na liście jest wewnętrznie ustawionych na 0, aby zminimalizować problemy z wydajnością podczas początkowego dodawania pozycji do listy (chociaż funkcja <a href="ds_list_size.htm"><span class="inline">ds_list_size()</span></a> nadal będzie zwracać 0 na nowo utworzonej liście). Jeśli chcesz się upewnić, że lista jest &quot;naprawdę&quot; pusta w momencie tworzenia, powinieneś wywołać funkcję <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> po utworzeniu listy, co będzie oznaczało, że wszelkie wartości zwracane dla niezapełnionych slotów listy będą miały postać <span class="inline">undefined</span>, co można następnie konsekwentnie sprawdzać za pomocą funkcji <a href="../../Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a> function.</p>
   <p> </p>
   <h4>Składnia:</h4>

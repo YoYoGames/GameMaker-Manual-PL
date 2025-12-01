@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_set_target</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target</span></h1>
   <p>Dzięki tej funkcji ustawiasz wszystkie dalsze rysunki na docelową powierzchnię, a nie na ekran. W ten sposób możesz powiedzieć programowi <span data-keyref="GameMaker Name">GameMaker</span>, by rysował tylko określone rzeczy na określonej powierzchni. Zwróć uwagę, że jeśli nie wywołasz funkcji <a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> po zakończeniu pracy, nic nie będzie rysowane na ekranie, ponieważ wszystkie dalsze rysunki (nawet w innych przypadkach) będą wykonywane na powierzchni. Powinieneś również zdawać sobie sprawę, że nic nie będzie widać, jeśli sama powierzchnia nie zostanie narysowana na ekranie w zdarzeniu draw instancji. Możesz także sprawdzić wartość zwracaną tej funkcji jako narzędzie debugowania, aby sprawdzić, czy cel powierzchniowy został ustawiony, czy nie, przy czym wartość zwracana równa 0 oznacza niepowodzenie ustawienia celu, a każda inna dodatnia wartość oznacza sukces.</p>
   <p>Należy zwrócić uwagę na to, że powierzchnie są <i>ułożone w stos</i>, więc nie można przeskakiwać z jednego celu do drugiego, a na końcu powrócić do normalnego celu rysowania, lecz trzeba otwierać i zamykać cele renderowania. Na przykład, <b>nie</b> będzie to działać poprawnie:</p>
   <p class="code">surface_set_target(surf1);<br />

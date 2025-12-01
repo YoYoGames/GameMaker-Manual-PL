@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>warstwa_sekwencji_xscale</title>
+  <title>layer_sequence_xscale</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>warstwa_sekwencji_xscale</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_xscale</span></h1>
   <p>Za pomocą tej funkcji można ustawić skalę X dla podanego elementu <span class="notranslate">sequence</span>. Należy podać identyfikator elementu <span class="notranslate">sequence</span> zwrócony przez <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> lub przez jedną z <a href="../General_Layer_Functions/General_Layer_Functions.htm">funkcji elementu warstwy</a> wraz z nową skalą do ustawienia na osi X, a <span class="notranslate">sequence</span> zostanie przeskalowany o tę wartość. Skala równa 1 oznacza brak skalowania (1:1), mniejsze wartości będą skalowane w dół (na przykład 0,5 spowoduje zmniejszenie szerokości <span class="notranslate">sequence</span> o połowę), większe wartości będą skalowane w górę, a wartości ujemne spowodują odbicie lustrzane <span class="notranslate">sequence</span> wokół jego początku <i>i</i> przeskalowanie go, chyba że użyta wartość to dokładnie -1 (w takim przypadku <span class="notranslate">sequence</span> zostanie odbity lustrzanie wokół jego początku bez skalowania).</p>
   <p>Należy pamiętać, że zastosowanie <em>nierównomiernego</em> skalowania (np. skalowania osi X o 3, a osi Y o 2) do elementów <span class="notranslate">sequence</span>, które zawierają instancję wykorzystującą <em>rotację</em> <strong>, może spowodować problemy z rysowaniem instancji, kolizjami, kadrowaniem i wieloma innymi rzeczami</strong>. Zasadniczo, jeśli witryna <span class="notranslate">sequence</span> opiera się na <em>jakichkolwiek</em> właściwościach instancji, nie zalecamy łączenia nierównomiernego skalowania z rotacją instancji.</p>
   <p>Należy również pamiętać, że nie należy zmieniać zmiennych <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> dla żadnych instancji w witrynie <span class="notranslate">sequence</span>, która używa tej funkcji, ponieważ zostaną one nadpisane, gdy tylko witryna <span class="notranslate">sequence</span> zostanie zaktualizowana po wywołaniu funkcji.</p>

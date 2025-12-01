@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_get_tex_mip_bias_ext</h1>
+  <h1><span data-field="title" data-format="default">gpu_get_tex_mip_bias_ext</span></h1>
   <p>Za pomocą tej funkcji można uzyskać wartość mipmap bias dla danego próbnika <span class="notranslate">shader</span>. Podajesz wartość indeksu próbnika <span class="notranslate">shader</span> (zwróconą przez funkcję <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>a funkcja zwróci wartość 0.0 oznaczającą brak stronniczości lub większą wartość, gdzie 1 oznacza pierwszą mipmapę, 2 oznacza drugą mipmapę itd. Ta wartość kontroluje szybkość, z jaką mapa mip jest zamieniana, i generalnie powoduje, że obraz na stronie <span class="notranslate">shader</span> <span class="notranslate">textures</span> jest tym bardziej rozmyty, im wyższa jest ta wartość i im większa jest &quot;odległość&quot; oglądania. Zauważ, że może to również zwracać wartości ujemne, w którym to przypadku obraz <span class="notranslate">shader</span> <span class="notranslate">textures</span> będzie ostrzejszy na większej odległości, im niższa wartość.</p>
   <p> </p>
   <h4>Składnia:</h4>

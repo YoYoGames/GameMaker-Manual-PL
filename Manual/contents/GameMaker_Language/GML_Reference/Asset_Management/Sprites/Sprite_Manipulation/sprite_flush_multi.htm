@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_flush_multi</h1>
+  <h1><span data-field="title" data-format="default">sprite_flush_multi</span></h1>
   <p>Za pomocą tej funkcji można usunąć z pamięci <span class="notranslate">texture</span> dowolną liczbę stron <span class="notranslate">sprites</span> dla podanego adresu <span class="notranslate">texture</span>. Podajesz indeksy <span class="notranslate">sprite</span> jako tablicę, a strony <span class="notranslate">texture</span>, do których są przypisane, zostaną usunięte z pamięci <span class="notranslate">texture</span>. Zwróć uwagę, że jeśli jedna z
     ze stron <span class="notranslate">texture</span> jest używana w innym miejscu w <span class="notranslate">room</span> (przez inną instancję <span class="notranslate">sprite</span> lub tło itp...) może to spowodować niewielki spadek wydajności, ponieważ strona jest natychmiast ponownie ładowana do pamięci, dlatego należy zachować ostrożność podczas używania tej funkcji.
     Zwróć uwagę, że funkcja zwróci <span class="inline">-1</span>, jeśli spłukiwanie nie jest obsługiwane dla wybranych zasobów, lub zwróci <span class="inline">0</span>, jeśli wszystko działa poprawnie.</p>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_check_permission</h1>
+  <h1><span data-field="title" data-format="default">os_request_permission</span></h1>
   <p>Za pomocą tej funkcji możesz zażądać określonego uprawnienia. Uprawnienie, o które chcesz poprosić, podajesz jako <span class="notranslate">string</span> w formacie &quot;<span class="inline">android.permission.&lt;permission&gt;</span>&quot;, więc aby poprosić o uprawnienie <span class="inline">RECORD_AUDIO</span> (na przykład), wywołałbyś</p>
   <p class="code">os_request_permission(&quot;android.permission.RECORD_AUDIO&quot;);</p>
   <p>Funkcja zwraca <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">zdarzenie asynchroniczne systemu</a>, w którym wbudowana mapa <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS będzie zawierała następujące pary klucz/wartość:</p>

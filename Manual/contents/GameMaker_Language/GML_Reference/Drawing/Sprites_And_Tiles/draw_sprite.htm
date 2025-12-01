@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>narysuj_sprite</title>
+  <title>draw_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>narysuj_sprite</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite</span></h1>
   <p>Ta funkcja rysuje podany obraz <span class="notranslate">sprite</span> i podobraz w miejscu w grze <span class="notranslate">room</span>. W przypadku strony <span class="notranslate">sprite</span> możesz użyć zmiennej instancji <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> aby uzyskać bieżący adres <span class="notranslate">sprite</span>, który jest przypisany do instancji uruchamiającej kod, lub możesz użyć dowolnego innego adresu <span class="notranslate">sprite</span> <span class="notranslate">asset</span>. To samo dotyczy podobrazu, który również można ustawić na zmiennej instancji <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> która ustawi pod-obraz na wybrany dla bieżącej instancji <span class="notranslate">sprite</span> (zauważ, że możesz narysować inny <span class="notranslate">sprite</span> i nadal używać wartości pod-obrazu dla bieżącej instancji), lub możesz użyć dowolnej innej wartości, aby narysować konkretny pod-obraz wybranego <span class="notranslate">sprite</span>. Jeśli wartość jest większa niż liczba podobrazów, <span data-keyref="GameMaker Name">GameMaker</span> automatycznie <span class="notranslate">loop</span> liczbę, aby wybrać odpowiedni obrazek (na przykład, jeśli rysowana strona <span class="notranslate">sprite</span> ma 5 podobrazów o numerach od 0 do 4, a my ustawimy wartość indeksu na 7, to funkcja narysuje podobraz 3 o numerze 0). Pozycje x i y określają położenie w obrębie strony <span class="notranslate">room</span>, w którym zostanie narysowany obrazek <span class="notranslate">sprite</span>, i są wyśrodkowane względem <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">przesunięcia x</a> i <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y</a> strony <span class="notranslate">sprite</span>.</p>
   <p class="note"><span class="note">UWAGA</span> Ta funkcja może nie działać zgodnie z oczekiwaniami, gdy używasz animacji szkieletu <span class="notranslate">sprites</span>, i może się okazać, że funkcja rysuje tylko pierwszą klatkę domyślnej pozy. Zamiast tego należy użyć funkcji <span class="inline">draw_skeleton_*</span>.</p>
   <p> </p>

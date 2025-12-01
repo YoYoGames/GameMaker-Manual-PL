@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_connect_raw</h1>
+  <h1><span data-field="title" data-format="default">network_connect_raw</span></h1>
   <p>Za pomocą tej funkcji można wysłać żądanie połączenia z adresem <span class="notranslate">server</span>. Funkcja pobiera <i>identyfikator gniazda</i>, przez które ma się połączyć (zob. <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) i wymaga podania adresu IP, z którym ma się połączyć ( <span class="notranslate">string</span>) oraz portu, przez który ma się połączyć, a jeśli połączenie nie powiedzie się, zwrócona zostanie wartość mniejsza niż 0. Różnica między tą funkcją a <a href="network_connect.htm"><span class="inline">network_connect()</span></a> jest taka, że ta funkcja może połączyć się z dowolnym adresem <span class="notranslate">server</span> i nie robi nic z surowymi danymi, co oznacza, że musisz sam zaimplementować protokoły na końcu <span class="notranslate">server</span>. Należy pamiętać, że domyślnie funkcja jest synchroniczna, co oznacza, że gra może się &quot;zawiesić&quot; podczas nawiązywania połączenia. Możesz ustawić wartość timeoutu dla połączenia lub sprawić, by tworzenie było asynchroniczne, używając funkcji <a href="network_set_config.htm"><span class="inline">network_set_config()</span></a>lub użyć funkcji <a href="network_connect_raw_async.htm"><span class="inline">network_connect_async_raw()</span></a> zamiast.</p>
   <p class="note"><span class="note">UWAGA</span> Tej funkcji nie można używać w języku HTML5. W przypadku gniazd WebSockets należy użyć <a href="network_connect_raw_async.htm">funkcji Async</a>.</p>
   <p> </p>

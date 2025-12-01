@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instancja_place</title>
+  <title>instance_place</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instancja_place</h1>
+  <h1><span data-field="title" data-format="default">instance_place</span></h1>
   <p>Za pomocą tej funkcji możesz sprawdzić, czy pozycja nie koliduje z inną instancją lub wszystkimi instancjami obiektu <span class="notranslate">object</span>, używając maski kolizji instancji, która uruchamia kod sprawdzający. Używając tej funkcji, prosisz program <span data-keyref="GameMaker Name">GameMaker</span>, aby przesunął instancję na nową pozycję, sprawdził, czy nie doszło do kolizji, cofnął się i poinformował, czy kolizja została znaleziona, czy nie.</p>
   <p>Działa to w przypadku kolizji precyzyjnych, ale tylko wtedy, gdy zarówno instancja, jak i sprawdzana witryna <span class="notranslate">object</span> mają zaznaczone maski kolizji precyzyjnych, w przeciwnym razie stosowane są tylko kolizje typu bounding box.</p>
   <p>Ta funkcja zwróci unikalną instancję <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> kolidującej strony <span class="notranslate">object</span>, ale jeśli nie jest to potrzebne, nieco szybciej jest użyć funkcji <a href="../../Movement_And_Collisions/Collisions/place_meeting.htm"><span class="inline">place_meeting()</span></a>. Funkcja ta akceptuje również specjalne słowa kluczowe <span class="inline"><b>all</b></span> i <span class="inline"><b>other</b></span> i zwraca <a href="../../../GML_Overview/Instance_Keywords.htm">słowo kluczowe</a> <span class="inline"><b>noone</b></span>, jeśli nie wystąpi kolizja, lub unikatową wartość identyfikatora znalezionej instancji, jeśli kolizja wystąpi.</p>

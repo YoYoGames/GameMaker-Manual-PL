@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>tworzenie_instancji_głębokość</title>
+  <title>instance_create_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tworzenie_instancji_głębokość</h1>
+  <h1><span data-field="title" data-format="default">instance_create_depth</span></h1>
   <p>Za pomocą tej funkcji można utworzyć nową instancję określonej strony <span class="notranslate">object</span> w dowolnym punkcie strony <span class="notranslate">room</span> i na podanej głębokości. Głębokość może być dowolną wartością, przy czym im mniejsza głębokość, tym bliżej kamery będą rysowane obiekty, a im większa głębokość, tym dalej od kamery, więc instancja na głębokości -200 zostanie narysowana nad instancją na głębokości +300 (na przykład).</p>
   <p>Zauważ, że ta funkcja faktycznie utworzy warstwę <span class="notranslate">room</span> dla instancji, ponieważ wszystkie instancje <i>muszą</i> znajdować się na warstwie w <span class="notranslate">room</span>, ale ponieważ jest to warstwa <i>zarządzana</i> (tzn. nie taka, którą utworzyłeś za pomocą kodu lub w <span class="notranslate">room</span>, ale taka, którą <span data-keyref="GameMaker Name">GameMaker</span> utworzył automatycznie). Nie masz dostępu do tej warstwy, a zmienna <a href="Instance_Variables/layer.htm"><span class="inline">layer</span></a> zwróci wartość -1.</p>
   <p class="note"><span class="important">WAŻNE</span> Minimalna i maksymalna głębokość warstwy wynosi od -16000 do 16000. Wszystko, co zostanie umieszczone na warstwie o głębokości spoza tego zakresu, <b>nie zostanie narysowane</b>, choć wszystkie wydarzenia będą przebiegać normalnie.</p>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_udp_raw</h1>
+  <h1><span data-field="title" data-format="default">network_send_udp_raw</span></h1>
   <p>Za pomocą tej funkcji można wysyłać dane przez sieć przy użyciu protokołu UDP na adres <span class="notranslate">server</span>. Funkcja pobiera identyfikator <i>gniazda</i>, przez które ma się łączyć, adres URL, z którym ma się łączyć, oraz port, którego ma używać. Następnie należy podać identyfikator <i>bufora</i>, który zawiera dane do wysłania (więcej informacji na ten temat można znaleźć na stronie <span class="notranslate">buffers</span> w rozdziale <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) oraz rozmiar (w bajtach) danych. UDP jest &quot;bezpołączeniowy&quot; w tym sensie, że w rzeczywistości nie wykonuje się połączenia, tylko wysyła pakiet bezpośrednio do adresu IP, a <span class="notranslate">server</span> otrzymuje dane przychodzące z adresu IP i musi sobie z nimi poradzić &quot;tak jak jest&quot;. Wysyłane dane nie są w żaden sposób formatowane przez <span data-keyref="GameMaker Name">GameMakera</span>, a urządzenia odbierające otrzymają je w postaci strumienia, co oznacza, że będziesz musiał sobie z nimi poradzić. Funkcja zwraca liczbę bajtów wysłanych danych lub liczbę mniejszą od 0, jeśli wysyłanie nie powiodło się.</p>
   <p class="note"><span class="note">UWAGA</span> Ta funkcja nie będzie działać, gdy będzie używana w projekcie działającym na platformie docelowej HTML5, a projekty HTML5 nie będą mogły odbierać UDP.</p>
   <p> </p>

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_depth</h1>
+  <h1><span data-field="title" data-format="default">layer_get_depth</span></h1>
   <p>Możesz użyć tej funkcji, aby uzyskać wartość <i>głębokości</i> związaną z daną warstwą. Podajesz identyfikator warstwy (który otrzymujesz podczas tworzenia warstwy za pomocą <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) lub nazwę warstwy (jako <span class="notranslate">string</span> - będzie to miało wpływ na wydajność), a funkcja zwróci głębokość warstwy jako liczbę rzeczywistą. Jeśli więc masz trzy warstwy o głębokości -100, 0, 100, to warstwy będą rysowane w kolejności 100, 0, -100, a więc warstwa &quot;górna&quot; (czyli najbliżej widoku z kamery, a więc rysowana ponad wszystkimi innymi) będzie warstwą o głębokości -100.</p>
   <p>Na poniższej ilustracji przedstawiono schemat działania głębokości dla warstw:</p>
   <p><img>Należy pamiętać, że podanie nieprawidłowej wartości identyfikatora warstwy spowoduje wyświetlenie błędu.</p>

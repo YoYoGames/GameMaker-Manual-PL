@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_question_async</h1>
+  <h1><span data-field="title" data-format="default">show_question_async</span></h1>
   <p>Funkcja ta otwiera okno i wyświetla użytkownikowi pytanie zdefiniowane w funkcji. Jest to funkcja asynchroniczna i jako taka <span data-keyref="GameMaker Name">GameMaker</span> <i>nie</i> blokuje urządzenia, na którym jest uruchamiana, w oczekiwaniu na odpowiedź, lecz kontynuuje normalne wykonywanie zdarzeń. Funkcja ma dwa przyciski, które pokazują &quot;Tak&quot; i &quot;Nie&quot;, a gdy użytkownik naciśnie jeden z nich, wywoływane jest asynchroniczne zdarzenie <b>Dialog</b>, które <i>tylko</i> na czas trwania tego zdarzenia będzie miało mapę DS zapisaną w zmiennej <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Mapa ta będzie zawierała dwa klucze: &quot;<strong>id</strong>&quot; oraz &quot;<strong>status</strong>&quot;. &quot;id&quot; to wartość zwrócona przez funkcję w momencie jej wywołania, natomiast &quot;status&quot; będzie miał postać <span class="inline">true</span> lub <span class="inline">false</span>, co oznacza odpowiednio &quot;Tak&quot; i &quot;Nie&quot;.</p>
   <p class="note"><strong><em><span class="note">UWAGA</span></em></strong><em> Ta funkcja jest przeznaczona <span data-keyref="Dialog for debug only"> <strong>wyłącznie do debugowania i testowania</strong></span>i <span data-keyref="Dialog for debug only">nie powinna być używana w wydanych grach. W tym celu powinieneś stworzyć własny interfejs użytkownika, który będzie odbierał dane od graczy, tak abyś miał pełną kontrolę nad wyglądem i zachowaniem okien dialogowych.</span></em></p>

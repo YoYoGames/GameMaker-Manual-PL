@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gest_get_tap_count</title>
+  <title>gesture_get_tap_count</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gest_get_tap_count</h1>
+  <h1><span data-field="title" data-format="default">gesture_get_tap_count</span></h1>
   <p>Ta funkcja służy do sprawdzania, czy liczenie stuknięć jest włączone, czy wyłączone. Funkcja zwróci <span class="inline">true</span>, jeśli jest włączona, i <span class="inline">false</span> w przeciwnym przypadku. Liczenie stuknięć można włączyć lub wyłączyć za pomocą funkcji <a href="gesture_tap_count.htm"><span class="inline">gesture_tap_count()</span></a>. Gdy funkcja jest włączona, każde zdarzenie stuknięcia będzie miało dodatkowy wpis na mapie DS o nazwie &quot;tapcount&quot;, który będzie rejestrował liczbę stuknięć. Gdy funkcja jest włączona, oznacza to, że <i>wszystkie</i> zdarzenia stukania będą wyzwalane, np. dwa stuknięcia będą wyzwalały zarówno zdarzenie stuknięcia pojedynczego, jak i podwójnego, przy czym liczba stuknięć dla zdarzenia stuknięcia pojedynczego wynosi 1, a dla zdarzenia stuknięcia podwójnego - 2. Wartość licznika stuknięć zostanie zresetowana do 0 po upływie czasu ustawionego dla wykrycia podwójnego stuknięcia (patrz funkcja <a href="gesture_get_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). Jeśli liczenie stuknięć jest wyłączone, to stuknięcie początkowe nie zostanie zarejestrowane, dopóki nie upłynie czas podwójnego stuknięcia i nie zostanie wykryte drugie stuknięcie. Domyślnie funkcja ta jest <b>włączona</b>.</p>
   <p> </p>
   <h4><b>Składnia:</b></h4>

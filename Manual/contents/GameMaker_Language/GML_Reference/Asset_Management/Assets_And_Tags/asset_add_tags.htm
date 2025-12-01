@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>asset_add_tags</h1>
+  <h1><span data-field="title" data-format="default">asset_add_tags</span></h1>
   <p>Za pomocą tej funkcji można dodać jeden lub więcej znaczników <span class="notranslate">strings</span> do dowolnej strony <span class="notranslate">asset</span> z przeglądarki <span class="notranslate">asset</span>. Podajesz albo nazwę <span class="notranslate">asset</span> (jako <span class="notranslate">string</span>), albo jego indeks <span class="notranslate">asset</span>, jak również pojedynczy znacznik <span class="notranslate">string</span> lub tablicę, w której każdy element jest pojedynczym znacznikiem <span class="notranslate">string</span>. Jeśli podasz wartość indeksu <span class="notranslate">asset</span>, musisz podać opcjonalny argument typu <span class="notranslate">asset</span> (stałą), ponieważ <span class="notranslate">assets</span> różnych typów mogą mieć ten sam indeks, choć nie mogą mieć tej samej nazwy. Dostępne typy <span class="notranslate">asset</span> są wymienione w poniższej tabeli:</p>
   <table>
     <tbody>
@@ -28,7 +28,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">asset_sprite</span></td>
-        <td>Podana nazwa odnosi się do <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>'a.</td>
+        <td>Podana nazwa odnosi się do <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>&#39;a.</td>
       </tr>
       <tr>
         <td><span class="notranslate">asset_sound</span></td>
@@ -73,9 +73,9 @@
     </tbody>
   </table>
   <p>Jeśli funkcji uda się dodać znacznik(i), zwróci ona adres <span class="inline">true</span>, w przeciwnym razie zwróci adres <span class="inline">false</span>.</p>
-  <p> </p>
+  <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">asset_add_tags(name_or_index, tags, [asset_type]);</p>
+  <p class="code"><span data-field="title" data-format="default">asset_add_tags</span>(name_or_index, tags, [asset_type]);</p>
   <table>
     <tbody>
       <tr>
@@ -85,25 +85,25 @@
       </tr>
       <tr>
         <td><span class="notranslate">name_or_index</span></td>
-        <td><span data-keyref="Type_String">Ciąg</span> lub <span data-keyref="Type_Asset">aktywa</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> lub <span data-keyref="Type_Asset"><a href="../../../../../The_Asset_Editors/The_Asset_Editors.htm" target="_blank">Asset</a></span></td>
         <td><span class="notranslate">The name of the asset (a string) or its index value (an integer).</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">tags</span></td>
-        <td><span data-keyref="Type_String">Łańcuch</span> lub <span data-keyref="Type_Array">tablica</span> łańcuchów</td>
+        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span> lub <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span> łańcuchów</td>
         <td><span class="notranslate">A single asset tag string or an array with various asset tags.</span></td>
       </tr>
       <tr>
         <td><span class="notranslate">[asset_type]</span></td>
-        <td><span data-keyref="Type_Constant_Asset_Type">Rodzaj aktywów Stała</span></td>
+        <td><span data-keyref="Type_Constant_Asset_Type"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Assets_And_Tags/asset_get_type.htm" target="_blank">Asset Type Constant</a></span></td>
         <td><span class="optional">OPTIONAL</span> Typ zasobu, na którym mają zostać ustawione znaczniki, używany tylko w przypadku podania indeksu dla pierwszego argumentu.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Zwroty:</h4>
-  <p class="code"><span data-keyref="Type_Bool">Boolean</span></p>
-  <p> </p>
+  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
+  <p> </p>
   <h4>Przykład:</h4>
   <p class="code">var _a = array_create(3);<br />
     _a[0] = &quot;enemy&quot;;<br />
@@ -111,9 +111,9 @@
     _a[2] = &quot;boss&quot;;<br />
     asset_add_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
   <p>Powyższy kod utworzy tablicę znaczników, a następnie doda je do podanej strony <span class="notranslate">object</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -121,7 +121,7 @@
         <div style="float:right">Następny: <a href="asset_remove_tags.htm"><span class="notranslate">asset_remove_tags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_add_tags

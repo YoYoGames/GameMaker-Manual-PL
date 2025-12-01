@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_load_async</title>
+  <title>buffer_load_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_load_async</h1>
+  <h1><span data-field="title" data-format="default">buffer_load_async</span></h1>
   <p>Za pomocą tej funkcji można wczytać plik utworzony wcześniej za pomocą funkcji <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> (lub dowolnej innej funkcji służącej do zapisywania <span class="notranslate">buffers</span>) do pliku <span class="notranslate">buffer</span>. &quot;Offset&quot; określa pozycję początkową w <span class="notranslate">buffer</span> do załadowania (w bajtach), a &quot;rozmiar&quot; jest rozmiarem obszaru <span class="notranslate">buffer</span>, który ma zostać załadowany od tego offsetu (również w bajtach). Można podać wartość -1 dla argumentu size, a zostanie wczytany cały obszar <span class="notranslate">buffer</span>. Zwróć uwagę, że funkcja załaduje plik z &quot;domyślnego&quot; folderu, który <i>nie</i> musi być dołączony do pliku <span class="notranslate">path</span>, który podajesz. Folder ten zostanie utworzony, jeśli nie istnieje, lub gdy zapiszesz plik przy użyciu polecenia <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>.</p>
   <p>Funkcja zwraca unikatową wartość ID, którą można następnie wykorzystać w <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">zdarzeniu asynchronicznym Save / Load</a> do sprawdzenia wartości <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> ID, jak pokazano w poniższym przykładzie rozszerzonym. Mapa <span class="inline">async_load</span> w zdarzeniu będzie zawierała następujące dwie pary klucz/wartość:</p>
   <ul class="colour">

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_enable_drawevent</h1>
+  <h1><span data-field="title" data-format="default">draw_enable_drawevent</span></h1>
   <p>Za pomocą tej funkcji możesz włączyć (<span class="inline">true</span>) lub wyłączyć (<span class="inline">false</span>) zdarzenie draw dla <b>wszystkich instancji w grze</b>, dzięki czemu masz kontrolę nad tym, jak i kiedy rzeczy są rysowane, co jest przydatne, jeśli chcesz zastosować technikę &quot;pomijania klatek&quot;. Zwróć uwagę, że nie tylko uniemożliwia to rysowanie instancji na ekranie, ale całkowicie wyłącza zdarzenie draw, co oznacza, że należy zachować ostrożność, ponieważ logika gry, która jest obecna w tym zdarzeniu, również nie zostanie uruchomiona.</p>
   <p>Należy pamiętać, że jeśli wywołasz tę funkcję na samym początku gry, zanim zostanie wyrenderowana pierwsza klatka (np. zdarzenie Create Event pierwszej strony <span class="notranslate">object</span> w pierwszej stronie <span class="notranslate">room</span> gry), okno gry <b>nie zostanie wyrenderowane</b>. Może to być przydatne w projektach dla wielu graczy, które wymagają dedykowanej strony <span class="notranslate">server</span>, która <strong>nie</strong> musi niczego renderować, ale należy pamiętać, że nie czyni to gry bezgłową, ponieważ strona <span class="notranslate">GameMaker</span> tego nie obsługuje - nie będzie więc można jej uruchomić na stronie <span class="notranslate">server</span>, która nie ma interfejsu graficznego.</p>
   <p> </p>

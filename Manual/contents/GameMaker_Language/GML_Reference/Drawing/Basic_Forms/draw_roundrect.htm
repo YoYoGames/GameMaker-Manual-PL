@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_roundrect</h1>
+  <h1><span data-field="title" data-format="default">draw_roundrect</span></h1>
   <p>Za pomocą tej funkcji można narysować kontur zaokrąglonego prostokąta lub wypełniony zaokrąglony prostokąt, w którym pozycja (x1,y1) jest lewym górnym rogiem, a pozycja (x2,y2) jest prawym dolnym rogiem. Dokładność rysowania narożników można określić za pomocą funkcji <a href="draw_set_circle_precision.htm"><span class="inline">draw_set_circle_precision()</span></a>ale ta funkcja używa dla nich stałego promienia (jeśli chcesz zmienić promień narożnika, użyj funkcji <a href="draw_roundrect_ext.htm"><span class="inline">draw_roundrect_ext()</span></a>). Należy pamiętać, że rysowany prostokąt może wymagać innych wartości (+/-1 na x, y, szerokości lub wysokości), aby został narysowany w pożądanych wymiarach, ze względu na różnice między różnymi obsługiwanymi platformami.</p>
   <p class="note"><b>UWAGA</b>: Jeśli chcesz narysować kształt za pomocą strony <span class="notranslate">shader</span>, musisz wiedzieć, że większość stron <span class="notranslate">shaders</span> oczekuje następujących danych wejściowych: <span class="notranslate">vertex</span>, <span class="notranslate">texture</span>, Kolor. Jednak w przypadku korzystania z tej funkcji przekazywane są tylko dane <span class="notranslate">vertex</span> i kolor, a zatem <span class="notranslate">shader</span> może niczego nie narysować (lub narysować coś, ale niepoprawnie). Jeśli konieczne jest rysowanie kształtów w ten sposób, należy dostosować stronę <span class="notranslate">shader</span> do tego celu.</p>
   <p> </p>

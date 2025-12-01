@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_kopiujący_z_werteksu</title>
+  <title>buffer_copy_from_vertex_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_kopiujący_z_werteksu</h1>
+  <h1><span data-field="title" data-format="default">buffer_copy_from_vertex_buffer</span></h1>
   <p>Za pomocą tej funkcji można skopiować część (lub wszystkie) danych <span class="notranslate">vertex</span> zapisanych w jednej witrynie <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> do utworzonej wcześniej regularnej witryny <span class="notranslate">buffer</span>. Podczas kopiowania danych z <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> do zwykłego <span class="notranslate">buffer</span> za pomocą tej funkcji oba adresy <span class="notranslate">buffers</span> muszą być wcześniej utworzone (za pomocą przycisków <a href="../Drawing/Primitives/vertex_create_buffer.htm"><span class="inline">vertex_create_buffer()</span></a> i <a href="buffer_create.htm"><span class="inline">buffer_create()</span></a> na przykład). Można określić zakres danych <span class="notranslate">vertex</span>, które mają zostać skopiowane do <span class="notranslate">buffer</span>, gdzie początek <span class="notranslate">vertex</span> może mieć dowolną wartość od 0 do liczby wierzchołków -1, a następnie można podać liczbę wierzchołków od tego punktu do skopiowania. Możesz użyć funkcji <a href="../Drawing/Primitives/vertex_get_number.htm"><span class="inline">vertex_get_number()</span></a> na stronie <span class="notranslate">vertex</span> <span class="notranslate">buffer</span>, aby uzyskać całkowitą liczbę przechowywanych wierzchołków. Na koniec podajesz indeks <span class="notranslate">buffer</span>, do którego mają zostać skopiowane dane <span class="notranslate">vertex</span>, oraz offset danych określający pozycję, do której mają zostać skopiowane dane <span class="notranslate">vertex</span> w docelowym adresie <span class="notranslate">buffer</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>

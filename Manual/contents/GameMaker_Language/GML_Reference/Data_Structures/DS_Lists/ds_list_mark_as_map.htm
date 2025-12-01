@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_map</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_map</span></h1>
   <p>Ta funkcja &quot;zaznacza&quot; (lub &quot;oflagowuje&quot;) daną pozycję w uprzednio utworzonej liście DS jako zawierającą <a href="../DS_Maps/DS_Maps.htm">mapę</a> DS. Funkcja ta jest wymagana podczas kodowania JSON <span class="notranslate">strings</span> (który można utworzyć za pomocą <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), ale może być również przydatna podczas zagnieżdżania struktur danych, ponieważ pozycje oznaczone w ten sposób będą automatycznie usuwane (niszczone), gdy nadrzędna lista DS zostanie zniszczona. Oznacza to, że nie trzeba ręcznie przeglądać zawartości listy i niszczyć zaznaczonych struktur danych pojedynczo przed zniszczeniem listy &quot;rodzica&quot;. Jeśli jednak usuniesz pozycję listy pojedynczo, struktura danych, którą zawierała, <i>nie</i> zostanie usunięta, dlatego przed usunięciem pozycji listy nadrzędnej należy wywołać odpowiednią funkcję niszczącą mapę DS. Należy także pamiętać, że jeśli wywołasz funkcję <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> na liście, wszystkie pozycje oznaczone jako mapy zostaną również zniszczone podczas kasowania listy.</p>
   <p>Warto również zauważyć, że jeśli pozycja, która została zaznaczona, zmieni się w obrębie listy, &quot;znak&quot; przesunie się wraz z nią, więc jeśli zaznaczono pozycję 3 na liście (na przykład), a następnie wstawiono pod nią 2 kolejne pozycje, tak że przesunęła się ona na pozycję 5, <i>nadal</i> będzie zaznaczona jako mapa.</p>
   <p> </p>

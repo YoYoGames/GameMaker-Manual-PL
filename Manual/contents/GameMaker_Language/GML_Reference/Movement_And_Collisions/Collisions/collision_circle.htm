@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kolizja_okrąg</title>
+  <title>collision_circle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kolizja_okrąg</h1>
+  <h1><span data-field="title" data-format="default">collision_circle</span></h1>
   <p><span class="inline">Collision_circle</span> tworzy wokół punktów x1,y1 strefę kołową o promieniu podanym przez użytkownika, a następnie sprawdza tę strefę pod kątem kolizji z <b>dowolną</b> instancją obiektu <span class="notranslate">object</span> określoną przez argument &quot;obj&quot;. To sprawdzanie może być precyzyjne lub nie, ale aby precyzyjne kolizje były włączone, sprawdzana instancja lub <span class="notranslate">object</span> <i>musi</i> mieć włączone precyzyjne kolizje dla swojej <span class="notranslate">sprite</span>. Jeśli nie, domyślne sprawdzanie jest oparte na polach ograniczających. Poniższy rysunek ilustruje, jak to działa:</p>
   <p><img>Tutaj instancja w środku używa okręgu kolizyjnego do sprawdzania, czy piłka <span class="notranslate">objects</span>. Jak widać, nawet jeśli <span class="notranslate">sprite</span> <i>nie</i> dotyka okręgu, to i tak może dojść do kolizji (nawet jeśli ustawisz opcję precise w funkcji na true), ponieważ pole tego <span class="notranslate">sprite</span> zachodzi na okrąg zdefiniowany przez collision_circle. Z drugiej strony, zielone kulki zostaną uwzględnione w kolizji tylko wtedy, gdy rzeczywista <span class="notranslate">sprite</span> pokrywa się ze zdefiniowanym okręgiem. Pamiętaj, że aby kolizje były uwzględniane, <i>zarówno</i> funkcja <span class="notranslate">object</span> <span class="notranslate">sprite</span>, jak i funkcja kolizji muszą mieć zaznaczoną opcję precise. Należy również zauważyć, że wartością zwracaną przez funkcję może być identyfikator <i>dowolnej</i> z instancji uznanych za kolizyjne.</p>
   <p>Zauważ, że zamiast indeksu <span class="notranslate">object</span> można podać instancję <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> aby sprawdzić konkretną instancję, lub <a href="../../../GML_Overview/Instance_Keywords.htm">słowa kluczowe</a> instancji <span class="inline">all</span>, lub <span class="inline">other</span> (w zależności od zdarzenia i bieżącego zakresu kodu).</p>

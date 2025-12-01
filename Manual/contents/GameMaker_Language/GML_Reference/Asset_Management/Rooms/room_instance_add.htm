@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_instance_add</h1>
+  <h1><span data-field="title" data-format="default">room_instance_add</span></h1>
   <p>Za pomocą tej funkcji można dodać instancję do dowolnej strony <span class="notranslate">room</span> innej niż bieżąca i w dowolnej pozycji w tej stronie <span class="notranslate">room</span>. Funkcja zwraca unikalny <a href="../Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> która może być następnie użyta w dalszych wywołaniach funkcji do ustawienia właściwości itp. tej instancji, ale <strong>tylko wtedy, gdy gra wejdzie do określonego pomieszczenia</strong>. Jeśli chcesz utworzyć instancję w bieżącym <span class="notranslate">room</span>, powinieneś użyć funkcji <a href="../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a>. Zauważ, że wywołanie tej funkcji na <span class="notranslate">room</span> <span class="notranslate">asset</span> utworzonej w przeglądarce <span class="notranslate">Asset</span> na <strong>stałe doda instancję do pomieszczenia</strong> i nawet wywołanie <span class="inline">game_restart()</span> nie przywróci stanu początkowego <span class="notranslate">room</span> (dopiero zakończenie gry i ponowne jej otwarcie spowoduje, że <span class="notranslate">room</span> znów będzie w stanie początkowym).</p>
   <p> </p>
   <h4>Składnia:</h4>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_get_surface</title>
+  <title>buffer_get_surface</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_get_surface</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_surface</span></h1>
   <p>Za pomocą tej funkcji można zapisywać informacje z powierzchni do określonego adresu <span class="notranslate">buffer</span>. Strona <span class="notranslate">buffer</span> musi być utworzona wcześniej i powinna być stroną <span class="notranslate">buffer</span> o wyrównaniu 1-bajtowym, wystarczająco dużą, aby pomieścić dane powierzchni, którą zamierzasz zapisać (jeśli nie masz pewności, użyj bufora <a href="buffer_create.htm">grow</a> lub zobacz przykład na dole tej strony).</p>
   <p>Informacje dotyczące powierzchni będą zawsze zapisywane na początku strony <span class="notranslate">buffer</span> (niezależnie od pozycji szukania), ale można wybrać wartość przesunięcia (w bajtach), aby przesunąć pozycję zapisu z początku strony <span class="notranslate">buffer</span>.</p>
   <p>Zwróć uwagę, że funkcja zapisuje każdy piksel powierzchni do <span class="notranslate">buffer</span> przy użyciu formatowania <b>RGBA</b> w celu <span class="notranslate">Windows</span>, ale w innych celach może być ono inne w zależności od systemu operacyjnego lub nawet urządzenia.</p>

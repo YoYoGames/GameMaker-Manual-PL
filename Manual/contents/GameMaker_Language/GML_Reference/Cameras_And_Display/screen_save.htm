@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>screen_save</h1>
+  <h1><span data-field="title" data-format="default">screen_save</span></h1>
   <p>Za pomocą tej funkcji można zapisać zrzut ekranu gry w postaci, w jakiej jest on aktualnie wyświetlany w oknie gry.</p>
   <p>Plik zostanie zapisany w katalogu roboczym gry, który w systemie Windows znajduje się pod adresem <span class="inline">&lt;drive&gt;:/Users/YOURUSERNAME/AppData/Local/[Game Name]/</span>, a w systemie Mac będzie to <span class="inline">~/Library/Application Support/[Game Name]/</span>. Przechwycony obraz będzie ostatecznym renderowaniem powierzchni aplikacji gry lub (jeśli powierzchnia aplikacji została wyłączona) będzie to obraz całego ekranu lub okna.</p>
   <p>Należy zauważyć, że funkcja jest przeznaczona do wywoływania w <b>zdarzeniu Draw GUI End Event</b>, co powinno dać spójne wyniki na wszystkich platformach. Użycie jej w jakimkolwiek innym zdarzeniu może nie działać zgodnie z oczekiwaniami i może dawać różne wyniki na różnych platformach, a nawet urządzeniach.</p>

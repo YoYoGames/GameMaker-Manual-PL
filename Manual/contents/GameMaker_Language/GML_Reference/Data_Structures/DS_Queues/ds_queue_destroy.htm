@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_queue_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_queue_destroy</span></h1>
   <p>Ta funkcja usuwa podaną strukturę danych <span class="notranslate">queue</span> z pamięci, zwalniając zasoby, z których korzystała, i usuwając wszystkie wartości, które zawierała. Funkcji tej należy używać zawsze po zakończeniu korzystania z kolejki DS, aby zapobiec wyciekom pamięci, które mogą spowolnić i zawiesić grę.</p>
   <p class="note"><b>WAŻNE!</b> Gdy tworzysz strukturę danych, wartość indeksu identyfikująca ją jest liczbą całkowitą zaczynającą się od 0. Oznacza to, że struktury danych różnych typów mogą mieć <b>tę samą</b> wartość indeksu, więc jeśli masz wątpliwości, powinieneś użyć funkcji <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> przed uzyskaniem do nich dostępu. Należy również pamiętać, że indeksy są używane ponownie, więc wartość indeksu zniszczonej struktury danych może zostać użyta przez nowo utworzoną strukturę. Dlatego zalecamy, aby po zniszczeniu zawsze ustawiać zmienną, która przechowywała indeks DS, na -1.</p>
   <p> </p>

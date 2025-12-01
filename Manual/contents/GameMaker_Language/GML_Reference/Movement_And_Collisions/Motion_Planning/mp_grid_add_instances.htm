@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
   <p>Funkcja ta wykorzystuje maskę kolizji instancji (ustaloną na podstawie właściwości <span class="notranslate">sprite</span> lub indeksu maski instancji wywołującej) do oznaczania komórek jako zabronione lub nie w siatce MP, gdzie komórki zabronione nie mogą być przekraczane przez żadną z funkcji wyznaczania ścieżek. W funkcji można określić, czy ma ona uwzględniać dokładne kolizje, czy nie, a zaznaczone komórki zabronione będą się zmieniać w zależności od tego ustawienia. Ten rysunek ilustruje to zachowanie:</p>
   <p><img>Dwie powyższe instancje zostały dodane do siatki MP za pomocą funkcji <span class="inline">mp_grid_add_instances()</span> z precyzyjnie ustawioną wartością true. Jak widać, zielona instancja zaznaczyła jako zabronione tylko te kwadraty siatki, których &quot;dotyka&quot;, ponieważ jej maska <span class="notranslate">sprite</span> jest również ustawiona na precise. Jednak druga instancja zaznaczyła także inne komórki, które nie <i>wydają się</i> dotykać. Dzieje się tak dlatego, że maska <span class="notranslate">sprite</span> <b>nie</b> jest ustawiona na precyzyjną, co oznacza, że nawet jeśli w funkcji zastosowano ustawienie precyzyjne, pod uwagę będzie brane tylko pole ograniczające maski <span class="notranslate">sprite</span>. Tak samo stałoby się, gdybyś ustawił argument precyzyjny funkcji na false - nawet instancje z precyzyjną maską <span class="notranslate">sprite</span> zostaną dodane do siatki na podstawie ich pól ograniczających.</p>
   <p> </p>

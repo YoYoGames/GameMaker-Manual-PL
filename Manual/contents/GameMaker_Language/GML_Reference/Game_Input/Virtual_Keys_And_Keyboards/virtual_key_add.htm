@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>virtual_key_add</h1>
+  <h1><span data-field="title" data-format="default">virtual_key_add</span></h1>
   <p>Ta funkcja umożliwia mapowanie &quot;dotknięć&quot; obszaru ekranu na zdarzenia na klawiaturze. Oznacza to, że po przypisaniu obszaru do klawisza wirtualnego wszystkie dotknięcia tego obszaru będą wywoływać zdarzenie klawiaturowe odpowiadające klawiszowi, który został zmapowany do tego obszaru. Każdy zdefiniowany klawisz wirtualny można przypisać do zmiennej, która może być następnie użyta w dalszych funkcjach klawiszy wirtualnych do ich pokazywania, ukrywania i usuwania. Klawisze te są przypisywane do poszczególnych <i>pomieszczeń</i> i będą automatycznie usuwane przez <span data-keyref="GameMaker Name">GameMaker</span> przy zmianie strony <span class="notranslate">rooms</span>.</p>
   <p>Rzeczywiste położenie klucza wirtualnego jest oparte na pozycji <i>ekranu</i>, a nie na pozycji <span class="notranslate">room</span>, dlatego wartości x/y są bezwzględne na ekranie. Oznacza to, że nie trzeba się martwić o używanie widoków ani względnych współrzędnych <span class="notranslate">room</span>. Można po prostu zdefiniować klucze w <strong>zdarzeniu Utwórz</strong> w witrynie <span class="notranslate">object</span> (wystarczy zdefiniować klucz wirtualny tylko raz dla danego pomieszczenia), a następnie narysować klucz <span class="notranslate">sprites</span> w <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">zdarzeniu Narysuj GUI</a>, ustawiając warstwę GUI tak, aby była taka sama jak ekran.</p>
   <p> </p>

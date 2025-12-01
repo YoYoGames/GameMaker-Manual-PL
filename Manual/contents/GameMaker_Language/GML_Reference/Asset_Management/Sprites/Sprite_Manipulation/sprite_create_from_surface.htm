@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_create_from_surface</h1>
+  <h1><span data-field="title" data-format="default">sprite_create_from_surface</span></h1>
   <p>Za pomocą tej funkcji można utworzyć stronę <span class="notranslate">sprite</span> z wcześniej zainicjalizowanej powierzchni (wartość ID indeksu powierzchni jest zwracana podczas tworzenia powierzchni za pomocą funkcji <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>). Współrzędne x i y, które następnie wprowadzisz do funkcji, powinny odnosić się do położenia (0,0) <i>powierzchni</i> (lewy górny róg), a nie do okna gry (ani widoku, jeśli jest aktywny). Argumenty width i height są wyrażone w pikselach i określają szerokość i wysokość części powierzchni, która ma zostać użyta.</p>
   <p>Ustawienie argumentu &quot;removeback&quot; na <span class="inline">true</span> spowoduje usunięcie koloru z <span class="notranslate">sprite</span>, poprzez sprawdzenie <i>lewego dolnego</i> piksela <span class="notranslate">sprite</span> pod kątem występującego tam koloru, a następnie użycie go jako koloru do usunięcia.</p>
   <p>Jeśli wybierzesz opcję &quot;removeback&quot;, możesz także chcieć, aby <span data-keyref="GameMaker Name">GameMaker</span> wygładził krawędzie strony <span class="notranslate">sprite</span>, ustawiając argument &quot;smooth&quot; na <span class="inline">true</span>. W ten sposób tworzy się półprzezroczyste obramowanie wokół krawędzi strony <span class="notranslate">sprite</span> po usunięciu z niej tła.</p>

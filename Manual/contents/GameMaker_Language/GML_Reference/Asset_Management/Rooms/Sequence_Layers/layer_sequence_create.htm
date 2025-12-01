@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sekwencja_warstw_tworzona</title>
+  <title>layer_sequence_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sekwencja_warstw_tworzona</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_create</span></h1>
   <p>Za pomocą tej funkcji można utworzyć instancję warstwy <span class="notranslate">sequence</span> <span class="notranslate">asset</span> na podanej warstwie. Podajesz identyfikator warstwy, który może być <span class="notranslate">string</span> nazwy warstwy - zdefiniowanej w edytorze <span class="notranslate">room</span> - lub unikalnym identyfikatorem warstwy - zwróconym przez funkcję <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>jak również pozycję X i Y w <span class="notranslate">room</span>, w której ma zostać utworzona <span class="notranslate">sequence</span>, oraz identyfikator <span class="notranslate">sequence</span>, który ma zostać utworzony. Identyfikator <span class="notranslate">sequence</span> jest stałą nazwy zdefiniowaną w przeglądarce <span class="notranslate">Asset</span> dla elementu <span class="notranslate">sequence</span>. Funkcja zwróci unikalny identyfikator elementu <span class="notranslate">sequence</span>, który można następnie wykorzystać we wszystkich dalszych funkcjach warstw dla <span class="notranslate">sequences</span>, lub można go użyć do pobrania instancji <span class="notranslate">sequence</span> <span class="notranslate">struct</span> za pomocą funkcji <a href="layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_instance()</span></a>.</p>
   <p>Warto zauważyć, że jeśli na stronie <span class="notranslate">sequence</span> znajdują się jakieś ścieżki <span class="notranslate">object</span>, ich instancje zostaną utworzone zaraz po utworzeniu samego elementu <span class="notranslate">sequence</span>, niezależnie od tego, gdzie ich klawisze <span class="notranslate">asset</span> znajdują się na <a href="../../../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Dope Sheet</a>. Kontroler <span class="notranslate">Sequence</span> po prostu przełącza <a href="../../Instances/Instance_Variables/visible.htm">widoczność</a> instancji, aby ją ukryć lub pokazać w zależności od pozycji i czasu trwania klawisza <span class="notranslate">asset</span> ścieżki, a <em>nie </em>tworzy i niszczy ją wielokrotnie. W rezultacie instancje będą uruchamiać swoje zdarzenia Create, gdy zostanie utworzony element <span class="notranslate">sequence</span>, a nie gdy zaczną się klucze ich zasobów.</p>
   <p> </p>

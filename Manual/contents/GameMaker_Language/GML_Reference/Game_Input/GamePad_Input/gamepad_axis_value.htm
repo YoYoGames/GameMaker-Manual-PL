@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>wartość_osiowa_ gamepada</title>
+  <title>gamepad_axis_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>wartość_osiowa_ gamepada</h1>
+  <h1><span data-field="title" data-format="default">gamepad_axis_value</span></h1>
   <p>Możesz użyć tej funkcji, aby uzyskać wartości różnych osi z danego slotu gamepada. Podajesz indeks slotu gamepada, który chcesz sprawdzić, oraz stałą indeksu osi (jak <a href="Gamepad_Input.htm">tutaj</a>) lub wartość całkowitą z przedziału <span class="inline">0</span> i <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. Zwracana wartość będzie zawierać się w przedziale od <span class="inline">-1</span> do <span class="inline">1</span> dla każdej z dostępnych osi poziomych i pionowych.</p>
   <p>Należy pamiętać, że zwracana wartość jest normalizowana z uwzględnieniem wartości ustawionej dla strefy martwej osi (za pomocą funkcji <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), a więc zawsze będzie zawierać się w przedziale od -1 do 0 oraz od 0 do 1. Na przykład ustawienie strefy martwej na 0.2 oznacza, że naciśnięcie drążka w prawo zacznie zwracać wartość z przedziału 0 - 1 dopiero wtedy, gdy wartość <em>surowa</em> osi przekroczy 0,2 - na przykład, gdy wartość surowa wynosi 0,2, wartość zwracana będzie 0, gdy wartość surowa wynosi 0,5, wartość zwracana będzie 0,375, a jeśli wartość surowa wynosi 0,9, wartość zwracana będzie 0,875.</p>
   <p> </p>

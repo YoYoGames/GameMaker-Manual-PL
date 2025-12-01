@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>zip_unzip</h1>
+  <h1><span data-field="title" data-format="default">zip_unzip</span></h1>
   <p>Ta funkcja otworzy zapisany plik zip i wypakuje jego zawartość do podanego katalogu. Zwróć uwagę, że jeśli nie podasz pełnego adresu <span class="notranslate">path</span> do katalogu ZIP, to użyty zostanie bieżący katalog <i>główny</i> dysku, a jeśli chcesz umieścić go we względnym <span class="notranslate">path</span> katalogu roboczym pakietu gier, to powinieneś użyć zmiennej <a href="../File_Directories/working_directory.htm"><span class="inline">working_directory</span></a> jako część adresu <span class="notranslate">path</span> (względny adres <span class="notranslate">paths</span> z użyciem &quot;.&quot; lub &quot;...&quot; nie będzie działał zgodnie z oczekiwaniami, więc należy go unikać). Zwróć też uwagę, że <a href="../../../../Settings/Included_Files.htm">plik</a> zip musi być albo częścią pakietu z grą (tzn. <a href="../../../../Settings/Included_Files.htm">plikiem dołączonym</a>), albo musi zostać pobrany do magazynu za pomocą funkcji <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file()</a>.</p>
   <p>Funkcja zwróci wartość określającą liczbę wyodrębnionych plików lub zwróci 0 lub mniej, jeśli wyodrębnianie nie powiodło się.</p>
   <p> </p>

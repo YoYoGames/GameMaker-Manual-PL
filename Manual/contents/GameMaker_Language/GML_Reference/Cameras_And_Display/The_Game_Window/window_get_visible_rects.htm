@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_get_visible_rects</h1>
+  <h1><span data-field="title" data-format="default">window_get_visible_rects</span></h1>
   <p>Za pomocą tej funkcji można znaleźć nakładający się obszar prostokąta zdefiniowanego przez (x1,y1) do (x2,y2) na każdym z dołączonych wyświetlaczy. Funkcja zwróci tablicę z 8 wartościami na każdy wyświetlacz (tzn. jeśli masz dwa wyświetlacze, tablica będzie miała
     długość 16 indeksów), gdzie wartości [0 ... 3] odpowiadają wartościom overlapx1, overlapy1, overlapx2, overlapy2 - określającym obszar nakładania się na tym wyświetlaczu i będą ustawione na 0,0,0,0, jeśli nie ma nakładania się - a wartości [4 ... 7] odpowiadają wartościom
     monitorx1, monitor1, monitorx2, monitor2 - współrzędnym wyświetlacza w przestrzeni wirtualnej. Można to wykorzystać do sprawdzenia, czy zapisana pozycja okna będzie widoczna, czy nie (użytkownik mógł odłączyć zewnętrzny monitor lub

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_parse</h1>
+  <h1><span data-field="title" data-format="default">json_parse</span></h1>
   <p>Ta funkcja może być użyta do przetworzenia pliku JSON <span class="notranslate">string</span> (utworzonego wcześniej przy użyciu <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a> lub z dowolnego poprawnego źródła) i przekształcić go w kolekcję tablic lub <span class="notranslate">structs</span>, gdzie tablica jest odpowiednikiem tablicy JSON, a <span class="notranslate">struct</span> jest odpowiednikiem JSON <span class="notranslate">object</span>. Użytkownik podaje adres <span class="notranslate">string</span> do przetworzenia, a funkcja zwraca tablicę najwyższego poziomu lub <span class="notranslate">struct</span>, którą można wykorzystać w swoim kodzie. Jeśli nie masz pewności co do zawartości JSON, możesz użyć różnych <a href="../../Variable_Functions/Variable_Functions.htm">funkcji zmiennych</a> (takich jak <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> oraz <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> w przypadku <span class="notranslate">struct</span>), aby sprawdzić zwróconą zawartość. Należy pamiętać, że próba parsowania nieprawidłowej wartości (np.: nie <span class="notranslate">string</span>) spowoduje wyświetlenie błędu w postaci wyjątku.</p>
   <p>Podczas korzystania z tej funkcji należy pamiętać o kilku ważnych rzeczach:</p>
   <ul class="colour">

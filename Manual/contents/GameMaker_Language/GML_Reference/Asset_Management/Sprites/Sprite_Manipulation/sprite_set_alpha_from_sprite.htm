@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_alpha_from_sprite</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_alpha_from_sprite</span></h1>
   <p>Ta funkcja wykorzystuje wartość/nasycenie jednej strony <span class="notranslate">sprite</span> i mnoży ją przez alfę docelowej strony <span class="notranslate">sprite</span>. Najlepiej byłoby, gdyby strona <span class="notranslate">sprite</span> użyta do wygenerowania nowej mapy alfa była w skali szarości - białe obszary miałyby wartość alfa równą 1 (nieprzezroczyste), czarne obszary miałyby wartość alfa równą 0 (przezroczyste), a szare obszary miałyby wartość alfa pomiędzy 0 a 1. Strona <span class="notranslate">sprite</span>, na której ustawiasz alfa, <i>nie może być zasobem stałym</i>, podobnie jak strona <span class="notranslate">sprite</span>, której używasz do ustawienia alfa, ponieważ spowoduje to wystąpienie błędu. Oznacza to, że aby funkcja działała poprawnie, musisz w jakiś sposób utworzyć dwie zupełnie nowe strony <span class="notranslate">sprites</span> &quot;w locie&quot;. Można to osiągnąć za pomocą powierzchni lub tworząc stronę <span class="notranslate">sprite</span> z ekranu (poniższy przykład kodu pokazuje, jak można uzyskać ten efekt za pomocą powierzchni).</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja jest przydatna tylko w przypadku <b>map bitowych</b> <span class="notranslate">sprites</span> i nie będzie działać z plikami SWF lub JSON (<span class="notranslate">Spine</span>) <span class="notranslate">sprites</span>.</p>
   <p>Poniżej znajduje się rysunek ilustrujący działanie tej funkcji:</p>

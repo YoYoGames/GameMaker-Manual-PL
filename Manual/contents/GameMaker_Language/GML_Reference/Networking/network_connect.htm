@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_connect</h1>
+  <h1><span data-field="title" data-format="default">network_connect</span></h1>
   <p>Za pomocą tej funkcji można wysłać żądanie połączenia z adresem <span class="notranslate">server</span>. Funkcja pobiera <i>identyfikator gniazda</i>, przez które ma się połączyć (zob. <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) i wymaga podania adresu IP, z którym chcesz się połączyć ( <span class="notranslate">string</span>) oraz portu, przez który chcesz się połączyć, a jeśli połączenie nie powiedzie się, zwrócona zostanie wartość mniejsza niż 0. Połączenie używa specjalnego protokołu, który zapewnia, że tylko gry <span data-keyref="GameMaker Name">GameMaker</span> łączą się ze sobą, jednak jeśli chcesz połączyć się z <span class="notranslate">server</span>, który nie jest grą <span data-keyref="GameMaker Name">GameMaker</span>, możesz użyć <a href="network_connect_raw.htm"><span class="inline">network_connect_raw()</span></a>. Zwróć uwagę, że domyślnie funkcja ta jest synchroniczna, co oznacza, że Twoja gra może się &quot;zawiesić&quot; w trakcie nawiązywania połączenia. Możesz ustawić wartość timeoutu dla połączenia lub sprawić, by tworzenie było asynchroniczne, używając funkcji <span class="inline"><a href="network_set_config.htm">network_set_config()</a></span>, albo zamiast niej użyć funkcji <span class="inline"><a href="network_connect_async.htm">network_connect_async()</a></span>.</p>
   <p class="note"><span class="note">UWAGA</span> Tej funkcji nie można używać w języku HTML5. W przypadku gniazd WebSockets należy użyć <a href="network_connect_async.htm">funkcji Async</a>.</p>
   <p> </p>

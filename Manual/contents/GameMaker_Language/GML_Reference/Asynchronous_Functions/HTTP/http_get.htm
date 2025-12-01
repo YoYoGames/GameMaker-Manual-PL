@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get</h1>
+  <h1><span data-field="title" data-format="default">http_get</span></h1>
   <p>Za pomocą tej funkcji łączysz się z podanym adresem URL w celu pobrania informacji. Ponieważ jest to funkcja asynchroniczna, <span data-keyref="GameMaker Name">GameMaker</span> nie będzie blokował się w oczekiwaniu na odpowiedź, ale będzie działał dalej, dopóki nie otrzyma informacji zwrotnej. Informacja ta będzie miała postać <span class="notranslate">string</span> i wywoła <b>Async Event</b> w każdej instancji, która ma go zdefiniowanego w swoich właściwościach <span class="notranslate">object</span>. Powinieneś również zauważyć, że parametry żądania HTTP (bity czasami &quot;przyklejone&quot; do końca adresu URL, gdy przesyłasz formularz na stronie internetowej) są całkowicie dopuszczalne podczas korzystania z tej funkcji, na przykład:</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
   <p>przekaże adres <span class="notranslate">string</span> przechowywany w zmiennej &quot;name&quot; do <span class="notranslate">server</span> oraz pobierze dane z tego adresu URL. Tak więc, zasadniczo, za każdym razem, gdy prosty, krótki kawałek danych musi być przekazany od klienta do <span class="notranslate">server</span>, to będzie rozsądny wybór jako funkcja do użycia.</p>

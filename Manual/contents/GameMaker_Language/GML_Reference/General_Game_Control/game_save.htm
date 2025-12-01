@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gra_zapis</title>
+  <title>game_save</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gra_zapis</h1>
+  <h1><span data-field="title" data-format="default">game_save</span> <span data-conref="..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Jest to starsza funkcja, która może być używana do zapisywania bieżącego stanu gry i nie jest już zalecana do użytku. Zamiast tego użyj <a href="../File_Handling/File_Handling.htm">funkcji Plik</a>, aby utworzyć własny system zapisu, w którym będziesz zapisywać i wczytywać tylko określone dane gry.</p>
   <p>Funkcja ta zapisuje stan gry, jednak nie zapisuje żadnych zasobów dynamicznych używanych w tym czasie, takich jak struktury danych, powierzchnie, <span class="notranslate">assets</span> dodane na stronie <span class="notranslate">runtime</span>, itp. Jeśli taki plik zapisu zostanie wczytany, wszelkie aktualizacje gry dokonane po zapisie nie będą widoczne, ponieważ zostanie przywrócona wersja gry, która została użyta do utworzenia zapisu.</p>
   <p>Należy pamiętać, że pliki zapisu utworzone przy użyciu tej funkcji mogą nie być obsługiwane przez zaktualizowane wersje <a class="glossterm" data-glossterm="Runtime" href="#">Runtime</a>, dlatego zastąpienie tej funkcji nowym systemem zapisu jest niezbędne do zapewnienia zgodności z przyszłymi aktualizacjami <span class="notranslate">GameMaker</span> oraz, z powodów wymienionych powyżej, z aktualizacjami własnej gry.</p>

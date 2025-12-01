@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_draw_ext</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_draw_ext</span></h1>
   <p>Ta funkcja narysuje stronę <span class="notranslate">sprite</span> w miejscu wszystkich cząstek, które mają tę samą, zdefiniowaną przez użytkownika wartość kategorii i które mają stronę <span class="notranslate">flags</span> pokrywającą się z wartością ustawioną dla maski. Wartość maski definiuje się w taki sam sposób, w jaki definiuje się <span class="notranslate">flags</span> podczas tworzenia cząstek (patrz funkcje <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> ), tzn. używając funkcji <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitowej <i>lub</i></a> &quot;|&quot;, aby zamaskować odpowiednie bity dla każdej strony <span class="notranslate">flag</span>.</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja narysuje <b>wszystkie</b> cząstki w symulacji fizycznej z adresem <span class="notranslate">flags</span>, który pokrywa się z adresem maski, niezależnie od tego, czy są to pojedyncze cząstki, czy grupy, jeśli kategoria użytkownika jest taka sama.</p>
   <p>Narysowana cząstka zignoruje wartości koloru i alfa ustawione podczas jej tworzenia, a zamiast tego zostanie narysowana przy użyciu parametrów skali, kąta, koloru i alfa podanych w tej funkcji. Funkcja ta służy wyłącznie do rysowania strony <span class="notranslate">sprite</span> w miejscu, w którym znajduje się cząstka, i w żaden sposób nie wpływa na jej zachowanie.</p>

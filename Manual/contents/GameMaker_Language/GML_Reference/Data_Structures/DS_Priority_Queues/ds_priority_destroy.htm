@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ds_priorytet_zniszczenia</title>
+  <title>ds_priority_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_priorytet_zniszczenia</h1>
+  <h1><span data-field="title" data-format="default">ds_priority_destroy</span></h1>
   <p>Ta funkcja usuwa z pamięci podaną strukturę danych o priorytecie <span class="notranslate">queue</span>, zwalniając zasoby, z których korzystała, i usuwając wszystkie wartości, które zawierała. Funkcji tej należy używać zawsze po zakończeniu korzystania z priorytetu DS <span class="notranslate">queue</span>, aby zapobiec wyciekom pamięci, które mogą spowolnić i zawiesić grę.</p>
   <p class="note"><b>WAŻNE!</b> Kiedy tworzysz strukturę danych, wartość indeksu identyfikująca ją jest wartością całkowitą zaczynającą się od 0. Oznacza to, że struktury danych różnych typów mogą mieć <b>tę samą</b> wartość indeksu, więc jeśli masz wątpliwości, powinieneś użyć funkcji <a href="../ds_exists.htm"><span class="inline"><span style="font-size:14px;">ds_exists()</span></a> przed uzyskaniem do nich dostępu. Należy również pamiętać, że indeksy są używane ponownie, więc wartość indeksu zniszczonej struktury danych może zostać użyta przez nowo utworzoną strukturę. Dlatego zalecamy, aby po zniszczeniu zawsze ustawiać zmienną, która przechowywała indeks DS, na -1.</p>
   <p> </p>
