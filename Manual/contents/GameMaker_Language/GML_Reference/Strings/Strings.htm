@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Struny</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -18,14 +18,14 @@
   <p>W pewnym momencie tworzenia gry konieczne będzie użycie tekstu. Tekst w grach jest obsługiwany za pomocą funkcji <b>łańcuchowych</b> ( <span class="notranslate">string</span> to po prostu inny sposób na określenie wiersza tekstu), a <span data-keyref="GameMaker Name">GameMaker</span> ma kompletny zestaw funkcji, które pozwalają na manipulowanie <span class="notranslate">strings</span> na wiele sposobów, w tym wstawianie jednego <span class="notranslate">string</span> w drugi, kopiowanie <span class="notranslate">strings</span> oraz możliwość analizowania <span class="notranslate">strings</span> pod kątem zawartych w nim cyfr lub liter. Ogólnie rzecz biorąc, <span class="notranslate">string</span> można utworzyć <i>tylko</i> przez dodanie tekstu w cudzysłowach &quot; &quot;, a <em>pojedyncze cudzysłowy <span class="notranslate">strings</span> nie są akceptowane. Nie</em> można też rozdzielić adresu <span class="notranslate">string</span> na wiele linii i oczekiwać, że <span data-keyref="GameMaker Name">GameMaker</span> będzie go renderował tak, jakby przerwy między liniami były znakami nowej linii (chyba że użyty zostanie <strong>dosłowny</strong> identyfikator <span class="inline">@</span>, jak wyjaśniono poniżej).</p>
   <p>Warto zauważyć, że istnieją pewne konwencje, których można używać podczas tworzenia stron <span class="notranslate">strings</span>, głównie dotyczące stosowania <i>znaków ucieczki</i>. Są to znaki, które są poprzedzone symbolem &quot;<span class="inline">\</span>&quot;. Tak więc, na przykład, jeśli chcesz umieścić cudzysłów wewnątrz adresu <span class="notranslate">string</span>, otrzymasz coś takiego:</p>
   <p class="code">str = &quot;Hello\&quot;World\&quot;&quot;;</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> ma także pełną obsługę znaków Unicode o szerokości czterech bajtów, co pozwala na dekodowanie i kodowanie znaków Unicode w górnych granicach standardu (w tym - ale nie tylko - emoji). Aby poradzić sobie ze znakami Unicode, można użyć &quot;<span class="inline">\</span>&quot; do poprzedzania literałów Unicode - cyfry heksadecymalne poprzedzone &quot;<span class="inline">u</span>&quot;, na przykład &quot;<span class="inline"><span class="inline">\u00e2</span>&quot; dla &quot;á&quot;- gdzie cyfry są numerem znaku Unicode. Pracując z Unicode w ten sposób, musisz być świadomy faktu, że <span data-keyref="GameMaker Name">GameMaker</span> zinterpretuje <i>wszystkie</i> cyfry następujące po &quot;<span class="inline">u</span>&quot;, więc jeśli chciałbyś napisać na przykład &quot;áa&quot;, powinieneś użyć:</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> ma także pełną obsługę znaków Unicode o szerokości czterech bajtów, co pozwala na dekodowanie i kodowanie znaków Unicode w górnych granicach standardu (w tym - ale nie tylko - emoji). Aby poradzić sobie ze znakami Unicode, można użyć &quot;<span class="inline">\</span>&quot; do poprzedzania literałów Unicode - cyfry heksadecymalne poprzedzone &quot;<span class="inline">u</span>&quot;, na przykład &quot;<span class="inline">\u00e2</span>&quot; dla &quot;á&quot;- gdzie cyfry są numerem znaku Unicode. Pracując z Unicode w ten sposób, musisz być świadomy faktu, że <span data-keyref="GameMaker Name">GameMaker</span> zinterpretuje <i>wszystkie</i> cyfry następujące po &quot;<span class="inline">u</span>&quot;, więc jeśli chciałbyś napisać na przykład &quot;áa&quot;, powinieneś użyć:</p>
   <p class="code">&quot;\u00e2\a&quot;</p>
   <p>lub .</p>
   <p class="code">&quot;\u00e2\u61&quot;</p>
   <p>lub .</p>
   <p class="code">&quot;\u00e2&quot; + &quot;a&quot;</p>
   <p>ponieważ samo użycie &quot;<span class="inline">\u00e2a</span>&quot; spowodowałoby w rzeczywistości użycie znaku Unicode &quot;<span class="inline">ส</span>&quot; (stając się w istocie znakiem &quot;<span class="inline">\ue2a</span>&quot;).<i></i></p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> może również obsługiwać dowolne literały szesnastkowe - zwykle zapisywane jako cyfry heksadecymalne następujące po &quot;<span class="inline">0x</span>&quot;, na przykład &quot;<span class="inline">0xff</span>&quot;, gdzie cyfry są numerem znaku, który ma być użyty. W <span data-keyref="GameMaker Name">GameMakerze</span> zapisuje się je za pomocą &quot;<span class="inline">\x</span>&quot;, a następnie wartości szesnastkowej. Te i inne predefiniowane znaki ucieczki są wymienione w poniższej tabeli:</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> może również obsługiwać dowolne literały szesnastkowe - zwykle zapisywane jako cyfry heksadecymalne następujące po &quot;<span class="inline">0x</span>&quot;, na przykład &quot;<span class="inline">0xff</span>&quot;, gdzie cyfry są numerem znaku, który ma być użyty. W <span data-keyref="GameMaker Name">GameMaker</span> zapisuje się je za pomocą &quot;<span class="inline">\x</span>&quot;, a następnie wartości szesnastkowej. Te i inne predefiniowane znaki ucieczki są wymienione w poniższej tabeli:</p>
   <table>
     <tbody>
       <tr>
@@ -86,14 +86,13 @@
     lines<br />
     &quot;;</p>
   <p>Powyższy kod wyrenderuje stronę <span class="notranslate">string</span> w wielu wierszach, tak jakby dołączony był znak escape łamania wiersza. Dosłowne <span class="notranslate">string</span> są podobne do poprzednich wersji <span class="notranslate">GameMaker</span>, <span class="notranslate">string</span>, ale również używają podwójnych lub pojedynczych cudzysłowów i muszą być poprzedzone symbolem <span class="inline">@</span>, mogą być łamane w wielu liniach pliku kodu i NIE obsługują ucieczki znaków, np. <span class="inline">@&quot;Hello\World&quot;</span> <em>nie</em> będzie próbował uciec od W w World i będzie zapisany dosłownie. Należy jednak pamiętać, że podczas używania literałów <span class="notranslate">string</span> w ten sposób, trzeba będzie złamać <span class="notranslate">string</span>, jeśli chcesz włączyć cudzysłów jako część <span class="notranslate">string</span>, tzn:</p>
-  <p class="code">var test = @&quot;Hello &quot; + &quot;\&quot;&quot; + @&quot;World&quot; + &quot;\&quot;&quot;</p>
+  <p class="code">var test = @&quot;Hello &quot; + &quot;\&quot;&quot; + @&quot;World&quot; + &quot;\&quot;&quot;;</p>
   <p>Kolejną rzeczą, na którą należy zwrócić uwagę, jest to, że znak Unicode 9647 (▯) jest używany do zastępowania brakujących glifów, które mogą znajdować się na wskazanej stronie <span class="notranslate">font</span>, podczas renderowania jej w zdarzeniu draw. Jeśli więc na przykład na stronie <span class="notranslate">font</span> nie ma symbolu °, to napisanie 90° spowoduje wygenerowanie 90▯.</p>
   <p>Poniższa lista funkcji służy do pracy z łańcuchami znaków:</p>
   <ul class="colour">
     <li><a href="ansi_char.htm"><span class="notranslate">ansi_char</span></a></li>
     <li><a href="chr.htm"><span class="notranslate">chr</span></a></li>
     <li><a href="ord.htm"><span class="notranslate">ord</span></a></li>
-    <li><a href="real.htm"><span class="notranslate">real</span></a></li>
     <li><a href="string.htm"><span class="notranslate">string</span></a></li>
     <li><a href="string_byte_at.htm"><span class="notranslate">string_byte_at</span></a></li>
     <li><a href="string_byte_length.htm"><span class="notranslate">string_byte_length</span></a></li>
@@ -125,16 +124,16 @@
     <li><a href="string_hash_to_newline.htm"><span class="notranslate">string_hash_to_newline</span></a></li>
     <li><a href="../Variable_Functions/is_string.htm"><span class="notranslate">is_string</span></a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p>Poza funkcjami dotyczącymi konkretnie strony <span class="notranslate">strings</span>, niektóre cele umożliwiają dostęp do schowka w celu uzyskania i ustawienia informacji tekstowych:</p>
   <ul class="colour">
     <li><a href="clipboard_has_text.htm"><span class="notranslate">clipboard_has_text</span></a></li>
     <li><a href="clipboard_get_text.htm"><span class="notranslate">clipboard_get_text</span></a></li>
     <li><a href="clipboard_set_text.htm"><span class="notranslate">clipboard_set_text</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
@@ -142,7 +141,7 @@
         <div style="float:right">Następny: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Matematyka i liczby</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Wszystkie prawa zastrzeżone.</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings
