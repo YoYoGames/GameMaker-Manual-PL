@@ -18,7 +18,7 @@
   <p>Ta funkcja zastosuje podane ustawienia kamery do bieżącego widoku kamery, który jest natychmiast renderowany. Chociaż możesz ustawić dowolny widok kamery za pomocą odpowiednich funkcji <span class="inline">camera_set_*</span>, nowe ustawienia nie zostaną użyte do renderowania aż do <i>następnej</i> klatki gry, ale dzięki tej funkcji możesz dokonać tych zmian natychmiast. Jeśli używasz wielu widoków, funkcja ta powinna być użyta w <b>zdarzeniu Draw</b> i możesz użyć zmiennej <a href="view_current.htm"><span class="inline">view_current</span></a> aby selektywnie zastosować daną kamerę tylko do widoku kamery, który jest aktualnie renderowany. Zwróć uwagę, że NIE zmienia to wartości ID kamery, tylko ustawienia dla tej kamery, i że jeśli użyjesz tej funkcji na domyślnej kamerze (tzn. wewnętrznej kamerze, której <span data-keyref="GameMaker Name">GameMaker</span> używa, gdy nie ma aktywnych kamer widoku), zmiany zostaną nadpisane w następnej klatce gry przez wewnętrzne ustawienia rysowania <span class="notranslate">room</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">camera_apply(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_apply</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

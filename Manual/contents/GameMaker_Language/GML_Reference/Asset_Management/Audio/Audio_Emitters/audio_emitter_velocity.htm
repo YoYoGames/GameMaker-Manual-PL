@@ -18,7 +18,7 @@
   <p>Za pomocą tej funkcji można nadać emiterowi efekty <em>Dopplera </em>i symulować ruch dźwięku na podstawie wektora wyznaczonego z podanych względnych pozycji x, y i z. Jeśli emiter nie będzie się poruszał, zwykle nie ma potrzeby ustawiania tych wartości, ale na przykład jeśli tworzysz przewijaną grę, w której wrogowie przychodzą z prawej strony i przewijają się w lewo, możesz ustawić prędkość (hspeed, 0, 0) w zdarzeniu create wrogów (i zaktualizować emiter każdej instancji w zdarzeniu step, używając funkcji <a href="audio_emitter_position.htm"><span class="inline">audio_emitter_position()</span></a>), aby dźwięki emitowane przez wrogie instancje miały prawidłowy doppler, gdy będą mijać instancję gracza (która z kolei będzie używać funkcji <a href="../Audio_Listeners/audio_listener_position.htm"><span class="inline">audio_listener_position()</span></a> do ustawienia <i>słuchacza</i> w odpowiedniej pozycji).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_emitter_velocity(emitter, vx, vy, vz);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_velocity</span>(emitter, vx, vy, vz);</p>
   <table>
     <tbody>
       <tr class="rh-cursor-column">

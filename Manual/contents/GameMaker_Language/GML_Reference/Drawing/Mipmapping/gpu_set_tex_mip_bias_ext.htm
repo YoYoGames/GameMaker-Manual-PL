@@ -18,7 +18,7 @@
   <p>Za pomocą tej funkcji można ustawić wartość mipmap bias dla danego próbnika <span class="notranslate">shader</span>. Podajesz wartość indeksu próbnika <span class="notranslate">shader</span> (zwróconą przez funkcję <a href="../../Asset_Management/Shaders/shader_get_sampler_index.htm"><span class="inline">shader_get_sampler_index()</span></a>a następnie wartość bias, gdzie 0 oznacza brak bias, 1 oznacza pierwszą mipmapę, 2 oznacza drugą mipmapę itd. Ta wartość kontroluje szybkość, z jaką mapa mip jest zamieniana, i generalnie powoduje, że obraz na stronie <span class="notranslate">shader</span> <span class="notranslate">textures</span> jest tym bardziej rozmyty, im wyższa jest ta wartość i im większa jest &quot;odległość&quot; oglądania. Należy pamiętać, że funkcja ta może przyjmować także wartości ujemne, w którym to przypadku obraz <span class="notranslate">shader</span> <span class="notranslate">textures</span> będzie ostrzejszy na większej odległości, im niższa będzie wartość.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gpu_set_tex_mip_bias_ext(sampler_index, bias);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_tex_mip_bias_ext</span>(sampler_index, bias);</p>
   <table>
     <tbody>
       <tr>

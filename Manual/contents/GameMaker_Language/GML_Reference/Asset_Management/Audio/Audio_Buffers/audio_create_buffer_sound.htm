@@ -47,7 +47,7 @@
   <p>Po utworzeniu dźwięku należy zwolnić związany z nim indeks wskaźnika, gdy nie jest on już potrzebny, używając funkcji <a href="audio_free_buffer_sound.htm"><span class="inline">audio_free_buffer_sound()</span></a>. Jeśli tego nie zrobisz, a następnie ponownie przypiszesz zmienną lub zmienisz adres <span class="notranslate">rooms</span> itp., identyfikator dźwięku zostanie utracony i wystąpi przeciek pamięci. Należy również pamiętać, że nie można usunąć adresu <span class="notranslate">buffer</span>, jeśli na jego podstawie został utworzony jakiś dźwięk, a dźwięk nie został najpierw zwolniony. Dlatego najpierw należy zwolnić dźwięk (lub dźwięki), a <i>następnie</i> usunąć <span class="notranslate">buffer</span>. Warto również zauważyć, że dodawanie czegokolwiek do adresu <span class="notranslate">buffer</span> lub zmiana rozmiaru adresu <span class="notranslate">buffer</span> po utworzeniu z niego dźwięku przyniesie nieoczekiwane rezultaty i nie jest zalecane - po rozpoczęciu tworzenia dźwięków z dowolnego adresu <span class="notranslate">buffer</span> nie należy nim później manipulować w żaden inny sposób.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_create_buffer_sound(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_buffer_sound</span>(bufferId, bufferFormat, bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
   <table>
     <tbody>
       <tr>

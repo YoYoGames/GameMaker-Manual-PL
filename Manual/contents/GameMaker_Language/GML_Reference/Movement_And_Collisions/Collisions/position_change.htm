@@ -18,7 +18,7 @@
   <p>Funkcja ta sprawdza pozycję pod kątem kolizji z <i>dowolnymi instancjami</i> w podanym punkcie, a jeśli taka kolizja występuje, zmienia <b>wszystkie</b> instancje w kolizji na instancje wybranego obiektu <span class="notranslate">object</span>. Możesz ustawić argument &quot;perf&quot; na <span class="inline">true</span>, co zmusi <span data-keyref="GameMaker Name">GameMakera</span> do wykonania zdarzeń <strong>Destroy</strong> i <strong>Clean Up</strong> znalezionej instancji oraz zdarzenia <strong>Create</strong> nowej instancji, lub <span class="inline">false</span>, by nie wykonywać żadnego z tych zdarzeń. Należy pamiętać, że jeśli nie wykonasz zdarzeń Destroy, Clean Up i Create, każda utworzona instancja, która używa zmiennej normalnie zdefiniowanej w zdarzeniu create, spowoduje awarię gry, ponieważ zmienna ta nie będzie już istnieć.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">position_change(x, y, obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">position_change</span>(x, y, obj, perf);</p>
   <table>
     <tbody>
       <tr>

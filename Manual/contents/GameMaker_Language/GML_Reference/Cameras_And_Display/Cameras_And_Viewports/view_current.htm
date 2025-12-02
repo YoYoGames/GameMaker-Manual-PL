@@ -18,7 +18,7 @@
   <p>Ta zmienna tylko do <b>odczytu</b> jest ważna tylko w przypadku <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm"><b>Zdarzenie losowania</b></a> i zwraca bieżący port widoku, który jest renderowany. Wartość zwracana będzie się zmieniać podczas zdarzenia draw, gdy masz różne widoki, ponieważ zdarzenie draw jest wywoływane <i>raz dla każdego portu widoku po kolei</i>. Tak więc, gdy (na przykład) używasz portów widoków[0] i portów widoków[1] w swojej grze <span class="notranslate">room</span>, zdarzenie draw dla <i>WSZYSTKICH</i> instancji zostanie uruchomione dwukrotnie, raz dla każdego portu, a dzięki tej zmiennej możesz sprawdzić, jaki widok jest aktualnie rysowany. Ogólnie rzecz biorąc, jest to używane do renderowania tylko określonych szczegółów w pojedynczym porcie, gdy wiele portów widoku jest widocznych na stronie <span class="notranslate">room</span> w tym samym czasie. Zobacz przykładowy kod poniżej.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">view_current;</p>
+  <p class="code"><span data-field="title" data-format="default">view_current</span></p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (view port index from 0 to 7)</p>

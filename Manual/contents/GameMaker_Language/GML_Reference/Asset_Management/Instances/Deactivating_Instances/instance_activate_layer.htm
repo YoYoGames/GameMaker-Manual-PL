@@ -19,7 +19,7 @@
   <p>Za pomocą tej funkcji można aktywować warstwę, która została wcześniej wyłączona. Należy podać <b>identyfikator</b> warstwy, który może być albo nazwą warstwy zapisaną w edytorze kodu (jako <span class="notranslate">string</span>), albo rzeczywistą wartością identyfikatora warstwy zwróconą przez funkcję <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> a wszystkie dezaktywowane instancje na tej warstwie zostaną ponownie aktywowane. Zauważ, że jeśli dezaktywowałeś warstwę, która ma trwałe instancje, musisz ją ponownie aktywować za pomocą tej funkcji przed zmianą adresu <span class="notranslate">room</span>, w przeciwnym razie trwałe instancje <i>nie</i> zostaną przeniesione i zostaną odrzucone. Należy również pamiętać, że aktywacja nie jest natychmiastowa, a instancja, która została aktywowana w ten sposób, nie będzie uważana za aktywną do końca zdarzenia, w którym wywołano tę funkcję.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_activate_layer(layer_id);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_activate_layer</span>(layer_id);</p>
   <table>
     <tbody>
       <tr>

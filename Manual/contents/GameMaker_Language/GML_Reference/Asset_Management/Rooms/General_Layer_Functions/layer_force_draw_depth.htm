@@ -18,7 +18,7 @@
   <p>Ta funkcja wymusza rysowanie <i>wszystkich</i> warstw na określonej głębokości z. <b>Nie zmienia to kolejności renderowania warstw</b> i nadal będą one rysowane w kolejności głębokości, po prostu zmienia wartość z, która jest używana. Na ogół nie trzeba się tym przejmować, ale jeśli warstwy mają głębokość spoza dozwolonego zakresu (od -16000 do 16000), to nie będą renderowane, więc można ustawić głębokość z na rozsądną wartość - na przykład 0 - i wszystkie będą renderowane poprawnie. Należy pamiętać, że to rozwiązanie jest przeznaczone tylko dla starszych projektów z poprzednich wersji <i>GameMakera</i>, w których głębokość rysowania mogła być większa lub mniejsza niż dozwolony zakres warstw.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">layer_force_draw_depth(force, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_force_draw_depth</span>(force, depth)</p>
   <table>
     <tbody>
       <tr>

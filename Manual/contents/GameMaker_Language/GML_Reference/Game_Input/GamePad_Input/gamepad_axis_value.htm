@@ -20,7 +20,7 @@
   <p>Należy pamiętać, że zwracana wartość jest normalizowana z uwzględnieniem wartości ustawionej dla strefy martwej osi (za pomocą funkcji <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), a więc zawsze będzie zawierać się w przedziale od -1 do 0 oraz od 0 do 1. Na przykład ustawienie strefy martwej na 0.2 oznacza, że naciśnięcie drążka w prawo zacznie zwracać wartość z przedziału 0 - 1 dopiero wtedy, gdy wartość <em>surowa</em> osi przekroczy 0,2 - na przykład, gdy wartość surowa wynosi 0,2, wartość zwracana będzie 0, gdy wartość surowa wynosi 0,5, wartość zwracana będzie 0,375, a jeśli wartość surowa wynosi 0,9, wartość zwracana będzie 0,875.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gamepad_axis_value(device, axisIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_axis_value</span>(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>

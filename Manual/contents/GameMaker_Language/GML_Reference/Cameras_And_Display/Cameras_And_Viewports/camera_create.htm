@@ -20,7 +20,7 @@
   <p>Należy pamiętać, że kamery, jak wszystkie zasoby dynamiczne, zajmują pamięć w momencie utworzenia. Oznacza to, że należy uważać, aby nie tworzyć kamer niepotrzebnie i niszczyć te, które nie są potrzebne, wywołując funkcję <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Oznacza to również, że kamery będą trwały od <span class="notranslate">room</span> do <span class="notranslate">room</span>, jeśli zostaną przypisane do zmiennej <span class="inline">global</span> (będą trwały także wtedy, gdy zostaną przypisane do zmiennych instancji lub zmiennych lokalnych, ale nie będzie można uzyskać do nich dostępu po zmianie <span class="notranslate">room</span>, stąd wyciek pamięci), tak więc można na przykład utworzyć nową kamerę, przypisać ją do zmiennej globalnej, a następnie na początku każdej strony <span class="notranslate">room</span> ustawić wymagane macierze widoku i rzutowania oraz port widoku, który ma być używany.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">camera_create();</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create</span>();</p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_ID_Camera">Camera ID</span></p>

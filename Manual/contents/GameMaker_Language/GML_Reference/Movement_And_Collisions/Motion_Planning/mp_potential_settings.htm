@@ -20,7 +20,7 @@
   <p>Parametr &quot;maxrot&quot; jest nieco trudniejszy do wyjaśnienia! Instancja ma aktualny kierunek ruchu, a maxrot (domyślna wartość to 30) określa, jak bardzo może zmienić swój kierunek po obu stronach tego aktualnego kierunku w jednym kroku. Zatem nawet jeśli instancja może poruszać się np. prosto do celu, to zrobi to tylko wtedy, gdy nie naruszy tego maksymalnego ograniczenia zmiany kierunku. Jeśli ustawisz dużą wartość maxrot, to instancja będzie mogła zmieniać kierunek w każdym kroku, co ułatwi znalezienie krótkiej strony <span class="notranslate">path</span>, ale strona <span class="notranslate">path</span> będzie brzydsza i mniej naturalna. Jeśli wartość ta będzie mniejsza, wtedy <span class="notranslate">path</span> będzie bardziej płynna, ale może wymagać dłuższych objazdów (a czasem nawet nie znaleźć celu). Wreszcie, gdy nie można wykonać żadnego kroku, zachowanie zależy od wartości parametru &quot;onspot&quot;. Jeśli onspot ma wartość true (wartość domyślna), to instancja będzie się obracać w miejscu o wartość wskazaną przez &quot;maxrot&quot;, a jeśli ma wartość false, to nie będzie się w ogóle poruszać. Ustawienie wartości false jest użyteczne np. dla samochodów, ale zmniejsza szanse na znalezienie przez instancję adresu <span class="notranslate">path</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">mp_potential_settings(maxrot, rotstep, ahead, onspot)</p>
+  <p class="code"><span data-field="title" data-format="default">mp_potential_settings</span>(maxrot, rotstep, ahead, onspot)</p>
   <table>
     <tbody>
       <tr>

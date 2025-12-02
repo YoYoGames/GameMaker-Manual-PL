@@ -21,7 +21,7 @@
   <p class="note"><b>OSTRZEŻENIE!</b> Gdy zmieniasz instancję z włączoną fizyką, właściwości fizyczne <b>nie zostaną przeniesione</b> do nowej instancji, w którą się zmieniają. Dlatego powinieneś mieć kod, który &quot;przeniesie&quot; stan fizyki bieżącej instancji do nowej instancji, albo zdefiniować właściwości fizyczne nowej instancji w zdarzeniu Create Event lub w edytorze <span class="notranslate">object</span>. Z tego powodu zaleca się, by nie używać tej funkcji z instancjami z włączoną fizyką, lecz raczej korzystać z kombinacji <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> i <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

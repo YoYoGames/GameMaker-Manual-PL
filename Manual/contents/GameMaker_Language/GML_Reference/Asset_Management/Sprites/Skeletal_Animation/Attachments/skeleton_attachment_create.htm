@@ -19,7 +19,7 @@
   <p>Podczas tworzenia animacji szkieletowej <span class="notranslate">sprite</span> można przypisać <i>gniazda dołączania</i> i <i>dołączane</i> do nich elementy. Są to po prostu obrazki, które nie są częścią animacji, ale po dołączeniu poruszają się razem z kością, do której są dołączone. Zazwyczaj takie dodatki są przypisywane w programie animacji (<span class="notranslate">Spine</span>), ale dzięki tej funkcji możesz tworzyć własne w czasie rzeczywistym, używając <span class="notranslate">sprite</span> <span class="notranslate">asset</span> ze swojej gry. Funkcja wymaga nadania dodatkowi nazwy (jako <span class="notranslate">string</span>), a następnie ustawienia sprite_index i image_index do użycia, jak również x i y origin (które mogą być inne niż te zdefiniowane przez <span class="notranslate">sprite</span> we właściwościach <span class="notranslate">sprite</span> ). Jeśli załącznik został utworzony pomyślnie, funkcja zwróci <span class="inline">1</span>, a jeśli nie (podano nieprawidłowy indeks <span class="notranslate">sprite</span> lub podstawa <span class="notranslate">sprite</span> nie jest <span class="notranslate">Spine</span> <span class="notranslate">sprite</span>), zwróci <span class="inline">-1</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">skeleton_attachment_create(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_attachment_create</span>(name, sprite, ind, xorigin, yorigin, xscale, yscale, rot);</p>
   <table>
     <tbody>
       <tr>

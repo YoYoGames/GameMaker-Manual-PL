@@ -18,7 +18,7 @@
   <p>Za pomocą tej funkcji można zniszczyć dowolną kamerę. Podczas wywoływania funkcji podajesz unikalną wartość ID kamery, którą uzyskujesz z funkcji <span class="inline">camera_create_*</span> lub z tablicy <a href="view_camera.htm"><span class="inline">view_camera</span></a> jeśli do skonfigurowania portu widoku i widoku użyto edytora <span class="notranslate">Room</span>. <i>Nie powinieneś nigdy</i> niszczyć kamery, która jest aktualnie przypisana do widocznego widoku, chyba że w tym samym kroku przypisujesz nową kamerę do tego widoku. Powinieneś także <i>zawsze</i> niszczyć kamery utworzone za pomocą kodu, gdy nie są już potrzebne w grze, aby zapobiec wyciekom pamięci. Możesz także niszczyć kamery domyślne, jeśli masz je przypisane w edytorze <span class="notranslate">Room</span>, ale powinieneś przypisać nową kamerę do portu widoku (lub wyłączyć ją), w przeciwnym razie otrzymasz dziwne wyniki.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">camera_destroy(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_destroy</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>

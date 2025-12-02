@@ -18,7 +18,7 @@
   <p>Za pomocą tej funkcji można wyczyścić wszystkie dane z podanej struktury danych listy. <i>NIE</i> niszczy to struktury danych (do tego celu należy użyć funkcji <a href="ds_list_destroy.htm"><span class="inline">ds_list_destroy()</span></a>), a jedynie usuwa z niej wszystkie dane i czyni listę pustą (o zerowym rozmiarze). Zauważ, że wyczyszczenie listy spowoduje usunięcie odniesienia do wszelkich struktur danych w niej przechowywanych, co spowoduje wyciek pamięci, więc aby temu zapobiec, musisz ręcznie przejrzeć listę i zniszczyć wszystkie elementy struktury danych przed jej wyczyszczeniem. Jedynym przypadkiem, w którym nie jest to wymagane, jest oznaczenie elementów listy jako innej <a href="DS_Lists.htm">listy DS</a> lub <a href="../DS_Maps/DS_Maps.htm">mapy DS</a>. W takim przypadku elementy te zostaną zniszczone (nie wyczyszczone!), a ich pamięć zostanie automatycznie wyczyszczona po wyczyszczeniu elementu nadrzędnego.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">ds_list_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

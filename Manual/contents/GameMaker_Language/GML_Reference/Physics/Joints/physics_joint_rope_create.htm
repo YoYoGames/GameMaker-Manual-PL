@@ -20,7 +20,7 @@
   <p><img>Jak widać, punkty zakotwiczenia są określone jako współrzędne <span class="notranslate">room</span>, więc należy zachować ostrożność przy ich definiowaniu, zwłaszcza jeśli instancje są tworzone w tym samym czasie co przeguby, a nie są umieszczane na stronie <span class="notranslate">room</span> poprzez edytor <span class="notranslate">room</span>. Należy również pamiętać, że przeguby są tworzone niezależnie od rozmiaru <span class="notranslate">sprite</span> instancji lub zamocowań, do których są dołączone. Jeśli więc utworzysz przegub linowy w innym miejscu niż początek instancji, będzie on nadal ważny i będzie ograniczał dwie instancje względem pozycji, w której został utworzony. Jeśli ustawisz wartość &quot;col&quot; na <span class="inline">true</span>, dwie instancje mogą oddziaływać na siebie i zderzać się ze sobą, ale <i>tylko</i> wtedy, gdy wystąpią zdarzenia kolizji, natomiast jeśli ustawisz wartość &quot; <span class="inline">false</span>, nie będą się one zderzać bez względu na wszystko.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_rope_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
   <table>
     <tbody>
       <tr>

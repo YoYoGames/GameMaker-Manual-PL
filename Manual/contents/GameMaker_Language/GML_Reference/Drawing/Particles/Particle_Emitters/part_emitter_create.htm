@@ -19,7 +19,7 @@
   <p>Funkcja służy do tworzenia nowego emitora cząstek w podanym systemie cząstek. Funkcja zwróci wartość indeksu nowego emitera, który musi być przechowywany w zmiennej i używany we wszystkich dalszych funkcjach odwołujących się do emitera, a sam emiter musi być zniszczony, gdy nie jest już używany, aby zapobiec wyciekom pamięci (można to osiągnąć za pomocą specjalnych funkcji emitter destroy lub przez zniszczenie całego systemu cząstek, do którego należy emiter).</p>
   <p class="note"><span class="note">UWAGA</span> ID emiterów zwracane przez tę funkcję są używane ponownie, np. jeśli najpierw stworzysz trzy emitery cząstek, będą one miały przypisane ID 0, 1 i 2. Jeśli następnie zniszczysz drugi emiter (który otrzymał ID 1) używając <a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a> a następnie stworzysz kolejny emiter, to ten emiter ponownie wykorzysta ID 1. Ponieważ emiter o ID 2 jest w użyciu, następny emiter otrzyma ID 3 itd.</p>
   <h4>Składnia:</h4>
-  <p class="code">part_emitter_create(ps);</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_create</span>(ps);</p>
   <table>
     <tbody>
       <tr>

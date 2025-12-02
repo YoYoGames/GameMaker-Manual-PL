@@ -28,7 +28,7 @@
   <p>Zmienna &quot;score&quot; będzie zwiększana, <i>mimo że została wywołana funkcja <span class="inline">instance_destroy</span> </i>, a instancja zostanie ostatecznie usunięta z gry na końcu zdarzenia. Uważaj na to, ponieważ jeśli (na przykład) utworzyłeś dynamiczny zasób dla instancji, taki jak struktura danych, a następnie zniszczyłeś ten zasób w zdarzeniu destroy, to jeśli po wykonaniu funkcji lub akcji destroy istnieją jakiekolwiek odniesienia do tego zasobu, otrzymasz błąd &quot;nieznany zasób&quot;, ponieważ zdarzenie destroy usunęło go z gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>

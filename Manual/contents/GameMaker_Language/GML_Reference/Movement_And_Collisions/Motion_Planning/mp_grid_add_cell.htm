@@ -19,7 +19,7 @@
   <p><img>Jak widać, siatka mp_grid jest ponumerowana jako seria komórek (zaczynających się od 0,0 w lewym górnym rogu), a po umieszczeniu tej siatki na stronie <span class="notranslate">room</span> istnieje bezpośrednia korelacja między współrzędnymi <span class="notranslate">room</span> (które także zaczynają się od 0,0 w lewym górnym rogu) a komórkami siatki. Na rysunku widać, że instancja w pozycji 260,130 znajduje się w komórce siatki 8,4. Dokładną komórkę, na której znajduje się dana pozycja, można łatwo obliczyć matematycznie, dzieląc liczbę przez rozdzielczość siatki i zaokrąglając w dół <i>lub</i>, jeśli używasz rozdzielczości siatki równej potędze 2 (np. 8, 16, 32 itd.), możesz użyć <a href="../../../../Additional_Information/Bitwise_Operators.htm">operatorów bit</a>owych. Należy zauważyć, że operacja bitowa jest szybsza, a poniższy przykład przedstawia obie metody.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">mp_grid_add_cell(id, h, v);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_cell</span>(id, h, v);</p>
   <table>
     <tbody>
       <tr>

@@ -19,7 +19,7 @@
   <p>Ta funkcja służy do ustawiania, czy liczenie stuknięć ma być włączone, czy wyłączone. Po ustawieniu na <span class="inline">true</span> liczenie stuknięć jest włączone, a po ustawieniu na <span class="inline">false</span> jest wyłączone, chociaż można sprawdzić, w jakim stanie się znajduje, korzystając z funkcji <a href="gesture_get_tap_count.htm"><span class="inline">gesture_get_tap_count()</span></a>. Gdy funkcja jest włączona, każde zdarzenie stuknięcia będzie miało dodatkowy wpis na mapie DS o nazwie &quot;tapcount&quot;, który będzie rejestrował liczbę stuknięć. Gdy funkcja jest włączona, oznacza to, że <i>wszystkie</i> zdarzenia stukania będą wyzwalane, np. dwa stuknięcia będą wyzwalać zarówno zdarzenie stuknięcia pojedynczego, jak i podwójnego, przy czym liczba stuknięć dla zdarzenia stuknięcia pojedynczego wynosi 1, a dla zdarzenia stuknięcia podwójnego - 2. Wartość licznika stuknięć zostanie zresetowana do 0 po upływie czasu ustawionego dla wykrycia podwójnego stuknięcia (patrz funkcja <a href="gesture_double_tap_time.htm"><span class="inline">gesture_double_tap_time()</span></a>). Jeśli liczenie stuknięć jest wyłączone, to stuknięcie początkowe nie zostanie zarejestrowane, dopóki nie upłynie czas podwójnego stuknięcia i nie zostanie wykryte drugie stuknięcie. Domyślnie funkcja ta jest <b>włączona</b>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gesture_tap_count(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gesture_tap_count</span>(enable);</p>
   <table>
     <tbody>
       <tr>
