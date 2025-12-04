@@ -13,7 +13,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_map_destroy</span></h1>
   <p>Mapy DS zajmują miejsce w pamięci, które jest im przydzielane podczas ich tworzenia. Oznacza to, że należy zwolnić tę pamięć, gdy mapa DS nie jest potrzebna, aby zapobiec błędom, wyciekom pamięci i spadkowi wydajności gry. Ta funkcja
     właśnie to robi. Zwróć uwagę, że zniszczenie mapy spowoduje usunięcie odniesienia do wszystkich struktur danych przechowywanych na mapie, co spowoduje wyciek pamięci, więc aby temu zapobiec, musisz ręcznie przejrzeć mapę i zniszczyć wszystkie elementy struktur danych przed jej zniszczeniem. Na stronie
     Jedynym przypadkiem, gdy nie jest to wymagane, jest oznaczenie elementów mapy jako <a href="../DS_Lists/DS_Lists.htm">listy DS</a> lub innej <a href="DS_Maps.htm">mapy DS</a>, w którym to przypadku elementy te zostaną zniszczone, a ich pamięć
@@ -23,7 +23,7 @@
       zawsze ustawiać zmienną, która przechowywała indeks DS, na -1 po zniszczeniu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">ds_map_destroy(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_destroy</span>(id);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_flags</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_set_flags</span></h1>
   <p>Za pomocą tej funkcji można zmienić stronę <span class="notranslate">flags</span> dla pojedynczej cząstki. Wartość <span class="inline">index</span> to identyfikator cząstki zwrócony przez funkcję <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>natomiast <span class="notranslate">flags</span> jest wartością zwracaną przez kombinację następujących <b>stałych</b>:</p>
   <table>
     <tbody>
@@ -63,7 +63,7 @@
   <p>Na stronie <span class="notranslate">flags</span> zastosowano maskowanie bitów, aby utworzyć końcową wartość wyjściową, która jest następnie sprawdzana w celu ustawienia różnych właściwości podstawowych cząsteczki (przy czym właściwością podstawową jest zawsze właściwość <span class="inline">phy_particle_flag_water</span>). Na przykład, jeśli chcesz symulować lepką ciecz z napięciem powierzchniowym, użyj znaku bitowego <a href="../../../../Additional_Information/Bitwise_Operators.htm"> <i>lub</i></a> &quot;|&quot;, aby zamaskować odpowiednie bity, jak pokazano w poniższym przykładzie. W ten sposób można ustawić różne właściwości (inne niż właściwości globalne) dla każdej tworzonej cząstki.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_particle_set_flags(index, flags)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_set_flags</span>(index, flags)</p>
   <table>
     <tbody>
       <tr>

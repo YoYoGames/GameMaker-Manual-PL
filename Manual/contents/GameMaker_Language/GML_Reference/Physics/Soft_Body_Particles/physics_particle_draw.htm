@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_draw</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_draw</span></h1>
   <p>Ta funkcja narysuje stronę <span class="notranslate">sprite</span> w miejscu wszystkich cząstek, które mają tę samą, zdefiniowaną przez użytkownika wartość kategorii i które mają stronę <span class="notranslate">flags</span> pokrywającą się z wartością maski. Wartość maski definiuje się w taki sam sposób, w jaki definiuje się <span class="notranslate">flags</span> podczas tworzenia cząstki (patrz funkcja <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a> na przykład), tzn. używając bitu <a href="../../../../Additional_Information/Bitwise_Operators.htm"> <i>lub</i></a> &quot;|&quot;, aby zamaskować odpowiednie bity dla każdej strony <span class="notranslate">flag</span>.</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja narysuje <b>wszystkie</b> cząstki w symulacji fizycznej z adresem <span class="notranslate">flags</span>, który pokrywa się z adresem maski, niezależnie od tego, czy są to pojedyncze cząstki, czy grupy, jeśli kategoria użytkownika jest taka sama.</p>
   <p>Narysowana cząstka będzie używać koloru i wartości alfa ustawionych podczas jej tworzenia oraz będzie się obracać z momentem pędu cząstki. Jeśli jednak chcesz przeskalować stronę <span class="notranslate">sprite</span> lub zmienić jakiekolwiek inne właściwości narysowanej cząstki, powinieneś użyć funkcji <a href="physics_particle_draw_ext.htm"><span class="inline">physics_particle_draw_ext()</span></a>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_particle_draw(typemask, category, sprite, subimg)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_draw</span>(typemask, category, sprite, subimg)</p>
   <table>
     <tbody>
       <tr>

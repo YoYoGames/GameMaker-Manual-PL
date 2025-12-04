@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_revolute_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_revolute_create</span></h1>
   <p>Przegub obrotowy wymusza na dwóch ciałach wspólny punkt zakotwiczenia (często nazywany punktem przegubu), a przegub ma jeden stopień swobody - względny obrót dwóch ciał wokół tego punktu. Aby określić przegub obrotowy, należy podać dwie instancje oraz pojedynczy punkt zakotwiczenia w witrynie <span class="notranslate">room</span>, jak widać na zamieszczonym rysunku:</p>
   <p><img>Na rysunku widać, że dwie instancje zostały utworzone w taki sposób, aby zachodziły na siebie, a w miejscu, w którym się stykają, zdefiniowaliśmy przegub obrotowy. Teraz można ograniczyć swobodę obrotu tego przegubu za pomocą wartości &quot;ang_min_limit&quot; i &quot;ang_max_limit&quot;. Jak to działa? Spójrzmy na inny obraz:</p>
   <p><img>Jak widać, kąty w świecie fizyki <i>nie</i> są takie same, jak standardowe kąty w <span data-keyref="GameMaker Name">GameMakerze</span>, gdzie prawy to 0 stopni, a następnie w kierunku przeciwnym do ruchu wskazówek zegara, czyli góra to 90, lewy to 180, a dół to 270. Nie, w przypadku przegubu obrotowego oś 0 stopni biegnie od pozycji przegubu do początku drugiej instancji zdefiniowanej przez funkcję, a kąty są obliczane zgodnie z ruchem wskazówek zegara. Jeśli na stronie <span class="notranslate">switch</span> znajduje się ograniczenie kąta, ograniczenia są definiowane jako względne względem osi 0 stopni, a zakres ograniczeń <i>powinien zawierać zero</i>, w przeciwnym razie przegub będzie się kołysał, gdy zacznie się <span class="notranslate">room</span>. Na koniec można określić, czy przegub ma silnik, czy nie. Oznacza to, że w przypadku braku kolizji przegub będzie poruszał się w kierunku określonym przez prędkość silnika, gdzie liczba dodatnia oznacza ruch zgodny z ruchem wskazówek zegara, a liczba ujemna - ruch przeciwny do ruchu wskazówek zegara. Argument &quot;max_motor_torque&quot; służy do ograniczenia prędkości obrotów, aby uniknąć wiecznego przyspieszania silnika i ograniczyć wpływ kolizji na obroty. W ten sposób można użyć silnika przegubowego do symulowania tarcia w przegubie, ustawiając prędkość przegubu na zero, a maksymalny moment obrotowy na jakąś małą, ale znaczącą wartość. Silnik będzie starał się nie dopuścić do obracania się przegubu, ale ugnie się pod znacznym obciążeniem.</p>
   <p>Podobnie jak w przypadku wszystkich przegubów, jeśli ustawisz wartość &quot;col&quot; na <span class="inline">true</span>, dwie instancje będą mogły oddziaływać na siebie i zderzać się ze sobą, ale <i>tylko</i> wtedy, gdy wystąpią zdarzenia kolizji, natomiast jeśli ustawisz wartość &quot; <span class="inline">false</span>, nie będą się zderzać bez względu na wszystko.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_joint_revolute_create(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_revolute_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>

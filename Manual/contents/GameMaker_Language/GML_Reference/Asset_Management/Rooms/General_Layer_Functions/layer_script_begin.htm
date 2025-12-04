@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_script_begin</h1>
+  <h1><span data-field="title" data-format="default">layer_script_begin</span></h1>
   <p>Za pomocą tej funkcji można przypisać do warstwy <a href="../../../../GML_Overview/Script_Functions.htm">funkcję skryptu</a>, która zostanie wywołana przed wyrenderowaniem warstwy. Podczas dodawania funkcji do warstwy będzie ona uruchamiana na początku <i>każdego z różnych zdarzeń rysowania</i>, dlatego warto sprawdzić w przypisanej funkcji, które zdarzenie jest aktualnie renderowane, i odpowiednio dostosować kod. Można to zrobić, sprawdzając wartość <a href="../../Objects/Object_Events/event_type.htm"><span class="inline">event_type</span></a> i/lub <a href="../../Objects/Object_Events/event_number.htm"><span class="inline">event_number</span></a> (patrz rozszerzony przykład poniżej). Należy pamiętać, że funkcja ta <i>nie</i> jest wywoływana w żadnych zdarzeniach losowania ani w zdarzeniach kroków, lecz tylko na początku <span class="notranslate">room</span> w <strong>kodzie tworzenia pomieszczenia</strong> lub w zdarzeniu <strong>tworzenia / </strong> <strong>rozpoczęcia pomieszczenia</strong> przez instancję.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">layer_script_begin(layer_id, script);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_script_begin</span>(layer_id, script);</p>
   <table>
     <tbody>
       <tr>

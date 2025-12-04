@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>czcionka_add_sprite</title>
+  <title>font_add_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>czcionka_add_sprite</h1>
+  <h1><span data-field="title" data-format="default">font_add_sprite</span></h1>
   <p>Za pomocą tej funkcji można użyć &quot;paska sprite&quot; do utworzenia nowego adresu <span class="notranslate">font</span> <span class="notranslate">asset</span>, gdzie każdy podobraz będzie indywidualnym symbolem lub literą. Indeks jest numerem mapy UTF8 dla pierwszego znaku, którego należy użyć, a zakresy, których należy użyć, są takie same jak w przypadku zwykłego <span class="notranslate">font</span>, zaczynając od &quot;!&quot;, ale należy pamiętać, że należy uwzględnić tylko to, co jest potrzebne, i że należy użyć funkcji <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> aby uzyskać prawidłową wartość UTF8 dla początkowej litery. Utworzona strona <span class="notranslate">sprite</span> <span class="notranslate">font</span> będzie miała pod-obrazy ustawione na poszczególne glify z <span class="notranslate">font</span>, gdzie &quot;pierwszy&quot; glif będzie miał image_index równy 0. Możesz zdefiniować &quot;spację&quot; jako dowolny znak, na przykład pojedynczą linię o rozmiarze, jaki chcesz, aby miała spacja, a wszystkie spacje w tekście będą renderowane z tą szerokością (ale wybrany obraz <i>nigdy nie</i> będzie renderowany), lub jeśli nie podasz adresu <span class="notranslate">sprite</span> dla spacji, zostanie użyta szerokość najszerszego znaku w <span class="notranslate">sprite</span> <span class="notranslate">font</span>.</p>
   <p>Można także ustawić odstępy między literami <span class="notranslate">font</span>, aby były proporcjonalne (<span class="inline">true</span>) lub nie (<span class="inline">false</span>), przy czym odstępy proporcjonalne <span class="notranslate">font</span> są zależne od rzeczywistej szerokości liter (na przykład litera &quot;i&quot; zajmuje mniej miejsca <span class="notranslate">room</span> niż litera &quot;w&quot;), natomiast odstępy nieproporcjonalne <span class="notranslate">font</span> są zależne od szerokości podobrazia, podobnie jak odstępy jednoprzestrzenne <span class="notranslate">font</span>. Na koniec można określić odstęp, jaki ma być pozostawiony między poszczególnymi literami podczas pisania. Może to być dowolna wartość całkowita, przy czym 0 oznacza brak odstępu (litery będą się &quot;stykać&quot;, jeśli są proporcjonalne).</p>
   <p>Funkcja zwraca wartość <i>indeksu</i>, którą należy zapisać w zmiennej, ponieważ będzie ona potrzebna we wszystkich kolejnych kodach odwołujących się do tej strony <span class="notranslate">font</span>, lub zwraca -1, jeśli z jakiegoś powodu funkcja się nie powiedzie.</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">UWAGA</span> </b>Po załadowaniu strony <span class="notranslate">font</span> do programu <span data-keyref="GameMaker Name">GameMaker</span> musisz pamiętać o jej ponownym usunięciu (za pomocą <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>), gdy nie jest już potrzebna, w przeciwnym razie istnieje ryzyko wycieku pamięci, który spowolni, a w końcu spowoduje awarię gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_add_sprite(spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add_sprite</span>(spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>network_send_broadcast</h1>
+  <h1><span data-field="title" data-format="default">network_send_broadcast</span></h1>
   <p>Dzięki tej funkcji można rozgłaszać dane z <span class="notranslate">buffer</span> lokalnie na zakres adresów IP (więcej informacji na temat <span class="notranslate">buffers</span> patrz <a href="../Buffers/Buffers.htm">Odnośnik - Bufory</a>). Zakres jest ograniczony do zakresu urządzenia, na którym działa <span class="notranslate">server</span>, czyli jeżeli urządzenie ma IP 92.168.11.130, to dane zostaną rozesłane na zakres 92.168.11.*. Funkcja zwróci liczbę wysłanych bajtów danych lub liczbę mniejszą od 0, jeżeli wysyłka nie powiodła się.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Ta funkcja będzie działać tylko wtedy, gdy będzie używana z UDP - twój <span class="notranslate">server</span> musi być TCP, a twój klient musi mieć gniazdo klienta UDP utworzone z <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><span class="inline">network_create_socket_ext()</span></a></span> aby móc odbierać wszelkie audycje wysyłane z <span class="notranslate">server</span>.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Ta funkcja nie będzie działać, gdy jest używana w projekcie uruchomionym na celu HTML5.</p>
   <div data-conref="../../../assets/snippets/iOS_14_IP_Multicast_Permissions.hts"> </div>
   <h4>Składnia:</h4>
-  <p class="code">network_send_broadcast(socket, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_broadcast</span>(socket, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

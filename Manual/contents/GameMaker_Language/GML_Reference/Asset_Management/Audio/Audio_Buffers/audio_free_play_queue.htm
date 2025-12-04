@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_free_play_queue</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p>Ta funkcja służy do zwalniania pamięci związanej z podanym plikiem audio <span class="notranslate">queue</span>. Indeks <span class="notranslate">queue</span> jest wartością zwróconą podczas tworzenia <span class="notranslate">queue</span> za pomocą funkcji <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>Funkcja ta powinna być wywoływana, gdy adres <span class="notranslate">queue</span> nie jest już potrzebny, aby zapobiec wyciekom pamięci. Zwolnienie adresu <span class="notranslate">queue</span> spowoduje zatrzymanie odtwarzanego dźwięku, a adresu <span class="notranslate">buffer</span>, z którego dźwięk jest przesyłany, nie można usunąć, dopóki adres <span class="notranslate">queue</span>, do którego jest przypisany, nie zostanie zwolniony. Ta funkcja wywoła <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">zdarzenie asynchroniczne odtwarzania</a> dźwięku, a w tym zdarzeniu zostanie utworzona specjalna <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> w zmiennej <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> z następującymi parami klucz/wartość:</p>
   <ul class="colour">
     <li>&quot;<strong>queue_id</strong>&quot; - strona <span class="notranslate">queue</span>, która zakończyła odtwarzanie danych</li>
@@ -23,7 +23,7 @@
   </ul>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>

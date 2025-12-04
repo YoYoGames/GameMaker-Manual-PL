@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_set_speed</h1>
+  <h1><span data-field="title" data-format="default">sprite_set_speed</span></h1>
   <p>Za pomocą tej funkcji można ustawić podstawową szybkość i typ animacji dla zasobu <span class="notranslate">sprite</span>. Zazwyczaj ustawia się to w <a href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Editorze</a>, ale może się zdarzyć, że trzeba będzie ustawić to ręcznie dla danego zasobu <span class="notranslate">sprite</span>. Należy podać indeks <span class="notranslate">sprite</span>, który ma być ustawiony, szybkość animacji i typ szybkości animacji, który ma być zastosowany. Typem szybkości animacji może być dowolna z poniższych stałych:</p>
   <table>
     <tbody>
@@ -32,7 +32,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Wybór typu prędkości używanej do obliczania animacji jest bardzo ważny, ponieważ istnieje ogromna różnica między tymi dwiema opcjami. Różnicę tę ilustrują dwa poniższe przykłady:</p>
   <ul class="colour">
     <li>Jeśli w witrynie <span class="notranslate">sprite</span>, która rysuje 1 klatkę na <i>sekundę</i>, ustawisz szybkość obrazu na 0,5, będzie ona rysować z szybkością 0,5 klatki na sekundę. Jeśli częstotliwość odświeżania gry wynosi 60 klatek na sekundę, to witryna <span class="notranslate">sprite</span> będzie rysować 1 klatkę na każde 120 klatek gry.</li>
@@ -42,7 +42,7 @@
   <p class="note"><b>WAŻNE!</b> Ta funkcja będzie miała wpływ na <b>zasób</b> <span class="notranslate">sprite</span>, więc wszelkie zmiany dokonane za jej pomocą będą miały wpływ na <b>wszystkie</b> instancje korzystające z <b>zasobu</b> <span class="notranslate">sprite</span>, a także na wszystkie przyszłe instancje.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">sprite_set_speed(index, speed, type)</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_set_speed</span>(index, speed, type)</p>
   <table>
     <tbody>
       <tr>

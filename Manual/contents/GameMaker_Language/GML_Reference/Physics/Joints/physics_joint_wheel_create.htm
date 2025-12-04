@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_wheel_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
   <p>Przegub kołowy to po prostu połączenie przegubu tłokowego i obrotowego, jak w przypadku koła zamontowanego na amortyzatorze samochodu. Określasz punkt zakotwiczenia przegubu oraz dwie instancje fizyki, które mają zostać połączone. Pierwsza instancja będzie działać jako &quot;ciało&quot; przegubu, a druga jako &quot;koło&quot; i będzie mogła swobodnie poruszać się wokół osi przegubu. Można także ustawić wektor osi, czyli wyimaginowaną linię, wzdłuż której przegub będzie działał jak &quot;sprężyna&quot;, pozwalając kołu odbijać się od niej w górę i w dół, gdy napotka przeszkody (podobnie jak w przypadku przegubu tłokowego). Ilustruje to poniższy rysunek:</p>
   <p><img>Jeśli włączysz silnik, druga instancja będzie się obracać wokół pozycji zakotwiczenia. Możesz ustawić maksymalny moment obrotowy silnika, aby uzyskać żądaną prędkość silnika (N/m), a także prędkość, z jaką silnik ma się obracać. Ponieważ przegub koła również ma oś, wzdłuż której może się poruszać, można ustawić częstotliwość oscylacji (w Hz) oraz współczynnik tłumienia dla przegubu - może zajść potrzeba zmiany tych wartości w celu ich dostrojenia, dlatego zaleca się rozpoczęcie od mniejszych wartości i zwiększanie ich, aż do uzyskania pożądanego efektu.</p>
   <p>Podobnie jak w przypadku wszystkich przegubów, jeśli ustawisz wartość &quot;col&quot; na <span class="inline">true</span>, dwie instancje będą mogły oddziaływać na siebie i zderzać się ze sobą, ale <i>tylko</i> wtedy, gdy wystąpią zdarzenia kolizji, natomiast jeśli ustawisz wartość &quot; <span class="inline">false</span>, nie będą się zderzać bez względu na wszystko.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

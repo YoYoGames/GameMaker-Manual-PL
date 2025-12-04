@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_any_alive</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_any_alive</span></h1>
   <p>Za pomocą tej funkcji można sprawdzić <a class="glossterm" data-glossterm="słabe odniesienie" href="#">słabe refer</a> encje do różnych struktur, aby sprawdzić, czy są one nadal &quot;żywe&quot;, czy nie. Podajesz tablicę słabych referencji do sprawdzenia (każda słaba referencja powinna zostać utworzona za pomocą funkcji <a href="weak_ref_create.htm"><span class="inline">weak_ref_create()</span></a>), a funkcja zwróci <span class="inline">true</span>, jeśli <em><strong>any </strong></em>do któregoś z tych struktów nadal gdzieś się odwołujemy lub <span class="inline">false</span> jeśli nie i został on już wyrzucony na śmietnik. Zwróć uwagę, że jeśli podasz tablicę, w której którakolwiek z wartości nie jest słabą referencją, funkcja zwróci <span class="inline">undefined</span>.</p>
   <p>Funkcja przyjmuje również dwa opcjonalne argumenty, z których pierwszy umożliwia podanie początkowego indeksu tablicy, od którego ma być sprawdzana, oraz argumentu określającego liczbę pozycji (długość) od tego indeksu do sprawdzenia. Jeśli zostaną one podane, sprawdzane będą tylko indeksy tablicy mieszczące się w tych parametrach.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">weak_ref_any_alive(array, [index], [length]);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_any_alive</span>(array, [index], [length]);</p>
   <table>
     <tbody>
       <tr>

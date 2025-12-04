@@ -15,10 +15,10 @@
 </head>
 <body>
   <h1>Tworzenie gry wieloosobowej</h1>
-  <p class="note">Ta strona poprowadzi cię przez szczegółowe kroki tworzenia twojej pierwszej gry wieloosobowej.<br>
-    <br>
-    Aby uzyskać informacje na temat systemu Rollback, przeczytaj <a data-xref="{title}" href="Rollback_System.htm">System Rollback</a>.<br>
-    <br>
+  <p class="note">Ta strona poprowadzi cię przez szczegółowe kroki tworzenia twojej pierwszej gry wieloosobowej.<br />
+    <br />
+    Aby uzyskać informacje na temat systemu Rollback, przeczytaj <a data-xref="{title}" href="Rollback_System.htm">System Rollback</a>.<br />
+    <br />
     Aby uzyskać szczegółowe informacje na temat wszystkich funkcji Rollback, przeczytaj <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">Funkcje Roll</a>back.
   </p>
   <h2>Konfiguracja projektu</h2>
@@ -26,8 +26,8 @@
   <p>Utwórz dwa obiekty:</p>
   <ul class="colour">
     <li><strong>obj_game</strong>: To będzie zarządzać twoją grą multiplayer.</li>
-    <li><strong>obj_player</strong>: To będzie twój rzeczywisty gracz <span class="notranslate">object</span>. Każdy podłączony gracz będzie miał swoją własną instancję tego <span class="notranslate">object</span>, którą będzie mógł kontrolować.<br>
-      <br>
+    <li><strong>obj_player</strong>: To będzie twój rzeczywisty gracz <span class="notranslate">object</span>. Każdy podłączony gracz będzie miał swoją własną instancję tego <span class="notranslate">object</span>, którą będzie mógł kontrolować.<br />
+      <br />
       Przypisz swojego gracza <span class="notranslate">sprite</span> do gracza <span class="notranslate">object</span>.
     </li>
   </ul>
@@ -53,8 +53,8 @@
   <h2>Moving Players</h2>
   <p>Wprowadzanie danych jest zarządzane przez system Rollback i automatycznie synchronizowane między graczami.</p>
   <p>W swoim odtwarzaczu <span class="notranslate">object</span>, wywołaj <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span>, aby uzyskać <span class="notranslate">struct</span> zawierający wszystkie domyślne wejścia, które są następujące:</p>
-  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br>
-    <br>
+  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br />
+    <br />
     <em>Wskazują one, czy klucz jest trzymany.</em> <span class="inline">*<strong>_pressed</strong></span> <em>oraz </em><span class="inline">*<strong>_released</strong></span> <em>podawane są również warianty.</em>
   </p>
   <p>Aby zdefiniować własne wejścia, patrz <a data-xref="{title}" href="Defining_Inputs.htm">Definiowanie</a> wejść.</p>

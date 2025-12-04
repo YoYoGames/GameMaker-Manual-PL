@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>vertex_create_buffer</h1>
+  <h1><span data-field="title" data-format="default">vertex_create_buffer</span></h1>
   <p>Za pomocą tej funkcji można utworzyć nową stronę <span class="notranslate">vertex</span> <span class="notranslate">buffer</span>. Jest to specjalny <i>grow</i> <span class="notranslate">buffer</span> utworzony przez <span data-keyref="GameMaker Name">GameMaker</span>, który jest wstępnie sformatowany do użycia podczas tworzenia prymitywów (na przykład do użycia z <span class="notranslate">shaders</span>). Funkcja zwróci indeks dla <span class="notranslate">buffer</span>, który powinien być używany we wszystkich kolejnych wywołaniach tej funkcji.</p>
   <p>Podczas korzystania z <span class="notranslate">vertex</span> <span class="notranslate">buffer</span> utworzonego za pomocą tej funkcji wystarczy wywołać <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> aby rozpocząć przypisywanie do niego danych <span class="notranslate">vertex</span> w celu rozpoczęcia definiowania własnego prymitywu, który następnie będzie przechowywany w <span class="notranslate">buffer</span> gotowym do przesłania do <span class="notranslate">shader</span>. <span class="notranslate">buffer</span> może być ponownie użyty w razie potrzeby (chyba że użyto funkcji <a href="vertex_freeze.htm"><span class="inline">vertex_freeze()</span></a> ), przy czym każde wywołanie funkcji <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> wymazuje poprzednie dane <span class="notranslate">buffer</span> gotowe do przyjęcia nowych danych.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">vertex_create_buffer();</p>
+  <p class="code"><span data-field="title" data-format="default">vertex_create_buffer</span>();</p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></p>

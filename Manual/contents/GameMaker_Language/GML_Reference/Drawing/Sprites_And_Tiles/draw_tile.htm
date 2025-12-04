@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_tile</h1>
+  <h1><span data-field="title" data-format="default">draw_tile</span></h1>
   <p>Za pomocą tej funkcji można narysować dowolny adres <span class="notranslate">tile</span> na podstawie adresu <span class="notranslate">tile set</span> - rywalizując z obrotami, odwróceniami i odbiciami lustrzanymi - ustawiając ramkę (jeśli jest animowana) i pozycję w obrębie adresu <span class="notranslate">room</span>. Wartość identyfikacyjna adresu <span class="notranslate">tile set</span> to indeks <span class="notranslate">tile set</span> ustawiony w adresie <span class="notranslate">IDE</span>, a dane <span class="notranslate">tile</span> to &quot;blob&quot; danych zawierający wszystkie informacje o indeksie <span class="notranslate">tile</span> i zastosowanych przekształceniach. Można użyć funkcji <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> aby uzyskać dane <span class="notranslate">tile</span>, którymi można następnie manipulować za pomocą <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">funkcji kafelkowych</a>, lub można je skonstruować samodzielnie, używając następujących stałych <span class="notranslate">tile</span> wraz z wartością indeksu tworzonej strony <span class="notranslate">tile</span>:</p>
   <table>
     <tbody>
@@ -40,13 +40,13 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Aby uzyskać ostateczne dane kafelkowe, należy bitowo &quot;ortodoksyjnie&quot; połączyć te stałe z wartością indeksu <span class="notranslate">tile</span>:</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
   <p>Powyższy kod po prostu tworzy zmienną lokalną przechowującą dane kafelkowe dla strony <span class="notranslate">tile</span> o indeksie 8 na stronie <span class="notranslate">tile set</span>, a następnie obraca ją i odwraca. Następnie można ją wykorzystać do narysowania strony <span class="notranslate">tile</span> o tym indeksie na stronie <span class="notranslate">tile set</span>, którą podasz. Nie jest ona powiązana z żadną warstwą mapy kafelkowej, a strona <span class="notranslate">tile</span> zostanie narysowana na głębokości warstwy instancji wykonującej rysowanie, w pozycji x/y, którą podasz na stronie <span class="notranslate">room</span>. Zauważ, że możesz także ustawić klatkę, która ma być rysowana. Jeśli indeksowana strona <span class="notranslate">tile</span> jest częścią zestawu animacji, to możesz tutaj ustawić numer klatki (od 0 do liczby klatek - 1), a indeksowana strona <span class="notranslate">tile</span> będzie po prostu wskaźnikiem, której animacji <span class="notranslate">tile set</span> używasz, natomiast rysowana będzie dana klatka. Jeśli strona <span class="notranslate">tile</span> nie jest częścią zestawu animowanego, ramka powinna być ustawiona na 0.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
+  <p class="code"><span data-field="title" data-format="default">draw_tile</span>(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>

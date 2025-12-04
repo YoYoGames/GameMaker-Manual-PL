@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_add</h1>
+  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
   <p>Za pomocą tej funkcji możesz dodać obraz jako <span class="notranslate">sprite</span>, ładując go z zewnętrznego źródła, gdzie ładowany plik obrazu powinien być <b>zawsze</b> w formacie <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg/jpeg</span> lub <span class="inline">*.json</span> (pliki<span class="inline">*json</span> są używane do ładowania <a href="../Skeletal_Animation/Skeletal_Animation.htm">szkieletów animacji</a> wykonanych za pomocą <span class="notranslate">Spine</span>). Funkcja zwraca nowy indeks <span class="notranslate">sprite</span>, który musi być następnie używany we wszystkich dalszych kodach odnoszących się do <span class="notranslate">sprite</span>. Jeśli używasz tej funkcji z HTML5 lub pobierasz obraz z adresu URL, funkcja ta wygeneruje również zdarzenie asynchroniczne <b>Image Loaded</b>. Więcej informacji można znaleźć na <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">tej stronie</a>.</p>
   <p>Wszystkie obrazy, które mają być przekształcone w animowane strony <span class="notranslate">sprites</span> - z wyjątkiem <span class="inline">*.gif</span> (patrz poniżej) - powinny mieć format &quot;paska&quot; (patrz poniższy obrazek) i zostaną podzielone na określoną liczbę podobrazów zgodnie z zasadą: <b>szerokość sprite'a = szerokość paska / podobrazy</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -29,7 +29,7 @@
   <p class="note"><b>UWAGA</b>: W przypadku <b>HTML5</b>, jeśli ładujesz stronę <span class="notranslate">sprite</span> z bezpiecznej strony <span class="notranslate">server</span>, może być konieczne ustawienie typu cross-origin i użycie względnej strony <span class="notranslate">path</span> zamiast bezwzględnej strony <span class="notranslate">path</span>. Więcej informacji można znaleźć na stronie . <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span> aby uzyskać więcej szczegółów.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

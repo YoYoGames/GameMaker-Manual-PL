@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_get_info</h1>
+  <h1><span data-field="title" data-format="default">font_get_info</span></h1>
   <p>Funkcja ta służy do pobierania informacji dla podanego adresu <span class="notranslate">font</span>. Podajesz indeks <span class="notranslate">font</span> (może to być <span class="notranslate">asset</span> dodany przez <a href="../../../../Introduction/The_Asset_Browser.htm">Przeglądarkę Aktywów</a> lub <span class="notranslate">font</span> <a href="font_add.htm">dodany</a> na stronie <span class="notranslate">runtime</span>), a funkcja zwraca <a href="../../../GML_Overview/Structs.htm">strukturę</a> z następującymi zmiennymi:</p>
   <table>
     <colgroup>
@@ -117,8 +117,8 @@
       <tr>
         <td><span class="inline">char</span></td>
         <td style="">prawdziwy</td>
-        <td style="">Jeśli witryna <span class="notranslate">font</span> została utworzona z witryny <span class="notranslate">sprite</span>, będzie to indeks obrazu glifu z witryny <span class="notranslate">sprite</span>, w przeciwnym razie będzie to numer znaku Unicode.<br>
-          <br>
+        <td style="">Jeśli witryna <span class="notranslate">font</span> została utworzona z witryny <span class="notranslate">sprite</span>, będzie to indeks obrazu glifu z witryny <span class="notranslate">sprite</span>, w przeciwnym razie będzie to numer znaku Unicode.<br />
+          <br />
          <em><strong>Uwaga</strong>: Wszystkie zmienne poniżej tej wartości nie będą obecne w <span class="notranslate">struct</span>, jeśli <span class="notranslate">font</span> został utworzony ze sprite</em>'a.
         </td>
       </tr>
@@ -167,7 +167,7 @@
   <p class="note"><span class="note">UWAGA</span> W przypadku pliku <span class="notranslate">fonts</span> załadowanego pod adresem <span class="notranslate">runtime</span>, wartości <span class="inline">x</span> i <span class="inline">y</span> dla danego glifu mogą wynosić -1, jeśli nie został on jeszcze wyrenderowany, ponieważ nie będzie miał pozycji na stronie <span class="notranslate">texture</span> używanej do buforowania.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_get_info(font);</p>
+  <p class="code"><span data-field="title" data-format="default">font_get_info</span>(font);</p>
   <table>
     <tbody>
       <tr>

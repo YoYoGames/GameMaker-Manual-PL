@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_duplicate</h1>
+  <h1><span data-field="title" data-format="default">sprite_duplicate</span></h1>
   <p>Funkcja zwraca indeks nowo utworzonej strony <span class="notranslate">sprite</span>, która jest duplikatem (kopią) strony podanej jako argument &quot;index&quot;. Jeśli funkcja nie powiedzie się, zwracane jest -1. Ta funkcja <i>musi</i> być użyta do skopiowania <span class="notranslate">sprites</span> z oryginalnej <span class="notranslate">assets</span>, zanim będzie można wykonać na nich jakiekolwiek przekształcenia. Na przykład jeśli chcesz zmienić ramkę ograniczającą dla strony <span class="notranslate">sprite</span> lub ustawić jej alfa w stosunku do innej strony <span class="notranslate">sprite</span>, musisz ją najpierw zduplikować, a następnie wykonać operację na zduplikowanej stronie <span class="notranslate">sprite</span> i użyć jej. Zduplikowana strona <span class="notranslate">sprite</span> zostanie umieszczona na swojej własnej, unikalnej stronie <span class="notranslate">texture</span> podczas jej tworzenia, co oznacza, że powielanie wielu stron <span class="notranslate">sprites</span> spowoduje utworzenie wielu stron <span class="notranslate">texture</span> i będzie miało wpływ na wydajność, dlatego tej funkcji należy używać tylko w razie potrzeby.</p>
   <p class="note"><b>UWAGA</b>: Gdy zduplikujesz stronę <span class="notranslate">sprite</span> w programie <span data-keyref="GameMaker Name">GameMaker</span>, musisz pamiętać, aby usunąć ją ponownie (za pomocą przycisku <span style="font-size:1px;"><a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a></span>), gdy nie jest już potrzebna, w przeciwnym razie istnieje ryzyko wycieku pamięci, który spowolni, a w końcu doprowadzi do awarii gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">sprite_duplicate(index);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_duplicate</span>(index);</p>
   <table>
     <tbody>
       <tr>

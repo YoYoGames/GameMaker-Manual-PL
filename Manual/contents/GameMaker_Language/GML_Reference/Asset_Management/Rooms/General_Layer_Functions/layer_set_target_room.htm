@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_target_room</h1>
+  <h1><span data-field="title" data-format="default">layer_set_target_room</span></h1>
   <p>Wywołując tę funkcję, mówisz <span data-keyref="GameMaker Name">GameMakerowi</span>, że <i>wszystkie kolejne funkcje warstw powinny być zastosowane do danego pomieszczenia</i>. W ten sposób możesz proceduralnie zmieniać lub generować warstwy i zawartość warstw na stronie <span class="notranslate">room</span>, która nie jest bieżącą stroną <span class="notranslate">room</span>. Gdy skończysz dodawać warstwy lub elementy warstw do <span class="notranslate">room</span>, wywołaj funkcję <a href="layer_reset_target_room.htm"><span class="inline">layer_reset_target_room()</span></a> aby zresetować cel <span class="notranslate">room</span> (lub wywołaj tę funkcję ponownie z argumentem <span class="notranslate">room</span> równym -1). Uwaga: funkcja ta może być używana tylko w <i>pomieszczeniach innych niż bieżące pomieszczenie</i> i została zaprojektowana w taki sposób, aby można było dodawać/usuwać warstwy i elementy warstw na stronie <span class="notranslate">rooms</span> innej niż aktualnie działająca <span class="notranslate">room</span>.</p>
   <p class="note"><b>UWAGA!</b> Podczas kierowania na inną stronę <span class="notranslate">room</span> można używać wszystkich funkcji zwykłych warstw, <b>z wyjątkiem tego, że</b> nie można tworzyć instancji przy użyciu <span style="font-size:1px;"><a href="../../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a></span> lub <span style="font-size:1px;"><a href="../../Instances/instance_create_depth.htm"><span class="inline">instance_create_depth()</span></a></span>ani nie będzie dostępna funkcja warstwy <a href="layer_add_instance.htm"><span style="font-size:1px;"><span class="inline">layer_add_instance()</span></span></a> nie będzie dostępna.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">layer_set_target_room(room)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_target_room</span>(room)</p>
   <table>
     <tbody>
       <tr>

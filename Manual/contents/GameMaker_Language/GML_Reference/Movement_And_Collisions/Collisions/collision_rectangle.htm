@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>collision_rectangle</h1>
+  <h1><span data-field="title" data-format="default">collision_rectangle</span></h1>
   <p><span class="inline">Collision_rectangle</span> używa pierwszych czterech argumentów (x1,y1,x2,y2) do zdefiniowania obszaru w obrębie bieżącej strony <span class="notranslate">room</span>, a następnie sprawdza, czy <b>jakakolwiek</b> strona <span class="notranslate">object</span> określona przez argument &quot;obj&quot; jest w kolizji z tym obszarem. Kolizja ta może być sprawdzana jako dokładna lub nie, a także można zdecydować się na sprawdzenie instancji wykonującej sam kod lub nie. Weźmy pod uwagę poniższy obrazek:</p>
   <p><img>Tutaj instancja w środku używa prostokąta kolizji do sprawdzania, czy piłka <span class="notranslate">objects</span>. Niebieskie kulki <i>nie</i> mają dokładnego prostokąta ograniczającego i jak widać, nawet jeśli <span class="notranslate">sprite</span> nie dotyka prostokąta, to i tak dojdzie do kolizji (nawet jeśli ustawisz opcję "precise" w funkcji na true), ponieważ prostokąt ograniczający <span class="notranslate">sprite</span> zachodzi na prostokąt kolizji. Z drugiej strony, zielona kula zostanie uwzględniona w kolizji tylko wtedy, gdy rzeczywista <span class="notranslate">sprite</span> będzie zachodzić na prostokąt. Pamiętaj, że aby kolizje precyzyjne zostały uwzględnione, <i>zarówno</i> na stronie <span class="notranslate">object</span> <span class="notranslate">sprite</span>, jak i w funkcji kolizji musi być zaznaczona opcja precise. Należy również zauważyć, że wartością zwracaną przez funkcję może być identyfikator <i>dowolnej</i> z instancji uznanych za kolizyjne.</p>
   <p>Zauważ, że zamiast indeksu <span class="notranslate">object</span> można podać instancję <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> aby sprawdzić konkretną instancję, lub <a href="../../../GML_Overview/Instance_Keywords.htm">słowa kluczowe</a> instancji <span class="inline">all</span>, lub <span class="inline">other</span> (w zależności od zdarzenia i bieżącego zakresu kodu).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_rectangle</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

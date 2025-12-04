@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>szkielet_animacji_mix</title>
+  <title>skeleton_animation_mix</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>szkielet_animacji_mix</h1>
+  <h1><span data-field="title" data-format="default">skeleton_animation_mix</span></h1>
   <p>Zestawy animacji można łatwo znaleźć na stronie <span class="notranslate">switch</span>, używając funkcji <a href="skeleton_animation_set.htm"><span class="inline">skeleton_animation_set()</span></a> ale może to powodować przeskakiwanie lub zacinanie się animacji, gdy jedna animacja jest zamieniana na drugą. Aby temu zapobiec, możesz ustawić wartość mieszania między dwoma zestawami animacji, a <span class="notranslate">sprite</span> będzie dokonywać interpolacji między nimi. Zwykle warto to zrobić w zdarzeniu tworzenia instancji z animacją szkieletową, ponieważ wystarczy ustawić ją tylko raz, a <span data-keyref="GameMaker Name">GameMaker</span> będzie interpolował wszystkie kolejne zmiany w <span class="notranslate">sprite</span> za pomocą zestawów animacji w tej instancji. Zauważ, że wartość czasu trwania mieści się w zakresie od 0 do 1, gdzie wartość 0,5 spowodowałaby interpolację &quot;pół na pół&quot; z jednego zestawu do drugiego.</p>
   <p class="note"><span class="note">UWAGA</span> W wersji Spine 4.0 zmieniono sposób działania animacji obrotowej, ponieważ nie interpoluje ona już obrotów przy użyciu najkrótszej możliwej drogi, ale wykorzystuje do interpolacji wartości bezwzględne w witrynie <span class="notranslate">keyframes</span>. Może to spowodować nieoczekiwane zachowanie w przypadku aktualizacji animacji <span class="notranslate">Spine</span> ze starszej wersji. Aby obroty zachowywały się zgodnie z wymaganiami, konieczne może być wprowadzenie zmian w projekcie <span class="notranslate">Spine</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">skeleton_animation_mix(animfrom, animto, duration);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_animation_mix</span>(animfrom, animto, duration);</p>
   <table>
     <tbody>
       <tr>

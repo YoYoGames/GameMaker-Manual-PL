@@ -15,15 +15,15 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_stringify</h1>
+  <h1><span data-field="title" data-format="default">json_stringify</span></h1>
   <p>Za pomocą tej funkcji można konwertować pojedyncze lub zagnieżdżone <span class="notranslate">structs</span> i tablice na poprawny JSON <span class="notranslate">string</span>. Podajesz wartość początkową, której chcesz użyć (indeks tablicy lub referencję do <span class="notranslate">struct</span> ), a następnie funkcja &quot;stringifikuje&quot; ją, przekształcając w łańcuch JSON (przekształcając tablice <span class="notranslate">GameMaker</span> w tablice JSON, a <span class="notranslate">GameMaker</span> <span class="notranslate">structs</span> w JSON <span class="notranslate">objects</span>).</p>
   <p>Podczas korzystania z tej funkcji należy pamiętać o kilku ważnych rzeczach:</p>
   <ul class="colour">
     <li>Funkcja <em>nie </em> konwertuje map DS, list ani żadnych innych struktur danych na JSON, a jedynie przechowuje wewnętrzną wartość indeksu dla struktury (co jest mało użyteczne, ponieważ indeks będzie się zmieniał między kolejnymi uruchomieniami gry), dlatego nie należy próbować przekształcać na postać łańcuchową żadnych wartości, które mogą zawierać odniesienia do struktur danych (do tego celu służy funkcja <a href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
-    <li>Funkcja przekształci prawie każdą wartość w &quot;poprawny&quot; JSON <span class="notranslate">string</span>, jednak rzeczywiste wartości zawarte w <span class="notranslate">string</span> mogą nie być dokładnie takie, jakich oczekujesz, ze względu na sposób działania standardu JSON:<br>
-      <br>
-      &quot;JSON jest agnostyczny w kwestii liczb. W każdym języku programowania może występować wiele typów liczb o różnych pojemnościach i dopełnieniach, stałych lub zmiennopozycyjnych, binarnych lub dziesiętnych. Może to utrudniać wymianę danych między różnymi językami programowania. JSON oferuje natomiast tylko taką reprezentację liczb, jakiej używa człowiek: <span class="notranslate">sequence</span> cyfr. Wszystkie języki programowania wiedzą, jak korzystać z <span class="notranslate">sequences</span> cyfr, nawet jeśli nie zgadzają się co do ich wewnętrznej reprezentacji.&quot;<br>
-      <br>
+    <li>Funkcja przekształci prawie każdą wartość w &quot;poprawny&quot; JSON <span class="notranslate">string</span>, jednak rzeczywiste wartości zawarte w <span class="notranslate">string</span> mogą nie być dokładnie takie, jakich oczekujesz, ze względu na sposób działania standardu JSON:<br />
+      <br />
+      &quot;JSON jest agnostyczny w kwestii liczb. W każdym języku programowania może występować wiele typów liczb o różnych pojemnościach i dopełnieniach, stałych lub zmiennopozycyjnych, binarnych lub dziesiętnych. Może to utrudniać wymianę danych między różnymi językami programowania. JSON oferuje natomiast tylko taką reprezentację liczb, jakiej używa człowiek: <span class="notranslate">sequence</span> cyfr. Wszystkie języki programowania wiedzą, jak korzystać z <span class="notranslate">sequences</span> cyfr, nawet jeśli nie zgadzają się co do ich wewnętrznej reprezentacji.&quot;<br />
+      <br />
       Więcej informacji można znaleźć w dokumencie <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA JSON Standard</a>.
     </li>
     <li>Jeśli w wartościach do konwersji na JSON zawrzesz int64, GameMaker zapisze je jako <i>int</i>, jeśli mieszczą się w prawidłowym zakresie dla int32, jako <i>double</i>, jeśli może to zrobić bez utraty precyzji, lub (jeśli żaden z tych przypadków nie ma zastosowania) jako <i>ciąg</i> znaków z identyfikatorem &quot;<span class="inline">@i64@</span>&quot; przed nim i &quot;<span class="inline">$i64$</span>&quot; po nim. Gdy ponownie przejdziesz do parsowania JSON, <span data-keyref="GameMaker Name">GameMaker</span> wyłapie te identyfikatory i ponownie przekonwertuje wartość na int64. Oznacza to, że jeśli JSON jest przeznaczony dla <span class="notranslate">server</span> lub innego obiektu niebędącego programem GameMaker, wartości te nie będą odpowiednie i należy ich unikać.</li>
@@ -34,7 +34,7 @@
   <p> </p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">json_stringify(val)</p>
+  <p class="code"><span data-field="title" data-format="default">json_stringify</span>(val)</p>
   <table>
     <tbody>
       <tr>

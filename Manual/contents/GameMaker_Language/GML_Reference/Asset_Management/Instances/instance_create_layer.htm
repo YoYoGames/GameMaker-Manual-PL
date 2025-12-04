@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>utwórz instancję_warstwę</title>
+  <title>instance_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>utwórz instancję_warstwę</h1>
+  <h1><span data-field="title" data-format="default">instance_create_layer</span></h1>
   <p>Za pomocą tej funkcji można utworzyć nową instancję określonej strony <span class="notranslate">object</span> w dowolnym punkcie strony <span class="notranslate">room</span> i na określonej warstwie. Warstwę można określić za pomocą wartości ID warstwy (zwracanej przez funkcję <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) lub za pomocą nazwy warstwy (w postaci <span class="notranslate">string</span>, na przykład &quot;instance_layer&quot;) zdefiniowanej w <a href="../../../../The_Asset_Editors/Rooms.htm">edytorze pomieszczeń</a>.</p>
   <p>Funkcja ta zwraca wartość <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> która może być przechowywana w zmiennej i użyta do uzyskania dostępu do tej instancji. Zauważ, że funkcja ta wywoła również zdarzenie <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Create</a> dla tworzonej instancji <i>przed</i> kontynuowaniem kodu lub akcji dla zdarzenia, które wywołało funkcję.</p>
   <p class="note"><span class="important">WAŻNE</span> Minimalna i maksymalna głębokość warstwy wynosi od -16000 do 16000. Wszystko, co zostanie umieszczone na warstwie spoza tego zakresu, <b>nie zostanie narysowane</b>, choć wszystkie zdarzenia będą przebiegać normalnie.</p>
@@ -26,7 +26,7 @@
   <p class="note"><span class="note">UWAGA</span> Zmienne ze strony <span class="notranslate">struct</span> są &quot;płytko kopiowane&quot; do nowej instancji, co oznacza, że tablice, <span class="notranslate">structs</span> i inne zasoby są kopiowane przez odniesienie, a nie powielane.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_layer</span>(x, y, layer_id, obj);</p>
   <table>
     <tbody>
       <tr>

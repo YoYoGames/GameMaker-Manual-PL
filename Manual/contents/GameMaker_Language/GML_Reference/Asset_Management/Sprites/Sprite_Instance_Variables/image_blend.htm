@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>image_blend</h1>
+  <h1><span data-field="title" data-format="default">image_blend</span></h1>
   <p>Ta zmienna kontroluje &quot;zabarwienie&quot; instancji <span class="notranslate">sprite</span>. Domyślną wartością jest -1 (ale może to być również <span class="inline">c_white</span>). Każda inna wartość (w tym wewnętrzne stałe kolorów, takie jak <span class="inline">c_red</span>, lub <span class="inline">c_aqua</span>) spowoduje zmieszanie określonego koloru z oryginalnym <span class="notranslate">sprite</span>. Należy pamiętać, że aby zmiany w tej zmiennej były widoczne, instancja <i>nie</i> powinna mieć zdarzenia draw (a więc <span data-keyref="GameMaker Name">GameMaker</span> domyślnie narysuje <span class="notranslate">sprite</span>) lub powinna być rysowana przy użyciu jednej z rozszerzonych funkcji rysowania, takich jak <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a> lub . <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><span class="inline">draw_sprite_ext()</span></a>.</p>
   <p><img alt="image_blend Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/blend_image.png" /></p>
   <p>Należy pamiętać, że na platformie HTML5 należy ograniczyć mieszanie (chyba że używa się WebGL), ponieważ każda mieszana strona <span class="notranslate">sprite</span> musi być buforowana osobno, a zatem posiadanie wielu mieszanych stron <span class="notranslate">sprites</span> może negatywnie wpłynąć na wydajność (rozmiar strony <span class="notranslate">cache</span> można także ustawić za pomocą funkcji <a href="../Sprite_Manipulation/sprite_set_cache_size.htm"><span class="inline">sprite_set_cache_size()</span></a>).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">image_blend;</p>
+  <p class="code"><span data-field="title" data-format="default">image_blend</span></p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Constant_Colour">Colour Constant</span></p>

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_world_draw_debug</h1>
+  <h1><span data-field="title" data-format="default">physics_world_draw_debug</span></h1>
   <p>Ta funkcja narysuje reprezentację systemu fizyki świata <span class="notranslate">room</span>, aby pomóc w <span class="notranslate">debugging</span>, gdy masz problemy z poprawnym działaniem sceny fizyki. Czasami problem może tkwić w części renderowania gry, np. strona <span class="notranslate">sprite</span> może być narysowana w niewłaściwym położeniu lub obrócona, co sprawia wrażenie nieprawidłowej fizyki, lub też może się zdarzyć, że obliczenia nie są poprawne. Tak czy inaczej, funkcja ta pomoże znaleźć i rozwiązać problem, rysując, co dzieje się w systemie fizyki. Aby to zrobić, należy wskazać, którą część układu ma narysować, a robi się to, przekazując wartość utworzoną z bitów przechowywanych w różnych stałych &quot;flagowych&quot;:</p>
   <table>
     <colgroup>
@@ -66,7 +66,7 @@
   <p><img>Jak widać w powyższym kodzie, na ekranie rysowane są tylko kształty i środki masy (a także kolory reprezentujące ich stany - więcej informacji na ten temat można znaleźć w dokumentacji Box 2D dostępnej on-line). W ten sam sposób możesz wyświetlić więcej, a nawet wszystkie stałe, które chcesz usunąć... Po prostu &quot;lub&quot; je wszystkie razem! Należy zwrócić uwagę na jeszcze jedną rzecz - funkcja ta powinna być wywoływana <i>tylko</i> w zdarzeniu rysowania instancji, która ma głębokość mniejszą niż ta, którą chcesz debugować, w przeciwnym razie nie będziesz mógł zobaczyć informacji o debugowaniu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_world_draw_debug(flag)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_world_draw_debug</span>(flag)</p>
   <table>
     <tbody>
       <tr>

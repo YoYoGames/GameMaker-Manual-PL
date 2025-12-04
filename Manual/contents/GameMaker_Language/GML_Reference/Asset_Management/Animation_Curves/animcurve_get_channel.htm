@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_get_channel</h1>
+  <h1><span data-field="title" data-format="default">animcurve_get_channel</span></h1>
   <p>Ta funkcja zwraca <a href="../../../GML_Overview/Structs.htm">strukturę</a> zawierającą dane kanału określonego w <span class="notranslate">animation curve</span> <span class="notranslate">asset</span>. Należy podać identyfikator <span class="notranslate">animation curve</span> lub <span class="notranslate">struct</span> oraz nazwę lub indeks kanału, a funkcja zwróci <span class="notranslate">struct</span> w następującym formacie:</p>
   <table>
     <colgroup>
@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Identyfikator <span class="notranslate">animation curve</span> to nazwa strony <span class="notranslate">animation curve</span> zdefiniowana w przeglądarce <span class="notranslate">Asset</span> lub wskaźnik <span class="notranslate">struct</span> zwrócony przez funkcję <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Nazwa kanału to znak <span class="notranslate">string</span>, który odnosi się do kanału zdefiniowanego w krzywej animacji <span class="notranslate">asset</span>, lub można podać wartość indeksu z zakresu od 0 do <i>n</i>, gdzie <i>n</i> to ostatni kanał w krzywej <span class="notranslate">asset</span> (np.: jeśli <span class="notranslate">animation curve</span> ma 4 kanały, będą one indeksowane od 0 do 3). Należy zauważyć, że przekazanie wartości indeksu będzie wymagało mniej przetwarzania niż przekazanie nazwy kanału. Jeśli funkcja się nie powiedzie (tzn. nie istnieje kanał o podanej nazwie lub indeksie), zostanie wyświetlony błąd.</p>
   <p>Punkty na pojedynczym kanale są przechowywane jako <span class="notranslate">structs</span> w <a href="../../../GML_Overview/Arrays.htm">tablicy</a>, gdzie każda pozycja w tablicy jest pojedynczym punktem <span class="notranslate">struct</span>. Punkt <span class="notranslate">struct</span> ma następujące zmienne:</p>
   <table>
@@ -76,7 +76,7 @@
   <p> </p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">animcurve_get_channel(curve_struct_or_id, channel_name_or_index);</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_get_channel</span>(curve_struct_or_id, channel_name_or_index);</p>
   <table>
     <tbody>
       <tr>

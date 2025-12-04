@@ -19,11 +19,11 @@
   <p><img>Błędy uruchamiania są na ogół poważniejsze niż błędy kompilacji, ponieważ oznaczają, że w kodzie jest coś poważnego, czego nie udało się wykryć ani edytorowi kodu, ani kompilatorowi, dlatego należy zwracać uwagę na wszystkie takie błędy. W przypadku wystąpienia takiego błędu można użyć przycisku <strong>Kopiuj</strong> w wyskakującym okienku, aby skopiować błąd do schowka, który można następnie wkleić do pliku tekstowego (lub gdziekolwiek indziej) w celu wykorzystania w przyszłości.</p>
   <p>Struktura tego błędu jest następująca:</p>
   <ul class="colour">
-    <li><img><br>
+    <li><img><br />
       Wyświetlane jest zdarzenie, w którym wystąpił błąd, a także strona <span class="notranslate">Object</span> (w stosownych przypadkach).</li>
-    <li><img><br>
+    <li><img><br />
       Pokazuje rzeczywisty błąd.  Pokazuje więc <em>zakres </em>błędu oraz jego typ. Pierwsza wartość w nawiasie to identyfikator instancji, w której uruchomiono kod - może to być też jedna z wartości specjalnych wymienionych w tabeli poniżej - a druga to wartość wewnętrzna, której <span data-keyref="GameMaker Name">GameMaker</span> używa do identyfikacji błędów i którą można zignorować. W przypadku powyższego obrazka jest to informacja, że zmienna <span class="inline">_image</span> nie została ustawiona (tzn. nie istnieje przed uzyskaniem do niej dostępu) na stronie <span class="notranslate">object</span> <span class="inline">obj_EA_DEMO_Control</span>.</li>
-    <li><img><br>
+    <li><img><br />
       Pokazuje on numer wiersza, w którym występuje błąd, oraz fragment kodu pokazujący jego położenie. Należy pamiętać, że nie zawsze jest to w 100% dokładne, ze względu na sposób kompilacji gry, ale powinno wystarczyć, aby pomóc w znalezieniu dokładnego miejsca wystąpienia problemu.</li>
   </ul>
   <p>Jak wspomniano powyżej, niektóre komunikaty o błędach będą identyfikować zakres nie za pomocą wartości ID instancji, ale raczej za pomocą wartości <em>ujemnej </em>. Wartości te można wykorzystać do dokładnego określenia natury błędu oraz tego, do czego się odnosi, korzystając z następujących możliwych wartości:</p>
@@ -264,7 +264,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Nie można użyć wartości globalnej w wyrażeniu with</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Z</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Próbowałeś użyć &quot;<span class="inline">global</span>&quot; jako zmiennej w oświadczeniu &quot;<span class="inline">with</span>&quot;, tzn:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Próbowałeś użyć &quot;<span class="inline">global</span>&quot; jako zmiennej w oświadczeniu &quot;<span class="inline">with</span>&quot;, tzn:<br />
           <span class="inline">with (global)<br />
                {<br />
                //do something;<br />
@@ -275,7 +275,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Nie można użyć local w wyrażeniu with</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Z</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Próbowałeś użyć &quot;<span class="inline">local</span>&quot; jako zmiennej w oświadczeniu &quot;<span class="inline">with</span>&quot;, tzn:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Próbowałeś użyć &quot;<span class="inline">local</span>&quot; jako zmiennej w oświadczeniu &quot;<span class="inline">with</span>&quot;, tzn:<br />
           <span class="inline">with (local)<br />
                {<br />
                //do something;<br />

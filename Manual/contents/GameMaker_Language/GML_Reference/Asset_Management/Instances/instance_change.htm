@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instancja_zmiana</title>
+  <title>instance_change</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instancja_zmiana</h1>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Możesz użyć tej funkcji, aby zmienić jedną instancję <span class="notranslate">object</span> w inną instancję innej <span class="notranslate">object</span>, a przy tym zdecydować, czy wykonać zdarzenia Zniszcz i Wyczyść dla początkowych instancji oraz zdarzenie Utwórz dla nowych instancji. W ten sposób możesz zmienić (na przykład) bombę w eksplozję - w tym przypadku argument &quot;perf&quot; byłby prawdopodobnie prawdziwy, ponieważ chciałbyś, aby bomba wykonała swoje zdarzenia Zniszcz i Oczyść, a eksplozja swoje zdarzenie Utwórz - lub możesz zmienić postać gracza w inną postać - w tym przypadku argument &quot;perf&quot; byłby prawdopodobnie fałszywy, ponieważ nie chcesz, aby instancje wykonały swoje zdarzenia Utwórz i Zniszcz/Oczyść.</p>
   <p>Warto zauważyć, że zmiana instancji oznacza, że nie powinieneś wykonywać żadnych dalszych działań z tą instancją aż do następnego kroku, a w szczególności próbować uzyskać dostęp do zmiennych itp. Zasadniczo zmieniasz instancję, ale nie jest ona faktycznie dostępna do końca bieżącego kroku, więc bezpośredni dostęp do zmiennych w niej zawartych (na przykład wywołanie <span class="inline">obj_Changed.x</span>) nie zadziała.</p>
   <p class="note"><b>OSTRZEŻENIE!</b> Gdy zmieniasz instancję z włączoną fizyką, właściwości fizyczne <b>nie zostaną przeniesione</b> do nowej instancji, w którą się zmieniają. Dlatego powinieneś mieć kod, który &quot;przeniesie&quot; stan fizyki bieżącej instancji do nowej instancji, albo zdefiniować właściwości fizyczne nowej instancji w zdarzeniu Create Event lub w edytorze <span class="notranslate">object</span>. Z tego powodu zaleca się, by nie używać tej funkcji z instancjami z włączoną fizyką, lecz raczej korzystać z kombinacji <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> i <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

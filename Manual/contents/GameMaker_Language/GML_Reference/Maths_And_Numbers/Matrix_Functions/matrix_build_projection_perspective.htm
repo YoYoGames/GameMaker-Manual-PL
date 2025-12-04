@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>macierz_budowania_projekcji_perspektywy</title>
+  <title>matrix_build_projection_perspective</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>macierz_budowania_projekcji_perspektywy</h1>
+  <h1><span data-field="title" data-format="default">matrix_build_projection_perspective</span></h1>
   <p>Ta funkcja tworzy macierz rzutu perspektywicznego na podstawie wymiarów płaszczyzny przycinania w pobliżu, używając określonych parametrów wymienionych poniżej.</p>
   <p>Należy pamiętać, że pole widzenia kamery będzie się różnić w zależności od podanych wartości <span class="inline">width</span>, <span class="inline">height</span> oraz <span class="inline">znear</span>, ponieważ szerokość i wysokość rzutu są umieszczane w pozycji Z określonej w argumencie <span class="inline">znear</span>.</p>
   <p>Na przykład, biorąc pod uwagę stały rozmiar 640x480, pole widzenia będzie szersze, jeśli <span class="inline">znear</span> znajduje się bliżej kamery, ale będzie węższe, jeśli <span class="inline">znear</span> jest daleko od kamery. To zachowanie jest pokazane na poniższej ilustracji:</p>
   <p><img>Z tego powodu zaleca się stosowanie wartości <span class="inline">znear</span>, która jest identyczna z szerokością rzutu, dzięki czemu pole widzenia jest zgodne z równoważnym rzutem ortograficznym.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">matrix_build_projection_perspective(width, height, znear, zfar);</p>
+  <p class="code"><span data-field="title" data-format="default">matrix_build_projection_perspective</span>(width, height, znear, zfar);</p>
   <table>
     <tbody>
       <tr>

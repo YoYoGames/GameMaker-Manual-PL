@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_async_group_begin</h1>
+  <h1><span data-field="title" data-format="default">buffer_async_group_begin</span></h1>
   <p>Ta funkcja jest wywoływana, gdy chcesz rozpocząć zapisywanie wielu <span class="notranslate">buffers</span> do wielu plików (lub ładowanie wielu <span class="notranslate">buffers</span>). <span class="inline2">Nazwa grupy</span> jest nazwą <span class="notranslate">string</span> i będzie używana jako nazwa katalogu, w którym pliki zostaną zapisane, oraz powinna być używana jako część pliku <span class="notranslate">path</span> podczas późniejszego ładowania plików z powrotem do <span class="notranslate">IDE</span> (przy użyciu dowolnej z <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> funkcji). Ta funkcja jest przeznaczona <i>wyłącznie</i> do użytku z funkcjami <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a> i <span class="inline"><a href="buffer_load_async.htm">buffer_load_async()</a></span>. Musisz także zakończyć grupę async przez wywołanie funkcji <a href="buffer_async_group_end.htm"><span class="inline">buffer_async_group_end()</span></a> w przeciwnym razie pliki nie zostaną zapisane/wczytane.</p>
   <p>Zauważ, że w przypadku platform konsolowych (np. PS4) <span class="inline2">nazwa grupy</span> będzie używana jako opis slotu zapisu, a użycie tej funkcji może pomóc uniknąć wyświetlania interfejsu użytkownika dla każdego zapisywanego pliku. Należy również pamiętać, że podczas korzystania z UWP można przenosić zapisane gry między natywnymi oknami Xbox i Microsoft Store, tworząc na przykład grupę, która jest taka sama jak grupa ERA Xbox:</p>
   <p class="code">if os_type == os_uwp<br />
@@ -27,7 +27,7 @@
     }</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">buffer_async_group_begin(groupname);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_begin</span>(groupname);</p>
   <table>
     <tbody>
       <tr>

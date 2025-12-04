@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>czcionka_add_sprite_ext</title>
+  <title>font_add_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>czcionka_add_sprite_ext</h1>
+  <h1><span data-field="title" data-format="default">font_add_sprite_ext</span></h1>
   <p>Za pomocą tej funkcji możesz użyć &quot;paska sprite'ów&quot; (sam <span class="notranslate">sprite</span> <b>musi</b> być <span class="notranslate">sprite</span> <span class="notranslate">asset</span> z przeglądarki <span class="notranslate">Asset</span> lub <span class="notranslate">sprite</span> dodanym do zasobów gry za pomocą <span class="inline">sprite_add</span>), aby utworzyć nowy <span class="notranslate">font</span> <span class="notranslate">asset</span>, w którym każdy podobraz będzie indywidualnym symbolem lub literą. W przeciwieństwie do zwykłego <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a> która ma określoną kolejność podobrazów w <span class="notranslate">sprite</span>, ta funkcja mapuje podobrazy <span class="notranslate">sprite</span> na podstawie argumentu &quot;string_map&quot; funkcji. Argument ten to <span class="notranslate">string</span>, którego możesz użyć, aby powiedzieć <span data-keyref="GameMaker Name">programowi GameMaker</span>, w jakiej kolejności są pod-obrazy strony <span class="notranslate">sprite</span> <span class="notranslate">font</span> i będzie on je automatycznie mapował podczas pisania tekstu. Na przykład, jeśli masz mapę łańcuchów &quot;AaBbCcDdEeFfGgHh&quot;, na stronie <span class="notranslate">sprite</span> <span class="notranslate">font</span> podobrazy <i>muszą</i> być uporządkowane w ten sposób. Możesz zdefiniować &quot;spację&quot; jako dowolny znak, na przykład pojedynczą linię o rozmiarze, jaki chcesz, aby miała spacja, a wszystkie spacje w tekście będą renderowane na tej szerokości (ale wybrany obraz <i>nigdy nie</i> będzie renderowany), lub jeśli nie podasz adresu <span class="notranslate">sprite</span> dla spacji, to zamiast niej zostanie użyta szerokość najszerszego znaku w <span class="notranslate">sprite</span> <span class="notranslate">font</span>.</p>
   <p>Można także ustawić odstępy między literami <span class="notranslate">font</span>, aby były proporcjonalne (<span class="inline">true</span>) lub nie (<span class="inline">false</span>), przy czym odstępy proporcjonalne <span class="notranslate">font</span> są zależne od rzeczywistej szerokości liter (na przykład litera &quot;i&quot; zajmuje mniej miejsca <span class="notranslate">room</span> niż litera &quot;w&quot;), natomiast odstępy nieproporcjonalne <span class="notranslate">font</span> są zależne od szerokości podobrazia, podobnie jak odstępy jednoprzestrzenne <span class="notranslate">font</span>. Na koniec można określić odstęp, jaki ma być pozostawiony między poszczególnymi literami podczas pisania. Może to być dowolna wartość całkowita, przy czym 0 oznacza brak odstępu (litery będą się &quot;stykać&quot;, jeśli są proporcjonalne).</p>
   <p>Funkcja zwraca wartość <i>indeksu</i>, którą należy zapisać w zmiennej, ponieważ będzie ona potrzebna we wszystkich kolejnych kodach odwołujących się do tej strony <span class="notranslate">font</span>, lub zwraca -1, jeśli z jakiegoś powodu funkcja się nie powiedzie.</p>
@@ -22,7 +22,7 @@
   <p class="note"><b><span class="note">UWAGA</span> </b>Po załadowaniu strony <span class="notranslate">font</span> do programu <span data-keyref="GameMaker Name">GameMaker</span> musisz pamiętać o jej ponownym usunięciu (za pomocą <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>), gdy nie jest już potrzebna, w przeciwnym razie istnieje ryzyko wycieku pamięci, który spowolni, a w końcu spowoduje awarię gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_add_sprite_ext(spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add_sprite_ext</span>(spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

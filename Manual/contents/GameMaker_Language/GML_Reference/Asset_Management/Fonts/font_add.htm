@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_add</h1>
+  <h1><span data-field="title" data-format="default">font_add</span></h1>
   <p>Za pomocą tej funkcji można dodać do gry stronę <span class="notranslate">font</span> z pliku <span class="notranslate">font</span> znajdującego się w folderze <a data-xref="{text}" href="../../../../Settings/Included_Files.htm#h">Included Files</a>. Możesz zdefiniować rozmiar <span class="notranslate">font</span> (w punktach), a także określić, czy <span class="notranslate">font</span> ma być <b>pogrubiony</b> czy <i>kursywą</i>, oraz zakres znaków, które mają być uwzględnione. Funkcja zwraca wartość <i>indeksu</i>, którą należy zapisać w zmiennej, ponieważ będzie ona potrzebna we wszystkich kolejnych kodach odwołujących się do tej strony <span class="notranslate">font</span>, lub zwróci <span class="inline">-1</span>, jeśli funkcja z jakiegoś powodu się nie powiedzie.</p>
   <p>Należy pamiętać, że plik <span class="notranslate">font</span> musi być albo plikiem <span class="inline">*.ttf</span>, albo <span class="inline">*.otf</span>, co może być również przydatne przy dodawaniu niestandardowych plików <span class="notranslate">fonts</span>, takich jak azjatyckie lub arabskie <span class="notranslate">fonts</span>.</p>
   <p class="note"><b>UWAGA!!! </b>Jeśli umieścisz taki plik <span class="notranslate">font</span> w załączonych plikach, <b>musi</b> on <b>posiadać licencję</b> na dystrybucję z grą.</p>
@@ -25,7 +25,7 @@
   <p class="note"><b><span class="note">UWAGA</span> </b>Po załadowaniu strony <span class="notranslate">font</span> do programu <span data-keyref="GameMaker Name">GameMaker</span> musisz pamiętać o jej ponownym usunięciu (za pomocą <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>), gdy nie jest już potrzebna, w przeciwnym razie istnieje ryzyko wycieku pamięci, który spowolni, a w końcu spowoduje awarię gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_add(name, size, bold, italic, first, last);</p>
+  <p class="code"><span data-field="title" data-format="default">font_add</span>(name, size, bold, italic, first, last);</p>
   <table>
     <tbody>
       <tr>

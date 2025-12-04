@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_set_persistent</span></h1>
   <p>Za pomocą tej funkcji można zmienić (lub ustawić) trwałość dowolnej instancji <span class="notranslate">room</span> w grze, <i>z wyjątkiem bieżącej</i>. <span class="notranslate">room</span> z trwałością oznaczoną jako <span class="inline">true</span> zachowa stan wszystkich instancji w obrębie tej strony <span class="notranslate">room</span>, jeśli gracz wyjdzie, a następnie wróci, podczas gdy jeśli trwałość jest oznaczona jako <span class="inline">false</span>, będzie ona za każdym razem resetowana do stanu początkowego. Należy pamiętać, że persistent <span class="notranslate">room</span> zużywa znacznie więcej pamięci niż zwykły <span class="notranslate">room</span> i nie zaleca się umieszczania ich w grze zbyt wielu.</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja <b>NIE</b> zadziała w celu wyłączenia trwałości <span class="notranslate">switch</span>, jeśli strona <span class="notranslate">room</span> została już odwiedzona! Stała strona <span class="notranslate">room</span>, raz odwiedzona, jest przechowywana w pamięci i aby <span class="notranslate">switch</span> wyłączyć trwałość, należy przejść do tej strony <span class="notranslate">room</span> i ustawić zmienną <span style="font-size:1px;"><a href="room_persistent.htm"><span class="inline">room_persistent</span></a></span> zmienną na <span class="inline">false</span>, a następnie ponownie opuścić stronę <span class="notranslate">room</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">room_set_persistent(index, val);</p>
+  <p class="code"><span data-field="title" data-format="default">room_set_persistent</span>(index, val);</p>
   <table>
     <tbody>
       <tr>

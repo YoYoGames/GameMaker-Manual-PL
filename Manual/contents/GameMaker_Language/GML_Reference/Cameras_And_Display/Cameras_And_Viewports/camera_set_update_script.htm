@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_update_script</h1>
+  <h1><span data-field="title" data-format="default">camera_set_update_script</span></h1>
   <p>Za pomocą tej funkcji można ustawić <a href="../../../GML_Overview/Script_Functions.htm">funkcję skryptu</a>, która będzie wywoływana w każdej klatce gry, w której kamera jest przypisana do widocznego i aktywnego portu widoku. Podajesz unikatową wartość identyfikatora kamery (zwracaną przez różne funkcje <span class="inline">camera_create</span> ) oraz identyfikator funkcji, która ma zostać wywołana. Kolejność wywoływania funkcji przypisanych do kamer i faktycznego renderowania widoku z kamery jest następująca:</p>
   <ul class="colour">
     <li>Kamery dla wszystkich widocznych i aktywnych portów widokowych mają <b>funkcję aktualizacji </b>o nazwie</li>
@@ -30,7 +30,7 @@
   <p>Zastosowanie niestandardowej funkcji aktualizacji do kamery powoduje zastąpienie jej domyślnego zachowania w zakresie aktualizacji. Na przykład, jeśli ustawisz kamerę tak, aby śledziła stronę <span class="notranslate">object</span> (powiedzmy <span class="inline2">obj_player</span>) podczas wywoływania <span class="inline"><a href="camera_create_view.htm">camera_create_view()</a></span>, lub ustawisz to we właściwościach <span class="notranslate">Room</span>, przestanie ona śledzić tę stronę <span class="notranslate">object</span> po ustawieniu niestandardowej aktualizacji <span class="notranslate">script</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">camera_set_update_script(camera_id, script)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(camera_id, script)</p>
   <table>
     <tbody>
       <tr>

@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_get_parameters</h1>
+  <h1><span data-field="title" data-format="default">fx_get_parameters</span></h1>
   <p>Ta funkcja służy do pobierania <a href="../../../../GML_Overview/Structs.htm">struktury</a> zawierającej wszystkie parametry dla danego FX <span class="notranslate">struct</span>. Użytkownik określa FX <span class="notranslate">struct</span> (zwrócony przez <span class="inline"><a href="fx_create.htm">fx_create()</a></span> lub <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>), a ta funkcja zwraca <span class="notranslate">struct</span> zawierający zmienne dla wszystkich parametrów mających zastosowanie do tego filtra/efektu. Parametry, które używają wektorów (tzn. grup wartości), będą przedstawione w postaci tablic.</p>
   <p>Nazwy wszystkich parametrów można uzyskać w osobnej tablicy, wywołując polecenie <span class="inline"><a href="fx_get_parameter_names.htm">fx_get_parameter_names()</a></span>, lub znaleźć je na tej stronie: <a data-xref="{title}" href="../../../../../The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm">FX Types &amp; Parameters</a>.</p>
   <p>Zmiana wartości na stronie <span class="notranslate">struct</span> nie spowoduje zastosowania tych zmian w filtrze/efektcie; aby zmiany zaczęły obowiązywać, należy wywołać stronę <span class="inline"><a href="fx_set_parameters.htm">fx_set_parameters()</a></span> w celu zastosowania zmodyfikowanej strony <span class="notranslate">struct</span> z powrotem do filtra/efektu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">fx_get_parameters(filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_get_parameters</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

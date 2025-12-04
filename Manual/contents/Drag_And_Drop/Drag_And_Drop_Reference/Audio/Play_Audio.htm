@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Offset</span></td>
-        <td>Czas (w sekundach), na który należy ustawić punkt startowy (domyślnie 0). Wartości dłuższe niż długość podanego dźwięku są ignorowane.<br>
+        <td>Czas (w sekundach), na który należy ustawić punkt startowy (domyślnie 0). Wartości dłuższe niż długość podanego dźwięku są ignorowane.<br />
           Jeśli to pole jest puste, używane jest przesunięcie zasobu dźwiękowego (pozycja ścieżki).</td>
       </tr>
       <tr>
@@ -56,10 +56,10 @@
   </table>
   <p> </p>
   <h4>Przykład 1:</h4>
-  <p><img>Powyższy kod bloku akcji sprawdza, czy nie nastąpiło naciśnięcie przycisku myszy, a jeśli tak, to sprawdza zmienną globalną, czy nie jest to <span class="inline">true</span>. Jeśli nie jest to <span class="inline">true</span>, to odtwarzany jest dźwięk (i zapętlany), a zmienna globalna ustawiana jest na <span class="inline">true</span>, w przeciwnym razie dźwięk jest zatrzymywany, a zmienna globalna ustawiana jest na <span class="inline">false</span>.<br>
+  <p><img>Powyższy kod bloku akcji sprawdza, czy nie nastąpiło naciśnięcie przycisku myszy, a jeśli tak, to sprawdza zmienną globalną, czy nie jest to <span class="inline">true</span>. Jeśli nie jest to <span class="inline">true</span>, to odtwarzany jest dźwięk (i zapętlany), a zmienna globalna ustawiana jest na <span class="inline">true</span>, w przeciwnym razie dźwięk jest zatrzymywany, a zmienna globalna ustawiana jest na <span class="inline">false</span>.<br />
     Dźwięk jest odtwarzany z domyślnymi ustawieniami: mnożnik wzmocnienia i wysokości dźwięku równy 1 oraz offset równy 0 (domyślny offset dźwięku <span class="notranslate">asset</span>).</p>
   <h4>Przykład 2:</h4>
-  <p><img>Powyższy kod bloku akcji ustawia najpierw pozycję ścieżki dźwięku <span class="notranslate">asset</span> &quot;snd_MusicBoss&quot; na 20 sekund. Następnie sprawdza, czy zmienna instancji &quot;skip_intro&quot; jest ustawiona na <span class="inline">true</span>. Jeśli tak, to rozpoczyna odtwarzanie dźwięku &quot;snd_MusicBoss&quot; od 20 sekundy, czyli od wartości dla pozycji ścieżki ustawionej wcześniej (dzieje się tak dlatego, że pole &quot;Offset&quot; jest pozostawione puste, więc używany jest offset <strong>aktywów</strong> ). Pierwsze 20 sekund dźwięku jest pomijane.<br>
+  <p><img>Powyższy kod bloku akcji ustawia najpierw pozycję ścieżki dźwięku <span class="notranslate">asset</span> &quot;snd_MusicBoss&quot; na 20 sekund. Następnie sprawdza, czy zmienna instancji &quot;skip_intro&quot; jest ustawiona na <span class="inline">true</span>. Jeśli tak, to rozpoczyna odtwarzanie dźwięku &quot;snd_MusicBoss&quot; od 20 sekundy, czyli od wartości dla pozycji ścieżki ustawionej wcześniej (dzieje się tak dlatego, że pole &quot;Offset&quot; jest pozostawione puste, więc używany jest offset <strong>aktywów</strong> ). Pierwsze 20 sekund dźwięku jest pomijane.<br />
     Jeśli zmienna instancji &quot;skip_intro&quot; jest ustawiona na <span class="inline">false</span>, to rozpoczyna się również odtwarzanie &quot;snd_MusicBoss&quot;, ale ponieważ &quot;Offset&quot; został ustawiony na 0, dźwięk rozpocznie się od początku. Pozycja ścieżki 20 sekund, zdefiniowana wcześniej dla <strong>zasobu</strong> dźwiękowego, jest ignorowana.</p>
   <p> </p>
   <p> </p>

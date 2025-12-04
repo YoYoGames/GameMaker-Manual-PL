@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_fixture_bind</h1>
+  <h1><span data-field="title" data-format="default">physics_fixture_bind</span></h1>
   <p>Kiedy już zdefiniowaliśmy nasz uchwyt, musi on zostać powiązany z instancją. Oznacza to, że jego <i>właściwości</i> są przekazywane do wybranej instancji, a <b>nie do samego</b> elementu, tak więc jeden element może być powiązany z wieloma instancjami, jeśli wszystkie mają mieć te same właściwości. Możesz określić indeks <span class="notranslate">object</span> dla celu i wszystkie instancje obecne w <span class="notranslate">room</span> w tym czasie otrzymają właściwości tej armatury (ale nie żadne nowe instancje <span class="notranslate">object</span> utworzone później), lub możesz użyć specjalnych słów kluczowych <i>other</i> i <i>all</i>. Możesz nawet określić rodzica <span class="notranslate">object</span> i wszystkie instancje dzieci z tym rodzicem również otrzymają to wiązanie. Po tym jak uchwyt zostanie powiązany ze wszystkimi instancjami, których potrzebujesz, może zostać usunięty, jeśli nie jest już potrzebny, a instancje z właściwościami tego uchwytu nie zostaną dotknięte i zachowają te właściwości.</p>
   <p>Mocowanie zostanie związane z instancją ze środkiem masy umieszczonym w punkcie początkowym instancji, a mocowanie wielokątów jest związane na podstawie położenia punktów <i>względem</i> punktu początkowego. Jeśli chcesz, by twój uchwyt był związany z punktem innym niż początek, powinieneś użyć <a href="physics_fixture_bind_ext.htm"><span class="inline">physics_fixture_bind_ext()</span></a>.</p>
   <p><img>Funkcja zwróci również unikalną wartość &quot;id&quot; dla <i>powiązanego</i> uchwytu<b>(nie dla samego uchw</b>ytu), która może być użyta do usunięcia (&quot;un-bind&quot;) właściwości fizyki z instancji przy użyciu funkcji <a href="physics_remove_fixture.htm"><span class="inline">physics_remove_fixture()</span></a>. Pozwala to na dodawanie i usuwanie właściwości fizycznych z instancji bez niszczenia i ponownego tworzenia <span class="notranslate">objects</span>.</p>
   <p class="note"><b>UWAGA</b>: Fixtures powinny być usuwane, gdy nie są już potrzebne, ponieważ w przeciwnym razie może dojść do wycieku pamięci, co spowolni, a w końcu spowoduje awarię gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_fixture_bind(fixture, target)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_fixture_bind</span>(fixture, target)</p>
   <table>
     <tbody>
       <tr>

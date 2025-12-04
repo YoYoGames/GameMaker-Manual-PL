@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>game_save_buffer</h1>
+  <h1><span data-field="title" data-format="default">game_save_buffer</span></h1>
   <p>Jest to odmiana funkcji <span class="inline"><a href="game_save.htm">game_save()</a></span>, dlatego należy najpierw przeczytać <a href="game_save.htm">stronę</a> poświęconą tej funkcji, ponieważ zawiera ona ważne informacje dotyczące jej użycia, a także tej funkcji.</p>
   <p>Za pomocą tej funkcji można zapisać aktualny stan gry w utworzonym wcześniej <a href="../Buffers/Buffers.htm">buforze</a>&quot;grow&quot; <span class="notranslate">buffer</span> (patrz <a href="../Buffers/Buffers.htm">Bufory</a>), który następnie można w dowolnym momencie ponownie załadować za pomocą <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> funkcja. Ta funkcja jest przeznaczona do użycia w jednym <span class="notranslate">room</span> w danym czasie (np. nie zaleca się zapisywania <span class="notranslate">buffer</span> w jednym <span class="notranslate">room</span>, a następnie próbowania załadowania <span class="notranslate">buffer</span> z innego ) i powinna być używana tylko do punktów kontrolnych lub restartów poziomów.</p>
   <p class="note"><b>UWAGA</b>: Ta funkcja jest <i>bardzo</i> ograniczona i została zaprojektowana dla początkujących graczy, aby szybko uruchomić system punktów kontrolnych. Bardziej zaawansowani użytkownicy mogą jednak preferować kodowanie własnego systemu za pomocą funkcji <a href="../File_Handling/File_Handling.htm">Plik</a>, ponieważ gra <i>nie</i> będzie zapisywać żadnych zasobów dynamicznych, takich jak struktury danych, powierzchnie, dodane strony <span class="notranslate">sprites</span> itp.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">game_save_buffer(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save_buffer</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

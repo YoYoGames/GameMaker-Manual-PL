@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_start_nagrywanie</title>
+  <title>audio_start_recording</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_start_nagrywanie</h1>
+  <h1><span data-field="title" data-format="default">audio_start_recording</span></h1>
   <p>Ta funkcja rozpocznie nagrywanie dźwięku z zaindeksowanego źródła rejestratora. Liczbę źródeł nagrywania można uzyskać za pomocą funkcji <a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a>Po rozpoczęciu nagrywania dźwięk zostanie zapisany w tymczasowym pliku <span class="notranslate">buffer</span> i rozpocznie wyzwalanie <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">zdarzenia Asynchroniczne nag</a>rywanie dźwięku. Zdarzenie to jest wyzwalane w każdym kroku, w którym odbywa się nagrywanie, i powoduje utworzenie specjalnej <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapy DS</a> w zmiennej <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> z następującymi parami klucz/wartość:</p>
   <ul class="colour">
     <li>&quot;<strong>buffer_id</strong>&quot; - identyfikator tymczasowej strony <span class="notranslate">buffer</span>, której można użyć do pobierania danych audio</li>
@@ -26,7 +26,7 @@
   <p class="note"><b><span class="note">UWAGA</span> </b>Większość platform obsługuje nagrywanie dźwięku w jakiejś formie, ale nie oznacza to, że wszystkie urządzenia będą na to zezwalać, nawet jeśli platforma to robi, dlatego zawsze należy sprawdzić, czy funkcja <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><span class="inline">audio_get_recorder_count()</span></a></span> zwraca wartość większą niż 0, aby sprawdzić, czy urządzenia do nagrywania są dostępne, zanim użyjesz pozostałych funkcji nagrywania.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_start_recording(recorder_index);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_start_recording</span>(recorder_index);</p>
   <table>
     <tbody>
       <tr>
