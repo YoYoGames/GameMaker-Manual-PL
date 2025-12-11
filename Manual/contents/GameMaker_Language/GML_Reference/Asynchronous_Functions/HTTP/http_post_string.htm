@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_post_string</h1>
+  <h1><span data-field="title" data-format="default">http_post_string</span></h1>
   <p>W informatyce funkcja <b>post</b> request jest używana, gdy klient musi wysłać dane do <span class="notranslate">server</span> jako część żądania pobrania, np. przy wysyłaniu pliku lub wypełnianiu formularza, i tak samo jest w przypadku tej funkcji w <span data-keyref="GameMaker Name">GameMakerze</span>. W odróżnieniu od metody żądania <span class="inline"><a href="http_get.htm">http_get()</a></span>, w której do <span class="notranslate">server</span> wysyłany jest tylko adres URL, <span class="inline">http_post_string()</span> zawiera również adres <span class="notranslate">string</span>, który jest wysyłany do <span class="notranslate">server</span> i może skutkować utworzeniem nowego zasobu lub aktualizacją istniejącego zasobu albo jednym i drugim. Należy zauważyć, że parametry żądania HTTP (fragmenty czasami &quot;dołączane&quot; do końca adresu URL, gdy użytkownik przesyła formularz na stronie internetowej) są również całkowicie dopuszczalne przy korzystaniu z tej funkcji.</p>
   <p class="note"><b><span class="note">UWAGA</span> </b>Należy pamiętać, że ze względu na ochronę XSS w przeglądarkach, żądania i próby załadowania zasobów z innych domen są blokowane i mogą zwracać puste wyniki. Więcej informacji na ten temat można znaleźć w części poświęconej <a href="HTTP.htm">problemom domen krzyżowych</a>.</p>
   <p>Zdarzenie to wygeneruje &quot;wywołanie zwrotne&quot;, które zostanie odebrane przez dowolne zdarzenie <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">HTTP</a>, w którym to przypadku zostanie wygenerowana <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> (bardziej znana jako &quot;słownik&quot;), która jest wyłączna dla tego zdarzenia i jest przechowywana w specjalnej zmiennej <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><b>async_load</b></a>. Ta mapa DS będzie zawierać różne wartości w zależności od tego, czy zwracane są dane, czy nie. Na przykład, jeśli użytkownik zażądał pliku, zdarzenie będzie wyzwalane wielokrotnie po odebraniu każdego pakietu danych, dzięki czemu można na przykład wyświetlić pasek postępu. Ogólna struktura mapy DS jest następująca:</p>
@@ -33,7 +33,7 @@
   </ul>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">http_post_string(url, string);</p>
+  <p class="code"><span data-field="title" data-format="default">http_post_string</span>(url, string);</p>
   <table>
     <tbody>
       <tr>

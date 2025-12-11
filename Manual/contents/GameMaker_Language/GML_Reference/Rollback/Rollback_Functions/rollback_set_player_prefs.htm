@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_set_player_prefs" />
 </head>
 <body>
-  <h1>rollback_set_player_prefs</h1>
+  <h1><span data-field="title" data-format="default">rollback_set_player_prefs</span></h1>
   <p>Po <a href="rollback_set_player_prefs.htm">włączeniu preferencji</a>, ta funkcja jest używana do ustawienia preferencji dla lokalnego gracza. Oznacza to, że funkcja musi polegać na <a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">lokalnych</a> danych wejściowych, a nie na danych <a href="rollback_get_input.htm">wejściowych Rollback</a>.</p>
   <p>Preferencje mogą być dowolnego typu. Jeśli ustawione są domyślne preferencje, upewnij się, że używasz tego samego typu danych i struktury.</p>
   <p>Kiedy któryś z graczy ustawia swoje preferencje, wszyscy w grze otrzymują <a data-xref="{text}" href="../Rollback_Events.htm#h1">Rollback Event</a>.</p>
@@ -24,7 +24,7 @@
   <p>Proszę przeczytać: <a data-xref="{title}" href="../Rollback_Preferences.htm">Preferencje gracza</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">rollback_set_player_prefs(preferences);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_set_player_prefs</span>(preferences);</p>
   <table>
     <colgroup>
       <col />
@@ -49,9 +49,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Przykład:</h4>
-  <p class="code" id="p">rollback_set_player_prefs({<br>
-        character: obj_customizer.character_selected,<br>
-        color: obj_customizer.color_selected<br>
+  <p class="code" id="p">rollback_set_player_prefs({<br />
+        character: obj_customizer.character_selected,<br />
+        color: obj_customizer.color_selected<br />
     });</p>
   <p>Powyższy kod ustawia preferencje dla gracza, odczytując wartości z &quot;customizera&quot; <span class="notranslate">object</span>, który byłby niezarządzany (lokalny).</p>
   <p> </p>

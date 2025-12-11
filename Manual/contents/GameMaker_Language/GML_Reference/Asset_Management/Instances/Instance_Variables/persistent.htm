@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>uporczywa</title>
+  <title>persistent</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uporczywa</h1>
+  <h1><span data-field="title" data-format="default">persistent</span></h1>
   <p>Tę zmienną można odczytać, by dowiedzieć się, czy instancja jest oznaczona jako <span class="inline">persistent</span> czy nie, albo użyć jej do ustawienia trwałości instancji na <span class="inline">true</span> (persistent) lub <span class="inline">false</span> (not persistent). Instancja persystentna to taka, która będzie &quot;przenoszona&quot; z <span class="notranslate">room</span> na <span class="notranslate">room</span>, co oznacza (na przykład), że wystarczy ją utworzyć tylko raz na początku gry i będzie obecna we wszystkich kolejnych <span class="notranslate">rooms</span>. Należy uważać z persystencją, ponieważ łatwo jest stracić kontrolę nad trwałymi instancjami, co może prowadzić do problemów na późniejszym etapie rozwoju gry.</p>
   <p>Gdy utworzysz instancję z włączoną persystencją w <span class="notranslate">room</span>, zmienna ta zostanie ustawiona na <span class="inline">true</span> i zostanie jej przypisana warstwa lub głębokość (w zależności od tego, jakiej funkcji użyłeś do utworzenia instancji <span class="notranslate">object</span>). Gdy zmienisz stronę <span class="notranslate">room</span> i jeśli następująca po niej strona <span class="notranslate">room</span> <i>nie</i> będzie miała warstwy o takiej samej nazwie lub głębokości jak ta, która została przypisana, to dla instancji zostanie utworzona nowa warstwa, która będzie trwała przez stronę <span class="notranslate">rooms</span>. Jeśli podczas tworzenia instancji nadałeś jej nazwę, to nowa warstwa również będzie miała taką samą nazwę jak warstwa oryginalna, a jeśli przypisałeś jej głębokość, to nowa warstwa będzie miała nazwę &quot;<span class="inline">_layer_XXX</span>&quot;, gdzie &quot;XXX&quot; to wartość heksadecymalna służąca do nadania warstwie unikalnej nazwy. Warstwy te zostaną usunięte z <span class="notranslate">room</span> na <span class="notranslate">Room</span> End. Kolejną rzeczą, o której należy pamiętać w kontekście warstw i instancji persystentnych, jest to, że jeśli podczas tworzenia instancji przypisałeś jej warstwę o tej samej nazwie, a w następnej części <span class="notranslate">rooms</span> znajduje się inna warstwa o tej samej nazwie, to instancja persystentna zostanie przypisana do warstwy o tej samej nazwie, <i>niezależnie od głębokości</i> warstwy. Wreszcie, jeśli instancja uporczywa zostanie przeniesiona na stronę <span class="notranslate">room</span> z warstwą na tej samej głębokości, na której została utworzona, <i>nie</i> zostanie przypisana do tej warstwy, ale zamiast tego zostanie utworzona nowa warstwa na tej samej głębokości (zgodnie z konwencją nazewnictwa wyjaśnioną wcześniej).</p>
   <p>Trwały adres <span class="notranslate">object</span> będzie nadal wywoływał zdarzenia <b>rozpoczęcia</b> i <b>zakończenia</b> gry, <b>rozpoczęcia</b> i <b>zakończenia</b> <b>pomieszczenia</b>, jednak jeśli ponownie uruchomisz grę (np. za pomocą funkcji <span class="inline">game_restart()</span> ), wszystkie trwałe adresy <span class="notranslate">objects</span> zostaną usunięte i będą istnieć tylko wtedy, gdy zostaną ponownie utworzone przez grę. Pamiętaj też, że jeśli dezaktywujesz trwałą stronę <span class="notranslate">object</span>, nie będzie ona już przechodzić z jednej strony <span class="notranslate">room</span> do drugiej, chyba że zostanie ponownie aktywowana przed wywołaniem zdarzenia <span class="notranslate">Room</span> End.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">persistent;</p>
+  <p class="code"><span data-field="title" data-format="default">persistent</span></p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

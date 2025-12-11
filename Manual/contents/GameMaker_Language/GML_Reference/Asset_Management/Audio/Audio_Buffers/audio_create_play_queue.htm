@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_create_play_queue</h1>
+  <h1><span data-field="title" data-format="default">audio_create_play_queue</span></h1>
   <p>Ta funkcja przygotowuje stronę <span class="notranslate">buffer</span> <span class="notranslate">queue</span> do odbioru dźwięku. Przekazuje format danych (obecnie obsługiwane są tylko <span class="inline">buffer_u8</span> lub <span class="inline">buffer_s16</span> ), częstotliwość próbkowania (która może wynosić od 1000hz do 48000hz) oraz kanały, których wymaga dźwięk, z jednej z poniższych stałych:</p>
   <table>
     <tbody>
@@ -37,7 +37,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Należy pamiętać, że należy zwolnić wszystkie pliki audio <span class="notranslate">queues</span> utworzone za pomocą tej funkcji, gdy nie są już potrzebne, aby zapobiec wyciekom pamięci przy użyciu funkcji <a href="audio_free_play_queue.htm"><span class="inline">audio_free_play_queue()</span></a>.</p>
   <p>Ta funkcja wywoła <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">zdarzenie asynchronicznego odtwarzania dźwięku</a>, gdy strona <span class="notranslate">queue</span> osiągnie koniec, a w tym zdarzeniu w zmiennej <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS</a> zostanie utworzona specjalna <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">mapa DS</a> <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> z następującymi parami klucz/wartość:</p>
   <ul class="colour">
@@ -47,7 +47,7 @@
   </ul>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_create_play_queue(queueFormat, queueRate, queueChannels);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_create_play_queue</span>(queueFormat, queueRate, queueChannels);</p>
   <table>
     <tbody>
       <tr>

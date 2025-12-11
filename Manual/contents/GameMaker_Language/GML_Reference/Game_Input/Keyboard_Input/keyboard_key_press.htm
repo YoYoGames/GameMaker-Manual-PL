@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>keyboard_key_press</h1>
+  <h1><span data-field="title" data-format="default">keyboard_key_press</span></h1>
   <p>Za pomocą tej funkcji można symulować naciśnięcie dowolnego klawisza na klawiaturze. Po użyciu klawisz będzie oznaczony jako naciśnięty do momentu wywołania odpowiedniej funkcji zwalniającej (zob. <a href="keyboard_key_release.htm"><span class="inline">keyboard_key_release()</span></a>).
     Funkcja przyjmuje wartość keycode zwróconą przez funkcję <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> (tylko <i>wielkie</i> litery od A-Z lub cyfry od 0-9), lub dowolną stałą <span class="inline">vk_*</span> wymienioną na głównej stronie Keyboard <a href="Keyboard_Input.htm">Input</a>.</p>
   <p>Należy pamiętać, że po wywołaniu tej funkcji, jeśli klawisz zostanie <i>fizycznie</i> naciśnięty na klawiaturze, zdarzenie naciśnięcia <i>nie</i> zostanie ponownie zarejestrowane, dopóki klawisz nie zostanie fizycznie zwolniony (co spowoduje wywołanie zdarzenia zwolnienia i zatrzymanie tej funkcji),

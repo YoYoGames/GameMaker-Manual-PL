@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>external_define</h1>
+  <h1><span data-field="title" data-format="default">external_define</span></h1>
   <p>Funkcji tej można użyć do zdefiniowania zewnętrznego wywołania funkcji do określonego pliku dll (w przypadku <span class="notranslate">Windows</span>) lub dylib (w przypadku komputerów Mac). Ten plik może być zarówno plikiem dołączonym, jak i częścią <span class="notranslate">extension</span>.</p>
   <p>Podajemy nazwę (oraz <span class="notranslate">path</span>) pliku, a następnie nazwę funkcji, którą chcemy zdefiniować. Następnie należy określić konwencję wywoływania (patrz lista stałych poniżej) oraz typ oczekiwanego wyniku (również stały, wymienione poniżej).</p>
   <p>Na końcu należy podać liczbę argumentów, jakie może przyjmować funkcja (od 0 do 15), a dla każdego z nich należy określić jego typ. Należy pamiętać, że w przypadku funkcji z 4 lub więcej argumentami, wszystkie <i>muszą</i> być typu <span class="inline">ty_real</span>.</p>
@@ -67,7 +67,7 @@
   </table>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
+  <p class="code"><span data-field="title" data-format="default">external_define</span>(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]);</p>
   <table>
     <tbody>
       <tr>

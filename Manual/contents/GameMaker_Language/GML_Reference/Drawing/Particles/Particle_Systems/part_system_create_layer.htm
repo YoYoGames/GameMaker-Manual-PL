@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>część_systemu_tworzenia_warstwy</title>
+  <title>part_system_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>część_systemu_tworzenia_warstwy</h1>
+  <h1><span data-field="title" data-format="default">part_system_create_layer</span></h1>
   <p>Ta funkcja tworzy nowy układ cząsteczek na podanej warstwie. Podajesz unikalny identyfikator warstwy zwrócony przez funkcję <a href="../../../Asset_Management/Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> lub nazwę warstwy, która ma być użyta jako <span class="notranslate">string</span> - na przykład &quot;instance_layer&quot; - a następnie <span class="notranslate">flag</span>, czy system ma być trwały, czy nie. Jeśli system nie zostanie oznaczony jako trwały, zostanie automatycznie zniszczony po zakończeniu działania strony <span class="notranslate">room</span>, na której został utworzony (tak samo, jak gdybyś wywołał funkcję <a href="part_system_destroy.htm"><span class="inline">part_system_destroy()</span></a> i zniszczy również wszystkie emitery powiązane z systemem). Jeśli jednak system zostanie oznaczony jako trwały, to po zmianie adresu <span class="notranslate">room</span> zostanie przeniesiony do następnej strony <span class="notranslate">room</span> i jeśli następna strona <span class="notranslate">room</span> <i>nie</i> będzie miała warstwy o takiej samej nazwie lub głębokości jak ta, która została przypisana, to dla systemu zostanie utworzona nowa warstwa, która będzie trwała przez stronę <span class="notranslate">rooms</span> i będzie miała taką samą nazwę jak warstwa oryginalna. Przy zmianie strony <span class="notranslate">rooms</span>, jeśli w następnej <span class="notranslate">rooms</span> znajduje się inna warstwa o tej samej nazwie, to instancja persystująca zostanie przypisana do warstwy o tej samej nazwie, <i>niezależnie od głębok</i>ości warstwy. Wreszcie, jeśli uporczywy system zostanie przeniesiony na stronę <span class="notranslate">room</span> z warstwą o tej samej głębokości, co warstwa, na której system został utworzony, <i>nie</i> zostanie przypisany do tej warstwy, ale zamiast tego zostanie utworzona nowa warstwa na tej samej głębokości (o tej samej nazwie, co oryginalna warstwa).</p>
   <p>Funkcja zwróci unikatowy identyfikator systemu cząstek, który powinien być używany we wszystkich kolejnych wywołaniach funkcji, w których trzeba podać identyfikator systemu.</p>
   <p class="note"><b>WAŻNE!</b> Jeśli na stronie <span class="notranslate">flag</span> system cząsteczek jest trwały, to gdy nie jest używany, trzeba go (i wszystkie przypisane do niego emitery) ręcznie wyczyścić za pomocą odpowiednich funkcji destroy, w przeciwnym razie istnieje ryzyko wycieku pamięci, który będzie miał negatywny wpływ na ostateczną wersję gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">part_system_create_layer(layer_id, persistent);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_create_layer</span>(layer_id, persistent);</p>
   <table>
     <tbody>
       <tr>

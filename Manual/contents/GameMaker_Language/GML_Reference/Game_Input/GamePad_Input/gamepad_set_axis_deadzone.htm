@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_set_axis_deadzone</h1>
+  <h1><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span></h1>
   <p>Za pomocą tej funkcji można ustawić &quot;martwą strefę&quot; dla osi joysticka. Określamy gniazdo urządzenia, które chcemy ustawić, a następnie ustawiamy wartość z zakresu od 0 do 1. Jeśli wartość wejściowa jest mniejsza od podanej wartości, oś joysticka jest traktowana jako 0.
     Należy pamiętać, że jest to ustawienie globalne, które będzie miało wpływ na <i>wszystkie</i> osie wszystkich joysticków podłączonych do określonego gniazda urządzenia. </p>
   <p>Użycie tej funkcji nie oznacza, że wartość osi rozpocznie się od wartości strefy martwej, ponieważ funkcja <a href="gamepad_axis_value.htm"><span class="inline">gamepad_axis_value()</span></a> <em>zawsze</em> będzie zwracać znormalizowaną wartość z przedziału od -1
@@ -22,7 +22,7 @@
     gdy wartość surowa wynosi 0,5, wartość zwracana będzie równa 0,375, a jeśli wartość surowa wynosi 0,9, wartość zwracana będzie równa 0,875.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gamepad_set_axis_deadzone(device, deadzone);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_set_axis_deadzone</span>(device, deadzone);</p>
   <table>
     <tbody>
       <tr>

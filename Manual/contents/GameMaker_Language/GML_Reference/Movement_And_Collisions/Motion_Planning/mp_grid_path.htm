@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_path</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_path</span></h1>
   <p>Za pomocą tej funkcji można utworzyć stronę <span class="notranslate">path</span>, która będzie poruszać się od punktu początkowego do punktu końcowego za pomocą wcześniej zdefiniowanej strony <span class="inline">mp_grid</span>, omijając wszelkie przeszkody, które zostały już dodane do siatki. Argumenty xstart i ystart wskazują początek <span class="notranslate">path</span> we współrzędnych <span class="notranslate">room</span>, natomiast argumenty xgoal, ygoal wskazują punkt docelowy. Można również wybrać albo tylko ruch poziomy/pionowy, albo zezwolić na pełny ruch po przekątnej, podając true w argumencie allowdiag. Funkcja zwraca wartość true (udało się znaleźć <span class="notranslate">path</span>) lub false (nie udało się) oraz ustawia wybraną stronę <span class="notranslate">path</span>. Na poniższym rysunku widać, jak to wszystko razem działa:</p>
   <p><img>Jak widać, &quot;rury&quot; <span class="notranslate">objects</span> zostały dodane do siatki, co oznacza, że każda utworzona strona <span class="notranslate">path</span> musi je obejść. Na obrazku są utworzone dwie strony <span class="notranslate">paths</span>, jedna (zielona) z dozwolonymi przekątnymi, a druga (czerwona) bez. Różnica między nimi jest dość oczywista - zielona strona <span class="notranslate">path</span> wydaje się bardziej elegancka i bezpośrednia, ale to, którą z nich wybierzesz, zależy od tego, do czego będziesz je wykorzystywać. Zwróć uwagę, że <span class="notranslate">path</span> jest niezależny od bieżącej instancji - jest to <span class="notranslate">path</span> przez całą siatkę, a nie <span class="notranslate">path</span> dla konkretnej instancji, mimo że konkretna instancja może mieć zmienną przechowującą indeks <span class="notranslate">path</span>. Może się też zdarzyć, że będziesz musiał debugować te <span class="notranslate">paths</span>, aby zobaczyć, jak są tworzone i jak działają w środowisku gry - w takim przypadku powinieneś użyć funkcji <span class="inline"><a href="../../Drawing/Basic_Forms/draw_path.htm">draw_path()</a></span>.</p>
   <p class="note"><b>UWAGA</b>: Adres <span class="notranslate">path</span> musi być wcześniej utworzony (w kodzie za pomocą <span style="font-size:1px;"><a href="../../Asset_Management/Paths/Path_Manipulation/path_add.htm"><span class="inline">path_add()</span></a></span> lub jako zasób) i zostanie zastąpiony przez stronę <span class="notranslate">path</span> wygenerowaną przez tę funkcję.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">mp_grid_path(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_path</span>(id, path, xstart, ystart, xgoal, ygoal, allowdiag);</p>
   <table>
     <tbody>
       <tr>

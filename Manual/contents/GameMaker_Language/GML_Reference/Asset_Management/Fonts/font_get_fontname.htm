@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_get_fontname</h1>
+  <h1><span data-field="title" data-format="default">font_get_fontname</span></h1>
   <p>Za pomocą tej funkcji można uzyskać rzeczywistą nazwę systemową podanej strony <span class="notranslate">font</span> <span class="notranslate">asset</span>. Funkcja ta zwraca <i>łańcuch</i> znaków, a nie <i>indeks</i>, a zwracana nazwa zależy od używanej strony <span class="notranslate">font</span>. Na przykład w przeglądarce <span class="notranslate">font</span> może znajdować się strona <span class="notranslate">asset</span> <span class="notranslate">Asset</span> o nazwie &quot;<strong>fnt_Main</strong>&quot;, a sama strona <span class="notranslate">font</span> może być systemem <span class="notranslate">Windows</span> <span class="notranslate">font</span> <b>Arial</b>. W tym przypadku funkcja zwróci <span class="inline2">&quot;Arial&quot;</span>, ponieważ jest to nazwa systemowa <span class="notranslate">font</span>. Jeśli potrzebujesz nazwy, która pojawi się w przeglądarce <span class="notranslate">Asset</span>, użyj <a href="font_get_name.htm"><span class="inline">font_get_name()</span></a>.</p>
   <p>Opisane powyżej zachowanie dotyczy tylko plików <span class="notranslate">font</span> <span class="notranslate">assets</span> dodanych za pośrednictwem strony <span class="notranslate">IDE</span>. W przypadku użycia funkcji na pliku <span class="notranslate">font</span> załadowanym z adresu <span class="notranslate">runtime</span> (przy użyciu adresu <span class="inline"><a href="font_add.htm">font_add()</a></span>), funkcja zwróci pełny adres <span class="notranslate">path</span> do tego pliku <span class="notranslate">font</span> zamiast jego nazwy <span class="notranslate">font</span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_get_fontname(ind);</p>
+  <p class="code"><span data-field="title" data-format="default">font_get_fontname</span>(ind);</p>
   <table>
     <tbody>
       <tr>

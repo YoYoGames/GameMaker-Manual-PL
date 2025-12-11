@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>pokaż_wiadomość_async</title>
+  <title>show_message_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>pokaż_wiadomość_async</h1>
+  <h1><span data-field="title" data-format="default">show_message_async</span></h1>
   <p>Ta funkcja otwiera okno i wyświetla użytkownikowi wiadomość, którą definiujemy w funkcji. Jest to funkcja asynchroniczna, dlatego <span data-keyref="GameMaker Name">GameMaker</span> <i>nie</i> blokuje urządzenia, na którym jest uruchamiana, w oczekiwaniu na odpowiedź, lecz kontynuuje wykonywanie zdarzeń w normalny sposób. Po naciśnięciu przez użytkownika przycisku &quot;OK&quot; uruchamiane jest zdarzenie asynchroniczne, które <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"><b>Dialog</b></a> które <i>tylko</i> na czas trwania tego zdarzenia będzie miało mapę ds_map przechowywaną w zmiennej <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
   <p>Mapa ta będzie zawierać dwa klucze: &quot;id&quot; i &quot;status&quot;, przy czym &quot;id&quot; to wartość zwrócona przez funkcję w momencie jej wywołania, a &quot;status&quot; to albo <span class="inline">true</span> w przypadku naciśnięcia przycisku &quot;OK&quot;, albo <span class="inline">false</span> w przypadku anulowania komunikatu (jeśli jest to możliwe, ponieważ nie wszystkie platformy docelowe umożliwiają anulowanie dialogów).</p>
   <p class="note"><strong><em><span class="note">UWAGA</span></em></strong><em> Ta funkcja jest przeznaczona <span data-keyref="Dialog for debug only"> <strong>wyłącznie do debugowania i testowania</strong></span>i <span data-keyref="Dialog for debug only">nie powinna być używana w wydanych grach. W tym celu powinieneś stworzyć własny interfejs użytkownika, który będzie odbierał dane od graczy, tak abyś miał pełną kontrolę nad wyglądem i zachowaniem okien dialogowych.</span></em></p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">show_message_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_message_async</span>(string);</p>
   <table>
     <tbody>
       <tr>

@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_find</h1>
+  <h1><span data-field="title" data-format="default">instance_find</span></h1>
   <p>Wszystkie instancje mają swój unikalny identyfikator (<a href="Instance_Variables/id.htm"><span class="inline">id</span></a>), który może być używany do ich modyfikowania i manipulowania nimi podczas gry, ale nie zawsze wiesz, jakie jest id konkretnej instancji, więc ta funkcja może być pomocna, ponieważ możesz jej użyć do iteracji po wszystkich instancjach, aby znaleźć to, czego potrzebujesz. Podajesz adres <span class="notranslate">object</span>, którego instancję chcesz znaleźć, oraz liczbę, a jeśli na tej pozycji na liście instancji znajduje się instancja, funkcja zwraca id tej instancji, a jeśli nie, zwraca specjalne <a href="../../../GML_Overview/Instance_Keywords.htm">słowo kluczowe</a> <span class="inline"><b>noone</b></span>. Możesz także użyć słowa kluczowego <span class="inline"><b>all</b></span> do iteracji po wszystkich instancjach w <span class="notranslate">room</span>, jak również po rodzicu <span class="notranslate">object</span> do iteracji po wszystkich instancjach, które są częścią hierarchii rodzic / dziecko, a nawet możesz określić instancję (jeśli masz jej <span class="inline">id</span>) jako sprawdzenie, czy rzeczywiście istnieje w bieżącym <span class="notranslate">room</span>. Zwróć uwagę, że ponieważ instancje są sortowane w <i>arbitralny</i> sposób, nie ma określonej kolejności sprawdzania instancji przez tę funkcję, a każda instancja może znajdować się na dowolnej pozycji.</p>
   <p>Maksymalna wartość dla &quot;n&quot; w tej funkcji wyniosłaby</p>
   <ul class="colour">

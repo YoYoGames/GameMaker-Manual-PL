@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_zwriteenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_zwriteenable</span></h1>
   <p>Za pomocą tej funkcji można włączać (<span class="inline">true</span>) i wyłączać (<span class="inline">false</span>) porządkowanie głębi za pomocą bufora z. Gdy instancja jest renderowana w <span data-keyref="GameMaker Name">GameMakerze</span>, głębokość wygenerowanego piksela (jego współrzędna z) jest przechowywana w buforze z, a następnie, jeśli inna instancja sceny musi być wyrenderowana na tym samym pikselu, obie głębokości są porównywane (z-testowanie - zob. <a href="gpu_set_ztestenable.htm"><span class="inline">gpu_set_ztestenable()</span></a>) i ta &quot;bliższa&quot; obserwatorowi jest zapisywana do bufora z, zastępując starą głębię. Jednak nie zawsze jest to zgodne z oczekiwaniami i zdarzają się sytuacje, gdy chcemy, aby coś było rysowane ponad innymi, niezależnie od wartości z. W takich przypadkach możesz użyć tej funkcji, aby <span class="notranslate">switch</span> wyłączyć zapis do bufora z i w ten sposób wymusić rysowanie tego, co jest rysowane, ponad wszystkimi innymi. Należy pamiętać, że podany tu opis dotyczy <i>domyślnego</i> trybu porównywania z-testów, ale można to zmienić</p>
   <p>Domyślnie buforowanie z jest włączone (<span class="inline">true</span>).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gpu_set_zwriteenable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_zwriteenable</span>(enable);</p>
   <table>
     <tbody>
       <tr>

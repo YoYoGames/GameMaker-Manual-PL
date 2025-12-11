@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_list</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_list</span></h1>
   <p>Ta funkcja &quot;zaznacza&quot; (lub &quot;oflagowuje&quot;) daną pozycję w uprzednio utworzonej liście DS jako zawierającą inną listę DS. Funkcja ta jest wymagana podczas kodowania JSON <span class="notranslate">strings</span> (który można utworzyć za pomocą <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), ale może być również przydatna podczas zagnieżdżania struktur danych, ponieważ pozycje oznaczone w ten sposób będą automatycznie usuwane (niszczone), gdy zostanie zniszczona nadrzędna lista DS. Oznacza to, że nie trzeba ręcznie przeglądać zawartości listy i niszczyć zaznaczonych struktur danych pojedynczo przed zniszczeniem listy &quot;rodzica&quot;. Jeśli jednak pozycja listy zostanie usunięta pojedynczo, lista DS, którą zawierała, <i>nie</i> zostanie odśmiecona i przed usunięciem elementu z pozycji listy nadrzędnej należy wywołać odpowiednią funkcję niszczącą listę DS. Należy także pamiętać, że jeśli wywołasz funkcję <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> na liście, wszystkie pozycje oznaczone jako listy zostaną również zniszczone podczas kasowania listy.</p>
   <p>Warto również zauważyć, że jeśli pozycja, która została zaznaczona, zmieni się w obrębie listy, &quot;znak&quot; przesunie się wraz z nią, więc jeśli zaznaczono pozycję 3 na liście (na przykład), a następnie wstawiono pod nią 2 kolejne elementy, tak że przesunęła się ona na pozycję 5, <i>nadal</i> będzie zaznaczona jako lista.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">ds_list_mark_as_list(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_mark_as_list</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>

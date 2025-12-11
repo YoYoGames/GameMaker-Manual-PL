@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kolizja_elipsa</title>
+  <title>collision_ellipse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kolizja_elipsa</h1>
+  <h1><span data-field="title" data-format="default">collision_ellipse</span></h1>
   <p><span class="inline">Collision_ellipse</span> używa pierwszych czterech argumentów (x1,y1,x2,y2) do określenia szerokości i wysokości elipsy w obrębie bieżącej strony <span class="notranslate">room</span>, a następnie sprawdza, czy <b>jakakolwiek</b> strona <span class="notranslate">object</span> określona przez argument &quot;obj&quot; nie wchodzi w kolizję z tym obszarem. Kolizja ta może być sprawdzona jako dokładna lub nie, a także można zdecydować się na sprawdzenie instancji wykonującej sam kod lub nie. Weźmy pod uwagę poniższy obrazek:</p>
   <p><img>Tutaj instancja w środku używa elipsy kolizji do sprawdzania, czy piłka <span class="notranslate">objects</span>. Niebieskie kulki <i>nie</i> mają precyzyjnego ogranicznika i jak widać, nawet jeśli <span class="notranslate">sprite</span> nie dotyka elipsy, to i tak może dojść do kolizji (nawet jeśli ustawisz opcję "precise" w funkcji na true), ponieważ ogranicznik <span class="notranslate">sprite</span> zachodzi na eliptyczny obszar zdefiniowany przez collision_circle. Z drugiej strony, zielone kulki zostaną uznane za kolizyjne tylko wtedy, gdy rzeczywisty obszar <span class="notranslate">sprite</span> wykracza poza zdefiniowaną elipsę. Pamiętaj, że aby precyzyjne kolizje zostały uwzględnione, <i>zarówno</i> na stronie <span class="notranslate">object</span> <span class="notranslate">sprite</span>, jak i w funkcji kolizji musi być zaznaczona opcja precise. Należy również zauważyć, że wartością zwracaną przez funkcję może być identyfikator <i>dowolnej</i> z instancji uznanych za kolizyjne.</p>
   <p>Zauważ, że zamiast indeksu <span class="notranslate">object</span> można podać instancję <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> aby sprawdzić konkretną instancję, lub <a href="../../../GML_Overview/Instance_Keywords.htm">słowa kluczowe</a> instancji <span class="inline">all</span>, lub <span class="inline">other</span> (w zależności od zdarzenia i bieżącego zakresu kodu).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">collision_ellipse(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_ellipse</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

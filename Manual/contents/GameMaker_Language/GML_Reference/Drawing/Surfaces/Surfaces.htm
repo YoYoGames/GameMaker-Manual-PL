@@ -104,18 +104,18 @@
   <p class="note"><b>UWAGA</b>: Jedyną rzeczą, której <b>nie można</b> zrobić z powierzchnią aplikacji, jest jej zwolnienie. Istnieje ona zawsze, choć wartość indeksu umożliwiająca dostęp do niej może się zmieniać.</p>
   <p>Po uruchomieniu gry powierzchnia ta jest tworzona przy pierwszym wywołaniu <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">zdarzenia draw</a> w każdym nowym oknie <span class="notranslate">room</span>, które zostanie wprowadzone, co oznacza, że do tego momentu nic nie jest rysowane. Jednak nadal można uzyskać położenie powierzchni aplikacji i zmienić jej rozmiar w zdarzeniu <b>Create</b> lub dowolnym innym zdarzeniu bez otrzymywania żadnych błędów, a użyte wartości będą odpowiednie dla powierzchni w momencie jej tworzenia. Rzeczywisty adres <span class="notranslate">sequence</span> zdarzeń związanych z tworzeniem i rysowaniem powierzchni aplikacji jest następujący:</p>
   <ul class="colour">
-    <li>Wydarzenie przed losowaniem<br>
+    <li>Wydarzenie przed losowaniem<br />
                --- &gt; <b>tworzona jest powierzchnia aplikacji (jeśli jeszcze nie istnieje) i ustawiany jest cel renderowania</b></li>
     <li><b></b>Dla każdego widocznego portu widoku lub, jeśli żadne porty widoku nie są aktywne, raz
       <ul class="colour">
         <li>Zdarzenie rozpoczęcia rysowania</li>
         <li>Zdarzenie związane z rysowaniem</li>
-        <li>Koniec rysowania<br>
+        <li>Koniec rysowania<br />
                   --- &gt; <b>cel renderowania powierzchni aplikacji jest tutaj resetowany</b>.</li>
       </ul>
     </li>
-    <li><b></b>Wydarzenie po losowaniu<br>
-              --- &gt; <b>powierzchnia aplikacji jest teraz domyślnie rysowana do <a class="glossterm" data-glossterm="bufor wyświetlacza" href="#">bufora wyświetlacza</a> </b> <b><br>
+    <li><b></b>Wydarzenie po losowaniu<br />
+              --- &gt; <b>powierzchnia aplikacji jest teraz domyślnie rysowana do <a class="glossterm" data-glossterm="bufor wyświetlacza" href="#">bufora wyświetlacza</a> </b> <b><br />
                         </b> <span class="notranslate">switch</span> (chociaż można to wyłączyć, używając <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span>)</li>
     <li><b></b>Zdarzenie rozpoczęcia rysowania GUI</li>
     <li>Zdarzenie Rysuj GUI</li>

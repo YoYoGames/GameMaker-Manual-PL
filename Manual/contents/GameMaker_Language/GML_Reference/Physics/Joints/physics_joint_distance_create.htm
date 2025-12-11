@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_distance_create</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
   <p>Jednym z najprostszych połączeń jest połączenie odległościowe, które mówi, że odległość między dwoma punktami na dwóch instancjach musi być stała. Kiedy określasz złącze odległościowe, dwie instancje powinny być już utworzone i mieć przypisane zamocowanie, następnie definiujesz dwa punkty zakotwiczenia we współrzędnych <span class="notranslate">room</span>. Pierwszy punkt zakotwiczenia jest połączony z instancją 1, drugi punkt zakotwiczenia jest połączony z instancją 2, a odległość między tymi punktami oznacza długość wiązania odległościowego. Poniższy rysunek pokazuje, jak to działa:</p>
   <p><img>Jak widać, punkty zakotwiczenia są określone jako współrzędne <span class="notranslate">room</span>, więc należy zachować ostrożność przy ich definiowaniu, zwłaszcza jeśli instancje są tworzone w tym samym czasie co przeguby, a nie są umieszczane na stronie <span class="notranslate">room</span> poprzez edytor <span class="notranslate">room</span>. Należy również pamiętać, że przeguby są tworzone niezależnie od rozmiaru <span class="notranslate">sprite</span> instancji lub zamocowań, do których są dołączone. Jeśli więc utworzysz przegub odległościowy w innym miejscu niż początek instancji, będzie on nadal ważny i będzie ograniczał dwie instancje względem pozycji, w której został utworzony. Jeśli ustawisz wartość &quot;col&quot; na <span class="inline">true</span>, dwie instancje mogą oddziaływać na siebie i zderzać się ze sobą, ale <i>tylko</i> wtedy, gdy wystąpią zdarzenia kolizji, natomiast jeśli ustawisz tę wartość na <span class="inline">false</span>, nie będą się one zderzać bez względu na wszystko.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>

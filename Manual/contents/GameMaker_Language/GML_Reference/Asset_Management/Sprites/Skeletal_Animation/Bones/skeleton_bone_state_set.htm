@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>szkielet_stanu_kości</title>
+  <title>skeleton_bone_state_set</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -14,22 +14,22 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>szkielet_stanu_kości</h1>
+  <h1><span data-field="title" data-format="default">skeleton_bone_state_set</span></h1>
   <p>Animacja szkieletu składa się z pewnej liczby &quot;kości&quot;, które zostały zdefiniowane i nazwane w programie animacji, a ta funkcja może być używana do ustawiania w dowolnym momencie pewnych danych dla nazwanej kości. Należy pamiętać, że dane te ustawią <b>aktualną</b> pozycję szkieletu w zależności od użytego zestawu animacji. Funkcja wymaga uprzednio utworzonej <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">mapy DS</a>, która powinna zawierać następujące klucze i ich wymagane wartości:<b></b></p>
   <ul class="colour">
-    <li><b>&quot;x&quot;:</b> Lokalna pozycja x kości względem kości macierzystej.<br>
+    <li><b>&quot;x&quot;:</b> Lokalna pozycja x kości względem kości macierzystej.<br />
       <b></b>
     </li>
-    <li><b>&quot;y&quot;:</b> Lokalna pozycja y kości względem kości macierzystej.<br>
+    <li><b>&quot;y&quot;:</b> Lokalna pozycja y kości względem kości macierzystej.<br />
       <b></b>
     </li>
-    <li><b>&quot;angle&quot;:</b> Lokalny obrót kości względem kości macierzystej.<br>
+    <li><b>&quot;angle&quot;:</b> Lokalny obrót kości względem kości macierzystej.<br />
       <b></b>
     </li>
-    <li><b>&quot;xscale&quot;:</b> Lokalna skala pozioma kości.<br>
+    <li><b>&quot;xscale&quot;:</b> Lokalna skala pozioma kości.<br />
       <b></b>
     </li>
-    <li><b>&quot;yscale&quot;:</b> Lokalna skala pionowa kości.<br>
+    <li><b>&quot;yscale&quot;:</b> Lokalna skala pionowa kości.<br />
       <b></b>
     </li>
     <li><b>&quot;parent&quot;:</b> Nazwa (a <span class="notranslate">string</span>) kości nadrzędnej.</li>
@@ -38,7 +38,7 @@
   <p>Zauważ, że możesz użyć tej samej mapy, którą wypełniłeś za pomocą funkcji <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_state_get()</span></a> nawet jeśli zawiera ona dodatkowe klucze i wartości &quot;Świat&quot;. Ponieważ odnoszą się one do wartości <i>tylko do odczytu</i>, ustawienie ich za pomocą tej funkcji nie będzie miało żadnego wpływu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">skeleton_bone_state_set(bone, map);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_bone_state_set</span>(bone, map);</p>
   <table>
     <tbody>
       <tr>

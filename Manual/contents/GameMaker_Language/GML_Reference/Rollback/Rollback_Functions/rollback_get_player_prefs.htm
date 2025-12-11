@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_get_player_prefs" />
 </head>
 <body>
-  <h1>rollback_get_player_prefs</h1>
+  <h1><span data-field="title" data-format="default">rollback_get_player_prefs</span></h1>
   <p>Funkcja zwraca preferencje ustawione dla podanego ID gracza.</p>
   <p>Jeśli nie podano ID gracza, funkcja musi zostać wywołana wewnątrz instancji gracza, w takim przypadku zostaną zwrócone preferencje dla tego gracza.</p>
   <p>Możesz również użyć zmiennej instancji <span class="inline"><a href="../Rollback_Variables/player_prefs.htm">player_prefs</a></span>.</p>
@@ -24,7 +24,7 @@
   <p>Proszę przeczytać: <a data-xref="{title}" href="../Rollback_Preferences.htm">Preferencje gracza</a></p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">rollback_get_player_prefs([player_id]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_get_player_prefs</span>([player_id]);</p>
   <table>
     <colgroup>
       <col />
@@ -49,8 +49,8 @@
   <p class="code"><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></p>
   <p> </p>
   <h4>Przykład:</h4>
-  <p class="code" id="p">var _my_prefs = rollback_get_player_prefs();<br>
-    <br>
+  <p class="code" id="p">var _my_prefs = rollback_get_player_prefs();<br />
+    <br />
     image_index = _my_prefs.character;
   </p>
   <p>Powyższy kod pobiera preferencje ustawione dla bieżącego gracza i stosuje preferencję do zmiennej instancji.</p>

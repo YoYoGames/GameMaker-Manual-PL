@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>cofnij_włączenie_gry</title>
+  <title>rollback_join_game</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -16,14 +16,14 @@
   <meta name="search-keywords" content="rollback_join_game" />
 </head>
 <body>
-  <h1>cofnij_włączenie_gry</h1>
+  <h1><span data-field="title" data-format="default">rollback_join_game</span></h1>
   <p>Ta funkcja próbuje dołączyć do gry. Musisz być na stronie URL, która zawiera ID wirtualnej strony <span class="notranslate">room</span>, aby dołączyć.</p>
   <p>Jeśli <span class="notranslate">room</span> został dołączony, zwraca <span class="inline2">true</span>, a jeśli nie dołączono żadnej gry, zwraca <span class="inline2">false</span>.</p>
   <p>Kiedy nowy gracz dołącza do gry, w której jesteś już obecny, uruchamiane jest zdarzenie <strong>Rollback Event</strong>. Więcej informacji na ten temat znajduje się w części Rollback <a data-xref="{title}" href="../Rollback_Events.htm">Events</a>.</p>
   <p>Argument <span class="inline2">dry_run</span> jest opcjonalny, a gdy ustawiony na <span class="inline2">true</span>, pozwala uruchomić funkcję bez faktycznego dołączenia do gry. Jest to używane do sprawdzenia, czy można dołączyć do gry bez faktycznego dołączenia do niej.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">rollback_join_game([dry_run]);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_join_game</span>([dry_run]);</p>
   <table>
     <tbody>
       <tr>
@@ -34,8 +34,8 @@
       <tr>
         <td><span class="notranslate">dry_run</span></td>
         <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>). Gdy jest włączona<span class="inline2">(true</span>), funkcja nie dołącza do gry, a jedynie zwraca <span class="inline2">true</span>, jeśli można do niej dołączyć, lub <span class="inline2">false</span> w przeciwnym wypadku.<br>
-          <br>
+        <td><span class="notranslate">Disabled by default (<span class="inline2">false</span>). Gdy jest włączona<span class="inline2">(true</span>), funkcja nie dołącza do gry, a jedynie zwraca <span class="inline2">true</span>, jeśli można do niej dołączyć, lub <span class="inline2">false</span> w przeciwnym wypadku.<br />
+          <br />
           W ten sposób możesz użyć tej funkcji, aby sprawdzić tylko, czy gracz został zaproszony.
         </td>
       </tr>

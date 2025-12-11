@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_healthbar</h1>
+  <h1><span data-field="title" data-format="default">draw_healthbar</span></h1>
   <p>Za pomocą tej funkcji można narysować kolorowy pasek pokazujący stałą wartość. Mimo że w funkcji użyto słowa &quot;pasek zdrowia&quot;, można go użyć do wyświetlania czegokolwiek, o ile wyświetlana wartość jest wartością procentową z przedziału od 0 do 100 (wartość procentową dowolnej wartości można obliczyć za pomocą wzoru <b>(WARTOŚĆ_BIEŻĄCA / MAKSYMALNA_wartość) * 100</b>), więc na przykład można go użyć do wyświetlania mocy, zdrowia, many, czasu lub czegokolwiek innego, do czego przydałby się pasek.</p>
   <p>Można ustawić różne rzeczy, które zmieniają wizualny aspekt paska, co zilustrowano na poniższym rysunku (zauważ, że użyto tu kolorów <span class="inline">c_green</span> dla wartości maksymalnej i <span class="inline">c_red</span> dla wartości minimalnej, ale można użyć dowolnych kolorów):</p>
   <p><img alt="Healthbar examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_healthbar.png" /></p>
   <p class="note"><b>UWAGA</b>: Jeśli chcesz narysować kształt za pomocą strony <span class="notranslate">shader</span>, musisz wiedzieć, że większość stron <span class="notranslate">shaders</span> oczekuje następujących danych wejściowych: <span class="notranslate">vertex</span>, <span class="notranslate">texture</span>, Kolor. Jednak w przypadku korzystania z tej funkcji przekazywane są tylko dane <span class="notranslate">vertex</span> i kolor, a zatem <span class="notranslate">shader</span> może niczego nie narysować (lub narysować coś, ale niepoprawnie). Jeśli konieczne jest rysowanie kształtów w ten sposób, należy dostosować stronę <span class="notranslate">shader</span> do tego celu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_healthbar</span>(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
   <table>
     <tbody>
       <tr>

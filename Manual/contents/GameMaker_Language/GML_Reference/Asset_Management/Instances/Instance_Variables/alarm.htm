@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>alarm</h1>
+  <h1><span data-field="title" data-format="default">alarm</span></h1>
   <p>Ta jednowymiarowa <a href="../../../../GML_Overview/Arrays.htm">tablica</a> służy do pobierania bieżącej wartości alarmów, które może mieć dana instancja, lub może być używana do ustawiania tych alarmów. W każdą instancję <span class="notranslate">object</span> wbudowanych jest dwanaście alarmów, a każdy z nich ma swój własny <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a> który zostanie uruchomiony, gdy zmienna ta osiągnie wartość 0.</p>
   <p>Alarmy są odliczane na początku każdego kroku, <strong>po</strong> zdarzeniu Rozpocznij krok, ale <strong>przed</strong> zdarzeniem Główny krok i zanim cokolwiek zostanie wyrenderowane dla danej klatki. Oznacza to, że jeśli ustawisz alarm na <span class="inline2">1</span> w zdarzeniu Rozpocznij krok, to jego zdarzenie zostanie uruchomione w tej samej klatce (ponieważ alarm zostanie odliczony do 0 po zakończeniu zdarzenia Rozpocznij krok), ale jeśli ustawisz alarm na <span class="inline2">1</span> w zdarzeniu Krok, to zostanie on uruchomiony w następnej klatce.</p>
   <p>Należy zauważyć, że alarm nie jest zakończony, gdy osiągnie wartość 0 (mimo że zdarzenie zostało wywołane), ponieważ w następnym kroku spadnie do -1, więc jeśli z jakiegoś powodu chcesz zatrzymać alarm, powinieneś ustawić wartość tablicy na -1, <i>a nie</i> 0. Czasy alarmów są obliczane w <i>krokach gry</i>, przy czym wartość 30 oznacza 30 kroków, 60 - 60 kroków itd.</p>

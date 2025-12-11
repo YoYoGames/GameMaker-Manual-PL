@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_set_fx</h1>
+  <h1><span data-field="title" data-format="default">layer_set_fx</span></h1>
   <p>Ta funkcja służy do przypisywania efektu FX <span class="notranslate">struct</span> do warstwy <span class="notranslate">Room</span>. Określasz identyfikator lub nazwę warstwy, którą chcesz zmodyfikować, a następnie kanał FX <span class="notranslate">struct</span> (zwrócony przez <span class="inline"><a href="fx_create.htm">fx_create()</a></span> lub <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>), który zostanie zastosowany do określonej warstwy, dzięki czemu efekt będzie widoczny na stronie <span class="notranslate">room</span>.</p>
   <p>Jeśli określisz warstwę, która nie jest warstwą filtra/efektu, ale jest innego typu (np. warstwa instancji, warstwa <span class="notranslate">Asset</span>, warstwa <span class="notranslate">Tile</span> itp.), efekt zostanie zastosowany do zawartości tej warstwy, a także do wszystkich warstw znajdujących się poniżej niej.</p>
   <p>Jeśli do wskazanej warstwy jest już przypisana warstwa FX <span class="notranslate">struct</span>, zostanie ona zastąpiona przez nową.</p>
   <p class="note"><span class="note">UWAGA</span> Wywołanie tej funkcji na poziomie głównym strony <span class="notranslate">script</span> nic nie da, ponieważ strona <span class="notranslate">scripts</span> jest wykonywana przed załadowaniem pierwszej strony <span class="notranslate">room</span>. Można najpierw ustawić <a href="../General_Layer_Functions/layer_set_target_room.htm">pomieszczenie docelowe</a>, a następnie wywołać tę funkcję.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">layer_set_fx(layer_name_or_id, filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_set_fx</span>(layer_name_or_id, filter_or_effect);</p>
   <table>
     <tbody>
       <tr>

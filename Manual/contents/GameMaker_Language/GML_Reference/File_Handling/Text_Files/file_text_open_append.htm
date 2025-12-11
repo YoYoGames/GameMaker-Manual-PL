@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>file_text_open_append</h1>
+  <h1><span data-field="title" data-format="default">file_text_open_append</span></h1>
   <p>Funkcja ta otwiera do <i>zapisu</i> plik tekstowy o podanej nazwie (jeśli plik nie istnieje, zostanie utworzony), zwracając unikalny <i>identyfikator</i> pliku, który należy zapisać w zmiennej, gdyż będzie on używany do wszystkich dalszych działań związanych z tym plikiem. Pozycja w pliku, do którego ma zostać zapisany plik, jest ustawiana na ostatnią linię tekstu zawartego w pliku, więc istniejące dane nie są nadpisywane.</p>
   <p>Należy pamiętać, że jeśli plik <i>nie może</i> zostać utworzony (np. z powodu nielegalnej nazwy), funkcja zwróci -1.</p>
   <p class="note"><b>UWAGA</b>: W danym momencie można mieć otwarte maksymalnie 32 pliki. Należy również <b>zawsze</b> zamykać pliki po zakończeniu pracy, ponieważ powoduje to zapisanie informacji i zwolnienie pamięci związanej z plikiem.</p>
   <p class="note"><b></b><b>OSTRZEŻENIE!</b> Ta funkcja może nie działać zgodnie z oczekiwaniami użytkownika, ponieważ <span data-keyref="GameMaker Name">GameMaker</span> jest sandboxed! Więcej informacji na ten temat znajdziesz w rozdziale <a href="../../../../Additional_Information/The_File_System.htm">System plików</a>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">file_text_open_append(fname);</p>
+  <p class="code"><span data-field="title" data-format="default">file_text_open_append</span>(fname);</p>
   <table>
     <tbody>
       <tr>

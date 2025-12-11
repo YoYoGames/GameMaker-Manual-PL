@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>fizyka_zastosuj_siłę</title>
+  <title>physics_apply_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fizyka_zastosuj_siłę</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_force</span></h1>
   <p>Podczas pracy z fizyką należy stosować nie tylko grawitację do <span class="notranslate">objects</span>, ale także siły. Siła to dowolny wpływ, który powoduje, że <span class="notranslate">object</span> ulega zmianie prędkości, kierunku lub kształtu. W świecie fizyki <span data-keyref="GameMaker Name">GameMakera</span> definiuje się ją tak samo, jak grawitację - przez uzyskanie wektora z dwóch składowych siły x/y. Należy zauważyć, że siły nie są przykładane do środka masy strony <span class="notranslate">object</span>, ale raczej do punktu na stronie <span class="notranslate">room</span> i zmieniają kierunek i prędkość, a także moment obrotowy (spin) w zależności od innych sił działających na stronę <span class="notranslate">object</span> (np. grawitacji). Poniżej znajduje się przykładowy rysunek, który pomoże to zilustrować:</p>
   <p><img>W powyższym przykładzie sprężyna <span class="notranslate">object</span> znajdująca się u dołu wytworzyła siłę na kulce <span class="notranslate">object</span>, która spowodowała jej ruch w innym kierunku. Dokładna siła jest określona przez wektor, który otrzymujemy ze składowych xforce/yforce w odniesieniu do współrzędnych xpos/ypos - co po prostu oznacza, że siła jest obliczana jako odległość od xpos/ypos do xforce/yforce w Newtonach (Newton jest zdefiniowany jako wielkość siły netto wymagana do przyspieszenia masy jednego kilograma z prędkością jednego metra na sekundę do kwadratu), a kierunek jest kątem, który otrzymujemy od xpos/ypos do xforce/yforce. Kod dla takiego zderzenia znalazłby się w zdarzeniu kolizyjnym sprężyny <span class="notranslate">object</span> i wyglądałby tak, jak w poniższym przykładzie.</p>
   <p class="note"><b>UWAGA</b>: Świat fizyki używa metrów do wszystkich swoich obliczeń, a stosunek pikseli na metr definiuje się w edytorze <span class="notranslate">room</span> lub za pomocą <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_apply_force(xpos, ypos, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_force</span>(xpos, ypos, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

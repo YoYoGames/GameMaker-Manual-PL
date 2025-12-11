@@ -28,22 +28,22 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
-        <td><br>
+        <td><br />
           Adres <span class="notranslate">buffer</span> o stałym rozmiarze w bajtach. Rozmiar jest ustalany podczas tworzenia strony <span class="notranslate">buffer</span> i nie może być ponownie zmieniony.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
-        <td><br>
+        <td><br />
           Strona <span class="notranslate">buffer</span>, która będzie się dynamicznie <i>powiększać</i> w miarę dodawania danych. Tworzy się ją z rozmiarem początkowym (który powinien być przybliżony do rozmiaru danych, które mają być przechowywane), a następnie rozszerza się ją, aby przyjąć dalsze dane, które przekraczają ten rozmiar początkowy.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
-        <td><br>
+        <td><br />
           Adres <span class="notranslate">buffer</span>, na który będą <i>zawijane</i> dane. Gdy dodawane dane osiągną limit rozmiaru <span class="notranslate">buffer</span>, nadpisanie zostanie umieszczone z powrotem na początku <span class="notranslate">buffer</span>, a dalszy zapis będzie kontynuowany od tego miejsca.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
-        <td><br>
+        <td><br />
           Jest to specjalny, &quot;okrojony&quot; adres <span class="notranslate">buffer</span>, na którym można bardzo szybko odczytywać i zapisywać dane. Można go jednak używać tylko z typami danych <span class="inline"><span class="inline">buffer_u8</span> i musi być wyrównany do 1 bajta. (Informacje o <b>typach</b> danych i <b>wyrównywaniu</b> bajtów można znaleźć w dalszej części tej strony).</td>
       </tr>
     </tbody>
@@ -53,7 +53,7 @@
   <p><img>Tworząc stronę <span class="notranslate">buffer</span>, należy zawsze starać się nadać jej rozmiar odpowiedni dla danego typu, przy czym ogólna zasada mówi, że powinna ona być utworzona tak, aby pomieścić maksymalny rozmiar danych, które ma przechowywać, a w razie wątpliwości należy użyć grow <span class="notranslate">buffer</span>, aby zapobiec błędom nadpisywania.</p>
   <p>Faktyczny kod tworzący stronę <span class="notranslate">buffer</span> wygląda mniej więcej tak:</p>
   <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
-  <p><br>
+  <p><br />
     W ten sposób powstałaby stała strona <span class="notranslate">buffer</span> o rozmiarze 16384 bajtów i wyrównana do 2 bajtów. Funkcja zwróciłaby unikatową wartość identyfikacyjną, która jest przechowywana w zmiennej w celu późniejszego odwoływania się do tej strony <span class="notranslate">buffer</span>.</p>
   <p>Podczas odczytywania i zapisywania danych na stronie <span class="notranslate">buffer</span> robi się to w &quot;kawałkach&quot; danych określonych przez ich &quot;typ danych&quot;. Typ danych&quot; określa liczbę bajtów przydzielonych w ramach <span class="notranslate">buffer</span> dla zapisywanej wartości i bardzo ważne jest, aby go poprawnie określić, w przeciwnym razie można uzyskać bardzo dziwne wyniki (lub nawet błędy) w swoim kodzie.</p>
   <p>Bufory są zapisywane (i odczytywane) <strong>sekwencyjnie</strong>, tzn. jedna porcja danych jest zapisywana po drugiej, a każda porcja danych jest określonego typu. Oznacza to, że użytkownik powinien zawsze wiedzieć, jakie dane zapisuje w buforze <span class="notranslate">buffer</span>. Te typy danych są zdefiniowane w witrynie <span class="notranslate">GML</span> za pomocą następujących stałych:</p>
@@ -68,73 +68,73 @@
       <tr>
         <td><span class="inline">buffer_u8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           8-bitowa liczba całkowita bez znaku. Jest to wartość dodatnia z zakresu od 0 do 255.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Podpisana, 8-bitowa liczba całkowita. Może to być wartość dodatnia lub ujemna z zakresu od -128 do 127 (0 jest wartością dodatnią).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Niepodpisana, 16-bitowa liczba całkowita. Jest to wartość dodatnia z zakresu od 0 do 65 535.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Podpisana, 16-bitowa liczba całkowita. Może to być wartość dodatnia lub ujemna z zakresu od -32,768 do 32,767 (0 oznacza wartość dodatnią).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           16-bitowa liczba zmiennoprzecinkowa. Może to być wartość dodatnia lub ujemna z zakresu +/- 65504. <b>(Obecnie nieobsługiwana!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Niepodpisana, 32-bitowa liczba całkowita. Jest to wartość dodatnia z zakresu od 0 do 4 294 967 295.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Podpisana, 32-bitowa liczba całkowita. Może to być wartość dodatnia lub ujemna z zakresu od -2,147,483,648 do 2,147,483,647 (0 oznacza wartość dodatnią).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           32-bitowa liczba zmiennoprzecinkowa. Może to być wartość dodatnia lub ujemna z zakresu +/-16777216.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           64-bitowa liczba całkowita bez znaku.<b>(Obecnie nie jest obsługiwana przez wszystkie funkcje <span class="notranslate">buffer</span>!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           64-bitowa liczba zmiennoprzecinkowa.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_bool</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Wartość logiczna. Może wynosić tylko 1 lub 0 (<span class="inline">true</span> lub <span class="inline">false</span>).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_string</span></td>
         <td>N/A</td>
-        <td><br>
+        <td><br />
           Jest to plik UTF-8 zakończony zerem (0x00) <span class="notranslate">string</span>. Zasadniczo adres <span class="notranslate">GameMaker</span> <span class="notranslate">string</span> jest umieszczany w adresie <span class="notranslate">buffer</span>, a na końcu jest umieszczane 0.</td>
       </tr>
     </tbody>

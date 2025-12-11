@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_type_size</h1>
+  <h1><span data-field="title" data-format="default">part_type_size</span></h1>
   <p>Funkcja ta służy do określania rozmiaru cząstki podczas jej tworzenia, a także może być używana do zwiększania lub zmniejszania rozmiaru cząstki w czasie jej życia. Wartości minimalnego i maksymalnego rozmiaru domyślnie wynoszą 1 (co oznacza, że rozmiar jest taki sam jak rozmiar cząstki bazowej po ustawieniu skali). <a href="part_type_scale.htm"><span class="inline">part_type_scale()</span></a> Jeśli ustawimy je na tę samą wartość, początkowy rozmiar wszystkich cząstek będzie taki sam, ale jeśli ustawimy różne wartości, każda cząstka zacznie od losowego rozmiaru z tego zakresu, na przykład jeśli ustawimy minimalną wartość 0,5, a maksymalną 2, wszystkie cząstki zostaną utworzone z rozmiarem od połowy do dwukrotności skali bazowej.</p>
   <p>Można także ustawić wartość przyrostu, która spowoduje, że cząstka <span class="notranslate">sprite</span> będzie rosła (jeśli jest liczbą dodatnią) lub malała (jeśli jest liczbą ujemną) w czasie życia cząstki, przy czym podana wartość będzie dodawana do rozmiaru cząstki w każdym kroku. Wartość ta może wynosić co najmniej (+/-)0,01.</p>
   <p>Na koniec można ustawić współczynnik &quot;wiggle&quot;. Jest to wartość, która będzie losowo dodawana lub odejmowana do rozmiaru na każdym etapie życia cząstek. Oczywiście większe wartości są bardziej wyraźne niż mniejsze, a wartość ta może być nawet ujemna, przy czym maksymalny zakres wynosi od -20 do 20.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">part_type_size(ind, size_min, size_max, size_incr, size_wiggle);</p>
+  <p class="code"><span data-field="title" data-format="default">part_type_size</span>(ind, size_min, size_max, size_incr, size_wiggle);</p>
   <table>
     <tbody>
       <tr>

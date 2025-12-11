@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_texrepeat</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_texrepeat</span></h1>
   <p>Ta funkcja może być użyta do wskazania <span data-keyref="GameMaker Name">GameMakerowi</span>, czy <span class="notranslate">textures</span> ma się powtarzać (<span class="inline">true</span>), czy nie (<span class="inline">false</span>), gdy jest używana dla modeli i prymitywów. Normalnie szerokości i wysokości <span class="notranslate">texture</span> mieszczą się w zakresie 0 - 1, ale jeśli podasz wartość większą niż 1, domyślnie reszta nie zostanie narysowana (cały <span class="notranslate">texture</span> zostanie narysowany z &quot;pustym&quot; fragmentem odpowiadającym procentowi powyżej 1, który został użyty. Zatem wartość 2 dla szerokości lub wysokości strony <span class="notranslate">texture</span> spowoduje, że strona <span class="notranslate">texture</span> zostanie narysowana w połowie miejsca, a druga połowa pozostanie pusta). Jednak użycie tej funkcji do ustawienia powtarzania na wartość true powoduje automatyczne powtarzanie <span class="notranslate">texture</span> we wszystkich modelach i elementach podstawowych. Prawdopodobnym zastosowaniem tych funkcji jest powtarzanie strony <span class="notranslate">texture</span> w 3D, ale aby to działało i nie ciągnęło obrazów z reszty strony <span class="notranslate">texture</span>, używana strona <span class="notranslate">sprite</span> musi być oznaczona jako &quot;Oddzielna strona <span class="notranslate">Texture</span> &quot; w edytorze <span class="notranslate">Sprite</span>.</p>
   <p class="note"><b>UWAGA</b>: strony <span class="notranslate">Sprites</span> i tła są zawsze rysowane bez powtórzeń, więc po narysowaniu strony <span class="notranslate">sprite</span> lub tła wartość ta jest resetowana do <span class="inline">false</span>. To domyślne zachowanie nie będzie miało wpływu na ustawienia sceny <span class="notranslate">texture</span> (tzn. wywołanie funkcji będzie miało wpływ, ale wewnętrzne ustawienie na false nie).</p>
   <p class="note"><b>UWAGA</b>: To ustawienie zastąpi wszelkie powtórzenia etapu <span class="notranslate">texture</span> ustawione dla <span class="notranslate">shaders</span> podczas korzystania z funkcji <a href="gpu_set_texrepeat_ext.htm"><span class="inline">gpu_set_texrepeat_ext()</span></a>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gpu_set_texrepeat(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_texrepeat</span>(enable);</p>
   <table>
     <tbody>
       <tr>

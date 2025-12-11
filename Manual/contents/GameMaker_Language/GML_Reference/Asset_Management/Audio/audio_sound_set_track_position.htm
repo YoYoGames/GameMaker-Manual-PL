@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
   <p>Ta funkcja umożliwia ustawienie pozycji (w sekundach) dla podanego identyfikatora dźwięku lub adresu <span class="notranslate">asset</span>.</p>
   <p>Podany &quot;indeks&quot; może być albo pojedynczą instancją dźwięku (zwróconą przez <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) lub dźwiękiem <span class="notranslate">asset</span> (np. dodanym przez przeglądarkę <span class="notranslate">Asset</span> ). Zachowanie tej funkcji będzie się różnić w zależności od rodzaju podanego indeksu:</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   <p>Ta funkcja zmieni pozycję ścieżki tylko dla aktualnie odtwarzanego dźwięku lub jego następnego odtworzenia (w przypadku dostarczenia dźwięku <span class="notranslate">asset</span> ). Jeśli dźwięk jest odtwarzany z włączoną funkcją zapętlenia, kolejne odtworzenia będą zawsze rozpoczynać się od początku (0,0 sekundy), <em>a nie</em> od pozycji na ścieżce określonej za pomocą tej funkcji. Na przykład rozpoczęcie odtwarzania dźwięku <span class="notranslate">loop</span> od 5,7 sekundy spowoduje odtworzenie pierwszego dźwięku od tego momentu, jednak później będzie on powtarzał całą ścieżkę, od początku do końca.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">audio_sound_set_track_position(index, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
   <table>
     <tbody>
       <tr>

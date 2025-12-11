@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>głębokość</title>
+  <title>depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>głębokość</h1>
+  <h1><span data-field="title" data-format="default">depth</span></h1>
   <p>Kiedy tworzysz <span class="notranslate">object</span> możesz przypisać mu początkową <i>głębokość</i>, która określa jak instancje tego <span class="notranslate">object</span> będą rysowane w <span class="notranslate">room</span> podczas gry i ta zmienna może być użyta do uzyskania i zmiany tej wartości głębokości podczas gry. Normalnie nie musiałbyś używać tej zmiennej, ponieważ powinieneś ustawiać instancje, które mają być dodawane do dyskretnych <a href="layer.htm">warstw</a>, które z kolei są ustawione na określoną głębokość, ale może się zdarzyć, że będziesz chciał zmienić głębokość instancji za pomocą tej wartości, w którym to przypadku zostanie utworzona &quot;tymczasowa warstwa&quot; specjalnie dla instancji na danej głębokości. Zauważ, że gdy żadna instancja nie ma tej samej głębokości, to ta tymczasowa warstwa zostanie usunięta z pamięci (w przeciwieństwie do zwykłych warstw, które pozostaną nawet jeśli nic na nich nie ma).</p>
   <p class="note"><b>WAŻNE!</b> Gdy zmodyfikujesz zmienną <span class="inline">depth</span>, a <span data-keyref="GameMaker Name">GameMaker</span> zarządza warstwami, wbudowana <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> zwróci -1, a nie ID warstwy, ponieważ warstwy zarządzane nie mogą być manipulowane przez kod.</p>
   <p>W <span data-keyref="GameMaker Name">GameMakerze</span> im niższa wartość głębi dla instancji, tym &quot;bliżej kamery&quot; będzie ona rysowana, podczas gdy wyższa wartość głębi oznacza, że instancja będzie rysowana &quot;dalej od kamery&quot;, czyli: -1000 jest rysowane na górze -100, które jest rysowane na górze 0, i tak dalej.</p>
@@ -23,7 +23,7 @@
   <p>Należy pamiętać, że modyfikacja głębokości instancji może zmienić <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">filtry i efekty,</a> które są na niej stosowane, ponieważ zmiana głębokości na mniejszą niż głębokość warstwy FX spowoduje, że jej efekt nie będzie już stosowany na instancji.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">depth;</p>
+  <p class="code"><span data-field="title" data-format="default">depth</span></p>
   <p> </p>
   <h4>Zwroty:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>

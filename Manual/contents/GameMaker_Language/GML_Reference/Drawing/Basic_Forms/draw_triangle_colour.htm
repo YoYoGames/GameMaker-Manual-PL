@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_triangle_colour</h1>
+  <h1><span data-field="title" data-format="default">draw_triangle_colour</span></h1>
   <p>Za pomocą tej funkcji można narysować kontur trójkąta lub trójkąt z wypełnieniem. Jeśli trójkąt jest wypełniony, można zdefiniować indywidualne kolory dla każdego punktu narożnego, a jeśli kolory te nie są takie same, można uzyskać efekt gradientu od jednego do drugiego (ustawienia kolorów są nadrzędne w stosunku do koloru podstawowego ustawionego za pomocą funkcji <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour()</span></a>).</p>
   <p class="note"><b>UWAGA</b>: Jeśli chcesz narysować kształt za pomocą strony <span class="notranslate">shader</span>, musisz wiedzieć, że większość stron <span class="notranslate">shaders</span> oczekuje następujących danych wejściowych: <span class="notranslate">vertex</span>, <span class="notranslate">texture</span>, Kolor. Jednak w przypadku korzystania z tej funkcji przekazywane są tylko dane <span class="notranslate">vertex</span> i kolor, a zatem <span class="notranslate">shader</span> może niczego nie narysować (lub narysować coś, ale niepoprawnie). Jeśli konieczne jest rysowanie kształtów w ten sposób, należy dostosować stronę <span class="notranslate">shader</span> do tego celu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">draw_triangle_colour(x1, y1, x2, y2, x3, y3, col1, col2, col3, outline);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_triangle_colour</span>(x1, y1, x2, y2, x3, y3, col1, col2, col3, outline);</p>
   <table>
     <tbody>
       <tr>

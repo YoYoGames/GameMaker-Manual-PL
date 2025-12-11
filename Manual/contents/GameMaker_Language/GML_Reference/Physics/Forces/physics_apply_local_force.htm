@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>fizyka_zastosuj_lokalną_siłę</title>
+  <title>physics_apply_local_force</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fizyka_zastosuj_lokalną_siłę</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_local_force</span></h1>
   <p>Innym sposobem użycia siły w świecie fizyki jest zastosowanie jej <i>lokalnie</i> do instancji. Oznacza to, że siła i kierunek siły są obliczane na podstawie początku (lub pozycji, jeśli nie ma <span class="notranslate">sprite</span>) instancji, bez uwzględniania kierunku lub obrotu, jaki może ona mieć w grze <span class="notranslate">room</span> lub w świecie fizyki. Należy zauważyć, że w przypadku tej funkcji siły nie są przykładane do środka masy <span class="notranslate">object</span>, ale raczej do punktu względem instancji, i nie zostaną natychmiast zastosowane, ponieważ są zależne od innych sił działających na <span class="notranslate">object</span> (np. grawitacji). Na tej ilustracji pokazano, jak działa siła lokalna:</p>
   <p><img>Jak widać, współrzędne xlocal i ylocal są obliczane na podstawie pozycji osi, która jest <i>zawsze</i> uważana za początek instancji (0,0), więc bez względu na to, w którym miejscu na stronie <span class="notranslate">room</span> znajduje się <span class="notranslate">object</span>, współrzędne xlocal i ylocal będą zawsze takie same. Następnie musisz zdecydować, gdzie powinny być umieszczone składowe wektorowe siły (xforce i yforce) w stosunku do pozycji xlocal/ylocal. Dokładna siła jest określana przez wektor, który otrzymujemy ze składowych xforce/yforce w odniesieniu do tych współrzędnych - co oznacza po prostu, że siła jest obliczana jako odległość od xlocal/ylocal do xforce/yforce w Newtonach, a kierunek jest kątem, który otrzymujemy od xlocal/ylocal do xforce/yforce. Może się to wydawać nieco zagmatwane, ale wystarczy spojrzeć na rysunek, aby zobaczyć, jak to działa, a to pozwala zaoszczędzić trochę skomplikowanej matematyki!</p>
   <p class="note"><b>UWAGA</b>: Świat fizyki używa metrów do wszystkich swoich obliczeń, a stosunek pikseli na metr definiuje się w edytorze <span class="notranslate">room</span> lub za pomocą <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">physics_apply_local_force(xlocal, ylocal, xforce, yforce)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_apply_local_force</span>(xlocal, ylocal, xforce, yforce)</p>
   <table>
     <tbody>
       <tr>

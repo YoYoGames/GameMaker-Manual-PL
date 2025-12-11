@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_set_uniform_f</h1>
+  <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
   <p>Za pomocą tej funkcji można ustawić wartość (lub wartości) stałej <span class="notranslate">shader</span>. Wcześniej należy uzyskać &quot;uchwyt&quot; do stałej za pomocą funkcji <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>i musisz wiedzieć, jakiego typu jest to stała, aby przekazać do niej odpowiednią liczbę wartości zmiennoprzecinkowych, np. jeśli masz stałą <span class="inline">vec2</span>, musisz przekazać do funkcji dwie wartości.</p>
   <p>Wyjątkiem od powyższej reguły jest sytuacja, gdy mamy do czynienia z 32-bitowymi wartościami kolorów. Do <span class="notranslate">shader</span> można wprowadzić do ośmiu 32-bitowych wartości kolorów, które zostaną automatycznie przekonwertowane na wartości vec4 o wartościach 0 - 1. Jednak w tym celu <i>należy</i> użyć stałej <span class="notranslate">shader</span> o nazwie <span class="inline">in_Colour</span>, dla pojedynczego koloru, lub <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, itd... aż do <span class="inline">in_Colour7</span> dla wielu wartości wejściowych. Poniższe przykłady pokazują, jak wyglądałoby to w samej witrynie <span class="notranslate">shader</span>:</p>
   <p class="code">    //Single colour<br />
@@ -32,7 +32,7 @@
   <p class="note"><b></b><b>UWAGA</b>: Wszystkie uniformy muszą być ustawione <b>po</b> wywołaniu funkcji <span style="font-size:1px;"><a href="shader_set.htm"><span class="inline">shader_set()</span></a></span>, a przed wywołaniem funkcji <span style="font-size:1px;"><a href="shader_reset.htm"><span class="inline">shader_reset()</span></a></span>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">shader_set_uniform_f(handle, value1 [, value2, value3, value4]);</p>
+  <p class="code"><span data-field="title" data-format="default">shader_set_uniform_f</span>(handle, value1 [, value2, value3, value4]);</p>
   <table>
     <tbody>
       <tr>

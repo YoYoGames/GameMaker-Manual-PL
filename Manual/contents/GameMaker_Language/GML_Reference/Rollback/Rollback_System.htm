@@ -25,20 +25,20 @@
   <p>Rollback jest deterministyczny. Współdzieli tylko dane wejściowe z innymi graczami i oczekuje, że wszyscy oni uruchomią tę samą logikę na danym wejściu, dając takie same wyniki na wszystkich klientach.</p>
   <p>Innym podejściem do multiplayera jest &quot;replikacja stanu&quot;, która nieustannie synchronizuje stan gry między klientami, zapewniając, że zawsze robią to samo.</p>
   <p>Rollback nie robi tego -- tylko zawsze wysyła wejścia, ale także pilnuje stanu, aby można było go cofnąć w przypadku złego przewidywania.</p>
-  <p class="note"><em><strong>Co to jest klient?</strong></em><br>
-    <br>
+  <p class="note"><em><strong>Co to jest klient?</strong></em><br />
+    <br />
     Klient&quot; to gracz w Twojej grze i odnosi się do jego kopii gry, uruchomionej na jego komputerze.
   </p>
   <h2>Jak to działa?</h2>
   <p>Jak wcześniej wspomniano, Rollback <strong>przekazuje dane wejściowe tylko</strong> pomiędzy graczami.</p>
   <p>Istnieją dwie główne rzeczy, które Rollback obsługuje:</p>
   <ul class="colour">
-    <li><strong>Wejście</strong>: <a href="Rollback_Functions/rollback_define_input.htm">Wejścia</a> każdego gracza są wysyłane do innych graczy. Jeśli gracz 0 naciśnie <strong>&quot;fire&quot;</strong> w swoim kliencie, Rollback zapewni, że inni klienci również zobaczą jak gracz 0 naciska <strong>&quot;fire</strong>&quot;.<br>
-      <br>
+    <li><strong>Wejście</strong>: <a href="Rollback_Functions/rollback_define_input.htm">Wejścia</a> każdego gracza są wysyłane do innych graczy. Jeśli gracz 0 naciśnie <strong>&quot;fire&quot;</strong> w swoim kliencie, Rollback zapewni, że inni klienci również zobaczą jak gracz 0 naciska <strong>&quot;fire</strong>&quot;.<br />
+      <br />
      <strong>Przewidywania są uruchamiane tylko na wejściu.</strong>
     </li>
-    <li><strong>Stan</strong>: Obejmuje wszystkie zarządzane <span class="notranslate">objects</span> i ich zmienne. Te NIE są synchronizowane między graczami: zmiana jednej zmiennej w jednym kliencie nie spowoduje automatycznej aktualizacji w innym kliencie.<br>
-      <br>
+    <li><strong>Stan</strong>: Obejmuje wszystkie zarządzane <span class="notranslate">objects</span> i ich zmienne. Te NIE są synchronizowane między graczami: zmiana jednej zmiennej w jednym kliencie nie spowoduje automatycznej aktualizacji w innym kliencie.<br />
+      <br />
      <strong>Stan jest zarządzany tylko po to, by móc go cofnąć.</strong>
     </li>
   </ul>
@@ -47,8 +47,8 @@
   <p>Oto przykład:</p>
   <ul class="colour">
     <li><strong>Wejście</strong>: Gracz 0 naciska przycisk <strong>&quot;fire</strong>&quot;.</li>
-    <li><strong>Stan</strong>: Ponieważ gracz 0 nacisnął ogień, został stworzony pocisk. Ten pocisk w końcu zderza się z kamieniem. W wyniku tego gracz 0 otrzymuje punkt.<br>
-      <br>
+    <li><strong>Stan</strong>: Ponieważ gracz 0 nacisnął ogień, został stworzony pocisk. Ten pocisk w końcu zderza się z kamieniem. W wyniku tego gracz 0 otrzymuje punkt.<br />
+      <br />
       To jest w zasadzie cała twoja gra, zależna całkowicie od danych wejściowych.
     </li>
   </ul>

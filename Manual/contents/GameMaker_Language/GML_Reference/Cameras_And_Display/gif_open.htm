@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_open</h1>
+  <h1><span data-field="title" data-format="default">gif_open</span></h1>
   <p>Za pomocą tej funkcji można utworzyć pusty obrazek w formacie GIF, do którego można dodać dane. Po wywołaniu funkcji należy określić szerokość i wysokość GIF-a (w pikselach, nie ma górnego ograniczenia rozmiaru, z wyjątkiem dostępnej pamięci), a funkcja zwróci unikalną wartość ID używaną do identyfikacji prezentu w kolejnych funkcjach lub zwróci -1, jeśli nie można zainicjować GIF-a (na przykład, jeśli szerokość/wysokość jest zbyt duża dla dostępnej pamięci). Można również podać opcjonalny argument określający &quot;kolor przezroczysty&quot; dla GIF-a. Jest to wartość RGB (bez składowej alfa), która spowoduje wyczyszczenie gifa do tego koloru, zanim cokolwiek zostanie do niego dodane. Jeśli nie podasz argumentu kolor przezroczysty, zostanie użyty domyślny kolor czarny.</p>
   <p>Należy pamiętać, że podczas korzystania z tej funkcji należy wywołać polecenie <a href="gif_save.htm"><span class="inline">gif_save()</span></a> aby zakończyć tworzenie GIF-a przed otwarciem innego pliku do zapisu (dlatego każdemu <span class="inline">gif_open()</span> musi towarzyszyć <span class="inline">gif_save()</span>).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">gif_open(width, height, [clear_colour]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_open</span>(width, height, [clear_colour]);</p>
   <table>
     <tbody>
       <tr>

@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>cloud_file_save</h1>
+  <h1><span data-field="title" data-format="default">cloud_file_save</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Ta funkcja powoduje przesłanie pliku do wybranej usługi w chmurze w celu jego przechowania. Funkcja zwróci unikalną wartość <b>id</b>, która powinna zostać użyta w odpowiednim zdarzeniu asynchronicznym do identyfikacji mapy DS, która zostanie zwrócona jako &quot;wywołanie zwrotne&quot; z usługi w chmurze. Plik powinien zawierać <i>wszystkie</i> informacje potrzebne do zapisania w grze, ponieważ w chmurze można zapisać tylko jeden &quot;plik danych&quot;, a ponowne uruchomienie tej funkcji spowoduje nadpisanie wszystkich wcześniej zapisanych wartości (podobnie jak użycie funkcji <a href="cloud_string_save.htm"><span class="inline">cloud_string_save()</span></a> ). Opis powinien być krótką informacją <span class="notranslate">string</span> opisującą zapis, np.: &quot;Level2, Stage2&quot;.</p>
   <p>Więcej informacji na temat zwracanych danych asynchronicznych można znaleźć w funkcji <a href="cloud_synchronise.htm"><span class="inline">cloud_synchronise()</span></a>.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">cloud_file_save(file, description);</p>
+  <p class="code"><span data-field="title" data-format="default">cloud_file_save</span>(file, description);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>czcionka_zastąp_sprite_ext</title>
+  <title>font_replace_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>czcionka_zastąp_sprite_ext</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite_ext</span></h1>
   <p>Ta funkcja zastąpi stronę <span class="notranslate">sprite</span> <span class="notranslate">font</span> utworzoną wcześniej za pomocą funkcji <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. Używa ona &quot;sprite strip&quot;, gdzie każdy pod-obraz jest indywidualnym symbolem lub literą, a obrazy są mapowane na litery na podstawie argumentu &quot;string_map&quot; funkcji. Argument ten to <span class="notranslate">string</span>, za pomocą którego możesz powiedzieć <span data-keyref="GameMaker Name">programowi GameMaker</span>, w jakiej kolejności są poszczególne pod-obrazy strony <span class="notranslate">sprite</span> <span class="notranslate">font</span>, a program będzie je automatycznie mapował podczas pisania tekstu. Na przykład, jeśli masz string-map &quot;AaBbCcDdEeFfGgHh&quot;, na stronie <span class="notranslate">sprite</span> <span class="notranslate">font</span> podobrazy <i>muszą</i> być uporządkowane w ten sposób.</p>
   <p>Można także ustawić odstępy między literami <span class="notranslate">font</span>, aby były proporcjonalne (<span class="inline">true</span>) lub nie (<span class="inline">false</span>), przy czym odstępy proporcjonalne <span class="notranslate">font</span> są zależne od rzeczywistej szerokości liter (na przykład litera &quot;i&quot; zajmuje mniej miejsca <span class="notranslate">room</span> niż litera &quot;w&quot;), a odstępy nieproporcjonalne <span class="notranslate">font</span> są zależne od szerokości podobrazia, podobnie jak odstępy jednoprzestrzenne <span class="notranslate">font</span>. Na koniec można określić odstęp, jaki ma być pozostawiony między każdą literą podczas pisania. Może to być dowolna wartość całkowita, przy czym 0 oznacza brak odstępu (litery będą się &quot;stykać&quot;, jeśli są proporcjonalne). Funkcja zwraca wartość <i>indeksu</i>, którą należy zapisać w zmiennej, ponieważ będzie ona potrzebna we wszystkich kolejnych kodach odwołujących się do tej strony <span class="notranslate">font</span>.</p>
   <p>Jeśli funkcja zawiedzie, to zakończy działanie bez zastąpienia podanego adresu <span class="notranslate">sprite</span> <span class="notranslate">font</span>.</p>
   <p class="note"><b><span class="note">UWAGA</span> </b>Ta funkcja wymaga wcześniejszego dodania strony <span class="notranslate">sprite</span> <span class="notranslate">font</span> za pomocą <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>ponieważ zastąpi ona tę stronę i nie może być użyta na stronie <span class="notranslate">fonts</span>, która jest dołączona do zasobów gry.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite_ext</span>(font, spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>

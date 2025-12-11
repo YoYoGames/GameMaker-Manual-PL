@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_get</h1>
+  <h1><span data-field="title" data-format="default">animcurve_get</span></h1>
   <p>Ta funkcja zwraca <a href="../../../GML_Overview/Structs.htm">strukturę</a> zawierającą wszystkie dane dla podanego adresu <span class="notranslate">animation curve</span>. Użytkownik podaje identyfikator <span class="notranslate">animation curve</span> <span class="notranslate">asset</span> (zdefiniowany w przeglądarce <span class="notranslate">Asset</span> ), a funkcja zwróci strukturę <span class="notranslate">struct</span> z następującymi zmiennymi:</p>
   <table>
     <colgroup>
@@ -44,13 +44,13 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Zmienna <span class="inline">channels</span> w witrynie <span class="notranslate">struct</span> jest <a href="../../../GML_Overview/Arrays.htm">tablicą</a>, w której każdy element jest tablicą <span data-keyref="Type_Struct_AnimCurve_Channel"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get_channel.htm">Struktura kanału krzywej animacji</a></span> z danymi dotyczącymi kanału w krzywej. Kanał <span class="notranslate">struct</span> jest objaśniony <a href="animcurve_channel_new.htm">na tej stronie</a>.</p>
   <p>Podobnie jak w przypadku kanałów, punkty pojedynczego kanału są przechowywane w postaci <span class="notranslate">structs</span> w tablicy, gdzie każdy element tablicy jest pojedynczym punktem <span class="notranslate">struct</span>. Punkt <span class="notranslate">struct</span> został wyjaśniony <a href="animcurve_point_new.htm">na tej stronie</a>.</p>
   <p>Należy pamiętać, że jeśli funkcja nie powiedzie się (np. podana krzywa animacji <span class="notranslate">asset</span> nie istnieje), zwróci ona wartość -1.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">animcurve_get(curve_id);</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_get</span>(curve_id);</p>
   <table>
     <tbody>
       <tr>

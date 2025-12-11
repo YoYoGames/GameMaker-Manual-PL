@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>dezaktywuj_warstwę</title>
+  <title>instance_deactivate_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dezaktywuj_warstwę</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
   <p>Za pomocą tej funkcji można dezaktywować wszystkie instancje przypisane do określonej warstwy. Musisz podać <b>identyfikator</b> warstwy, który może być albo nazwą warstwy zapisaną w edytorze kodu (jako <span class="notranslate">string</span>), albo rzeczywistą wartością identyfikatora warstwy zwróconą przez funkcję <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>i należy pamiętać, że za pomocą tej funkcji można dezaktywować tylko warstwy <i>instancji.</i> Pamiętaj, że jeśli dezaktywowałeś warstwę, której instancje <span class="notranslate">objects</span> zostały oznaczone jako <b>trwałe</b>, musisz ponownie aktywować warstwę za pomocą funkcji <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a> przed zmianą <span class="notranslate">room</span>, w przeciwnym razie wszystkie trwałe instancje na tej warstwie <i>nie</i> zostaną przeniesione i zostaną odrzucone. Należy również pamiętać, że dezaktywacja nie jest natychmiastowa i instancja, która została dezaktywowana w ten sposób, nie będzie uważana za nieaktywną do końca zdarzenia, w którym wywołano funkcję.</p>
   <p class="note"><b>UWAGA</b>: Jeśli dezaktywujesz instancję na początku <span class="notranslate">room</span> (tzn. z kodu tworzenia <span class="notranslate">room</span> lub ze zdarzenia tworzenia instancji w <span class="notranslate">room</span>), wszystkie instancje, które są umieszczone w <span class="notranslate">room</span> z edytora <span class="notranslate">room</span>, <b>będą nadal uruchamiać swoje zdarzenia tworzenia</b> przed dezaktywacją.</p>
   <p class="note"><b></b><b>UWAGA</b>: Wyłączenie instancji, które mają włączoną fizykę, <b>NIE</b> spowoduje, że ich armatura przestanie oddziaływać w ramach symulacji fizyki. W tym celu należy ustawić ich zmienną <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> na <span class="inline">true</span> lub <span class="inline">false</span>, gdy będziesz włączać/wyłączać te instancje.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">instance_deactivate_layer(obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
   <table>
     <tbody>
       <tr>

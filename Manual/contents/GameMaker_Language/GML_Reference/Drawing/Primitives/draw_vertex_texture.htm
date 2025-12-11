@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_vertex_texture</h1>
+  <h1><span data-field="title" data-format="default">draw_vertex_texture</span></h1>
   <p>Ta funkcja określa położenie tekstury <span class="notranslate">vertex</span> dla prymitywu. Ostateczny wygląd prymitywu zależy od typu prymitywu wybranego do rysowania (zobacz <a href="draw_primitive_begin.htm"><span class="inline">draw_primitive_begin()</span></a> więcej informacji), kolejności dodawania wierzchołków oraz pozycji punktu początkowego ustawionego dla <span class="notranslate">texture</span>. Aby zakończyć i narysować prymityw, musisz wywołać <a href="draw_primitive_end.htm"><span class="inline">draw_primitive_end()</span></a>.</p>
   <p>Można także wybrać rysowanie tylko <i>części</i> strony <span class="notranslate">texture</span> na powierzchni prymitywu, ustawiając odpowiednią pozycję xtex/ytex, do której ma być próbkowane (współrzędne te są także znane jako punkty <b>UV</b> ). Punkt ten jest określany przez wartość z przedziału od 0 do 1, przy czym lewy górny róg obrazu, który ma być użyty, jest punktem (0,0), a prawy dolny róg jest punktem (1,1). W ten sposób można <span class="notranslate">texture</span> prymityw z tylko częścią obrazu źródłowego <span class="notranslate">asset</span>.</p>
   <p>Podczas rysowania elementu pierwotnego z teksturą, kolor <span class="notranslate">texture</span> zostanie zmieszany z kolorem ustawionym przez <a html="../colour And Blending/draw_set_colour.html"><span class="inline">draw_set_colour</span>. Oznacza to, że aby narysować element <span class="notranslate">texture</span> bez mieszania, należy go ustawić na <span class="inline">c_white</span>, jak pokazano w poniższym przykładzie</a>.</p>

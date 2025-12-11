@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>bufor_zapisowy_async</title>
+  <title>buffer_save_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>bufor_zapisowy_async</h1>
+  <h1><span data-field="title" data-format="default">buffer_save_async</span></h1>
   <p>Za pomocą tej funkcji można zapisać część zawartości strony <span class="notranslate">buffer</span> do pliku, gotowego do ponownego wczytania do pamięci przy użyciu funkcji <a href="buffer_load.htm"><span class="inline">buffer_load()</span></a> (lub dowolnej innej funkcji służącej do ładowania <span class="notranslate">buffers</span>). Offset&quot; określa pozycję początkową w <span class="notranslate">buffer</span> do zapisania (w bajtach), a &quot;rozmiar&quot; to rozmiar obszaru <span class="notranslate">buffer</span>, który ma zostać zapisany od tego offsetu (również w bajtach). Ta funkcja działa asynchronicznie, więc gra będzie działać podczas zapisywania, a wszystkie pliki zapisane za jej pomocą zostaną umieszczone w folderze &quot;default&quot;. Folder ten <i>nie</i> musi być uwzględniany w nazwie pliku, ponieważ jest on dodawany automatycznie przez <span class="notranslate">GameMaker</span>. Na przykład plik o nazwie <span class="notranslate">path</span> &quot;<span class="inline">Data\Player_Save.sav</span>&quot; zostanie w rzeczywistości zapisany w folderze &quot;<span class="inline">default\Data\Player_Save.sav</span>&quot;. Jeśli jednak następnie wczytasz plik za pomocą funkcji <a href="buffer_load_async.htm"><span class="inline">buffer_load_async()</span></a>nie trzeba też podawać &quot;domyślnej&quot; części adresu <span class="notranslate">path</span> (ale każda inna funkcja pliku <i>będzie</i> jej wymagać, z wyjątkiem konsol Xbox One, PS4 i <span class="notranslate">Nintendo</span> <span class="notranslate">Switch</span>).</p>
   <p class="note"><b>UWAGA</b>: W HTML5 &quot;default/&quot; nie jest dodawane automatycznie i może być konieczne uwzględnienie tego w kodzie.</p>
   <p>Funkcja zwróci unikalną wartość identyfikatora i wywoła <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">zdarzenie asynchronicznego zapisu/ładowania</a>, w którym można użyć zwróconego identyfikatora do sprawdzenia wartości identyfikatora <span class="inline">async_load</span>, jak pokazano w poniższym przykładzie rozszerzonym. Mapa <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> mapa w zdarzeniu będzie zawierać następujące dwie pary klucz/wartość:</p>
@@ -26,7 +26,7 @@
   <p class="note"><b>UWAGA</b>: W przypadku HTML5 zwrócone wyniki są zapisywane w postaci zakodowanej w base64 na stronie <span class="notranslate">strings</span> podczas zapisywania do pliku.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
   <table>
     <tbody>
       <tr>

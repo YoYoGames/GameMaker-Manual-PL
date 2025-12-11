@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_get_name</h1>
+  <h1><span data-field="title" data-format="default">fx_get_name</span></h1>
   <p>Ta funkcja służy do pobierania nazwy filtra/efektu z jego strony <span class="notranslate">struct</span>. Użytkownik określa FX <span class="notranslate">struct</span> do odczytania (zwrócony przez <span class="inline"><a href="fx_create.htm">fx_create()</a></span> lub <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span>), a funkcja zwraca jego nazwę jako <span class="notranslate">string</span>. Nazwę tę można następnie przekazać do <span class="inline"><a href="fx_create.htm">fx_create()</a></span> w celu utworzenia nowego FX <span class="notranslate">struct</span> z użyciem tego samego typu filtra/efektu.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">fx_get_name(filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_get_name</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>
@@ -49,7 +49,7 @@
             }<br />
         }<br />
     }</p>
-  <p>Powyższy kod uruchamia pętlę <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a> pętlę przez wszystkie warstwy znajdujące się na stronie <span class="notranslate">room</span> i sprawdza, czy każda z nich ma filtr FX <span class="notranslate">struct</span>. Jeśli warstwa ma FX <span class="notranslate">struct</span>, sprawdza nazwę tego filtra/efektu, wywołując na niej <span class="inline">fx_get_name()</span>. Jeśli jest ona równa <span class="inline2">&quot;_filter_tintfilter&quot;</span>, co oznacza, że jest to filtr &quot;Barwa&quot;, zmienia kolor barwy na niebieski.<br>
+  <p>Powyższy kod uruchamia pętlę <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a> pętlę przez wszystkie warstwy znajdujące się na stronie <span class="notranslate">room</span> i sprawdza, czy każda z nich ma filtr FX <span class="notranslate">struct</span>. Jeśli warstwa ma FX <span class="notranslate">struct</span>, sprawdza nazwę tego filtra/efektu, wywołując na niej <span class="inline">fx_get_name()</span>. Jeśli jest ona równa <span class="inline2">&quot;_filter_tintfilter&quot;</span>, co oznacza, że jest to filtr &quot;Barwa&quot;, zmienia kolor barwy na niebieski.<br />
      </p>
   <p> </p>
   <p> </p>

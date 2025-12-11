@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_replace</h1>
+  <h1><span data-field="title" data-format="default">sprite_replace</span></h1>
   <p>Ta funkcja działa niemal dokładnie tak samo jak <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a>z tą różnicą, że zamiast zwracać indeks importowanej strony <span class="notranslate">sprite</span>, nadpisuje wcześniej utworzony indeks <span class="notranslate">sprite</span>. Używając tej funkcji, powinieneś używać indeksu <span class="notranslate">sprite</span>, który został utworzony i zapisany w zmiennej przy użyciu innych funkcji, takich jak <a href="sprite_add.htm"><span class="inline">sprite_add()</span></a> lub <a href="sprite_create_from_surface.htm"><span class="inline">sprite_create_from_surface()</span></a>, lub nawet <a href="sprite_duplicate.htm"><span class="inline">sprite_duplicate()</span></a>, a nie z drzewa zasobów <span class="notranslate">sprite</span> <span class="notranslate">asset</span>. Za pomocą tej funkcji <i>możesz</i> zastąpić stronę <span class="notranslate">sprite</span> z gry <span class="notranslate">assets</span>, ale oznacza to, że stracisz identyfikator referencyjny zastępowanej strony <span class="notranslate">sprite</span>, niezależnie od tego, czy wywołasz <span class="inline">game_restart()</span>, czy nie, więc nie jest to zalecane. Niezależnie od zastępowanej <b>strony</b> <span class="notranslate">sprite</span>, funkcja ta <b>utworzy nową stronę <span class="notranslate">texture</span> dla sprite</b> 'a, dlatego należy zachować ostrożność przy jej używaniu, ponieważ może to negatywnie wpłynąć na wydajność, zwiększając liczbę wymaganych zamiany <b>stron</b> <span class="notranslate">texture</span> podczas renderowania.</p>
   <p>Wczytywany plik graficzny powinien być <b>zawsze</b> w formacie <span class="inline">*.png</span>, a wszystkie obrazki, które mają zostać przekształcone w animowane strony <span class="notranslate">sprites</span>, powinny mieć format &quot;paska&quot; (patrz obrazek poniżej). Zostaną one podzielone na określoną liczbę podobrazów zgodnie z zasadą: <b>szerokość sprite'a = szerokość paska / podobrazy</b>.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -26,7 +26,7 @@
   <p class="note"><b>UWAGA</b>: Należy pamiętać, że jeśli używasz tej funkcji w grze docelowej HTML5 do wczytywania zasobów z zewnętrznej strony <span class="notranslate">server</span>, to ze względu na zabezpieczenia XSS w przeglądarkach, próby wczytania zasobów z innych domen mogą zostać zablokowane i mogą zwrócić puste wyniki.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">sprite_replace(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_replace</span>(ind, fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

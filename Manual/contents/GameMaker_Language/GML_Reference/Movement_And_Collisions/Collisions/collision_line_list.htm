@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>collision_line_list</h1>
+  <h1><span data-field="title" data-format="default">collision_line_list</span></h1>
   <p>Ta funkcja jest taka sama jak funkcja <a href="collision_line.htm"><span class="inline">collision_line()</span></a> z tą różnicą, że zamiast wykrywać tylko jedną instancję kolizji na raz, będzie ona wykrywać wiele instancji. Podajesz pozycje x/y początku i końca linii do sprawdzenia wraz z adresem <span class="notranslate">object</span>, który ma być sprawdzany, oraz możesz określić, czy sprawdzanie ma być precyzyjne (wtedy wszystkie sprawdzane instancje będą musiały mieć <i>precyzyjne</i> maski kolizji) oraz czy sprawdzanie ma obejmować instancję wywołującą, czy nie.</p>
   <p>Podajesz również <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">listę DS</a>, więc wartości <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> wszystkich instancji, które kolidują z instancją wywołującą, zostaną dodane na koniec podanej listy. Możesz <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">wyczyścić</a> listę przed wywołaniem tej funkcji, tak by zawierała ona tylko wyniki tego wywołania. Masz także możliwość uporządkowania instancji według ich odległości od środka linii do ich początków. Funkcja zwraca liczbę znalezionych instancji lub 0, jeśli nie znaleziono żadnej.</p>
   <p>Zwróć uwagę, że zamiast indeksu <span class="notranslate">object</span> możesz podać <a href="../../../GML_Overview/Instance_Keywords.htm">słowo kluczowe instance</a> <span class="inline">all</span>, aby sprawdzić wszystkie instancje w bieżącym <span class="notranslate">room</span>, co może obejmować instancję wykonującą kod (zależnie od argumentu <span class="inline">notme</span> ).</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">collision_line_list(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_line_list</span>(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
   <table>
     <tbody>
       <tr>

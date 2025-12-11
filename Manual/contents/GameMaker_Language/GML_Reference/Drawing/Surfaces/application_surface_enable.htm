@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>application_surface_enable</h1>
+  <h1><span data-field="title" data-format="default">application_surface_enable</span></h1>
   <p>Za pomocą tej funkcji można włączyć lub wyłączyć powierzchnię aplikacji. Domyślnie powierzchnia aplikacji jest włączona i wszystkie rysunki dla zdarzeń Draw będą wykonywane na tej powierzchni, a powierzchnia będzie rysowana na ekranie. Jednak w przypadku niektórych starszych urządzeń i określonych chipsetów może to skutkować gorszą wydajnością. W takich przypadkach można <span class="notranslate">switch</span> wyłączyć rysowanie na powierzchni aplikacji, a wszystkie zdarzenia Draw będą wtedy rysowane bezpośrednio na ekranie <span class="notranslate">buffer</span>.</p>
   <p>Za pomocą tej funkcji można włączać i wyłączać powierzchnię aplikacji w dowolnym momencie gry, ale należy pamiętać, że aby zmiany zaczęły obowiązywać, musi upłynąć co najmniej jedna klatka (krok). Wyłączenie funkcji <i><b> <span class="notranslate">switch</span> wyłączy wszystkie korekty proporcji obrazu</b></i>Zgodnie z ustawieniami w <i>Opcjach gry</i> dla platformy docelowej. Oznacza to, że powinna istnieć metoda skalowania gry do wymaganych wymiarów urządzenia, okna lub ekranu. Jeśli <span class="notranslate">switch</span> ponownie włączysz tę funkcję, w następnym kroku ponownie zaczną obowiązywać <i>Opcje</i> gry.</p>
   <p>Zaleca się ostrożne korzystanie z tej funkcji, ponieważ wpływa ona na sposób, w jaki wszystko jest rysowane na ekranie. Ogólnie rzecz biorąc, powinieneś umieścić tę funkcję jako opcję w menu gry lub wywołać ją tylko raz na początku gry i napisać kod, który będzie dotyczył tego, czy funkcja jest włączona, czy wyłączona.</p>
   <p> </p>
   <h4>Składnia:</h4>
-  <p class="code">application_surface_enable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">application_surface_enable</span>(enable);</p>
   <table>
     <tbody>
       <tr>
