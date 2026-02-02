@@ -53,32 +53,30 @@
   <ul class="colour">
     <li>Przed dodaniem ścieżek do <span class="notranslate">sequence</span> <span class="notranslate">object</span> należy je utworzyć, dlatego teraz należy utworzyć tablicę ścieżek <i>zasobów</i>, które zostały zdefiniowane za pomocą funkcji <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>. Zauważ, że w kodzie nie ma różnicy między ścieżkami <span class="notranslate">asset</span> a ścieżkami parametrów - wszystkie są po prostu ścieżkami, a ich zachowanie zależy od rodzaju utworzonej ścieżki i od tego, czy są przypisane jako podścieżki do ścieżki nadrzędnej, czy nie. Tak więc można utworzyć ścieżkę dla <span class="notranslate">asset</span>, a następnie przypisać do niej podścieżki dla różnych parametrów i te podścieżki będą działać jako ścieżki <i>parametrów</i> dla <span class="notranslate">asset</span>. Poniższy przykład tworzy pojedynczą ścieżkę grafiki <span class="notranslate">asset</span>, która zostanie później dodana do <span class="notranslate">sequence</span>:</li>
   </ul>
-  <p class="code">var mytracks = array_create(1);<br />
-    mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
+  <p class="code">var _graphic_track = sequence_track_new(seqtracktype_graphic);<br />
+    _graphic_track.name = &quot;TestGraphicTrack&quot;;<br />
+    <br />
+    myseq.tracks[0] = _graphic_track;
+  </p>
   <ul class="colour">
     <li>Każda ścieżka <span class="notranslate">asset</span> musi zawierać pewne dane, które powiedzą stronie <span class="notranslate">sequence</span>, jak będzie wyglądać, jakie będzie jej położenie itd. i są one dodawane w postaci klatek <i>kluczowych</i>. Na najwyższym poziomie dla ścieżki <span class="notranslate">asset</span> można ustawić <span class="notranslate">keyframes</span> dla różnych rzeczy (wymienionych w sekcji Ścieżka <span class="notranslate">Struct</span> poniżej), ale należy pamiętać, że ponieważ są to ścieżki <span class="notranslate">asset</span> <span class="notranslate">keyframes</span> , nie będą one interpolowane i po prostu zmienią wartość, do której się odnoszą, po osiągnięciu danej klatki. Każda strona <span class="notranslate">keyframe</span> to strona <span class="notranslate">struct</span>, która jest dodawana do tablicy, a następnie ta tablica jest przypisywana do ścieżki <span class="notranslate">asset</span>. Aby utworzyć stronę <span class="notranslate">keyframe</span> <span class="notranslate">struct</span>, należy wywołać funkcję <a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a> a aby wypełnić stronę <span class="notranslate">keyframe</span> wymaganymi danymi, użyjemy funkcji <a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li>
   </ul>
-  <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
-    var graphickeys = array_create(1);<br />
-    graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
-    // Set the graphics keyframe top level data for the keyframe position and length, etc.<br />
-    graphickeys[0].frame = 0;<br />
-    graphickeys[0].length = 1;<br />
-    graphickeys[0].stretch = true;<br />
-    graphickeys[0].disabled = false;<br />
+  <p class="code">// Create a new keyframe struct for a graphics asset track<br />
+    var _graphic_keys = sequence_keyframe_new(seqtracktype_graphic);<br />
     <br />
-    // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
-    var graphickeydata = array_create(1);<br />
-    graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
-    graphickeydata[0].spriteIndex = spr_Platform;<br />
-    graphickeydata[0].channel = 0;<br />
+    // Set the graphics keyframe top-level data for the keyframe position, length, etc.<br />
+    _graphic_keys.frame = 0;<br />
+    _graphic_keys.length = 1;<br />
+    _graphic_keys.stretch = true;<br />
+    _graphic_keys.disabled = false;<br />
     <br />
-    // Add the keyframe data channels to the graphics track keyframe<br />
-    graphickeys[0].channels = graphickeydata;<br />
+    // Create the channel data that will go into this keyframe (note that <span>each key can have multiple channels of keyframe data)</span><br />
+    _graphic_keys.channels[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
+    _graphic_keys.channels[0].spriteIndex = spr_platform;<br />
+    _graphic_keys.channels[0].channel = 0;<br />
     <br />
-    // Add the definied keyframes to the track<br />
-    mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
-    mytracks[0].keyframes = graphickeys;
+    // Assign the keyframe struct as the first keyframe of the graphic track<br />
+    _graphic_track.keyframes[0] = _graphic_keys;
   </p>
   <ul class="colour">
     <li>Teraz musimy utworzyć ścieżkę parametrów, którą przypiszemy jako podścieżkę do ścieżki grafiki, którą właśnie utworzyliśmy. Należy to zrobić w podobny sposób, jak pokazano powyżej, z tą różnicą, że teraz musimy nadać ścieżce nazwę, która wskaże jej przeznaczenie, w tym przypadku &quot;pozycja&quot;, ponieważ będziemy używać tej ścieżki do przesuwania ścieżki graficznej w czasie trwania klatek animacji <span class="notranslate">sequence</span>:</li>
@@ -95,30 +93,34 @@
     paramkeys[1] = sequence_keyframe_new(seqtracktype_real);<br />
     paramkeys[1].frame = 120;<br />
     <br />
-    // Create the keyframe data structs<br />
-    var paramkeydata1 = array_create(2);<br />
-    paramkeydata1[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[0].channel = 0; // Channel 0 for a position track is the X position<br />
-    paramkeydata1[0].value = 0;<br />
+    // Create the keyframe and keyframe data structs to hold the parameter channel data and assign them<br />
+    var _keyframe;<br />
     <br />
-    paramkeydata1[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[1].channel = 1; // Channel 1 for a position track is the Y position<br />
-    paramkeydata1[1].value = 0;<br />
+    // Keyframe 1<br />
+    _keyframe = sequence_keyframe_new(seqtracktype_real);<br />
+    _keyframe.frame = 0;<br />
     <br />
-    var paramkeydata2 = array_create(2);<br />
-    paramkeydata2[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[0].channel = 0;<br />
-    paramkeydata2[0].value = room_width;<br />
-    paramkeydata2[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[1].channel = 1;<br />
-    paramkeydata2[1].value = room_height;<br />
+    _keyframe.channels[0] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[0].channel = 0;  // Channel 0 for a position track is the X position<br />
+    _keyframe.channels[0].value = 0;<br />
+    _keyframe.channels[1] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[1].channel = 1;  // Channel 1 for a position track is the Y position<br />
+    _keyframe.channels[1].value = 0;<br />
     <br />
-    // Assign the keyframe data structs to the channels for each key<br />
-    paramkeys[0].channels = paramkeydata1;<br />
-    paramkeys[1].channels = paramkeydata2;<br />
+    _param_track.keyframes[0] = _keyframe;<br />
     <br />
-    // Assign the keys to the parameter track<br />
-    paramtracks[0].keyframes = paramkeys;
+    // Keyframe 2<br />
+    _keyframe = sequence_keyframe_new(seqtracktype_real);<br />
+    _keyframe.frame = 120;<br />
+    <br />
+    _keyframe.channels[0] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[0].channel = 0;<br />
+    _keyframe.channels[0].value = room_width;<br />
+    _keyframe.channels[1] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[1].channel = 1;<br />
+    _keyframe.channels[1].value = room_height;<br />
+    <br />
+    _param_track.keyframes[1] = _keyframe;
   </p>
   <ul class="colour">
     <li>Po wykonaniu tych czynności należy przypisać ścieżkę parametrów jako podścieżkę do naszej głównej ścieżki grafiki <span class="notranslate">asset</span>, którą utworzyliśmy na początku, a następnie przypisać te ścieżki do strony <span class="notranslate">sequence</span>, której instancję możemy następnie utworzyć w pomieszczeniu:</li>
