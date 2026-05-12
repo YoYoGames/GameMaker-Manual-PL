@@ -7,12 +7,12 @@ on:
 
 
 jobs:
-  sync_latest_from_upstream:
+  sync_latest_from_upstream_develop:
     runs-on: ubuntu-latest
-    name: Sync latest commits from upstream repo  
+    name: Sync latest commits from upstream repo to develp branch
     steps:
     - name: Checkout target repo
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
         token: ${{ secrets.GH_TOKEN }}
@@ -41,7 +41,7 @@ jobs:
         # git diff --name-only --diff-filter=U | xargs git rm
 
         git show-ref
-    - name: Push changes
+    - name: Push changes to develop
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GH_TOKEN }}
