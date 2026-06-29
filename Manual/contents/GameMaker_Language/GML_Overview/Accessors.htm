@@ -49,7 +49,7 @@
     <p class="dropspot">Powyższe polecenie pobierze wartość z klucza &quot;Nazwa&quot; i zapisze ją w zmiennej, ale należy pamiętać, że jeśli podany klucz nie istnieje w mapie DS, to zwrócona wartość będzie miała postać <span class="inline">undefined</span>. Można to sprawdzić za pomocą funkcji <a href="../GML_Reference/Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a>.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS Grids [# ]</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down14" href="#">DS网格[#]</a></p>
   <div class="droptext" data-targetname="drop-down14">
     <p class="dropspot">Składnia dla <a href="../GML_Reference/Data_Structures/DS_Grids/DS_Grids.htm">siatki DS</a> jest następująca:</p>
     <p class="code">grid_index[# xpos, ypos]</p>
@@ -84,8 +84,7 @@
     <p class="dropspot">Sama funkcja będzie miała następującą postać:</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0;<br />
-          repeat(25)<br />
+          var a = _array; var i = 0; repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />
